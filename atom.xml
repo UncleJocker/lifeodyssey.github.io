@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-08-07T12:45:24.000Z</updated>
+  <updated>2020-08-09T17:27:53.679Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>硕士一年</title>
+    <link href="https://lifeodyssey.github.io/post/null.html"/>
+    <id>https://lifeodyssey.github.io/post/null.html</id>
+    <published>2020-08-09T16:58:04.000Z</published>
+    <updated>2020-08-09T17:27:53.679Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习经验" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/"/>
+    
+    
+    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>lambda</title>
@@ -442,29 +463,6 @@
     
     <summary type="html">&lt;p&gt;Theory of Generalization&lt;/p&gt;
 &lt;p&gt;test error can approximate training error if there is enough data and growth function does not grow too fast&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="机器学习" scheme="https://lifeodyssey.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Cousera" scheme="https://lifeodyssey.github.io/tags/Cousera/"/>
-    
-    <category term="林轩田" scheme="https://lifeodyssey.github.io/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera</title>
-    <link href="https://lifeodyssey.github.io/post/2c9001a2.html"/>
-    <id>https://lifeodyssey.github.io/post/2c9001a2.html</id>
-    <published>2019-05-11T10:59:07.000Z</published>
-    <updated>2019-05-11T10:59:07.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Learning to Answer Yes/No&lt;/p&gt;</summary>
     
     
     

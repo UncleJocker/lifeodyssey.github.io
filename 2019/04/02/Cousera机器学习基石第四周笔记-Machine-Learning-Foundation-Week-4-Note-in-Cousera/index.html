@@ -1,37 +1,442 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Feasibility of Learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera">
+<meta property="og:url" content="http://yoursite.com/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/index.html">
+<meta property="og:site_name" content="乔克叔叔的床边故事">
+<meta property="og:description" content="Feasibility of Learning">
+<meta property="og:locale">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png">
+<meta property="article:published_time" content="2019-04-02T06:08:38.000Z">
+<meta property="article:modified_time" content="2019-05-11T10:58:48.000Z">
+<meta property="article:author" content="周大侠">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="Cousera">
+<meta property="article:tag" content="林轩田">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png">
+
+<link rel="canonical" href="http://yoursite.com/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/">
 
 
-{% block content %}
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+  <title>Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera | 乔克叔叔的床边故事</title>
+  
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">乔克叔叔的床边故事</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="周大侠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="乔克叔叔的床边故事">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-04-02 15:08:38" itemprop="dateCreated datePublished" datetime="2019-04-02T15:08:38+09:00">2019-04-02</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-05-11 19:58:48" itemprop="dateModified" datetime="2019-05-11T19:58:48+09:00">2019-05-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>Feasibility of Learning</strong></p>
+<a id="more"></a>
+
+<h1 id="Learning-is-Impossible"><a href="#Learning-is-Impossible" class="headerlink" title="Learning is Impossible?"></a>Learning is Impossible?</h1><h1 id="Probability-to-the-Rescue"><a href="#Probability-to-the-Rescue" class="headerlink" title="Probability to the Rescue"></a>Probability to the Rescue</h1><h2 id="Inferring-Something-Unknow"><a href="#Inferring-Something-Unknow" class="headerlink" title="Inferring Something Unknow"></a>Inferring Something Unknow</h2><p>in sample$\rightarrow$out sample</p>
+<h2 id="Possible-versus-Probable"><a href="#Possible-versus-Probable" class="headerlink" title="Possible versus Probable"></a>Possible versus Probable</h2><h2 id="Hoeffding’s-Inequality"><a href="#Hoeffding’s-Inequality" class="headerlink" title="Hoeffding’s Inequality"></a>Hoeffding’s Inequality</h2><p>In big sample(<em>N</em> large),$\boldsymbol{\upsilon}$ is probably close to $\boldsymbol{u}$ (within $\boldsymbol{\epsilon}$)<br>$$<br>\mathbb{P}[|v-u|&gt;\boldsymbol{\epsilon}]\leq2exp(-2\boldsymbol{\epsilon}^2N)<br>$$<br>called Hoeffding’s Inequality, for marbles,coin,polling</p>
+<p>the statement $v=u$ is <strong>probably approximately correct</strong>(PAC)</p>
+<ul>
+<li><p>valid for all N and $\boldsymbol{\epsilon}$</p>
+</li>
+<li><p>does not depend on $u$,no need to know$u$</p>
+</li>
+<li><p>larger sample size <em>N</em> or looser gap $\boldsymbol{\epsilon} \rightarrow$higher probability for $v=u$</p>
+<p>if large N,can probably infer unknown $u$ by know $v$</p>
+</li>
+</ul>
+<h1 id="Connection-to-Learning"><a href="#Connection-to-Learning" class="headerlink" title="Connection  to Learning"></a>Connection  to Learning</h1><h2 id="Added-Components"><a href="#Added-Components" class="headerlink" title="Added Components"></a>Added Components</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png"></p>
+<p>for any fixed <em>h</em>, can probably infer unkown $E_out(h)=\underset{X\approx P}{\varepsilon}[h(x)\ne f(x)]$by known$ E_in(h)=\frac{1}{N}\sum^N_{n=1}[h(x)\ne f(x)]$</p>
+<h2 id="The-Formal-Guarantee"><a href="#The-Formal-Guarantee" class="headerlink" title="The Formal Guarantee"></a>The Formal Guarantee</h2><p>if $E_{in}(h)\approx E_{out}(h)$ and$E_{in}(h)small\rightarrow E_{out}(h)samll\rightarrow h\approx f $with respect to P</p>
+<h2 id="Verification-of-One-h"><a href="#Verification-of-One-h" class="headerlink" title="Verification of One h"></a>Verification of One h</h2><p>if $E_{in}(h)$ small for the fixed h and A pick the h as g$\rightarrow$ g=f PAC</p>
+<p>if A force to pick THE h as g$\rightarrow E_{in}(h)$ almost always not small$\rightarrow g\ne f$ PAC</p>
+<p>real learning:</p>
+<p>  A shall make choices$\in \H$ (like PLA) rather than being forced to pick one h.</p>
+<h2 id="The-‘Verification’-Flow"><a href="#The-‘Verification’-Flow" class="headerlink" title="The ‘Verification’ Flow"></a>The ‘Verification’ Flow</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png"></p>
+<h1 id="Connection-to-Real-Learning"><a href="#Connection-to-Real-Learning" class="headerlink" title="Connection to Real Learning"></a>Connection to Real Learning</h1><h2 id="BAD-Sample-and-BAD-Data"><a href="#BAD-Sample-and-BAD-Data" class="headerlink" title="BAD Sample and BAD Data"></a>BAD Sample and BAD Data</h2><p>BAD Sample:$E_{out}=\frac{1}{2}$,but getting all heads($E_{in}=0$)</p>
+<p>BAD Data for One h:$E_{out}(h)$ and $E_{in}h$ far away</p>
+<h2 id="BAD-data-for-Many-h"><a href="#BAD-data-for-Many-h" class="headerlink" title="BAD data for Many h"></a>BAD data for Many h</h2><p>BAD data for many h $\Leftrightarrow$ no freedom of choice by A $\Leftrightarrow$ there exists some h such that $E_{out}(h)$ and $E_{in}(h)$ far away</p>
+<h2 id="Bound-of-BAD-Data"><a href="#Bound-of-BAD-Data" class="headerlink" title="Bound of BAD Data"></a>Bound of BAD Data</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png"></p>
+<h2 id="The-Statistical-Learning-Flow"><a href="#The-Statistical-Learning-Flow" class="headerlink" title="The Statistical Learning Flow"></a>The Statistical Learning Flow</h2><p>if $|\mathbb{H}|$= M finite, N large enough,for whatever g picked by A,$E_{out}(g)\approx E_{in}(g)$</p>
+<p>if A finds one g with $E_{in}(g)\approx 0$,PAC guarantee for$E_{out}(g)\Rightarrow$learning possible</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png"></p>
+<p>M=$\infty$? - see you in the next lectures~</p>
+<h1 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h1><p>这个作业题是真的难啊，花了一个半小时才堪堪通过，尤其是最后几个写PLA和pocket算法的</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
+              <a href="/tags/Cousera/" rel="tag"># Cousera</a>
+              <a href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag"># 林轩田</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/03/16/%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%89%EF%BC%89%E7%94%B3%E8%AF%B7%E5%87%86%E5%A4%87%E5%8F%8A%E6%B5%81%E7%A8%8B/" rel="prev" title="经验贴（三）申请流程及准备">
+      <i class="fa fa-chevron-left"></i> 经验贴（三）申请流程及准备
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/04/06/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-5-Note-in-Cousera/" rel="next" title="Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera">
+      Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Learning-is-Impossible"><span class="nav-number">1.</span> <span class="nav-text">Learning is Impossible?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Probability-to-the-Rescue"><span class="nav-number">2.</span> <span class="nav-text">Probability to the Rescue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inferring-Something-Unknow"><span class="nav-number">2.1.</span> <span class="nav-text">Inferring Something Unknow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Possible-versus-Probable"><span class="nav-number">2.2.</span> <span class="nav-text">Possible versus Probable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hoeffding%E2%80%99s-Inequality"><span class="nav-number">2.3.</span> <span class="nav-text">Hoeffding’s Inequality</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Connection-to-Learning"><span class="nav-number">3.</span> <span class="nav-text">Connection  to Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Added-Components"><span class="nav-number">3.1.</span> <span class="nav-text">Added Components</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Formal-Guarantee"><span class="nav-number">3.2.</span> <span class="nav-text">The Formal Guarantee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Verification-of-One-h"><span class="nav-number">3.3.</span> <span class="nav-text">Verification of One h</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-%E2%80%98Verification%E2%80%99-Flow"><span class="nav-number">3.4.</span> <span class="nav-text">The ‘Verification’ Flow</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Connection-to-Real-Learning"><span class="nav-number">4.</span> <span class="nav-text">Connection to Real Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BAD-Sample-and-BAD-Data"><span class="nav-number">4.1.</span> <span class="nav-text">BAD Sample and BAD Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BAD-data-for-Many-h"><span class="nav-number">4.2.</span> <span class="nav-text">BAD data for Many h</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bound-of-BAD-Data"><span class="nav-number">4.3.</span> <span class="nav-text">Bound of BAD Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Statistical-Learning-Flow"><span class="nav-number">4.4.</span> <span class="nav-text">The Statistical Learning Flow</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">5.</span> <span class="nav-text">吐槽</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">周大侠</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">周大侠</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

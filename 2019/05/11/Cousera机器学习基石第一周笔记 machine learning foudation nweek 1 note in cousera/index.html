@@ -1,37 +1,535 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-{% block page_class %}page-post-detail{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="An introduction for Machine learning">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera">
+<meta property="og:url" content="http://yoursite.com/2019/05/11/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%B8%80%E5%91%A8%E7%AC%94%E8%AE%B0%20machine%20learning%20foudation%20nweek%201%20note%20in%20cousera/index.html">
+<meta property="og:site_name" content="乔克叔叔的床边故事">
+<meta property="og:description" content="An introduction for Machine learning">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-05-11T10:58:29.000Z">
+<meta property="article:modified_time" content="2019-05-11T10:58:29.000Z">
+<meta property="article:author" content="周大侠">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="Cousera">
+<meta property="article:tag" content="林轩田">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2019/05/11/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%B8%80%E5%91%A8%E7%AC%94%E8%AE%B0%20machine%20learning%20foudation%20nweek%201%20note%20in%20cousera/">
 
 
-{% block content %}
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+  <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera | 乔克叔叔的床边故事</title>
+  
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-{% endblock %}
+  <div class="site-meta">
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">乔克叔叔的床边故事</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/11/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%B8%80%E5%91%A8%E7%AC%94%E8%AE%B0%20machine%20learning%20foudation%20nweek%201%20note%20in%20cousera/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="周大侠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="乔克叔叔的床边故事">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-05-11 19:58:29" itemprop="dateCreated datePublished" datetime="2019-05-11T19:58:29+09:00">2019-05-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>An introduction for Machine learning</p>
+<a id="more"></a>
+
+<h1 id="What-is-machine-learning"><a href="#What-is-machine-learning" class="headerlink" title="What is machine learning"></a>What is machine learning</h1><h2 id="What-is-learning"><a href="#What-is-learning" class="headerlink" title="What is learning"></a>What is learning</h2><p>learning: acquiring skill with experience accumulated from observations</p>
+<p>machine learning: acquiring skill with experience accumulated/computed from data</p>
+<p>skill: improve some performance measure(e.g.prediction accuracy)</p>
+<h2 id="Why-use-machine-learning"><a href="#Why-use-machine-learning" class="headerlink" title="Why use machine learning"></a>Why use machine learning</h2><ul>
+<li>‘define’ trees and hand-program: difficult</li>
+<li>learn from data(observations) and recognize: a 3-year-old can do so</li>
+<li>‘ML-based tree recognition system’ can be easier to build than hand-programmed system</li>
+</ul>
+<p>ML: an alternative route to build complicated systems</p>
+<h2 id="Some-Use-Scenarios"><a href="#Some-Use-Scenarios" class="headerlink" title="Some Use Scenarios"></a>Some Use Scenarios</h2><ul>
+<li><p>when human cannot program the system manually</p>
+<p>——navigation on Mars</p>
+</li>
+<li><p>when human cannot  ‘define the solution’ easily</p>
+<p>——speech/visual recognition</p>
+</li>
+<li><p>when needing rapid decisions that human cannot do</p>
+<p>——high-frequency trading</p>
+</li>
+<li><p>when needing to be user-oriented in massive sacle</p>
+<p>——consumer-targeted marketing</p>
+</li>
+</ul>
+<h2 id="Key-Essence-of-ML"><a href="#Key-Essence-of-ML" class="headerlink" title="Key Essence of  ML"></a>Key Essence of  ML</h2><p>1. exists some ‘underlying pattern’ to be learned</p>
+<p>——so ‘performance measure’ can be improved</p>
+<p>2. but no programmable(easy) definition</p>
+<p>——so ‘ML’ is needed</p>
+<p>3. somehow there is data about the pattern</p>
+<p>——so ML has some ‘inputs’ to learn from</p>
+<h1 id="Application-of-ML"><a href="#Application-of-ML" class="headerlink" title="Application of ML"></a>Application of ML</h1><h1 id="Components-of-Learning"><a href="#Components-of-Learning" class="headerlink" title="Components of Learning:"></a>Components of Learning:</h1><h2 id="Basic-Notations"><a href="#Basic-Notations" class="headerlink" title="Basic Notations"></a>Basic Notations</h2><ul>
+<li><p>input: x $ \in $ <em>X</em></p>
+</li>
+<li><p>output: y $ \in $ <em>Y</em></p>
+</li>
+<li><p>unknow pattern to be learned $ \Leftrightarrow $ target function:<br><em>f</em>: <em>X</em> $ \rightarrow $ <em>Y</em></p>
+</li>
+<li><p>data $\Leftrightarrow$ training examples: $D ={(x_1,y_1),(x_2.y_2),…,(x_n,y_n)}$</p>
+</li>
+<li><p>hypothesis $\Leftrightarrow$ skill with hopefully good performance :</p>
+<p>$ g:X \rightarrow Y$</p>
+</li>
+</ul>
+<h1 id="Machine-Learning-and-Other-Fields"><a href="#Machine-Learning-and-Other-Fields" class="headerlink" title="Machine Learning and Other Fields"></a>Machine Learning and Other Fields</h1><h2 id="Machine-Learning-and-Data-Mining"><a href="#Machine-Learning-and-Data-Mining" class="headerlink" title="Machine Learning and Data Mining"></a>Machine Learning and Data Mining</h2><table>
+<thead>
+<tr>
+<th>Machine Learning</th>
+<th>Data Mining</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
+<td>use <strong>huge</strong> data to find <strong>property that</strong> is interesting</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>if ‘interesting property’ same as ‘hypothesis’ that approximate target——ML=DM</p>
+</li>
+<li><p>if ‘interesting property’ related to ‘hypothesis ‘ that approximate target——DM can help ML,and vice versa(often,but not always)</p>
+</li>
+<li><p>traditional DM also focuses on efficient computation in large database</p>
+</li>
+</ul>
+<h2 id="Machine-Learning-and-Artificial-Intelligence"><a href="#Machine-Learning-and-Artificial-Intelligence" class="headerlink" title="Machine Learning and Artificial Intelligence"></a>Machine Learning and Artificial Intelligence</h2><table>
+<thead>
+<tr>
+<th>Machine Learning</th>
+<th>Artificial Intelligence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
+<td>compute <strong>something that shows intelligent behavior</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li>$ g\approx f$ is something that shows intelligent behavior——ML can realize AI,among other routes</li>
+<li>e.g. chess playing<ul>
+<li>traditional AI: game tree</li>
+<li>ML for AI :learning from board data</li>
+</ul>
+</li>
+</ul>
+<p><strong>ML is one possible route to realize AI</strong></p>
+<h2 id="Machine-Learning-and-Statistics"><a href="#Machine-Learning-and-Statistics" class="headerlink" title="Machine Learning and Statistics"></a>Machine Learning and Statistics</h2><table>
+<thead>
+<tr>
+<th>Machine Learning</th>
+<th>Statistics</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
+<td>use data to <strong>make inference about an unknown process</strong></td>
+</tr>
+</tbody></table>
+<ul>
+<li><em>g</em> is an inference outcome,<em>f</em> is something unknown——statistics <strong>can be used to achieve ML</strong></li>
+<li>traditional statistics also focus on <strong>provable results with math assumptions</strong>,and care less about computation</li>
+</ul>
+<p><strong>statistics:many useful tools for ML</strong></p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>1. What is ML</p>
+<p>-use data to approximate target</p>
+<p>2. Application of ML</p>
+<p>-alomost everywhere</p>
+<p>3. Components of ML</p>
+<p>-$ A$ takes $D$ and $H$ to get $g$</p>
+<p>4. ML and other fields</p>
+<p>-related to DM,AI and Stats</p>
+<h1 id="Appendix"><a href="#Appendix" class="headerlink" title="Appendix"></a>Appendix</h1><p>預備知識</p>
+<p>作業零 (機率統計、線性代數、微分之基本知識)</p>
+<p>參考書籍</p>
+<p>Learning from Data: A Short Course , Abu-Mostafa, Magdon-Ismail, Lin, 2013.</p>
+<p>經典文獻</p>
+<p>F. Rosenblatt. The perceptron: A probabilistic model for information storage and organization in the brain. Psychological Review, 65(6):386-408, 1958. (第二講：Perceptron 的出處)</p>
+<p>W. Hoeffding. Probability inequalities for sums of bounded random variables. Journal of the American Statistical Association, 58(301):13–30, 1963. (第四講：Hoeffding’s Inequality)</p>
+<p>Y. S. Abu-Mostafa, X. Song , A. Nicholson, M. Magdon-ismail. The bin model, 1995. (第四講：bin model 的出處)</p>
+<p>V. Vapnik. The nature of statistical learning theory, 2nd edition, 2000. (第五到八講：VC dimension 與 VC bound 的完整數學推導及延伸)</p>
+<p>Y. S. Abu-Mostafa. The Vapnik-Chervonenkis dimension: information versus complexity in learning. Neural Computation, 1(3):312-317, 1989. (第七講：VC Dimension 的概念與重要性)</p>
+<p>參考文獻</p>
+<p>A. Sadilek, S. Brennan, H. Kautz, and V. Silenzio. nEmesis: Which restaurants should you avoid today? First AAAI Conference on Human Computation and Crowdsourcing, 2013. (第一講：ML 在「食」的應用)</p>
+<p>Y. S. Abu-Mostafa. Machines that think for themselves. Scientific American, 289(7):78-81, 2012. (第一講：ML 在「衣」的應用)</p>
+<p>A. Tsanas, A. Xifara. Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools. Energy and Buildings, 49: 560-567, 2012. (第一講：ML 在「住」的應用)</p>
+<p>J. Stallkamp, M. Schlipsing, J. Salmen, C. Igel. Introduction to the special issue on machine learning for traffic sign recognition. IEEE Transactions on Intelligent Transportation Systems 13(4): 1481-1483, 2012. (第一講：ML 在「行」的應用)</p>
+<p>R. Bell, J. Bennett, Y. Koren, and C. Volinsky. The million dollar programming prize. IEEE Spectrum, 46(5):29-33, 2009. (第一講：Netflix 大賽)</p>
+<p>S. I. Gallant. Perceptron-based learning algorithms. IEEE Transactions on Neural Networks, 1(2):179-191, 1990. (第二講：pocket 的出處，注意到實際的 pocket 演算法比我們介紹的要複雜)</p>
+<p>R. Xu, D. Wunsch II. Survey of clustering algorithms. IEEE Transactions on Neural Networks 16(3), 645-678, 2005. (第三講：Clustering)</p>
+<p>X. Zhu. Semi-supervised learning literature survey. University of Wisconsin Madison, 2008. (第三講：Semi-supervised)</p>
+<p>Z. Ghahramani. Unsupervised learning. In Advanced Lectures in Machine Learning (MLSS ’03), pages 72–112, 2004. (第三講：Unsupervised)</p>
+<p>L. Kaelbling, M. Littman, A. Moore. reinforcement learning: a survey. Journal of Artificial Intelligence Research, 4: 237-285. (第三講：Reinforcement)</p>
+<p>A. Blum. On-Line algorithms in machine learning. Carnegie Mellon University,1998. (第三講：Online)</p>
+<p>B. Settles. Active learning literature survey. University of Wisconsin Madison, 2010. (第三講：Active)</p>
+<p>D. Wolpert. The lack of a priori distinctions between learning algorithms. Neural Computation, 8(7): 1341-1390. (第四講：No free lunch 的正式版)</p>
+<p>T. M. Cover. Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. IEEE Transactions on Electronic Computers, 14(3):326–334, 1965. (第五到六講：Growth Function)</p>
+<p>B. Zadrozny, J. Langford, N. Abe. Cost sensitive learning by cost-proportionate example weighting. IEEE International Conference on Data Mining, 2003. (第八講：Weighted Classification)</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"># 机器学习</a>
+              <a href="/tags/Cousera/" rel="tag"># Cousera</a>
+              <a href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag"># 林轩田</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/05/09/%E5%8D%9A%E5%AE%A2%E5%AE%9A%E5%88%B6%E4%BC%98%E5%8C%96/" rel="prev" title="博客第三方插件和图片问题解决">
+      <i class="fa fa-chevron-left"></i> 博客第三方插件和图片问题解决
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/05/11/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%B8%89%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-3-Note-in-Cousera/" rel="next" title="Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera">
+      Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#What-is-machine-learning"><span class="nav-number">1.</span> <span class="nav-text">What is machine learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-learning"><span class="nav-number">1.1.</span> <span class="nav-text">What is learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-use-machine-learning"><span class="nav-number">1.2.</span> <span class="nav-text">Why use machine learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-Use-Scenarios"><span class="nav-number">1.3.</span> <span class="nav-text">Some Use Scenarios</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Key-Essence-of-ML"><span class="nav-number">1.4.</span> <span class="nav-text">Key Essence of  ML</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Application-of-ML"><span class="nav-number">2.</span> <span class="nav-text">Application of ML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Components-of-Learning"><span class="nav-number">3.</span> <span class="nav-text">Components of Learning:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Notations"><span class="nav-number">3.1.</span> <span class="nav-text">Basic Notations</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Machine-Learning-and-Other-Fields"><span class="nav-number">4.</span> <span class="nav-text">Machine Learning and Other Fields</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Machine-Learning-and-Data-Mining"><span class="nav-number">4.1.</span> <span class="nav-text">Machine Learning and Data Mining</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Machine-Learning-and-Artificial-Intelligence"><span class="nav-number">4.2.</span> <span class="nav-text">Machine Learning and Artificial Intelligence</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Machine-Learning-and-Statistics"><span class="nav-number">4.3.</span> <span class="nav-text">Machine Learning and Statistics</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">5.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Appendix"><span class="nav-number">6.</span> <span class="nav-text">Appendix</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">周大侠</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">周大侠</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -29,6 +29,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
+    <url>/posts/4df973c2.html</url>
+    <content><![CDATA[<p><strong>Types of Learning</strong></p>
+<a id="more"></a>
+
+<h1 id="Learning-with-Different-Output-Space"><a href="#Learning-with-Different-Output-Space" class="headerlink" title="Learning with Different Output Space"></a>Learning with Different Output Space</h1><h2 id="Credit-Approval-Problem-Revisited"><a href="#Credit-Approval-Problem-Revisited" class="headerlink" title="Credit Approval Problem Revisited"></a>Credit Approval Problem Revisited</h2><h2 id="More-Binary-Classification-Problems"><a href="#More-Binary-Classification-Problems" class="headerlink" title="More Binary Classification Problems"></a>More Binary Classification Problems</h2><h2 id="Multiclass-Classification-Coin-Recognition-Problem"><a href="#Multiclass-Classification-Coin-Recognition-Problem" class="headerlink" title="Multiclass Classification: Coin Recognition Problem"></a>Multiclass Classification: Coin Recognition Problem</h2><h2 id="Regression-Patient-Recovery-Prediction-Problem"><a href="#Regression-Patient-Recovery-Prediction-Problem" class="headerlink" title="Regression: Patient Recovery Prediction Problem"></a>Regression: Patient Recovery Prediction Problem</h2><h2 id="Structured-Learning-Sequence-Tagging-Problem"><a href="#Structured-Learning-Sequence-Tagging-Problem" class="headerlink" title="Structured Learning: Sequence Tagging Problem"></a>Structured Learning: Sequence Tagging Problem</h2><h1 id="Learning-With-Different-Data-Label"><a href="#Learning-With-Different-Data-Label" class="headerlink" title="Learning With Different Data Label"></a>Learning With Different Data Label</h1><h2 id="Supervised-Coin-Recognition-Revisited"><a href="#Supervised-Coin-Recognition-Revisited" class="headerlink" title="Supervised: Coin Recognition Revisited"></a>Supervised: Coin Recognition Revisited</h2><p>##　Unsupervised: Coin Recognition without $y_n$</p>
+<p>unsupervised multiclass classification $\Leftrightarrow$‘Clustering’:a challenging but useful problem</p>
+<h2 id="Unsupervised-Learning-without-y-n"><a href="#Unsupervised-Learning-without-y-n" class="headerlink" title="Unsupervised: Learning without $y_n$"></a>Unsupervised: Learning without $y_n$</h2><ul>
+<li>Clustering</li>
+<li><a href="https://en.wikipedia.org/wiki/Density_estimation">Density estimation</a></li>
+<li>Outlier Detection</li>
+</ul>
+<h2 id="Semi-supervised-Coin-Recognition-with-Some-y-n"><a href="#Semi-supervised-Coin-Recognition-with-Some-y-n" class="headerlink" title="Semi-supervised:Coin Recognition with Some $y_n$"></a>Semi-supervised:Coin Recognition with Some $y_n$</h2><p>avoid expensive labeling</p>
+<h2 id="Reinforcement-Learning"><a href="#Reinforcement-Learning" class="headerlink" title="Reinforcement Learning"></a>Reinforcement Learning</h2><h1 id="Learning-with-Different-Protocol"><a href="#Learning-with-Different-Protocol" class="headerlink" title="Learning with Different Protocol"></a>Learning with Different Protocol</h1><h2 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h2><p>a very common protocol</p>
+<h2 id="Online-Spam-Filter-that-‘improves’"><a href="#Online-Spam-Filter-that-‘improves’" class="headerlink" title="Online: Spam Filter that ‘improves’"></a>Online: Spam Filter that ‘improves’</h2><h2 id="Active-Learning-Learning-by-‘Asking’"><a href="#Active-Learning-Learning-by-‘Asking’" class="headerlink" title="Active Learning: Learning by ‘Asking’"></a>Active Learning: Learning by ‘Asking’</h2><h1 id="Learning-with-Different-Input-Space"><a href="#Learning-with-Different-Input-Space" class="headerlink" title="Learning with Different Input Space"></a>Learning with Different Input Space</h1><h2 id="Concrete-Features"><a href="#Concrete-Features" class="headerlink" title="Concrete Features"></a>Concrete Features</h2><p>human intelligence</p>
+<h2 id="Raw-Features"><a href="#Raw-Features" class="headerlink" title="Raw Features"></a>Raw Features</h2><p>need human or machines to convert to concrete ones(feature engineering)</p>
+<h2 id="Abstract-Features"><a href="#Abstract-Features" class="headerlink" title="Abstract Features"></a>Abstract Features</h2><p>again need feature conversion/extraction/construction</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
+<li>Learning with Different Output Space:classification,regression,structured</li>
+<li>Learning with Different Data Label$y_n$:supervised,un/semi-supervised,reinforecement</li>
+<li>Learning with Different Protocol:batch,online,active</li>
+<li>Learning with Different Input Space:concrete,raw,abstract</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</title>
     <url>/posts/bc80cb40.html</url>
     <content><![CDATA[<p>An introduction for Machine learning</p>
@@ -168,40 +202,6 @@
 <p>D. Wolpert. The lack of a priori distinctions between learning algorithms. Neural Computation, 8(7): 1341-1390. (第四講：No free lunch 的正式版)</p>
 <p>T. M. Cover. Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. IEEE Transactions on Electronic Computers, 14(3):326–334, 1965. (第五到六講：Growth Function)</p>
 <p>B. Zadrozny, J. Langford, N. Abe. Cost sensitive learning by cost-proportionate example weighting. IEEE International Conference on Data Mining, 2003. (第八講：Weighted Classification)</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
-    <url>/posts/4df973c2.html</url>
-    <content><![CDATA[<p><strong>Types of Learning</strong></p>
-<a id="more"></a>
-
-<h1 id="Learning-with-Different-Output-Space"><a href="#Learning-with-Different-Output-Space" class="headerlink" title="Learning with Different Output Space"></a>Learning with Different Output Space</h1><h2 id="Credit-Approval-Problem-Revisited"><a href="#Credit-Approval-Problem-Revisited" class="headerlink" title="Credit Approval Problem Revisited"></a>Credit Approval Problem Revisited</h2><h2 id="More-Binary-Classification-Problems"><a href="#More-Binary-Classification-Problems" class="headerlink" title="More Binary Classification Problems"></a>More Binary Classification Problems</h2><h2 id="Multiclass-Classification-Coin-Recognition-Problem"><a href="#Multiclass-Classification-Coin-Recognition-Problem" class="headerlink" title="Multiclass Classification: Coin Recognition Problem"></a>Multiclass Classification: Coin Recognition Problem</h2><h2 id="Regression-Patient-Recovery-Prediction-Problem"><a href="#Regression-Patient-Recovery-Prediction-Problem" class="headerlink" title="Regression: Patient Recovery Prediction Problem"></a>Regression: Patient Recovery Prediction Problem</h2><h2 id="Structured-Learning-Sequence-Tagging-Problem"><a href="#Structured-Learning-Sequence-Tagging-Problem" class="headerlink" title="Structured Learning: Sequence Tagging Problem"></a>Structured Learning: Sequence Tagging Problem</h2><h1 id="Learning-With-Different-Data-Label"><a href="#Learning-With-Different-Data-Label" class="headerlink" title="Learning With Different Data Label"></a>Learning With Different Data Label</h1><h2 id="Supervised-Coin-Recognition-Revisited"><a href="#Supervised-Coin-Recognition-Revisited" class="headerlink" title="Supervised: Coin Recognition Revisited"></a>Supervised: Coin Recognition Revisited</h2><p>##　Unsupervised: Coin Recognition without $y_n$</p>
-<p>unsupervised multiclass classification $\Leftrightarrow$‘Clustering’:a challenging but useful problem</p>
-<h2 id="Unsupervised-Learning-without-y-n"><a href="#Unsupervised-Learning-without-y-n" class="headerlink" title="Unsupervised: Learning without $y_n$"></a>Unsupervised: Learning without $y_n$</h2><ul>
-<li>Clustering</li>
-<li><a href="https://en.wikipedia.org/wiki/Density_estimation">Density estimation</a></li>
-<li>Outlier Detection</li>
-</ul>
-<h2 id="Semi-supervised-Coin-Recognition-with-Some-y-n"><a href="#Semi-supervised-Coin-Recognition-with-Some-y-n" class="headerlink" title="Semi-supervised:Coin Recognition with Some $y_n$"></a>Semi-supervised:Coin Recognition with Some $y_n$</h2><p>avoid expensive labeling</p>
-<h2 id="Reinforcement-Learning"><a href="#Reinforcement-Learning" class="headerlink" title="Reinforcement Learning"></a>Reinforcement Learning</h2><h1 id="Learning-with-Different-Protocol"><a href="#Learning-with-Different-Protocol" class="headerlink" title="Learning with Different Protocol"></a>Learning with Different Protocol</h1><h2 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h2><p>a very common protocol</p>
-<h2 id="Online-Spam-Filter-that-‘improves’"><a href="#Online-Spam-Filter-that-‘improves’" class="headerlink" title="Online: Spam Filter that ‘improves’"></a>Online: Spam Filter that ‘improves’</h2><h2 id="Active-Learning-Learning-by-‘Asking’"><a href="#Active-Learning-Learning-by-‘Asking’" class="headerlink" title="Active Learning: Learning by ‘Asking’"></a>Active Learning: Learning by ‘Asking’</h2><h1 id="Learning-with-Different-Input-Space"><a href="#Learning-with-Different-Input-Space" class="headerlink" title="Learning with Different Input Space"></a>Learning with Different Input Space</h1><h2 id="Concrete-Features"><a href="#Concrete-Features" class="headerlink" title="Concrete Features"></a>Concrete Features</h2><p>human intelligence</p>
-<h2 id="Raw-Features"><a href="#Raw-Features" class="headerlink" title="Raw Features"></a>Raw Features</h2><p>need human or machines to convert to concrete ones(feature engineering)</p>
-<h2 id="Abstract-Features"><a href="#Abstract-Features" class="headerlink" title="Abstract Features"></a>Abstract Features</h2><p>again need feature conversion/extraction/construction</p>
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
-<li>Learning with Different Output Space:classification,regression,structured</li>
-<li>Learning with Different Data Label$y_n$:supervised,un/semi-supervised,reinforecement</li>
-<li>Learning with Different Protocol:batch,online,active</li>
-<li>Learning with Different Input Space:concrete,raw,abstract</li>
-</ul>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -720,84 +720,6 @@
       </tags>
   </entry>
   <entry>
-    <title>book-reading-note2</title>
-    <url>/posts/44f3f721.html</url>
-    <content><![CDATA[<p>Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
-<a id="more"></a>
-
-<h1 id="Tides-tidal-mixing-and-internal-waves"><a href="#Tides-tidal-mixing-and-internal-waves" class="headerlink" title="Tides, tidal  mixing, and internal waves"></a>Tides, tidal  mixing, and internal waves</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This chapter focus on the tides, tidal mixing and internal waves and today I will talk from the introduction to the physics of tidal currents.</p>
-<p>Tides are created by the gravitational pull of the moon and the sun. The changing water level leads to interesting patterns of intertidal organisms( place a figure of intertidal zone ) but it is not the emphases of this chapter.</p>
-<p>Besides the intertidal zone, the tides also generate currents in the water that interact with the  bottom to produce turbulence. And if the currents are sufficiently strong, the turbulence  could prevent any stratification , thus the wholes area may be permanently tidally mixed. There are some researches shows that a great number of stocks only live in such strong tidal mixing area. In this chapter we will explore the possible significance of this observation.</p>
-<p>And if the tidal mixing is not so strong, the water column becomes stratified, the interaction of the tidal currents with the bottom topography could lead to the formation of internal waves. Internal waves could cause vertical mixing and redistribution of nutrients, which is important effects on phytoplankton production. Some times as the internal wave decays, they produce solitary waves and bores,which could have a strong influence of  on the distribution of zooplankton and larval fishes.</p>
-<p>Around the shallow bank, the interaction between tidal currents and bottom topography could generate unidirectional currents that form gyres. The combination of tidally mixed water over the top of a bank and a gyre around its periphery is thought to provide conditions particularly suitable for the eggs and larvae of fish. In this chapter we shall explore some of these interesting consequences of tidally induced water movement.</p>
-<p>(Needs some more figures and references to tell the story)</p>
-<h2 id="The-physics-of-tides"><a href="#The-physics-of-tides" class="headerlink" title="The physics of tides"></a>The physics of tides</h2><h3 id="Tide-generating-forces-and-the-equilibrium-tide"><a href="#Tide-generating-forces-and-the-equilibrium-tide" class="headerlink" title="Tide-generating forces and the equilibrium tide."></a>Tide-generating forces and the equilibrium tide.</h3><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207160250.png"></p>
-<p>First part is the physics of tides. Lets start from the most simple occasion. Here the earth and the moon are seen from above the north pole of the earth</p>
-<ol>
-<li>The water on the earth only receive the gravitational pull of the moon, remove the sun and the centripetal force from earth.</li>
-<li>The earth and moon are assumed to be stationary except for the earth’s rotation.</li>
-<li>The earth doesn’t have continents and is covered with a uniform layer of water.</li>
-<li>Without the Coriolis force and  friction force.</li>
-</ol>
-<p>Our observer is located in O. It is clear that the , the highest tide will always under the moon  and the lowest tide will be on the opposite side to the moon as a result of gravitational pull of moon and centripetal force from earth. With the earth rotate, our observer will see one high tide and one low tide a day.</p>
-<p>This elementary model could produce a tide but it is not a very good model because most places on the earth usually have two high and two low tides during the day.</p>
-<p>One thing that need to consider is the rotation of the earth moon pair, about 29.5 day once. Because the earth’s mass is roughly 80 times that of the moon the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. The the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. And in order to make the earth and moon rotate around the center of mass, both of them will receive a  centripetal force from the center of mass. This force is supplied by the gravity between earth and moon. But for us, the earth is stationary, that mean we choose our earth as reference system. So in order to make our earth stationary, we need add a  fictitious force or inertial force. As a result, the water in our earth now receive two force, one is the gravity from moon, another is inertial force which backwards the center of mass.</p>
-<p>Therefore, the shape of water on our earth likes a  rugby.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207212741.png"></p>
-<p>And this bulge is called tide bulge.</p>
-<p>This model could help us describe two things. One is that we can observe two high tides and two low tides every day. Another is that why the tides do not occur at the same time every day. The earth and moon rotate around one another in a lunar month that is roughly 29.5 days. As our observer at O rotates through exactly one day back to O the moon has moved about 12° further around in its orbit to the position marked “tomorrow”.The high tide that is under the moon will still be under the moon tomorrow, but it will be observed later in the observer’s day.. Since the earth spins on its axis at about 4 minutes per degree the tides will appear about 50 minutes later each day.</p>
-<p>The next refinement is. If we observe both from the side, not the pole, moon is not directly over the equator. The moon can be found at various angles to the north and south of the equator up to a maximum of 35° depending on the season and the time of the lunar month. So the tide bulge is no longer on the equator. No our observer in O could observe two high tide and two low tides every day. But the high tides are unequal height, as are the low tides. This difference is called the diurnal (daily) inequality.</p>
-<p>This model only consider the effect of moon,without continents Coriolis force and  friction force. Such tide is called equilibrium tide and this theory is called The Equilibrium Theory of Tides or “static” theory of  tides.</p>
-<p>It cannot predict It cannot predict the tide at any particular location but it does explain some of the main features of the tide such as</p>
-<ol>
-<li>diurnal variation</li>
-<li>diurnal inequality in the height</li>
-<li>daily delay</li>
-</ol>
-<p>The next improvement of equilibrium theory of tide is considering the effects of the earth-sun system on top of the effects of the earth–moon system.</p>
-<p>The mass of the sun is 27 × 106<br>times the mass of the moon but its distance<br>from the earth is 400 times that of the moon. Because of this great distance, the gravitational attraction on a particle of water on the earth due to the sun is about one-half that due to the moon. So we can construct diagrams like those shown in Figs. 7.03 and 7.04 for the tide due to the sun, but the height of the tide will be only half that due to the moon. The important effect of the tide due to the sun arises because its tidal bulge moves relative to the moon’s tidal bulge through- out the lunar month.</p>
-<p>When the two tidal bulges coincide they add together to create the extra high tides called the spring tides. When the tidal bulges are opposed their effects tend to cancel one another, creating the neap tides. Thus, the equilibrium tide model can also qualitatively explain the fortnightly inequality in addition to the other effects.</p>
-<h3 id="Tides-in-the-real-ocean"><a href="#Tides-in-the-real-ocean" class="headerlink" title="Tides in the real ocean"></a>Tides in the real ocean</h3><p>The next development of tide theory is dynamic theory of tide. It considered the continents, topography, Coriolis force and  friction force, etc. </p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208170201.png"></p>
-<p>This is the  <strong>Laplace’s tidal equations</strong>. But it is hard to solve. For prediction, one solution is that we can decompose the tide. We can think the real tide in our ocean is composed by a lot of tide constituents . Each tide constituents induced by each an imaginary  planets. There are three main categories of constituents (Pond and Pickard 1983):</p>
-<ol>
-<li>semi-diurnal, period about 12 hours</li>
-<li>diurnal, period about 24 hours</li>
-<li>long period, greater than 24 hours.</li>
-</ol>
-<p>The four most important constituents are:</p>
-<ol>
-<li>The lunar semi-diurnal ,M2, Period=12.42h</li>
-<li>The solar semi-diurnal, S2, Period=12.00h</li>
-<li>The lunisolar diurnal, K1, Period=23.93h</li>
-<li>The principal lunar diurnal, O1, period=25.82h</li>
-</ol>
-<p>The M2 constituent is roughly twice the amplitude of the other three.</p>
-<p>In different location around the word, the relative importance of constituents is quite different. So we have different patterns of tides. The four main classifications of the form of the tides are illustrated in the next figure.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208172014.png"></p>
-<p>The first one has two high tides and two low tides every day and Both the highs are about the same height and both the lows are about the same height. Such a tide is called a semi-diurnal in form because there are two per day and both are about the same height.In this case the semi-diurnal constituents dominate the diurnal ones. This fact is often quantified with the ratio F = (K1+O1)/(M2 + S2 ), where each letter stands for the amplitude of the constituent. If F is small (0.11), as in the upper record, the sum of the amplitudes of the diurnal constituents (K1+O1 ) is small relative<br>to the sum of the semi-diurnal ones (M2+S2 ).</p>
-<p>The four records in Fig. 7.05 show a marked decrease from top to bottom in the amplitude of the semi-diurnal tidal oscillation relative to the diurnal oscillation, which is confirmed by the increase in F from 0.11 to ~19. At San Francisco there are always two tides per day but they are usually of unequal amplitude. At Manila there are two tides per day during the neap tides but only one rise and fall per day during spring tides. At Do-Son there is only one rise and fall of the tide per day throughout the month, which is a purely diurnal form of tidal oscillation. This occurrence is the rarest form of tide. The changing form of the tide between locations is due partly to the shape of the ocean basin in which the tidal wave is contained and partly to the latitude (Hendershott 1981).</p>
-<h3 id="Moving-the-tidal-bulge-over-the-earth-Kelvin-waves"><a href="#Moving-the-tidal-bulge-over-the-earth-Kelvin-waves" class="headerlink" title="Moving the tidal bulge over the earth: Kelvin waves"></a>Moving the tidal bulge over the earth: Kelvin waves</h3><p>The former one is more focus on the coast, if we focus on a more large scale, the water depth is almost the same and the friction from the topography could be ignored. More idealized, if we assume the  coast line is straight, we could get One solution of former dynamic tide equation set is that the velocity of tide is </p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208202646.png"></p>
-<p>here g is Gravitational acceleration and k is the depth of the water.  and the Kelvin wave is a reasonable approximation for tidal waves in the vicinity of a straight coastline.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208204932.png"></p>
-<p>And here the Coriolis force is an important feature of the motion.</p>
-<p>. The effect of the Coriolis force is to push the water to the right in the northern hemisphere</p>
-<p>The Coriolis effect causes the amplitude of the wave to increase toward the shore and leads to the expression that the wave is “trapped” against the shore. Such a trapped Kelvin wave causes the water particles to move back and forth parallel to the coast as the wave goes by</p>
-<p>The horizontal scale of the wave, or the approximate distance from the coast to where the sea level is undisturbed by the wave, is estimated by the Rossby radius. </p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208205203.png"></p>
-<p>For the Kelvin wave in Fig. 7.06 we put g = 10 m s−2<br>, h = 4000 m, and f= 10−4 s−1 to get Re = 2000 km. This value is commonly called the external Rossby radius, or deformation scale</p>
-<h3 id="Tidal-currents"><a href="#Tidal-currents" class="headerlink" title="Tidal currents"></a>Tidal currents</h3>]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Oceanography</tag>
-        <tag>bookreading</tag>
-        <tag>Seminar</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>book-reading-note3</title>
     <url>/posts/33f4c7b7.html</url>
     <content><![CDATA[<p>Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
@@ -891,6 +813,84 @@
 <li>The cold core ring and warm core ring have different ecology effect as in this table</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Oceanography</tag>
+        <tag>bookreading</tag>
+        <tag>Seminar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>book-reading-note2</title>
+    <url>/posts/44f3f721.html</url>
+    <content><![CDATA[<p>Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
+<a id="more"></a>
+
+<h1 id="Tides-tidal-mixing-and-internal-waves"><a href="#Tides-tidal-mixing-and-internal-waves" class="headerlink" title="Tides, tidal  mixing, and internal waves"></a>Tides, tidal  mixing, and internal waves</h1><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>This chapter focus on the tides, tidal mixing and internal waves and today I will talk from the introduction to the physics of tidal currents.</p>
+<p>Tides are created by the gravitational pull of the moon and the sun. The changing water level leads to interesting patterns of intertidal organisms( place a figure of intertidal zone ) but it is not the emphases of this chapter.</p>
+<p>Besides the intertidal zone, the tides also generate currents in the water that interact with the  bottom to produce turbulence. And if the currents are sufficiently strong, the turbulence  could prevent any stratification , thus the wholes area may be permanently tidally mixed. There are some researches shows that a great number of stocks only live in such strong tidal mixing area. In this chapter we will explore the possible significance of this observation.</p>
+<p>And if the tidal mixing is not so strong, the water column becomes stratified, the interaction of the tidal currents with the bottom topography could lead to the formation of internal waves. Internal waves could cause vertical mixing and redistribution of nutrients, which is important effects on phytoplankton production. Some times as the internal wave decays, they produce solitary waves and bores,which could have a strong influence of  on the distribution of zooplankton and larval fishes.</p>
+<p>Around the shallow bank, the interaction between tidal currents and bottom topography could generate unidirectional currents that form gyres. The combination of tidally mixed water over the top of a bank and a gyre around its periphery is thought to provide conditions particularly suitable for the eggs and larvae of fish. In this chapter we shall explore some of these interesting consequences of tidally induced water movement.</p>
+<p>(Needs some more figures and references to tell the story)</p>
+<h2 id="The-physics-of-tides"><a href="#The-physics-of-tides" class="headerlink" title="The physics of tides"></a>The physics of tides</h2><h3 id="Tide-generating-forces-and-the-equilibrium-tide"><a href="#Tide-generating-forces-and-the-equilibrium-tide" class="headerlink" title="Tide-generating forces and the equilibrium tide."></a>Tide-generating forces and the equilibrium tide.</h3><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207160250.png"></p>
+<p>First part is the physics of tides. Lets start from the most simple occasion. Here the earth and the moon are seen from above the north pole of the earth</p>
+<ol>
+<li>The water on the earth only receive the gravitational pull of the moon, remove the sun and the centripetal force from earth.</li>
+<li>The earth and moon are assumed to be stationary except for the earth’s rotation.</li>
+<li>The earth doesn’t have continents and is covered with a uniform layer of water.</li>
+<li>Without the Coriolis force and  friction force.</li>
+</ol>
+<p>Our observer is located in O. It is clear that the , the highest tide will always under the moon  and the lowest tide will be on the opposite side to the moon as a result of gravitational pull of moon and centripetal force from earth. With the earth rotate, our observer will see one high tide and one low tide a day.</p>
+<p>This elementary model could produce a tide but it is not a very good model because most places on the earth usually have two high and two low tides during the day.</p>
+<p>One thing that need to consider is the rotation of the earth moon pair, about 29.5 day once. Because the earth’s mass is roughly 80 times that of the moon the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. The the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. And in order to make the earth and moon rotate around the center of mass, both of them will receive a  centripetal force from the center of mass. This force is supplied by the gravity between earth and moon. But for us, the earth is stationary, that mean we choose our earth as reference system. So in order to make our earth stationary, we need add a  fictitious force or inertial force. As a result, the water in our earth now receive two force, one is the gravity from moon, another is inertial force which backwards the center of mass.</p>
+<p>Therefore, the shape of water on our earth likes a  rugby.</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207212741.png"></p>
+<p>And this bulge is called tide bulge.</p>
+<p>This model could help us describe two things. One is that we can observe two high tides and two low tides every day. Another is that why the tides do not occur at the same time every day. The earth and moon rotate around one another in a lunar month that is roughly 29.5 days. As our observer at O rotates through exactly one day back to O the moon has moved about 12° further around in its orbit to the position marked “tomorrow”.The high tide that is under the moon will still be under the moon tomorrow, but it will be observed later in the observer’s day.. Since the earth spins on its axis at about 4 minutes per degree the tides will appear about 50 minutes later each day.</p>
+<p>The next refinement is. If we observe both from the side, not the pole, moon is not directly over the equator. The moon can be found at various angles to the north and south of the equator up to a maximum of 35° depending on the season and the time of the lunar month. So the tide bulge is no longer on the equator. No our observer in O could observe two high tide and two low tides every day. But the high tides are unequal height, as are the low tides. This difference is called the diurnal (daily) inequality.</p>
+<p>This model only consider the effect of moon,without continents Coriolis force and  friction force. Such tide is called equilibrium tide and this theory is called The Equilibrium Theory of Tides or “static” theory of  tides.</p>
+<p>It cannot predict It cannot predict the tide at any particular location but it does explain some of the main features of the tide such as</p>
+<ol>
+<li>diurnal variation</li>
+<li>diurnal inequality in the height</li>
+<li>daily delay</li>
+</ol>
+<p>The next improvement of equilibrium theory of tide is considering the effects of the earth-sun system on top of the effects of the earth–moon system.</p>
+<p>The mass of the sun is 27 × 106<br>times the mass of the moon but its distance<br>from the earth is 400 times that of the moon. Because of this great distance, the gravitational attraction on a particle of water on the earth due to the sun is about one-half that due to the moon. So we can construct diagrams like those shown in Figs. 7.03 and 7.04 for the tide due to the sun, but the height of the tide will be only half that due to the moon. The important effect of the tide due to the sun arises because its tidal bulge moves relative to the moon’s tidal bulge through- out the lunar month.</p>
+<p>When the two tidal bulges coincide they add together to create the extra high tides called the spring tides. When the tidal bulges are opposed their effects tend to cancel one another, creating the neap tides. Thus, the equilibrium tide model can also qualitatively explain the fortnightly inequality in addition to the other effects.</p>
+<h3 id="Tides-in-the-real-ocean"><a href="#Tides-in-the-real-ocean" class="headerlink" title="Tides in the real ocean"></a>Tides in the real ocean</h3><p>The next development of tide theory is dynamic theory of tide. It considered the continents, topography, Coriolis force and  friction force, etc. </p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208170201.png"></p>
+<p>This is the  <strong>Laplace’s tidal equations</strong>. But it is hard to solve. For prediction, one solution is that we can decompose the tide. We can think the real tide in our ocean is composed by a lot of tide constituents . Each tide constituents induced by each an imaginary  planets. There are three main categories of constituents (Pond and Pickard 1983):</p>
+<ol>
+<li>semi-diurnal, period about 12 hours</li>
+<li>diurnal, period about 24 hours</li>
+<li>long period, greater than 24 hours.</li>
+</ol>
+<p>The four most important constituents are:</p>
+<ol>
+<li>The lunar semi-diurnal ,M2, Period=12.42h</li>
+<li>The solar semi-diurnal, S2, Period=12.00h</li>
+<li>The lunisolar diurnal, K1, Period=23.93h</li>
+<li>The principal lunar diurnal, O1, period=25.82h</li>
+</ol>
+<p>The M2 constituent is roughly twice the amplitude of the other three.</p>
+<p>In different location around the word, the relative importance of constituents is quite different. So we have different patterns of tides. The four main classifications of the form of the tides are illustrated in the next figure.</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208172014.png"></p>
+<p>The first one has two high tides and two low tides every day and Both the highs are about the same height and both the lows are about the same height. Such a tide is called a semi-diurnal in form because there are two per day and both are about the same height.In this case the semi-diurnal constituents dominate the diurnal ones. This fact is often quantified with the ratio F = (K1+O1)/(M2 + S2 ), where each letter stands for the amplitude of the constituent. If F is small (0.11), as in the upper record, the sum of the amplitudes of the diurnal constituents (K1+O1 ) is small relative<br>to the sum of the semi-diurnal ones (M2+S2 ).</p>
+<p>The four records in Fig. 7.05 show a marked decrease from top to bottom in the amplitude of the semi-diurnal tidal oscillation relative to the diurnal oscillation, which is confirmed by the increase in F from 0.11 to ~19. At San Francisco there are always two tides per day but they are usually of unequal amplitude. At Manila there are two tides per day during the neap tides but only one rise and fall per day during spring tides. At Do-Son there is only one rise and fall of the tide per day throughout the month, which is a purely diurnal form of tidal oscillation. This occurrence is the rarest form of tide. The changing form of the tide between locations is due partly to the shape of the ocean basin in which the tidal wave is contained and partly to the latitude (Hendershott 1981).</p>
+<h3 id="Moving-the-tidal-bulge-over-the-earth-Kelvin-waves"><a href="#Moving-the-tidal-bulge-over-the-earth-Kelvin-waves" class="headerlink" title="Moving the tidal bulge over the earth: Kelvin waves"></a>Moving the tidal bulge over the earth: Kelvin waves</h3><p>The former one is more focus on the coast, if we focus on a more large scale, the water depth is almost the same and the friction from the topography could be ignored. More idealized, if we assume the  coast line is straight, we could get One solution of former dynamic tide equation set is that the velocity of tide is </p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208202646.png"></p>
+<p>here g is Gravitational acceleration and k is the depth of the water.  and the Kelvin wave is a reasonable approximation for tidal waves in the vicinity of a straight coastline.</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208204932.png"></p>
+<p>And here the Coriolis force is an important feature of the motion.</p>
+<p>. The effect of the Coriolis force is to push the water to the right in the northern hemisphere</p>
+<p>The Coriolis effect causes the amplitude of the wave to increase toward the shore and leads to the expression that the wave is “trapped” against the shore. Such a trapped Kelvin wave causes the water particles to move back and forth parallel to the coast as the wave goes by</p>
+<p>The horizontal scale of the wave, or the approximate distance from the coast to where the sea level is undisturbed by the wave, is estimated by the Rossby radius. </p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208205203.png"></p>
+<p>For the Kelvin wave in Fig. 7.06 we put g = 10 m s−2<br>, h = 4000 m, and f= 10−4 s−1 to get Re = 2000 km. This value is commonly called the external Rossby radius, or deformation scale</p>
+<h3 id="Tidal-currents"><a href="#Tidal-currents" class="headerlink" title="Tidal currents"></a>Tidal currents</h3>]]></content>
       <categories>
         <category>学习笔记</category>
       </categories>
@@ -1315,31 +1315,6 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
-    <title>Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</title>
-    <url>/posts/da4d42a2.html</url>
-    <content><![CDATA[<p>Theory of Generalization</p>
-<p>test error can approximate training error if there is enough data and growth function does not grow too fast</p>
-<a id="more"></a>
-
-<h1 id="Restriction-of-Breaking-Point"><a href="#Restriction-of-Breaking-Point" class="headerlink" title="Restriction of Breaking Point"></a>Restriction of Breaking Point</h1><h2 id="The-Four-Breaking-Points"><a href="#The-Four-Breaking-Points" class="headerlink" title="The Four Breaking Points"></a>The Four Breaking Points</h2><p>growth function $m_\H(N)$:max number of dichotomies</p>
-<ul>
-<li>positive rays: $m_\H(N)=N+1$</li>
-<li>positive intervals: $m_\H(N)=\frac{1}{2}N^2+\frac{1}{2}N+1$</li>
-<li>convex sets: $m_\H(N)=2^N$</li>
-<li>2D perceptrons :$m_\H(N)&lt;2^N$ in some cases</li>
-</ul>
-<h2 id="Restriction-of-Breaking-Point-1"><a href="#Restriction-of-Breaking-Point-1" class="headerlink" title="Restriction of Breaking Point"></a>Restriction of Breaking Point</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png"></p>
-<h1 id="Bounding-Function-Basic-Cases"><a href="#Bounding-Function-Basic-Cases" class="headerlink" title="Bounding Function:Basic Cases"></a>Bounding Function:Basic Cases</h1><h2 id="Bounding-Function"><a href="#Bounding-Function" class="headerlink" title="Bounding Function"></a>Bounding Function</h2>]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>note for ocean optic web book：Liaght and Radiometry</title>
     <url>/posts/80897339.html</url>
     <content><![CDATA[<p>Souce: <a href="http://www.oceanopticsbook.info/">http://www.oceanopticsbook.info/</a></p>
@@ -1420,6 +1395,31 @@ tags: [标签1,标签2,标签3]
         <tag>Research Basis</tag>
         <tag>Ocean Optics</tag>
         <tag>bookreading</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</title>
+    <url>/posts/da4d42a2.html</url>
+    <content><![CDATA[<p>Theory of Generalization</p>
+<p>test error can approximate training error if there is enough data and growth function does not grow too fast</p>
+<a id="more"></a>
+
+<h1 id="Restriction-of-Breaking-Point"><a href="#Restriction-of-Breaking-Point" class="headerlink" title="Restriction of Breaking Point"></a>Restriction of Breaking Point</h1><h2 id="The-Four-Breaking-Points"><a href="#The-Four-Breaking-Points" class="headerlink" title="The Four Breaking Points"></a>The Four Breaking Points</h2><p>growth function $m_\H(N)$:max number of dichotomies</p>
+<ul>
+<li>positive rays: $m_\H(N)=N+1$</li>
+<li>positive intervals: $m_\H(N)=\frac{1}{2}N^2+\frac{1}{2}N+1$</li>
+<li>convex sets: $m_\H(N)=2^N$</li>
+<li>2D perceptrons :$m_\H(N)&lt;2^N$ in some cases</li>
+</ul>
+<h2 id="Restriction-of-Breaking-Point-1"><a href="#Restriction-of-Breaking-Point-1" class="headerlink" title="Restriction of Breaking Point"></a>Restriction of Breaking Point</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png"></p>
+<h1 id="Bounding-Function-Basic-Cases"><a href="#Bounding-Function-Basic-Cases" class="headerlink" title="Bounding Function:Basic Cases"></a>Bounding Function:Basic Cases</h1><h2 id="Bounding-Function"><a href="#Bounding-Function" class="headerlink" title="Bounding Function"></a>Bounding Function</h2>]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
       </tags>
   </entry>
   <entry>
@@ -1504,6 +1504,69 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
+    <title>日本留学申请经验贴（一）之留学机构</title>
+    <url>/posts/27dde70e.html</url>
+    <content><![CDATA[<p>其实很早之前就想写这个帖子了。自己从去年这个时候到现在花了整整一年时间经历了留学的大大小小的事情，但是不知道从哪里讲起来。就想到哪里讲哪里吧。带有一定的主观性，仅供参考。</p>
+<a id="more"></a>
+
+<h2 id="我要不要找留学机构"><a href="#我要不要找留学机构" class="headerlink" title="我要不要找留学机构"></a>我要不要找留学机构</h2><p>留学这件事，无论是去哪儿，很多人想到的第一件事就是要不要花钱找留学机构，其实这个答案很多，因人而异，而且现在各种机构除了传统的文书服务之外还打出了各种背景提升服务，什么跟哈佛斯坦福的线上研究、世界五百强的内推之类的，具体适不适合就更难说了。这里需要先厘清几个概念。</p>
+<h2 id="中介与咨询机构"><a href="#中介与咨询机构" class="headerlink" title="中介与咨询机构"></a>中介与咨询机构</h2><p>我发现很多人都很难分清中介这个概念。拿房屋中介举例子，卖房子的人给中介钱让中介帮忙卖，买房子的人给中介钱来获取信息。放到留学上，留学中介在这里一方面收外国学校的钱来给他们招生，另一方面收学生和家长的钱来帮助他们申请。显而易见，这种概念下的中介对绝大多数人来说都毫无意义，因为国外的好学校不需要中介来帮他们招生。我们平时所找的一些“中介”，更多的是指留学咨询机构。</p>
+<h2 id="留学需要的材料"><a href="#留学需要的材料" class="headerlink" title="留学需要的材料"></a>留学需要的材料</h2><p>在说要不要找留学机构之前，我想先说明留学需要什么，然后再来说明留学机构能不能帮我们完成这些东西。</p>
+<p>对于绝大多数学校的申请来说，需要的硬核材料无非以下几项：</p>
+<ul>
+<li>语言成绩</li>
+<li>简历</li>
+<li>成绩单、在读证明、毕业证明</li>
+<li>推荐信</li>
+<li>Paper</li>
+<li>陶瓷信</li>
+<li>Personal Statement或Statement of Purpose</li>
+<li>Writing Sample或Research Proposal</li>
+</ul>
+<p>申请的整个过程中还需要做的事有</p>
+<ul>
+<li><p>查找学校和老师信息</p>
+</li>
+<li><p>合理选校定位</p>
+</li>
+<li><p>小蜜沟通</p>
+</li>
+<li><p>填写网申</p>
+</li>
+<li><p>材料寄送</p>
+</li>
+<li><p>offer选择</p>
+</li>
+<li><p>签证、租房</p>
+</li>
+</ul>
+<p>前面那一栏是申请的硬实力，也是最能决定你申请结果的因素；而后面这一栏则是申请中的细节问题，但是同样至关重要，因为选校定位不合理、材料寄送不及时而导致全聚德的人每年都有。我接下来将分开说明这两项。</p>
+<p>硬核材料</p>
+<p>这些材料里，在读证明和毕业证明属于学校开具的材料，只要你递交的时候注意以下几点<br>（1）英文翻译<br>（2）学校公章<br>（3）密封<br>就不会因为这两个卡你。</p>
+<h3 id="语言成绩、简历、成绩单、推荐信、Paper"><a href="#语言成绩、简历、成绩单、推荐信、Paper" class="headerlink" title="语言成绩、简历、成绩单、推荐信、Paper"></a>语言成绩、简历、成绩单、推荐信、Paper</h3><p>这五个材料很大程度上其实取决于你自己。无论你是想保研、考研、找工作还是出国，几乎都要用到这五个材料（或者其中一部分）。因此如果大一的学弟学妹们感到很迷茫没有目标，我建议你们就把目标定为出国，因为在我看来这是最难的。到了大三下学期的暑假，如果你成绩好有paper，但是突然不想出国了，那么去保研也是没有任何问题的；对于商科来说，有一份好的实习，不想出国去找工作也很容易。<br>说远了，这五个材料里，语言成绩和你的成绩单需要你自己去考，留学机构能帮到的无非是指导一下选课（对于想转专业的同学还是很有必要的，因为有些学校写明了如果想申请某个项目必须修读什么课程，但是这个去搜索名校培养方案、录取要求或者询问学长学姐也可以得到）或者提供语言培训（大多数需要收费），最后三维高不高还是看你自己的努力。<br>简历、推荐信、Paper这三者取决于你之前的科研、实习、竞赛以及其他一些活动（推荐信如果找任课老师写的话需要看你课堂表现），当然了简历的撰写还是有门道的，这个可以重开一个帖子，这里就不多说了。这些活动你自己不努力不积极就拿不到一个足够有分量的推荐信，发表不了Paper，也没有一个丰富的简历。留学机构在这里能做的就是所谓的背景提升项目，给你提供实习内推和科研的资源，或者帮你申请暑研，具体能帮到多少其实情况非常复杂。如果你本身非常优秀但是缺少相关的信息和资源的话，或许对你来说有很深刻的意义；除此之外，就算你通过机构的帮助去了世界五百实习强或者顶尖名校做科研，最后的结果不好，没有什么好的成果，依然不能给你的留学提供太大的帮助；更何况机构提供的这些机会并不是你报名就能够通过，同样存在着竞争，同样需要你本身足够优秀。</p>
+<h3 id="Personal-Statement或Statement-of-Purpose＼Writing-Sample或Research-Proposal"><a href="#Personal-Statement或Statement-of-Purpose＼Writing-Sample或Research-Proposal" class="headerlink" title="Personal Statement或Statement of Purpose＼Writing Sample或Research Proposal"></a>Personal Statement或Statement of Purpose＼Writing Sample或Research Proposal</h3><p>这两个的话，前者其实取决于你的语言水平，后者取决于你的科研实力，关于如何撰写这两个材料可以说很长很长时间，这里先聚焦于机构。前者对于大多数学校都是很重要的材料，留学机构能够帮你最多的也是这一个材料，因此我强烈建议就算是DIY的同学也可以找一些机构进行Personal Statement或Statement of Purpose修改润色，我这里推荐一下<a href="http://www.palmdrive.cn/">棕榈大道</a>，绝对物超所值。而后一个材料，文科有一些专业要求写Writing Sample，我不是很了解，因此在这里不做评论；对于大多数日本申请而言，Research Proposal绝对是最重要的材料没有之一，但是这个材料太过专业和学术化，大多数留学机构只能帮你修改语法、单词错误和一些句式，内容上只有和你申请的老师是同一个方向的在读研究生或博士生才能给出意见（当然了，很多时候你要申请的老板也会给你的Research Proposal一些修改意见），因此Research Proposal去找你的师兄师姐或者关系好的老师修改可能更好一点。有一些机构会说他们可以提供Research Proposal的修改或者代写，如果你因为这个而想和他们签约的话，请一定确认好合同条款和申请辅导老师的水平。</p>
+<h3 id="申请细节"><a href="#申请细节" class="headerlink" title="申请细节"></a>申请细节</h3><p>相较于硬核材料，在申请细节这一方面留学辅导机构由于有过去学生的申请数据和申请辅导经验，反而能发挥很大作用。但是另一方面，这些也可以通过学长学姐和自己去论坛、官网查询而得到。如果你所在的学校出国氛围比较浓厚的话，留学机构能够在这一项上提供的帮助反而不是很多。</p>
+<h2 id="DIY的判断标准"><a href="#DIY的判断标准" class="headerlink" title="DIY的判断标准"></a>DIY的判断标准</h2><p>前面说了这么多，接下来我来说一个我认为的DIY理想状态。</p>
+<p>如果在大四上学期刚开学的时候，你不打算跨专业申请，语言已经满足要求或者距离很小，已经确定了要申请的项目/学校/导师，手握两到三段拿得出手的科研实习经历，那么你完全不需要找辅导机构，DIY就可以，除非你想申请一些录取难度极高的项目。</p>
+<p>现在就可以评判一下自己的实力，看看自己大四上学期的时候能不能达到这个标准。</p>
+<h2 id="怎么选择机构"><a href="#怎么选择机构" class="headerlink" title="怎么选择机构"></a>怎么选择机构</h2><p>如果你想选择机构的话，还会面临一个怎么选择机构的问题。相信很多人都听说过被某些留学机构坑钱的事情，我认为选择机构主要要有以下几个标准：</p>
+<ol>
+<li>网申账号、邮箱必须掌握在你自己的手里</li>
+<li>合同里有明确的退款政策</li>
+<li>学生有权利主动更换导师，并且给出更换所需时间</li>
+<li>该机构过往无重大黑历史（这一条在知乎、微信、微博搜一下就能知道）</li>
+</ol>
+<p>下一期将聚焦于日本研究生申请制度的介绍。</p>
+]]></content>
+      <categories>
+        <category>留学生活</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>日本</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客更换主题、页面设置及问题解决</title>
     <url>/posts/aaf90768.html</url>
     <content><![CDATA[<p>上一篇解决了博客的生成、部署和更新的问题，实现了基本的功能。这一篇主要来解决更换主题、子页面设置和乱码三个问题。<a id="more"></a></p>
@@ -1572,104 +1635,6 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
-    <title>日本留学申请经验贴（一）之留学机构</title>
-    <url>/posts/27dde70e.html</url>
-    <content><![CDATA[<p>其实很早之前就想写这个帖子了。自己从去年这个时候到现在花了整整一年时间经历了留学的大大小小的事情，但是不知道从哪里讲起来。就想到哪里讲哪里吧。带有一定的主观性，仅供参考。</p>
-<a id="more"></a>
-
-<h2 id="我要不要找留学机构"><a href="#我要不要找留学机构" class="headerlink" title="我要不要找留学机构"></a>我要不要找留学机构</h2><p>留学这件事，无论是去哪儿，很多人想到的第一件事就是要不要花钱找留学机构，其实这个答案很多，因人而异，而且现在各种机构除了传统的文书服务之外还打出了各种背景提升服务，什么跟哈佛斯坦福的线上研究、世界五百强的内推之类的，具体适不适合就更难说了。这里需要先厘清几个概念。</p>
-<h2 id="中介与咨询机构"><a href="#中介与咨询机构" class="headerlink" title="中介与咨询机构"></a>中介与咨询机构</h2><p>我发现很多人都很难分清中介这个概念。拿房屋中介举例子，卖房子的人给中介钱让中介帮忙卖，买房子的人给中介钱来获取信息。放到留学上，留学中介在这里一方面收外国学校的钱来给他们招生，另一方面收学生和家长的钱来帮助他们申请。显而易见，这种概念下的中介对绝大多数人来说都毫无意义，因为国外的好学校不需要中介来帮他们招生。我们平时所找的一些“中介”，更多的是指留学咨询机构。</p>
-<h2 id="留学需要的材料"><a href="#留学需要的材料" class="headerlink" title="留学需要的材料"></a>留学需要的材料</h2><p>在说要不要找留学机构之前，我想先说明留学需要什么，然后再来说明留学机构能不能帮我们完成这些东西。</p>
-<p>对于绝大多数学校的申请来说，需要的硬核材料无非以下几项：</p>
-<ul>
-<li>语言成绩</li>
-<li>简历</li>
-<li>成绩单、在读证明、毕业证明</li>
-<li>推荐信</li>
-<li>Paper</li>
-<li>陶瓷信</li>
-<li>Personal Statement或Statement of Purpose</li>
-<li>Writing Sample或Research Proposal</li>
-</ul>
-<p>申请的整个过程中还需要做的事有</p>
-<ul>
-<li><p>查找学校和老师信息</p>
-</li>
-<li><p>合理选校定位</p>
-</li>
-<li><p>小蜜沟通</p>
-</li>
-<li><p>填写网申</p>
-</li>
-<li><p>材料寄送</p>
-</li>
-<li><p>offer选择</p>
-</li>
-<li><p>签证、租房</p>
-</li>
-</ul>
-<p>前面那一栏是申请的硬实力，也是最能决定你申请结果的因素；而后面这一栏则是申请中的细节问题，但是同样至关重要，因为选校定位不合理、材料寄送不及时而导致全聚德的人每年都有。我接下来将分开说明这两项。</p>
-<p>硬核材料</p>
-<p>这些材料里，在读证明和毕业证明属于学校开具的材料，只要你递交的时候注意以下几点<br>（1）英文翻译<br>（2）学校公章<br>（3）密封<br>就不会因为这两个卡你。</p>
-<h3 id="语言成绩、简历、成绩单、推荐信、Paper"><a href="#语言成绩、简历、成绩单、推荐信、Paper" class="headerlink" title="语言成绩、简历、成绩单、推荐信、Paper"></a>语言成绩、简历、成绩单、推荐信、Paper</h3><p>这五个材料很大程度上其实取决于你自己。无论你是想保研、考研、找工作还是出国，几乎都要用到这五个材料（或者其中一部分）。因此如果大一的学弟学妹们感到很迷茫没有目标，我建议你们就把目标定为出国，因为在我看来这是最难的。到了大三下学期的暑假，如果你成绩好有paper，但是突然不想出国了，那么去保研也是没有任何问题的；对于商科来说，有一份好的实习，不想出国去找工作也很容易。<br>说远了，这五个材料里，语言成绩和你的成绩单需要你自己去考，留学机构能帮到的无非是指导一下选课（对于想转专业的同学还是很有必要的，因为有些学校写明了如果想申请某个项目必须修读什么课程，但是这个去搜索名校培养方案、录取要求或者询问学长学姐也可以得到）或者提供语言培训（大多数需要收费），最后三维高不高还是看你自己的努力。<br>简历、推荐信、Paper这三者取决于你之前的科研、实习、竞赛以及其他一些活动（推荐信如果找任课老师写的话需要看你课堂表现），当然了简历的撰写还是有门道的，这个可以重开一个帖子，这里就不多说了。这些活动你自己不努力不积极就拿不到一个足够有分量的推荐信，发表不了Paper，也没有一个丰富的简历。留学机构在这里能做的就是所谓的背景提升项目，给你提供实习内推和科研的资源，或者帮你申请暑研，具体能帮到多少其实情况非常复杂。如果你本身非常优秀但是缺少相关的信息和资源的话，或许对你来说有很深刻的意义；除此之外，就算你通过机构的帮助去了世界五百实习强或者顶尖名校做科研，最后的结果不好，没有什么好的成果，依然不能给你的留学提供太大的帮助；更何况机构提供的这些机会并不是你报名就能够通过，同样存在着竞争，同样需要你本身足够优秀。</p>
-<h3 id="Personal-Statement或Statement-of-Purpose＼Writing-Sample或Research-Proposal"><a href="#Personal-Statement或Statement-of-Purpose＼Writing-Sample或Research-Proposal" class="headerlink" title="Personal Statement或Statement of Purpose＼Writing Sample或Research Proposal"></a>Personal Statement或Statement of Purpose＼Writing Sample或Research Proposal</h3><p>这两个的话，前者其实取决于你的语言水平，后者取决于你的科研实力，关于如何撰写这两个材料可以说很长很长时间，这里先聚焦于机构。前者对于大多数学校都是很重要的材料，留学机构能够帮你最多的也是这一个材料，因此我强烈建议就算是DIY的同学也可以找一些机构进行Personal Statement或Statement of Purpose修改润色，我这里推荐一下<a href="http://www.palmdrive.cn/">棕榈大道</a>，绝对物超所值。而后一个材料，文科有一些专业要求写Writing Sample，我不是很了解，因此在这里不做评论；对于大多数日本申请而言，Research Proposal绝对是最重要的材料没有之一，但是这个材料太过专业和学术化，大多数留学机构只能帮你修改语法、单词错误和一些句式，内容上只有和你申请的老师是同一个方向的在读研究生或博士生才能给出意见（当然了，很多时候你要申请的老板也会给你的Research Proposal一些修改意见），因此Research Proposal去找你的师兄师姐或者关系好的老师修改可能更好一点。有一些机构会说他们可以提供Research Proposal的修改或者代写，如果你因为这个而想和他们签约的话，请一定确认好合同条款和申请辅导老师的水平。</p>
-<h3 id="申请细节"><a href="#申请细节" class="headerlink" title="申请细节"></a>申请细节</h3><p>相较于硬核材料，在申请细节这一方面留学辅导机构由于有过去学生的申请数据和申请辅导经验，反而能发挥很大作用。但是另一方面，这些也可以通过学长学姐和自己去论坛、官网查询而得到。如果你所在的学校出国氛围比较浓厚的话，留学机构能够在这一项上提供的帮助反而不是很多。</p>
-<h2 id="DIY的判断标准"><a href="#DIY的判断标准" class="headerlink" title="DIY的判断标准"></a>DIY的判断标准</h2><p>前面说了这么多，接下来我来说一个我认为的DIY理想状态。</p>
-<p>如果在大四上学期刚开学的时候，你不打算跨专业申请，语言已经满足要求或者距离很小，已经确定了要申请的项目/学校/导师，手握两到三段拿得出手的科研实习经历，那么你完全不需要找辅导机构，DIY就可以，除非你想申请一些录取难度极高的项目。</p>
-<p>现在就可以评判一下自己的实力，看看自己大四上学期的时候能不能达到这个标准。</p>
-<h2 id="怎么选择机构"><a href="#怎么选择机构" class="headerlink" title="怎么选择机构"></a>怎么选择机构</h2><p>如果你想选择机构的话，还会面临一个怎么选择机构的问题。相信很多人都听说过被某些留学机构坑钱的事情，我认为选择机构主要要有以下几个标准：</p>
-<ol>
-<li>网申账号、邮箱必须掌握在你自己的手里</li>
-<li>合同里有明确的退款政策</li>
-<li>学生有权利主动更换导师，并且给出更换所需时间</li>
-<li>该机构过往无重大黑历史（这一条在知乎、微信、微博搜一下就能知道）</li>
-</ol>
-<p>下一期将聚焦于日本研究生申请制度的介绍。</p>
-]]></content>
-      <categories>
-        <category>留学生活</category>
-      </categories>
-      <tags>
-        <tag>留学</tag>
-        <tag>日本</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日本留学申请（四）：经管类申请</title>
-    <url>/posts/40e83800.html</url>
-    <content><![CDATA[<p>［本文由人美心善的小姑娘蓝田双慕所著］<br>本文主要介绍经管类的日本留学申请。笔者自身在申请学校的时候主要是奔着经济系去的，对日本商学院的了解不够深入，因此，笔者只能尽己所能提供自身了解的相关信息，并不能保证信息的完全囊括和绝对准确，希望此文能给有志于申请日本经管类研究生的同学带来一些帮助。</p>
-<p>笔者申请的是sgu英文硕士项目，对日语入学的流程和要求不太了解，因此本文主要介绍日本经管类硕士英文项目的申请。</p>
-<a id="more"></a> 
-
-
-
-<p>根据笔者主观判断，将经管类申请分为二类，一是MBA类申请，二是经营或经济类申请。</p>
-<h1 id="MBA-类申请"><a href="#MBA-类申请" class="headerlink" title="MBA 类申请"></a>MBA 类申请</h1><h2 id="MBA类介绍"><a href="#MBA类介绍" class="headerlink" title="ＭＢＡ类介绍"></a>ＭＢＡ类介绍</h2><p>MBA类申请的典型特点是所需材料较简单，流程比较便捷，基本不需要撰写研究计划书，结业时应该也不需要撰写毕业论文，大致可以类比为国内的专业硕士。</p>
-<p>例如，早稻田大学的商学院，除了需要提交雅思，GMAT，成绩单，推荐信外，基本只需要在系统上填写给出的五六个开放性问题。早稻田商学院大致分为金融硕士和MBA硕士，分五轮进行申请。和英美商学院相比，早稻田商学院对雅思，GMAT的硬性要求不是很高，申请难度适中。当然，商学院对费用的要求很高。早稻田商学院学制两年，预计费用600万日元，差不多35万到40万人民币。</p>
-<p>除早稻田商学院外，早稻田的亚洲大平洋项目申请过程也不复杂，也不需要撰写研究计划书，同时项目费用也较高。如果希望得到早稻田大学的学历，这个项目也可以考虑考虑。</p>
-<p>同为私立高校的庆应义塾大学也开设MBA项目，但其开学日期是每年的四月份,而且可能会要求申请者具有两年或两年以上的工作经验。此外，七所帝国大学也可能会有相应的MBA项目，笔者未能深入查找，读者可以登录大学的官方网站，查看学校的招生项目。</p>
-<p>还有需要注意的是，东京大学的MPP项目也值得关注。MPP又称公共政策硕士，也是一种非研究型的硕士项目。MPP的申请好像也不需要撰写研究计划书。对于有志于从日本回国的同学，东京大学的声望还是具有优势的，同时东京大学作为国立高校，学费的负担较小。同时，一桥大学的MPP项目也是很好的。一桥大学在日本声望很高，但由于其规模小，因此声名局限在日本国内。此外，神户，明治，横滨等大学应该也有开设MPP项目，读者在浏览官网时可以稍稍关注一下。</p>
-<h2 id="申请所需要的准备："><a href="#申请所需要的准备：" class="headerlink" title="申请所需要的准备："></a>申请所需要的准备：</h2><p>对于商学院申请，成绩，语言，实践经历这三项自然是越优秀越好。同时，出身校也会占一部分权重。但如果你背景不强，语言成绩不好，或是实践经历单薄，也不要气馁。在达到学校对语言等的最低标准后，你可以认真地申请一下，想办法展示你好的地方，认真地填写开放性问题，也是很有可能成功的。</p>
-<h1 id="经营或经济类研究生申请"><a href="#经营或经济类研究生申请" class="headerlink" title="经营或经济类研究生申请"></a>经营或经济类研究生申请</h1><h2 id="经管或经济类介绍"><a href="#经管或经济类介绍" class="headerlink" title="经管或经济类介绍"></a>经管或经济类介绍</h2><p>不同于我国的管理学院和经济学院，日本将经管类分为经营部和经济部。经营部大致包括会计，审计，财务管理，市场营销，金融等。经济部大致包括微观经济，宏观经济，产业经济，城市经济，博弈论，计量经济等。有的大学将经营部和经济部合在了一个部门，有的大学将经营部和经济部分开为两个部门。</p>
-<p>与理工科申请不同，理工科申请一定要套瓷，即你看到哪个教授不错，就去给他发邮件，简单介绍一下自己，说一下自己对教授的研究方向很感兴趣，希望教授收我为学生。对经管类来说，如果项目的guideline有说需要提前联系导师，即 prospective tutor， 那就提前联系；如果没有提及的话，那就可以不联系。当然，无论有无要求，提前发邮件给喜欢的导师都是有帮助的。</p>
-<p>这类研究生申请一般都需要撰写研究计划书。研究计划书类似于大学毕业论文的开题报告，找一个你感兴趣的问题，写出你研究这个问题的计划。研究计划书在这类申请上发挥的作用很大，它名义上表示你未来两年研究的规划。一个可行的，有意义的研究计划书表示你未来两年不会虚度，学校给你的这个名额不会被浪费。所以一定要重视研究计划书，在撰写研究计划书的时候，请务必多找学长，学姐或老师进行参谋。</p>
-<p>从我个人观点，写研究计划书前，应该先浏览学校官方网站的老师介绍，看看喜欢老师的研究方向。因为撰写研究计划书消耗精力还是比较大的，所以在选择研究课题时，可以选一些适用性较强，范围较广的研究方向。因为你喜欢的老师可能因为种种原因今年不收学生，所以保险起见，最好让自己的研究计划可以适用于多个导师。</p>
-<p>以我个人的经验，申请经管类的时间跨度是很大的，同时申请难度也有点高。另外，因为各个大学开设英语项目的不一致，有时候需要从夹缝里找合适的项目。</p>
-<p>首先，东京大学的经济英文项目(UTIPE项目)好像申请比较早。如果2019年十月入学（为方便，下列皆以2019年入学为准）的话，2018年8,9月好像就可以申请。但东京大学对硬件要求很高，一般都需要很好的语言和GRE成绩，申请者的素质也都很优秀，同时招生人数很少，申请难度较高。东京大学还有一个农业经济的项目，分为两轮申请，最后一轮是2019年的2,3月份。京都大学的东亚经济项目同样招生人数较少，竞争激烈。京都大学是需要你填写一个意向导师的，这里强烈推荐填写项目内的教授，不要填写属于经济部但不属于这个项目的导师。</p>
-<p>除了东大，京大以外，其他帝国大学开设的英文项目种类不同。大阪大学和北海道好像是没有开设经管类的英文项目。但是我听一位学长介绍，北海道大学可以从食品工程这一类项目中找到经济学方向的导师，有心者应该可以通过此项目来学习经济。名古屋大学开设的英文项目范围较广，涵盖经济，经营项目，同时申请系统设计得比较成熟，可以进行申请。东北大学和九州大学均有经济，经营类项目，需要注意的是东北大学的会计大学院项目好像已经停办，但GPEM经济项目仍然正常运行。九州大学和东北大学的申请时间较晚，如九州大学，好像是2019年4月开始申请。私立大学中，早稻田大学的经济项目从2019年1,2月开始，但据说录取offer一直到5月才能发放。庆应义塾大学的经济项目好像从2019年5,6月开始，但可能需要到日本面试。庆应大学SFC的申请时间较早，SFC中的两个学部（综合政策学部和环境情报学部）看似与经管无关，但其中有经管的细分方向，有经济方面的优秀导师。</p>
-<p>如果申请者为了多增加选择，可以申请一些综合性强的项目。比如说农业大类下有农业经济，亚太研究，东亚研究下有区域经济，公共政策下应该有宏观经济。也可以转专业申请，比如说本科商科申请个公司法方向，申请个经济学方向，都是可以的。</p>
-<h2 id="申请前需要的准备"><a href="#申请前需要的准备" class="headerlink" title="申请前需要的准备"></a>申请前需要的准备</h2><p>研究型硕士主要看重科研成果，对实习的看重没有那么高。但是本科没有科研成果的也不要灰心，好好写研究计划书，成功的几率还是不错的。</p>
-<p>总体来说，评判标准可以分为研究计划书，绩点，语言，出身校。研究计划书是很重要的。同时，经管类研究型硕士一般都是有面试的，通过Skype等，面试的内容基本上围绕研究计划书和personal statement，需要好好准备。</p>
-]]></content>
-      <categories>
-        <category>留学生活</category>
-      </categories>
-      <tags>
-        <tag>留学</tag>
-        <tag>日本</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本科总结</title>
     <url>/posts/726664aa.html</url>
     <content><![CDATA[<p>写在最前面：虽然我明年才毕业，虽然还有毕业认定等等一堆事情要做，但是我所有的理论课程都结束了，大四一年就是申请、科研、语言、毕业事宜，怎么看怎么不像一个本科生的生活，所以就提前总结了吧，而且也免得明年这个时候再忘记了。</p>
@@ -1726,6 +1691,41 @@ tags: [标签1,标签2,标签3]
       <tags>
         <tag>总结</tag>
         <tag>随便写写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日本留学申请（四）：经管类申请</title>
+    <url>/posts/40e83800.html</url>
+    <content><![CDATA[<p>［本文由人美心善的小姑娘蓝田双慕所著］<br>本文主要介绍经管类的日本留学申请。笔者自身在申请学校的时候主要是奔着经济系去的，对日本商学院的了解不够深入，因此，笔者只能尽己所能提供自身了解的相关信息，并不能保证信息的完全囊括和绝对准确，希望此文能给有志于申请日本经管类研究生的同学带来一些帮助。</p>
+<p>笔者申请的是sgu英文硕士项目，对日语入学的流程和要求不太了解，因此本文主要介绍日本经管类硕士英文项目的申请。</p>
+<a id="more"></a> 
+
+
+
+<p>根据笔者主观判断，将经管类申请分为二类，一是MBA类申请，二是经营或经济类申请。</p>
+<h1 id="MBA-类申请"><a href="#MBA-类申请" class="headerlink" title="MBA 类申请"></a>MBA 类申请</h1><h2 id="MBA类介绍"><a href="#MBA类介绍" class="headerlink" title="ＭＢＡ类介绍"></a>ＭＢＡ类介绍</h2><p>MBA类申请的典型特点是所需材料较简单，流程比较便捷，基本不需要撰写研究计划书，结业时应该也不需要撰写毕业论文，大致可以类比为国内的专业硕士。</p>
+<p>例如，早稻田大学的商学院，除了需要提交雅思，GMAT，成绩单，推荐信外，基本只需要在系统上填写给出的五六个开放性问题。早稻田商学院大致分为金融硕士和MBA硕士，分五轮进行申请。和英美商学院相比，早稻田商学院对雅思，GMAT的硬性要求不是很高，申请难度适中。当然，商学院对费用的要求很高。早稻田商学院学制两年，预计费用600万日元，差不多35万到40万人民币。</p>
+<p>除早稻田商学院外，早稻田的亚洲大平洋项目申请过程也不复杂，也不需要撰写研究计划书，同时项目费用也较高。如果希望得到早稻田大学的学历，这个项目也可以考虑考虑。</p>
+<p>同为私立高校的庆应义塾大学也开设MBA项目，但其开学日期是每年的四月份,而且可能会要求申请者具有两年或两年以上的工作经验。此外，七所帝国大学也可能会有相应的MBA项目，笔者未能深入查找，读者可以登录大学的官方网站，查看学校的招生项目。</p>
+<p>还有需要注意的是，东京大学的MPP项目也值得关注。MPP又称公共政策硕士，也是一种非研究型的硕士项目。MPP的申请好像也不需要撰写研究计划书。对于有志于从日本回国的同学，东京大学的声望还是具有优势的，同时东京大学作为国立高校，学费的负担较小。同时，一桥大学的MPP项目也是很好的。一桥大学在日本声望很高，但由于其规模小，因此声名局限在日本国内。此外，神户，明治，横滨等大学应该也有开设MPP项目，读者在浏览官网时可以稍稍关注一下。</p>
+<h2 id="申请所需要的准备："><a href="#申请所需要的准备：" class="headerlink" title="申请所需要的准备："></a>申请所需要的准备：</h2><p>对于商学院申请，成绩，语言，实践经历这三项自然是越优秀越好。同时，出身校也会占一部分权重。但如果你背景不强，语言成绩不好，或是实践经历单薄，也不要气馁。在达到学校对语言等的最低标准后，你可以认真地申请一下，想办法展示你好的地方，认真地填写开放性问题，也是很有可能成功的。</p>
+<h1 id="经营或经济类研究生申请"><a href="#经营或经济类研究生申请" class="headerlink" title="经营或经济类研究生申请"></a>经营或经济类研究生申请</h1><h2 id="经管或经济类介绍"><a href="#经管或经济类介绍" class="headerlink" title="经管或经济类介绍"></a>经管或经济类介绍</h2><p>不同于我国的管理学院和经济学院，日本将经管类分为经营部和经济部。经营部大致包括会计，审计，财务管理，市场营销，金融等。经济部大致包括微观经济，宏观经济，产业经济，城市经济，博弈论，计量经济等。有的大学将经营部和经济部合在了一个部门，有的大学将经营部和经济部分开为两个部门。</p>
+<p>与理工科申请不同，理工科申请一定要套瓷，即你看到哪个教授不错，就去给他发邮件，简单介绍一下自己，说一下自己对教授的研究方向很感兴趣，希望教授收我为学生。对经管类来说，如果项目的guideline有说需要提前联系导师，即 prospective tutor， 那就提前联系；如果没有提及的话，那就可以不联系。当然，无论有无要求，提前发邮件给喜欢的导师都是有帮助的。</p>
+<p>这类研究生申请一般都需要撰写研究计划书。研究计划书类似于大学毕业论文的开题报告，找一个你感兴趣的问题，写出你研究这个问题的计划。研究计划书在这类申请上发挥的作用很大，它名义上表示你未来两年研究的规划。一个可行的，有意义的研究计划书表示你未来两年不会虚度，学校给你的这个名额不会被浪费。所以一定要重视研究计划书，在撰写研究计划书的时候，请务必多找学长，学姐或老师进行参谋。</p>
+<p>从我个人观点，写研究计划书前，应该先浏览学校官方网站的老师介绍，看看喜欢老师的研究方向。因为撰写研究计划书消耗精力还是比较大的，所以在选择研究课题时，可以选一些适用性较强，范围较广的研究方向。因为你喜欢的老师可能因为种种原因今年不收学生，所以保险起见，最好让自己的研究计划可以适用于多个导师。</p>
+<p>以我个人的经验，申请经管类的时间跨度是很大的，同时申请难度也有点高。另外，因为各个大学开设英语项目的不一致，有时候需要从夹缝里找合适的项目。</p>
+<p>首先，东京大学的经济英文项目(UTIPE项目)好像申请比较早。如果2019年十月入学（为方便，下列皆以2019年入学为准）的话，2018年8,9月好像就可以申请。但东京大学对硬件要求很高，一般都需要很好的语言和GRE成绩，申请者的素质也都很优秀，同时招生人数很少，申请难度较高。东京大学还有一个农业经济的项目，分为两轮申请，最后一轮是2019年的2,3月份。京都大学的东亚经济项目同样招生人数较少，竞争激烈。京都大学是需要你填写一个意向导师的，这里强烈推荐填写项目内的教授，不要填写属于经济部但不属于这个项目的导师。</p>
+<p>除了东大，京大以外，其他帝国大学开设的英文项目种类不同。大阪大学和北海道好像是没有开设经管类的英文项目。但是我听一位学长介绍，北海道大学可以从食品工程这一类项目中找到经济学方向的导师，有心者应该可以通过此项目来学习经济。名古屋大学开设的英文项目范围较广，涵盖经济，经营项目，同时申请系统设计得比较成熟，可以进行申请。东北大学和九州大学均有经济，经营类项目，需要注意的是东北大学的会计大学院项目好像已经停办，但GPEM经济项目仍然正常运行。九州大学和东北大学的申请时间较晚，如九州大学，好像是2019年4月开始申请。私立大学中，早稻田大学的经济项目从2019年1,2月开始，但据说录取offer一直到5月才能发放。庆应义塾大学的经济项目好像从2019年5,6月开始，但可能需要到日本面试。庆应大学SFC的申请时间较早，SFC中的两个学部（综合政策学部和环境情报学部）看似与经管无关，但其中有经管的细分方向，有经济方面的优秀导师。</p>
+<p>如果申请者为了多增加选择，可以申请一些综合性强的项目。比如说农业大类下有农业经济，亚太研究，东亚研究下有区域经济，公共政策下应该有宏观经济。也可以转专业申请，比如说本科商科申请个公司法方向，申请个经济学方向，都是可以的。</p>
+<h2 id="申请前需要的准备"><a href="#申请前需要的准备" class="headerlink" title="申请前需要的准备"></a>申请前需要的准备</h2><p>研究型硕士主要看重科研成果，对实习的看重没有那么高。但是本科没有科研成果的也不要灰心，好好写研究计划书，成功的几率还是不错的。</p>
+<p>总体来说，评判标准可以分为研究计划书，绩点，语言，出身校。研究计划书是很重要的。同时，经管类研究型硕士一般都是有面试的，通过Skype等，面试的内容基本上围绕研究计划书和personal statement，需要好好准备。</p>
+]]></content>
+      <categories>
+        <category>留学生活</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>日本</tag>
       </tags>
   </entry>
   <entry>
@@ -1828,6 +1828,99 @@ tags: [标签1,标签2,标签3]
         <tag>机器学习</tag>
         <tag>Cousera</tag>
         <tag>林轩田</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>硕士一年</title>
+    <url>/posts/577f7527.html</url>
+    <content><![CDATA[<p>终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。</p>
+<a id="more"></a>
+
+<h1 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h1><p>其实自己本来是想把这个博客替代成微信公众号，所以早期的一些文章都是一些个人想法和乱七八糟的文章，后来在《数字图像处理》的时候查到了这个大佬的<a href="https://baidut.github.io/about/">博客</a>，才有了把自己的博客改编成自己的简历的想法。</p>
+<p>前几天在想有没有about页面的的模版，搜了搜发现了这个hugo<a href="https://themes.gohugo.io/academic/">主题</a>，花了两三天的时间迁移了过去，然后发现这个主题并不合适我这种经常写自己的想法笔记的人，更适合那种专门的学术主页，所以就又迁移回来了。</p>
+<h1 id="关于硕士"><a href="#关于硕士" class="headerlink" title="关于硕士"></a>关于硕士</h1><p>自己的硕士一年级就这么过去了，回想起来我过去这一年的好多事情，都让我尴尬到脚趾抠出来一个阿房宫，自己在这里第一年搞了好多笑话。</p>
+<p>因为自己性格的原因，自己的日语并没有得到很好的进步，在这里呆一年，并没有像刚进大学的自己一样，像一只饥饿的狼。</p>
+<p>自己在这里一年，做出来的东西，感觉真的就只有半年的量，一年前拿到的很多关于学术写作演讲发表和海洋光学海洋遥感水色遥感的资料，到现在也就学习了20%。</p>
+<p>其实很多东西真的一点都不难，就是自己很难静下心来去思考。</p>
+<p>自己真的太心急了，急于求成追求短平快，就比如现在写个总结，还想着赶紧写完。</p>
+<h1 id="关于精力"><a href="#关于精力" class="headerlink" title="关于精力"></a>关于精力</h1><p>自己这一年最大的一个感受就是好多时候精力和体力明显跟不上，比如最近这几天吃完饭就忍不住的犯困一睡俩小时，比如看一会论文写一会代码就觉得累，比如早上起不来，比如很难集中精力。看看老板六十多还健步如飞似少年自己是真的羡慕。身体素质真的肉眼可见的退化。</p>
+<p>一些不好的习惯是真的需要改了。</p>
+<h1 id="关于未来"><a href="#关于未来" class="headerlink" title="关于未来"></a>关于未来</h1><p>其实到现在我还对未来要做什么很不确定，尤其是最近这个国际环境动荡的情况下。</p>
+<p>但是最近慢慢地越来越感觉自己就是太不能吃苦了，自己每天养尊处优，不经风吹日晒，还喊着累。</p>
+<h1 id="第二年"><a href="#第二年" class="headerlink" title="第二年"></a>第二年</h1><p>希望明年这个时候，不管我做了什么选择，都能问心无愧的说，自己这个第二年，做到了自己能做的所有事情。</p>
+<p>静下心来，认认真真去学习，不要怕前路未卜。</p>
+<p>分携如昨。人生到处萍飘泊。偶然相聚还离索。多病多愁，须信从来错。尊前一笑休辞却。天涯同是伤沦落。故山犹负平生约。西望峨嵋，长羡归飞鹤。</p>
+]]></content>
+      <categories>
+        <category>学习经验</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>随便写写</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>狼总访谈</title>
+    <url>/posts/6ff151e3.html</url>
+    <content><![CDATA[<p>最近看到杨振宁在国科大的访谈上说“一个年轻的研究生最重要的一件事情是什么？其实不是你学到哪些技术，而是要使你自己走进未来五年、十年有大发展机会的领域，这才是你做研究生时所要达到的目标”，想起来自己大一找狼总访谈时，狼总说自己做出退博的一个重要原因就是能看到教培行业存在的问题，并且知道自己能够解决这个问题。</p>
+<p>因此重新把这篇当时的访谈作业发出来，希望自己未来再站在十字路口时能够做出一个不令自己后悔的决定，也希望能帮到看这篇文章的你。</p>
+<p>写的比较粗浅，切莫见笑。</p>
+<a id="more"></a>
+
+<p>朱宇,现担任北京<em>新东方</em>学校优能一对一部总监、<em>新东方</em>迅程K12项目部总监和<em>新东方</em>东方优播公司CEO</p>
+<h1 id="P1学习及工作经历"><a href="#P1学习及工作经历" class="headerlink" title="P1学习及工作经历"></a>P1学习及工作经历</h1><h2 id="学校经历"><a href="#学校经历" class="headerlink" title="学校经历"></a>学校经历</h2><p>2004年竞赛保送到清华大学材料科学与工程系，大一主要忙于学业，绩点排名全系第二。第二年竞选为学生会副主席，大三周转于学校各类社团活动并参与了团委的志愿者活动，大四直博到系主任张政军（教育部长江学者特聘教授，现任清华大学材料科学与工程学院院长）的科研团队，同时由于由宿舍朋友推荐08年3月开始在新东方兼职</p>
+<p>08年9月到10年9月一边在张政军的团队中从事材料科学基础研究，一边在新东方任职，10年9月从清华博士退学，在新东方全职工作</p>
+<h2 id="新东方工作经历"><a href="#新东方工作经历" class="headerlink" title="新东方工作经历"></a>新东方工作经历</h2><p>开始时初中数学物理老师</p>
+<p>08年9月成为初中物理组组长</p>
+<p>09年4月成为高中物理组组长</p>
+<p>09年9月开始负责北京新东方优能中学初中部所有数理化生四科老师的招聘和培训</p>
+<p>10年4月成为北京新东方优能中学高中数学组的组长 同时负责招聘培训的统一协调工作</p>
+<p>11年3月成为优能中学初中数理化部分项目的主管，独立负责初中数理化的运营</p>
+<p>12年4月成为优能中学高中所有科目项目的经理</p>
+<p>14年4成为整个北京所有校区优能中学的主管，负责招生运营主管工作</p>
+<p>15年4月调任北京优能一对一部，成为整个北京新东方优能一对一部的总监至今</p>
+<p>成名作《教育培训行业现状分析十五篇》，系统分析了新东方、学而思、学大的不同，各自的发展营销模式以及互联网+的局势下传统教培行业的发展方向。并借由此建立了一套行之有效的制度，使得新东方优能中学从星星之火成燎原之势，完美反杀学而思</p>
+<h1 id="P2Q-amp-A"><a href="#P2Q-amp-A" class="headerlink" title="P2Q&amp;A"></a>P2Q&amp;A</h1><p>##放弃清华博士去新东方的原因</p>
+<ol>
+<li><p>能够看出来新东方这个教配行业背后的大量隐患以及机会</p>
+</li>
+<li><p>当时新东方中学部处于蓬勃发展状态，优秀的数学物理老师急缺，会在新东方获得更多发展机会</p>
+</li>
+<li><p>由于在新东方的两年兼职，对新东方产生了情感‘</p>
+</li>
+<li><p>在科研阶段个人想法兴趣的改变，不适应国内的科研环境。相比之下觉得在教培行业能让自身获得更大发展</p>
+</li>
+</ol>
+<h2 id="教培行业的待遇"><a href="#教培行业的待遇" class="headerlink" title="教培行业的待遇"></a>教培行业的待遇</h2><p>优能中学部老师平均年薪25万，大量30万，而且每年会有二十人左右八十万，两人超过百万，老师之外的基层人员每年五万到六万</p>
+<p>一对一部的基层人员十万到十五万</p>
+<p>顶层总监年薪一百万以上</p>
+<h2 id="最希望招聘员工所具有的特点"><a href="#最希望招聘员工所具有的特点" class="headerlink" title="最希望招聘员工所具有的特点"></a>最希望招聘员工所具有的特点</h2><p>1）  执行力强。没有拖延症说干就干干净利落</p>
+<p>2）  责任心强。具有对团队和自己负责任的想法。</p>
+<p>3）  进取心强。能够自我学习自我发展，有强烈的进步意愿</p>
+<h2 id="八十万以上名师的特点："><a href="#八十万以上名师的特点：" class="headerlink" title="八十万以上名师的特点："></a>八十万以上名师的特点：</h2><p>进入新东方时间较早，具有强大的人格魅力，能够带动学生情绪，课堂具有感染力，知识储备丰富，博闻强识，博古通今，课程结构严谨讲述设计巧妙。</p>
+<h2 id="学生会和社团工作对于现在工作的影响"><a href="#学生会和社团工作对于现在工作的影响" class="headerlink" title="学生会和社团工作对于现在工作的影响"></a>学生会和社团工作对于现在工作的影响</h2><p>在学生会和社团的工作中学会了如何和别人打交道，如何管理一群人为共同目标努力、如何计划、组织，如何培训、指导，如何监督、反馈、总结，这些都是管理能力的很重要的一部分，这些能力只有在时间和经验的积累才能提升——初中物理组组长的敲门砖</p>
+<h2 id="工作对自己的改变"><a href="#工作对自己的改变" class="headerlink" title="工作对自己的改变"></a>工作对自己的改变</h2><p>自己在工作中变得更成熟 能够清晰地判断一件事情的收获与损害，遇事不在慌张手足无措而是能够沉着冷静，将意外的损失降到最小，学会了如何更好地解决问题，提升了跟别人打交道的熟练程度，提高了研究事物规律、公开演讲、管理培训的能力，学会了如何在自己的领域产生影响力</p>
+<h2 id="工作之余的提升途径"><a href="#工作之余的提升途径" class="headerlink" title="工作之余的提升途径"></a>工作之余的提升途径</h2><p>阅读，偏重于数理方面的书籍教材，例如经济学、运营学、管理学相关的西方教材，以及博弈论、运筹学，策略决策方面的书籍帮助自己去理解行业、公司的发展规律</p>
+<p>文科方面主要是是专业性历史书，比如欧洲史，美国经济史、西方国家科学技术发展史及政治经济制度发展史、哲学发展史，帮助自己理解公司的制度、理解人的行为</p>
+<h2 id="文科与理科思维的差异"><a href="#文科与理科思维的差异" class="headerlink" title="文科与理科思维的差异"></a>文科与理科思维的差异</h2><p>文科思维-感性，直接</p>
+<p>理科思维-长线，间接寻找事物规律</p>
+<p>例如新东方和学而思，新东方就是典型的文科思维，他看到了中考高考补习这个刚需，于是就专心去研究中考与高考。而学而思则是典型的理科思维，看到了背后的规律，不是从中考高考开始做起而是从初一高一开始，这样学员上完初一高一的课程之后升入初二高二，学而思就会顺势推出下一阶段的补习班，利用之前建立起的口碑来招收学员。</p>
+<h1 id="对我们想说的话"><a href="#对我们想说的话" class="headerlink" title="对我们想说的话"></a>对我们想说的话</h1><p>针对刚刚踏入大学生活的大一学生我有非常多的心里话想跟你们分享。</p>
+<p>大学四年时间是非常宝贵，但是对于目前中国绝大多数大学生而言这四年都是荒废过去的，这非常的可惜。因为这四年，说实在的，是从中学阶段那种强压式的学习，转换到了一种自我学习、自我提升、自我成长，从中学阶段那种考试成绩作为唯一目标和唯一方向的学习，变成大学里的多样化目标和多样化标准，是一种非常突兀的转变，大学新生对此会非常的不适应。哪怕是在清华也有将这四年荒废过去的同学，他到了打死的时候人生一片茫然，对于未来怎么发展心里没底。</p>
+<p>而能在如果大一大二时给自己选定一个发展方向，提前进行规划和准备，对于未来能够走好这条路是非常有好处的。现在的发展方向基本上就是从五条路中挑出来一个两个来。</p>
+<p>如果你想保研考研，那么就要抓好分数、了解导师及研究方向、尽早进入实验室。</p>
+<p>如果你打算考公务员，那么就要掌握公务员考试的应试知识以及公务员所需的人际交往能力、政治敏感性和管理能力，而且需要更多参与团委工作，因为现团委会跟中国的政治体系靠的更加紧密</p>
+<p>如果你打算出国留学，那么现在就要开始准GRE托福雅思考试了，同时了解国外大学的院系、方向、导师，提前准备推荐材料，掌握学术英语以及论文写作的能力 </p>
+<p>如果你打算就业，那么就尽可能多参加学生会社团活动，有机会的话去实习、参观中小型公司或创业公司，了解公司内部的礼仪制度，以及成为公司员工所需的执行力和管理能力，最好能够参加企业设立在学校内的企业俱乐部，我的一位同学在大学时期成为了保洁俱乐部的主席，毕业之后年薪三十万，超过了绝大部分清华毕业同学的工资。</p>
+<p>如果你打算创业，那么需要准备的东西就更多了，需要提前找好创业方向，了解怎么去融资，了解投资人的心态，积累人脉，寻找合伙人例如技术人员、市场人员、设计人员、推销人员、推广人员、运营人员。而且要找到自己的特点，在创业团队中是作为主要角色还是帮扶角色，同时去参加创业创新大赛，获取有经验的创业者和从业者的指导和建议，为未来的项目打下基础，也通过创业的竞赛把自己名声推广出去。当你有了好的项目、有了创业的基础和人脉，那么创业成功的可能性就会高很多。</p>
+<p>总而言之，大学的四年时间不像中学六年小学六年，是别人帮你规划好了的，用条条框框限制住了你的所有时间和精力。大学时期的所有精力与时间，都是把握在每一个大学生自己手上的，如果你抓不好，你到了大四的时候你完全不知道自己应该走哪条路，要是随便的选择考研保研工作，那么这条路一定会比别人走的更加曲折。</p>
+]]></content>
+      <categories>
+        <category>学习经验</category>
+      </categories>
+      <tags>
+        <tag>作业</tag>
+        <tag>警醒</tag>
       </tags>
   </entry>
   <entry>
@@ -1987,99 +2080,6 @@ tags: [标签1,标签2,标签3]
       </categories>
       <tags>
         <tag>总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>狼总访谈</title>
-    <url>/posts/6ff151e3.html</url>
-    <content><![CDATA[<p>最近看到杨振宁在国科大的访谈上说“一个年轻的研究生最重要的一件事情是什么？其实不是你学到哪些技术，而是要使你自己走进未来五年、十年有大发展机会的领域，这才是你做研究生时所要达到的目标”，想起来自己大一找狼总访谈时，狼总说自己做出退博的一个重要原因就是能看到教培行业存在的问题，并且知道自己能够解决这个问题。</p>
-<p>因此重新把这篇当时的访谈作业发出来，希望自己未来再站在十字路口时能够做出一个不令自己后悔的决定，也希望能帮到看这篇文章的你。</p>
-<p>写的比较粗浅，切莫见笑。</p>
-<a id="more"></a>
-
-<p>朱宇,现担任北京<em>新东方</em>学校优能一对一部总监、<em>新东方</em>迅程K12项目部总监和<em>新东方</em>东方优播公司CEO</p>
-<h1 id="P1学习及工作经历"><a href="#P1学习及工作经历" class="headerlink" title="P1学习及工作经历"></a>P1学习及工作经历</h1><h2 id="学校经历"><a href="#学校经历" class="headerlink" title="学校经历"></a>学校经历</h2><p>2004年竞赛保送到清华大学材料科学与工程系，大一主要忙于学业，绩点排名全系第二。第二年竞选为学生会副主席，大三周转于学校各类社团活动并参与了团委的志愿者活动，大四直博到系主任张政军（教育部长江学者特聘教授，现任清华大学材料科学与工程学院院长）的科研团队，同时由于由宿舍朋友推荐08年3月开始在新东方兼职</p>
-<p>08年9月到10年9月一边在张政军的团队中从事材料科学基础研究，一边在新东方任职，10年9月从清华博士退学，在新东方全职工作</p>
-<h2 id="新东方工作经历"><a href="#新东方工作经历" class="headerlink" title="新东方工作经历"></a>新东方工作经历</h2><p>开始时初中数学物理老师</p>
-<p>08年9月成为初中物理组组长</p>
-<p>09年4月成为高中物理组组长</p>
-<p>09年9月开始负责北京新东方优能中学初中部所有数理化生四科老师的招聘和培训</p>
-<p>10年4月成为北京新东方优能中学高中数学组的组长 同时负责招聘培训的统一协调工作</p>
-<p>11年3月成为优能中学初中数理化部分项目的主管，独立负责初中数理化的运营</p>
-<p>12年4月成为优能中学高中所有科目项目的经理</p>
-<p>14年4成为整个北京所有校区优能中学的主管，负责招生运营主管工作</p>
-<p>15年4月调任北京优能一对一部，成为整个北京新东方优能一对一部的总监至今</p>
-<p>成名作《教育培训行业现状分析十五篇》，系统分析了新东方、学而思、学大的不同，各自的发展营销模式以及互联网+的局势下传统教培行业的发展方向。并借由此建立了一套行之有效的制度，使得新东方优能中学从星星之火成燎原之势，完美反杀学而思</p>
-<h1 id="P2Q-amp-A"><a href="#P2Q-amp-A" class="headerlink" title="P2Q&amp;A"></a>P2Q&amp;A</h1><p>##放弃清华博士去新东方的原因</p>
-<ol>
-<li><p>能够看出来新东方这个教配行业背后的大量隐患以及机会</p>
-</li>
-<li><p>当时新东方中学部处于蓬勃发展状态，优秀的数学物理老师急缺，会在新东方获得更多发展机会</p>
-</li>
-<li><p>由于在新东方的两年兼职，对新东方产生了情感‘</p>
-</li>
-<li><p>在科研阶段个人想法兴趣的改变，不适应国内的科研环境。相比之下觉得在教培行业能让自身获得更大发展</p>
-</li>
-</ol>
-<h2 id="教培行业的待遇"><a href="#教培行业的待遇" class="headerlink" title="教培行业的待遇"></a>教培行业的待遇</h2><p>优能中学部老师平均年薪25万，大量30万，而且每年会有二十人左右八十万，两人超过百万，老师之外的基层人员每年五万到六万</p>
-<p>一对一部的基层人员十万到十五万</p>
-<p>顶层总监年薪一百万以上</p>
-<h2 id="最希望招聘员工所具有的特点"><a href="#最希望招聘员工所具有的特点" class="headerlink" title="最希望招聘员工所具有的特点"></a>最希望招聘员工所具有的特点</h2><p>1）  执行力强。没有拖延症说干就干干净利落</p>
-<p>2）  责任心强。具有对团队和自己负责任的想法。</p>
-<p>3）  进取心强。能够自我学习自我发展，有强烈的进步意愿</p>
-<h2 id="八十万以上名师的特点："><a href="#八十万以上名师的特点：" class="headerlink" title="八十万以上名师的特点："></a>八十万以上名师的特点：</h2><p>进入新东方时间较早，具有强大的人格魅力，能够带动学生情绪，课堂具有感染力，知识储备丰富，博闻强识，博古通今，课程结构严谨讲述设计巧妙。</p>
-<h2 id="学生会和社团工作对于现在工作的影响"><a href="#学生会和社团工作对于现在工作的影响" class="headerlink" title="学生会和社团工作对于现在工作的影响"></a>学生会和社团工作对于现在工作的影响</h2><p>在学生会和社团的工作中学会了如何和别人打交道，如何管理一群人为共同目标努力、如何计划、组织，如何培训、指导，如何监督、反馈、总结，这些都是管理能力的很重要的一部分，这些能力只有在时间和经验的积累才能提升——初中物理组组长的敲门砖</p>
-<h2 id="工作对自己的改变"><a href="#工作对自己的改变" class="headerlink" title="工作对自己的改变"></a>工作对自己的改变</h2><p>自己在工作中变得更成熟 能够清晰地判断一件事情的收获与损害，遇事不在慌张手足无措而是能够沉着冷静，将意外的损失降到最小，学会了如何更好地解决问题，提升了跟别人打交道的熟练程度，提高了研究事物规律、公开演讲、管理培训的能力，学会了如何在自己的领域产生影响力</p>
-<h2 id="工作之余的提升途径"><a href="#工作之余的提升途径" class="headerlink" title="工作之余的提升途径"></a>工作之余的提升途径</h2><p>阅读，偏重于数理方面的书籍教材，例如经济学、运营学、管理学相关的西方教材，以及博弈论、运筹学，策略决策方面的书籍帮助自己去理解行业、公司的发展规律</p>
-<p>文科方面主要是是专业性历史书，比如欧洲史，美国经济史、西方国家科学技术发展史及政治经济制度发展史、哲学发展史，帮助自己理解公司的制度、理解人的行为</p>
-<h2 id="文科与理科思维的差异"><a href="#文科与理科思维的差异" class="headerlink" title="文科与理科思维的差异"></a>文科与理科思维的差异</h2><p>文科思维-感性，直接</p>
-<p>理科思维-长线，间接寻找事物规律</p>
-<p>例如新东方和学而思，新东方就是典型的文科思维，他看到了中考高考补习这个刚需，于是就专心去研究中考与高考。而学而思则是典型的理科思维，看到了背后的规律，不是从中考高考开始做起而是从初一高一开始，这样学员上完初一高一的课程之后升入初二高二，学而思就会顺势推出下一阶段的补习班，利用之前建立起的口碑来招收学员。</p>
-<h1 id="对我们想说的话"><a href="#对我们想说的话" class="headerlink" title="对我们想说的话"></a>对我们想说的话</h1><p>针对刚刚踏入大学生活的大一学生我有非常多的心里话想跟你们分享。</p>
-<p>大学四年时间是非常宝贵，但是对于目前中国绝大多数大学生而言这四年都是荒废过去的，这非常的可惜。因为这四年，说实在的，是从中学阶段那种强压式的学习，转换到了一种自我学习、自我提升、自我成长，从中学阶段那种考试成绩作为唯一目标和唯一方向的学习，变成大学里的多样化目标和多样化标准，是一种非常突兀的转变，大学新生对此会非常的不适应。哪怕是在清华也有将这四年荒废过去的同学，他到了打死的时候人生一片茫然，对于未来怎么发展心里没底。</p>
-<p>而能在如果大一大二时给自己选定一个发展方向，提前进行规划和准备，对于未来能够走好这条路是非常有好处的。现在的发展方向基本上就是从五条路中挑出来一个两个来。</p>
-<p>如果你想保研考研，那么就要抓好分数、了解导师及研究方向、尽早进入实验室。</p>
-<p>如果你打算考公务员，那么就要掌握公务员考试的应试知识以及公务员所需的人际交往能力、政治敏感性和管理能力，而且需要更多参与团委工作，因为现团委会跟中国的政治体系靠的更加紧密</p>
-<p>如果你打算出国留学，那么现在就要开始准GRE托福雅思考试了，同时了解国外大学的院系、方向、导师，提前准备推荐材料，掌握学术英语以及论文写作的能力 </p>
-<p>如果你打算就业，那么就尽可能多参加学生会社团活动，有机会的话去实习、参观中小型公司或创业公司，了解公司内部的礼仪制度，以及成为公司员工所需的执行力和管理能力，最好能够参加企业设立在学校内的企业俱乐部，我的一位同学在大学时期成为了保洁俱乐部的主席，毕业之后年薪三十万，超过了绝大部分清华毕业同学的工资。</p>
-<p>如果你打算创业，那么需要准备的东西就更多了，需要提前找好创业方向，了解怎么去融资，了解投资人的心态，积累人脉，寻找合伙人例如技术人员、市场人员、设计人员、推销人员、推广人员、运营人员。而且要找到自己的特点，在创业团队中是作为主要角色还是帮扶角色，同时去参加创业创新大赛，获取有经验的创业者和从业者的指导和建议，为未来的项目打下基础，也通过创业的竞赛把自己名声推广出去。当你有了好的项目、有了创业的基础和人脉，那么创业成功的可能性就会高很多。</p>
-<p>总而言之，大学的四年时间不像中学六年小学六年，是别人帮你规划好了的，用条条框框限制住了你的所有时间和精力。大学时期的所有精力与时间，都是把握在每一个大学生自己手上的，如果你抓不好，你到了大四的时候你完全不知道自己应该走哪条路，要是随便的选择考研保研工作，那么这条路一定会比别人走的更加曲折。</p>
-]]></content>
-      <categories>
-        <category>学习经验</category>
-      </categories>
-      <tags>
-        <tag>作业</tag>
-        <tag>警醒</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>硕士一年</title>
-    <url>/posts/null.html</url>
-    <content><![CDATA[<p>终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。</p>
-<a id="more"></a>
-
-<h1 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h1><p>其实自己本来是想把这个博客替代成微信公众号，所以早期的一些文章都是一些个人想法和乱七八糟的文章，后来在《数字图像处理》的时候查到了这个大佬的<a href="https://baidut.github.io/about/">博客</a>，才有了把自己的博客改编成自己的简历的想法。</p>
-<p>前几天在想有没有about页面的的模版，搜了搜发现了这个hugo<a href="https://themes.gohugo.io/academic/">主题</a>，花了两三天的时间迁移了过去，然后发现这个主题并不合适我这种经常写自己的想法笔记的人，更适合那种专门的学术主页，所以就又迁移回来了。</p>
-<h1 id="关于硕士"><a href="#关于硕士" class="headerlink" title="关于硕士"></a>关于硕士</h1><p>自己的硕士一年级就这么过去了，回想起来我过去这一年的好多事情，都让我尴尬到脚趾抠出来一个阿房宫，自己在这里第一年搞了好多笑话。</p>
-<p>因为自己性格的原因，自己的日语并没有得到很好的进步，在这里呆一年，并没有像刚进大学的自己一样，像一只饥饿的狼。</p>
-<p>自己在这里一年，做出来的东西，感觉真的就只有半年的量，一年前拿到的很多关于学术写作演讲发表和海洋光学海洋遥感水色遥感的资料，到现在也就学习了20%。</p>
-<p>其实很多东西真的一点都不难，就是自己很难静下心来去思考。</p>
-<p>自己真的太心急了，急于求成追求短平快，就比如现在写个总结，还想着赶紧写完。</p>
-<h1 id="关于精力"><a href="#关于精力" class="headerlink" title="关于精力"></a>关于精力</h1><p>自己这一年最大的一个感受就是好多时候精力和体力明显跟不上，比如最近这几天吃完饭就忍不住的犯困一睡俩小时，比如看一会论文写一会代码就觉得累，比如早上起不来，比如很难集中精力。看看老板六十多还健步如飞似少年自己是真的羡慕。身体素质真的肉眼可见的退化。</p>
-<p>一些不好的习惯是真的需要改了。</p>
-<h1 id="关于未来"><a href="#关于未来" class="headerlink" title="关于未来"></a>关于未来</h1><p>其实到现在我还对未来要做什么很不确定，尤其是最近这个国际环境动荡的情况下。</p>
-<p>但是最近慢慢地越来越感觉自己就是太不能吃苦了，自己每天养尊处优，不经风吹日晒，还喊着累。</p>
-<h1 id="第二年"><a href="#第二年" class="headerlink" title="第二年"></a>第二年</h1><p>希望明年这个时候，不管我做了什么选择，都能问心无愧的说，自己这个第二年，做到了自己能做的所有事情。</p>
-<p>静下心来，认认真真去学习，不要怕前路未卜。</p>
-<p>分携如昨。人生到处萍飘泊。偶然相聚还离索。多病多愁，须信从来错。尊前一笑休辞却。天涯同是伤沦落。故山犹负平生约。西望峨嵋，长羡归飞鹤。</p>
-]]></content>
-      <categories>
-        <category>学习经验</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>随便写写</tag>
       </tags>
   </entry>
   <entry>

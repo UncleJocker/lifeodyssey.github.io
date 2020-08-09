@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>自动机器学习代码详解</title>
-    <url>/2019/05/16/AMF/</url>
+    <url>/post/4668cbbb.html</url>
     <content><![CDATA[<p>毕业论文基于auto-sklearn做了一些自动机器学习模型的应用，模型的原理可以点击<a href="http://codewithzhangyi.com/2018/07/26/AutoML/">这里</a>，我这儿讲一下我的代码怎么用，相当于是一个详细版的注释。</p>
 <p>代码地址见<a href="https://github.com/lifeodyssey/AMF">https://github.com/lifeodyssey/AMF</a>。</p>
 <a id="more"></a>
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</title>
-    <url>/2019/05/11/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%B8%80%E5%91%A8%E7%AC%94%E8%AE%B0%20machine%20learning%20foudation%20nweek%201%20note%20in%20cousera/</url>
+    <url>/post/bc80cb40.html</url>
     <content><![CDATA[<p>An introduction for Machine learning</p>
 <a id="more"></a>
 
@@ -180,7 +180,7 @@
   </entry>
   <entry>
     <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
-    <url>/2019/05/11/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%B8%89%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-3-Note-in-Cousera/</url>
+    <url>/post/4df973c2.html</url>
     <content><![CDATA[<p><strong>Types of Learning</strong></p>
 <a id="more"></a>
 
@@ -214,7 +214,7 @@
   </entry>
   <entry>
     <title>Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera</title>
-    <url>/2019/04/06/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-5-Note-in-Cousera/</url>
+    <url>/post/fbd0b1b0.html</url>
     <content><![CDATA[<p><strong>Traning versus Testing</strong></p>
 <p>Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.</p>
 <p>I will update this note if possible.</p>
@@ -289,7 +289,7 @@
   </entry>
   <entry>
     <title>Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera</title>
-    <url>/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/</url>
+    <url>/post/c7f63b06.html</url>
     <content><![CDATA[<p><strong>Feasibility of Learning</strong></p>
 <a id="more"></a>
 
@@ -334,7 +334,7 @@
   </entry>
   <entry>
     <title>Data fusion series note 1</title>
-    <url>/2020/07/15/Data-fusion-series-note/</url>
+    <url>/post/bd7e58b0.html</url>
     <content><![CDATA[<p>There are five main data fusion approaches according to ‘Spatio-temporal fusion for remote sensing data: an overview and new benchmark’. Here I will read the STARFM.</p>
 <a id="more"></a>
 
@@ -417,7 +417,7 @@
   </entry>
   <entry>
     <title>How to follow the research progress in your field?</title>
-    <url>/2020/07/08/How-to-follow-the-nearst-research-in-oceanography/</url>
+    <url>/post/eaba55e.html</url>
     <content><![CDATA[<p>This is the note of my own experiences.</p>
 <p>As summarized in my former blog, the new result always from pre-print website, social media, conference. Here I will summary some source in oceanography, especially ocean color,  and also give some methods for following new articles.</p>
 <a id="more"></a>
@@ -475,7 +475,7 @@
   </entry>
   <entry>
     <title>MODIS OC data batch download</title>
-    <url>/2020/02/20/MODIS-L2-OC-batch-download/</url>
+    <url>/post/8636bca2.html</url>
     <content><![CDATA[<p>This blog introduce a MODIS(also suitable for other available satellites) Ocean Color data batch download method without wget(since it doesn’t work on my laptop).</p>
 <a id="more"></a>
 
@@ -513,7 +513,7 @@
   </entry>
   <entry>
     <title>QAA note</title>
-    <url>/2019/11/27/QAA/</url>
+    <url>/post/f5ee8139.html</url>
     <content><![CDATA[<p>This note is based on Lee 1998,1999,2002.</p>
 <a id="more"></a>
 
@@ -643,7 +643,7 @@
   </entry>
   <entry>
     <title>Tutorial for handling MODIS ocean color data</title>
-    <url>/2020/04/12/Tutorial-for-handling-MODIS-ocean-color-data/</url>
+    <url>/post/ef746e52.html</url>
     <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
 <ol>
 <li>Using python to analyse MODIS ocean color data</li>
@@ -665,7 +665,7 @@
   </entry>
   <entry>
     <title>book reading note 4</title>
-    <url>/2020/07/19/book-reading-note-4/</url>
+    <url>/post/5ab69b8e.html</url>
     <content><![CDATA[<p>Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
 <a id="more"></a>
 
@@ -721,7 +721,7 @@
   </entry>
   <entry>
     <title>book-reading-note2</title>
-    <url>/2019/12/15/book-reading-note2/</url>
+    <url>/post/44f3f721.html</url>
     <content><![CDATA[<p>Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
 <a id="more"></a>
 
@@ -799,7 +799,7 @@
   </entry>
   <entry>
     <title>book-reading-note3</title>
-    <url>/2020/05/18/book-reading-note3/</url>
+    <url>/post/33f4c7b7.html</url>
     <content><![CDATA[<p>Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
 <a id="more"></a>
 
@@ -902,7 +902,7 @@
   </entry>
   <entry>
     <title>cartopy</title>
-    <url>/2020/08/01/cartopy/</url>
+    <url>/post/c6b8edee.html</url>
     <content><![CDATA[<p>Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。</p>
 <p>先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。</p>
 <a id="more"></a>
@@ -924,7 +924,7 @@
   </entry>
   <entry>
     <title>Windows环境下hexo博客搭建</title>
-    <url>/2019/03/06/hello-world/</url>
+    <url>/post/b1f5683b.html</url>
     <content><![CDATA[<p>自己算来算去都搭建了三次博客了，前两次是在ubuntu上，第二次在ubuntu搭建的时候花费了好多时间解决node.js和npm的问题，索性这次就在windows上了，虽然windows的命令行用着很蛋疼，但是架不住方便啊。赶紧把博客搭出来写文章才是最主要的。</p>
 <a id="more"></a>
 
@@ -1083,7 +1083,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>lambda</title>
-    <url>/2020/08/07/lambda/</url>
+    <url>/post/d39dff82.html</url>
     <content><![CDATA[<h1 id="Python-Lambda"><a href="#Python-Lambda" class="headerlink" title="Python Lambda"></a>Python Lambda</h1><p>在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。</p>
 <p><strong>lambda 函数是一种小的匿名函数。</strong></p>
 <p><strong>lambda 函数可接受任意数量的参数，但只能有一个表达式。</strong></p>
@@ -1121,7 +1121,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>服务器部署自动机器学习</title>
-    <url>/2019/06/05/machine-learning-on-sever/</url>
+    <url>/post/c23e0e6e.html</url>
     <content><![CDATA[<p>借着毕业实习的机会将代码放到了实验室的服务器上，在这里记录一下全过程。</p>
 <a id="more"></a>
 
@@ -1250,7 +1250,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>Material for ocean color</title>
-    <url>/2020/02/28/material-for-ocean-color/</url>
+    <url>/post/3aa0ed1a.html</url>
     <content><![CDATA[<p>I have been in master course for half years. It’s time to organize the materials I have used.</p>
 <p>This article will update as soon as I get new resource.</p>
 <a id="more"></a>
@@ -1316,7 +1316,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</title>
-    <url>/2019/05/12/ml-foundation-week-6/</url>
+    <url>/post/da4d42a2.html</url>
     <content><![CDATA[<p>Theory of Generalization</p>
 <p>test error can approximate training error if there is enough data and growth function does not grow too fast</p>
 <a id="more"></a>
@@ -1341,7 +1341,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>note for ocean optic web book：Liaght and Radiometry</title>
-    <url>/2019/11/20/note-for-ocean-optic-web-book/</url>
+    <url>/post/80897339.html</url>
     <content><![CDATA[<p>Souce: <a href="http://www.oceanopticsbook.info/">http://www.oceanopticsbook.info/</a></p>
 <a id="more"></a>
 
@@ -1424,7 +1424,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>博客第三方插件和图片问题解决</title>
-    <url>/2019/05/09/%E5%8D%9A%E5%AE%A2%E5%AE%9A%E5%88%B6%E4%BC%98%E5%8C%96/</url>
+    <url>/post/361a6d0d.html</url>
     <content><![CDATA[<p>啊四月份本咸鱼赏(da)樱(you)花(xi)和搞毕业论文去了，五月份滚回来更新。争取在没有你的五月（误）把机器学习基石的上更新完，然后把毕业论文的代码发到github。</p>
 <p>这一篇包括第三方功能（评论、站点地图、阅读量、统计分析、分享）和图片问题的彻底解决。</p>
 <a id="more"></a>
@@ -1505,7 +1505,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>博客更换主题、页面设置及问题解决</title>
-    <url>/2019/03/07/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E3%80%81%E5%AD%90%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE%E5%8F%8A%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/</url>
+    <url>/post/aaf90768.html</url>
     <content><![CDATA[<p>上一篇解决了博客的生成、部署和更新的问题，实现了基本的功能。这一篇主要来解决更换主题、子页面设置和乱码三个问题。<a id="more"></a></p>
 <h3 id="hexo博客主题更换"><a href="#hexo博客主题更换" class="headerlink" title="hexo博客主题更换"></a>hexo博客主题更换</h3><p>hexo官网就提供了大量的可用<a href="https://hexo.io/themes/">主题</a>，我们要做的就是把主题克隆过来。我这里用的是<a href="https://theme-next.iissnan.com/">next主题</a>。</p>
 <p>其实next主题的文档已经写的很清楚了，我这里主要写一下我对next主题所做的修改。</p>
@@ -1573,7 +1573,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>日本留学申请经验贴（一）之留学机构</title>
-    <url>/2019/03/08/%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%80%EF%BC%89/</url>
+    <url>/post/27dde70e.html</url>
     <content><![CDATA[<p>其实很早之前就想写这个帖子了。自己从去年这个时候到现在花了整整一年时间经历了留学的大大小小的事情，但是不知道从哪里讲起来。就想到哪里讲哪里吧。带有一定的主观性，仅供参考。</p>
 <a id="more"></a>
 
@@ -1636,7 +1636,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>日本留学申请（四）：经管类申请</title>
-    <url>/2019/07/03/%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7%EF%BC%88%E5%9B%9B%EF%BC%89%EF%BC%9A%E7%BB%8F%E7%AE%A1%E7%B1%BB%E7%94%B3%E8%AF%B7/</url>
+    <url>/post/40e83800.html</url>
     <content><![CDATA[<p>［本文由人美心善的小姑娘蓝田双慕所著］<br>本文主要介绍经管类的日本留学申请。笔者自身在申请学校的时候主要是奔着经济系去的，对日本商学院的了解不够深入，因此，笔者只能尽己所能提供自身了解的相关信息，并不能保证信息的完全囊括和绝对准确，希望此文能给有志于申请日本经管类研究生的同学带来一些帮助。</p>
 <p>笔者申请的是sgu英文硕士项目，对日语入学的流程和要求不太了解，因此本文主要介绍日本经管类硕士英文项目的申请。</p>
 <a id="more"></a> 
@@ -1671,7 +1671,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>本科总结</title>
-    <url>/2018/07/22/%E6%9C%AC%E7%A7%91%E6%80%BB%E7%BB%93-1/</url>
+    <url>/post/726664aa.html</url>
     <content><![CDATA[<p>写在最前面：虽然我明年才毕业，虽然还有毕业认定等等一堆事情要做，但是我所有的理论课程都结束了，大四一年就是申请、科研、语言、毕业事宜，怎么看怎么不像一个本科生的生活，所以就提前总结了吧，而且也免得明年这个时候再忘记了。</p>
 <a id="more"></a>
 
@@ -1730,7 +1730,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera</title>
-    <url>/2019/05/11/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%BA%8C%E5%91%A8%E7%AC%94%E8%AE%B0Machine%20Learning%20Foundation%20Week%202%20Note/</url>
+    <url>/post/2c9001a2.html</url>
     <content><![CDATA[<p>Learning to Answer Yes/No</p>
 <a id="more"></a>
 
@@ -1832,7 +1832,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>清华大学《研究生学位论文的选题方法》讲座实录</title>
-    <url>/2020/03/09/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E3%80%8A%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E7%9A%84%E9%80%89%E9%A2%98%E6%96%B9%E6%B3%95%E3%80%8B%E8%AE%B2%E5%BA%A7%E5%AE%9E%E5%BD%95/</url>
+    <url>/post/307feb93.html</url>
     <content><![CDATA[<p>讲座地址：<a href="https://www.bilibili.com/video/av94346515">https://www.bilibili.com/video/av94346515</a></p>
 <a id="more"></a>
 
@@ -1991,7 +1991,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>狼总访谈</title>
-    <url>/2016/05/18/%E7%8B%BC%E6%80%BB%E8%AE%BF%E8%B0%88/</url>
+    <url>/post/6ff151e3.html</url>
     <content><![CDATA[<p>最近看到杨振宁在国科大的访谈上说“一个年轻的研究生最重要的一件事情是什么？其实不是你学到哪些技术，而是要使你自己走进未来五年、十年有大发展机会的领域，这才是你做研究生时所要达到的目标”，想起来自己大一找狼总访谈时，狼总说自己做出退博的一个重要原因就是能看到教培行业存在的问题，并且知道自己能够解决这个问题。</p>
 <p>因此重新把这篇当时的访谈作业发出来，希望自己未来再站在十字路口时能够做出一个不令自己后悔的决定，也希望能帮到看这篇文章的你。</p>
 <p>写的比较粗浅，切莫见笑。</p>
@@ -2055,7 +2055,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>经验贴（三）申请流程及准备</title>
-    <url>/2019/03/16/%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%89%EF%BC%89%E7%94%B3%E8%AF%B7%E5%87%86%E5%A4%87%E5%8F%8A%E6%B5%81%E7%A8%8B/</url>
+    <url>/post/751458a5.html</url>
     <content><![CDATA[<p>拖更了这么久主要是不知道下一步该说什么，索性以我去年的整个申请节点来写。这里以2020年申请的为例，方便对照。另外我这里给出的只是一个理想情况，实际可以根据自身情况调整。</p>
 <a id="more"></a>
 
@@ -2102,7 +2102,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>经验贴（二）日本留学制度介绍</title>
-    <url>/2019/03/09/%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%BA%8C%EF%BC%89%E6%97%A5%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E5%88%B6%E5%BA%A6%E4%BB%8B%E7%BB%8D/</url>
+    <url>/post/c7945378.html</url>
     <content><![CDATA[<p> 不同于欧洲、北美、香港等国家，日本拥有极其独特的留学制度。如果一个国内的本科生想去日本攻读研究生的话，大致可以分为语言学院、研究生（research student）、直接考试和申请英语项目（G30/SGU）这几种，相较其他国家复杂了很多。需要注意的使，即使是同一个学校，不同的学院之间的入学制度也会有很大不同，包括申请时间、申请材料、考试方式等等，一定要认真核实。</p>
 <a id="more"></a>
 
@@ -2153,7 +2153,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>MODIS水色数据处理教程</title>
-    <url>/2020/04/12/MODIS%E6%B0%B4%E8%89%B2%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%95%99%E7%A8%8B/</url>
+    <url>/post/ce08f3a2.html</url>
     <content><![CDATA[<p>这个教程主要分为两部分：</p>
 <ol>
 <li>应用python分析MODIS水色遥感数据</li>
@@ -2242,7 +2242,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>book reading note 1</title>
-    <url>/2019/11/04/book-reading-note/</url>
+    <url>/post/2adc6f01.html</url>
     <content><![CDATA[<p>Chapter 5.4-5.5 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
 <a id="more"></a>
 
@@ -2390,7 +2390,7 @@ tags: [标签1,标签2,标签3]
   </entry>
   <entry>
     <title>广义加性模型</title>
-    <url>/2017/11/20/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B-1/</url>
+    <url>/post/17683e80.html</url>
     <content><![CDATA[<h1 id="广义加性模型"><a href="#广义加性模型" class="headerlink" title="广义加性模型"></a>广义加性模型</h1><p>去年这个时候准备SRDP立项就看到了一堆用广义加性模型的例子，国内关于这个的资源实在太少了，大半年之后我才开始学习用这玩意。把自己找到的各种参考文献整理一下作为学习笔记发出来，给别人一个方便。</p>
 <a id="more"></a>
 

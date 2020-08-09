@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":true,"top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Learning to Answer Yes&#x2F;No">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera">
+<meta property="og:url" content="https://lifeodyssey.github.io/post/2c9001a2.html">
+<meta property="og:site_name" content="乔克叔叔的床边故事">
+<meta property="og:description" content="Learning to Answer Yes&#x2F;No">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-05-11T10:59:07.000Z">
+<meta property="article:modified_time" content="2019-05-11T10:59:07.000Z">
+<meta property="article:author" content="周大侠">
+<meta property="article:tag" content="机器学习">
+<meta property="article:tag" content="Cousera">
+<meta property="article:tag" content="林轩田">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://lifeodyssey.github.io/post/2c9001a2.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera | 乔克叔叔的床边故事</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="乔克叔叔的床边故事" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+    
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">乔克叔叔的床边故事</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/lifeodyssey" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://lifeodyssey.github.io/post/2c9001a2.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="周大侠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="乔克叔叔的床边故事">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-05-11 19:59:07" itemprop="dateCreated datePublished" datetime="2019-05-11T19:59:07+09:00">2019-05-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Learning to Answer Yes/No</p>
+<a id="more"></a>
+
+<h1 id="Perceptron-Hypothesis-Set"><a href="#Perceptron-Hypothesis-Set" class="headerlink" title="Perceptron Hypothesis Set"></a>Perceptron Hypothesis Set</h1><p>Example:Credit Approval Problem Revisited</p>
+<h2 id="A-Simple-Hypothesis-Set-the-‘Perceptron’"><a href="#A-Simple-Hypothesis-Set-the-‘Perceptron’" class="headerlink" title="A Simple Hypothesis Set:the ‘Perceptron’"></a>A Simple Hypothesis Set:the ‘Perceptron’</h2><ul>
+<li><p>For <strong>x</strong>=$(x_1,x_2,…,x_d)$ ‘feature of customer’,compute a weighted’score’ and</p>
+<p>&lt;center&gt; $approve \quad credit\quad if \sum_{i=1}^{d} w_i x_i&gt;threshold$&lt;center&gt;</p>
+<p>&lt;center&gt; $deny \quad credit\quad if \sum_{i=1}^{d} w_i x_i&lt;threshold$&lt;center&gt;</p>
+</li>
+<li><p>$y:{+1(good),-1(bad)}$,0 ignored-linear formula$h\in H$are</p>
+<p>&lt;center&gt;$h(x)=sign((\sum_{i=i}^{d}w_i x_i)-threshold)$&lt;center&gt;</p>
+</li>
+</ul>
+<p>this is called’<strong>perceptron</strong>‘hypothesis histroically</p>
+<h2 id="Vector-Form-of-Perceptron-Hypothesis"><a href="#Vector-Form-of-Perceptron-Hypothesis" class="headerlink" title="Vector Form of Perceptron Hypothesis"></a>Vector Form of Perceptron Hypothesis</h2><p>$$<br>\begin{split}<br>h(x)&amp;=sign((\sum_{i=1}^{d}w_i x_i)-threshold)\</p>
+<pre><code>&amp;=sign((\sum_&#123;i=1&#125;^&#123;d&#125;w_i x_i)+\underbrace&#123;(threshold)&#125;_&#123;w_0&#125;\cdot\underbrace&#123;(+1)&#125;_&#123;x_0&#125;)\\
+
+&amp;=sign(sum_&#123;i=0&#125;^&#123;d&#125;w_i x_i)\\
+&amp;=sign(W^T x)</code></pre>
+<p>\end{split}<br>$$</p>
+<ul>
+<li>each’tall’<strong>w</strong> represents a hypothesis <em>h</em> &amp;is multiplied with ‘tall’ <strong>x</strong>——will use tall versions to simplify notation</li>
+</ul>
+<p>Q:What does <em>h</em> look like</p>
+<h2 id="Perceptrons-in-R-2"><a href="#Perceptrons-in-R-2" class="headerlink" title="Perceptrons in $R^2$"></a>Perceptrons in $R^2$</h2><p><strong>perceptrons$\Leftrightarrow$linear(binary) classifiers</strong></p>
+<h1 id="Perceptron-Learning-Algorithm-PLA"><a href="#Perceptron-Learning-Algorithm-PLA" class="headerlink" title="Perceptron Learning Algorithm (PLA)"></a>Perceptron Learning Algorithm (PLA)</h1><h2 id="Select-g-from-H"><a href="#Select-g-from-H" class="headerlink" title="Select g from H"></a>Select <em>g</em> from H</h2><ul>
+<li>want: g$\approx$f(hard when f unkown)</li>
+<li>almost necessary:g$\approx$f on D,ideally $g(x_n)=f(x_n)=y_n$</li>
+<li>difficult:H is of infinite size</li>
+<li>idea: start from some $g_0$,and ‘correct’ its mistakes on D</li>
+</ul>
+<h2 id="Perceptron-Learning-Algorithm"><a href="#Perceptron-Learning-Algorithm" class="headerlink" title="Perceptron Learning Algorithm"></a>Perceptron Learning Algorithm</h2><p>For t=0,1,…</p>
+<p>1. find a mistake of $w_t$ called$(x_{n(t)},y_{n(t)})$</p>
+<p>sign$(W^{T}<em>t X</em>{n(t)})\not=y_{n(t)}$</p>
+<p>2. (try to) correct the mistake by</p>
+<p>$w_{t+1}\leftarrow w_t+y_{n(t)}x_{n(t)}$</p>
+<p>…until no more mistakes </p>
+<p>return last <strong>w</strong> (called $w_{PLA}$ )as <em>g</em></p>
+<p>My question:why determinant is like vector</p>
+<h2 id="Pratical-implementation-of-PLA"><a href="#Pratical-implementation-of-PLA" class="headerlink" title="Pratical implementation of PLA"></a>Pratical implementation of PLA</h2><h3 id="Cyclic-PLA"><a href="#Cyclic-PLA" class="headerlink" title="Cyclic PLA"></a>Cyclic PLA</h3><h2 id="Some-Remaning-issues-of-PLA"><a href="#Some-Remaning-issues-of-PLA" class="headerlink" title="Some Remaning issues of PLA"></a>Some Remaning issues of PLA</h2><p>###　Algorithmic:halt(no mistake)?</p>
+<ul>
+<li>naive cyclic:??</li>
+<li>random cyclic:??</li>
+<li>other variant:??</li>
+</ul>
+<h3 id="Learning-g-approx-f"><a href="#Learning-g-approx-f" class="headerlink" title="Learning:$g\approx f$ ?"></a>Learning:$g\approx f$ ?</h3><ul>
+<li>on D, if halt,yes(no mistake)</li>
+<li>outside D:??</li>
+<li>if not halting:??</li>
+</ul>
+<h1 id="Guarantee-of-PLA"><a href="#Guarantee-of-PLA" class="headerlink" title="Guarantee of PLA"></a>Guarantee of PLA</h1><h2 id="Linear-Separability"><a href="#Linear-Separability" class="headerlink" title="Linear Separability"></a>Linear Separability</h2><ul>
+<li>if PLA halts(i.e. no more mistakes),<br>(necessary condition)D allows some <strong>w</strong> to make no mistakes</li>
+<li>call such D linear separable</li>
+</ul>
+<h2 id="PLA-Fact-w-t-Gets-More-Aligned-with-w-f"><a href="#PLA-Fact-w-t-Gets-More-Aligned-with-w-f" class="headerlink" title="PLA Fact: $w_t$Gets More Aligned with $w_f$"></a>PLA Fact: $w_t$Gets More Aligned with $w_f$</h2><ul>
+<li><p>$w_f$ perfect hence every $x_n$ correctly away from line:<br>$y_{n(t)}w_f^T x_{n(t)}\ge \underset{n}{min}  y_{n(t)}w_f^T x_{n(t)}&gt;0$</p>
+</li>
+<li><p>$w_f^T w_t\uparrow$by updating with any$(x_{n(t)},y_{n(t)})$<br>$$<br>\begin{split}<br>w_f^Tw_{t+1}&amp;=w_f^T(w_t+y_{n(t)}x_{n(t)})\<br>&amp;\ge w_f^Tw_{t}+\underset{n}{min}  y_{n(t)}w_f^T x_{n(t)}\<br>&amp;&gt; w_f^Tw_{t}+0<br>\end{split}<br>$$</p>
+</li>
+</ul>
+<p>$w_t$ appears more algned with $w_f$</p>
+<p>Q:the length of vector</p>
+<h2 id="PLA-fact-w-t-Does-Not-Grow-Too-Fast"><a href="#PLA-fact-w-t-Does-Not-Grow-Too-Fast" class="headerlink" title="PLA fact: $w_t$ Does Not Grow Too Fast"></a>PLA fact: $w_t$ Does Not Grow Too Fast</h2><p>$w_t$ changed only when mistake</p>
+<p>$\Leftrightarrow sign(w_t^Tx_{n(t)})\not=y_{n(t)}\Leftrightarrow y_{n(t)}w_t^Tx_{n(t)}\le 0$</p>
+<ul>
+<li>mistake ‘limits’$||w_t||^2$ growth,even when updating with’longest’ $x_n$<br>$$<br>\begin{split}<br>||w_{t+1}||^2&amp;=||w_t+y_{n(t)}x_{n(t)}||^2\<br>&amp;=||w_t||^2+2y_{n(t)}w_t^Tx_{n(t)}+||y_{n(t)}x_{n(t)}||^2\<br>&amp;\le ||w_t||^2+0+||y_{n(t)}x_{n(t)}||^2\<br>&amp;\le||w_t||^2+\underset{n}{max}||y_nx_n||^2<br>\end{split}<br>$$</li>
+</ul>
+<p>start from $w_0=0$,after<em>T</em> mistake corrections,<br>$$<br>\frac{w_f^T\quad w_T}{||w_f||\quad||w_T||}\ge \sqrt{T}\cdot constant<br>$$</p>
+<h2 id="Novikoff-theorem"><a href="#Novikoff-theorem" class="headerlink" title="Novikoff  theorem"></a>Novikoff  theorem</h2><p>ref:Lihang<statistic learning approach>page 31</p>
+<p>设训练数据集<em>T</em>=${(x_1,y_1),(x_2,y_2),…,(x_N,y_N)}$是线性可分的，其中$x_i\in\mathcal{X}=R^n,y_i\in\mathcal{Y}={-1,+1},i=1,2,…,N$,则</p>
+<p>（1）存在满足条件$||\hat{w}<em>{opt}||=1$的超平面$\hat{w}</em>{opt}\cdot\hat{x}+b_{opt}=0$将训练数据集完全正确分开，且存在$\gamma&gt;0$，对所有$i=1,2,…,N$<br>$$<br>y_i(\hat{w}<em>{opt}\cdot\hat{x}_i)=y_i(\hat{w}</em>{opt}\cdot\hat{x}<em>i+b</em>{opt}\ge\gamma<br>$$</p>
+<p>(2)令$R=\underset{1\le i\le N}{max}||\hat{x}_i||$,则感知机算法在训练数据集上的误分类次数<em>k</em>满足不等式<br>$$<br>k\le (\frac{R}{\gamma})^2<br>$$</p>
+<h1 id="Non-Separable-Data"><a href="#Non-Separable-Data" class="headerlink" title="Non-Separable Data"></a>Non-Separable Data</h1><h2 id="More-about-PLA"><a href="#More-about-PLA" class="headerlink" title="More about PLA"></a>More about PLA</h2><p>CONS:maybe not’linnear separable’,and not fully sure how long halting takes</p>
+<h2 id="Learning-with-Noisy-Data"><a href="#Learning-with-Noisy-Data" class="headerlink" title="Learning with Noisy Data"></a>Learning with Noisy Data</h2><h2 id="Line-with-Noise-Tolerance"><a href="#Line-with-Noise-Tolerance" class="headerlink" title="Line with Noise Tolerance"></a>Line with Noise Tolerance</h2><p>NP-hard</p>
+<h2 id="Pocket-Algorithm"><a href="#Pocket-Algorithm" class="headerlink" title="Pocket Algorithm"></a>Pocket Algorithm</h2><p>Find the least mistakes until iterations</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
+<li><p>Perceptron Hypothesis Set</p>
+<p>hyperplanes/linear classifiers in $\mathcal{R}^d$</p>
+</li>
+<li><p>Perceptron Learning Algorithm(PLA)</p>
+<p>correct mistakes and improve iteratively</p>
+</li>
+<li><p>Guarantee of PLA</p>
+<p>no mistake eventually if linear separable</p>
+</li>
+<li><p>Non-Separable Data</p>
+<p>hold somewhat’best’weights in pocket</p>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+      <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>title:</span><a href="/post/2c9001a2.html">Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera</a></p>
+  <p><span>author:</span><a href="/" title="go to  's private blog"></a></p>
+  <p><span>release time:</span>2019:05:11 - 19:59</p>
+  <p><span>last update:</span>2019:05:11 - 19:59</p>
+  <p><span>original link:</span><a href="/post/2c9001a2.html" title="Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera">https://lifeodyssey.github.io/post/2c9001a2.html</a>
+    <span class="copy-path"  title="click to copy"><i class="fa fa-clipboard" data-clipboard-text="https://lifeodyssey.github.io/post/2c9001a2.html"  aria-label="copy success！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a> Please retain the original link and author for reproduction。</p>
+</div>
+<script>
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({
+          title: "",
+          text: 'copy success',
+          icon: "success",
+          showConfirmButton: true
+          });
+	});
+    });
+</script>
+
+      
+      </div>
+        
+
+  <div class="followme">
+    <p>Welcome to my other publishing channels</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+              <a href="/tags/Cousera/" rel="tag"><i class="fa fa-tag"></i> Cousera</a>
+              <a href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag"><i class="fa fa-tag"></i> 林轩田</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/post/4df973c2.html" rel="prev" title="Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera">
+      <i class="fa fa-chevron-left"></i> Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/post/da4d42a2.html" rel="next" title="Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera">
+      Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Hypothesis-Set"><span class="nav-number">1.</span> <span class="nav-text">Perceptron Hypothesis Set</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Simple-Hypothesis-Set-the-%E2%80%98Perceptron%E2%80%99"><span class="nav-number">1.1.</span> <span class="nav-text">A Simple Hypothesis Set:the ‘Perceptron’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector-Form-of-Perceptron-Hypothesis"><span class="nav-number">1.2.</span> <span class="nav-text">Vector Form of Perceptron Hypothesis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Perceptrons-in-R-2"><span class="nav-number">1.3.</span> <span class="nav-text">Perceptrons in $R^2$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Learning-Algorithm-PLA"><span class="nav-number">2.</span> <span class="nav-text">Perceptron Learning Algorithm (PLA)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Select-g-from-H"><span class="nav-number">2.1.</span> <span class="nav-text">Select g from H</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Perceptron-Learning-Algorithm"><span class="nav-number">2.2.</span> <span class="nav-text">Perceptron Learning Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pratical-implementation-of-PLA"><span class="nav-number">2.3.</span> <span class="nav-text">Pratical implementation of PLA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cyclic-PLA"><span class="nav-number">2.3.1.</span> <span class="nav-text">Cyclic PLA</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-Remaning-issues-of-PLA"><span class="nav-number">2.4.</span> <span class="nav-text">Some Remaning issues of PLA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-g-approx-f"><span class="nav-number">2.4.1.</span> <span class="nav-text">Learning:$g\approx f$ ?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Guarantee-of-PLA"><span class="nav-number">3.</span> <span class="nav-text">Guarantee of PLA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-Separability"><span class="nav-number">3.1.</span> <span class="nav-text">Linear Separability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PLA-Fact-w-t-Gets-More-Aligned-with-w-f"><span class="nav-number">3.2.</span> <span class="nav-text">PLA Fact: $w_t$Gets More Aligned with $w_f$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PLA-fact-w-t-Does-Not-Grow-Too-Fast"><span class="nav-number">3.3.</span> <span class="nav-text">PLA fact: $w_t$ Does Not Grow Too Fast</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Novikoff-theorem"><span class="nav-number">3.4.</span> <span class="nav-text">Novikoff  theorem</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Non-Separable-Data"><span class="nav-number">4.</span> <span class="nav-text">Non-Separable Data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#More-about-PLA"><span class="nav-number">4.1.</span> <span class="nav-text">More about PLA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Learning-with-Noisy-Data"><span class="nav-number">4.2.</span> <span class="nav-text">Learning with Noisy Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Line-with-Noise-Tolerance"><span class="nav-number">4.3.</span> <span class="nav-text">Line with Noise Tolerance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pocket-Algorithm"><span class="nav-number">4.4.</span> <span class="nav-text">Pocket Algorithm</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">5.</span> <span class="nav-text">Summary</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">周大侠</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lifeodyssey" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lifeodyssey" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhenjiazhou0127@gmail.com" title="E-Mail → mailto:zhenjiazhou0127@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Zhenjia_Zhou" title="Researchgate → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Zhenjia_Zhou" rel="noopener" target="_blank"><i class="fa fa-researchgate fa-fw"></i>Researchgate</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">周大侠</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5cd405451e216db2" async="async"></script>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

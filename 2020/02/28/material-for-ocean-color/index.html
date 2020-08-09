@@ -1,301 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  <title>Material for ocean color | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I have been in master course for half years. It’s time to organize the materials I have used. This article will update as soon as I get new resource.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Material for ocean color">
-<meta property="og:url" content="http://yoursite.com/2020/02/28/material-for-ocean-color/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="I have been in master course for half years. It’s time to organize the materials I have used. This article will update as soon as I get new resource.">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-02-28T08:23:12.000Z">
-<meta property="article:modified_time" content="2020-03-20T16:23:00.000Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Research">
-<meta property="article:tag" content="Ocean Color">
-<meta property="article:tag" content="Oceanography">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-material-for-ocean-color" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/02/28/material-for-ocean-color/" class="article-date">
-  <time datetime="2020-02-28T08:23:12.000Z" itemprop="datePublished">2020-02-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
+{% block page_class %}page-post-detail{% endblock %}
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Material for ocean color
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>I have been in master course for half years. It’s time to organize the materials I have used.</p>
-<p>This article will update as soon as I get new resource.</p>
-<a id="more"></a>
+{% block content %}
 
-<h1 id="Basic-Knowledge"><a href="#Basic-Knowledge" class="headerlink" title="Basic Knowledge"></a>Basic Knowledge</h1><h2 id="Textbook"><a href="#Textbook" class="headerlink" title="Textbook"></a>Textbook</h2><p>Kirk, J. (1994). <em>Light and Photosynthesis in Aquatic Ecosystems</em>. Cambridge: Cambridge University Press. doi:10.1017/CBO9780511623370 <a target="_blank" rel="noopener" href="https://www.cambridge.org/core/books/light-and-photosynthesis-in-aquatic-ecosystems/C19B28AE07B1CDEBDA5593194DE4E304">https://www.cambridge.org/core/books/light-and-photosynthesis-in-aquatic-ecosystems/C19B28AE07B1CDEBDA5593194DE4E304</a></p>
-<p>Martin, S. (2014). <em>An Introduction to Ocean Remote Sensing</em>. Cambridge: Cambridge University Press. doi:10.1017/CBO9781139094368 <a target="_blank" rel="noopener" href="https://www.cambridge.org/core/books/an-introduction-to-ocean-remote-sensing/B05BDCA4B71B9F41E1F1E97FBDCDC9BB">https://www.cambridge.org/core/books/an-introduction-to-ocean-remote-sensing/B05BDCA4B71B9F41E1F1E97FBDCDC9BB</a></p>
-<p>Ocean Optics Web book <a target="_blank" rel="noopener" href="http://www.oceanopticsbook.info/">http://www.oceanopticsbook.info/</a></p>
-<p>IOCCG report <a target="_blank" rel="noopener" href="https://ioccg.org/what-we-do/ioccg-publications/ioccg-reports/">https://ioccg.org/what-we-do/ioccg-publications/ioccg-reports/</a></p>
-<p>NASA’s Ocean Biology Processing Group (OBPG) Technical Documents:<a target="_blank" rel="noopener" href="https://oceancolor.gsfc.nasa.gov/docs/technical/">https://oceancolor.gsfc.nasa.gov/docs/technical/</a></p>
-<h2 id="Video-and-Training-course"><a href="#Video-and-Training-course" class="headerlink" title="Video and Training course"></a>Video and Training course</h2><p>IOCCG training course <a target="_blank" rel="noopener" href="https://ioccg.org/what-we-do/training-and-education/">https://ioccg.org/what-we-do/training-and-education/</a></p>
-<p>Cornell Summer Satellite Remote Sensing Training Program <a target="_blank" rel="noopener" href="http://oceanography.eas.cornell.edu/satellite/">http://oceanography.eas.cornell.edu/satellite/</a></p>
-<p>Lecture Material from IOCCG Training Courses <a target="_blank" rel="noopener" href="https://ioccg.org/what-we-do/training-and-education/lectures/">https://ioccg.org/what-we-do/training-and-education/lectures/</a></p>
-<h1 id="Programming-Resource"><a href="#Programming-Resource" class="headerlink" title="Programming Resource"></a>Programming Resource</h1><h2 id="Python-package"><a href="#Python-package" class="headerlink" title="Python package"></a>Python package</h2><p>I strongly recommend you install them by Anaconda</p>
-<p>numpy,pandas,scipy,scikit-learn,matplotlib,Basemap,GDAL,geopandas,geos,h5py, hdf4,hdf5,netcdf4,pyresample,rasterio,shapely,earthpy,</p>
-<h2 id="Material-for-programming"><a href="#Material-for-programming" class="headerlink" title="Material for programming"></a>Material for programming</h2><p>PyHOGs:  Python Hour for Oceanographers and Geoscientists <a target="_blank" rel="noopener" href="http://pyhogs.github.io/">http://pyhogs.github.io/</a></p>
-<p>RGB 3S blog:<a target="_blank" rel="noopener" href="https://www.ixxin.cn/">https://www.ixxin.cn/</a></p>
-<p>OceanPython.org: <a target="_blank" rel="noopener" href="https://oceanpython.org/table-of-contents/">https://oceanpython.org/table-of-contents/</a></p>
-<p>python4geosciences:materials for the Texas A&amp;M Python for Geoscientists class, OCNG 489/689.</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/hetland/python4geosciences_OLD">https://github.com/hetland/python4geosciences_OLD</a></p>
-<p>Python for Geosciences: <a target="_blank" rel="noopener" href="https://github.com/koldunovn/python_for_geosciences">https://github.com/koldunovn/python_for_geosciences</a></p>
-<p>R and Python for Oceanographers<br>1st Edition:<a target="_blank" rel="noopener" href="https://www.elsevier.com/books/r-and-python-for-oceanographers/alyuruk/978-0-12-813491-7">https://www.elsevier.com/books/r-and-python-for-oceanographers/alyuruk/978-0-12-813491-7</a></p>
-<p>Earth Lab:<a target="_blank" rel="noopener" href="https://www.earthdatascience.org/">https://www.earthdatascience.org/</a></p>
-<p>Processing Remote Sensing Data with<br>Python:<a target="_blank" rel="noopener" href="https://skemman.is/bitstream/1946/16233/1/final_processingwithpython_dillon.pdf">https://skemman.is/bitstream/1946/16233/1/final_processingwithpython_dillon.pdf</a></p>
-<p>Geo-python: <a target="_blank" rel="noopener" href="https://geo-python.github.io/site/">https://geo-python.github.io/site/</a></p>
-<p>Ocean Optics UMaine MISC Lab:<a target="_blank" rel="noopener" href="https://github.com/OceanOptics">https://github.com/OceanOptics</a></p>
-<p>Optical Oceanography Lab :<a target="_blank" rel="noopener" href="http://oceanoptics.umb.edu/resources/">http://oceanoptics.umb.edu/resources/</a></p>
-<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>Seadas:<a target="_blank" rel="noopener" href="https://seadas.gsfc.nasa.gov/">https://seadas.gsfc.nasa.gov/</a></p>
-<p>Windows Image Manager:<a target="_blank" rel="noopener" href="http://www.wimsoft.com/index.html">http://www.wimsoft.com/index.html</a></p>
-<p> GOCI Data Processing System(GDPS):<a target="_blank" rel="noopener" href="http://kosc.kiost.ac.kr/eng/p30/kosc_p31.html">http://kosc.kiost.ac.kr/eng/p30/kosc_p31.html</a></p>
-<p>Ocean Data View:<a target="_blank" rel="noopener" href="https://odv.awi.de/">https://odv.awi.de/</a></p>
-<p>GISS:<a target="_blank" rel="noopener" href="https://www.giss.nasa.gov/tools/">https://www.giss.nasa.gov/tools/</a></p>
-<h1 id="Data-Resource"><a href="#Data-Resource" class="headerlink" title="Data Resource"></a>Data Resource</h1><h2 id="Ocean-Color-Data"><a href="#Ocean-Color-Data" class="headerlink" title="Ocean Color Data"></a>Ocean Color Data</h2><p>NASA ocean color data :<a target="_blank" rel="noopener" href="https://oceancolor.gsfc.nasa.gov/">https://oceancolor.gsfc.nasa.gov/</a></p>
-<p>Earthdata website:<a target="_blank" rel="noopener" href="https://earthdata.nasa.gov/">https://earthdata.nasa.gov/</a></p>
-<p>GOCI data:<a target="_blank" rel="noopener" href="http://kosc.kiost.ac.kr/eng/">http://kosc.kiost.ac.kr/eng/</a></p>
-<p>Maine production(standard VGPM):<a target="_blank" rel="noopener" href="http://kosc.kiost.ac.kr/eng/">http://kosc.kiost.ac.kr/eng/</a></p>
-<p>Japan GCOM-C/SGLI:<a target="_blank" rel="noopener" href="https://gportal.jaxa.jp/gpr/">https://gportal.jaxa.jp/gpr/</a></p>
-<p>China GF satellite :<a target="_blank" rel="noopener" href="http://www.hbeos.org.cn/">http://www.hbeos.org.cn/</a></p>
-<p>Earthexplore： <a target="_blank" rel="noopener" href="https://earthexplorer.usgs.gov/">https://earthexplorer.usgs.gov/</a></p>
-<p>EUMETSAT:<a target="_blank" rel="noopener" href="https://www.eumetsat.int/website/home/index.html">https://www.eumetsat.int/website/home/index.html</a></p>
-<h2 id="Other-data"><a href="#Other-data" class="headerlink" title="Other data:"></a>Other data:</h2><p>GHRSST:<a target="_blank" rel="noopener" href="https://www.ghrsst.org/">https://www.ghrsst.org/</a></p>
-<p>China Argo:<a target="_blank" rel="noopener" href="http://www.argo.org.cn/">www.argo.org.cn/</a></p>
-<p>Other Argo:<a target="_blank" rel="noopener" href="http://www.argodatamgt.org/">http://www.argodatamgt.org/</a></p>
-<p>Asia-Pacific Data Research Center,:<a target="_blank" rel="noopener" href="http://apdrc.soest.hawaii.edu/index.php">http://apdrc.soest.hawaii.edu/index.php</a></p>
-<p>AVISO:<a target="_blank" rel="noopener" href="https://www.aviso.altimetry.fr/en/data/products.html">https://www.aviso.altimetry.fr/en/data/products.html</a></p>
-<p>Japan Meteorological Agency:<a target="_blank" rel="noopener" href="http://www.jma.go.jp/jma/menu/menureport.html">www.jma.go.jp/jma/menu/menureport.html</a></p>
-<p>REMSS:<a target="_blank" rel="noopener" href="http://www.remss.com/">http://www.remss.com/</a></p>
-<p>Jet Propulsion Lab：<a target="_blank" rel="noopener" href="https://podaac.jpl.nasa.gov/">https://podaac.jpl.nasa.gov/</a></p>
-<p>KNMI Climate Explorer,：<a target="_blank" rel="noopener" href="https://climexp.knmi.nl/start.cgi?id=someone@somewhere">https://climexp.knmi.nl/start.cgi?id=someone@somewhere</a></p>
-<p>ECMWF:<a target="_blank" rel="noopener" href="https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype%3Dsfc/">https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype%3Dsfc/</a></p>
-<p>OUC ocean &amp; atmosphere data center:<a target="_blank" rel="noopener" href="http://coadc.ouc.edu.cn/index.php/Index">http://coadc.ouc.edu.cn/index.php/Index</a></p>
-<p>China Center For Resources Satellite Data and Application:<a target="_blank" rel="noopener" href="http://218.247.138.119:7777/DSSPlatform/index.html">http://218.247.138.119:7777/DSSPlatform/index.html</a></p>
-<p>Geospatial Data Cloud:<a target="_blank" rel="noopener" href="https://www.gscloud.cn/">https://www.gscloud.cn/</a></p>
-<p>FAO Fishery data:<a target="_blank" rel="noopener" href="http://www.fao.org/fishery/statistics/en">http://www.fao.org/fishery/statistics/en</a></p>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/02/28/material-for-ocean-color/" data-id="ckdn7xprd00176kyy55d12rho" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ocean-Color/" rel="tag">Ocean Color</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Oceanography/" rel="tag">Oceanography</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Research/" rel="tag">Research</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2020/03/09/%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%E3%80%8A%E7%A0%94%E7%A9%B6%E7%94%9F%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E7%9A%84%E9%80%89%E9%A2%98%E6%96%B9%E6%B3%95%E3%80%8B%E8%AE%B2%E5%BA%A7%E5%AE%9E%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          清华大学《研究生学位论文的选题方法》讲座实录
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/02/20/MODIS-L2-OC-batch-download/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MODIS OC data batch download</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Papers-And-Thesis/">Papers And Thesis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%95%99%E5%AD%A6%E7%94%9F%E6%B4%BB/">留学生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B5%84%E6%96%99%E8%B4%B4%E6%95%B4%E7%90%86/">资料贴整理</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Automatic-Machine-Learning/" rel="tag">Automatic Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cousera/" rel="tag">Cousera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Fusion/" rel="tag">Data Fusion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fishery-Forecasting/" rel="tag">Fishery Forecasting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ocean-Color/" rel="tag">Ocean Color</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ocean-Optics/" rel="tag">Ocean Optics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oceanography/" rel="tag">Oceanography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/" rel="tag">R</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Research/" rel="tag">Research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Research-Basis/" rel="tag">Research Basis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seminar/" rel="tag">Seminar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undergraduate-Thesis/" rel="tag">Undergraduate Thesis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bookreading/" rel="tag">bookreading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper-reading/" rel="tag">paper reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B/" rel="tag">广义加性模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E6%9C%AC/" rel="tag">日本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag">林轩田</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%95%99%E5%AD%A6/" rel="tag">留学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" rel="tag">统计分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AD%A6%E9%86%92/" rel="tag">警醒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6/" rel="tag">进阶</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" rel="tag">随便写写</a></li></ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Automatic-Machine-Learning/" style="font-size: 10px;">Automatic Machine Learning</a> <a href="/tags/Cousera/" style="font-size: 17.14px;">Cousera</a> <a href="/tags/Data-Fusion/" style="font-size: 10px;">Data Fusion</a> <a href="/tags/Fishery-Forecasting/" style="font-size: 10px;">Fishery Forecasting</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ocean-Color/" style="font-size: 14.29px;">Ocean Color</a> <a href="/tags/Ocean-Optics/" style="font-size: 11.43px;">Ocean Optics</a> <a href="/tags/Oceanography/" style="font-size: 20px;">Oceanography</a> <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/Research/" style="font-size: 17.14px;">Research</a> <a href="/tags/Research-Basis/" style="font-size: 12.86px;">Research Basis</a> <a href="/tags/Seminar/" style="font-size: 14.29px;">Seminar</a> <a href="/tags/Undergraduate-Thesis/" style="font-size: 10px;">Undergraduate Thesis</a> <a href="/tags/bookreading/" style="font-size: 15.71px;">bookreading</a> <a href="/tags/paper-reading/" style="font-size: 11.43px;">paper reading</a> <a href="/tags/python/" style="font-size: 11.43px;">python</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 10px;">作业</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 10px;">入门</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 12.86px;">博客搭建</a> <a href="/tags/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">广义加性模型</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 12.86px;">总结</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 14.29px;">日本</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 18.57px;">机器学习</a> <a href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" style="font-size: 17.14px;">林轩田</a> <a href="/tags/%E7%95%99%E5%AD%A6/" style="font-size: 14.29px;">留学</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" style="font-size: 10px;">统计分析</a> <a href="/tags/%E8%AD%A6%E9%86%92/" style="font-size: 10px;">警醒</a> <a href="/tags/%E8%BF%9B%E9%98%B6/" style="font-size: 10px;">进阶</a> <a href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" style="font-size: 10px;">随便写写</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/08/07/lambda/">lambda</a>
-          </li>
-        
-          <li>
-            <a href="/2020/08/01/cartopy/">cartopy</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/19/book-reading-note-4/">book reading note 4</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/15/Data-fusion-series-note/">Data fusion series note 1</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/08/How-to-follow-the-nearst-research-in-oceanography/">How to follow the research progress in your field?</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}

@@ -1,285 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  <title>Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Feasibility of Learning">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera">
-<meta property="og:url" content="http://yoursite.com/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Feasibility of Learning">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png">
-<meta property="article:published_time" content="2019-04-02T06:08:38.000Z">
-<meta property="article:modified_time" content="2019-05-11T10:58:48.000Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="机器学习">
-<meta property="article:tag" content="Cousera">
-<meta property="article:tag" content="林轩田">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/" class="article-date">
-  <time datetime="2019-04-02T06:08:38.000Z" itemprop="datePublished">2019-04-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
+{% block page_class %}page-post-detail{% endblock %}
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Feasibility of Learning</strong></p>
-<a id="more"></a>
+{% block content %}
 
-<h1 id="Learning-is-Impossible"><a href="#Learning-is-Impossible" class="headerlink" title="Learning is Impossible?"></a>Learning is Impossible?</h1><h1 id="Probability-to-the-Rescue"><a href="#Probability-to-the-Rescue" class="headerlink" title="Probability to the Rescue"></a>Probability to the Rescue</h1><h2 id="Inferring-Something-Unknow"><a href="#Inferring-Something-Unknow" class="headerlink" title="Inferring Something Unknow"></a>Inferring Something Unknow</h2><p>in sample$\rightarrow$out sample</p>
-<h2 id="Possible-versus-Probable"><a href="#Possible-versus-Probable" class="headerlink" title="Possible versus Probable"></a>Possible versus Probable</h2><h2 id="Hoeffding’s-Inequality"><a href="#Hoeffding’s-Inequality" class="headerlink" title="Hoeffding’s Inequality"></a>Hoeffding’s Inequality</h2><p>In big sample(<em>N</em> large),$\boldsymbol{\upsilon}$ is probably close to $\boldsymbol{u}$ (within $\boldsymbol{\epsilon}$)<br>$$<br>\mathbb{P}[|v-u|&gt;\boldsymbol{\epsilon}]\leq2exp(-2\boldsymbol{\epsilon}^2N)<br>$$<br>called Hoeffding’s Inequality, for marbles,coin,polling</p>
-<p>the statement $v=u$ is <strong>probably approximately correct</strong>(PAC)</p>
-<ul>
-<li><p>valid for all N and $\boldsymbol{\epsilon}$</p>
-</li>
-<li><p>does not depend on $u$,no need to know$u$</p>
-</li>
-<li><p>larger sample size <em>N</em> or looser gap $\boldsymbol{\epsilon} \rightarrow$higher probability for $v=u$</p>
-<p>if large N,can probably infer unknown $u$ by know $v$</p>
-</li>
-</ul>
-<h1 id="Connection-to-Learning"><a href="#Connection-to-Learning" class="headerlink" title="Connection  to Learning"></a>Connection  to Learning</h1><h2 id="Added-Components"><a href="#Added-Components" class="headerlink" title="Added Components"></a>Added Components</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png"></p>
-<p>for any fixed <em>h</em>, can probably infer unkown $E_out(h)=\underset{X\approx P}{\varepsilon}[h(x)\ne f(x)]$by known$ E_in(h)=\frac{1}{N}\sum^N_{n=1}[h(x)\ne f(x)]$</p>
-<h2 id="The-Formal-Guarantee"><a href="#The-Formal-Guarantee" class="headerlink" title="The Formal Guarantee"></a>The Formal Guarantee</h2><p>if $E_{in}(h)\approx E_{out}(h)$ and$E_{in}(h)small\rightarrow E_{out}(h)samll\rightarrow h\approx f $with respect to P</p>
-<h2 id="Verification-of-One-h"><a href="#Verification-of-One-h" class="headerlink" title="Verification of One h"></a>Verification of One h</h2><p>if $E_{in}(h)$ small for the fixed h and A pick the h as g$\rightarrow$ g=f PAC</p>
-<p>if A force to pick THE h as g$\rightarrow E_{in}(h)$ almost always not small$\rightarrow g\ne f$ PAC</p>
-<p>real learning:</p>
-<p>  A shall make choices$\in \H$ (like PLA) rather than being forced to pick one h.</p>
-<h2 id="The-‘Verification’-Flow"><a href="#The-‘Verification’-Flow" class="headerlink" title="The ‘Verification’ Flow"></a>The ‘Verification’ Flow</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png"></p>
-<h1 id="Connection-to-Real-Learning"><a href="#Connection-to-Real-Learning" class="headerlink" title="Connection to Real Learning"></a>Connection to Real Learning</h1><h2 id="BAD-Sample-and-BAD-Data"><a href="#BAD-Sample-and-BAD-Data" class="headerlink" title="BAD Sample and BAD Data"></a>BAD Sample and BAD Data</h2><p>BAD Sample:$E_{out}=\frac{1}{2}$,but getting all heads($E_{in}=0$)</p>
-<p>BAD Data for One h:$E_{out}(h)$ and $E_{in}h$ far away</p>
-<h2 id="BAD-data-for-Many-h"><a href="#BAD-data-for-Many-h" class="headerlink" title="BAD data for Many h"></a>BAD data for Many h</h2><p>BAD data for many h $\Leftrightarrow$ no freedom of choice by A $\Leftrightarrow$ there exists some h such that $E_{out}(h)$ and $E_{in}(h)$ far away</p>
-<h2 id="Bound-of-BAD-Data"><a href="#Bound-of-BAD-Data" class="headerlink" title="Bound of BAD Data"></a>Bound of BAD Data</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png"></p>
-<h2 id="The-Statistical-Learning-Flow"><a href="#The-Statistical-Learning-Flow" class="headerlink" title="The Statistical Learning Flow"></a>The Statistical Learning Flow</h2><p>if $|\mathbb{H}|$= M finite, N large enough,for whatever g picked by A,$E_{out}(g)\approx E_{in}(g)$</p>
-<p>if A finds one g with $E_{in}(g)\approx 0$,PAC guarantee for$E_{out}(g)\Rightarrow$learning possible</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png"></p>
-<p>M=$\infty$? - see you in the next lectures~</p>
-<h1 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h1><p>这个作业题是真的难啊，花了一个半小时才堪堪通过，尤其是最后几个写PLA和pocket算法的</p>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/04/02/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E5%9B%9B%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-4-Note-in-Cousera/" data-id="ckdn7xpqw00066kyy1hlxawe2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cousera/" rel="tag">Cousera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag">林轩田</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/04/06/Cousera%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%9F%B3%E7%AC%AC%E4%BA%94%E5%91%A8%E7%AC%94%E8%AE%B0-Machine-Learning-Foundation-Week-5-Note-in-Cousera/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/03/16/%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%89%EF%BC%89%E7%94%B3%E8%AF%B7%E5%87%86%E5%A4%87%E5%8F%8A%E6%B5%81%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">经验贴（三）申请流程及准备</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Papers-And-Thesis/">Papers And Thesis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%95%99%E5%AD%A6%E7%94%9F%E6%B4%BB/">留学生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B5%84%E6%96%99%E8%B4%B4%E6%95%B4%E7%90%86/">资料贴整理</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Automatic-Machine-Learning/" rel="tag">Automatic Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cousera/" rel="tag">Cousera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Fusion/" rel="tag">Data Fusion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fishery-Forecasting/" rel="tag">Fishery Forecasting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ocean-Color/" rel="tag">Ocean Color</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ocean-Optics/" rel="tag">Ocean Optics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oceanography/" rel="tag">Oceanography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/" rel="tag">R</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Research/" rel="tag">Research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Research-Basis/" rel="tag">Research Basis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seminar/" rel="tag">Seminar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undergraduate-Thesis/" rel="tag">Undergraduate Thesis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bookreading/" rel="tag">bookreading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper-reading/" rel="tag">paper reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B/" rel="tag">广义加性模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E6%9C%AC/" rel="tag">日本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag">林轩田</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%95%99%E5%AD%A6/" rel="tag">留学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" rel="tag">统计分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AD%A6%E9%86%92/" rel="tag">警醒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6/" rel="tag">进阶</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" rel="tag">随便写写</a></li></ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Automatic-Machine-Learning/" style="font-size: 10px;">Automatic Machine Learning</a> <a href="/tags/Cousera/" style="font-size: 17.14px;">Cousera</a> <a href="/tags/Data-Fusion/" style="font-size: 10px;">Data Fusion</a> <a href="/tags/Fishery-Forecasting/" style="font-size: 10px;">Fishery Forecasting</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ocean-Color/" style="font-size: 14.29px;">Ocean Color</a> <a href="/tags/Ocean-Optics/" style="font-size: 11.43px;">Ocean Optics</a> <a href="/tags/Oceanography/" style="font-size: 20px;">Oceanography</a> <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/Research/" style="font-size: 17.14px;">Research</a> <a href="/tags/Research-Basis/" style="font-size: 12.86px;">Research Basis</a> <a href="/tags/Seminar/" style="font-size: 14.29px;">Seminar</a> <a href="/tags/Undergraduate-Thesis/" style="font-size: 10px;">Undergraduate Thesis</a> <a href="/tags/bookreading/" style="font-size: 15.71px;">bookreading</a> <a href="/tags/paper-reading/" style="font-size: 11.43px;">paper reading</a> <a href="/tags/python/" style="font-size: 11.43px;">python</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 10px;">作业</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 10px;">入门</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 12.86px;">博客搭建</a> <a href="/tags/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">广义加性模型</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 12.86px;">总结</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 14.29px;">日本</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 18.57px;">机器学习</a> <a href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" style="font-size: 17.14px;">林轩田</a> <a href="/tags/%E7%95%99%E5%AD%A6/" style="font-size: 14.29px;">留学</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" style="font-size: 10px;">统计分析</a> <a href="/tags/%E8%AD%A6%E9%86%92/" style="font-size: 10px;">警醒</a> <a href="/tags/%E8%BF%9B%E9%98%B6/" style="font-size: 10px;">进阶</a> <a href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" style="font-size: 10px;">随便写写</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/08/07/lambda/">lambda</a>
-          </li>
-        
-          <li>
-            <a href="/2020/08/01/cartopy/">cartopy</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/19/book-reading-note-4/">book reading note 4</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/15/Data-fusion-series-note/">Data fusion series note 1</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/08/How-to-follow-the-nearst-research-in-oceanography/">How to follow the research progress in your field?</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}

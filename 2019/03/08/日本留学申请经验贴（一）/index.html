@@ -1,298 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  <title>日本留学申请经验贴（一）之留学机构 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实很早之前就想写这个帖子了。自己从去年这个时候到现在花了整整一年时间经历了留学的大大小小的事情，但是不知道从哪里讲起来。就想到哪里讲哪里吧。带有一定的主观性，仅供参考。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="日本留学申请经验贴（一）之留学机构">
-<meta property="og:url" content="http://yoursite.com/2019/03/08/%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="其实很早之前就想写这个帖子了。自己从去年这个时候到现在花了整整一年时间经历了留学的大大小小的事情，但是不知道从哪里讲起来。就想到哪里讲哪里吧。带有一定的主观性，仅供参考。">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-03-08T04:34:44.000Z">
-<meta property="article:modified_time" content="2019-05-11T10:58:59.000Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="留学">
-<meta property="article:tag" content="日本">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.0.0"></head>
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-日本留学申请经验贴（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/03/08/%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%80%EF%BC%89/" class="article-date">
-  <time datetime="2019-03-08T04:34:44.000Z" itemprop="datePublished">2019-03-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%95%99%E5%AD%A6%E7%94%9F%E6%B4%BB/">留学生活</a>
-  </div>
+{% block page_class %}page-post-detail{% endblock %}
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      日本留学申请经验贴（一）之留学机构
-    </h1>
-  
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>其实很早之前就想写这个帖子了。自己从去年这个时候到现在花了整整一年时间经历了留学的大大小小的事情，但是不知道从哪里讲起来。就想到哪里讲哪里吧。带有一定的主观性，仅供参考。</p>
-<a id="more"></a>
+{% block content %}
 
-<h2 id="我要不要找留学机构"><a href="#我要不要找留学机构" class="headerlink" title="我要不要找留学机构"></a>我要不要找留学机构</h2><p>留学这件事，无论是去哪儿，很多人想到的第一件事就是要不要花钱找留学机构，其实这个答案很多，因人而异，而且现在各种机构除了传统的文书服务之外还打出了各种背景提升服务，什么跟哈佛斯坦福的线上研究、世界五百强的内推之类的，具体适不适合就更难说了。这里需要先厘清几个概念。</p>
-<h2 id="中介与咨询机构"><a href="#中介与咨询机构" class="headerlink" title="中介与咨询机构"></a>中介与咨询机构</h2><p>我发现很多人都很难分清中介这个概念。拿房屋中介举例子，卖房子的人给中介钱让中介帮忙卖，买房子的人给中介钱来获取信息。放到留学上，留学中介在这里一方面收外国学校的钱来给他们招生，另一方面收学生和家长的钱来帮助他们申请。显而易见，这种概念下的中介对绝大多数人来说都毫无意义，因为国外的好学校不需要中介来帮他们招生。我们平时所找的一些“中介”，更多的是指留学咨询机构。</p>
-<h2 id="留学需要的材料"><a href="#留学需要的材料" class="headerlink" title="留学需要的材料"></a>留学需要的材料</h2><p>在说要不要找留学机构之前，我想先说明留学需要什么，然后再来说明留学机构能不能帮我们完成这些东西。</p>
-<p>对于绝大多数学校的申请来说，需要的硬核材料无非以下几项：</p>
-<ul>
-<li>语言成绩</li>
-<li>简历</li>
-<li>成绩单、在读证明、毕业证明</li>
-<li>推荐信</li>
-<li>Paper</li>
-<li>陶瓷信</li>
-<li>Personal Statement或Statement of Purpose</li>
-<li>Writing Sample或Research Proposal</li>
-</ul>
-<p>申请的整个过程中还需要做的事有</p>
-<ul>
-<li><p>查找学校和老师信息</p>
-</li>
-<li><p>合理选校定位</p>
-</li>
-<li><p>小蜜沟通</p>
-</li>
-<li><p>填写网申</p>
-</li>
-<li><p>材料寄送</p>
-</li>
-<li><p>offer选择</p>
-</li>
-<li><p>签证、租房</p>
-</li>
-</ul>
-<p>前面那一栏是申请的硬实力，也是最能决定你申请结果的因素；而后面这一栏则是申请中的细节问题，但是同样至关重要，因为选校定位不合理、材料寄送不及时而导致全聚德的人每年都有。我接下来将分开说明这两项。</p>
-<p>硬核材料</p>
-<p>这些材料里，在读证明和毕业证明属于学校开具的材料，只要你递交的时候注意以下几点<br>（1）英文翻译<br>（2）学校公章<br>（3）密封<br>就不会因为这两个卡你。</p>
-<h3 id="语言成绩、简历、成绩单、推荐信、Paper"><a href="#语言成绩、简历、成绩单、推荐信、Paper" class="headerlink" title="语言成绩、简历、成绩单、推荐信、Paper"></a>语言成绩、简历、成绩单、推荐信、Paper</h3><p>这五个材料很大程度上其实取决于你自己。无论你是想保研、考研、找工作还是出国，几乎都要用到这五个材料（或者其中一部分）。因此如果大一的学弟学妹们感到很迷茫没有目标，我建议你们就把目标定为出国，因为在我看来这是最难的。到了大三下学期的暑假，如果你成绩好有paper，但是突然不想出国了，那么去保研也是没有任何问题的；对于商科来说，有一份好的实习，不想出国去找工作也很容易。<br>说远了，这五个材料里，语言成绩和你的成绩单需要你自己去考，留学机构能帮到的无非是指导一下选课（对于想转专业的同学还是很有必要的，因为有些学校写明了如果想申请某个项目必须修读什么课程，但是这个去搜索名校培养方案、录取要求或者询问学长学姐也可以得到）或者提供语言培训（大多数需要收费），最后三维高不高还是看你自己的努力。<br>简历、推荐信、Paper这三者取决于你之前的科研、实习、竞赛以及其他一些活动（推荐信如果找任课老师写的话需要看你课堂表现），当然了简历的撰写还是有门道的，这个可以重开一个帖子，这里就不多说了。这些活动你自己不努力不积极就拿不到一个足够有分量的推荐信，发表不了Paper，也没有一个丰富的简历。留学机构在这里能做的就是所谓的背景提升项目，给你提供实习内推和科研的资源，或者帮你申请暑研，具体能帮到多少其实情况非常复杂。如果你本身非常优秀但是缺少相关的信息和资源的话，或许对你来说有很深刻的意义；除此之外，就算你通过机构的帮助去了世界五百实习强或者顶尖名校做科研，最后的结果不好，没有什么好的成果，依然不能给你的留学提供太大的帮助；更何况机构提供的这些机会并不是你报名就能够通过，同样存在着竞争，同样需要你本身足够优秀。</p>
-<h3 id="Personal-Statement或Statement-of-Purpose＼Writing-Sample或Research-Proposal"><a href="#Personal-Statement或Statement-of-Purpose＼Writing-Sample或Research-Proposal" class="headerlink" title="Personal Statement或Statement of Purpose＼Writing Sample或Research Proposal"></a>Personal Statement或Statement of Purpose＼Writing Sample或Research Proposal</h3><p>这两个的话，前者其实取决于你的语言水平，后者取决于你的科研实力，关于如何撰写这两个材料可以说很长很长时间，这里先聚焦于机构。前者对于大多数学校都是很重要的材料，留学机构能够帮你最多的也是这一个材料，因此我强烈建议就算是DIY的同学也可以找一些机构进行Personal Statement或Statement of Purpose修改润色，我这里推荐一下<a target="_blank" rel="noopener" href="http://www.palmdrive.cn/">棕榈大道</a>，绝对物超所值。而后一个材料，文科有一些专业要求写Writing Sample，我不是很了解，因此在这里不做评论；对于大多数日本申请而言，Research Proposal绝对是最重要的材料没有之一，但是这个材料太过专业和学术化，大多数留学机构只能帮你修改语法、单词错误和一些句式，内容上只有和你申请的老师是同一个方向的在读研究生或博士生才能给出意见（当然了，很多时候你要申请的老板也会给你的Research Proposal一些修改意见），因此Research Proposal去找你的师兄师姐或者关系好的老师修改可能更好一点。有一些机构会说他们可以提供Research Proposal的修改或者代写，如果你因为这个而想和他们签约的话，请一定确认好合同条款和申请辅导老师的水平。</p>
-<h3 id="申请细节"><a href="#申请细节" class="headerlink" title="申请细节"></a>申请细节</h3><p>相较于硬核材料，在申请细节这一方面留学辅导机构由于有过去学生的申请数据和申请辅导经验，反而能发挥很大作用。但是另一方面，这些也可以通过学长学姐和自己去论坛、官网查询而得到。如果你所在的学校出国氛围比较浓厚的话，留学机构能够在这一项上提供的帮助反而不是很多。</p>
-<h2 id="DIY的判断标准"><a href="#DIY的判断标准" class="headerlink" title="DIY的判断标准"></a>DIY的判断标准</h2><p>前面说了这么多，接下来我来说一个我认为的DIY理想状态。</p>
-<p>如果在大四上学期刚开学的时候，你不打算跨专业申请，语言已经满足要求或者距离很小，已经确定了要申请的项目/学校/导师，手握两到三段拿得出手的科研实习经历，那么你完全不需要找辅导机构，DIY就可以，除非你想申请一些录取难度极高的项目。</p>
-<p>现在就可以评判一下自己的实力，看看自己大四上学期的时候能不能达到这个标准。</p>
-<h2 id="怎么选择机构"><a href="#怎么选择机构" class="headerlink" title="怎么选择机构"></a>怎么选择机构</h2><p>如果你想选择机构的话，还会面临一个怎么选择机构的问题。相信很多人都听说过被某些留学机构坑钱的事情，我认为选择机构主要要有以下几个标准：</p>
-<ol>
-<li>网申账号、邮箱必须掌握在你自己的手里</li>
-<li>合同里有明确的退款政策</li>
-<li>学生有权利主动更换导师，并且给出更换所需时间</li>
-<li>该机构过往无重大黑历史（这一条在知乎、微信、微博搜一下就能知道）</li>
-</ol>
-<p>下一期将聚焦于日本研究生申请制度的介绍。</p>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/03/08/%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E7%94%B3%E8%AF%B7%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%B8%80%EF%BC%89/" data-id="ckdn7xprj001p6kyycjno6twn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%A5%E6%9C%AC/" rel="tag">日本</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%95%99%E5%AD%A6/" rel="tag">留学</a></li></ul>
-
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/03/09/%E7%BB%8F%E9%AA%8C%E8%B4%B4%EF%BC%88%E4%BA%8C%EF%BC%89%E6%97%A5%E6%97%A5%E6%9C%AC%E7%95%99%E5%AD%A6%E5%88%B6%E5%BA%A6%E4%BB%8B%E7%BB%8D/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          经验贴（二）日本留学制度介绍
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/03/07/%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98%E3%80%81%E5%AD%90%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE%E5%8F%8A%E4%B9%B1%E7%A0%81%E8%A7%A3%E5%86%B3/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">博客更换主题、页面设置及问题解决</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Papers-And-Thesis/">Papers And Thesis</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%BB%8F%E9%AA%8C/">学习经验</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%95%99%E5%AD%A6%E7%94%9F%E6%B4%BB/">留学生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%B5%84%E6%96%99%E8%B4%B4%E6%95%B4%E7%90%86/">资料贴整理</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Automatic-Machine-Learning/" rel="tag">Automatic Machine Learning</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cousera/" rel="tag">Cousera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Data-Fusion/" rel="tag">Data Fusion</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fishery-Forecasting/" rel="tag">Fishery Forecasting</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ocean-Color/" rel="tag">Ocean Color</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ocean-Optics/" rel="tag">Ocean Optics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Oceanography/" rel="tag">Oceanography</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R/" rel="tag">R</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Research/" rel="tag">Research</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Research-Basis/" rel="tag">Research Basis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Seminar/" rel="tag">Seminar</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Undergraduate-Thesis/" rel="tag">Undergraduate Thesis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bookreading/" rel="tag">bookreading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper-reading/" rel="tag">paper reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%9C%E4%B8%9A/" rel="tag">作业</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%A5%E9%97%A8/" rel="tag">入门</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="tag">博客搭建</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B/" rel="tag">广义加性模型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%BB%E7%BB%93/" rel="tag">总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E6%9C%AC/" rel="tag">日本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag">机器学习</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" rel="tag">林轩田</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%95%99%E5%AD%A6/" rel="tag">留学</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" rel="tag">统计分析</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AD%A6%E9%86%92/" rel="tag">警醒</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%9B%E9%98%B6/" rel="tag">进阶</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" rel="tag">随便写写</a></li></ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Automatic-Machine-Learning/" style="font-size: 10px;">Automatic Machine Learning</a> <a href="/tags/Cousera/" style="font-size: 17.14px;">Cousera</a> <a href="/tags/Data-Fusion/" style="font-size: 10px;">Data Fusion</a> <a href="/tags/Fishery-Forecasting/" style="font-size: 10px;">Fishery Forecasting</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Ocean-Color/" style="font-size: 14.29px;">Ocean Color</a> <a href="/tags/Ocean-Optics/" style="font-size: 11.43px;">Ocean Optics</a> <a href="/tags/Oceanography/" style="font-size: 20px;">Oceanography</a> <a href="/tags/R/" style="font-size: 10px;">R</a> <a href="/tags/Research/" style="font-size: 17.14px;">Research</a> <a href="/tags/Research-Basis/" style="font-size: 12.86px;">Research Basis</a> <a href="/tags/Seminar/" style="font-size: 14.29px;">Seminar</a> <a href="/tags/Undergraduate-Thesis/" style="font-size: 10px;">Undergraduate Thesis</a> <a href="/tags/bookreading/" style="font-size: 15.71px;">bookreading</a> <a href="/tags/paper-reading/" style="font-size: 11.43px;">paper reading</a> <a href="/tags/python/" style="font-size: 11.43px;">python</a> <a href="/tags/%E4%BD%9C%E4%B8%9A/" style="font-size: 10px;">作业</a> <a href="/tags/%E5%85%A5%E9%97%A8/" style="font-size: 10px;">入门</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" style="font-size: 12.86px;">博客搭建</a> <a href="/tags/%E5%B9%BF%E4%B9%89%E5%8A%A0%E6%80%A7%E6%A8%A1%E5%9E%8B/" style="font-size: 10px;">广义加性模型</a> <a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 12.86px;">总结</a> <a href="/tags/%E6%97%A5%E6%9C%AC/" style="font-size: 14.29px;">日本</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 18.57px;">机器学习</a> <a href="/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/" style="font-size: 17.14px;">林轩田</a> <a href="/tags/%E7%95%99%E5%AD%A6/" style="font-size: 14.29px;">留学</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%88%86%E6%9E%90/" style="font-size: 10px;">统计分析</a> <a href="/tags/%E8%AD%A6%E9%86%92/" style="font-size: 10px;">警醒</a> <a href="/tags/%E8%BF%9B%E9%98%B6/" style="font-size: 10px;">进阶</a> <a href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" style="font-size: 10px;">随便写写</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/08/07/lambda/">lambda</a>
-          </li>
-        
-          <li>
-            <a href="/2020/08/01/cartopy/">cartopy</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/19/book-reading-note-4/">book reading note 4</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/15/Data-fusion-series-note/">Data fusion series note 1</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/08/How-to-follow-the-nearst-research-in-oceanography/">How to follow the research progress in your field?</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}

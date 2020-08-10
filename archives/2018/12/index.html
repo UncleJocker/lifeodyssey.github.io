@@ -22,22 +22,15 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="This tutorial covers mainly two parts:  Using python to analyse MODIS ocean color data Installation and application of SeaDA  OCSSW">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Tutorial for handling MODIS ocean color data">
-<meta property="og:url" content="https://lifeodyssey.github.io/posts/ef746e52.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="乔克叔叔的床边故事">
+<meta property="og:url" content="https://lifeodyssey.github.io/archives/2018/12/index.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="This tutorial covers mainly two parts:  Using python to analyse MODIS ocean color data Installation and application of SeaDA  OCSSW">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-12T10:49:32.000Z">
-<meta property="article:modified_time" content="2020-04-12T13:23:22.000Z">
 <meta property="article:author" content="周大侠">
-<meta property="article:tag" content="Research">
-<meta property="article:tag" content="Ocean Color">
-<meta property="article:tag" content="Oceanography">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://lifeodyssey.github.io/posts/ef746e52.html">
+<link rel="canonical" href="https://lifeodyssey.github.io/archives/2018/12/">
 
 
 <script class="page-configurations">
@@ -45,12 +38,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Tutorial for handling MODIS ocean color data | 乔克叔叔的床边故事</title>
+  <title>Archive | 乔克叔叔的床边故事</title>
   
 
 
@@ -140,7 +133,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -152,7 +145,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Using-python-to-analyse-modis-ocean-color-data"><span class="nav-number">1.</span> <span class="nav-text">Using python to analyse modis ocean color data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Package-and-working-environment"><span class="nav-number">1.1.</span> <span class="nav-text">Package and working environment</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Anaconda-amp-Pycharm"><span class="nav-number">1.1.1.</span> <span class="nav-text">Anaconda &amp; Pycharm</span></a></li></ol></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -209,119 +201,51 @@
       <div class="main-inner">
         
 
-        <div class="content post posts-expand">
+        <div class="content archive">
           
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://lifeodyssey.github.io/posts/ef746e52.html">
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        
+        <span class="collection-header">OK! 36 posts in total. Keep on posting.</span>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="周大侠">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="乔克叔叔的床边故事">
-    </span>
-
-    
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Tutorial for handling MODIS ocean color data
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-04-12 19:49:32 / Modified: 22:23:22" itemprop="dateCreated datePublished" datetime="2020-04-12T19:49:32+09:00">2020-04-12</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <p>This tutorial covers mainly two parts:</p>
-<ol>
-<li>Using python to analyse MODIS ocean color data</li>
-<li>Installation and application of SeaDA  OCSSW</li>
-</ol>
-<a id="more"></a>
-
-<h1 id="Using-python-to-analyse-modis-ocean-color-data"><a href="#Using-python-to-analyse-modis-ocean-color-data" class="headerlink" title="Using python to analyse modis ocean color data"></a>Using python to analyse modis ocean color data</h1><h2 id="Package-and-working-environment"><a href="#Package-and-working-environment" class="headerlink" title="Package and working environment"></a>Package and working environment</h2><p>This this the first difficult thing for a rookie.</p>
-<h3 id="Anaconda-amp-Pycharm"><a href="#Anaconda-amp-Pycharm" class="headerlink" title="Anaconda &amp; Pycharm"></a>Anaconda &amp; Pycharm</h3><p>Anaconda contains most of the package</p>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2018</span>
     </div>
 
-    
-    
-    
-        
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>Post author:  </strong>周大侠
-  </li>
-  <li class="post-copyright-link">
-    <strong>Post link: </strong>
-    <a href="https://lifeodyssey.github.io/posts/ef746e52.html" title="Tutorial for handling MODIS ocean color data">https://lifeodyssey.github.io/posts/ef746e52.html</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2018-12-12T00:00:00+09:00"
+              content="2018-12-12">
+          12-12
+        </time>
+      </div>
 
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/6143bcfc.html" itemprop="url">
+            <span itemprop="name">Hello Gridea</span>
+          </a>
+      </div>
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Research/" rel="tag"># Research</a>
-              <a href="/tags/Ocean-Color/" rel="tag"># Ocean Color</a>
-              <a href="/tags/Oceanography/" rel="tag"># Oceanography</a>
-          </div>
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/posts/307feb93.html" rel="prev" title="清华大学《研究生学位论文的选题方法》讲座实录">
-      <i class="fa fa-chevron-left"></i> 清华大学《研究生学位论文的选题方法》讲座实录
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/ce08f3a2.html" rel="next" title="MODIS水色数据处理教程">
-      MODIS水色数据处理教程 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
+    </header>
   </article>
+
+
+    </div>
+  </div>
   
   
+  
+
   
 
 

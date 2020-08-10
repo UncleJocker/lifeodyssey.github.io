@@ -29,6 +29,115 @@
       </tags>
   </entry>
   <entry>
+    <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
+    <url>/posts/4df973c2.html</url>
+    <content><![CDATA[<p><strong>Types of Learning</strong></p>
+<a id="more"></a>
+
+<h1 id="Learning-with-Different-Output-Space"><a href="#Learning-with-Different-Output-Space" class="headerlink" title="Learning with Different Output Space"></a>Learning with Different Output Space</h1><h2 id="Credit-Approval-Problem-Revisited"><a href="#Credit-Approval-Problem-Revisited" class="headerlink" title="Credit Approval Problem Revisited"></a>Credit Approval Problem Revisited</h2><h2 id="More-Binary-Classification-Problems"><a href="#More-Binary-Classification-Problems" class="headerlink" title="More Binary Classification Problems"></a>More Binary Classification Problems</h2><h2 id="Multiclass-Classification-Coin-Recognition-Problem"><a href="#Multiclass-Classification-Coin-Recognition-Problem" class="headerlink" title="Multiclass Classification: Coin Recognition Problem"></a>Multiclass Classification: Coin Recognition Problem</h2><h2 id="Regression-Patient-Recovery-Prediction-Problem"><a href="#Regression-Patient-Recovery-Prediction-Problem" class="headerlink" title="Regression: Patient Recovery Prediction Problem"></a>Regression: Patient Recovery Prediction Problem</h2><h2 id="Structured-Learning-Sequence-Tagging-Problem"><a href="#Structured-Learning-Sequence-Tagging-Problem" class="headerlink" title="Structured Learning: Sequence Tagging Problem"></a>Structured Learning: Sequence Tagging Problem</h2><h1 id="Learning-With-Different-Data-Label"><a href="#Learning-With-Different-Data-Label" class="headerlink" title="Learning With Different Data Label"></a>Learning With Different Data Label</h1><h2 id="Supervised-Coin-Recognition-Revisited"><a href="#Supervised-Coin-Recognition-Revisited" class="headerlink" title="Supervised: Coin Recognition Revisited"></a>Supervised: Coin Recognition Revisited</h2><p>##　Unsupervised: Coin Recognition without $y_n$</p>
+<p>unsupervised multiclass classification $\Leftrightarrow$‘Clustering’:a challenging but useful problem</p>
+<h2 id="Unsupervised-Learning-without-y-n"><a href="#Unsupervised-Learning-without-y-n" class="headerlink" title="Unsupervised: Learning without $y_n$"></a>Unsupervised: Learning without $y_n$</h2><ul>
+<li>Clustering</li>
+<li><a href="https://en.wikipedia.org/wiki/Density_estimation">Density estimation</a></li>
+<li>Outlier Detection</li>
+</ul>
+<h2 id="Semi-supervised-Coin-Recognition-with-Some-y-n"><a href="#Semi-supervised-Coin-Recognition-with-Some-y-n" class="headerlink" title="Semi-supervised:Coin Recognition with Some $y_n$"></a>Semi-supervised:Coin Recognition with Some $y_n$</h2><p>avoid expensive labeling</p>
+<h2 id="Reinforcement-Learning"><a href="#Reinforcement-Learning" class="headerlink" title="Reinforcement Learning"></a>Reinforcement Learning</h2><h1 id="Learning-with-Different-Protocol"><a href="#Learning-with-Different-Protocol" class="headerlink" title="Learning with Different Protocol"></a>Learning with Different Protocol</h1><h2 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h2><p>a very common protocol</p>
+<h2 id="Online-Spam-Filter-that-‘improves’"><a href="#Online-Spam-Filter-that-‘improves’" class="headerlink" title="Online: Spam Filter that ‘improves’"></a>Online: Spam Filter that ‘improves’</h2><h2 id="Active-Learning-Learning-by-‘Asking’"><a href="#Active-Learning-Learning-by-‘Asking’" class="headerlink" title="Active Learning: Learning by ‘Asking’"></a>Active Learning: Learning by ‘Asking’</h2><h1 id="Learning-with-Different-Input-Space"><a href="#Learning-with-Different-Input-Space" class="headerlink" title="Learning with Different Input Space"></a>Learning with Different Input Space</h1><h2 id="Concrete-Features"><a href="#Concrete-Features" class="headerlink" title="Concrete Features"></a>Concrete Features</h2><p>human intelligence</p>
+<h2 id="Raw-Features"><a href="#Raw-Features" class="headerlink" title="Raw Features"></a>Raw Features</h2><p>need human or machines to convert to concrete ones(feature engineering)</p>
+<h2 id="Abstract-Features"><a href="#Abstract-Features" class="headerlink" title="Abstract Features"></a>Abstract Features</h2><p>again need feature conversion/extraction/construction</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
+<li>Learning with Different Output Space:classification,regression,structured</li>
+<li>Learning with Different Data Label$y_n$:supervised,un/semi-supervised,reinforecement</li>
+<li>Learning with Different Protocol:batch,online,active</li>
+<li>Learning with Different Input Space:concrete,raw,abstract</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera</title>
+    <url>/posts/fbd0b1b0.html</url>
+    <content><![CDATA[<p><strong>Traning versus Testing</strong></p>
+<p>Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.</p>
+<p>I will update this note if possible.</p>
+<a id="more"></a>
+
+<h1 id="Recap-and-Preview"><a href="#Recap-and-Preview" class="headerlink" title="Recap and Preview"></a>Recap and Preview</h1><h2 id="Recap-The-‘Statistical’-Learning-Flow"><a href="#Recap-The-‘Statistical’-Learning-Flow" class="headerlink" title="Recap: The ‘Statistical’ Learning Flow"></a>Recap: The ‘Statistical’ Learning Flow</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554528606498.png"></p>
+<h2 id="Two-Central-Questions"><a href="#Two-Central-Questions" class="headerlink" title="Two Central Questions"></a>Two Central Questions</h2><p>1. can we make sure that $E_{out}(g)$ is close enough to $E_{in}(g)$?</p>
+<p>2. can we make $E_{in}(g)$ small enough?</p>
+<p>$\Rightarrow$ What role does $\underbrace{M}\{|\mathscr{H}|}$ play for the two questions?</p>
+<p>##　Trade-off on *M</p>
+<table>
+<thead>
+<tr>
+<th>small M</th>
+<th>large M</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Yes $\mathbb{P}[BAD]\leq2\cdot M\cdot exp(…)$</td>
+<td>1. No!$\mathbb{P}[BAD]\leq2\cdot M\cdot exp(…)$</td>
+</tr>
+<tr>
+<td>2. $\color{Maroon}No!$,two few choices</td>
+<td>2. Yes!many choices</td>
+</tr>
+</tbody></table>
+<p>using the right M is important</p>
+<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><ul>
+<li>Know: $\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot M\cdot exp(-2\epsilon^2N)$</li>
+<li>To do <ul>
+<li>establish a finite quantity that replaces M$\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot m_{\mathscr{H}}\cdot exp(-2\epsilon^2N)$</li>
+<li>justify the feasibility of learning for infinite M</li>
+<li>study $m_{\mathscr{H}} $to understand its trade-off for ‘right’$\mathscr{H}$,just like M</li>
+</ul>
+</li>
+</ul>
+<h1 id="Effective-Number-of-Lines"><a href="#Effective-Number-of-Lines" class="headerlink" title="Effective Number of Lines"></a>Effective Number of Lines</h1><h2 id="Where-Did-M-Come-From"><a href="#Where-Did-M-Come-From" class="headerlink" title="Where Did M Come From"></a>Where Did <em>M</em> Come From</h2><p>The BAD event ：uniform bound fail$\rightarrow$ M$\approx\infty$</p>
+<h2 id="Where-Did-Uniform-Bound-Fail"><a href="#Where-Did-Uniform-Bound-Fail" class="headerlink" title="Where Did Uniform Bound Fail"></a>Where Did Uniform Bound Fail</h2><p>overlapping for similar hypotheses</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190509150052.png"></p>
+<p>union bound over-estimating</p>
+<p><strong>To acoount for overlap,can we group similar hypotheses by kind?</strong></p>
+<h2 id="How-Many-Lines-Are-There"><a href="#How-Many-Lines-Are-There" class="headerlink" title="How Many Lines Are There?"></a>How Many Lines Are There?</h2><p>In 2D,we can get smaller than $2^N$lines</p>
+<h2 id="Effective-Number-of-Lines-1"><a href="#Effective-Number-of-Lines-1" class="headerlink" title="Effective Number of Lines"></a>Effective Number of Lines</h2><p>maximun kind of lines with respect to N inputs $x_1$,$x_2$,…..,$x_N$</p>
+<p>$\iff$==effctive number of lines==</p>
+<p>In 2D,the effective number of lines</p>
+<ul>
+<li><p>must be $\leq 2^N$</p>
+</li>
+<li><p>finite ‘grouping’ of infinitely-many lines $\in H$</p>
+</li>
+<li><p>wish:</p>
+<p>$\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot effctive(N)\cdot exp(-2\epsilon^2N)$</p>
+</li>
+</ul>
+<p>If </p>
+<ol>
+<li><p>effective(N) can replace M and </p>
+</li>
+<li><p>effective(N) $\ll 2^N$</p>
+<p>==learning possible with infinitie lines==</p>
+</li>
+</ol>
+<h1 id="Effective-Number-of-Hypotheses"><a href="#Effective-Number-of-Hypotheses" class="headerlink" title="Effective Number of Hypotheses"></a>Effective Number of Hypotheses</h1><h2 id="Dichotomies-Mini-hypotheses"><a href="#Dichotomies-Mini-hypotheses" class="headerlink" title="Dichotomies:Mini-hypotheses"></a>Dichotomies:Mini-hypotheses</h2><h1 id="Break-Points"><a href="#Break-Points" class="headerlink" title="Break Points"></a>Break Points</h1>]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</title>
     <url>/posts/bc80cb40.html</url>
     <content><![CDATA[<p>An introduction for Machine learning</p>
@@ -169,115 +278,6 @@
 <p>T. M. Cover. Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. IEEE Transactions on Electronic Computers, 14(3):326–334, 1965. (第五到六講：Growth Function)</p>
 <p>B. Zadrozny, J. Langford, N. Abe. Cost sensitive learning by cost-proportionate example weighting. IEEE International Conference on Data Mining, 2003. (第八講：Weighted Classification)</p>
 ]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
-    <url>/posts/4df973c2.html</url>
-    <content><![CDATA[<p><strong>Types of Learning</strong></p>
-<a id="more"></a>
-
-<h1 id="Learning-with-Different-Output-Space"><a href="#Learning-with-Different-Output-Space" class="headerlink" title="Learning with Different Output Space"></a>Learning with Different Output Space</h1><h2 id="Credit-Approval-Problem-Revisited"><a href="#Credit-Approval-Problem-Revisited" class="headerlink" title="Credit Approval Problem Revisited"></a>Credit Approval Problem Revisited</h2><h2 id="More-Binary-Classification-Problems"><a href="#More-Binary-Classification-Problems" class="headerlink" title="More Binary Classification Problems"></a>More Binary Classification Problems</h2><h2 id="Multiclass-Classification-Coin-Recognition-Problem"><a href="#Multiclass-Classification-Coin-Recognition-Problem" class="headerlink" title="Multiclass Classification: Coin Recognition Problem"></a>Multiclass Classification: Coin Recognition Problem</h2><h2 id="Regression-Patient-Recovery-Prediction-Problem"><a href="#Regression-Patient-Recovery-Prediction-Problem" class="headerlink" title="Regression: Patient Recovery Prediction Problem"></a>Regression: Patient Recovery Prediction Problem</h2><h2 id="Structured-Learning-Sequence-Tagging-Problem"><a href="#Structured-Learning-Sequence-Tagging-Problem" class="headerlink" title="Structured Learning: Sequence Tagging Problem"></a>Structured Learning: Sequence Tagging Problem</h2><h1 id="Learning-With-Different-Data-Label"><a href="#Learning-With-Different-Data-Label" class="headerlink" title="Learning With Different Data Label"></a>Learning With Different Data Label</h1><h2 id="Supervised-Coin-Recognition-Revisited"><a href="#Supervised-Coin-Recognition-Revisited" class="headerlink" title="Supervised: Coin Recognition Revisited"></a>Supervised: Coin Recognition Revisited</h2><p>##　Unsupervised: Coin Recognition without $y_n$</p>
-<p>unsupervised multiclass classification $\Leftrightarrow$‘Clustering’:a challenging but useful problem</p>
-<h2 id="Unsupervised-Learning-without-y-n"><a href="#Unsupervised-Learning-without-y-n" class="headerlink" title="Unsupervised: Learning without $y_n$"></a>Unsupervised: Learning without $y_n$</h2><ul>
-<li>Clustering</li>
-<li><a href="https://en.wikipedia.org/wiki/Density_estimation">Density estimation</a></li>
-<li>Outlier Detection</li>
-</ul>
-<h2 id="Semi-supervised-Coin-Recognition-with-Some-y-n"><a href="#Semi-supervised-Coin-Recognition-with-Some-y-n" class="headerlink" title="Semi-supervised:Coin Recognition with Some $y_n$"></a>Semi-supervised:Coin Recognition with Some $y_n$</h2><p>avoid expensive labeling</p>
-<h2 id="Reinforcement-Learning"><a href="#Reinforcement-Learning" class="headerlink" title="Reinforcement Learning"></a>Reinforcement Learning</h2><h1 id="Learning-with-Different-Protocol"><a href="#Learning-with-Different-Protocol" class="headerlink" title="Learning with Different Protocol"></a>Learning with Different Protocol</h1><h2 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h2><p>a very common protocol</p>
-<h2 id="Online-Spam-Filter-that-‘improves’"><a href="#Online-Spam-Filter-that-‘improves’" class="headerlink" title="Online: Spam Filter that ‘improves’"></a>Online: Spam Filter that ‘improves’</h2><h2 id="Active-Learning-Learning-by-‘Asking’"><a href="#Active-Learning-Learning-by-‘Asking’" class="headerlink" title="Active Learning: Learning by ‘Asking’"></a>Active Learning: Learning by ‘Asking’</h2><h1 id="Learning-with-Different-Input-Space"><a href="#Learning-with-Different-Input-Space" class="headerlink" title="Learning with Different Input Space"></a>Learning with Different Input Space</h1><h2 id="Concrete-Features"><a href="#Concrete-Features" class="headerlink" title="Concrete Features"></a>Concrete Features</h2><p>human intelligence</p>
-<h2 id="Raw-Features"><a href="#Raw-Features" class="headerlink" title="Raw Features"></a>Raw Features</h2><p>need human or machines to convert to concrete ones(feature engineering)</p>
-<h2 id="Abstract-Features"><a href="#Abstract-Features" class="headerlink" title="Abstract Features"></a>Abstract Features</h2><p>again need feature conversion/extraction/construction</p>
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
-<li>Learning with Different Output Space:classification,regression,structured</li>
-<li>Learning with Different Data Label$y_n$:supervised,un/semi-supervised,reinforecement</li>
-<li>Learning with Different Protocol:batch,online,active</li>
-<li>Learning with Different Input Space:concrete,raw,abstract</li>
-</ul>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera</title>
-    <url>/posts/fbd0b1b0.html</url>
-    <content><![CDATA[<p><strong>Traning versus Testing</strong></p>
-<p>Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.</p>
-<p>I will update this note if possible.</p>
-<a id="more"></a>
-
-<h1 id="Recap-and-Preview"><a href="#Recap-and-Preview" class="headerlink" title="Recap and Preview"></a>Recap and Preview</h1><h2 id="Recap-The-‘Statistical’-Learning-Flow"><a href="#Recap-The-‘Statistical’-Learning-Flow" class="headerlink" title="Recap: The ‘Statistical’ Learning Flow"></a>Recap: The ‘Statistical’ Learning Flow</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554528606498.png"></p>
-<h2 id="Two-Central-Questions"><a href="#Two-Central-Questions" class="headerlink" title="Two Central Questions"></a>Two Central Questions</h2><p>1. can we make sure that $E_{out}(g)$ is close enough to $E_{in}(g)$?</p>
-<p>2. can we make $E_{in}(g)$ small enough?</p>
-<p>$\Rightarrow$ What role does $\underbrace{M}\{|\mathscr{H}|}$ play for the two questions?</p>
-<p>##　Trade-off on *M</p>
-<table>
-<thead>
-<tr>
-<th>small M</th>
-<th>large M</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1. Yes $\mathbb{P}[BAD]\leq2\cdot M\cdot exp(…)$</td>
-<td>1. No!$\mathbb{P}[BAD]\leq2\cdot M\cdot exp(…)$</td>
-</tr>
-<tr>
-<td>2. $\color{Maroon}No!$,two few choices</td>
-<td>2. Yes!many choices</td>
-</tr>
-</tbody></table>
-<p>using the right M is important</p>
-<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><ul>
-<li>Know: $\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot M\cdot exp(-2\epsilon^2N)$</li>
-<li>To do <ul>
-<li>establish a finite quantity that replaces M$\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot m_{\mathscr{H}}\cdot exp(-2\epsilon^2N)$</li>
-<li>justify the feasibility of learning for infinite M</li>
-<li>study $m_{\mathscr{H}} $to understand its trade-off for ‘right’$\mathscr{H}$,just like M</li>
-</ul>
-</li>
-</ul>
-<h1 id="Effective-Number-of-Lines"><a href="#Effective-Number-of-Lines" class="headerlink" title="Effective Number of Lines"></a>Effective Number of Lines</h1><h2 id="Where-Did-M-Come-From"><a href="#Where-Did-M-Come-From" class="headerlink" title="Where Did M Come From"></a>Where Did <em>M</em> Come From</h2><p>The BAD event ：uniform bound fail$\rightarrow$ M$\approx\infty$</p>
-<h2 id="Where-Did-Uniform-Bound-Fail"><a href="#Where-Did-Uniform-Bound-Fail" class="headerlink" title="Where Did Uniform Bound Fail"></a>Where Did Uniform Bound Fail</h2><p>overlapping for similar hypotheses</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190509150052.png"></p>
-<p>union bound over-estimating</p>
-<p><strong>To acoount for overlap,can we group similar hypotheses by kind?</strong></p>
-<h2 id="How-Many-Lines-Are-There"><a href="#How-Many-Lines-Are-There" class="headerlink" title="How Many Lines Are There?"></a>How Many Lines Are There?</h2><p>In 2D,we can get smaller than $2^N$lines</p>
-<h2 id="Effective-Number-of-Lines-1"><a href="#Effective-Number-of-Lines-1" class="headerlink" title="Effective Number of Lines"></a>Effective Number of Lines</h2><p>maximun kind of lines with respect to N inputs $x_1$,$x_2$,…..,$x_N$</p>
-<p>$\iff$==effctive number of lines==</p>
-<p>In 2D,the effective number of lines</p>
-<ul>
-<li><p>must be $\leq 2^N$</p>
-</li>
-<li><p>finite ‘grouping’ of infinitely-many lines $\in H$</p>
-</li>
-<li><p>wish:</p>
-<p>$\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot effctive(N)\cdot exp(-2\epsilon^2N)$</p>
-</li>
-</ul>
-<p>If </p>
-<ol>
-<li><p>effective(N) can replace M and </p>
-</li>
-<li><p>effective(N) $\ll 2^N$</p>
-<p>==learning possible with infinitie lines==</p>
-</li>
-</ol>
-<h1 id="Effective-Number-of-Hypotheses"><a href="#Effective-Number-of-Hypotheses" class="headerlink" title="Effective Number of Hypotheses"></a>Effective Number of Hypotheses</h1><h2 id="Dichotomies-Mini-hypotheses"><a href="#Dichotomies-Mini-hypotheses" class="headerlink" title="Dichotomies:Mini-hypotheses"></a>Dichotomies:Mini-hypotheses</h2><h1 id="Break-Points"><a href="#Break-Points" class="headerlink" title="Break Points"></a>Break Points</h1>]]></content>
       <categories>
         <category>学习笔记</category>
       </categories>
@@ -642,28 +642,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Tutorial for handling MODIS ocean color data</title>
-    <url>/posts/ef746e52.html</url>
-    <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
-<ol>
-<li>Using python to analyse MODIS ocean color data</li>
-<li>Installation and application of SeaDA  OCSSW</li>
-</ol>
-<a id="more"></a>
-
-<h1 id="Using-python-to-analyse-modis-ocean-color-data"><a href="#Using-python-to-analyse-modis-ocean-color-data" class="headerlink" title="Using python to analyse modis ocean color data"></a>Using python to analyse modis ocean color data</h1><h2 id="Package-and-working-environment"><a href="#Package-and-working-environment" class="headerlink" title="Package and working environment"></a>Package and working environment</h2><p>This this the first difficult thing for a rookie.</p>
-<h3 id="Anaconda-amp-Pycharm"><a href="#Anaconda-amp-Pycharm" class="headerlink" title="Anaconda &amp; Pycharm"></a>Anaconda &amp; Pycharm</h3><p>Anaconda contains most of the package</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Research</tag>
-        <tag>Ocean Color</tag>
-        <tag>Oceanography</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于</title>
     <url>/posts/3b4b656d.html</url>
     <content><![CDATA[<blockquote>
@@ -725,6 +703,28 @@
         <tag>Oceanography</tag>
         <tag>bookreading</tag>
         <tag>Seminar</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tutorial for handling MODIS ocean color data</title>
+    <url>/posts/ef746e52.html</url>
+    <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
+<ol>
+<li>Using python to analyse MODIS ocean color data</li>
+<li>Installation and application of SeaDA  OCSSW</li>
+</ol>
+<a id="more"></a>
+
+<h1 id="Using-python-to-analyse-modis-ocean-color-data"><a href="#Using-python-to-analyse-modis-ocean-color-data" class="headerlink" title="Using python to analyse modis ocean color data"></a>Using python to analyse modis ocean color data</h1><h2 id="Package-and-working-environment"><a href="#Package-and-working-environment" class="headerlink" title="Package and working environment"></a>Package and working environment</h2><p>This this the first difficult thing for a rookie.</p>
+<h3 id="Anaconda-amp-Pycharm"><a href="#Anaconda-amp-Pycharm" class="headerlink" title="Anaconda &amp; Pycharm"></a>Anaconda &amp; Pycharm</h3><p>Anaconda contains most of the package</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>Ocean Color</tag>
+        <tag>Oceanography</tag>
       </tags>
   </entry>
   <entry>
@@ -909,6 +909,28 @@
       </tags>
   </entry>
   <entry>
+    <title>cartopy</title>
+    <url>/posts/c6b8edee.html</url>
+    <content><![CDATA[<p>Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。</p>
+<p>先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。</p>
+<a id="more"></a>
+
+<h1 id="代码范例"><a href="#代码范例" class="headerlink" title="代码范例"></a>代码范例</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> netCDF4 <span class="keyword">as</span> nc</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> cartopy.crs <span class="keyword">as</span> ccrs</span><br><span class="line"><span class="keyword">import</span> cartopy.feature <span class="keyword">as</span> cfeature</span><br><span class="line"><span class="keyword">from</span> cartopy.mpl.gridliner <span class="keyword">import</span> LONGITUDE_FORMATTER, LATITUDE_FORMATTER</span><br><span class="line">file=<span class="string">r&#x27;I:\Nagoya University\Project\Seto\MODIS\20100608T04.nc&#x27;</span></span><br><span class="line">nc=nc.Dataset(file,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">lon=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;longitude&#x27;</span>][:]</span><br><span class="line">lat=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;latitude&#x27;</span>][:]</span><br><span class="line">variables=nc.groups[<span class="string">&#x27;geophysical_data&#x27;</span>].variables</span><br><span class="line">chl=variables[<span class="string">&#x27;chlor_a&#x27;</span>]</span><br><span class="line">minlat = <span class="number">32.5</span></span><br><span class="line">minlon = <span class="number">130.5</span></span><br><span class="line">maxlat = <span class="number">35</span></span><br><span class="line">maxlon = <span class="number">136</span></span><br><span class="line">f = plt.figure(figsize=(<span class="number">20</span>, <span class="number">20</span>), dpi=<span class="number">300</span>)</span><br><span class="line">m = plt.axes(projection=ccrs.PlateCarree(central_longitude=<span class="number">0.0</span>))</span><br><span class="line">f = plt.pcolormesh(lon, lat,chl, shading=<span class="string">&#x27;flat&#x27;</span>, vmin=np.log10(<span class="number">0.01</span>), vmax=np.log10(<span class="number">50</span>), cmap=plt.cm.viridis)</span><br><span class="line">m.coastlines(resolution=<span class="string">&#x27;10m&#x27;</span>, color=<span class="string">&#x27;black&#x27;</span>, linewidth=<span class="number">1</span>)</span><br><span class="line">extent=[<span class="number">130.5</span>,<span class="number">136</span>,<span class="number">32</span>,<span class="number">35</span>]</span><br><span class="line">m.set_extent(extent)</span><br><span class="line">m.add_feature(cfeature.RIVERS)</span><br><span class="line">m.add_feature(cfeature.COASTLINE.with_scale(<span class="string">&#x27;10m&#x27;</span>))</span><br><span class="line">m.add_feature(cfeature.LAND.with_scale(<span class="string">&#x27;10m&#x27;</span>), facecolor=<span class="string">&#x27;0.75&#x27;</span>)</span><br><span class="line"></span><br><span class="line">g1 = m.gridlines(draw_labels = <span class="literal">True</span>)</span><br><span class="line">g1.xlabels_top = <span class="literal">False</span></span><br><span class="line">g1.xlabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.ylabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.xformatter = LONGITUDE_FORMATTER</span><br><span class="line">g1.yformatter = LATITUDE_FORMATTER</span><br><span class="line">cbar = plt.colorbar(f, orientation=<span class="string">&quot;horizontal&quot;</span>, fraction=<span class="number">0.05</span>, pad=<span class="number">0.07</span>, ticks=[np.log10(<span class="number">0.01</span>), np.log10(<span class="number">0.1</span>),np.log10(<span class="number">0.5</span>), np.log10(<span class="number">1</span>),np.log10(<span class="number">3</span>),np.log10(<span class="number">10</span>),np.log10(<span class="number">50</span>)]) </span><br><span class="line">cbar.ax.set_xticklabels([<span class="string">&#x27;0.01&#x27;</span>,<span class="string">&#x27;0.1&#x27;</span>,<span class="string">&#x27;0.5&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;50&#x27;</span>], fontsize=<span class="number">20</span>) </span><br><span class="line">cbar.set_label(<span class="string">&#x27;Chlorophyll, mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;MODIS [Chl a] mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>相比basemap这个方便很多，但是分辨率还是有一点问题。</p>
+<h1 id="一些参考资料"><a href="#一些参考资料" class="headerlink" title="一些参考资料"></a>一些参考资料</h1><p><a href="https://zhajiman.github.io/post/cartopy_introduction/">https://zhajiman.github.io/post/cartopy_introduction/</a></p>
+<p><a href="https://scitools.org.uk/cartopy/docs/latest/index.html">https://scitools.org.uk/cartopy/docs/latest/index.html</a></p>
+<p><a href="https://www.net-analysis.com/blog/cartopylayout.html">https://www.net-analysis.com/blog/cartopylayout.html</a></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello Gridea</title>
     <url>/posts/6143bcfc.html</url>
     <content><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意… … </p>
@@ -932,28 +954,6 @@
 ]]></content>
       <tags>
         <tag>Gridea</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cartopy</title>
-    <url>/posts/c6b8edee.html</url>
-    <content><![CDATA[<p>Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。</p>
-<p>先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。</p>
-<a id="more"></a>
-
-<h1 id="代码范例"><a href="#代码范例" class="headerlink" title="代码范例"></a>代码范例</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> netCDF4 <span class="keyword">as</span> nc</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> cartopy.crs <span class="keyword">as</span> ccrs</span><br><span class="line"><span class="keyword">import</span> cartopy.feature <span class="keyword">as</span> cfeature</span><br><span class="line"><span class="keyword">from</span> cartopy.mpl.gridliner <span class="keyword">import</span> LONGITUDE_FORMATTER, LATITUDE_FORMATTER</span><br><span class="line">file=<span class="string">r&#x27;I:\Nagoya University\Project\Seto\MODIS\20100608T04.nc&#x27;</span></span><br><span class="line">nc=nc.Dataset(file,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">lon=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;longitude&#x27;</span>][:]</span><br><span class="line">lat=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;latitude&#x27;</span>][:]</span><br><span class="line">variables=nc.groups[<span class="string">&#x27;geophysical_data&#x27;</span>].variables</span><br><span class="line">chl=variables[<span class="string">&#x27;chlor_a&#x27;</span>]</span><br><span class="line">minlat = <span class="number">32.5</span></span><br><span class="line">minlon = <span class="number">130.5</span></span><br><span class="line">maxlat = <span class="number">35</span></span><br><span class="line">maxlon = <span class="number">136</span></span><br><span class="line">f = plt.figure(figsize=(<span class="number">20</span>, <span class="number">20</span>), dpi=<span class="number">300</span>)</span><br><span class="line">m = plt.axes(projection=ccrs.PlateCarree(central_longitude=<span class="number">0.0</span>))</span><br><span class="line">f = plt.pcolormesh(lon, lat,chl, shading=<span class="string">&#x27;flat&#x27;</span>, vmin=np.log10(<span class="number">0.01</span>), vmax=np.log10(<span class="number">50</span>), cmap=plt.cm.viridis)</span><br><span class="line">m.coastlines(resolution=<span class="string">&#x27;10m&#x27;</span>, color=<span class="string">&#x27;black&#x27;</span>, linewidth=<span class="number">1</span>)</span><br><span class="line">extent=[<span class="number">130.5</span>,<span class="number">136</span>,<span class="number">32</span>,<span class="number">35</span>]</span><br><span class="line">m.set_extent(extent)</span><br><span class="line">m.add_feature(cfeature.RIVERS)</span><br><span class="line">m.add_feature(cfeature.COASTLINE.with_scale(<span class="string">&#x27;10m&#x27;</span>))</span><br><span class="line">m.add_feature(cfeature.LAND.with_scale(<span class="string">&#x27;10m&#x27;</span>), facecolor=<span class="string">&#x27;0.75&#x27;</span>)</span><br><span class="line"></span><br><span class="line">g1 = m.gridlines(draw_labels = <span class="literal">True</span>)</span><br><span class="line">g1.xlabels_top = <span class="literal">False</span></span><br><span class="line">g1.xlabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.ylabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.xformatter = LONGITUDE_FORMATTER</span><br><span class="line">g1.yformatter = LATITUDE_FORMATTER</span><br><span class="line">cbar = plt.colorbar(f, orientation=<span class="string">&quot;horizontal&quot;</span>, fraction=<span class="number">0.05</span>, pad=<span class="number">0.07</span>, ticks=[np.log10(<span class="number">0.01</span>), np.log10(<span class="number">0.1</span>),np.log10(<span class="number">0.5</span>), np.log10(<span class="number">1</span>),np.log10(<span class="number">3</span>),np.log10(<span class="number">10</span>),np.log10(<span class="number">50</span>)]) </span><br><span class="line">cbar.ax.set_xticklabels([<span class="string">&#x27;0.01&#x27;</span>,<span class="string">&#x27;0.1&#x27;</span>,<span class="string">&#x27;0.5&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;50&#x27;</span>], fontsize=<span class="number">20</span>) </span><br><span class="line">cbar.set_label(<span class="string">&#x27;Chlorophyll, mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;MODIS [Chl a] mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>相比basemap这个方便很多，但是分辨率还是有一点问题。</p>
-<h1 id="一些参考资料"><a href="#一些参考资料" class="headerlink" title="一些参考资料"></a>一些参考资料</h1><p><a href="https://zhajiman.github.io/post/cartopy_introduction/">https://zhajiman.github.io/post/cartopy_introduction/</a></p>
-<p><a href="https://scitools.org.uk/cartopy/docs/latest/index.html">https://scitools.org.uk/cartopy/docs/latest/index.html</a></p>
-<p><a href="https://www.net-analysis.com/blog/cartopylayout.html">https://www.net-analysis.com/blog/cartopylayout.html</a></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Research</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -2024,35 +2024,6 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
-    <title>硕士一年</title>
-    <url>/posts/577f7527.html</url>
-    <content><![CDATA[<p>终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。</p>
-<a id="more"></a>
-
-<h1 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h1><p>其实自己本来是想把这个博客替代成微信公众号，所以早期的一些文章都是一些个人想法和乱七八糟的文章，后来在《数字图像处理》的时候查到了这个大佬的<a href="https://baidut.github.io/about/">博客</a>，才有了把自己的博客改编成自己的简历的想法。</p>
-<p>前几天在想有没有about页面的的模版，搜了搜发现了这个hugo<a href="https://themes.gohugo.io/academic/">主题</a>，花了两三天的时间迁移了过去，然后发现这个主题并不合适我这种经常写自己的想法笔记的人，更适合那种专门的学术主页，所以就又迁移回来了。</p>
-<h1 id="关于硕士"><a href="#关于硕士" class="headerlink" title="关于硕士"></a>关于硕士</h1><p>自己的硕士一年级就这么过去了，回想起来我过去这一年的好多事情，都让我尴尬到脚趾抠出来一个阿房宫，自己在这里第一年搞了好多笑话。</p>
-<p>因为自己性格的原因，自己的日语并没有得到很好的进步，在这里呆一年，并没有像刚进大学的自己一样，像一只饥饿的狼。</p>
-<p>自己在这里一年，做出来的东西，感觉真的就只有半年的量，一年前拿到的很多关于学术写作演讲发表和海洋光学海洋遥感水色遥感的资料，到现在也就学习了20%。</p>
-<p>其实很多东西真的一点都不难，就是自己很难静下心来去思考。</p>
-<p>自己真的太心急了，急于求成追求短平快，就比如现在写个总结，还想着赶紧写完。</p>
-<h1 id="关于精力"><a href="#关于精力" class="headerlink" title="关于精力"></a>关于精力</h1><p>自己这一年最大的一个感受就是好多时候精力和体力明显跟不上，比如最近这几天吃完饭就忍不住的犯困一睡俩小时，比如看一会论文写一会代码就觉得累，比如早上起不来，比如很难集中精力。看看老板六十多还健步如飞似少年自己是真的羡慕。身体素质真的肉眼可见的退化。</p>
-<p>一些不好的习惯是真的需要改了。</p>
-<h1 id="关于未来"><a href="#关于未来" class="headerlink" title="关于未来"></a>关于未来</h1><p>其实到现在我还对未来要做什么很不确定，尤其是最近这个国际环境动荡的情况下。</p>
-<p>但是最近慢慢地越来越感觉自己就是太不能吃苦了，自己每天养尊处优，不经风吹日晒，还喊着累。</p>
-<h1 id="第二年"><a href="#第二年" class="headerlink" title="第二年"></a>第二年</h1><p>希望明年这个时候，不管我做了什么选择，都能问心无愧的说，自己这个第二年，做到了自己能做的所有事情。</p>
-<p>静下心来，认认真真去学习，不要怕前路未卜。</p>
-<p>分携如昨。人生到处萍飘泊。偶然相聚还离索。多病多愁，须信从来错。尊前一笑休辞却。天涯同是伤沦落。故山犹负平生约。西望峨嵋，长羡归飞鹤。</p>
-]]></content>
-      <categories>
-        <category>学习经验</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>随便写写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>狼总访谈</title>
     <url>/posts/6ff151e3.html</url>
     <content><![CDATA[<p>最近看到杨振宁在国科大的访谈上说“一个年轻的研究生最重要的一件事情是什么？其实不是你学到哪些技术，而是要使你自己走进未来五年、十年有大发展机会的领域，这才是你做研究生时所要达到的目标”，想起来自己大一找狼总访谈时，狼总说自己做出退博的一个重要原因就是能看到教培行业存在的问题，并且知道自己能够解决这个问题。</p>
@@ -2117,50 +2088,32 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
-    <title>经验贴（三）申请流程及准备</title>
-    <url>/posts/751458a5.html</url>
-    <content><![CDATA[<p>拖更了这么久主要是不知道下一步该说什么，索性以我去年的整个申请节点来写。这里以2020年申请的为例，方便对照。另外我这里给出的只是一个理想情况，实际可以根据自身情况调整。</p>
+    <title>硕士一年</title>
+    <url>/posts/577f7527.html</url>
+    <content><![CDATA[<p>终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。</p>
 <a id="more"></a>
 
-<h1 id="材料准备"><a href="#材料准备" class="headerlink" title="材料准备"></a>材料准备</h1><p>关于怎么写材料，知乎和寄托很多帖子写的很好，请自行搜集和学习。</p>
-<h2 id="招生指南"><a href="#招生指南" class="headerlink" title="招生指南"></a>招生指南</h2><p>这一点对于申请G30/SGU的学生来说尤为重要，因为G30只能在一小部分教授里面申请，这个名单会随着招生指南一起发布。提前搜集了招生指南的话，陶瓷的时候不至于是无头苍蝇。</p>
-<p>如果要申请2020年10月入学的话，2019年11月份就可以去院校官网搜集指南了，同时自2020年3月起，可以去寄托论坛关注offer情况，看看有没有申请你想去的项目的学长学姐。</p>
-<h2 id="语言成绩"><a href="#语言成绩" class="headerlink" title="语言成绩"></a>语言成绩</h2><h3 id="日语"><a href="#日语" class="headerlink" title="日语"></a>日语</h3><p>申请G30/SGU是不需要日语的，虽然你可以交这个材料。至于这个材料究竟占多大分量，笔者到现在也不是很明确。如果能考出来就考，考不出来也不必太过担心。</p>
-<p>申请研究生可以不用日语，只用英语，但是用日语可以扩大你申请老师的范围。理工科的话，一般N2就足够了，文科可能会有一些实地调查的项目所以要N1。至于自己想申请的老师对日语究竟有没有要求，可以从老师实验室组成人员上来看。如果老师实验室里留学生比较多，一般不需要日语也可以申请；如果老师实验室里留学生较少甚至没有留学生，那一般就一定要日语了。至于这项考试的时间节点，如果你申请的老师对日语有要求的话，我推荐在19年7月考过Ｎ2。在后面和老师套瓷用日语交流的时候，老师也可以判断出你的日语水平。</p>
-<h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>在我申请时查阅的学校（七帝大+东工大），都是可以用雅思的，但是我个人比较推荐考托福。托福的分数在日本知名度比较高，不仅留学，日后如果进入对英语有要求的企业时也可以使用。最迟要在2019年10月份考出来。至于成绩，如果你想申请东大、京大的G30/SGU，托福100+甚至105+才算一个比较有竞争力的分数；申请其他学校的G30/SGU一般95+就够用了；申请研究生的话，90+就可以，不过我也推荐考到95+。值得一提的是，托福成绩可以在修士入学考试中折换成英语考试的成绩，我见到的一个说法是托福100对应修士入学考试的英语满分，在这之下的对应换算过去，不知道是不是真的。另外，我没有见过学校对小分有要求。</p>
-<p>另外，如果你考的是雅思，请注意不能选择电子寄送成绩单。</p>
-<h3 id="GRE-GMAT"><a href="#GRE-GMAT" class="headerlink" title="GRE/GMAT"></a>GRE/GMAT</h3><p>这个只有在申请G30/SGU的时候才用到，如果申请东大、京大，即使有的项目是非必需材料，我也推荐考出来。至于分数要求、科目和节点，请参照往年的申请指南。</p>
-<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><p>这个我只在京都大学AAO的时候用到过。所以更具体的我想放到AAO的时候在讲。大阪大学也有类似的预审核制度，但是我没有申请大阪大学，因此对大阪大学的龙门制度并不是很了解，就不再介绍了。</p>
-<h2 id="研究计划书"><a href="#研究计划书" class="headerlink" title="研究计划书"></a>研究计划书</h2><p>一般来说，你第一封套辞信发过去之后，导师如果对你感兴趣就会接着回复问你的研究计划书是什么，因此最好在套辞前准备好。申请研究生的话，研究计划书不用特别详细，一张A4纸就好；G30/SGU最好发一个比较完善的版本。</p>
-<p>我觉得日本老师是不见兔子不撒鹰，如果你非常想申请的老师不回复你邮件的话，很有可能是因为他没看到你的研究计划书。我就遭遇到了这样的情况，在我把研究计划书发过去之后老师才回复我并且说“直到现在我才看到你申请的决心”。</p>
-<h2 id="成绩单、推荐信、简历、Summary-of-Thesis"><a href="#成绩单、推荐信、简历、Summary-of-Thesis" class="headerlink" title="成绩单、推荐信、简历、Summary of  Thesis"></a>成绩单、推荐信、简历、Summary of  Thesis</h2><p>和研究计划书一样，老师对你感兴趣的话在回复你第一封陶瓷信的时候就会问你要这些，因此最好在套辞前准备好。第一封套辞信可不放简历。</p>
-<h2 id="在读证明、毕业证明、护照"><a href="#在读证明、毕业证明、护照" class="headerlink" title="在读证明、毕业证明、护照"></a>在读证明、毕业证明、护照</h2><p>如果是申请Ｇ30/SGU的话，这些在申请指南上都有写，按照指南来准备就好；研究生可以等2020年开学在办。</p>
-<h1 id="时间流程"><a href="#时间流程" class="headerlink" title="时间流程"></a>时间流程</h1><p>这里所介绍的时间流程全是研究生的，G30/SGU由于不同学校差别过大（例如九大有的19年10月入学的项目19年3月才开始申请），请按照招生指南上所说的自行安排。</p>
-<h2 id="套辞"><a href="#套辞" class="headerlink" title="套辞"></a>套辞</h2><h3 id="时间安排"><a href="#时间安排" class="headerlink" title="时间安排"></a>时间安排</h3><p>在2019年八九月份就可以开始套辞了，之前可以选择导师。<br>最迟也一定要在2019年12月份套辞，2020年1月份开始，大部分导师的研究生名额都已经被申请完了。</p>
-<h3 id="导师搜索及选择"><a href="#导师搜索及选择" class="headerlink" title="导师搜索及选择"></a>导师搜索及选择</h3><p>我这里以东大为例来讲一下导师搜索和选择的整个流程。</p>
-<h4 id="导师搜索"><a href="#导师搜索" class="headerlink" title="导师搜索"></a>导师搜索</h4><p>打开东京大学主页，这里有一个“教员检索”</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/jingyantie3fi.png"></p>
-<p>点进去，在检索这一栏里输入你读研时想做的<strong>研究的关键词</strong>,例如“phytoplankton”,“machine learning”,“image process”，不要写太宽泛的单词；如果没有的话就减少关键词的数量。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/e3f2.png"></p>
-<p>出来结果之后就可以查看导师具体信息了，一般情况下只有Professor和Associate Professor有招生资格。</p>
-<p>其他学校大同小异。</p>
-<h4 id="导师选择"><a href="#导师选择" class="headerlink" title="导师选择"></a>导师选择</h4><h5 id="对中国人的友好程度"><a href="#对中国人的友好程度" class="headerlink" title="对中国人的友好程度"></a>对中国人的友好程度</h5><p>确定好导师之后，找到他的实验室主页，看一下学生组成和往届学生，一般可以分为以下几种情况：</p>
-<p>1. 学生全是日本人。这种导师可能是名气比较小或者只是没有开始收中国人而已，可以试试申请。</p>
-<p>2. 有外国人，但是没有一个中国人。这种老师可能就对中国人有偏见，不建议申请。毕竟中国人那么多，如果能申请进去的话不早就进去了。</p>
-<p>3.  有中国人。这种导师一般对中国人比较友好，可以尝试联系一下组里中国人查看情况。</p>
-<h5 id="学术水平"><a href="#学术水平" class="headerlink" title="学术水平"></a>学术水平</h5><p>最直观的可以通过Google scholar的H-index看出来，但是出于某些原因，不是特别方便。这里推荐另外两个网站，<a href="https://www.researchgate.net/">research gate</a>和<a href="https://www.scopus.com/freelookup/form/author.uri?zone=&origin=NO%20ORIGIN%20DEFINED">scopus</a>。后者比前者要更全。这两个网站上都有计算的一些学术评价指数，根据这个来判断就好。但是要注意，不同学科之间的指数差距比较大，如果你申请的老师中有不在同一个大方向的，这个指数并不能反映出老师的相对水平。</p>
-<h5 id="毕业生去向"><a href="#毕业生去向" class="headerlink" title="毕业生去向"></a>毕业生去向</h5><p>这个一般在导师实验室网站上都会放出来，如果没放出来，抱歉，我也不知道了。</p>
-<h5 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h5><p>有很多学校都是有分校区的，例如东大。东大海洋与大气研究中心的老师实验室我印象中都设立在千叶柏市，而不在东京。同时可以用谷歌地图查一下坐电车花费的时间，这个在你想出去玩或者求职的时候还是挺重要的。</p>
-<p>除此之外，可以通过Dark sky map这个APP 的夜光指数来看你的实验室在不在市中心。但是说实话，除了东京和大阪，日本的其他地方都可以看成村。</p>
-<h2 id="入学手续"><a href="#入学手续" class="headerlink" title="入学手续"></a>入学手续</h2><p>套辞成功叫拿到内诺，内诺之后就要申请入学了，拿到小蜜给你发过来的研究生的入学通知才叫offer。这个申请只是走过场，一般在2020年四月开始，三月就可以去学校官网查看申请的指南了。由于我还没到这一步，略去不表。</p>
-<h1 id="关于AAO的小尾巴"><a href="#关于AAO的小尾巴" class="headerlink" title="关于AAO的小尾巴"></a>关于AAO的小尾巴</h1><p>在这里就不介绍AAO是什么了，我个人推荐9月份最迟十月份提交AAO，AAO可能会需要一个月的时间。同时因为AAO只有一次机会,如果失败了只能通过直接考试的方法进入京大，因此在进行AAO之前最好能先得到你想申请的导师的回复。</p>
+<h1 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h1><p>其实自己本来是想把这个博客替代成微信公众号，所以早期的一些文章都是一些个人想法和乱七八糟的文章，后来在《数字图像处理》的时候查到了这个大佬的<a href="https://baidut.github.io/about/">博客</a>，才有了把自己的博客改编成自己的简历的想法。</p>
+<p>前几天在想有没有about页面的的模版，搜了搜发现了这个hugo<a href="https://themes.gohugo.io/academic/">主题</a>，花了两三天的时间迁移了过去，然后发现这个主题并不合适我这种经常写自己的想法笔记的人，更适合那种专门的学术主页，所以就又迁移回来了。</p>
+<h1 id="关于硕士"><a href="#关于硕士" class="headerlink" title="关于硕士"></a>关于硕士</h1><p>自己的硕士一年级就这么过去了，回想起来我过去这一年的好多事情，都让我尴尬到脚趾抠出来一个阿房宫，自己在这里第一年搞了好多笑话。</p>
+<p>因为自己性格的原因，自己的日语并没有得到很好的进步，在这里呆一年，并没有像刚进大学的自己一样，像一只饥饿的狼。</p>
+<p>自己在这里一年，做出来的东西，感觉真的就只有半年的量，一年前拿到的很多关于学术写作演讲发表和海洋光学海洋遥感水色遥感的资料，到现在也就学习了20%。</p>
+<p>其实很多东西真的一点都不难，就是自己很难静下心来去思考。</p>
+<p>自己真的太心急了，急于求成追求短平快，就比如现在写个总结，还想着赶紧写完。</p>
+<h1 id="关于精力"><a href="#关于精力" class="headerlink" title="关于精力"></a>关于精力</h1><p>自己这一年最大的一个感受就是好多时候精力和体力明显跟不上，比如最近这几天吃完饭就忍不住的犯困一睡俩小时，比如看一会论文写一会代码就觉得累，比如早上起不来，比如很难集中精力。看看老板六十多还健步如飞似少年自己是真的羡慕。身体素质真的肉眼可见的退化。</p>
+<p>一些不好的习惯是真的需要改了。</p>
+<h1 id="关于未来"><a href="#关于未来" class="headerlink" title="关于未来"></a>关于未来</h1><p>其实到现在我还对未来要做什么很不确定，尤其是最近这个国际环境动荡的情况下。</p>
+<p>但是最近慢慢地越来越感觉自己就是太不能吃苦了，自己每天养尊处优，不经风吹日晒，还喊着累。</p>
+<h1 id="第二年"><a href="#第二年" class="headerlink" title="第二年"></a>第二年</h1><p>希望明年这个时候，不管我做了什么选择，都能问心无愧的说，自己这个第二年，做到了自己能做的所有事情。</p>
+<p>静下心来，认认真真去学习，不要怕前路未卜。</p>
+<p>分携如昨。人生到处萍飘泊。偶然相聚还离索。多病多愁，须信从来错。尊前一笑休辞却。天涯同是伤沦落。故山犹负平生约。西望峨嵋，长羡归飞鹤。</p>
 ]]></content>
       <categories>
-        <category>留学生活</category>
+        <category>学习经验</category>
       </categories>
       <tags>
-        <tag>留学</tag>
-        <tag>日本</tag>
+        <tag>总结</tag>
+        <tag>随便写写</tag>
       </tags>
   </entry>
   <entry>
@@ -2205,6 +2158,53 @@ tags: [标签1,标签2,标签3]
 <p>5. 申请材料不向你公开</p>
 <p>6. 申请到奖学金额外收钱，申请到好大学额外收钱</p>
 <p>7. 霸王条款，无明确退款政策</p>
+]]></content>
+      <categories>
+        <category>留学生活</category>
+      </categories>
+      <tags>
+        <tag>留学</tag>
+        <tag>日本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>经验贴（三）申请流程及准备</title>
+    <url>/posts/751458a5.html</url>
+    <content><![CDATA[<p>拖更了这么久主要是不知道下一步该说什么，索性以我去年的整个申请节点来写。这里以2020年申请的为例，方便对照。另外我这里给出的只是一个理想情况，实际可以根据自身情况调整。</p>
+<a id="more"></a>
+
+<h1 id="材料准备"><a href="#材料准备" class="headerlink" title="材料准备"></a>材料准备</h1><p>关于怎么写材料，知乎和寄托很多帖子写的很好，请自行搜集和学习。</p>
+<h2 id="招生指南"><a href="#招生指南" class="headerlink" title="招生指南"></a>招生指南</h2><p>这一点对于申请G30/SGU的学生来说尤为重要，因为G30只能在一小部分教授里面申请，这个名单会随着招生指南一起发布。提前搜集了招生指南的话，陶瓷的时候不至于是无头苍蝇。</p>
+<p>如果要申请2020年10月入学的话，2019年11月份就可以去院校官网搜集指南了，同时自2020年3月起，可以去寄托论坛关注offer情况，看看有没有申请你想去的项目的学长学姐。</p>
+<h2 id="语言成绩"><a href="#语言成绩" class="headerlink" title="语言成绩"></a>语言成绩</h2><h3 id="日语"><a href="#日语" class="headerlink" title="日语"></a>日语</h3><p>申请G30/SGU是不需要日语的，虽然你可以交这个材料。至于这个材料究竟占多大分量，笔者到现在也不是很明确。如果能考出来就考，考不出来也不必太过担心。</p>
+<p>申请研究生可以不用日语，只用英语，但是用日语可以扩大你申请老师的范围。理工科的话，一般N2就足够了，文科可能会有一些实地调查的项目所以要N1。至于自己想申请的老师对日语究竟有没有要求，可以从老师实验室组成人员上来看。如果老师实验室里留学生比较多，一般不需要日语也可以申请；如果老师实验室里留学生较少甚至没有留学生，那一般就一定要日语了。至于这项考试的时间节点，如果你申请的老师对日语有要求的话，我推荐在19年7月考过Ｎ2。在后面和老师套瓷用日语交流的时候，老师也可以判断出你的日语水平。</p>
+<h3 id="英语"><a href="#英语" class="headerlink" title="英语"></a>英语</h3><p>在我申请时查阅的学校（七帝大+东工大），都是可以用雅思的，但是我个人比较推荐考托福。托福的分数在日本知名度比较高，不仅留学，日后如果进入对英语有要求的企业时也可以使用。最迟要在2019年10月份考出来。至于成绩，如果你想申请东大、京大的G30/SGU，托福100+甚至105+才算一个比较有竞争力的分数；申请其他学校的G30/SGU一般95+就够用了；申请研究生的话，90+就可以，不过我也推荐考到95+。值得一提的是，托福成绩可以在修士入学考试中折换成英语考试的成绩，我见到的一个说法是托福100对应修士入学考试的英语满分，在这之下的对应换算过去，不知道是不是真的。另外，我没有见过学校对小分有要求。</p>
+<p>另外，如果你考的是雅思，请注意不能选择电子寄送成绩单。</p>
+<h3 id="GRE-GMAT"><a href="#GRE-GMAT" class="headerlink" title="GRE/GMAT"></a>GRE/GMAT</h3><p>这个只有在申请G30/SGU的时候才用到，如果申请东大、京大，即使有的项目是非必需材料，我也推荐考出来。至于分数要求、科目和节点，请参照往年的申请指南。</p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><p>这个我只在京都大学AAO的时候用到过。所以更具体的我想放到AAO的时候在讲。大阪大学也有类似的预审核制度，但是我没有申请大阪大学，因此对大阪大学的龙门制度并不是很了解，就不再介绍了。</p>
+<h2 id="研究计划书"><a href="#研究计划书" class="headerlink" title="研究计划书"></a>研究计划书</h2><p>一般来说，你第一封套辞信发过去之后，导师如果对你感兴趣就会接着回复问你的研究计划书是什么，因此最好在套辞前准备好。申请研究生的话，研究计划书不用特别详细，一张A4纸就好；G30/SGU最好发一个比较完善的版本。</p>
+<p>我觉得日本老师是不见兔子不撒鹰，如果你非常想申请的老师不回复你邮件的话，很有可能是因为他没看到你的研究计划书。我就遭遇到了这样的情况，在我把研究计划书发过去之后老师才回复我并且说“直到现在我才看到你申请的决心”。</p>
+<h2 id="成绩单、推荐信、简历、Summary-of-Thesis"><a href="#成绩单、推荐信、简历、Summary-of-Thesis" class="headerlink" title="成绩单、推荐信、简历、Summary of  Thesis"></a>成绩单、推荐信、简历、Summary of  Thesis</h2><p>和研究计划书一样，老师对你感兴趣的话在回复你第一封陶瓷信的时候就会问你要这些，因此最好在套辞前准备好。第一封套辞信可不放简历。</p>
+<h2 id="在读证明、毕业证明、护照"><a href="#在读证明、毕业证明、护照" class="headerlink" title="在读证明、毕业证明、护照"></a>在读证明、毕业证明、护照</h2><p>如果是申请Ｇ30/SGU的话，这些在申请指南上都有写，按照指南来准备就好；研究生可以等2020年开学在办。</p>
+<h1 id="时间流程"><a href="#时间流程" class="headerlink" title="时间流程"></a>时间流程</h1><p>这里所介绍的时间流程全是研究生的，G30/SGU由于不同学校差别过大（例如九大有的19年10月入学的项目19年3月才开始申请），请按照招生指南上所说的自行安排。</p>
+<h2 id="套辞"><a href="#套辞" class="headerlink" title="套辞"></a>套辞</h2><h3 id="时间安排"><a href="#时间安排" class="headerlink" title="时间安排"></a>时间安排</h3><p>在2019年八九月份就可以开始套辞了，之前可以选择导师。<br>最迟也一定要在2019年12月份套辞，2020年1月份开始，大部分导师的研究生名额都已经被申请完了。</p>
+<h3 id="导师搜索及选择"><a href="#导师搜索及选择" class="headerlink" title="导师搜索及选择"></a>导师搜索及选择</h3><p>我这里以东大为例来讲一下导师搜索和选择的整个流程。</p>
+<h4 id="导师搜索"><a href="#导师搜索" class="headerlink" title="导师搜索"></a>导师搜索</h4><p>打开东京大学主页，这里有一个“教员检索”</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/jingyantie3fi.png"></p>
+<p>点进去，在检索这一栏里输入你读研时想做的<strong>研究的关键词</strong>,例如“phytoplankton”,“machine learning”,“image process”，不要写太宽泛的单词；如果没有的话就减少关键词的数量。</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/e3f2.png"></p>
+<p>出来结果之后就可以查看导师具体信息了，一般情况下只有Professor和Associate Professor有招生资格。</p>
+<p>其他学校大同小异。</p>
+<h4 id="导师选择"><a href="#导师选择" class="headerlink" title="导师选择"></a>导师选择</h4><h5 id="对中国人的友好程度"><a href="#对中国人的友好程度" class="headerlink" title="对中国人的友好程度"></a>对中国人的友好程度</h5><p>确定好导师之后，找到他的实验室主页，看一下学生组成和往届学生，一般可以分为以下几种情况：</p>
+<p>1. 学生全是日本人。这种导师可能是名气比较小或者只是没有开始收中国人而已，可以试试申请。</p>
+<p>2. 有外国人，但是没有一个中国人。这种老师可能就对中国人有偏见，不建议申请。毕竟中国人那么多，如果能申请进去的话不早就进去了。</p>
+<p>3.  有中国人。这种导师一般对中国人比较友好，可以尝试联系一下组里中国人查看情况。</p>
+<h5 id="学术水平"><a href="#学术水平" class="headerlink" title="学术水平"></a>学术水平</h5><p>最直观的可以通过Google scholar的H-index看出来，但是出于某些原因，不是特别方便。这里推荐另外两个网站，<a href="https://www.researchgate.net/">research gate</a>和<a href="https://www.scopus.com/freelookup/form/author.uri?zone=&origin=NO%20ORIGIN%20DEFINED">scopus</a>。后者比前者要更全。这两个网站上都有计算的一些学术评价指数，根据这个来判断就好。但是要注意，不同学科之间的指数差距比较大，如果你申请的老师中有不在同一个大方向的，这个指数并不能反映出老师的相对水平。</p>
+<h5 id="毕业生去向"><a href="#毕业生去向" class="headerlink" title="毕业生去向"></a>毕业生去向</h5><p>这个一般在导师实验室网站上都会放出来，如果没放出来，抱歉，我也不知道了。</p>
+<h5 id="地理位置"><a href="#地理位置" class="headerlink" title="地理位置"></a>地理位置</h5><p>有很多学校都是有分校区的，例如东大。东大海洋与大气研究中心的老师实验室我印象中都设立在千叶柏市，而不在东京。同时可以用谷歌地图查一下坐电车花费的时间，这个在你想出去玩或者求职的时候还是挺重要的。</p>
+<p>除此之外，可以通过Dark sky map这个APP 的夜光指数来看你的实验室在不在市中心。但是说实话，除了东京和大阪，日本的其他地方都可以看成村。</p>
+<h2 id="入学手续"><a href="#入学手续" class="headerlink" title="入学手续"></a>入学手续</h2><p>套辞成功叫拿到内诺，内诺之后就要申请入学了，拿到小蜜给你发过来的研究生的入学通知才叫offer。这个申请只是走过场，一般在2020年四月开始，三月就可以去学校官网查看申请的指南了。由于我还没到这一步，略去不表。</p>
+<h1 id="关于AAO的小尾巴"><a href="#关于AAO的小尾巴" class="headerlink" title="关于AAO的小尾巴"></a>关于AAO的小尾巴</h1><p>在这里就不介绍AAO是什么了，我个人推荐9月份最迟十月份提交AAO，AAO可能会需要一个月的时间。同时因为AAO只有一次机会,如果失败了只能通过直接考试的方法进入京大，因此在进行AAO之前最好能先得到你想申请的导师的回复。</p>
 ]]></content>
       <categories>
         <category>留学生活</category>

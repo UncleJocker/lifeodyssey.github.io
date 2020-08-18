@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-08-09T17:44:39.252Z</updated>
+  <updated>2020-08-18T12:59:49.277Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>assert</title>
+    <link href="https://lifeodyssey.github.io/posts/b1ef4fab.html"/>
+    <id>https://lifeodyssey.github.io/posts/b1ef4fab.html</id>
+    <published>2020-08-18T12:32:57.000Z</published>
+    <updated>2020-08-18T12:59:49.277Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在读别人代码的时候发现了好多自己当时学python的时候没有学过的东西&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>硕士一年</title>
@@ -450,30 +469,6 @@
     <category term="Fishery Forecasting" scheme="https://lifeodyssey.github.io/tags/Fishery-Forecasting/"/>
     
     <category term="Undergraduate Thesis" scheme="https://lifeodyssey.github.io/tags/Undergraduate-Thesis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</title>
-    <link href="https://lifeodyssey.github.io/posts/da4d42a2.html"/>
-    <id>https://lifeodyssey.github.io/posts/da4d42a2.html</id>
-    <published>2019-05-12T06:44:17.000Z</published>
-    <updated>2019-05-16T02:28:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Theory of Generalization&lt;/p&gt;
-&lt;p&gt;test error can approximate training error if there is enough data and growth function does not grow too fast&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="机器学习" scheme="https://lifeodyssey.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Cousera" scheme="https://lifeodyssey.github.io/tags/Cousera/"/>
-    
-    <category term="林轩田" scheme="https://lifeodyssey.github.io/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/"/>
     
   </entry>
   

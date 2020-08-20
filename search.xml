@@ -2827,6 +2827,8 @@ tags: [标签1,标签2,标签3]
     <title>plot</title>
     <url>/posts/bebb8f89.html</url>
     <content><![CDATA[<p>一些在读别人代码的时候发现自己还没有掌握的东西。</p>
+<a id="more"></a>
+
 <h1 id="matplotlib-ticker"><a href="#matplotlib-ticker" class="headerlink" title="matplotlib.ticker"></a>matplotlib.ticker</h1><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h3 id="Tick-locating"><a href="#Tick-locating" class="headerlink" title="Tick locating"></a>Tick locating</h3><p>The Locator class is the base class for all tick locators. The locators handle autoscaling of the view limits based on the data limits, and the choosing of tick locations. A useful semi-automatic tick locator is <a href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a>. It is initialized with a base, e.g., 10, and it picks axis limits and ticks that are multiples of that base.</p>
 <p>The Locator subclasses defined here are</p>
 <ul>

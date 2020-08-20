@@ -287,7 +287,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-08-20 21:34:59 / Modified: 21:37:31" itemprop="dateCreated datePublished" datetime="2020-08-20T21:34:59+09:00">2020-08-20</time>
+              <time title="Created: 2020-08-20 21:34:59 / Modified: 21:39:27" itemprop="dateCreated datePublished" datetime="2020-08-20T21:34:59+09:00">2020-08-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -309,49 +309,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>一些在读别人代码的时候发现自己还没有掌握的东西。</p>
-<h1 id="matplotlib-ticker"><a href="#matplotlib-ticker" class="headerlink" title="matplotlib.ticker"></a>matplotlib.ticker</h1><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h3 id="Tick-locating"><a href="#Tick-locating" class="headerlink" title="Tick locating"></a>Tick locating</h3><p>The Locator class is the base class for all tick locators. The locators handle autoscaling of the view limits based on the data limits, and the choosing of tick locations. A useful semi-automatic tick locator is <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a>. It is initialized with a base, e.g., 10, and it picks axis limits and ticks that are multiples of that base.</p>
-<p>The Locator subclasses defined here are</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.AutoLocator"><code>AutoLocator</code></a></p>
-<p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MaxNLocator"><code>MaxNLocator</code></a> with simple defaults. This is the default tick locator for most plotting.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MaxNLocator"><code>MaxNLocator</code></a></p>
-<p>Finds up to a max number of intervals with ticks at nice locations.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LinearLocator"><code>LinearLocator</code></a></p>
-<p>Space ticks evenly from min to max.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogLocator"><code>LogLocator</code></a></p>
-<p>Space ticks logarithmically from min to max.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a></p>
-<p>Ticks and range are a multiple of base; either integer or float.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.FixedLocator"><code>FixedLocator</code></a></p>
-<p>Tick locations are fixed.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.IndexLocator"><code>IndexLocator</code></a></p>
-<p>Locator for index plots (e.g., where <code>x = range(len(y))</code>).</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.NullLocator"><code>NullLocator</code></a></p>
-<p>No ticks.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.SymmetricalLogLocator"><code>SymmetricalLogLocator</code></a></p>
-<p>Locator for use with with the symlog norm; works like <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogLocator"><code>LogLocator</code></a> for the part outside of the threshold and adds 0 if inside the limits.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogitLocator"><code>LogitLocator</code></a></p>
-<p>Locator for logit scaling.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.OldAutoLocator"><code>OldAutoLocator</code></a></p>
-<p>Choose a <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a> and dynamically reassign it for intelligent ticking during navigation.</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.AutoMinorLocator"><code>AutoMinorLocator</code></a></p>
-<p>Locator for minor ticks when the axis is linear and the major ticks are uniformly spaced. Subdivides the major tick interval into a specified number of minor intervals, defaulting to 4 or 5 depending on the major interval.</p>
-</li>
-</ul>
-<p>There are a number of locators specialized for date locations - see the <code>dates</code> module.</p>
-<p>You can define your own locator by deriving from Locator. You must override the <code>__call__</code> method, which returns a sequence of locations, and you will probably want to override the autoscale method to set the view limits from the data limits.</p>
-<p>If you want to override the default locator, use one of the above or a custom locator and pass it to the x or y axis instance. The relevant methods are:</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/bebb8f89.html#more" rel="contents">

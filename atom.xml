@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-08-20T12:39:27.548Z</updated>
+  <updated>2020-09-01T06:57:55.490Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python绘图基础</title>
+    <link href="https://lifeodyssey.github.io/posts/720e5580.html"/>
+    <id>https://lifeodyssey.github.io/posts/720e5580.html</id>
+    <published>2020-08-21T07:31:41.000Z</published>
+    <updated>2020-09-01T06:57:55.490Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这两天在收拾画图的事情，发现我matplotlib这些东西学的真的差，这个笔记用来整理一下自己会用到的东西，除了cartopy之外的。&lt;/p&gt;
+&lt;h1 id=&quot;matplotlib&quot;&gt;&lt;a href=&quot;#matplotlib&quot; class=&quot;headerlink&quot; title=&quot;matplotlib&quot;&gt;&lt;/a&gt;matplotlib&lt;/h1&gt;&lt;h2 id=&quot;基础知识&quot;&gt;&lt;a href=&quot;#基础知识&quot; class=&quot;headerlink&quot; title=&quot;基础知识&quot;&gt;&lt;/a&gt;基础知识&lt;/h2&gt;&lt;p&gt;Matplotlib最重要一个基础概念就是figure和axes。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pic2.zhimg.com/80/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在Matplotlib中，figure的意思是画板，axes的意思是画布，而axis的意思是坐标轴。比如&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;x = np.linspace(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;# 生成数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;y = x * x + &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;fig = plt.figure()  &lt;span class=&quot;comment&quot;&gt;# 新建图形对象&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;axes = fig.add_axes([&lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;])  &lt;span class=&quot;comment&quot;&gt;# 控制画布的左，下，宽度，高度&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;axes.plot(x, y, &lt;span class=&quot;string&quot;&gt;&amp;#x27;r&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;在同一个画板上，我们可以画好几个画布&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;fig = plt.figure()  &lt;span class=&quot;comment&quot;&gt;# 新建画板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;axes1 = fig.add_axes([&lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.8&lt;/span&gt;])  &lt;span class=&quot;comment&quot;&gt;# 大画布&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;axes2 = fig.add_axes([&lt;span class=&quot;number&quot;&gt;0.2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.5&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.4&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;0.3&lt;/span&gt;])  &lt;span class=&quot;comment&quot;&gt;# 小画布&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;axes1.plot(x, y, &lt;span class=&quot;string&quot;&gt;&amp;#x27;r&amp;#x27;&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;# 大画布&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;axes2.plot(y, x, &lt;span class=&quot;string&quot;&gt;&amp;#x27;g&amp;#x27;&lt;/span&gt;)  &lt;span class=&quot;comment&quot;&gt;# 小画布&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/huhuhang/cdn/images/2019/matplotlib-basic/output_80_1.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>plot</title>
@@ -443,29 +473,6 @@
     <category term="留学" scheme="https://lifeodyssey.github.io/tags/%E7%95%99%E5%AD%A6/"/>
     
     <category term="日本" scheme="https://lifeodyssey.github.io/tags/%E6%97%A5%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>服务器部署自动机器学习</title>
-    <link href="https://lifeodyssey.github.io/posts/c23e0e6e.html"/>
-    <id>https://lifeodyssey.github.io/posts/c23e0e6e.html</id>
-    <published>2019-06-05T05:25:11.000Z</published>
-    <updated>2019-06-05T06:51:58.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;借着毕业实习的机会将代码放到了实验室的服务器上，在这里记录一下全过程。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="机器学习" scheme="https://lifeodyssey.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Linux" scheme="https://lifeodyssey.github.io/tags/Linux/"/>
-    
-    <category term="服务器" scheme="https://lifeodyssey.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     
   </entry>
   

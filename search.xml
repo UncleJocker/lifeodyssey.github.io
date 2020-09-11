@@ -3351,4 +3351,61 @@ tags: [标签1,标签2,标签3]
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>pandas基础</title>
+    <url>/posts/50bcdc38.html</url>
+    <content><![CDATA[<p>其实我一点儿都不想用pandas的dataframe，总感觉这个东西很难用，也许是我的水平还没达到。但是好多时候读写实验室的excel和输出成excel又必须用这个，之前用的seaborn也是基于pandas的，那就再把基础操作复习一下。</p>
+<a id="more"></a>
+
+<h1 id="读写与创建"><a href="#读写与创建" class="headerlink" title="读写与创建"></a>读写与创建</h1><h2 id="数据读写"><a href="#数据读写" class="headerlink" title="数据读写"></a>数据读写</h2><h3 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h3><ul>
+<li><strong>读取</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">from</span> sqlalchemy <span class="keyword">import</span> create_engine</span><br><span class="line">db = create_engine(<span class="string">&quot;mysql+pymysql://用户名:用户密码@localhost:端口号（3306）/使用的数据库名?charset=utf8&quot;</span>)</span><br><span class="line">sql = <span class="string">&quot;select * from text&quot;</span></span><br><span class="line">df = pd.read_sql(sql, db, index_col=<span class="string">&quot;index&quot;</span>) <span class="comment"># index_col设置索引列，默认自动生成索引</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>写入</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">sql.to_sql(df, name=<span class="string">&#x27;test&#x27;</span>, con=db,</span><br><span class="line">                 if_exists=<span class="string">&quot;append&quot;</span>,<span class="comment"># 如果表存在：append追加 replace删除原表新建并插入 fail不插入</span></span><br><span class="line">                 index=<span class="literal">False</span> <span class="comment"># 设置df的索引不插入数据库</span></span><br><span class="line">                 )</span><br></pre></td></tr></table></figure>
+
+<h3 id="excel"><a href="#excel" class="headerlink" title="excel"></a>excel</h3><ul>
+<li><strong>读取</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df = pd.read_excel(<span class="string">r&#x27;file_path&#x27;</span>,</span><br><span class="line">                   sheet_name=<span class="string">&#x27;指定sheet,默认第一个&#x27;</span>,</span><br><span class="line">                   index=<span class="literal">False</span>, <span class="comment"># 不读取excel中的索引，自动生成新索引</span></span><br><span class="line">                   index_col=<span class="number">0</span>, <span class="comment"># 将第0列设置为索引</span></span><br><span class="line">                   header=<span class="number">0</span>, <span class="comment"># 将第n行设置为columns, 默认是0，可以设置为None（自动生成0-n的columns）</span></span><br><span class="line">                   usecols=[<span class="number">0</span>, <span class="number">2</span>] <span class="comment"># 只导入0, 2列</span></span><br><span class="line">                   )</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>写入</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">按照不同sheet写入</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="comment"># 创建表格</span></span><br><span class="line">excelWriter = pd.ExcelFile(<span class="string">&#x27;file_path/test.xlsx&#x27;</span>)</span><br><span class="line"><span class="comment"># 写入表格</span></span><br><span class="line">df.to_excel(</span><br><span class="line">    excelWriter,</span><br><span class="line">    sheet_name=<span class="string">&#x27;&#x27;</span>,</span><br><span class="line">    insex=<span class="literal">False</span>, <span class="comment"># 设置df的索引不传入excel</span></span><br><span class="line">    encoding=<span class="string">&#x27;utf-8&#x27;</span>,</span><br><span class="line">    columns=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>], <span class="comment"># 指定某列写入excel</span></span><br><span class="line">    na_rep=<span class="number">0</span>, <span class="comment"># 缺失值处理（填充为0）</span></span><br><span class="line">    inf_rep=<span class="number">0</span>, <span class="comment"># 无穷值处理（填充为0）</span></span><br><span class="line">)</span><br><span class="line"><span class="comment"># 保存（不保存不生效）</span></span><br><span class="line">excelWriter.save()</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">直接写入</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line">df.to_excel(<span class="string">&#x27;file_path/test.xlsx&#x27;</span>) <span class="comment"># 参数：insex、encoding、columns、na_rep、inf_rep</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="csv"><a href="#csv" class="headerlink" title="csv"></a>csv</h3><ul>
+<li><strong>读取</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df = pd.read(</span><br><span class="line">    <span class="string">r&#x27;file_path/test.csv&#x27;</span>,</span><br><span class="line">    sep=<span class="string">&quot;&quot;</span>, <span class="comment"># 指定分隔符，默认是逗号</span></span><br><span class="line">    nrows=<span class="number">2</span>, <span class="comment"># 指定读取行数</span></span><br><span class="line">    encoding=<span class="string">&#x27;utf-8&#x27;</span>,</span><br><span class="line">    engine=<span class="string">&#x27;python&#x27;</span>, <span class="comment"># 当路径存在中文会报错，加上这个即解决</span></span><br><span class="line">    usecols=[<span class="number">0</span>, <span class="number">2</span>], <span class="comment"># 仅导入0, 2列</span></span><br><span class="line">    index_col=<span class="number">0</span>, <span class="comment"># 将第0列设置为索引</span></span><br><span class="line">    header=<span class="number">0</span> <span class="comment"># 将第n行设置为columns, 默认是0，可以设置为None（自动生成0-n的columns）</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>写入</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df.to_csv(</span><br><span class="line">    <span class="string">r&#x27;file_path/test.csv&#x27;</span>,</span><br><span class="line">    index=<span class="literal">False</span>, <span class="comment"># 索引列不写入</span></span><br><span class="line">    columns=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>], <span class="comment"># 指定写入的列</span></span><br><span class="line">    sep=<span class="string">&#x27;,&#x27;</span>, <span class="comment"># 设置分隔符（默认是逗号）</span></span><br><span class="line">    na_rep=<span class="number">0</span>, <span class="comment"># 缺失值填充为0</span></span><br><span class="line">    encoding=<span class="string">&#x27;utf-8&#x27;</span>,</span><br><span class="line">    <span class="comment">#inf_rep=0 没有这个参数</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h3 id="txt"><a href="#txt" class="headerlink" title="txt"></a>txt</h3><ul>
+<li><strong>读取</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pd.read_table(<span class="string">r&#x27;file_path/test.txt&#x27;</span>, sep=<span class="string">&#x27;&#x27;</span>) <span class="comment">#也可以用来读取csv文件</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>写入</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">df.to_csv(</span><br><span class="line">    <span class="string">r&#x27;file_path/test.csv&#x27;</span>,</span><br><span class="line">    index=<span class="literal">False</span>, <span class="comment"># 索引列不写入</span></span><br><span class="line">    columns=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>], <span class="comment"># 指定写入的列</span></span><br><span class="line">    sep=<span class="string">&#x27;,&#x27;</span>, <span class="comment"># 设置分隔符（默认是逗号）</span></span><br><span class="line">    na_rep=<span class="number">0</span>, <span class="comment"># 缺失值填充为0</span></span><br><span class="line">    encoding=<span class="string">&#x27;utf-8&#x27;</span>,</span><br><span class="line">    <span class="comment">#inf_rep=0 没有这个参数</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>来源<a href="https://www.modb.pro/db/26894">https://www.modb.pro/db/26894</a></p>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>最让我不爽的就是dataframe并不能根据已有的</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>

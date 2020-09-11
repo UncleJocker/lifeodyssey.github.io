@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-09-01T07:00:16.144Z</updated>
+  <updated>2020-09-09T00:56:19.956Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pandas基础</title>
+    <link href="https://lifeodyssey.github.io/posts/50bcdc38.html"/>
+    <id>https://lifeodyssey.github.io/posts/50bcdc38.html</id>
+    <published>2020-09-09T00:13:50.000Z</published>
+    <updated>2020-09-09T00:56:19.956Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;其实我一点儿都不想用pandas的dataframe，总感觉这个东西很难用，也许是我的水平还没达到。但是好多时候读写实验室的excel和输出成excel又必须用这个，之前用的seaborn也是基于pandas的，那就再把基础操作复习一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>python绘图基础</title>
@@ -442,28 +463,6 @@
     <category term="bookreading" scheme="https://lifeodyssey.github.io/tags/bookreading/"/>
     
     <category term="Seminar" scheme="https://lifeodyssey.github.io/tags/Seminar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日本留学申请（四）：经管类申请</title>
-    <link href="https://lifeodyssey.github.io/posts/40e83800.html"/>
-    <id>https://lifeodyssey.github.io/posts/40e83800.html</id>
-    <published>2019-07-03T07:50:30.000Z</published>
-    <updated>2019-07-03T09:17:12.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;［本文由人美心善的小姑娘蓝田双慕所著］&lt;br&gt;本文主要介绍经管类的日本留学申请。笔者自身在申请学校的时候主要是奔着经济系去的，对日本商学院的了解不够深入，因此，笔者只能尽己所能提供自身了解的相关信息，并不能保证信息的完全囊括和绝对准确，希望此文能给有志于申请日本经管类研究生的同学带来一些帮助。&lt;/p&gt;
-&lt;p&gt;笔者申请的是sgu英文硕士项目，对日语入学的流程和要求不太了解，因此本文主要介绍日本经管类硕士英文项目的申请。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="留学生活" scheme="https://lifeodyssey.github.io/categories/%E7%95%99%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
-    
-    
-    <category term="留学" scheme="https://lifeodyssey.github.io/tags/%E7%95%99%E5%AD%A6/"/>
-    
-    <category term="日本" scheme="https://lifeodyssey.github.io/tags/%E6%97%A5%E6%9C%AC/"/>
     
   </entry>
   

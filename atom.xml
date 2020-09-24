@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-09-24T07:11:43.227Z</updated>
+  <updated>2020-09-24T07:21:43.050Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pandas cheat sheet</title>
+    <link href="https://lifeodyssey.github.io/posts/da4a7e8b.html"/>
+    <id>https://lifeodyssey.github.io/posts/da4a7e8b.html</id>
+    <published>2020-09-24T07:16:20.000Z</published>
+    <updated>2020-09-24T07:21:43.050Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;和matplotlib一样pandas也有cheatsheet&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>pandas基础</title>
@@ -440,29 +461,6 @@
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
     <category term="bookreading" scheme="https://lifeodyssey.github.io/tags/bookreading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>book reading note 1</title>
-    <link href="https://lifeodyssey.github.io/posts/2adc6f01.html"/>
-    <id>https://lifeodyssey.github.io/posts/2adc6f01.html</id>
-    <published>2019-11-04T11:15:16.000Z</published>
-    <updated>2019-11-04T11:49:23.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Chapter 5.4-5.5 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
-    
-    <category term="bookreading" scheme="https://lifeodyssey.github.io/tags/bookreading/"/>
-    
-    <category term="Seminar" scheme="https://lifeodyssey.github.io/tags/Seminar/"/>
     
   </entry>
   

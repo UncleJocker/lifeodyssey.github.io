@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-09-24T07:21:51.998Z</updated>
+  <updated>2020-09-24T07:33:07.442Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JpGU-AGU Joint Meeting 2020 poster</title>
+    <link href="https://lifeodyssey.github.io/posts/26d5d570.html"/>
+    <id>https://lifeodyssey.github.io/posts/26d5d570.html</id>
+    <published>2020-09-24T07:26:16.000Z</published>
+    <updated>2020-09-24T07:33:07.442Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;This year I attended the JpGU-AGU Joint Meeting 2020 and made a poster presentation.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&quot;&gt;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Papers And Thesis" scheme="https://lifeodyssey.github.io/categories/Papers-And-Thesis/"/>
+    
+    
+    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Harmful Algae" scheme="https://lifeodyssey.github.io/tags/Harmful-Algae/"/>
+    
+    <category term="International Conference" scheme="https://lifeodyssey.github.io/tags/International-Conference/"/>
+    
+    <category term="Poster" scheme="https://lifeodyssey.github.io/tags/Poster/"/>
+    
+  </entry>
   
   <entry>
     <title>pandas cheat sheet</title>
@@ -438,29 +464,6 @@
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>note for ocean optic web book：Liaght and Radiometry</title>
-    <link href="https://lifeodyssey.github.io/posts/80897339.html"/>
-    <id>https://lifeodyssey.github.io/posts/80897339.html</id>
-    <published>2019-11-20T05:34:29.000Z</published>
-    <updated>2019-12-15T11:31:23.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Souce: &lt;a href=&quot;http://www.oceanopticsbook.info/&quot;&gt;http://www.oceanopticsbook.info/&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
-    
-    <category term="bookreading" scheme="https://lifeodyssey.github.io/tags/bookreading/"/>
     
   </entry>
   

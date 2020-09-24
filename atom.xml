@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-09-09T00:56:19.956Z</updated>
+  <updated>2020-09-24T07:11:43.227Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lifeodyssey.github.io/posts/50bcdc38.html"/>
     <id>https://lifeodyssey.github.io/posts/50bcdc38.html</id>
     <published>2020-09-09T00:13:50.000Z</published>
-    <updated>2020-09-09T00:56:19.956Z</updated>
+    <updated>2020-09-24T07:11:43.227Z</updated>
     
     
     <summary type="html">&lt;p&gt;其实我一点儿都不想用pandas的dataframe，总感觉这个东西很难用，也许是我的水平还没达到。但是好多时候读写实验室的excel和输出成excel又必须用这个，之前用的seaborn也是基于pandas的，那就再把基础操作复习一下。&lt;/p&gt;</summary>

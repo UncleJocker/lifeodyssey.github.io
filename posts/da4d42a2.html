@@ -22,14 +22,13 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="Theory of Generalization test error can approximate training error if there is enough data and growth function does not grow too fast">
+  <meta name="description" content="Theory of Generalization  test error can approximate training error if there is enough data and growth function does not grow too fast">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/da4d42a2.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="Theory of Generalization test error can approximate training error if there is enough data and growth function does not grow too fast">
+<meta property="og:description" content="Theory of Generalization  test error can approximate training error if there is enough data and growth function does not grow too fast">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png">
 <meta property="article:published_time" content="2019-05-12T06:44:17.000Z">
 <meta property="article:modified_time" content="2019-05-16T02:28:00.000Z">
 <meta property="article:author" content="周大侠">
@@ -37,7 +36,6 @@
 <meta property="article:tag" content="Cousera">
 <meta property="article:tag" content="林轩田">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png">
 
 <link rel="canonical" href="https://lifeodyssey.github.io/posts/da4d42a2.html">
 
@@ -174,7 +172,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -186,7 +184,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Restriction-of-Breaking-Point"><span class="nav-number">1.</span> <span class="nav-text">Restriction of Breaking Point</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Four-Breaking-Points"><span class="nav-number">1.1.</span> <span class="nav-text">The Four Breaking Points</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Restriction-of-Breaking-Point-1"><span class="nav-number">1.2.</span> <span class="nav-text">Restriction of Breaking Point</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bounding-Function-Basic-Cases"><span class="nav-number">2.</span> <span class="nav-text">Bounding Function:Basic Cases</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bounding-Function"><span class="nav-number">2.1.</span> <span class="nav-text">Bounding Function</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -324,19 +321,38 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Theory of Generalization</p>
-<p>test error can approximate training error if there is enough data and growth function does not grow too fast</p>
+        
+Theory of Generalization
+
+test error can approximate training error if there is enough data and growth function does not grow too fast
+
+
+  
+
 <a id="more"></a>
 
-<h1 id="Restriction-of-Breaking-Point"><a href="#Restriction-of-Breaking-Point" class="headerlink" title="Restriction of Breaking Point"></a>Restriction of Breaking Point</h1><h2 id="The-Four-Breaking-Points"><a href="#The-Four-Breaking-Points" class="headerlink" title="The Four Breaking Points"></a>The Four Breaking Points</h2><p>growth function $m_\H(N)$:max number of dichotomies</p>
-<ul>
-<li>positive rays: $m_\H(N)=N+1$</li>
-<li>positive intervals: $m_\H(N)=\frac{1}{2}N^2+\frac{1}{2}N+1$</li>
-<li>convex sets: $m_\H(N)=2^N$</li>
-<li>2D perceptrons :$m_\H(N)&lt;2^N$ in some cases</li>
-</ul>
-<h2 id="Restriction-of-Breaking-Point-1"><a href="#Restriction-of-Breaking-Point-1" class="headerlink" title="Restriction of Breaking Point"></a>Restriction of Breaking Point</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png"></p>
-<h1 id="Bounding-Function-Basic-Cases"><a href="#Bounding-Function-Basic-Cases" class="headerlink" title="Bounding Function:Basic Cases"></a>Bounding Function:Basic Cases</h1><h2 id="Bounding-Function"><a href="#Bounding-Function" class="headerlink" title="Bounding Function"></a>Bounding Function</h2>
+# Restriction of Breaking Point
+
+## The Four Breaking Points
+
+growth function $m_\H(N)$:max number of dichotomies
+
+- positive rays: $m_\H(N)=N+1$
+- positive intervals: $m_\H(N)=\frac{1}{2}N^2+\frac{1}{2}N+1$
+- convex sets: $m_\H(N)=2^N$
+- 2D perceptrons :$m_\H(N)<2^N$ in some cases
+
+## Restriction of Breaking Point
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png)
+
+
+
+# Bounding Function:Basic Cases
+
+## Bounding Function
+
+
     </div>
 
     

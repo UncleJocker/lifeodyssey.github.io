@@ -22,12 +22,12 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="Python Lambda在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。 lambda 函数是一种小的匿名函数。 lambda 函数可接受任意数量的参数，但只能有一个表达式。">
+  <meta name="description" content="# Python Lambda  在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。  **lambda 函数是一种小的匿名函数。**  **lambda 函数可接受任意数量的参数，但只能有一个表达式。**">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lambda">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/d39dff82.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="Python Lambda在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。 lambda 函数是一种小的匿名函数。 lambda 函数可接受任意数量的参数，但只能有一个表达式。">
+<meta property="og:description" content="# Python Lambda  在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。  **lambda 函数是一种小的匿名函数。**  **lambda 函数可接受任意数量的参数，但只能有一个表达式。**">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-08-07T12:43:14.000Z">
 <meta property="article:modified_time" content="2020-08-07T12:45:24.000Z">
@@ -171,7 +171,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -183,7 +183,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python-Lambda"><span class="nav-number">1.</span> <span class="nav-text">Python Lambda</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%86%85%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">函数内匿名函数</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -315,30 +314,51 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Python-Lambda"><a href="#Python-Lambda" class="headerlink" title="Python Lambda"></a>Python Lambda</h1><p>在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。</p>
-<p><strong>lambda 函数是一种小的匿名函数。</strong></p>
-<p><strong>lambda 函数可接受任意数量的参数，但只能有一个表达式。</strong></p>
+        
+# Python Lambda
+
+在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。
+
+**lambda 函数是一种小的匿名函数。**
+
+**lambda 函数可接受任意数量的参数，但只能有一个表达式。**
+
 <a id="more"></a>
 
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><p><code>lambda arguments : expression</code></p>
-<p>执行表达式并返回结果</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a : a + <span class="number">10</span></span><br><span class="line">print(x(<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+## 语法
 
-<p>这一句话就定义了一个lambda函数，a是这个函数的参数，a+10是这个函数的表达式，x是这个函数的名字。</p>
-<p>Lambda可以接受任意数量的参数，比如</p>
+`lambda arguments : expression`
+
+执行表达式并返回结果
+
+## 实例
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a : a + <span class="number">10</span></span><br><span class="line">print(x(<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+
+这一句话就定义了一个lambda函数，a是这个函数的参数，a+10是这个函数的表达式，x是这个函数的名字。
+
+Lambda可以接受任意数量的参数，比如
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a, b, c : a + b + c</span><br><span class="line">print(x(<span class="number">5</span>, <span class="number">6</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
 
-<p>这个函数就是三个参数</p>
-<h2 id="函数内匿名函数"><a href="#函数内匿名函数" class="headerlink" title="函数内匿名函数"></a>函数内匿名函数</h2><p>假设我定义了这么一个函数</p>
+这个函数就是三个参数
+
+## 函数内匿名函数
+
+假设我定义了这么一个函数
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br></pre></td></tr></table></figure>
 
-<p>这个函数的作用是把a变成n倍。</p>
+这个函数的作用是把a变成n倍。
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br><span class="line"></span><br><span class="line">mydoubler = myfunc(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 
-<p>这样就可以很快速地构建出来这样的一个函数：</p>
+这样就可以很快速地构建出来这样的一个函数：
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mydoubler</span>(<span class="params">a</span>):</span></span><br><span class="line">  <span class="keyword">return</span> n*<span class="number">2</span></span><br></pre></td></tr></table></figure>
 
-<p>不需要想用别的的时候再去定义，比如我还想再来一个三倍的函数，就直接：</p>
+不需要想用别的的时候再去定义，比如我还想再来一个三倍的函数，就直接：
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mytripler = myfunc(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 
 

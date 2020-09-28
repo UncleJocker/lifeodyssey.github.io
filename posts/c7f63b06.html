@@ -22,17 +22,13 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="Feasibility of Learning">
+  <meta name="description" content="**Feasibility of Learning**">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/c7f63b06.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="Feasibility of Learning">
+<meta property="og:description" content="**Feasibility of Learning**">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png">
 <meta property="article:published_time" content="2019-04-02T06:08:38.000Z">
 <meta property="article:modified_time" content="2019-05-11T10:58:48.000Z">
 <meta property="article:author" content="周大侠">
@@ -40,7 +36,6 @@
 <meta property="article:tag" content="Cousera">
 <meta property="article:tag" content="林轩田">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png">
 
 <link rel="canonical" href="https://lifeodyssey.github.io/posts/c7f63b06.html">
 
@@ -177,7 +172,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -189,7 +184,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Learning-is-Impossible"><span class="nav-number">1.</span> <span class="nav-text">Learning is Impossible?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Probability-to-the-Rescue"><span class="nav-number">2.</span> <span class="nav-text">Probability to the Rescue</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Inferring-Something-Unknow"><span class="nav-number">2.1.</span> <span class="nav-text">Inferring Something Unknow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Possible-versus-Probable"><span class="nav-number">2.2.</span> <span class="nav-text">Possible versus Probable</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hoeffding%E2%80%99s-Inequality"><span class="nav-number">2.3.</span> <span class="nav-text">Hoeffding’s Inequality</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Connection-to-Learning"><span class="nav-number">3.</span> <span class="nav-text">Connection  to Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Added-Components"><span class="nav-number">3.1.</span> <span class="nav-text">Added Components</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Formal-Guarantee"><span class="nav-number">3.2.</span> <span class="nav-text">The Formal Guarantee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Verification-of-One-h"><span class="nav-number">3.3.</span> <span class="nav-text">Verification of One h</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-%E2%80%98Verification%E2%80%99-Flow"><span class="nav-number">3.4.</span> <span class="nav-text">The ‘Verification’ Flow</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Connection-to-Real-Learning"><span class="nav-number">4.</span> <span class="nav-text">Connection to Real Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BAD-Sample-and-BAD-Data"><span class="nav-number">4.1.</span> <span class="nav-text">BAD Sample and BAD Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BAD-data-for-Many-h"><span class="nav-number">4.2.</span> <span class="nav-text">BAD data for Many h</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bound-of-BAD-Data"><span class="nav-number">4.3.</span> <span class="nav-text">Bound of BAD Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Statistical-Learning-Flow"><span class="nav-number">4.4.</span> <span class="nav-text">The Statistical Learning Flow</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%90%E6%A7%BD"><span class="nav-number">5.</span> <span class="nav-text">吐槽</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -327,39 +321,100 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><strong>Feasibility of Learning</strong></p>
+        
+**Feasibility of Learning**
+
 <a id="more"></a>
 
-<h1 id="Learning-is-Impossible"><a href="#Learning-is-Impossible" class="headerlink" title="Learning is Impossible?"></a>Learning is Impossible?</h1><h1 id="Probability-to-the-Rescue"><a href="#Probability-to-the-Rescue" class="headerlink" title="Probability to the Rescue"></a>Probability to the Rescue</h1><h2 id="Inferring-Something-Unknow"><a href="#Inferring-Something-Unknow" class="headerlink" title="Inferring Something Unknow"></a>Inferring Something Unknow</h2><p>in sample$\rightarrow$out sample</p>
-<h2 id="Possible-versus-Probable"><a href="#Possible-versus-Probable" class="headerlink" title="Possible versus Probable"></a>Possible versus Probable</h2><h2 id="Hoeffding’s-Inequality"><a href="#Hoeffding’s-Inequality" class="headerlink" title="Hoeffding’s Inequality"></a>Hoeffding’s Inequality</h2><p>In big sample(<em>N</em> large),$\boldsymbol{\upsilon}$ is probably close to $\boldsymbol{u}$ (within $\boldsymbol{\epsilon}$)<br>$$<br>\mathbb{P}[|v-u|&gt;\boldsymbol{\epsilon}]\leq2exp(-2\boldsymbol{\epsilon}^2N)<br>$$<br>called Hoeffding’s Inequality, for marbles,coin,polling</p>
-<p>the statement $v=u$ is <strong>probably approximately correct</strong>(PAC)</p>
-<ul>
-<li><p>valid for all N and $\boldsymbol{\epsilon}$</p>
-</li>
-<li><p>does not depend on $u$,no need to know$u$</p>
-</li>
-<li><p>larger sample size <em>N</em> or looser gap $\boldsymbol{\epsilon} \rightarrow$higher probability for $v=u$</p>
-<p>if large N,can probably infer unknown $u$ by know $v$</p>
-</li>
-</ul>
-<h1 id="Connection-to-Learning"><a href="#Connection-to-Learning" class="headerlink" title="Connection  to Learning"></a>Connection  to Learning</h1><h2 id="Added-Components"><a href="#Added-Components" class="headerlink" title="Added Components"></a>Added Components</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190404101452.png"></p>
-<p>for any fixed <em>h</em>, can probably infer unkown $E_out(h)=\underset{X\approx P}{\varepsilon}[h(x)\ne f(x)]$by known$ E_in(h)=\frac{1}{N}\sum^N_{n=1}[h(x)\ne f(x)]$</p>
-<h2 id="The-Formal-Guarantee"><a href="#The-Formal-Guarantee" class="headerlink" title="The Formal Guarantee"></a>The Formal Guarantee</h2><p>if $E_{in}(h)\approx E_{out}(h)$ and$E_{in}(h)small\rightarrow E_{out}(h)samll\rightarrow h\approx f $with respect to P</p>
-<h2 id="Verification-of-One-h"><a href="#Verification-of-One-h" class="headerlink" title="Verification of One h"></a>Verification of One h</h2><p>if $E_{in}(h)$ small for the fixed h and A pick the h as g$\rightarrow$ g=f PAC</p>
-<p>if A force to pick THE h as g$\rightarrow E_{in}(h)$ almost always not small$\rightarrow g\ne f$ PAC</p>
-<p>real learning:</p>
-<p>  A shall make choices$\in \H$ (like PLA) rather than being forced to pick one h.</p>
-<h2 id="The-‘Verification’-Flow"><a href="#The-‘Verification’-Flow" class="headerlink" title="The ‘Verification’ Flow"></a>The ‘Verification’ Flow</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png"></p>
-<h1 id="Connection-to-Real-Learning"><a href="#Connection-to-Real-Learning" class="headerlink" title="Connection to Real Learning"></a>Connection to Real Learning</h1><h2 id="BAD-Sample-and-BAD-Data"><a href="#BAD-Sample-and-BAD-Data" class="headerlink" title="BAD Sample and BAD Data"></a>BAD Sample and BAD Data</h2><p>BAD Sample:$E_{out}=\frac{1}{2}$,but getting all heads($E_{in}=0$)</p>
-<p>BAD Data for One h:$E_{out}(h)$ and $E_{in}h$ far away</p>
-<h2 id="BAD-data-for-Many-h"><a href="#BAD-data-for-Many-h" class="headerlink" title="BAD data for Many h"></a>BAD data for Many h</h2><p>BAD data for many h $\Leftrightarrow$ no freedom of choice by A $\Leftrightarrow$ there exists some h such that $E_{out}(h)$ and $E_{in}(h)$ far away</p>
-<h2 id="Bound-of-BAD-Data"><a href="#Bound-of-BAD-Data" class="headerlink" title="Bound of BAD Data"></a>Bound of BAD Data</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png"></p>
-<h2 id="The-Statistical-Learning-Flow"><a href="#The-Statistical-Learning-Flow" class="headerlink" title="The Statistical Learning Flow"></a>The Statistical Learning Flow</h2><p>if $|\mathbb{H}|$= M finite, N large enough,for whatever g picked by A,$E_{out}(g)\approx E_{in}(g)$</p>
-<p>if A finds one g with $E_{in}(g)\approx 0$,PAC guarantee for$E_{out}(g)\Rightarrow$learning possible</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png"></p>
-<p>M=$\infty$? - see you in the next lectures~</p>
-<h1 id="吐槽"><a href="#吐槽" class="headerlink" title="吐槽"></a>吐槽</h1><p>这个作业题是真的难啊，花了一个半小时才堪堪通过，尤其是最后几个写PLA和pocket算法的</p>
+# Learning is Impossible?
 
+
+
+# Probability to the Rescue
+
+## Inferring Something Unknow
+
+in sample$\rightarrow$out sample
+
+## Possible versus Probable
+
+## Hoeffding’s Inequality
+
+In big sample(*N* large),$\boldsymbol{\upsilon}$ is probably close to $\boldsymbol{u}$ (within $\boldsymbol{\epsilon}$)
+$$
+\mathbb{P}[|v-u|>\boldsymbol{\epsilon}]\leq2exp(-2\boldsymbol{\epsilon}^2N)
+$$
+called Hoeffding’s Inequality, for marbles,coin,polling
+
+the statement $v=u$ is **probably approximately correct**(PAC)
+
+- valid for all N and $\boldsymbol{\epsilon}$
+
+- does not depend on $u$,no need to know$u$
+
+- larger sample size *N* or looser gap $\boldsymbol{\epsilon} \rightarrow$higher probability for $v=u$
+
+  if large N,can probably infer unknown $u$ by know $v$
+
+  
+
+# Connection  to Learning
+
+## Added Components
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/微信截图_20190404101452.png)
+
+for any fixed *h*, can probably infer unkown $E_out(h)=\underset{X\approx P}{\varepsilon}[h(x)\ne f(x)]$by known$ E_in(h)=\frac{1}{N}\sum^N_{n=1}[h(x)\ne f(x)]$
+
+## The Formal Guarantee
+
+if $E_{in}(h)\approx E_{out}(h)$ and$E_{in}(h)small\rightarrow E_{out}(h)samll\rightarrow h\approx f $with respect to P
+
+## Verification of One h
+
+if $E_{in}(h)$ small for the fixed h and A pick the h as g$\rightarrow$ g=f PAC
+
+if A force to pick THE h as g$\rightarrow E_{in}(h)$ almost always not small$\rightarrow g\ne f$ PAC
+
+real learning:
+
+  A shall make choices$\in \H$ (like PLA) rather than being forced to pick one h.
+
+## The ‘Verification’ Flow
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554345523532.png)
+
+
+
+# Connection to Real Learning
+
+## BAD Sample and BAD Data
+
+BAD Sample:$E_{out}=\frac{1}{2}$,but getting all heads($E_{in}=0$)
+
+BAD Data for One h:$E_{out}(h)$ and $E_{in}h$ far away
+
+## BAD data for Many h
+
+BAD data for many h $\Leftrightarrow$ no freedom of choice by A $\Leftrightarrow$ there exists some h such that $E_{out}(h)$ and $E_{in}(h)$ far away
+
+## Bound of BAD Data
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554349806026.png)
+
+## The Statistical Learning Flow
+
+if $|\mathbb{H}|$= M finite, N large enough,for whatever g picked by A,$E_{out}(g)\approx E_{in}(g)$
+
+if A finds one g with $E_{in}(g)\approx 0$,PAC guarantee for$E_{out}(g)\Rightarrow$learning possible
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554350153964.png)
+
+M=$\infty$? - see you in the next lectures~
+
+# 吐槽
+
+这个作业题是真的难啊，花了一个半小时才堪堪通过，尤其是最后几个写PLA和pocket算法的
     </div>
 
     

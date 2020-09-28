@@ -24,17 +24,18 @@
     <updated>2020-09-28T10:57:29.700Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Annotated Bibliography 2020 9.28-10.4&lt;/p&gt;
-&lt;p&gt;I will try to read three or four papers every week and update my annotation&lt;/p&gt;</summary>
+    <summary type="html">Annotated Bibliography 2020 9.28-10.4
+
+I will try to read three or four papers every week and update my annotation</summary>
     
     
     
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
     
-    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
-    
     <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
+    
+    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
     
   </entry>
   
@@ -46,8 +47,9 @@
     <updated>2020-09-24T07:33:15.093Z</updated>
     
     
-    <summary type="html">&lt;p&gt;This year I attended the JpGU-AGU Joint Meeting 2020 and made a poster presentation.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&quot;&gt;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">This year I attended the JpGU-AGU Joint Meeting 2020 and made a poster presentation.
+
+https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail</summary>
     
     
     
@@ -72,7 +74,7 @@
     <updated>2020-09-24T07:21:51.998Z</updated>
     
     
-    <summary type="html">&lt;p&gt;和matplotlib一样pandas也有cheatsheet&lt;/p&gt;</summary>
+    <summary type="html">和matplotlib一样pandas也有cheatsheet</summary>
     
     
     
@@ -93,7 +95,7 @@
     <updated>2020-09-24T07:11:43.227Z</updated>
     
     
-    <summary type="html">&lt;p&gt;其实我一点儿都不想用pandas的dataframe，总感觉这个东西很难用，也许是我的水平还没达到。但是好多时候读写实验室的excel和输出成excel又必须用这个，之前用的seaborn也是基于pandas的，那就再把基础操作复习一下。&lt;/p&gt;</summary>
+    <summary type="html">其实我一点儿都不想用pandas的dataframe，总感觉这个东西很难用，也许是我的水平还没达到。但是好多时候读写实验室的excel和输出成excel又必须用这个，之前用的seaborn也是基于pandas的，那就再把基础操作复习一下。</summary>
     
     
     
@@ -114,7 +116,7 @@
     <updated>2020-09-01T07:00:16.144Z</updated>
     
     
-    <summary type="html">&lt;p&gt;这两天在收拾画图的事情，发现我matplotlib这些东西学的真的差，这个笔记用来整理一下自己会用到的东西，除了cartopy之外的。&lt;/p&gt;</summary>
+    <summary type="html">这两天在收拾画图的事情，发现我matplotlib这些东西学的真的差，这个笔记用来整理一下自己会用到的东西，除了cartopy之外的。</summary>
     
     
     
@@ -135,7 +137,7 @@
     <updated>2020-08-20T12:39:27.548Z</updated>
     
     
-    <summary type="html">&lt;p&gt;一些在读别人代码的时候发现自己还没有掌握的东西。&lt;/p&gt;</summary>
+    <summary type="html">一些在读别人代码的时候发现自己还没有掌握的东西。</summary>
     
     
     
@@ -156,7 +158,7 @@
     <updated>2020-08-18T13:00:03.444Z</updated>
     
     
-    <summary type="html">&lt;p&gt;最近在读别人代码的时候发现了好多自己当时学python的时候没有学过的东西&lt;/p&gt;</summary>
+    <summary type="html">最近在读别人代码的时候发现了好多自己当时学python的时候没有学过的东西</summary>
     
     
     
@@ -175,7 +177,7 @@
     <updated>2020-08-09T17:44:39.252Z</updated>
     
     
-    <summary type="html">&lt;p&gt;终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。&lt;/p&gt;</summary>
+    <summary type="html">终于把博客恢复过来了，一边听着2020年lpl夏季赛常规赛的最后一个饭堂，一边写点感想。</summary>
     
     
     
@@ -196,9 +198,13 @@
     <updated>2020-08-07T12:45:24.000Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Python-Lambda&quot;&gt;&lt;a href=&quot;#Python-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Python Lambda&quot;&gt;&lt;/a&gt;Python Lambda&lt;/h1&gt;&lt;p&gt;在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;lambda 函数是一种小的匿名函数。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;lambda 函数可接受任意数量的参数，但只能有一个表达式。&lt;/strong&gt;&lt;/p&gt;</summary>
+    <summary type="html"># Python Lambda
+
+在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。
+
+**lambda 函数是一种小的匿名函数。**
+
+**lambda 函数可接受任意数量的参数，但只能有一个表达式。**</summary>
     
     
     
@@ -219,8 +225,9 @@
     <updated>2020-08-01T11:06:11.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。&lt;/p&gt;
-&lt;p&gt;先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。&lt;/p&gt;</summary>
+    <summary type="html">Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。
+
+先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。</summary>
     
     
     
@@ -241,7 +248,7 @@
     <updated>2020-07-20T04:16:14.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
+    <summary type="html">Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</summary>
     
     
     
@@ -264,18 +271,18 @@
     <updated>2020-07-15T14:27:51.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;There are five main data fusion approaches according to ‘Spatio-temporal fusion for remote sensing data: an overview and new benchmark’. Here I will read the STARFM.&lt;/p&gt;</summary>
+    <summary type="html">There are five main data fusion approaches according to &#39;Spatio-temporal fusion for remote sensing data: an overview and new benchmark&#39;. Here I will read the STARFM.</summary>
     
     
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
+    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
+    
     <category term="paper reading" scheme="https://lifeodyssey.github.io/tags/paper-reading/"/>
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
     
   </entry>
   
@@ -287,8 +294,9 @@
     <updated>2020-07-08T14:37:25.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;This is the note of my own experiences.&lt;/p&gt;
-&lt;p&gt;As summarized in my former blog, the new result always from pre-print website, social media, conference. Here I will summary some source in oceanography, especially ocean color,  and also give some methods for following new articles.&lt;/p&gt;</summary>
+    <summary type="html">This is the note of my own experiences.
+
+As summarized in my former blog, the new result always from pre-print website, social media, conference. Here I will summary some source in oceanography, especially ocean color,  and also give some methods for following new articles.</summary>
     
     
     
@@ -307,7 +315,7 @@
     <updated>2020-05-18T05:33:42.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
+    <summary type="html">Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</summary>
     
     
     
@@ -330,21 +338,21 @@
     <updated>2020-04-12T14:45:40.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;这个教程主要分为两部分：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;应用python分析MODIS水色遥感数据&lt;/li&gt;
-&lt;li&gt;SeaDAS OCSSW的安装与应用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;English version is coming soon.&lt;/p&gt;</summary>
+    <summary type="html">这个教程主要分为两部分：
+
+1. 应用python分析MODIS水色遥感数据
+2. SeaDAS OCSSW的安装与应用
+
+English version is coming soon.</summary>
     
     
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
     <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
     
@@ -358,20 +366,19 @@
     <updated>2020-04-12T13:23:22.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;This tutorial covers mainly two parts:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Using python to analyse MODIS ocean color data&lt;/li&gt;
-&lt;li&gt;Installation and application of SeaDA  OCSSW&lt;/li&gt;
-&lt;/ol&gt;</summary>
+    <summary type="html">This tutorial covers mainly two parts:
+
+1. Using python to analyse MODIS ocean color data
+2. Installation and application of SeaDA  OCSSW</summary>
     
     
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
     <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
     
@@ -385,7 +392,7 @@
     <updated>2020-03-09T09:43:22.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;讲座地址：&lt;a href=&quot;https://www.bilibili.com/video/av94346515&quot;&gt;https://www.bilibili.com/video/av94346515&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">讲座地址：https://www.bilibili.com/video/av94346515</summary>
     
     
     
@@ -404,17 +411,18 @@
     <updated>2020-03-20T16:23:00.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;I have been in master course for half years. It’s time to organize the materials I have used.&lt;/p&gt;
-&lt;p&gt;This article will update as soon as I get new resource.&lt;/p&gt;</summary>
+    <summary type="html">I have been in master course for half years. It’s time to organize the materials I have used.
+
+This article will update as soon as I get new resource.</summary>
     
     
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
     <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
     
@@ -428,16 +436,16 @@
     <updated>2020-02-28T08:24:28.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;This blog introduce a MODIS(also suitable for other available satellites) Ocean Color data batch download method without wget(since it doesn’t work on my laptop).&lt;/p&gt;</summary>
+    <summary type="html">This blog introduce a MODIS(also suitable for other available satellites) Ocean Color data batch download method without wget(since it doesn’t work on my laptop).</summary>
     
     
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
     <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
     
@@ -451,7 +459,7 @@
     <updated>2020-02-09T06:28:49.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
+    <summary type="html">Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</summary>
     
     
     

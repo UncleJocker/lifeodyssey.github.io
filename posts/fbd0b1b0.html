@@ -22,15 +22,13 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="Traning versus Testing Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application. I will update this note if possible.">
+  <meta name="description" content="**Traning versus Testing**  Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.  I will update this note if possible.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/fbd0b1b0.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="Traning versus Testing Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application. I will update this note if possible.">
+<meta property="og:description" content="**Traning versus Testing**  Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.  I will update this note if possible.">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554528606498.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190509150052.png">
 <meta property="article:published_time" content="2019-04-06T04:23:00.000Z">
 <meta property="article:modified_time" content="2019-05-11T10:58:43.000Z">
 <meta property="article:author" content="周大侠">
@@ -38,7 +36,6 @@
 <meta property="article:tag" content="Cousera">
 <meta property="article:tag" content="林轩田">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554528606498.png">
 
 <link rel="canonical" href="https://lifeodyssey.github.io/posts/fbd0b1b0.html">
 
@@ -175,7 +172,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -187,7 +184,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Recap-and-Preview"><span class="nav-number">1.</span> <span class="nav-text">Recap and Preview</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Recap-The-%E2%80%98Statistical%E2%80%99-Learning-Flow"><span class="nav-number">1.1.</span> <span class="nav-text">Recap: The ‘Statistical’ Learning Flow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-Central-Questions"><span class="nav-number">1.2.</span> <span class="nav-text">Two Central Questions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preview"><span class="nav-number">1.3.</span> <span class="nav-text">Preview</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Effective-Number-of-Lines"><span class="nav-number">2.</span> <span class="nav-text">Effective Number of Lines</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Where-Did-M-Come-From"><span class="nav-number">2.1.</span> <span class="nav-text">Where Did M Come From</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Where-Did-Uniform-Bound-Fail"><span class="nav-number">2.2.</span> <span class="nav-text">Where Did Uniform Bound Fail</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-Many-Lines-Are-There"><span class="nav-number">2.3.</span> <span class="nav-text">How Many Lines Are There?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Effective-Number-of-Lines-1"><span class="nav-number">2.4.</span> <span class="nav-text">Effective Number of Lines</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Effective-Number-of-Hypotheses"><span class="nav-number">3.</span> <span class="nav-text">Effective Number of Hypotheses</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dichotomies-Mini-hypotheses"><span class="nav-number">3.1.</span> <span class="nav-text">Dichotomies:Mini-hypotheses</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Break-Points"><span class="nav-number">4.</span> <span class="nav-text">Break Points</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -325,69 +321,101 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><strong>Traning versus Testing</strong></p>
-<p>Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.</p>
-<p>I will update this note if possible.</p>
+        **Traning versus Testing**
+
+Actually,I didn’t fully understand this part of course.However  I don’t focus on the theory but application.
+
+I will update this note if possible.
+
 <a id="more"></a>
 
-<h1 id="Recap-and-Preview"><a href="#Recap-and-Preview" class="headerlink" title="Recap and Preview"></a>Recap and Preview</h1><h2 id="Recap-The-‘Statistical’-Learning-Flow"><a href="#Recap-The-‘Statistical’-Learning-Flow" class="headerlink" title="Recap: The ‘Statistical’ Learning Flow"></a>Recap: The ‘Statistical’ Learning Flow</h2><p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554528606498.png"></p>
-<h2 id="Two-Central-Questions"><a href="#Two-Central-Questions" class="headerlink" title="Two Central Questions"></a>Two Central Questions</h2><p>1. can we make sure that $E_{out}(g)$ is close enough to $E_{in}(g)$?</p>
-<p>2. can we make $E_{in}(g)$ small enough?</p>
-<p>$\Rightarrow$ What role does $\underbrace{M}\{|\mathscr{H}|}$ play for the two questions?</p>
-<p>##　Trade-off on *M</p>
-<table>
-<thead>
-<tr>
-<th>small M</th>
-<th>large M</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1. Yes $\mathbb{P}[BAD]\leq2\cdot M\cdot exp(…)$</td>
-<td>1. No!$\mathbb{P}[BAD]\leq2\cdot M\cdot exp(…)$</td>
-</tr>
-<tr>
-<td>2. $\color{Maroon}No!$,two few choices</td>
-<td>2. Yes!many choices</td>
-</tr>
-</tbody></table>
-<p>using the right M is important</p>
-<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><ul>
-<li>Know: $\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot M\cdot exp(-2\epsilon^2N)$</li>
-<li>To do <ul>
-<li>establish a finite quantity that replaces M$\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot m_{\mathscr{H}}\cdot exp(-2\epsilon^2N)$</li>
-<li>justify the feasibility of learning for infinite M</li>
-<li>study $m_{\mathscr{H}} $to understand its trade-off for ‘right’$\mathscr{H}$,just like M</li>
-</ul>
-</li>
-</ul>
-<h1 id="Effective-Number-of-Lines"><a href="#Effective-Number-of-Lines" class="headerlink" title="Effective Number of Lines"></a>Effective Number of Lines</h1><h2 id="Where-Did-M-Come-From"><a href="#Where-Did-M-Come-From" class="headerlink" title="Where Did M Come From"></a>Where Did <em>M</em> Come From</h2><p>The BAD event ：uniform bound fail$\rightarrow$ M$\approx\infty$</p>
-<h2 id="Where-Did-Uniform-Bound-Fail"><a href="#Where-Did-Uniform-Bound-Fail" class="headerlink" title="Where Did Uniform Bound Fail"></a>Where Did Uniform Bound Fail</h2><p>overlapping for similar hypotheses</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190509150052.png"></p>
-<p>union bound over-estimating</p>
-<p><strong>To acoount for overlap,can we group similar hypotheses by kind?</strong></p>
-<h2 id="How-Many-Lines-Are-There"><a href="#How-Many-Lines-Are-There" class="headerlink" title="How Many Lines Are There?"></a>How Many Lines Are There?</h2><p>In 2D,we can get smaller than $2^N$lines</p>
-<h2 id="Effective-Number-of-Lines-1"><a href="#Effective-Number-of-Lines-1" class="headerlink" title="Effective Number of Lines"></a>Effective Number of Lines</h2><p>maximun kind of lines with respect to N inputs $x_1$,$x_2$,…..,$x_N$</p>
-<p>$\iff$==effctive number of lines==</p>
-<p>In 2D,the effective number of lines</p>
-<ul>
-<li><p>must be $\leq 2^N$</p>
-</li>
-<li><p>finite ‘grouping’ of infinitely-many lines $\in H$</p>
-</li>
-<li><p>wish:</p>
-<p>$\mathbb{P}[|E_{in}(g)-E_{out}(g)|&gt;\epsilon]\leq 2 \cdot effctive(N)\cdot exp(-2\epsilon^2N)$</p>
-</li>
-</ul>
-<p>If </p>
-<ol>
-<li><p>effective(N) can replace M and </p>
-</li>
-<li><p>effective(N) $\ll 2^N$</p>
-<p>==learning possible with infinitie lines==</p>
-</li>
-</ol>
-<h1 id="Effective-Number-of-Hypotheses"><a href="#Effective-Number-of-Hypotheses" class="headerlink" title="Effective Number of Hypotheses"></a>Effective Number of Hypotheses</h1><h2 id="Dichotomies-Mini-hypotheses"><a href="#Dichotomies-Mini-hypotheses" class="headerlink" title="Dichotomies:Mini-hypotheses"></a>Dichotomies:Mini-hypotheses</h2><h1 id="Break-Points"><a href="#Break-Points" class="headerlink" title="Break Points"></a>Break Points</h1>
+# Recap and Preview
+
+## Recap: The ‘Statistical’ Learning Flow
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/1554528606498.png)
+
+
+## Two Central Questions
+
+1\. can we make sure that $E_{out}(g)$ is close enough to $E_{in}(g)$?
+
+2\. can we make $E_{in}(g)$ small enough?
+
+$\Rightarrow$ What role does $\underbrace{M}\\{|\mathscr{H}|}$ play for the two questions?
+
+##　Trade-off on *M
+
+| small M                                             | large M                                            |
+| --------------------------------------------------- | -------------------------------------------------- |
+| 1\. Yes $\mathbb{P}[BAD]\leq2\cdot M\cdot exp(...)$ | 1\. No!$\mathbb{P}[BAD]\leq2\cdot M\cdot exp(...)$ |
+| 2\. $\color{Maroon}No!$,two few choices             | 2\. Yes!many choices                               |
+
+using the right M is important
+
+## Preview
+
+- Know: $\mathbb{P}[|E_{in}(g)-E_{out}(g)|>\epsilon]\leq 2 \cdot M\cdot exp(-2\epsilon^2N)$
+- To do 
+  - establish a finite quantity that replaces M$\mathbb{P}[|E_{in}(g)-E_{out}(g)|>\epsilon]\leq 2 \cdot m_{\mathscr{H}}\cdot exp(-2\epsilon^2N)$
+  - justify the feasibility of learning for infinite M
+  - study $m_{\mathscr{H}} $to understand its trade-off for ‘right’$\mathscr{H}$,just like M
+
+# Effective Number of Lines
+
+## Where Did *M* Come From
+
+The BAD event ：uniform bound fail$\rightarrow$ M$\approx\infty$
+
+## Where Did Uniform Bound Fail
+
+overlapping for similar hypotheses
+
+![](https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190509150052.png)
+
+union bound over-estimating
+
+**To acoount for overlap,can we group similar hypotheses by kind?**
+
+## How Many Lines Are There?
+
+In 2D,we can get smaller than $2^N$lines
+
+## Effective Number of Lines
+
+maximun kind of lines with respect to N inputs $x_1$,$x_2$,.....,$x_N$
+
+$\iff$==effctive number of lines==
+
+In 2D,the effective number of lines
+
+- must be $\leq 2^N$
+
+- finite ‘grouping’ of infinitely-many lines $\in H$
+
+- wish:
+
+  $\mathbb{P}[|E_{in}(g)-E_{out}(g)|>\epsilon]\leq 2 \cdot effctive(N)\cdot exp(-2\epsilon^2N)$
+
+If 
+
+1. effective(N) can replace M and 
+
+2. effective(N) $\ll 2^N$
+
+   ==learning possible with infinitie lines==
+
+# Effective Number of Hypotheses
+
+
+
+## Dichotomies:Mini-hypotheses
+
+# Break Points
+
+
+
+
     </div>
 
     

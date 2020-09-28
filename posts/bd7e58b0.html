@@ -22,19 +22,19 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="There are five main data fusion approaches according to ‘Spatio-temporal fusion for remote sensing data: an overview and new benchmark’. Here I will read the STARFM.">
+  <meta name="description" content="There are five main data fusion approaches according to &#39;Spatio-temporal fusion for remote sensing data: an overview and new benchmark&#39;. Here I will read the STARFM.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Data fusion series note 1">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/bd7e58b0.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="There are five main data fusion approaches according to ‘Spatio-temporal fusion for remote sensing data: an overview and new benchmark’. Here I will read the STARFM.">
+<meta property="og:description" content="There are five main data fusion approaches according to &#39;Spatio-temporal fusion for remote sensing data: an overview and new benchmark&#39;. Here I will read the STARFM.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-07-15T13:52:41.000Z">
 <meta property="article:modified_time" content="2020-07-15T14:27:51.000Z">
 <meta property="article:author" content="周大侠">
+<meta property="article:tag" content="Data Fusion">
 <meta property="article:tag" content="paper reading">
 <meta property="article:tag" content="Research Basis">
-<meta property="article:tag" content="Data Fusion">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://lifeodyssey.github.io/posts/bd7e58b0.html">
@@ -172,7 +172,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -184,7 +184,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Weight-function-based-methods-STARFM"><span class="nav-number">1.</span> <span class="nav-text">Weight function-based methods: STARFM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-Requirement"><span class="nav-number">1.1.</span> <span class="nav-text">Data Requirement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Performance"><span class="nav-number">1.2.</span> <span class="nav-text">Performance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theoretical-Basis"><span class="nav-number">1.3.</span> <span class="nav-text">Theoretical Basis</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Basic-Equations"><span class="nav-number">1.3.1.</span> <span class="nav-text">Basic Equations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Implementation-Considerations"><span class="nav-number">1.4.</span> <span class="nav-text">Implementation Considerations</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-weight-spatial-information"><span class="nav-number">1.4.1.</span> <span class="nav-text">How to weight spatial information</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Spectrally-Similar-Neighbor-Pixels"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Spectrally Similar Neighbor Pixels</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Combined-Weighting-Function"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">Combined Weighting Function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Sample-Filtering"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">Sample Filtering</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Following-methods"><span class="nav-number">1.5.</span> <span class="nav-text">Following methods</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -316,76 +315,204 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>There are five main data fusion approaches according to ‘Spatio-temporal fusion for remote sensing data: an overview and new benchmark’. Here I will read the STARFM.</p>
+        
+There are five main data fusion approaches according to 'Spatio-temporal fusion for remote sensing data: an overview and new benchmark'. Here I will read the STARFM.
+
 <a id="more"></a>
 
-<h1 id="Weight-function-based-methods-STARFM"><a href="#Weight-function-based-methods-STARFM" class="headerlink" title="Weight function-based methods: STARFM"></a>Weight function-based methods: STARFM</h1><p>The spatial and temporal adaptive reflectance fusion model (STARFM) is the first weight function-based STF method developed in the literature. This method first assumes that all the pixels in the coarse images are pure. It uses a weighted strategy to add the reflectance changes between two coarse images to the prior fine image so as to predict the target image. STARFM has been shown to be able to capture phenological changes. However, its performance in highly heterogeneous landscapes and in the task of capturing land-cover changes is limited.</p>
-<h2 id="Data-Requirement"><a href="#Data-Requirement" class="headerlink" title="Data Requirement"></a>Data Requirement</h2><p>(MODIS and Landsat)Their orbital parameters are equal, and as such the viewing (near-nadir) and solar geometries are close to those of the corresponding Landsat acquisition.</p>
-<h2 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h2><p>The STARFM has been tested over forested areas, cropland regions, and heterogeneous mixtures of crop and forest. Results show that the STARFM can capture phenology changes precisely, although the accuracy depends on the characteristic patch size of the landscape.</p>
-<h2 id="Theoretical-Basis"><a href="#Theoretical-Basis" class="headerlink" title="Theoretical Basis"></a>Theoretical Basis</h2><p>Assumptions</p>
-<ol>
-<li>Neglecting geolocation errors and differences in atmospheric correction</li>
-<li>MODIS surface reflectance $M(x_i,y_j,t_k)$ has been previously georeferenced and super sampled to the resolution and bounds of the Landsat surface reflectance image $L(x_i,y_j,t_k) $and thus shares the same image size, pixel size, and coordinate system. </li>
-<li>if MODIS and Landsat surface reflectance are equal at a given time, then these values should be equal for the prediction date.</li>
-<li>If the MODIS surface reflectance is constant over time, then the Landsat surface reflectance should not change as well.</li>
-</ol>
-<h3 id="Basic-Equations"><a href="#Basic-Equations" class="headerlink" title="Basic Equations"></a>Basic Equations</h3><p>Assumption 1</p>
-<p>A heterogeneous coarse-resolution pixel at date <em>t</em> and surface reflectance ($C_t$) can be aggregated from finer resolution homogeneous pixels of surface reflectance $F^i_t$ and percentage coverage $A^i_t$ according to<br>$$<br>C_t=\sum(F^i_t*A^i_t)\tag{1}<br>$$</p>
-<p>where $i$ refers to the spatial index (location) of the fine- resolution pixel.</p>
-<p>The key to finding an approximate solution is to find spectrally similar homogeneous neighboring pixels.</p>
-<p>For a homogenous pixel at a coarser MODIS resolution, the surface reflectance measured by Landsat data can be ex- pressed as<br>$$<br>L(x_i,y_i,t_k)=M(x_i,y_i,t_i)+\varepsilon_k \tag{2}<br>$$<br>where $(x_i,y_j)$ is a given pixel location for both Landsat and MODIS images, $t_k$ is the acquisition date for both MODIS and Landsat data, and $ε_k$ represents the difference between observed MODIS and Landsat surface reflectance (caused by differing bandwidth and solar geometry).</p>
-<p>Assumption 2</p>
-<p>Suppose we have n pairs input of $L(x_i,y_j,t_k) $and $M(x_i,y_j,t_k)$ and each pair is acquired on the same date, where $k ∈ [1,n]$. The daily MODIS surface reflectance $M(x_i,y_j,t_0)$ at date $t_0$ is also a known value among inputs, then the predicted Landsat surface reflectance at date $t_0$ is<br>$$<br>L(x_i,y_j,t_0)= M(x_i,y_j,t_0)+ ε_0. \tag{3}<br>$$<br>Suppose the ground coverage type and system errors at pixel$(x_i,y_j)$ does not change over prediction date $t_0$ and the date $t_k$, we will have $ε_0 = ε_k$ and thus<br>$$<br>L(x_i,y_j,t_0)= M(x_i,y_j,t_0)+ L(x_i,y_j,t_k) −M(x_i,y_j,t_k).\tag{4}<br>$$<br>Such ideal situation cannot be satisfied from MODIS  and Landsat observations. Their relationships are complicated by several factors:</p>
-<ol>
-<li>MODIS observation is not a homogeneous pixel and may include mixed land-cover types when considered at Landsat spatial resolution</li>
-<li>Land cover may change from one type to another type during the prediction period</li>
-<li>Land-cover status (phenology) and solar geometry bidirectional reflectance distribution function (BRDF) changes will alter the reflectance from prediction date $t_0$ to date $t_k$.</li>
-</ol>
-<p>By introducing additional information from neighboring pixels, we compute the surface reflectance for the central pixel at date t0 with a weighting function<br>$$<br>L (x_{w/2},y_{w/2},t_0) = \sum_{i=1}^{w} \sum_{j=1}^{w} \sum_{k=1}^{w}<br>W_{ijk}×(M(x_i,y_j,t_0)+ L(x_i,y_j,t_k) −M(x_i,y_j,t_k))\tag{5}<br>$$<br>where $w$ is the searching window size and $(x_{w/2},y_{w/2})$ is the central pixel of this moving window. </p>
-<p>To ensure that the right information from neighbor pixels is used, only spectrally similar (i.e., from the same spectral class) and cloud-free pixels from Landsat surface reflectance within the moving window are used to compute the reflectance.</p>
-<p>The weight $W_{ijk}$ determines how much each neighboring<br>pixel contributes to the estimated reflectance of the central pixel. It is very important and is determined by three measures as follows.</p>
-<ol>
-<li><p>Spectral difference between MODIS and ETM+ data at a given location is<br>$$<br>S_{ijk} = |L(x_i,y_j,t_k) −M(x_i,y_j,t_k)| .\tag{6}<br>$$<br>A smaller value of $S_{ijk}$ implies that the fine spatial resolution pixel has closer spectral features to the averaged surrounding pixels; thus, the change at fine resolution should be comparable to that of the averaged surrounding pixels. Therefore, the pixel’s reflectance should be assigned a higher weight in (5).</p>
-<p>A3</p>
-</li>
-<li><p>Temporal difference between the input and the predicted MODIS data is<br>$$<br>T_{ijk} = |M(x_i,y_j,t_k) −M(x_i,y_j,t_0)|\tag{7}<br>$$<br>This metric measures changes occurring between the prediction and the acquisition dates. A smaller $T_{ijk}$ means less vegetation change between time $t_k$ and $t_0$; thus, the pixel should be assigned a higher weight.</p>
-<p>A4</p>
-<p>if changes are too subtle to be detected by the MODIS observation, this algorithm will not be able to predict any change when synthesizing the fine resolution imagery. Also, there may be situations where the STARFM algorithm cannot detect changes when two contradicting changes occur within a coarse-resolution pixel simultaneously and compensate for each other.</p>
-</li>
-<li><p>Location distance between central pixel $(x_{w/2},y_{w/2})$ and candidate pixel $(x_i,y_j)$ at date $t_k$ is<br>$$<br>d_{ijk} = \sqrt{(x_{w/2} − x_i )^2 + (y_{w/2} − y_j)^2}<br>$$<br>The spatial similarity is normally better for a closer pixel; thus, the closer candidate should be assigned a higher weight.</p>
-</li>
-</ol>
-<h2 id="Implementation-Considerations"><a href="#Implementation-Considerations" class="headerlink" title="Implementation Considerations"></a>Implementation Considerations</h2><h3 id="How-to-weight-spatial-information"><a href="#How-to-weight-spatial-information" class="headerlink" title="How to weight spatial information"></a>How to weight spatial information</h3><h4 id="Spectrally-Similar-Neighbor-Pixels"><a href="#Spectrally-Similar-Neighbor-Pixels" class="headerlink" title="Spectrally Similar Neighbor Pixels"></a>Spectrally Similar Neighbor Pixels</h4><p>The spectral similarity ensures that the correct spectral information is used from fine-resolution neighboring pixels: Unsupervised classification and using thresholds in surface reflectance directly. STARFM use the second approach. </p>
-<p>“the purpose of the search process is to find pixels within the local moving window that are spectrally similar to the central pixel. Each central pixel becomes the center of the class, and the rules used to determine spectral similarity become local rules and thus vary from pixel to pixel. In contrast to the traditional classification, which applies the same classification rules over the whole region, our search process (second approach) will not be able to produce a unique classification map over the study area.”</p>
-<h4 id="Combined-Weighting-Function"><a href="#Combined-Weighting-Function" class="headerlink" title="Combined Weighting Function"></a>Combined Weighting Function</h4><p>Based one these assumptions:</p>
-<ol>
-<li>coarse-resolution homogeneous pixels provide identical temporal changes as fine-resolution observations from the same spectral class</li>
-<li>observations with less change from the prediction date provide better information for the prediction date</li>
-<li>more proximal neighboring pixels normally provide better information for prediction.</li>
-</ol>
-<p>The final step is to combine these independent factors to create an ideal weight function that blends both temporal and spatial information</p>
-<p>First, convert the actual distance to a relative distance through the function<br>$$<br>D_{ijk} =1.0+ d_{ijk}/A\tag{9}<br>$$<br>where $A$ is a constant that defines the relative importance of the spatial distance to the spectral and temporal distance.</p>
-<p>The relative distance $D_ijk$ within searching area “$w$” changes from 1to $[1 + (1/<br>\sqrt2) ∗ (w/A)]$. A smaller value of $A$ gives a larger dynamic range of $D_{ijk}$.</p>
-<p>The combined spectral, temporal, and spatial distance can be computed with<br>$$<br>C_{ijk} = S_{ijk} ∗ T_{ijk} ∗ D_{ijk}\tag{10}<br>$$<br>or in a logistic formula to make it less sensitive to the spectral differences<br>$$<br>C_{ijk} =ln(S_{ijk} ∗ B +1) ∗ ln(T_{ijk} ∗ B +1) ∗ D_{ijk}\tag{11}<br>$$<br>where $B$ is a scale factor (equal to 10 000 when using MODIS or LEDAPS reflectance products, which linearly scale reflectance from 0 to 10 000).</p>
-<p>We use a normalized reverse distance as the weight function</p>
-<p>$$<br>W_{ijk} =(1/C_{ijk}) /\sum_{i=1}^{w}\sum_{j=1}^{w}\sum_{k=1}^{n}(1/C_{ijk}).\tag{12}<br>$$</p>
-<p>If the MODIS surface reflectance does not change, we have<br>$M(x_i,y_j,t_k)= M(x_i,y_j,t_0)$, then $T_{ijk} =0$ and $C_{ijk} =0$, and weight $W_{ijk}$ is set to the maximum value. The predicted surface reflectance for central pixel of the moving window is then</p>
-<p>$$<br>L (x_{w/2},y_{w/2},t_0) = M(x_i,y_j,t_0).<br>$$</p>
-<p>This satisfies our other basic assumption: if MODIS and Landsat surface reflectance are equal at date $t_k$, then they should be equal at date$ t_0$</p>
-<h4 id="Sample-Filtering"><a href="#Sample-Filtering" class="headerlink" title="Sample Filtering"></a>Sample Filtering</h4><p>Additional filtering processes will then be applied to the candidates to remove poor- quality observations. </p>
-<ol>
-<li><p>All poor-quality data are excluded from candidates according to the QA layer in the Landsat and MODIS surface reflectance products</p>
-</li>
-<li><p>Neighbor pixels are filtered out if they cannot provide better spectral and spatial information than the central pixel of the moving window</p>
-<p>A good candidate should satisfy the following condition:<br>$$<br>S_{ijk} &lt; max (|L(x_{w/2},y_{w/2},t_k) −M(x_{w/2},y_{w/2},t_k)|)\tag{13}<br>$$<br>and<br>$$<br>T_{ijk} &lt; max(|M(x_{w/2},y_{w/2},t_k) −M(x_{w/2},y_{w/2},t_0)|) \tag{14}<br>$$</p>
-</li>
-</ol>
-<p>Suppose we know that the uncertainties from Landsat and MODIS surface reflectance are $\sigma_l$ and $\sigma_m$, respectively. All surface reflectance measurements are independent. The uncertainty for the spectral difference (6) between MODIS and ETM+ is<br>$$<br>\sigma_{lm} = \sqrt{\sigma_l^2+\sigma_m^2}<br>$$<br>The uncertainty for temporal difference (7) between two MODIS inputs is<br>$$<br>\sigma_{mm} = \sqrt{\sigma_m^2+\sigma_m^2}=\sqrt{2}*\sigma_m<br>$$<br>Considering the uncertainties in the candidate selection, (12)can be revised as</p>
-<p>$$<br>S_{ijk}&lt; max(|{L(x_{w/2},y_{w/2},t_k)−M(x_{w/2},y_{w/2},t_k)}<br>+σ_{lm}\tag{15}<br>$$</p>
-<p>and(13)can be revised as</p>
-<p>$$<br>T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\tag{16}<br>$$</p>
-<h2 id="Following-methods"><a href="#Following-methods" class="headerlink" title="Following methods"></a>Following methods</h2><p><a target="_blank" rel="noopener" href="http://www.chen-lab.club/?page_id=11432">http://www.chen-lab.club/?page_id=11432</a></p>
-<p>ESTARFM,IFSDAF</p>
+# Weight function-based methods: STARFM
+
+The spatial and temporal adaptive reflectance fusion model (STARFM) is the first weight function-based STF method developed in the literature. This method first assumes that all the pixels in the coarse images are pure. It uses a weighted strategy to add the reflectance changes between two coarse images to the prior fine image so as to predict the target image. STARFM has been shown to be able to capture phenological changes. However, its performance in highly heterogeneous landscapes and in the task of capturing land-cover changes is limited.
+
+## Data Requirement
+
+(MODIS and Landsat)Their orbital parameters are equal, and as such the viewing (near-nadir) and solar geometries are close to those of the corresponding Landsat acquisition.
+
+## Performance
+
+The STARFM has been tested over forested areas, cropland regions, and heterogeneous mixtures of crop and forest. Results show that the STARFM can capture phenology changes precisely, although the accuracy depends on the characteristic patch size of the landscape.
+
+## Theoretical Basis
+
+Assumptions
+
+1. Neglecting geolocation errors and differences in atmospheric correction
+2. MODIS surface reflectance $M(x_i,y_j,t_k)$ has been previously georeferenced and super sampled to the resolution and bounds of the Landsat surface reflectance image $L(x_i,y_j,t_k) $and thus shares the same image size, pixel size, and coordinate system. 
+3. if MODIS and Landsat surface reflectance are equal at a given time, then these values should be equal for the prediction date.
+4. If the MODIS surface reflectance is constant over time, then the Landsat surface reflectance should not change as well.
+
+
+
+### Basic Equations
+
+Assumption 1
+
+A heterogeneous coarse-resolution pixel at date *t* and surface reflectance ($C_t$) can be aggregated from finer resolution homogeneous pixels of surface reflectance $F^i_t$ and percentage coverage $A^i_t$ according to
+$$
+C_t=\sum(F^i_t*A^i_t)\tag{1}
+$$
+
+where $i$ refers to the spatial index (location) of the fine- resolution pixel.
+
+The key to finding an approximate solution is to find spectrally similar homogeneous neighboring pixels.
+
+For a homogenous pixel at a coarser MODIS resolution, the surface reflectance measured by Landsat data can be ex- pressed as
+$$
+L(x_i,y_i,t_k)=M(x_i,y_i,t_i)+\varepsilon_k \tag{2}
+$$
+where $(x_i,y_j)$ is a given pixel location for both Landsat and MODIS images, $t_k$ is the acquisition date for both MODIS and Landsat data, and $ε_k$ represents the difference between observed MODIS and Landsat surface reflectance (caused by differing bandwidth and solar geometry).
+
+Assumption 2
+
+Suppose we have n pairs input of $L(x_i,y_j,t_k) $and $M(x_i,y_j,t_k)$ and each pair is acquired on the same date, where $k ∈ [1,n]$. The daily MODIS surface reflectance $M(x_i,y_j,t_0)$ at date $t_0$ is also a known value among inputs, then the predicted Landsat surface reflectance at date $t_0$ is
+$$
+L(x_i,y_j,t_0)= M(x_i,y_j,t_0)+ ε_0. \tag{3}
+$$
+Suppose the ground coverage type and system errors at pixel$(x_i,y_j)$ does not change over prediction date $t_0$ and the date $t_k$, we will have $ε_0 = ε_k$ and thus
+$$
+L(x_i,y_j,t_0)= M(x_i,y_j,t_0)+ L(x_i,y_j,t_k) −M(x_i,y_j,t_k).\tag{4}
+$$
+Such ideal situation cannot be satisfied from MODIS  and Landsat observations. Their relationships are complicated by several factors:
+
+1. MODIS observation is not a homogeneous pixel and may include mixed land-cover types when considered at Landsat spatial resolution
+2. Land cover may change from one type to another type during the prediction period
+3. Land-cover status (phenology) and solar geometry bidirectional reflectance distribution function (BRDF) changes will alter the reflectance from prediction date $t_0$ to date $t_k$.
+
+By introducing additional information from neighboring pixels, we compute the surface reflectance for the central pixel at date t0 with a weighting function
+$$
+L (x_{w/2},y_{w/2},t_0) = \sum_{i=1}^{w} \sum_{j=1}^{w} \sum_{k=1}^{w}
+W_{ijk}×(M(x_i,y_j,t_0)+ L(x_i,y_j,t_k) −M(x_i,y_j,t_k))\tag{5}
+$$
+where $w$ is the searching window size and $(x_{w/2},y_{w/2})$ is the central pixel of this moving window. 
+
+To ensure that the right information from neighbor pixels is used, only spectrally similar (i.e., from the same spectral class) and cloud-free pixels from Landsat surface reflectance within the moving window are used to compute the reflectance.
+
+The weight $W_{ijk}$ determines how much each neighboring
+pixel contributes to the estimated reflectance of the central pixel. It is very important and is determined by three measures as follows.
+
+1. Spectral difference between MODIS and ETM+ data at a given location is
+   $$
+   S_{ijk} = |L(x_i,y_j,t_k) −M(x_i,y_j,t_k)| .\tag{6}
+   $$
+   A smaller value of $S_{ijk}$ implies that the fine spatial resolution pixel has closer spectral features to the averaged surrounding pixels; thus, the change at fine resolution should be comparable to that of the averaged surrounding pixels. Therefore, the pixel’s reflectance should be assigned a higher weight in (5).
+
+   A3
+
+2. Temporal difference between the input and the predicted MODIS data is
+   $$
+   T_{ijk} = |M(x_i,y_j,t_k) −M(x_i,y_j,t_0)|\tag{7}
+   $$
+   This metric measures changes occurring between the prediction and the acquisition dates. A smaller $T_{ijk}$ means less vegetation change between time $t_k$ and $t_0$; thus, the pixel should be assigned a higher weight.
+
+   A4
+
+   if changes are too subtle to be detected by the MODIS observation, this algorithm will not be able to predict any change when synthesizing the fine resolution imagery. Also, there may be situations where the STARFM algorithm cannot detect changes when two contradicting changes occur within a coarse-resolution pixel simultaneously and compensate for each other.
+
+3. Location distance between central pixel $(x_{w/2},y_{w/2})$ and candidate pixel $(x_i,y_j)$ at date $t_k$ is
+   $$
+   d_{ijk} = \sqrt{(x_{w/2} − x_i )^2 + (y_{w/2} − y_j)^2}
+   $$
+   The spatial similarity is normally better for a closer pixel; thus, the closer candidate should be assigned a higher weight.
+
+## Implementation Considerations
+
+### How to weight spatial information
+
+#### Spectrally Similar Neighbor Pixels
+
+The spectral similarity ensures that the correct spectral information is used from fine-resolution neighboring pixels: Unsupervised classification and using thresholds in surface reflectance directly. STARFM use the second approach. 
+
+"the purpose of the search process is to find pixels within the local moving window that are spectrally similar to the central pixel. Each central pixel becomes the center of the class, and the rules used to determine spectral similarity become local rules and thus vary from pixel to pixel. In contrast to the traditional classification, which applies the same classification rules over the whole region, our search process (second approach) will not be able to produce a unique classification map over the study area."
+
+#### Combined Weighting Function
+
+Based one these assumptions:
+
+1. coarse-resolution homogeneous pixels provide identical temporal changes as fine-resolution observations from the same spectral class
+2. observations with less change from the prediction date provide better information for the prediction date
+3. more proximal neighboring pixels normally provide better information for prediction.
+
+The final step is to combine these independent factors to create an ideal weight function that blends both temporal and spatial information
+
+First, convert the actual distance to a relative distance through the function
+$$
+D_{ijk} =1.0+ d_{ijk}/A\tag{9}
+$$
+where $A$ is a constant that defines the relative importance of the spatial distance to the spectral and temporal distance.
+
+The relative distance $D_ijk$ within searching area “$w$” changes from 1to $[1 + (1/
+\sqrt2) ∗ (w/A)]$. A smaller value of $A$ gives a larger dynamic range of $D_{ijk}$.
+
+The combined spectral, temporal, and spatial distance can be computed with
+$$
+C_{ijk} = S_{ijk} ∗ T_{ijk} ∗ D_{ijk}\tag{10}
+$$
+or in a logistic formula to make it less sensitive to the spectral differences
+$$
+C_{ijk} =ln(S_{ijk} ∗ B +1) ∗ ln(T_{ijk} ∗ B +1) ∗ D_{ijk}\tag{11}
+$$
+where $B$ is a scale factor (equal to 10 000 when using MODIS or LEDAPS reflectance products, which linearly scale reflectance from 0 to 10 000).
+
+We use a normalized reverse distance as the weight function
+
+$$
+W_{ijk} =(1/C_{ijk}) /\sum_{i=1}^{w}\sum_{j=1}^{w}\sum_{k=1}^{n}(1/C_{ijk}).\tag{12}
+$$
+
+If the MODIS surface reflectance does not change, we have
+$M(x_i,y_j,t_k)= M(x_i,y_j,t_0)$, then $T_{ijk} =0$ and $C_{ijk} =0$, and weight $W_{ijk}$ is set to the maximum value. The predicted surface reflectance for central pixel of the moving window is then
+
+$$
+L (x_{w/2},y_{w/2},t_0) = M(x_i,y_j,t_0).
+$$
+
+This satisfies our other basic assumption: if MODIS and Landsat surface reflectance are equal at date $t_k$, then they should be equal at date$ t_0$
+
+#### Sample Filtering
+
+Additional filtering processes will then be applied to the candidates to remove poor- quality observations. 
+
+1. All poor-quality data are excluded from candidates according to the QA layer in the Landsat and MODIS surface reflectance products
+
+2. Neighbor pixels are filtered out if they cannot provide better spectral and spatial information than the central pixel of the moving window
+
+   A good candidate should satisfy the following condition:
+   $$
+   S_{ijk} < max (|L(x_{w/2},y_{w/2},t_k) −M(x_{w/2},y_{w/2},t_k)|)\tag{13}
+   $$
+   and
+   $$
+   T_{ijk} < max(|M(x_{w/2},y_{w/2},t_k) −M(x_{w/2},y_{w/2},t_0)|) \tag{14}
+   $$
+   
+
+Suppose we know that the uncertainties from Landsat and MODIS surface reflectance are $\sigma_l$ and $\sigma_m$, respectively. All surface reflectance measurements are independent. The uncertainty for the spectral difference (6) between MODIS and ETM+ is
+$$
+\sigma_{lm} = \sqrt{\sigma_l^2+\sigma_m^2}
+$$
+The uncertainty for temporal difference (7) between two MODIS inputs is
+$$
+\sigma_{mm} = \sqrt{\sigma_m^2+\sigma_m^2}=\sqrt{2}*\sigma_m
+$$
+Considering the uncertainties in the candidate selection, (12)can be revised as
+
+$$
+S_{ijk}< max(|{L(x_{w/2},y_{w/2},t_k)−M(x_{w/2},y_{w/2},t_k)}
++σ_{lm}\tag{15}
+$$
+
+and(13)can be revised as
+
+$$
+T_{ijk} <max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\tag{16}
+$$
+
+## Following methods
+
+http://www.chen-lab.club/?page_id=11432
+
+ESTARFM,IFSDAF
+
 
     </div>
 
@@ -412,9 +539,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
+              <a href="/tags/Data-Fusion/" rel="tag"># Data Fusion</a>
               <a href="/tags/paper-reading/" rel="tag"># paper reading</a>
               <a href="/tags/Research-Basis/" rel="tag"># Research Basis</a>
-              <a href="/tags/Data-Fusion/" rel="tag"># Data Fusion</a>
           </div>
 
         

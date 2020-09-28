@@ -172,7 +172,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -184,7 +184,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Hypothesis-Set"><span class="nav-number">1.</span> <span class="nav-text">Perceptron Hypothesis Set</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-Simple-Hypothesis-Set-the-%E2%80%98Perceptron%E2%80%99"><span class="nav-number">1.1.</span> <span class="nav-text">A Simple Hypothesis Set:the ‘Perceptron’</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vector-Form-of-Perceptron-Hypothesis"><span class="nav-number">1.2.</span> <span class="nav-text">Vector Form of Perceptron Hypothesis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Perceptrons-in-R-2"><span class="nav-number">1.3.</span> <span class="nav-text">Perceptrons in $R^2$</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Learning-Algorithm-PLA"><span class="nav-number">2.</span> <span class="nav-text">Perceptron Learning Algorithm (PLA)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Select-g-from-H"><span class="nav-number">2.1.</span> <span class="nav-text">Select g from H</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Perceptron-Learning-Algorithm"><span class="nav-number">2.2.</span> <span class="nav-text">Perceptron Learning Algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pratical-implementation-of-PLA"><span class="nav-number">2.3.</span> <span class="nav-text">Pratical implementation of PLA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cyclic-PLA"><span class="nav-number">2.3.1.</span> <span class="nav-text">Cyclic PLA</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Some-Remaning-issues-of-PLA"><span class="nav-number">2.4.</span> <span class="nav-text">Some Remaning issues of PLA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Learning-g-approx-f"><span class="nav-number">2.4.1.</span> <span class="nav-text">Learning:$g\approx f$ ?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Guarantee-of-PLA"><span class="nav-number">3.</span> <span class="nav-text">Guarantee of PLA</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linear-Separability"><span class="nav-number">3.1.</span> <span class="nav-text">Linear Separability</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PLA-Fact-w-t-Gets-More-Aligned-with-w-f"><span class="nav-number">3.2.</span> <span class="nav-text">PLA Fact: $w_t$Gets More Aligned with $w_f$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PLA-fact-w-t-Does-Not-Grow-Too-Fast"><span class="nav-number">3.3.</span> <span class="nav-text">PLA fact: $w_t$ Does Not Grow Too Fast</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Novikoff-theorem"><span class="nav-number">3.4.</span> <span class="nav-text">Novikoff  theorem</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Non-Separable-Data"><span class="nav-number">4.</span> <span class="nav-text">Non-Separable Data</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#More-about-PLA"><span class="nav-number">4.1.</span> <span class="nav-text">More about PLA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Learning-with-Noisy-Data"><span class="nav-number">4.2.</span> <span class="nav-text">Learning with Noisy Data</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Line-with-Noise-Tolerance"><span class="nav-number">4.3.</span> <span class="nav-text">Line with Noise Tolerance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pocket-Algorithm"><span class="nav-number">4.4.</span> <span class="nav-text">Pocket Algorithm</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">5.</span> <span class="nav-text">Summary</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -315,96 +314,190 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Learning to Answer Yes/No</p>
+        
+
+Learning to Answer Yes/No
 <a id="more"></a>
 
-<h1 id="Perceptron-Hypothesis-Set"><a href="#Perceptron-Hypothesis-Set" class="headerlink" title="Perceptron Hypothesis Set"></a>Perceptron Hypothesis Set</h1><p>Example:Credit Approval Problem Revisited</p>
-<h2 id="A-Simple-Hypothesis-Set-the-‘Perceptron’"><a href="#A-Simple-Hypothesis-Set-the-‘Perceptron’" class="headerlink" title="A Simple Hypothesis Set:the ‘Perceptron’"></a>A Simple Hypothesis Set:the ‘Perceptron’</h2><ul>
-<li><p>For <strong>x</strong>=$(x_1,x_2,…,x_d)$ ‘feature of customer’,compute a weighted’score’ and</p>
-<p>&lt;center&gt; $approve \quad credit\quad if \sum_{i=1}^{d} w_i x_i&gt;threshold$&lt;center&gt;</p>
-<p>&lt;center&gt; $deny \quad credit\quad if \sum_{i=1}^{d} w_i x_i&lt;threshold$&lt;center&gt;</p>
-</li>
-<li><p>$y:{+1(good),-1(bad)}$,0 ignored-linear formula$h\in H$are</p>
-<p>&lt;center&gt;$h(x)=sign((\sum_{i=i}^{d}w_i x_i)-threshold)$&lt;center&gt;</p>
-</li>
-</ul>
-<p>this is called’<strong>perceptron</strong>‘hypothesis histroically</p>
-<h2 id="Vector-Form-of-Perceptron-Hypothesis"><a href="#Vector-Form-of-Perceptron-Hypothesis" class="headerlink" title="Vector Form of Perceptron Hypothesis"></a>Vector Form of Perceptron Hypothesis</h2><p>$$<br>\begin{split}<br>h(x)&amp;=sign((\sum_{i=1}^{d}w_i x_i)-threshold)\</p>
-<pre><code>&amp;=sign((\sum_&#123;i=1&#125;^&#123;d&#125;w_i x_i)+\underbrace&#123;(threshold)&#125;_&#123;w_0&#125;\cdot\underbrace&#123;(+1)&#125;_&#123;x_0&#125;)\\
+# Perceptron Hypothesis Set
 
-&amp;=sign(sum_&#123;i=0&#125;^&#123;d&#125;w_i x_i)\\
-&amp;=sign(W^T x)</code></pre>
-<p>\end{split}<br>$$</p>
-<ul>
-<li>each’tall’<strong>w</strong> represents a hypothesis <em>h</em> &amp;is multiplied with ‘tall’ <strong>x</strong>——will use tall versions to simplify notation</li>
-</ul>
-<p>Q:What does <em>h</em> look like</p>
-<h2 id="Perceptrons-in-R-2"><a href="#Perceptrons-in-R-2" class="headerlink" title="Perceptrons in $R^2$"></a>Perceptrons in $R^2$</h2><p><strong>perceptrons$\Leftrightarrow$linear(binary) classifiers</strong></p>
-<h1 id="Perceptron-Learning-Algorithm-PLA"><a href="#Perceptron-Learning-Algorithm-PLA" class="headerlink" title="Perceptron Learning Algorithm (PLA)"></a>Perceptron Learning Algorithm (PLA)</h1><h2 id="Select-g-from-H"><a href="#Select-g-from-H" class="headerlink" title="Select g from H"></a>Select <em>g</em> from H</h2><ul>
-<li>want: g$\approx$f(hard when f unkown)</li>
-<li>almost necessary:g$\approx$f on D,ideally $g(x_n)=f(x_n)=y_n$</li>
-<li>difficult:H is of infinite size</li>
-<li>idea: start from some $g_0$,and ‘correct’ its mistakes on D</li>
-</ul>
-<h2 id="Perceptron-Learning-Algorithm"><a href="#Perceptron-Learning-Algorithm" class="headerlink" title="Perceptron Learning Algorithm"></a>Perceptron Learning Algorithm</h2><p>For t=0,1,…</p>
-<p>1. find a mistake of $w_t$ called$(x_{n(t)},y_{n(t)})$</p>
-<p>sign$(W^{T}<em>t X</em>{n(t)})\not=y_{n(t)}$</p>
-<p>2. (try to) correct the mistake by</p>
-<p>$w_{t+1}\leftarrow w_t+y_{n(t)}x_{n(t)}$</p>
-<p>…until no more mistakes </p>
-<p>return last <strong>w</strong> (called $w_{PLA}$ )as <em>g</em></p>
-<p>My question:why determinant is like vector</p>
-<h2 id="Pratical-implementation-of-PLA"><a href="#Pratical-implementation-of-PLA" class="headerlink" title="Pratical implementation of PLA"></a>Pratical implementation of PLA</h2><h3 id="Cyclic-PLA"><a href="#Cyclic-PLA" class="headerlink" title="Cyclic PLA"></a>Cyclic PLA</h3><h2 id="Some-Remaning-issues-of-PLA"><a href="#Some-Remaning-issues-of-PLA" class="headerlink" title="Some Remaning issues of PLA"></a>Some Remaning issues of PLA</h2><p>###　Algorithmic:halt(no mistake)?</p>
-<ul>
-<li>naive cyclic:??</li>
-<li>random cyclic:??</li>
-<li>other variant:??</li>
-</ul>
-<h3 id="Learning-g-approx-f"><a href="#Learning-g-approx-f" class="headerlink" title="Learning:$g\approx f$ ?"></a>Learning:$g\approx f$ ?</h3><ul>
-<li>on D, if halt,yes(no mistake)</li>
-<li>outside D:??</li>
-<li>if not halting:??</li>
-</ul>
-<h1 id="Guarantee-of-PLA"><a href="#Guarantee-of-PLA" class="headerlink" title="Guarantee of PLA"></a>Guarantee of PLA</h1><h2 id="Linear-Separability"><a href="#Linear-Separability" class="headerlink" title="Linear Separability"></a>Linear Separability</h2><ul>
-<li>if PLA halts(i.e. no more mistakes),<br>(necessary condition)D allows some <strong>w</strong> to make no mistakes</li>
-<li>call such D linear separable</li>
-</ul>
-<h2 id="PLA-Fact-w-t-Gets-More-Aligned-with-w-f"><a href="#PLA-Fact-w-t-Gets-More-Aligned-with-w-f" class="headerlink" title="PLA Fact: $w_t$Gets More Aligned with $w_f$"></a>PLA Fact: $w_t$Gets More Aligned with $w_f$</h2><ul>
-<li><p>$w_f$ perfect hence every $x_n$ correctly away from line:<br>$y_{n(t)}w_f^T x_{n(t)}\ge \underset{n}{min}  y_{n(t)}w_f^T x_{n(t)}&gt;0$</p>
-</li>
-<li><p>$w_f^T w_t\uparrow$by updating with any$(x_{n(t)},y_{n(t)})$<br>$$<br>\begin{split}<br>w_f^Tw_{t+1}&amp;=w_f^T(w_t+y_{n(t)}x_{n(t)})\<br>&amp;\ge w_f^Tw_{t}+\underset{n}{min}  y_{n(t)}w_f^T x_{n(t)}\<br>&amp;&gt; w_f^Tw_{t}+0<br>\end{split}<br>$$</p>
-</li>
-</ul>
-<p>$w_t$ appears more algned with $w_f$</p>
-<p>Q:the length of vector</p>
-<h2 id="PLA-fact-w-t-Does-Not-Grow-Too-Fast"><a href="#PLA-fact-w-t-Does-Not-Grow-Too-Fast" class="headerlink" title="PLA fact: $w_t$ Does Not Grow Too Fast"></a>PLA fact: $w_t$ Does Not Grow Too Fast</h2><p>$w_t$ changed only when mistake</p>
-<p>$\Leftrightarrow sign(w_t^Tx_{n(t)})\not=y_{n(t)}\Leftrightarrow y_{n(t)}w_t^Tx_{n(t)}\le 0$</p>
-<ul>
-<li>mistake ‘limits’$||w_t||^2$ growth,even when updating with’longest’ $x_n$<br>$$<br>\begin{split}<br>||w_{t+1}||^2&amp;=||w_t+y_{n(t)}x_{n(t)}||^2\<br>&amp;=||w_t||^2+2y_{n(t)}w_t^Tx_{n(t)}+||y_{n(t)}x_{n(t)}||^2\<br>&amp;\le ||w_t||^2+0+||y_{n(t)}x_{n(t)}||^2\<br>&amp;\le||w_t||^2+\underset{n}{max}||y_nx_n||^2<br>\end{split}<br>$$</li>
-</ul>
-<p>start from $w_0=0$,after<em>T</em> mistake corrections,<br>$$<br>\frac{w_f^T\quad w_T}{||w_f||\quad||w_T||}\ge \sqrt{T}\cdot constant<br>$$</p>
-<h2 id="Novikoff-theorem"><a href="#Novikoff-theorem" class="headerlink" title="Novikoff  theorem"></a>Novikoff  theorem</h2><p>ref:Lihang<statistic learning approach>page 31</p>
-<p>设训练数据集<em>T</em>=${(x_1,y_1),(x_2,y_2),…,(x_N,y_N)}$是线性可分的，其中$x_i\in\mathcal{X}=R^n,y_i\in\mathcal{Y}={-1,+1},i=1,2,…,N$,则</p>
-<p>（1）存在满足条件$||\hat{w}<em>{opt}||=1$的超平面$\hat{w}</em>{opt}\cdot\hat{x}+b_{opt}=0$将训练数据集完全正确分开，且存在$\gamma&gt;0$，对所有$i=1,2,…,N$<br>$$<br>y_i(\hat{w}<em>{opt}\cdot\hat{x}_i)=y_i(\hat{w}</em>{opt}\cdot\hat{x}<em>i+b</em>{opt}\ge\gamma<br>$$</p>
-<p>(2)令$R=\underset{1\le i\le N}{max}||\hat{x}_i||$,则感知机算法在训练数据集上的误分类次数<em>k</em>满足不等式<br>$$<br>k\le (\frac{R}{\gamma})^2<br>$$</p>
-<h1 id="Non-Separable-Data"><a href="#Non-Separable-Data" class="headerlink" title="Non-Separable Data"></a>Non-Separable Data</h1><h2 id="More-about-PLA"><a href="#More-about-PLA" class="headerlink" title="More about PLA"></a>More about PLA</h2><p>CONS:maybe not’linnear separable’,and not fully sure how long halting takes</p>
-<h2 id="Learning-with-Noisy-Data"><a href="#Learning-with-Noisy-Data" class="headerlink" title="Learning with Noisy Data"></a>Learning with Noisy Data</h2><h2 id="Line-with-Noise-Tolerance"><a href="#Line-with-Noise-Tolerance" class="headerlink" title="Line with Noise Tolerance"></a>Line with Noise Tolerance</h2><p>NP-hard</p>
-<h2 id="Pocket-Algorithm"><a href="#Pocket-Algorithm" class="headerlink" title="Pocket Algorithm"></a>Pocket Algorithm</h2><p>Find the least mistakes until iterations</p>
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><ul>
-<li><p>Perceptron Hypothesis Set</p>
-<p>hyperplanes/linear classifiers in $\mathcal{R}^d$</p>
-</li>
-<li><p>Perceptron Learning Algorithm(PLA)</p>
-<p>correct mistakes and improve iteratively</p>
-</li>
-<li><p>Guarantee of PLA</p>
-<p>no mistake eventually if linear separable</p>
-</li>
-<li><p>Non-Separable Data</p>
-<p>hold somewhat’best’weights in pocket</p>
-</li>
-</ul>
+Example:Credit Approval Problem Revisited
 
+## A Simple Hypothesis Set:the 'Perceptron'
+
+- For **x**=$(x_1,x_2,...,x_d)$ 'feature of customer',compute a weighted'score' and
+
+  \<center\> $approve \quad credit\quad if \sum_{i=1}^{d} w_i x_i>threshold$\<center\>
+
+  <center\> $deny \quad credit\quad if \sum_{i=1}^{d} w_i x_i<threshold$\<center\>
+
+- $y:\{+1(good),-1(bad)\}$,0 ignored-linear formula$h\in H$are
+
+  \<center\>$h(x)=sign((\sum_{i=i}^{d}w_i x_i)-threshold)$\<center\>
+
+this is called'**perceptron**'hypothesis histroically
+
+## Vector Form of Perceptron Hypothesis
+
+$$
+\begin{split}
+h(x)&=sign((\sum_{i=1}^{d}w_i x_i)-threshold)\\
+   
+    &=sign((\sum_{i=1}^{d}w_i x_i)+\underbrace{(threshold)}_{w_0}\cdot\underbrace{(+1)}_{x_0})\\
+   
+    &=sign(sum_{i=0}^{d}w_i x_i)\\
+    &=sign(W^T x)
+\end{split}
+$$
+
+- each'tall'**w** represents a hypothesis *h* &is multiplied with 'tall' **x**——will use tall versions to simplify notation
+
+Q:What does *h* look like
+
+## Perceptrons in $R^2$
+
+**perceptrons$\Leftrightarrow$linear(binary) classifiers**
+
+# Perceptron Learning Algorithm (PLA)
+
+## Select *g* from H
+
+- want: g$\approx$f(hard when f unkown)
+- almost necessary:g$\approx$f on D,ideally $g(x_n)=f(x_n)=y_n$
+- difficult:H is of infinite size
+- idea: start from some $g_0$,and 'correct' its mistakes on D
+
+## Perceptron Learning Algorithm
+
+For t=0,1,...
+
+1\. find a mistake of $w_t$ called$(x_{n(t)},y_{n(t)})$
+
+sign$(W^{T}_t X_{n(t)})\not=y_{n(t)}$
+
+2\. (try to) correct the mistake by
+
+$w_{t+1}\leftarrow w_t+y_{n(t)}x_{n(t)}$
+
+...until no more mistakes 
+
+return last **w** (called $w_{PLA}$ )as *g*
+
+My question:why determinant is like vector
+
+## Pratical implementation of PLA
+
+### Cyclic PLA
+## Some Remaning issues of PLA
+###　Algorithmic:halt(no mistake)?
+- naive cyclic:??
+- random cyclic:??
+- other variant:??
+
+### Learning:$g\approx f$ ?
+- on D, if halt,yes(no mistake)
+- outside D:??
+- if not halting:??
+
+# Guarantee of PLA
+## Linear Separability
+
+- if PLA halts(i.e. no more mistakes),
+(necessary condition)D allows some **w** to make no mistakes
+- call such D linear separable
+
+## PLA Fact: $w_t$Gets More Aligned with $w_f$
+
+- $w_f$ perfect hence every $x_n$ correctly away from line:
+  $y_{n(t)}w_f^T x_{n(t)}\ge \underset{n}{min}  y_{n(t)}w_f^T x_{n(t)}>0$
+
+- $w_f^T w_t\uparrow$by updating with any$(x_{n(t)},y_{n(t)})$
+  $$
+  \begin{split}
+  w_f^Tw_{t+1}&=w_f^T(w_t+y_{n(t)}x_{n(t)})\\
+  &\ge w_f^Tw_{t}+\underset{n}{min}  y_{n(t)}w_f^T x_{n(t)}\\
+  &> w_f^Tw_{t}+0
+  \end{split}
+  $$
+
+
+$w_t$ appears more algned with $w_f$
+
+Q:the length of vector
+
+## PLA fact: $w_t$ Does Not Grow Too Fast
+
+
+
+$w_t$ changed only when mistake
+
+$\Leftrightarrow sign(w_t^Tx_{n(t)})\not=y_{n(t)}\Leftrightarrow y_{n(t)}w_t^Tx_{n(t)}\le 0$
+
+- mistake ‘limits’$||w_t||^2$ growth,even when updating with’longest’ $x_n$
+  $$
+  \begin{split}
+  ||w_{t+1}||^2&=||w_t+y_{n(t)}x_{n(t)}||^2\\
+  &=||w_t||^2+2y_{n(t)}w_t^Tx_{n(t)}+||y_{n(t)}x_{n(t)}||^2\\
+  &\le ||w_t||^2+0+||y_{n(t)}x_{n(t)}||^2\\
+  &\le||w_t||^2+\underset{n}{max}||y_nx_n||^2
+  \end{split}
+  $$
+  
+
+start from $w_0=0$,after*T* mistake corrections,
+$$
+\frac{w_f^T\quad w_T}{||w_f||\quad||w_T||}\ge \sqrt{T}\cdot constant
+$$
+
+## Novikoff  theorem
+
+ref:Lihang<statistic learning approach>page 31
+
+设训练数据集*T*=${(x_1,y_1),(x_2,y_2),...,(x_N,y_N)}$是线性可分的，其中$x_i\in\mathcal{X}=R^n,y_i\in\mathcal{Y}={-1,+1},i=1,2,...,N$,则
+
+（1）存在满足条件$||\hat{w}_{opt}||=1$的超平面$\hat{w}_{opt}\cdot\hat{x}+b_{opt}=0$将训练数据集完全正确分开，且存在$\gamma>0$，对所有$i=1,2,...,N$
+$$
+y_i(\hat{w}_{opt}\cdot\hat{x}_i)=y_i(\hat{w}_{opt}\cdot\hat{x}_i+b_{opt}\ge\gamma
+$$
+
+(2)令$R=\underset{1\le i\le N}{max}||\hat{x}_i||$,则感知机算法在训练数据集上的误分类次数*k*满足不等式
+$$
+k\le (\frac{R}{\gamma})^2
+$$
+
+# Non-Separable Data
+
+## More about PLA
+
+CONS:maybe not’linnear separable’,and not fully sure how long halting takes
+
+## Learning with Noisy Data
+
+## Line with Noise Tolerance
+
+NP-hard
+
+## Pocket Algorithm
+
+Find the least mistakes until iterations
+
+# Summary
+
+- Perceptron Hypothesis Set
+
+  hyperplanes/linear classifiers in $\mathcal{R}^d$
+
+- Perceptron Learning Algorithm(PLA)
+
+  correct mistakes and improve iteratively
+
+- Guarantee of PLA
+
+  no mistake eventually if linear separable
+
+- Non-Separable Data
+
+  hold somewhat’best’weights in pocket
     </div>
 
     

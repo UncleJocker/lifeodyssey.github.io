@@ -22,18 +22,18 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="Annotated Bibliography 2020 9.28-10.4 I will try to read three or four papers every week and update my annotation">
+  <meta name="description" content="Annotated Bibliography 2020 9.28-10.4  I will try to read three or four papers every week and update my annotation">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Annotated Bibliography 2020 9.28-10.4">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/e4bb9d98.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="Annotated Bibliography 2020 9.28-10.4 I will try to read three or four papers every week and update my annotation">
+<meta property="og:description" content="Annotated Bibliography 2020 9.28-10.4  I will try to read three or four papers every week and update my annotation">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-28T03:42:16.000Z">
 <meta property="article:modified_time" content="2020-09-28T10:57:29.700Z">
 <meta property="article:author" content="周大侠">
-<meta property="article:tag" content="Data Fusion">
 <meta property="article:tag" content="Remote Sensing">
+<meta property="article:tag" content="Data Fusion">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="https://lifeodyssey.github.io/posts/e4bb9d98.html">
@@ -171,7 +171,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -183,7 +183,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Downscaling-MODIS-images-with-area-to-point-regression-kriging"><span class="nav-number">1.</span> <span class="nav-text">Downscaling MODIS images with area-to-point regression kriging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Method-description"><span class="nav-number">1.1.</span> <span class="nav-text">Method description</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem-description"><span class="nav-number">1.1.1.</span> <span class="nav-text">Problem description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Regression"><span class="nav-number">1.1.2.</span> <span class="nav-text">Regression</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ATPK"><span class="nav-number">1.1.3.</span> <span class="nav-text">ATPK</span></a></li></ol></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -315,27 +314,87 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Annotated Bibliography 2020 9.28-10.4</p>
-<p>I will try to read three or four papers every week and update my annotation</p>
+        
+Annotated Bibliography 2020 9.28-10.4
+
+I will try to read three or four papers every week and update my annotation
+
 <a id="more"></a>
 
-<h1 id="Downscaling-MODIS-images-with-area-to-point-regression-kriging"><a href="#Downscaling-MODIS-images-with-area-to-point-regression-kriging" class="headerlink" title="Downscaling MODIS images with area-to-point regression kriging"></a>Downscaling MODIS images with area-to-point regression kriging</h1><p>Wang, Qunming, et al. “Downscaling MODIS images with area-to-point regression kriging.” <em>Remote Sensing of Environment</em> 166 (2015): 191-204.</p>
-<h2 id="Method-description"><a href="#Method-description" class="headerlink" title="Method description"></a>Method description</h2><h3 id="Problem-description"><a href="#Problem-description" class="headerlink" title="Problem description"></a>Problem description</h3><p>$Z_V^l(x_i)$: random variable of pixel V centered at xi (i =1,…,M,where M is the number of pixels) in coarse band l.</p>
-<p>$Z_v^k(x_j)$: random variable of pixel v centered at xj (j =1,…,MF^2,where F is the spatial resolution (zoom) ratio between the coarse and fine bands) in fine band k </p>
-<p>The notations v and Vdenote fine and coarse pixels, respectively.</p>
-<p>Aim:predict $Z_v^k(x)$ for all fine pixels in all coarse bands. </p>
-<p>Prediction:<br>$$<br>Z_v^l(x)=Z_{v1}^l(x)+Z_{v2}^l(x)<br>$$<br>$Z_{v1}^l(x)$: regression</p>
-<p>$Z_{v2}^l(x)$ : ATPK</p>
-<h3 id="Regression"><a href="#Regression" class="headerlink" title="Regression"></a>Regression</h3><p>For coarse band $Z_V^l$ , its corresponding fine band used as covariate is denoted as $Z_v^{lk}$</p>
-<p>The regression prediction $Z_{v1}^l(x)$ is calculated as<br>$$<br>Z_{v1}^l(x)=a_lZ_v^{lk}(x)+b_l<br>$$<br>Key issue is to estimate $a_l$ and $bl$</p>
-<p>The relationship in Eq. (2) is assumed to be uni- versal at different spatial resolutions, and the relationship built at coarse spatial resolutions can be applied at fine spatial resolution.</p>
-<p>Based on this hypothesis, we get Eq.(3):<br>$$<br>Z_V^l(x)=a_lZ_V^{lk}x+b_l<br>$$<br>in which $Z_V^{lk}$ is the coarse image produced by upscaling the ancillary fine<br>band $Z_v^{lk}$ to the same spatial resolution of the l-th coarse band, that is<br>$$<br>Z_V^{lk}=h_V^{l}(x)*Z_v^{lk}(x)=\int h_V^l(x-y)Z_v^{lk}(y)dy<br>$$<br>where $h_V^l (y)$ is the point spread function (PSF) for the l-th band and ∗ is<br>the convolution operator</p>
-<p>PSF:<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=Tkc_GOCjx7E">https://www.youtube.com/watch?v=Tkc_GOCjx7E</a></p>
-<p>ordinary least squares (OLS) is applied for estimate $a_l$ and $b_l$</p>
-<p>The ancillary information fromother data, such as elevation data and<br>field measurement correlated to the observation, can also be favorably incorporated in regression modeling. Given T groups of covariates, $Z_v<br>^t(x)(t =1,…,T)$, the regression prediction $Z_{v1} ^l (x)$in this more general case then becomes<br>$$<br>Z_{v1}^{l}(x)=\sum_{t=0}^Ta_{lt}Z_v^t(x),Z_{v}^{0}(x)=1\forall x<br>$$</p>
-<h3 id="ATPK"><a href="#ATPK" class="headerlink" title="ATPK"></a>ATPK</h3><p>Residuals, denoted as $Z_{V2}^l(x)$,from the regression process, that it,<br>$$<br>Z_{V2}^{l}(x)=Z_{V}^{l}-[a_l Z_V^{lk}(x)+b_l]<br>$$<br>The results ofregression cannot reproduce the spectral properties of<br>the observed coarse data. Thus, regression alone is not sufficient for downscaling. The residuals at fine spatial resolution should be compen- sated for the regression prediction to honor the spectral properties. In the proposed ATPRK approach, based on the strong assumption <strong>that the residual is an intrinsically stationary process</strong>, ATPK acts as the second phase to downscale the residuals $Z_{V2}^l (x)$to fine spatial resolution residuals $Z_{v2} ^l (x)$. </p>
-<p>Based on ATPK, the fine residual $Z_{v2} ^l (x)$ is a linear<br>combination of N coarse residuals of band l<br>$$<br>Z_{v2}^{l}(x)=\sum_{i=1}^{N}\lambda_i Z_{V2}^l(x_i),s.t.\sum_{i=1}^N\lambda_i=1<br>$$<br>in which $λ_i$ is theweight for the $i$ th residual of the coarse pixel centered at $x_i$.</p>
+# Downscaling MODIS images with area-to-point regression kriging
 
+Wang, Qunming, et al. "Downscaling MODIS images with area-to-point regression kriging." *Remote Sensing of Environment* 166 (2015): 191-204.
+
+## Method description
+
+### Problem description
+
+$Z_V^l(x_i)$: random variable of pixel V centered at xi (i =1,…,M,where M is the number of pixels) in coarse band l.
+
+$Z_v^k(x_j)$: random variable of pixel v centered at xj (j =1,…,MF^2,where F is the spatial resolution (zoom) ratio between the coarse and fine bands) in fine band k 
+
+The notations v and Vdenote fine and coarse pixels, respectively.
+
+Aim:predict $Z_v^k(x)$ for all fine pixels in all coarse bands. 
+
+Prediction:
+$$
+Z_v^l(x)=Z_{v1}^l(x)+Z_{v2}^l(x)
+$$
+$Z_{v1}^l(x)$: regression
+
+$Z_{v2}^l(x)$ : ATPK
+
+### Regression
+
+For coarse band $Z_V^l$ , its corresponding fine band used as covariate is denoted as $Z_v^{lk}$
+
+The regression prediction $Z_{v1}^l(x)$ is calculated as
+$$
+Z_{v1}^l(x)=a_lZ_v^{lk}(x)+b_l
+$$
+Key issue is to estimate $a_l$ and $bl$
+
+The relationship in Eq. (2) is assumed to be uni- versal at different spatial resolutions, and the relationship built at coarse spatial resolutions can be applied at fine spatial resolution.
+
+Based on this hypothesis, we get Eq.(3):
+$$
+Z_V^l(x)=a_lZ_V^{lk}x+b_l
+$$
+in which $Z_V^{lk}$ is the coarse image produced by upscaling the ancillary fine
+band $Z_v^{lk}$ to the same spatial resolution of the l-th coarse band, that is
+$$
+Z_V^{lk}=h_V^{l}(x)*Z_v^{lk}(x)=\int h_V^l(x-y)Z_v^{lk}(y)dy
+$$
+where $h_V^l (y)$ is the point spread function (PSF) for the l-th band and ∗ is
+the convolution operator
+
+PSF:https://www.youtube.com/watch?v=Tkc_GOCjx7E
+
+ordinary least squares (OLS) is applied for estimate $a_l$ and $b_l$
+
+The ancillary information fromother data, such as elevation data and
+field measurement correlated to the observation, can also be favorably incorporated in regression modeling. Given T groups of covariates, $Z_v
+^t(x)(t =1,…,T)$, the regression prediction $Z_{v1} ^l (x)$in this more general case then becomes
+$$
+Z_{v1}^{l}(x)=\sum_{t=0}^Ta_{lt}Z_v^t(x),Z_{v}^{0}(x)=1\forall x
+$$
+
+### ATPK
+
+Residuals, denoted as $Z_{V2}^l(x)$,from the regression process, that it,
+$$
+Z_{V2}^{l}(x)=Z_{V}^{l}-[a_l Z_V^{lk}(x)+b_l]
+$$
+The results ofregression cannot reproduce the spectral properties of
+the observed coarse data. Thus, regression alone is not sufficient for downscaling. The residuals at fine spatial resolution should be compen- sated for the regression prediction to honor the spectral properties. In the proposed ATPRK approach, based on the strong assumption **that the residual is an intrinsically stationary process**, ATPK acts as the second phase to downscale the residuals $Z_{V2}^l (x)$to fine spatial resolution residuals $Z_{v2} ^l (x)$. 
+
+Based on ATPK, the fine residual $Z_{v2} ^l (x)$ is a linear
+combination of N coarse residuals of band l
+$$
+Z_{v2}^{l}(x)=\sum_{i=1}^{N}\lambda_i Z_{V2}^l(x_i),s.t.\sum_{i=1}^N\lambda_i=1
+$$
+in which $λ_i$ is theweight for the $i$ th residual of the coarse pixel centered at $x_i$.
     </div>
 
     
@@ -361,8 +420,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Data-Fusion/" rel="tag"># Data Fusion</a>
               <a href="/tags/Remote-Sensing/" rel="tag"># Remote Sensing</a>
+              <a href="/tags/Data-Fusion/" rel="tag"># Data Fusion</a>
           </div>
 
         

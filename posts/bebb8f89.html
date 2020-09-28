@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+  </script>
+
+  <meta name="description" content="一些在读别人代码的时候发现自己还没有掌握的东西。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="plot">
+<meta property="og:url" content="https://lifeodyssey.github.io/posts/bebb8f89.html">
+<meta property="og:site_name" content="乔克叔叔的床边故事">
+<meta property="og:description" content="一些在读别人代码的时候发现自己还没有掌握的东西。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://matplotlib.org/_images/demo_gridspec01.png">
+<meta property="og:image" content="http://matplotlib.org/_images/demo_gridspec02.png">
+<meta property="og:image" content="http://matplotlib.org/_images/demo_gridspec03.png">
+<meta property="og:image" content="http://matplotlib.org/_images/demo_gridspec04.png">
+<meta property="og:image" content="http://matplotlib.org/_images/demo_gridspec06.png">
+<meta property="og:image" content="http://matplotlib.org/_images/demo_gridspec05.png">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg">
+<meta property="article:published_time" content="2020-08-20T12:34:59.000Z">
+<meta property="article:modified_time" content="2020-08-20T12:39:27.548Z">
+<meta property="article:author" content="周大侠">
+<meta property="article:tag" content="Research">
+<meta property="article:tag" content="python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://matplotlib.org/_images/demo_gridspec01.png">
+
+<link rel="canonical" href="https://lifeodyssey.github.io/posts/bebb8f89.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>plot | 乔克叔叔的床边故事</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="乔克叔叔的床边故事" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">乔克叔叔的床边故事</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#matplotlib-ticker"><span class="nav-number">1.</span> <span class="nav-text">matplotlib.ticker</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8D"><span class="nav-number">1.1.</span> <span class="nav-text">定位</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tick-locating"><span class="nav-number">1.1.1.</span> <span class="nav-text">Tick locating</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.2.</span> <span class="nav-text">格式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Tick-formatting"><span class="nav-number">1.2.1.</span> <span class="nav-text">Tick formatting</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#enumerate"><span class="nav-number">2.</span> <span class="nav-text">enumerate</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8F%8F%E8%BF%B0"><span class="nav-number">2.1.</span> <span class="nav-text">描述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">2.1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0"><span class="nav-number">2.1.2.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-number">2.1.3.</span> <span class="nav-text">返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.2.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%9A%84-for-%E5%BE%AA%E7%8E%AF"><span class="nav-number">2.2.1.</span> <span class="nav-text">普通的 for 循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#for-%E5%BE%AA%E7%8E%AF%E4%BD%BF%E7%94%A8-enumerate"><span class="nav-number">2.2.2.</span> <span class="nav-text">for 循环使用 enumerate</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#subplot2grid"><span class="nav-number">3.</span> <span class="nav-text">subplot2grid</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#subplot2grid%E5%9F%BA%E6%9C%AC%E7%A4%BA%E4%BE%8B"><span class="nav-number">3.1.</span> <span class="nav-text">subplot2grid基本示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GridSpec%E5%92%8CSubplotSpec"><span class="nav-number">3.2.</span> <span class="nav-text">GridSpec和SubplotSpec</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%83%E6%95%B4-GridSpec%E5%B8%83%E5%B1%80"><span class="nav-number">3.3.</span> <span class="nav-text">调整 GridSpec布局</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-SubplotSpec%E5%88%9B%E5%BB%BA-GridSpec"><span class="nav-number">3.4.</span> <span class="nav-text">使用 SubplotSpec创建 GridSpec</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8SubplotSpec%E5%88%9B%E5%BB%BA%E5%A4%8D%E6%9D%82%E5%B5%8C%E5%A5%97%E7%9A%84GridSpec"><span class="nav-number">3.5.</span> <span class="nav-text">使用SubplotSpec创建复杂嵌套的GridSpec</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E6%A0%BC%E5%B0%BA%E5%AF%B8%E5%8F%AF%E5%8F%98%E7%9A%84GridSpec"><span class="nav-number">3.6.</span> <span class="nav-text">网格尺寸可变的GridSpec</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#seaborn"><span class="nav-number">4.</span> <span class="nav-text">seaborn</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#lineplot"><span class="nav-number">4.1.</span> <span class="nav-text">lineplot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#heatmap"><span class="nav-number">4.2.</span> <span class="nav-text">heatmap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implot"><span class="nav-number">4.3.</span> <span class="nav-text">implot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#subplot-adjust"><span class="nav-number">4.4.</span> <span class="nav-text">subplot_adjust</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#plt-ax-fig"><span class="nav-number">5.</span> <span class="nav-text">plt&#x2F;ax&#x2F;fig</span></a></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">周大侠</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">35</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lifeodyssey" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lifeodyssey" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhenjiazhou0127@gmail.com" title="E-Mail → mailto:zhenjiazhou0127@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.researchgate.net/profile/Zhenjia_Zhou" title="Researchgate → https:&#x2F;&#x2F;www.researchgate.net&#x2F;profile&#x2F;Zhenjia_Zhou" rel="noopener" target="_blank"><i class="fa fa-researchgate fa-fw"></i>Researchgate</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/lifeodyssey" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lifeodyssey.github.io/posts/bebb8f89.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="周大侠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="乔克叔叔的床边故事">
+    </span>
+
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          plot
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-20 21:34:59 / Modified: 21:39:27" itemprop="dateCreated datePublished" datetime="2020-08-20T21:34:59+09:00">2020-08-20</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>一些在读别人代码的时候发现自己还没有掌握的东西。</p>
+<a id="more"></a>
+<h1 id="matplotlib-ticker"><a href="#matplotlib-ticker" class="headerlink" title="matplotlib.ticker"></a>matplotlib.ticker</h1><h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><h3 id="Tick-locating"><a href="#Tick-locating" class="headerlink" title="Tick locating"></a>Tick locating</h3><p>The Locator class is the base class for all tick locators. The locators handle autoscaling of the view limits based on the data limits, and the choosing of tick locations. A useful semi-automatic tick locator is <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a>. It is initialized with a base, e.g., 10, and it picks axis limits and ticks that are multiples of that base.</p>
+<p>The Locator subclasses defined here are</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.AutoLocator"><code>AutoLocator</code></a></p>
+<p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MaxNLocator"><code>MaxNLocator</code></a> with simple defaults. This is the default tick locator for most plotting.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MaxNLocator"><code>MaxNLocator</code></a></p>
+<p>Finds up to a max number of intervals with ticks at nice locations.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LinearLocator"><code>LinearLocator</code></a></p>
+<p>Space ticks evenly from min to max.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogLocator"><code>LogLocator</code></a></p>
+<p>Space ticks logarithmically from min to max.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a></p>
+<p>Ticks and range are a multiple of base; either integer or float.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.FixedLocator"><code>FixedLocator</code></a></p>
+<p>Tick locations are fixed.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.IndexLocator"><code>IndexLocator</code></a></p>
+<p>Locator for index plots (e.g., where <code>x = range(len(y))</code>).</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.NullLocator"><code>NullLocator</code></a></p>
+<p>No ticks.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.SymmetricalLogLocator"><code>SymmetricalLogLocator</code></a></p>
+<p>Locator for use with with the symlog norm; works like <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogLocator"><code>LogLocator</code></a> for the part outside of the threshold and adds 0 if inside the limits.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogitLocator"><code>LogitLocator</code></a></p>
+<p>Locator for logit scaling.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.OldAutoLocator"><code>OldAutoLocator</code></a></p>
+<p>Choose a <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.MultipleLocator"><code>MultipleLocator</code></a> and dynamically reassign it for intelligent ticking during navigation.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.AutoMinorLocator"><code>AutoMinorLocator</code></a></p>
+<p>Locator for minor ticks when the axis is linear and the major ticks are uniformly spaced. Subdivides the major tick interval into a specified number of minor intervals, defaulting to 4 or 5 depending on the major interval.</p>
+</li>
+</ul>
+<p>There are a number of locators specialized for date locations - see the <code>dates</code> module.</p>
+<p>You can define your own locator by deriving from Locator. You must override the <code>__call__</code> method, which returns a sequence of locations, and you will probably want to override the autoscale method to set the view limits from the data limits.</p>
+<p>If you want to override the default locator, use one of the above or a custom locator and pass it to the x or y axis instance. The relevant methods are:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ax.xaxis.set_major_locator(xmajor_locator)</span><br><span class="line">ax.xaxis.set_minor_locator(xminor_locator)</span><br><span class="line">ax.yaxis.set_major_locator(ymajor_locator)</span><br><span class="line">ax.yaxis.set_minor_locator(yminor_locator)</span><br></pre></td></tr></table></figure>
+<p>The default minor locator is <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.NullLocator"><code>NullLocator</code></a>, i.e., no minor ticks on by default.</p>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><h3 id="Tick-formatting"><a href="#Tick-formatting" class="headerlink" title="Tick formatting"></a>Tick formatting</h3><p>Tick formatting is controlled by classes derived from Formatter. The formatter operates on a single tick value and returns a string to the axis.</p>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.NullFormatter"><code>NullFormatter</code></a></p>
+<p>No labels on the ticks.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.IndexFormatter"><code>IndexFormatter</code></a></p>
+<p>Set the strings from a list of labels.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.FixedFormatter"><code>FixedFormatter</code></a></p>
+<p>Set the strings manually for the labels.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.FuncFormatter"><code>FuncFormatter</code></a></p>
+<p>User defined function sets the labels.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.StrMethodFormatter"><code>StrMethodFormatter</code></a></p>
+<p>Use string <a target="_blank" rel="noopener" href="https://docs.python.org/3/library/functions.html#format"><code>format</code></a> method.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.FormatStrFormatter"><code>FormatStrFormatter</code></a></p>
+<p>Use an old-style sprintf format string.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.ScalarFormatter"><code>ScalarFormatter</code></a></p>
+<p>Default formatter for scalars: autopick the format string.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogFormatter"><code>LogFormatter</code></a></p>
+<p>Formatter for log axes.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogFormatterExponent"><code>LogFormatterExponent</code></a></p>
+<p>Format values for log axis using <code>exponent = log_base(value)</code>.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogFormatterMathtext"><code>LogFormatterMathtext</code></a></p>
+<p>Format values for log axis using <code>exponent = log_base(value)</code> using Math text.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogFormatterSciNotation"><code>LogFormatterSciNotation</code></a></p>
+<p>Format values for log axis using scientific notation.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.LogitFormatter"><code>LogitFormatter</code></a></p>
+<p>Probability formatter.</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.EngFormatter"><code>EngFormatter</code></a></p>
+<p>Format labels in engineering notation</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html#matplotlib.ticker.PercentFormatter"><code>PercentFormatter</code></a></p>
+<p>Format labels as a percentage</p>
+</li>
+</ul>
+<p>You can derive your own formatter from the Formatter base class by simply overriding the <code>__call__</code> method. The formatter class has access to the axis view and data limits.</p>
+<p>To control the major and minor tick label formats, use one of the following methods:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ax.xaxis.set_major_formatter(xmajor_formatter)</span><br><span class="line">ax.xaxis.set_minor_formatter(xminor_formatter)</span><br><span class="line">ax.yaxis.set_major_formatter(ymajor_formatter)</span><br><span class="line">ax.yaxis.set_minor_formatter(yminor_formatter)</span><br></pre></td></tr></table></figure>
+<p>See <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/gallery/ticks_and_spines/major_minor_demo.html">Major and minor ticks</a> for an example of setting major and minor ticks. See the <a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/dates_api.html#module-matplotlib.dates"><code>matplotlib.dates</code></a> module for more information and examples of using date locators and formatters.</p>
+<p>参考</p>
+<p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html">https://matplotlib.org/3.1.1/api/ticker_api.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://matplotlib.org/3.1.1/api/ticker_api.html">https://matplotlib.org/3.1.1/api/ticker_api.html</a></p>
+<h1 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate"></a>enumerate</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
+<p>Python 2.3. 以上版本可用，2.6 添加 start 参数。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>以下是 enumerate() 方法的语法:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">enumerate(sequence, [start=<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>sequence — 一个序列、迭代器或其他支持迭代对象。</li>
+<li>start — 下标起始位置。</li>
+</ul>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>返回 enumerate(枚举) 对象。</p>
+<hr>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>以下展示了使用 enumerate() 方法的实例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string">&#x27;Winter&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(seasons))</span><br><span class="line">[(<span class="number">0</span>, <span class="string">&#x27;Spring&#x27;</span>), (<span class="number">1</span>, <span class="string">&#x27;Summer&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;Fall&#x27;</span>), (<span class="number">3</span>, <span class="string">&#x27;Winter&#x27;</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(seasons, start=<span class="number">1</span>))       <span class="comment"># 下标从 1 开始</span></span><br><span class="line">[(<span class="number">1</span>, <span class="string">&#x27;Spring&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;Summer&#x27;</span>), (<span class="number">3</span>, <span class="string">&#x27;Fall&#x27;</span>), (<span class="number">4</span>, <span class="string">&#x27;Winter&#x27;</span>)]</span><br></pre></td></tr></table></figure>
+<h3 id="普通的-for-循环"><a href="#普通的-for-循环" class="headerlink" title="普通的 for 循环"></a>普通的 for 循环</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;i = <span class="number">0</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>seq = [<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> element <span class="keyword">in</span> seq:</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> i, seq[i]</span><br><span class="line"><span class="meta">... </span>    i +=<span class="number">1</span></span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="number">0</span> one</span><br><span class="line"><span class="number">1</span> two</span><br><span class="line"><span class="number">2</span> three</span><br></pre></td></tr></table></figure>
+<h3 id="for-循环使用-enumerate"><a href="#for-循环使用-enumerate" class="headerlink" title="for 循环使用 enumerate"></a>for 循环使用 enumerate</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;seq = [<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> i, element <span class="keyword">in</span> enumerate(seq):</span><br><span class="line"><span class="meta">... </span>    <span class="keyword">print</span> i, element</span><br><span class="line"><span class="meta">... </span></span><br><span class="line"><span class="number">0</span> one参考</span><br><span class="line"><span class="number">1</span> two</span><br><span class="line"><span class="number">2</span> three</span><br></pre></td></tr></table></figure>
+<p>参考</p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-func-enumerate.html">https://www.runoob.com/python/python-func-enumerate.html</a></p>
+<h1 id="subplot2grid"><a href="#subplot2grid" class="headerlink" title="subplot2grid"></a>subplot2grid</h1><p>这个可以自定义子图的位置，并且可以跨越原来大小。</p>
+<p>原文<a target="_blank" rel="noopener" href="https://wizardforcel.gitbooks.io/matplotlib-user-guide/content/3.3.html">https://wizardforcel.gitbooks.io/matplotlib-user-guide/content/3.3.html</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GridSpec</span><br></pre></td></tr></table></figure>
+<p>指定子图将放置的网格的几何位置。 需要设置网格的行数和列数。 子图布局参数（例如，左，右等）可以选择性调整。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SubplotSpec</span><br></pre></td></tr></table></figure>
+<p>指定在给定<code>GridSpec</code>中的子图位置。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">subplot2grid</span><br></pre></td></tr></table></figure>
+<p>一个辅助函数，类似于<code>pyplot.subplot</code>，但是使用基于 0 的索引，并可使子图跨越多个格子。</p>
+<h2 id="subplot2grid基本示例"><a href="#subplot2grid基本示例" class="headerlink" title="subplot2grid基本示例"></a>subplot2grid基本示例</h2><p>要使用subplot2grid，你需要提供网格的几何形状和网格中子图的位置。 对于简单的单网格子图：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.subplot2grid((<span class="number">2</span>,<span class="number">2</span>),(<span class="number">0</span>, <span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<p>等价于：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.subplot(<span class="number">2</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">       nRow=<span class="number">2</span>, nCol=<span class="number">2</span></span><br><span class="line">(<span class="number">0</span>,<span class="number">0</span>) +-------+-------+</span><br><span class="line">      |   <span class="number">1</span>   |       |</span><br><span class="line">      +-------+-------+</span><br><span class="line">      |       |       |</span><br><span class="line">      +-------+-------+</span><br></pre></td></tr></table></figure>
+<p>要注意不像<code>subplot</code>，<code>gridspec</code>中的下标从 0 开始。</p>
+<p>为了创建跨越多个格子的子图，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ax2 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>, <span class="number">0</span>), colspan=<span class="number">2</span>)</span><br><span class="line">ax3 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>, <span class="number">2</span>), rowspan=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>例如，下列命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ax1 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">0</span>,<span class="number">0</span>), colspan=<span class="number">3</span>)</span><br><span class="line">ax2 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>,<span class="number">0</span>), colspan=<span class="number">2</span>)</span><br><span class="line">ax3 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>, <span class="number">2</span>), rowspan=<span class="number">2</span>)</span><br><span class="line">ax4 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">2</span>, <span class="number">0</span>))</span><br><span class="line">ax5 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">2</span>, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+<p>会创建：</p>
+<p><img src="http://matplotlib.org/_images/demo_gridspec01.png" alt="img"></p>
+<h2 id="GridSpec和SubplotSpec"><a href="#GridSpec和SubplotSpec" class="headerlink" title="GridSpec和SubplotSpec"></a>GridSpec和SubplotSpec</h2><p>你可以显式创建<code>GridSpec</code>并用它们创建子图。</p>
+<p>例如，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ax = plt.subplot2grid((<span class="number">2</span>,<span class="number">2</span>),(<span class="number">0</span>, <span class="number">0</span>))</span><br></pre></td></tr></table></figure>
+<p>等价于：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec</span><br><span class="line">gs = gridspec.GridSpec(<span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">ax = plt.subplot(gs[<span class="number">0</span>, <span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+<p><code>gridspec</code>示例提供类似数组（一维或二维）的索引，并返回<code>SubplotSpec</code>实例。例如，使用切片来返回跨越多个格子的<code>SubplotSpec</code>实例。</p>
+<p>上面的例子会变成：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gs = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>, :])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>,:<span class="number">-1</span>])</span><br><span class="line">ax3 = plt.subplot(gs[<span class="number">1</span>:, <span class="number">-1</span>])</span><br><span class="line">ax4 = plt.subplot(gs[<span class="number">-1</span>,<span class="number">0</span>])</span><br><span class="line">ax5 = plt.subplot(gs[<span class="number">-1</span>,<span class="number">-2</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="http://matplotlib.org/_images/demo_gridspec02.png" alt="img"></p>
+<h2 id="调整-GridSpec布局"><a href="#调整-GridSpec布局" class="headerlink" title="调整 GridSpec布局"></a>调整 GridSpec布局</h2><p>在显式使用<code>GridSpec</code>的时候，你可以调整子图的布局参数，子图由<code>gridspec</code>创建。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gs1 = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">gs1.update(left=<span class="number">0.05</span>, right=<span class="number">0.48</span>, wspace=<span class="number">0.05</span>)</span><br></pre></td></tr></table></figure>
+<p>这类似于<code>subplots_adjust</code>，但是他只影响从给定<code>GridSpec</code>创建的子图。</p>
+<p>下面的代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gs1 = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">gs1.update(left=<span class="number">0.05</span>, right=<span class="number">0.48</span>, wspace=<span class="number">0.05</span>)</span><br><span class="line">ax1 = plt.subplot(gs1[:<span class="number">-1</span>, :])</span><br><span class="line">ax2 = plt.subplot(gs1[<span class="number">-1</span>, :<span class="number">-1</span>])</span><br><span class="line">ax3 = plt.subplot(gs1[<span class="number">-1</span>, <span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">gs2 = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">gs2.update(left=<span class="number">0.55</span>, right=<span class="number">0.98</span>, hspace=<span class="number">0.05</span>)</span><br><span class="line">ax4 = plt.subplot(gs2[:, :<span class="number">-1</span>])</span><br><span class="line">ax5 = plt.subplot(gs2[:<span class="number">-1</span>, <span class="number">-1</span>])</span><br><span class="line">ax6 = plt.subplot(gs2[<span class="number">-1</span>, <span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+<p>会产生</p>
+<p><img src="http://matplotlib.org/_images/demo_gridspec03.png" alt="img"></p>
+<h2 id="使用-SubplotSpec创建-GridSpec"><a href="#使用-SubplotSpec创建-GridSpec" class="headerlink" title="使用 SubplotSpec创建 GridSpec"></a>使用 SubplotSpec创建 GridSpec</h2><p>你可以从<code>SubplotSpec</code>创建<code>GridSpec</code>，其中它的布局参数设置为给定<code>SubplotSpec</code>的位置的布局参数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gs0 = gridspec.GridSpec(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">gs00 = gridspec.GridSpecFromSubplotSpec(<span class="number">3</span>, <span class="number">3</span>, subplot_spec=gs0[<span class="number">0</span>])</span><br><span class="line">gs01 = gridspec.GridSpecFromSubplotSpec(<span class="number">3</span>, <span class="number">3</span>, subplot_spec=gs0[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="http://matplotlib.org/_images/demo_gridspec04.png" alt="img"></p>
+<h2 id="使用SubplotSpec创建复杂嵌套的GridSpec"><a href="#使用SubplotSpec创建复杂嵌套的GridSpec" class="headerlink" title="使用SubplotSpec创建复杂嵌套的GridSpec"></a>使用SubplotSpec创建复杂嵌套的GridSpec</h2><p>这里有一个更复杂的嵌套<code>gridspec</code>的示例，我们通过在每个 3x3 内部网格中隐藏适当的脊线，在 4x4 外部网格的每个单元格周围放置一个框。</p>
+<p><img src="http://matplotlib.org/_images/demo_gridspec06.png" alt="img"></p>
+<h2 id="网格尺寸可变的GridSpec"><a href="#网格尺寸可变的GridSpec" class="headerlink" title="网格尺寸可变的GridSpec"></a>网格尺寸可变的GridSpec</h2><p>通常，<code>GridSpec</code>创建大小相等的网格。你可以调整行和列的相对高度和宽度，要注意绝对高度值是无意义的，有意义的只是它们的相对比值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gs = gridspec.GridSpec(<span class="number">2</span>, <span class="number">2</span>,</span><br><span class="line">                       width_ratios=[<span class="number">1</span>,<span class="number">2</span>],</span><br><span class="line">                       height_ratios=[<span class="number">4</span>,<span class="number">1</span>]</span><br><span class="line">                       )</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>])</span><br><span class="line">ax3 = plt.subplot(gs[<span class="number">2</span>])</span><br><span class="line">ax4 = plt.subplot(gs[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="http://matplotlib.org/_images/demo_gridspec05.png" alt="img"></p>
+<h1 id="seaborn"><a href="#seaborn" class="headerlink" title="seaborn"></a>seaborn</h1><p>seaborn是对matplotlib进一步的封装，简单点来说就是更简单了。</p>
+<p>官网<a target="_blank" rel="noopener" href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></p>
+<p>我这里放几个我感觉用得上的代码。</p>
+<h2 id="lineplot"><a href="#lineplot" class="headerlink" title="lineplot"></a>lineplot</h2><p>seaborn.lineplot(x=None, y=None, hue=None, size=None, style=None, data=None, palette=None, hue_order=None, hue_norm=None, sizes=None, size_order=None, size_norm=None, dashes=True, markers=None, style_order=None, units=None, estimator=’mean’, ci=95, n_boot=1000, seed=None, sort=True, err_style=’band’, err_kws=None, legend=’brief’, ax=None, **kwargs)</p>
+<p><a target="_blank" rel="noopener" href="https://seaborn.pydata.org/generated/seaborn.lineplot.html">https://seaborn.pydata.org/generated/seaborn.lineplot.html</a></p>
+<h2 id="heatmap"><a href="#heatmap" class="headerlink" title="heatmap"></a>heatmap</h2><p>seaborn.heatmap(data, vmin=None, vmax=None, cmap=None, center=None, robust=False, annot=None, fmt=’.2g’, annot_kws=None, linewidths=0, linecolor=’white’, cbar=True, cbar_kws=None, cbar_ax=None, square=False, xticklabels=’auto’, yticklabels=’auto’, mask=None, ax=None, **kwargs)</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35494575">https://zhuanlan.zhihu.com/p/35494575</a></p>
+<h2 id="implot"><a href="#implot" class="headerlink" title="implot"></a>implot</h2><p>eaborn.lmplot(<em>x</em>, <em>y</em>, <em>data</em>, <em>hue=None</em>, <em>col=None</em>, <em>row=None</em>, <em>palette=None</em>, <em>col_wrap=None</em>, <em>size=5</em>, <em>aspect=1</em>, <em>markers=’o’</em>, <em>sharex=True</em>, <em>sharey=True</em>, <em>hue_order=None</em>, <em>col_order=None</em>, <em>row_order=None</em>, <em>legend=True</em>, <em>legend_out=True</em>, <em>x_estimator=None</em>, <em>x_bins=None</em>, <em>x_ci=’ci’</em>, <em>scatter=True</em>, <em>fit_reg=True</em>, <em>ci=95</em>, <em>n_boot=1000</em>, <em>units=None</em>, <em>order=1</em>, <em>logistic=False</em>, <em>lowess=False</em>, <em>robust=False</em>, <em>logx=False</em>, <em>x_partial=None</em>, <em>y_partial=None</em>, <em>truncate=False</em>, <em>x_jitter=None</em>, <em>y_jitter=None</em>, <em>scatter_kws=None</em>, <em>line_kws=None</em>)</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25909753">https://zhuanlan.zhihu.com/p/25909753</a></p>
+<p>常见统计图片基本都可以在这里面看到</p>
+<p><a target="_blank" rel="noopener" href="https://seaborn.pydata.org/examples/index.html">https://seaborn.pydata.org/examples/index.html</a></p>
+<h2 id="subplot-adjust"><a href="#subplot-adjust" class="headerlink" title="subplot_adjust"></a>subplot_adjust</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">matplotlib.pyplot.subplots_adjust(*args, **kwargs)</span><br><span class="line">subplots_adjust(left=<span class="literal">None</span>, bottom=<span class="literal">None</span>, right=<span class="literal">None</span>, top=<span class="literal">None</span>,wspace=<span class="literal">None</span>, hspace=<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">left  = <span class="number">0.125</span>  <span class="comment"># 子图(subplot)距画板(figure)左边的距离</span></span><br><span class="line">right = <span class="number">0.9</span>    <span class="comment"># 右边</span></span><br><span class="line">bottom = <span class="number">0.1</span>   <span class="comment"># 底部</span></span><br><span class="line">top = <span class="number">0.9</span>      <span class="comment"># 顶部</span></span><br><span class="line">wspace = <span class="number">0.2</span>   <span class="comment"># 子图水平间距</span></span><br><span class="line">hspace = <span class="number">0.2</span>   <span class="comment"># 子图垂直间距</span></span><br></pre></td></tr></table></figure>
+<h1 id="plt-ax-fig"><a href="#plt-ax-fig" class="headerlink" title="plt/ax/fig"></a>plt/ax/fig</h1><p><img src="https://pic2.zhimg.com/80/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg" alt="img"></p>
+<p>尽量避免直接使用plt</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/93423829">https://zhuanlan.zhihu.com/p/93423829</a></p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>周大侠
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://lifeodyssey.github.io/posts/bebb8f89.html" title="plot">https://lifeodyssey.github.io/posts/bebb8f89.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/en" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Research/" rel="tag"># Research</a>
+              <a href="/tags/python/" rel="tag"># python</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/b1ef4fab.html" rel="prev" title="assert">
+      <i class="fa fa-chevron-left"></i> assert
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/720e5580.html" rel="next" title="python绘图基础">
+      python绘图基础 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2016 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">周大侠</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

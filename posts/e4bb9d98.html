@@ -31,7 +31,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://lifeodyssey.github.io/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00020930132948176.png">
 <meta property="article:published_time" content="2020-09-28T03:42:16.000Z">
-<meta property="article:modified_time" content="2020-09-30T06:37:49.845Z">
+<meta property="article:modified_time" content="2020-09-30T06:41:02.268Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Remote Sensing">
 <meta property="article:tag" content="Data Fusion">
@@ -302,7 +302,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-09-30 15:37:49" itemprop="dateModified" datetime="2020-09-30T15:37:49+09:00">2020-09-30</time>
+                <time title="Modified: 2020-09-30 15:41:02" itemprop="dateModified" datetime="2020-09-30T15:41:02+09:00">2020-09-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -348,12 +348,12 @@ Z_V^l(x)=a_lZ_V^{lk}x+b_l</script><p>in which $Z_V^{lk}$ is the coarse image pro
 Z_V^{lk}=h_V^{l}(x)*Z_v^{lk}(x)=\int h_V^l(x-y)Z_v^{lk}(y)dy</script><p>where $h_V^l (y)$ is the point spread function (PSF) for the l-th band and ∗ is<br>the convolution operator</p>
 <p>PSF:<span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1Ua2NfR09Dang3RQ==">https://www.youtube.com/watch?v=Tkc_GOCjx7E<i class="fa fa-external-link-alt"></i></span></p>
 <p>ordinary least squares (OLS) is applied for estimate $a_l$ and $b_l$</p>
-<p>The ancillary information fromother data, such as elevation data and<br>field measurement correlated to the observation, can also be favorably incorporated in regression modeling. Given T groups of covariates, $Z<em>v^t(x)(t =1,…,T)$, the regression prediction $Z</em>{v1} ^l (x)$in this more general case then becomes</p>
+<p>The ancillary information fromother data, such as elevation data and<br>field measurement correlated to the observation, can also be favorably incorporated in regression modeling. Given T groups of covariates, $Z<em>v^t(x)(t =1,…,T)$, the regression prediction $Z</em>{v1} ^l (x)$ in this more general case then becomes</p>
 <script type="math/tex; mode=display">
 Z_{v1}^{l}(x)=\sum_{t=0}^Ta_{lt}Z_v^t(x),Z_{v}^{0}(x)=1\forall x</script><h3 id="ATPK"><a href="#ATPK" class="headerlink" title="ATPK"></a>ATPK</h3><p>Residuals, denoted as $Z_{V2}^l(x)$,from the regression process, that it,</p>
 <script type="math/tex; mode=display">
 Z_{V2}^{l}(x)=Z_{V}^{l}-[a_l Z_V^{lk}(x)+b_l]</script><p>The results ofregression cannot reproduce the spectral properties of<br>the observed coarse data. Thus, regression alone is not sufficient for downscaling. The residuals at fine spatial resolution should be compen- sated for the regression prediction to honor the spectral properties. In the proposed ATPRK approach, based on the strong assumption <strong>that the residual is an intrinsically stationary process</strong>, ATPK acts as the second phase to downscale the residuals $Z<em>{V2}^l (x)$ to fine spatial resolution residuals $Z</em>{v2} ^l (x)$. </p>
-<p>Based on ATPK, the fine residual $Z_{v2} ^l (x)$ is a linear<br>combination of N coarse residuals of band l</p>
+<p>Based on ATPK, the fine residual $Z_{v2} ^l (x)$ is a linear combination of N coarse residuals of band l</p>
 <script type="math/tex; mode=display">
 Z_{v2}^{l}(x)=\sum_{i=1}^{N}\lambda_i Z_{V2}^l(x_i),s.t.\sum_{i=1}^N\lambda_i=1</script><p>in which $λ_i$ is theweight for the $i$ th residual of the coarse pixel centered at $x_i$.</p>
 <p>The $N$ coarse residuals are from the $N$ coarse pixels surrounding the pixel center at $x$,such as $N$=5×5 window of coarse pixels.</p>
@@ -388,7 +388,7 @@ C_{VV}^l(s)=C_{VV}^l(s)*h_V^l(s)*h_V^l(-s)</script><p>In Eq. (10), $−s$ means 
 <script type="math/tex; mode=display">
 h_V^l(x)=\begin{cases}\frac{1}{S_v},\quad if\quad x\in V(x)\\
 0, \quad otherwise
-\end{cases}</script><p>where $S<em>V$ is the size of pixel $V$,and $V(x)$ is the spatial support of pixel $V$ centered at $x$. If the area of pixel $v$ is defined as 1, then $S_V=F^2$.Given the PSF in Eq. (11), the computation of $C</em>{vV}^l (x, x<em>j)$and $C</em>{VV}^ l(x_i, x_j)$ are further simplified as </p>
+\end{cases}</script><p>where $S<em>V$ is the size of pixel $V$,and $V(x)$ is the spatial support of pixel $V$ centered at $x$. If the area of pixel $v$ is defined as 1, then $S_V=F^2$.Given the PSF in Eq. (11), the computation of $C</em>{vV}^l (x, x<em>j)$and $C</em>{VV}^l(x_i, x_j)$ are further simplified as </p>
 <script type="math/tex; mode=display">
 C_{vV}^l(x,x_j)=\frac{1}{S_V}\int_\limits{u\in V(x_j)}C_{vv}^l(\boldsymbol{x}-\boldsymbol{u})d\boldsymbol{u}=\frac{1}{F^2}\sum_{m=1}^{F^2}C_{vv}^{l}(S_m)</script><script type="math/tex; mode=display">
 C_{VV}^l(x_i,x_j)=\frac{1}{S_V}\int_\limits{u\in V(x_i)}C_{vV}^l(u,x_j)d\boldsymbol{u}\\

@@ -333,14 +333,21 @@
 
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/Remote-Sensing/</loc>
+    <loc>https://lifeodyssey.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/Data-Fusion/</loc>
+    <loc>https://lifeodyssey.github.io/tags/Cousera/</loc>
+    <lastmod>2020-09-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -368,21 +375,14 @@
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://lifeodyssey.github.io/tags/Remote-Sensing/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/Cousera/</loc>
-    <lastmod>2020-09-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/</loc>
+    <loc>https://lifeodyssey.github.io/tags/Data-Fusion/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -580,7 +580,7 @@
 
   
   <url>
-    <loc>https://lifeodyssey.github.io/categories/Annotated-Bibliography/</loc>
+    <loc>https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -594,7 +594,7 @@
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://lifeodyssey.github.io/categories/Annotated-Bibliography/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

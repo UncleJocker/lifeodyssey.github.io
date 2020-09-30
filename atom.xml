@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-09-30T02:48:02.760Z</updated>
+  <updated>2020-09-30T06:31:52.345Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,11 +21,12 @@
     <link href="https://lifeodyssey.github.io/posts/e4bb9d98.html"/>
     <id>https://lifeodyssey.github.io/posts/e4bb9d98.html</id>
     <published>2020-09-28T03:42:16.000Z</published>
-    <updated>2020-09-30T02:48:02.760Z</updated>
+    <updated>2020-09-30T06:31:52.345Z</updated>
     
     
     <summary type="html">&lt;p&gt;Annotated Bibliography 2020 9.28-10.4&lt;/p&gt;
-&lt;p&gt;I will try to read three or four papers every week and update my annotation&lt;/p&gt;</summary>
+&lt;p&gt;I will try to read three or four papers every week and update my annotation.&lt;/p&gt;
+&lt;p&gt;Update 2020 9.30: At least two paper.&lt;/p&gt;</summary>
     
     
     
@@ -196,7 +197,8 @@
     <updated>2020-08-07T12:45:24.000Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Python-Lambda&quot;&gt;&lt;a href=&quot;#Python-Lambda&quot; class=&quot;headerlink&quot; title=&quot;Python Lambda&quot;&gt;&lt;/a&gt;Python Lambda&lt;/h1&gt;&lt;p&gt;在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;python-lambda&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#python-lambda&quot;&gt;&lt;/a&gt; Python Lambda&lt;/h1&gt;
+&lt;p&gt;在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;lambda 函数是一种小的匿名函数。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;lambda 函数可接受任意数量的参数，但只能有一个表达式。&lt;/strong&gt;&lt;/p&gt;</summary>
     
@@ -241,7 +243,7 @@
     <updated>2020-07-20T04:16:14.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
     
     
     
@@ -307,7 +309,7 @@
     <updated>2020-05-18T05:33:42.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
     
     
     
@@ -451,7 +453,7 @@
     <updated>2020-02-09T06:28:49.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
     
     
     

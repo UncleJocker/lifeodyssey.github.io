@@ -333,6 +333,20 @@
 
   
   <url>
+    <loc>https://lifeodyssey.github.io/tags/Remote-Sensing/</loc>
+    <lastmod>2020-09-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/Data-Fusion/</loc>
+    <lastmod>2020-09-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lifeodyssey.github.io/tags/Automatic-Machine-Learning/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
@@ -348,20 +362,6 @@
   
   <url>
     <loc>https://lifeodyssey.github.io/tags/Undergraduate-Thesis/</loc>
-    <lastmod>2020-09-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/Remote-Sensing/</loc>
-    <lastmod>2020-09-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/Data-Fusion/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -580,14 +580,14 @@
 
   
   <url>
-    <loc>https://lifeodyssey.github.io/categories/Papers-And-Thesis/</loc>
+    <loc>https://lifeodyssey.github.io/categories/Annotated-Bibliography/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/categories/Annotated-Bibliography/</loc>
+    <loc>https://lifeodyssey.github.io/categories/Papers-And-Thesis/</loc>
     <lastmod>2020-09-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

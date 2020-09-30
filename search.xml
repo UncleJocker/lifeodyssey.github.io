@@ -1,30 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>自动机器学习代码详解</title>
-    <url>/posts/4668cbbb.html</url>
-    <content><![CDATA[<p>毕业论文基于auto-sklearn做了一些自动机器学习模型的应用，模型的原理可以点击<span class="exturl" data-url="aHR0cDovL2NvZGV3aXRoemhhbmd5aS5jb20vMjAxOC8wNy8yNi9BdXRvTUwv">这里<i class="fa fa-external-link-alt"></i></span>，我这儿讲一下我的代码怎么用，相当于是一个详细版的注释。</p>
-<p>代码地址见<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpZmVvZHlzc2V5L0FNRg==">https://github.com/lifeodyssey/AMF<i class="fa fa-external-link-alt"></i></span>。</p>
-<a id="more"></a>
-<p>进入到服务器amf目录下，输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> py3/bin/activate</span><br></pre></td></tr></table></figure>
-<p>之后每一行的开头会显示(py3)字样，即代表进入虚拟环境。</p>
-<p>之后直接输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python code.py</span><br></pre></td></tr></table></figure>
-<p>即可开始运行程序。</p>
-<p>以下是程序的详细说明，如果要修改代码，可以在服务器中直接使用vim进行修改，也可以在本地修改好之后用PSFTP推送到服务器上。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> autosklearn.regression</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment">#前面这四行是引入相应的环境包</span></span><br><span class="line">rawdata=pd.read_excel(<span class="string">&#x27;rawdata.xlsx&#x27;</span>)<span class="comment">#单引号输入要读入文件的路径，文件的格式参考服务器中的rawdata.xlsx</span></span><br><span class="line">Y=rawdata[[<span class="string">&#x27;cpue&#x27;</span>]]<span class="comment">#单引号内写要预测的变量名</span></span><br><span class="line"></span><br><span class="line">Y=np.log10(Y+<span class="number">1</span>)<span class="comment">#这里采用了对数变换，可以去掉</span></span><br><span class="line">X=rawdata[[<span class="string">&#x27;lon&#x27;</span>,<span class="string">&#x27;lat&#x27;</span>,<span class="string">&#x27;sst&#x27;</span>,<span class="string">&#x27;chla&#x27;</span>,<span class="string">&#x27;doy&#x27;</span>]]<span class="comment">#单引号内输入要使用的变量名</span></span><br><span class="line">x_train,x_test,y_train,y_test=train_test_split(X,Y,test_size=<span class="number">0.3</span>,random_state=<span class="number">7</span>)<span class="comment">#test size代表了测试集在整个数据集中的占比，这里选取的是0.3即30%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">automl = autosklearn.regression.AutoSklearnRegressor(</span><br><span class="line">    include_estimators=[<span class="string">&quot;random_forest&quot;</span>,<span class="string">&quot;decision_tree&quot;</span>,<span class="string">&quot;gradient_boosting&quot;</span>,<span class="string">&quot;xgradient_boosting&quot;</span>],</span><br><span class="line">    <span class="comment">#这里只放了几个我认为效果比较好的模型，模型种类参见https://github.com/automl/auto-sklearn/tree/master/autosklearn/pipeline/components/regression，如果想换用模型，把双引号内的名称更改即可；如果想删除或者添加，直接去掉相应的名称即可</span></span><br><span class="line">    exclude_estimators=<span class="literal">None</span>,</span><br><span class="line">    include_preprocessors=[<span class="string">&quot;no_preprocessing&quot;</span>, ],</span><br><span class="line">    exclude_preprocessors=<span class="literal">None</span>,</span><br><span class="line">    resampling_strategy=<span class="string">&#x27;cv&#x27;</span>,</span><br><span class="line">    resampling_strategy_arguments=&#123;<span class="string">&#x27;folds&#x27;</span>: <span class="number">10</span>&#125;,<span class="comment">#这里选了十折交叉验证来确定最优参数</span></span><br><span class="line">    )</span><br><span class="line">automl.fit(x_train, y_train.values.ravel())</span><br><span class="line"></span><br><span class="line">automl.sprint_statistics()</span><br><span class="line">automl.show_models()</span><br><span class="line">automl.refit(x_train, y_train.values.ravel())</span><br><span class="line"><span class="comment">#如果想输入新的自变量来做预测的话,将下面几句前面的#去除即可</span></span><br><span class="line"><span class="comment">#predata=pd.read_excel(&#x27;rawdata.xlsx&#x27;)#单引号内输入文件路径</span></span><br><span class="line"><span class="comment">#X=predata[[&#x27;lon&#x27;,&#x27;lat&#x27;,&#x27;sst&#x27;,&#x27;chla&#x27;,&#x27;doy&#x27;]]#单引号内输入选取的变量名</span></span><br><span class="line">y_pre = automl.predict(X)</span><br><span class="line">ypre=np.power(<span class="number">10</span>,ypre)<span class="number">-1</span><span class="comment">#变换回来</span></span><br><span class="line">ypre=pd.DataFrame(ypre)</span><br><span class="line">result=pd.concat([rawdata,ypre])<span class="comment">#如果输入新的自变量来做预测，将rawdata改为predata</span></span><br><span class="line">result.to_excel(<span class="string">&#x27;result.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Papers And Thesis</category>
-      </categories>
-      <tags>
-        <tag>Automatic Machine Learning</tag>
-        <tag>Fishery Forecasting</tag>
-        <tag>Undergraduate Thesis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Annotated Bibliography 2020 9.28-10.4</title>
     <url>/posts/e4bb9d98.html</url>
     <content><![CDATA[<p>Annotated Bibliography 2020 9.28-10.4</p>
@@ -168,6 +144,213 @@ ATPRK approach is upscaled to the original coarse spatial resolution, it is iden
       <tags>
         <tag>Remote Sensing</tag>
         <tag>Data Fusion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自动机器学习代码详解</title>
+    <url>/posts/4668cbbb.html</url>
+    <content><![CDATA[<p>毕业论文基于auto-sklearn做了一些自动机器学习模型的应用，模型的原理可以点击<span class="exturl" data-url="aHR0cDovL2NvZGV3aXRoemhhbmd5aS5jb20vMjAxOC8wNy8yNi9BdXRvTUwv">这里<i class="fa fa-external-link-alt"></i></span>，我这儿讲一下我的代码怎么用，相当于是一个详细版的注释。</p>
+<p>代码地址见<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xpZmVvZHlzc2V5L0FNRg==">https://github.com/lifeodyssey/AMF<i class="fa fa-external-link-alt"></i></span>。</p>
+<a id="more"></a>
+<p>进入到服务器amf目录下，输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> py3/bin/activate</span><br></pre></td></tr></table></figure>
+<p>之后每一行的开头会显示(py3)字样，即代表进入虚拟环境。</p>
+<p>之后直接输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python code.py</span><br></pre></td></tr></table></figure>
+<p>即可开始运行程序。</p>
+<p>以下是程序的详细说明，如果要修改代码，可以在服务器中直接使用vim进行修改，也可以在本地修改好之后用PSFTP推送到服务器上。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> autosklearn.regression</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment">#前面这四行是引入相应的环境包</span></span><br><span class="line">rawdata=pd.read_excel(<span class="string">&#x27;rawdata.xlsx&#x27;</span>)<span class="comment">#单引号输入要读入文件的路径，文件的格式参考服务器中的rawdata.xlsx</span></span><br><span class="line">Y=rawdata[[<span class="string">&#x27;cpue&#x27;</span>]]<span class="comment">#单引号内写要预测的变量名</span></span><br><span class="line"></span><br><span class="line">Y=np.log10(Y+<span class="number">1</span>)<span class="comment">#这里采用了对数变换，可以去掉</span></span><br><span class="line">X=rawdata[[<span class="string">&#x27;lon&#x27;</span>,<span class="string">&#x27;lat&#x27;</span>,<span class="string">&#x27;sst&#x27;</span>,<span class="string">&#x27;chla&#x27;</span>,<span class="string">&#x27;doy&#x27;</span>]]<span class="comment">#单引号内输入要使用的变量名</span></span><br><span class="line">x_train,x_test,y_train,y_test=train_test_split(X,Y,test_size=<span class="number">0.3</span>,random_state=<span class="number">7</span>)<span class="comment">#test size代表了测试集在整个数据集中的占比，这里选取的是0.3即30%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">automl = autosklearn.regression.AutoSklearnRegressor(</span><br><span class="line">    include_estimators=[<span class="string">&quot;random_forest&quot;</span>,<span class="string">&quot;decision_tree&quot;</span>,<span class="string">&quot;gradient_boosting&quot;</span>,<span class="string">&quot;xgradient_boosting&quot;</span>],</span><br><span class="line">    <span class="comment">#这里只放了几个我认为效果比较好的模型，模型种类参见https://github.com/automl/auto-sklearn/tree/master/autosklearn/pipeline/components/regression，如果想换用模型，把双引号内的名称更改即可；如果想删除或者添加，直接去掉相应的名称即可</span></span><br><span class="line">    exclude_estimators=<span class="literal">None</span>,</span><br><span class="line">    include_preprocessors=[<span class="string">&quot;no_preprocessing&quot;</span>, ],</span><br><span class="line">    exclude_preprocessors=<span class="literal">None</span>,</span><br><span class="line">    resampling_strategy=<span class="string">&#x27;cv&#x27;</span>,</span><br><span class="line">    resampling_strategy_arguments=&#123;<span class="string">&#x27;folds&#x27;</span>: <span class="number">10</span>&#125;,<span class="comment">#这里选了十折交叉验证来确定最优参数</span></span><br><span class="line">    )</span><br><span class="line">automl.fit(x_train, y_train.values.ravel())</span><br><span class="line"></span><br><span class="line">automl.sprint_statistics()</span><br><span class="line">automl.show_models()</span><br><span class="line">automl.refit(x_train, y_train.values.ravel())</span><br><span class="line"><span class="comment">#如果想输入新的自变量来做预测的话,将下面几句前面的#去除即可</span></span><br><span class="line"><span class="comment">#predata=pd.read_excel(&#x27;rawdata.xlsx&#x27;)#单引号内输入文件路径</span></span><br><span class="line"><span class="comment">#X=predata[[&#x27;lon&#x27;,&#x27;lat&#x27;,&#x27;sst&#x27;,&#x27;chla&#x27;,&#x27;doy&#x27;]]#单引号内输入选取的变量名</span></span><br><span class="line">y_pre = automl.predict(X)</span><br><span class="line">ypre=np.power(<span class="number">10</span>,ypre)<span class="number">-1</span><span class="comment">#变换回来</span></span><br><span class="line">ypre=pd.DataFrame(ypre)</span><br><span class="line">result=pd.concat([rawdata,ypre])<span class="comment">#如果输入新的自变量来做预测，将rawdata改为predata</span></span><br><span class="line">result.to_excel(<span class="string">&#x27;result.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Papers And Thesis</category>
+      </categories>
+      <tags>
+        <tag>Automatic Machine Learning</tag>
+        <tag>Fishery Forecasting</tag>
+        <tag>Undergraduate Thesis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</title>
+    <url>/posts/bc80cb40.html</url>
+    <content><![CDATA[<p>An introduction for Machine learning</p>
+<a id="more"></a>
+<h1 id="what-is-machine-learning"><a class="markdownIt-Anchor" href="#what-is-machine-learning"></a> What is machine learning</h1>
+<h2 id="what-is-learning"><a class="markdownIt-Anchor" href="#what-is-learning"></a> What is learning</h2>
+<p>learning: acquiring skill with experience accumulated from observations</p>
+<p>machine learning: acquiring skill with experience accumulated/computed from data</p>
+<p>skill: improve some performance measure(e.g.prediction accuracy)</p>
+<h2 id="why-use-machine-learning"><a class="markdownIt-Anchor" href="#why-use-machine-learning"></a> Why use machine learning</h2>
+<ul>
+<li>‘define’ trees and hand-program: difficult</li>
+<li>learn from data(observations) and recognize: a 3-year-old can do so</li>
+<li>‘ML-based tree recognition system’ can be easier to build than hand-programmed system</li>
+</ul>
+<p>ML: an alternative route to build complicated systems</p>
+<h2 id="some-use-scenarios"><a class="markdownIt-Anchor" href="#some-use-scenarios"></a> Some Use Scenarios</h2>
+<ul>
+<li>
+<p>when human cannot program the system manually</p>
+<p>——navigation on Mars</p>
+</li>
+<li>
+<p>when human cannot  ‘define the solution’ easily</p>
+<p>——speech/visual recognition</p>
+</li>
+<li>
+<p>when needing rapid decisions that human cannot do</p>
+<p>——high-frequency trading</p>
+</li>
+<li>
+<p>when needing to be user-oriented in massive sacle</p>
+<p>——consumer-targeted marketing</p>
+</li>
+</ul>
+<h2 id="key-essence-of-ml"><a class="markdownIt-Anchor" href="#key-essence-of-ml"></a> Key Essence of  ML</h2>
+<p>1. exists some ‘underlying pattern’ to be learned</p>
+<p>——so ‘performance measure’ can be improved</p>
+<p>2. but no programmable(easy) definition</p>
+<p>——so ‘ML’ is needed</p>
+<p>3. somehow there is data about the pattern</p>
+<p>——so ML has some ‘inputs’ to learn from</p>
+<h1 id="application-of-ml"><a class="markdownIt-Anchor" href="#application-of-ml"></a> Application of ML</h1>
+<h1 id="components-of-learning"><a class="markdownIt-Anchor" href="#components-of-learning"></a> Components of Learning:</h1>
+<h2 id="basic-notations"><a class="markdownIt-Anchor" href="#basic-notations"></a> Basic Notations</h2>
+<ul>
+<li>
+<p>input: x $ \in $ <em>X</em></p>
+</li>
+<li>
+<p>output: y $ \in $ <em>Y</em></p>
+</li>
+<li>
+<p>unknow pattern to be learned $ \Leftrightarrow $ target function:<br />
+<em>f</em>: <em>X</em> $ \rightarrow $ <em>Y</em></p>
+</li>
+<li>
+<p>data <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span> training examples: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>=</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mi mathvariant="normal">.</mi><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">D =\{(x_1,y_1),(x_2.y_2),...,(x_n,y_n)\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">}</span></span></span></span></p>
+</li>
+<li>
+<p>hypothesis <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span> skill with hopefully good performance :</p>
+<p>$ g:X \rightarrow Y$</p>
+</li>
+</ul>
+<h1 id="machine-learning-and-other-fields"><a class="markdownIt-Anchor" href="#machine-learning-and-other-fields"></a> Machine Learning and Other Fields</h1>
+<h2 id="machine-learning-and-data-mining"><a class="markdownIt-Anchor" href="#machine-learning-and-data-mining"></a> Machine Learning and Data Mining</h2>
+<table>
+<thead>
+<tr>
+<th>Machine Learning</th>
+<th>Data Mining</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
+<td>use <strong>huge</strong> data to find <strong>property that</strong> is interesting</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p>if ‘interesting property’ same as ‘hypothesis’ that approximate target——ML=DM</p>
+</li>
+<li>
+<p>if ‘interesting property’ related to 'hypothesis ’ that approximate target——DM can help ML,and vice versa(often,but not always)</p>
+</li>
+<li>
+<p>traditional DM also focuses on efficient computation in large database</p>
+</li>
+</ul>
+<h2 id="machine-learning-and-artificial-intelligence"><a class="markdownIt-Anchor" href="#machine-learning-and-artificial-intelligence"></a> Machine Learning and Artificial Intelligence</h2>
+<table>
+<thead>
+<tr>
+<th>Machine Learning</th>
+<th>Artificial Intelligence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
+<td>compute <strong>something that shows intelligent behavior</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>$ g\approx f$ is something that shows intelligent behavior——ML can realize AI,among other routes</li>
+<li>e.g. chess playing
+<ul>
+<li>traditional AI: game tree</li>
+<li>ML for AI :learning from board data</li>
+</ul>
+</li>
+</ul>
+<p><strong>ML is one possible route to realize AI</strong></p>
+<h2 id="machine-learning-and-statistics"><a class="markdownIt-Anchor" href="#machine-learning-and-statistics"></a> Machine Learning and Statistics</h2>
+<table>
+<thead>
+<tr>
+<th>Machine Learning</th>
+<th>Statistics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
+<td>use data to <strong>make inference about an unknown process</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>g</em> is an inference outcome,<em>f</em> is something unknown——statistics <strong>can be used to achieve ML</strong></li>
+<li>traditional statistics also focus on <strong>provable results with math assumptions</strong>,and care less about computation</li>
+</ul>
+<p><strong>statistics:many useful tools for ML</strong></p>
+<h1 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h1>
+<p>1. What is ML</p>
+<p>-use data to approximate target</p>
+<p>2. Application of ML</p>
+<p>-alomost everywhere</p>
+<p>3. Components of ML</p>
+<p>-$ A$ takes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span></span></span> to get <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span></span></p>
+<p>4. ML and other fields</p>
+<p>-related to DM,AI and Stats</p>
+<h1 id="appendix"><a class="markdownIt-Anchor" href="#appendix"></a> Appendix</h1>
+<p>預備知識</p>
+<p>作業零 (機率統計、線性代數、微分之基本知識)</p>
+<p>參考書籍</p>
+<p>Learning from Data: A Short Course , Abu-Mostafa, Magdon-Ismail, Lin, 2013.</p>
+<p>經典文獻</p>
+<p>F. Rosenblatt. The perceptron: A probabilistic model for information storage and organization in the brain. Psychological Review, 65(6):386-408, 1958. (第二講：Perceptron 的出處)</p>
+<p>W. Hoeffding. Probability inequalities for sums of bounded random variables. Journal of the American Statistical Association, 58(301):13–30, 1963. (第四講：Hoeffding’s Inequality)</p>
+<p>Y. S. Abu-Mostafa, X. Song , A. Nicholson, M. Magdon-ismail. The bin model, 1995. (第四講：bin model 的出處)</p>
+<p>V. Vapnik. The nature of statistical learning theory, 2nd edition, 2000. (第五到八講：VC dimension 與 VC bound 的完整數學推導及延伸)</p>
+<p>Y. S. Abu-Mostafa. The Vapnik-Chervonenkis dimension: information versus complexity in learning. Neural Computation, 1(3):312-317, 1989. (第七講：VC Dimension 的概念與重要性)</p>
+<p>參考文獻</p>
+<p>A. Sadilek, S. Brennan, H. Kautz, and V. Silenzio. nEmesis: Which restaurants should you avoid today? First AAAI Conference on Human Computation and Crowdsourcing, 2013. (第一講：ML 在「食」的應用)</p>
+<p>Y. S. Abu-Mostafa. Machines that think for themselves. Scientific American, 289(7):78-81, 2012. (第一講：ML 在「衣」的應用)</p>
+<p>A. Tsanas, A. Xifara. Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools. Energy and Buildings, 49: 560-567, 2012. (第一講：ML 在「住」的應用)</p>
+<p>J. Stallkamp, M. Schlipsing, J. Salmen, C. Igel. Introduction to the special issue on machine learning for traffic sign recognition. IEEE Transactions on Intelligent Transportation Systems 13(4): 1481-1483, 2012. (第一講：ML 在「行」的應用)</p>
+<p>R. Bell, J. Bennett, Y. Koren, and C. Volinsky. The million dollar programming prize. IEEE Spectrum, 46(5):29-33, 2009. (第一講：Netflix 大賽)</p>
+<p>S. I. Gallant. Perceptron-based learning algorithms. IEEE Transactions on Neural Networks, 1(2):179-191, 1990. (第二講：pocket 的出處，注意到實際的 pocket 演算法比我們介紹的要複雜)</p>
+<p>R. Xu, D. Wunsch II. Survey of clustering algorithms. IEEE Transactions on Neural Networks 16(3), 645-678, 2005. (第三講：Clustering)</p>
+<p>X. Zhu. Semi-supervised learning literature survey. University of Wisconsin Madison, 2008. (第三講：Semi-supervised)</p>
+<p>Z. Ghahramani. Unsupervised learning. In Advanced Lectures in Machine Learning (MLSS ’03), pages 72–112, 2004. (第三講：Unsupervised)</p>
+<p>L. Kaelbling, M. Littman, A. Moore. reinforcement learning: a survey. Journal of Artificial Intelligence Research, 4: 237-285. (第三講：Reinforcement)</p>
+<p>A. Blum. On-Line algorithms in machine learning. Carnegie Mellon University,1998. (第三講：Online)</p>
+<p>B. Settles. Active learning literature survey. University of Wisconsin Madison, 2010. (第三講：Active)</p>
+<p>D. Wolpert. The lack of a priori distinctions between learning algorithms. Neural Computation, 8(7): 1341-1390. (第四講：No free lunch 的正式版)</p>
+<p>T. M. Cover. Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. IEEE Transactions on Electronic Computers, 14(3):326–334, 1965. (第五到六講：Growth Function)</p>
+<p>B. Zadrozny, J. Langford, N. Abe. Cost sensitive learning by cost-proportionate example weighting. IEEE International Conference on Data Mining, 2003. (第八講：Weighted Classification)</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
       </tags>
   </entry>
   <entry>
@@ -382,189 +565,6 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
 <h1 id="effective-number-of-hypotheses"><a class="markdownIt-Anchor" href="#effective-number-of-hypotheses"></a> Effective Number of Hypotheses</h1>
 <h2 id="dichotomiesmini-hypotheses"><a class="markdownIt-Anchor" href="#dichotomiesmini-hypotheses"></a> Dichotomies:Mini-hypotheses</h2>
 <h1 id="break-points"><a class="markdownIt-Anchor" href="#break-points"></a> Break Points</h1>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</title>
-    <url>/posts/bc80cb40.html</url>
-    <content><![CDATA[<p>An introduction for Machine learning</p>
-<a id="more"></a>
-<h1 id="what-is-machine-learning"><a class="markdownIt-Anchor" href="#what-is-machine-learning"></a> What is machine learning</h1>
-<h2 id="what-is-learning"><a class="markdownIt-Anchor" href="#what-is-learning"></a> What is learning</h2>
-<p>learning: acquiring skill with experience accumulated from observations</p>
-<p>machine learning: acquiring skill with experience accumulated/computed from data</p>
-<p>skill: improve some performance measure(e.g.prediction accuracy)</p>
-<h2 id="why-use-machine-learning"><a class="markdownIt-Anchor" href="#why-use-machine-learning"></a> Why use machine learning</h2>
-<ul>
-<li>‘define’ trees and hand-program: difficult</li>
-<li>learn from data(observations) and recognize: a 3-year-old can do so</li>
-<li>‘ML-based tree recognition system’ can be easier to build than hand-programmed system</li>
-</ul>
-<p>ML: an alternative route to build complicated systems</p>
-<h2 id="some-use-scenarios"><a class="markdownIt-Anchor" href="#some-use-scenarios"></a> Some Use Scenarios</h2>
-<ul>
-<li>
-<p>when human cannot program the system manually</p>
-<p>——navigation on Mars</p>
-</li>
-<li>
-<p>when human cannot  ‘define the solution’ easily</p>
-<p>——speech/visual recognition</p>
-</li>
-<li>
-<p>when needing rapid decisions that human cannot do</p>
-<p>——high-frequency trading</p>
-</li>
-<li>
-<p>when needing to be user-oriented in massive sacle</p>
-<p>——consumer-targeted marketing</p>
-</li>
-</ul>
-<h2 id="key-essence-of-ml"><a class="markdownIt-Anchor" href="#key-essence-of-ml"></a> Key Essence of  ML</h2>
-<p>1. exists some ‘underlying pattern’ to be learned</p>
-<p>——so ‘performance measure’ can be improved</p>
-<p>2. but no programmable(easy) definition</p>
-<p>——so ‘ML’ is needed</p>
-<p>3. somehow there is data about the pattern</p>
-<p>——so ML has some ‘inputs’ to learn from</p>
-<h1 id="application-of-ml"><a class="markdownIt-Anchor" href="#application-of-ml"></a> Application of ML</h1>
-<h1 id="components-of-learning"><a class="markdownIt-Anchor" href="#components-of-learning"></a> Components of Learning:</h1>
-<h2 id="basic-notations"><a class="markdownIt-Anchor" href="#basic-notations"></a> Basic Notations</h2>
-<ul>
-<li>
-<p>input: x $ \in $ <em>X</em></p>
-</li>
-<li>
-<p>output: y $ \in $ <em>Y</em></p>
-</li>
-<li>
-<p>unknow pattern to be learned $ \Leftrightarrow $ target function:<br />
-<em>f</em>: <em>X</em> $ \rightarrow $ <em>Y</em></p>
-</li>
-<li>
-<p>data <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span> training examples: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi><mo>=</mo><mo stretchy="false">{</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mi mathvariant="normal">.</mi><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo separator="true">,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">D =\{(x_1,y_1),(x_2.y_2),...,(x_n,y_n)\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord">.</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mclose">}</span></span></span></span></p>
-</li>
-<li>
-<p>hypothesis <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span> skill with hopefully good performance :</p>
-<p>$ g:X \rightarrow Y$</p>
-</li>
-</ul>
-<h1 id="machine-learning-and-other-fields"><a class="markdownIt-Anchor" href="#machine-learning-and-other-fields"></a> Machine Learning and Other Fields</h1>
-<h2 id="machine-learning-and-data-mining"><a class="markdownIt-Anchor" href="#machine-learning-and-data-mining"></a> Machine Learning and Data Mining</h2>
-<table>
-<thead>
-<tr>
-<th>Machine Learning</th>
-<th>Data Mining</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
-<td>use <strong>huge</strong> data to find <strong>property that</strong> is interesting</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<p>if ‘interesting property’ same as ‘hypothesis’ that approximate target——ML=DM</p>
-</li>
-<li>
-<p>if ‘interesting property’ related to 'hypothesis ’ that approximate target——DM can help ML,and vice versa(often,but not always)</p>
-</li>
-<li>
-<p>traditional DM also focuses on efficient computation in large database</p>
-</li>
-</ul>
-<h2 id="machine-learning-and-artificial-intelligence"><a class="markdownIt-Anchor" href="#machine-learning-and-artificial-intelligence"></a> Machine Learning and Artificial Intelligence</h2>
-<table>
-<thead>
-<tr>
-<th>Machine Learning</th>
-<th>Artificial Intelligence</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
-<td>compute <strong>something that shows intelligent behavior</strong></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>$ g\approx f$ is something that shows intelligent behavior——ML can realize AI,among other routes</li>
-<li>e.g. chess playing
-<ul>
-<li>traditional AI: game tree</li>
-<li>ML for AI :learning from board data</li>
-</ul>
-</li>
-</ul>
-<p><strong>ML is one possible route to realize AI</strong></p>
-<h2 id="machine-learning-and-statistics"><a class="markdownIt-Anchor" href="#machine-learning-and-statistics"></a> Machine Learning and Statistics</h2>
-<table>
-<thead>
-<tr>
-<th>Machine Learning</th>
-<th>Statistics</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>use data to compute hypothesis <em>g</em> that approximates target <em>f</em></td>
-<td>use data to <strong>make inference about an unknown process</strong></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><em>g</em> is an inference outcome,<em>f</em> is something unknown——statistics <strong>can be used to achieve ML</strong></li>
-<li>traditional statistics also focus on <strong>provable results with math assumptions</strong>,and care less about computation</li>
-</ul>
-<p><strong>statistics:many useful tools for ML</strong></p>
-<h1 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h1>
-<p>1. What is ML</p>
-<p>-use data to approximate target</p>
-<p>2. Application of ML</p>
-<p>-alomost everywhere</p>
-<p>3. Components of ML</p>
-<p>-$ A$ takes <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span></span></span></span> to get <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>g</mi></mrow><annotation encoding="application/x-tex">g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span></span></span></span></p>
-<p>4. ML and other fields</p>
-<p>-related to DM,AI and Stats</p>
-<h1 id="appendix"><a class="markdownIt-Anchor" href="#appendix"></a> Appendix</h1>
-<p>預備知識</p>
-<p>作業零 (機率統計、線性代數、微分之基本知識)</p>
-<p>參考書籍</p>
-<p>Learning from Data: A Short Course , Abu-Mostafa, Magdon-Ismail, Lin, 2013.</p>
-<p>經典文獻</p>
-<p>F. Rosenblatt. The perceptron: A probabilistic model for information storage and organization in the brain. Psychological Review, 65(6):386-408, 1958. (第二講：Perceptron 的出處)</p>
-<p>W. Hoeffding. Probability inequalities for sums of bounded random variables. Journal of the American Statistical Association, 58(301):13–30, 1963. (第四講：Hoeffding’s Inequality)</p>
-<p>Y. S. Abu-Mostafa, X. Song , A. Nicholson, M. Magdon-ismail. The bin model, 1995. (第四講：bin model 的出處)</p>
-<p>V. Vapnik. The nature of statistical learning theory, 2nd edition, 2000. (第五到八講：VC dimension 與 VC bound 的完整數學推導及延伸)</p>
-<p>Y. S. Abu-Mostafa. The Vapnik-Chervonenkis dimension: information versus complexity in learning. Neural Computation, 1(3):312-317, 1989. (第七講：VC Dimension 的概念與重要性)</p>
-<p>參考文獻</p>
-<p>A. Sadilek, S. Brennan, H. Kautz, and V. Silenzio. nEmesis: Which restaurants should you avoid today? First AAAI Conference on Human Computation and Crowdsourcing, 2013. (第一講：ML 在「食」的應用)</p>
-<p>Y. S. Abu-Mostafa. Machines that think for themselves. Scientific American, 289(7):78-81, 2012. (第一講：ML 在「衣」的應用)</p>
-<p>A. Tsanas, A. Xifara. Accurate quantitative estimation of energy performance of residential buildings using statistical machine learning tools. Energy and Buildings, 49: 560-567, 2012. (第一講：ML 在「住」的應用)</p>
-<p>J. Stallkamp, M. Schlipsing, J. Salmen, C. Igel. Introduction to the special issue on machine learning for traffic sign recognition. IEEE Transactions on Intelligent Transportation Systems 13(4): 1481-1483, 2012. (第一講：ML 在「行」的應用)</p>
-<p>R. Bell, J. Bennett, Y. Koren, and C. Volinsky. The million dollar programming prize. IEEE Spectrum, 46(5):29-33, 2009. (第一講：Netflix 大賽)</p>
-<p>S. I. Gallant. Perceptron-based learning algorithms. IEEE Transactions on Neural Networks, 1(2):179-191, 1990. (第二講：pocket 的出處，注意到實際的 pocket 演算法比我們介紹的要複雜)</p>
-<p>R. Xu, D. Wunsch II. Survey of clustering algorithms. IEEE Transactions on Neural Networks 16(3), 645-678, 2005. (第三講：Clustering)</p>
-<p>X. Zhu. Semi-supervised learning literature survey. University of Wisconsin Madison, 2008. (第三講：Semi-supervised)</p>
-<p>Z. Ghahramani. Unsupervised learning. In Advanced Lectures in Machine Learning (MLSS ’03), pages 72–112, 2004. (第三講：Unsupervised)</p>
-<p>L. Kaelbling, M. Littman, A. Moore. reinforcement learning: a survey. Journal of Artificial Intelligence Research, 4: 237-285. (第三講：Reinforcement)</p>
-<p>A. Blum. On-Line algorithms in machine learning. Carnegie Mellon University,1998. (第三講：Online)</p>
-<p>B. Settles. Active learning literature survey. University of Wisconsin Madison, 2010. (第三講：Active)</p>
-<p>D. Wolpert. The lack of a priori distinctions between learning algorithms. Neural Computation, 8(7): 1341-1390. (第四講：No free lunch 的正式版)</p>
-<p>T. M. Cover. Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. IEEE Transactions on Electronic Computers, 14(3):326–334, 1965. (第五到六講：Growth Function)</p>
-<p>B. Zadrozny, J. Langford, N. Abe. Cost sensitive learning by cost-proportionate example weighting. IEEE International Conference on Data Mining, 2003. (第八講：Weighted Classification)</p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -1012,42 +1012,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/posts/3b4b656d.html</url>
-    <content><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站"><a class="markdownIt-Anchor" href="#关于本站"></a> 🏠 关于本站</h2>
-<h2 id="博主是谁"><a class="markdownIt-Anchor" href="#博主是谁"></a> 👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好"><a class="markdownIt-Anchor" href="#兴趣爱好"></a> ⛹ 兴趣爱好</h2>
-<h2 id="联系我呀"><a class="markdownIt-Anchor" href="#联系我呀"></a> 📬 联系我呀</h2>
-]]></content>
-  </entry>
-  <entry>
-    <title>Tutorial for handling MODIS ocean color data</title>
-    <url>/posts/ef746e52.html</url>
-    <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
-<ol>
-<li>Using python to analyse MODIS ocean color data</li>
-<li>Installation and application of SeaDA  OCSSW</li>
-</ol>
-<a id="more"></a>
-<h1 id="using-python-to-analyse-modis-ocean-color-data"><a class="markdownIt-Anchor" href="#using-python-to-analyse-modis-ocean-color-data"></a> Using python to analyse modis ocean color data</h1>
-<h2 id="package-and-working-environment"><a class="markdownIt-Anchor" href="#package-and-working-environment"></a> Package and working environment</h2>
-<p>This this the first difficult thing for a rookie.</p>
-<h3 id="anaconda-pycharm"><a class="markdownIt-Anchor" href="#anaconda-pycharm"></a> Anaconda &amp; Pycharm</h3>
-<p>Anaconda contains most of the package</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Ocean Color</tag>
-        <tag>Research</tag>
-        <tag>Oceanography</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>assert</title>
     <url>/posts/b1ef4fab.html</url>
     <content><![CDATA[<p>最近在读别人代码的时候发现了好多自己当时学python的时候没有学过的东西</p>
@@ -1109,6 +1073,42 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       <tags>
         <tag>python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Tutorial for handling MODIS ocean color data</title>
+    <url>/posts/ef746e52.html</url>
+    <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
+<ol>
+<li>Using python to analyse MODIS ocean color data</li>
+<li>Installation and application of SeaDA  OCSSW</li>
+</ol>
+<a id="more"></a>
+<h1 id="using-python-to-analyse-modis-ocean-color-data"><a class="markdownIt-Anchor" href="#using-python-to-analyse-modis-ocean-color-data"></a> Using python to analyse modis ocean color data</h1>
+<h2 id="package-and-working-environment"><a class="markdownIt-Anchor" href="#package-and-working-environment"></a> Package and working environment</h2>
+<p>This this the first difficult thing for a rookie.</p>
+<h3 id="anaconda-pycharm"><a class="markdownIt-Anchor" href="#anaconda-pycharm"></a> Anaconda &amp; Pycharm</h3>
+<p>Anaconda contains most of the package</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color</tag>
+        <tag>Research</tag>
+        <tag>Oceanography</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/posts/3b4b656d.html</url>
+    <content><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="关于本站"><a class="markdownIt-Anchor" href="#关于本站"></a> 🏠 关于本站</h2>
+<h2 id="博主是谁"><a class="markdownIt-Anchor" href="#博主是谁"></a> 👨‍💻 博主是谁</h2>
+<h2 id="兴趣爱好"><a class="markdownIt-Anchor" href="#兴趣爱好"></a> ⛹ 兴趣爱好</h2>
+<h2 id="联系我呀"><a class="markdownIt-Anchor" href="#联系我呀"></a> 📬 联系我呀</h2>
+]]></content>
   </entry>
   <entry>
     <title>book reading note 4</title>
@@ -1390,6 +1390,28 @@ to the sum of the semi-diurnal ones (M2+S2 ).</p>
       </tags>
   </entry>
   <entry>
+    <title>cartopy</title>
+    <url>/posts/c6b8edee.html</url>
+    <content><![CDATA[<p>Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。</p>
+<p>先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。</p>
+<a id="more"></a>
+<h1 id="代码范例"><a class="markdownIt-Anchor" href="#代码范例"></a> 代码范例</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> netCDF4 <span class="keyword">as</span> nc</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> cartopy.crs <span class="keyword">as</span> ccrs</span><br><span class="line"><span class="keyword">import</span> cartopy.feature <span class="keyword">as</span> cfeature</span><br><span class="line"><span class="keyword">from</span> cartopy.mpl.gridliner <span class="keyword">import</span> LONGITUDE_FORMATTER, LATITUDE_FORMATTER</span><br><span class="line">file=<span class="string">r&#x27;I:\Nagoya University\Project\Seto\MODIS\20100608T04.nc&#x27;</span></span><br><span class="line">nc=nc.Dataset(file,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">lon=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;longitude&#x27;</span>][:]</span><br><span class="line">lat=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;latitude&#x27;</span>][:]</span><br><span class="line">variables=nc.groups[<span class="string">&#x27;geophysical_data&#x27;</span>].variables</span><br><span class="line">chl=variables[<span class="string">&#x27;chlor_a&#x27;</span>]</span><br><span class="line">minlat = <span class="number">32.5</span></span><br><span class="line">minlon = <span class="number">130.5</span></span><br><span class="line">maxlat = <span class="number">35</span></span><br><span class="line">maxlon = <span class="number">136</span></span><br><span class="line">f = plt.figure(figsize=(<span class="number">20</span>, <span class="number">20</span>), dpi=<span class="number">300</span>)</span><br><span class="line">m = plt.axes(projection=ccrs.PlateCarree(central_longitude=<span class="number">0.0</span>))</span><br><span class="line">f = plt.pcolormesh(lon, lat,chl, shading=<span class="string">&#x27;flat&#x27;</span>, vmin=np.log10(<span class="number">0.01</span>), vmax=np.log10(<span class="number">50</span>), cmap=plt.cm.viridis)</span><br><span class="line">m.coastlines(resolution=<span class="string">&#x27;10m&#x27;</span>, color=<span class="string">&#x27;black&#x27;</span>, linewidth=<span class="number">1</span>)</span><br><span class="line">extent=[<span class="number">130.5</span>,<span class="number">136</span>,<span class="number">32</span>,<span class="number">35</span>]</span><br><span class="line">m.set_extent(extent)</span><br><span class="line">m.add_feature(cfeature.RIVERS)</span><br><span class="line">m.add_feature(cfeature.COASTLINE.with_scale(<span class="string">&#x27;10m&#x27;</span>))</span><br><span class="line">m.add_feature(cfeature.LAND.with_scale(<span class="string">&#x27;10m&#x27;</span>), facecolor=<span class="string">&#x27;0.75&#x27;</span>)</span><br><span class="line"></span><br><span class="line">g1 = m.gridlines(draw_labels = <span class="literal">True</span>)</span><br><span class="line">g1.xlabels_top = <span class="literal">False</span></span><br><span class="line">g1.xlabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.ylabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.xformatter = LONGITUDE_FORMATTER</span><br><span class="line">g1.yformatter = LATITUDE_FORMATTER</span><br><span class="line">cbar = plt.colorbar(f, orientation=<span class="string">&quot;horizontal&quot;</span>, fraction=<span class="number">0.05</span>, pad=<span class="number">0.07</span>, ticks=[np.log10(<span class="number">0.01</span>), np.log10(<span class="number">0.1</span>),np.log10(<span class="number">0.5</span>), np.log10(<span class="number">1</span>),np.log10(<span class="number">3</span>),np.log10(<span class="number">10</span>),np.log10(<span class="number">50</span>)]) </span><br><span class="line">cbar.ax.set_xticklabels([<span class="string">&#x27;0.01&#x27;</span>,<span class="string">&#x27;0.1&#x27;</span>,<span class="string">&#x27;0.5&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;50&#x27;</span>], fontsize=<span class="number">20</span>) </span><br><span class="line">cbar.set_label(<span class="string">&#x27;Chlorophyll, mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;MODIS [Chl a] mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>相比basemap这个方便很多，但是分辨率还是有一点问题。</p>
+<h1 id="一些参考资料"><a class="markdownIt-Anchor" href="#一些参考资料"></a> 一些参考资料</h1>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aGFqaW1hbi5naXRodWIuaW8vcG9zdC9jYXJ0b3B5X2ludHJvZHVjdGlvbi8=">https://zhajiman.github.io/post/cartopy_introduction/<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9zY2l0b29scy5vcmcudWsvY2FydG9weS9kb2NzL2xhdGVzdC9pbmRleC5odG1s">https://scitools.org.uk/cartopy/docs/latest/index.html<i class="fa fa-external-link-alt"></i></span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubmV0LWFuYWx5c2lzLmNvbS9ibG9nL2NhcnRvcHlsYXlvdXQuaHRtbA==">https://www.net-analysis.com/blog/cartopylayout.html<i class="fa fa-external-link-alt"></i></span></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello Gridea</title>
     <url>/posts/6143bcfc.html</url>
     <content><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br />
@@ -1592,18 +1614,31 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
-    <title>cartopy</title>
-    <url>/posts/c6b8edee.html</url>
-    <content><![CDATA[<p>Basemap在2020年底停止维护，取而代之的是cartopy，在这里写一下一些学习笔记。</p>
-<p>先说结论，截止到2020年8月1日,0.18版本仍然不能完全取代basemap，尤其是近岸数据分辨率的问题，但是已经展现出优势了，自己要在之后多多尝试使用。</p>
+    <title>lambda</title>
+    <url>/posts/d39dff82.html</url>
+    <content><![CDATA[<h1 id="python-lambda"><a class="markdownIt-Anchor" href="#python-lambda"></a> Python Lambda</h1>
+<p>在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。</p>
+<p><strong>lambda 函数是一种小的匿名函数。</strong></p>
+<p><strong>lambda 函数可接受任意数量的参数，但只能有一个表达式。</strong></p>
 <a id="more"></a>
-<h1 id="代码范例"><a class="markdownIt-Anchor" href="#代码范例"></a> 代码范例</h1>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> netCDF4 <span class="keyword">as</span> nc</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> cartopy.crs <span class="keyword">as</span> ccrs</span><br><span class="line"><span class="keyword">import</span> cartopy.feature <span class="keyword">as</span> cfeature</span><br><span class="line"><span class="keyword">from</span> cartopy.mpl.gridliner <span class="keyword">import</span> LONGITUDE_FORMATTER, LATITUDE_FORMATTER</span><br><span class="line">file=<span class="string">r&#x27;I:\Nagoya University\Project\Seto\MODIS\20100608T04.nc&#x27;</span></span><br><span class="line">nc=nc.Dataset(file,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">lon=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;longitude&#x27;</span>][:]</span><br><span class="line">lat=nc.groups[<span class="string">&#x27;navigation_data&#x27;</span>].variables[<span class="string">&#x27;latitude&#x27;</span>][:]</span><br><span class="line">variables=nc.groups[<span class="string">&#x27;geophysical_data&#x27;</span>].variables</span><br><span class="line">chl=variables[<span class="string">&#x27;chlor_a&#x27;</span>]</span><br><span class="line">minlat = <span class="number">32.5</span></span><br><span class="line">minlon = <span class="number">130.5</span></span><br><span class="line">maxlat = <span class="number">35</span></span><br><span class="line">maxlon = <span class="number">136</span></span><br><span class="line">f = plt.figure(figsize=(<span class="number">20</span>, <span class="number">20</span>), dpi=<span class="number">300</span>)</span><br><span class="line">m = plt.axes(projection=ccrs.PlateCarree(central_longitude=<span class="number">0.0</span>))</span><br><span class="line">f = plt.pcolormesh(lon, lat,chl, shading=<span class="string">&#x27;flat&#x27;</span>, vmin=np.log10(<span class="number">0.01</span>), vmax=np.log10(<span class="number">50</span>), cmap=plt.cm.viridis)</span><br><span class="line">m.coastlines(resolution=<span class="string">&#x27;10m&#x27;</span>, color=<span class="string">&#x27;black&#x27;</span>, linewidth=<span class="number">1</span>)</span><br><span class="line">extent=[<span class="number">130.5</span>,<span class="number">136</span>,<span class="number">32</span>,<span class="number">35</span>]</span><br><span class="line">m.set_extent(extent)</span><br><span class="line">m.add_feature(cfeature.RIVERS)</span><br><span class="line">m.add_feature(cfeature.COASTLINE.with_scale(<span class="string">&#x27;10m&#x27;</span>))</span><br><span class="line">m.add_feature(cfeature.LAND.with_scale(<span class="string">&#x27;10m&#x27;</span>), facecolor=<span class="string">&#x27;0.75&#x27;</span>)</span><br><span class="line"></span><br><span class="line">g1 = m.gridlines(draw_labels = <span class="literal">True</span>)</span><br><span class="line">g1.xlabels_top = <span class="literal">False</span></span><br><span class="line">g1.xlabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.ylabel_style = &#123;<span class="string">&#x27;size&#x27;</span>: <span class="number">16</span>, <span class="string">&#x27;color&#x27;</span>: <span class="string">&#x27;gray&#x27;</span>&#125;</span><br><span class="line">g1.xformatter = LONGITUDE_FORMATTER</span><br><span class="line">g1.yformatter = LATITUDE_FORMATTER</span><br><span class="line">cbar = plt.colorbar(f, orientation=<span class="string">&quot;horizontal&quot;</span>, fraction=<span class="number">0.05</span>, pad=<span class="number">0.07</span>, ticks=[np.log10(<span class="number">0.01</span>), np.log10(<span class="number">0.1</span>),np.log10(<span class="number">0.5</span>), np.log10(<span class="number">1</span>),np.log10(<span class="number">3</span>),np.log10(<span class="number">10</span>),np.log10(<span class="number">50</span>)]) </span><br><span class="line">cbar.ax.set_xticklabels([<span class="string">&#x27;0.01&#x27;</span>,<span class="string">&#x27;0.1&#x27;</span>,<span class="string">&#x27;0.5&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;50&#x27;</span>], fontsize=<span class="number">20</span>) </span><br><span class="line">cbar.set_label(<span class="string">&#x27;Chlorophyll, mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;MODIS [Chl a] mg m$^&#123;-3&#125;$&#x27;</span>, fontsize=<span class="number">20</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>相比basemap这个方便很多，但是分辨率还是有一点问题。</p>
-<h1 id="一些参考资料"><a class="markdownIt-Anchor" href="#一些参考资料"></a> 一些参考资料</h1>
-<p><span class="exturl" data-url="aHR0cHM6Ly96aGFqaW1hbi5naXRodWIuaW8vcG9zdC9jYXJ0b3B5X2ludHJvZHVjdGlvbi8=">https://zhajiman.github.io/post/cartopy_introduction/<i class="fa fa-external-link-alt"></i></span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9zY2l0b29scy5vcmcudWsvY2FydG9weS9kb2NzL2xhdGVzdC9pbmRleC5odG1s">https://scitools.org.uk/cartopy/docs/latest/index.html<i class="fa fa-external-link-alt"></i></span></p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cubmV0LWFuYWx5c2lzLmNvbS9ibG9nL2NhcnRvcHlsYXlvdXQuaHRtbA==">https://www.net-analysis.com/blog/cartopylayout.html<i class="fa fa-external-link-alt"></i></span></p>
+<h2 id="语法"><a class="markdownIt-Anchor" href="#语法"></a> 语法</h2>
+<p><code>lambda arguments : expression</code></p>
+<p>执行表达式并返回结果</p>
+<h2 id="实例"><a class="markdownIt-Anchor" href="#实例"></a> 实例</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a : a + <span class="number">10</span></span><br><span class="line">print(x(<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
+<p>这一句话就定义了一个lambda函数，a是这个函数的参数，a+10是这个函数的表达式，x是这个函数的名字。</p>
+<p>Lambda可以接受任意数量的参数，比如</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a, b, c : a + b + c</span><br><span class="line">print(x(<span class="number">5</span>, <span class="number">6</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+<p>这个函数就是三个参数</p>
+<h2 id="函数内匿名函数"><a class="markdownIt-Anchor" href="#函数内匿名函数"></a> 函数内匿名函数</h2>
+<p>假设我定义了这么一个函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br></pre></td></tr></table></figure>
+<p>这个函数的作用是把a变成n倍。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br><span class="line"></span><br><span class="line">mydoubler = myfunc(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>这样就可以很快速地构建出来这样的一个函数：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mydoubler</span>(<span class="params">a</span>):</span></span><br><span class="line">  <span class="keyword">return</span> n*<span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p>不需要想用别的的时候再去定义，比如我还想再来一个三倍的函数，就直接：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mytripler = myfunc(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -1728,41 +1763,6 @@ tags: [标签1,标签2,标签3]
         <tag>机器学习</tag>
         <tag>Linux</tag>
         <tag>服务器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>lambda</title>
-    <url>/posts/d39dff82.html</url>
-    <content><![CDATA[<h1 id="python-lambda"><a class="markdownIt-Anchor" href="#python-lambda"></a> Python Lambda</h1>
-<p>在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。</p>
-<p><strong>lambda 函数是一种小的匿名函数。</strong></p>
-<p><strong>lambda 函数可接受任意数量的参数，但只能有一个表达式。</strong></p>
-<a id="more"></a>
-<h2 id="语法"><a class="markdownIt-Anchor" href="#语法"></a> 语法</h2>
-<p><code>lambda arguments : expression</code></p>
-<p>执行表达式并返回结果</p>
-<h2 id="实例"><a class="markdownIt-Anchor" href="#实例"></a> 实例</h2>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a : a + <span class="number">10</span></span><br><span class="line">print(x(<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
-<p>这一句话就定义了一个lambda函数，a是这个函数的参数，a+10是这个函数的表达式，x是这个函数的名字。</p>
-<p>Lambda可以接受任意数量的参数，比如</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a, b, c : a + b + c</span><br><span class="line">print(x(<span class="number">5</span>, <span class="number">6</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
-<p>这个函数就是三个参数</p>
-<h2 id="函数内匿名函数"><a class="markdownIt-Anchor" href="#函数内匿名函数"></a> 函数内匿名函数</h2>
-<p>假设我定义了这么一个函数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br></pre></td></tr></table></figure>
-<p>这个函数的作用是把a变成n倍。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br><span class="line"></span><br><span class="line">mydoubler = myfunc(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-<p>这样就可以很快速地构建出来这样的一个函数：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mydoubler</span>(<span class="params">a</span>):</span></span><br><span class="line">  <span class="keyword">return</span> n*<span class="number">2</span></span><br></pre></td></tr></table></figure>
-<p>不需要想用别的的时候再去定义，比如我还想再来一个三倍的函数，就直接：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mytripler = myfunc(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Research</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>

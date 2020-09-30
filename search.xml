@@ -161,6 +161,9 @@ ATPRK approach is upscaled to the original coarse spatial resolution, it is iden
 <p>In summary, ATPRK includes two parts: regression and ATPK. The former uses fine spatial resolution information from the fine band and the latter down- scales the residuals from regression that are then added back to the regression prediction.</p>
 <h1 id="deriving-consistent-ocean-biological-and-biogeochemical-products-from-multiple-satellite-ocean-color-sensors"><a class="markdownIt-Anchor" href="#deriving-consistent-ocean-biological-and-biogeochemical-products-from-multiple-satellite-ocean-color-sensors"></a> Deriving consistent ocean biological and biogeochemical products from multiple satellite ocean color sensors</h1>
 <p>Menghua Wang, Lide Jiang, SeungHyun Son, Xiaoming Liu, and Kenneth J. Voss, “Deriving consistent ocean biological and biogeochemical products from multiple satellite ocean color sensors,” Opt. Express <strong>28</strong>, 2661-2682 (2020)</p>
+<p>This paper proposed a method that could derive consistent product from different new.</p>
+<p>I need to consider sensor response function.</p>
+<p>Consistency evaluation by scatter plot and density plot</p>
 ]]></content>
       <categories>
         <category>Annotated Bibliography</category>

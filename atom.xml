@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-10-01T05:44:28.892Z</updated>
+  <updated>2020-10-05T12:33:54.523Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Annotated Bibliography 2020 10.5-10.11</title>
+    <link href="https://lifeodyssey.github.io/posts/3d8d27aa.html"/>
+    <id>https://lifeodyssey.github.io/posts/3d8d27aa.html</id>
+    <published>2020-10-05T12:21:11.000Z</published>
+    <updated>2020-10-05T12:33:54.523Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Annotated Bibliography 2020 10.5-10.11&lt;/p&gt;
+&lt;p&gt;Next Monday I will do a book reading presentaion. So this post will mainly include the book reading and some other oceanography quick look.&lt;/p&gt;
+&lt;p&gt;And from this semester, I think I’d better make some notes for seminar to keep myself concentrated.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
+    
+    
+    <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
+    
+    <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
+    
+    <category term="Book Reading" scheme="https://lifeodyssey.github.io/tags/Book-Reading/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Annotated Bibliography 2020 9.28-10.4</title>
     <link href="https://lifeodyssey.github.io/posts/e4bb9d98.html"/>
     <id>https://lifeodyssey.github.io/posts/e4bb9d98.html</id>
     <published>2020-09-28T03:42:16.000Z</published>
-    <updated>2020-10-01T05:44:28.892Z</updated>
+    <updated>2020-10-02T01:03:17.472Z</updated>
     
     
     <summary type="html">&lt;p&gt;Annotated Bibliography 2020 9.28-10.4&lt;/p&gt;
@@ -442,29 +467,6 @@
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
     
     <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>book-reading-note2</title>
-    <link href="https://lifeodyssey.github.io/posts/44f3f721.html"/>
-    <id>https://lifeodyssey.github.io/posts/44f3f721.html</id>
-    <published>2019-12-15T09:43:02.000Z</published>
-    <updated>2020-02-09T06:28:49.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
-    
-    <category term="bookreading" scheme="https://lifeodyssey.github.io/tags/bookreading/"/>
-    
-    <category term="Seminar" scheme="https://lifeodyssey.github.io/tags/Seminar/"/>
     
   </entry>
   

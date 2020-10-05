@@ -355,9 +355,6 @@ ATPRK approach is upscaled to the original coarse spatial resolution, it is iden
 <p>However, the synthesized band scheme based on the simple averaging process fails to consider the relation between the visited coarse band and the four fine bands. In this paper, to fully account for the information in the four finebands, the synthesized band for each coarse band is determined adap- tively as a linear combination ofthe four fine bands.</p>
 <p>So this is the why there exist the ‘Selected band scheme.m’ and ‘Synthesized band scheme.m’ as the first two file.</p>
 <p>After band selection, as the selected band scheme only use panchromatic band and synthesized use multispectral bands, so the function are called ‘ATPRK_PANsharpen’ and ‘ATPRK_MSsharpen’, respectively.</p>
-<h3 id="atprk-2"><a class="markdownIt-Anchor" href="#atprk-2"></a> ATPRK</h3>
-<p>I checked two ATPRK code, they are alomost the same</p>
-<h4 id="linear-regression-modeling"><a class="markdownIt-Anchor" href="#linear-regression-modeling"></a> linear regression modeling</h4>
 <h1 id="deriving-consistent-ocean-biological-and-biogeochemical-products-from-multiple-satellite-ocean-color-sensors"><a class="markdownIt-Anchor" href="#deriving-consistent-ocean-biological-and-biogeochemical-products-from-multiple-satellite-ocean-color-sensors"></a> Deriving consistent ocean biological and biogeochemical products from multiple satellite ocean color sensors</h1>
 <p>Menghua Wang, Lide Jiang, SeungHyun Son, Xiaoming Liu, and Kenneth J. Voss, “Deriving consistent ocean biological and biogeochemical products from multiple satellite ocean color sensors,” Opt. Express <strong>28</strong>, 2661-2682 (2020)</p>
 <p>This paper proposed a method that could derive consistent product from different new.</p>
@@ -4336,6 +4333,29 @@ gCy−1<br />
       <tags>
         <tag>Research</tag>
         <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Annotated Bibliography 2020 10.5-10.11</title>
+    <url>/posts/3d8d27aa.html</url>
+    <content><![CDATA[<p>Annotated Bibliography 2020 10.5-10.11</p>
+<p>Next Monday I will do a book reading presentaion. So this post will mainly include the book reading and some other oceanography quick look.</p>
+<p>And from this semester, I think I’d better make some notes for seminar to keep myself concentrated.</p>
+<a id="more"></a>
+<h1 id="book-reading"><a class="markdownIt-Anchor" href="#book-reading"></a> Book reading</h1>
+<p>Ch. 1.1-1.2.2 of book &lt;Emery, William, and Adriano Camps. <em>Introduction to satellite remote sensing: atmosphere, ocean, land and cryosphere applications</em>. Elsevier, 2017.&gt;</p>
+<h2 id="the-definition-of-remote-sensing"><a class="markdownIt-Anchor" href="#the-definition-of-remote-sensing"></a> The definition of Remote Sensing</h2>
+<h2 id="the-history-of-satellite-remote-sensing"><a class="markdownIt-Anchor" href="#the-history-of-satellite-remote-sensing"></a> The History of Satellite Remote Sensing</h2>
+<h3 id="the-nature-of-light-and-the-development-of-aerial-photography"><a class="markdownIt-Anchor" href="#the-nature-of-light-and-the-development-of-aerial-photography"></a> The Nature of Light and the Development of Aerial Photography</h3>
+<h3 id="the-birth-of-earth-orbiting-satellites"><a class="markdownIt-Anchor" href="#the-birth-of-earth-orbiting-satellites"></a> The Birth of Earth-Orbiting Satellites</h3>
+]]></content>
+      <categories>
+        <category>Annotated Bibliography</category>
+      </categories>
+      <tags>
+        <tag>Remote Sensing</tag>
+        <tag>Oceanography</tag>
+        <tag>Book Reading</tag>
       </tags>
   </entry>
 </search>

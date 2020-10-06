@@ -252,6 +252,59 @@ ATPRK approach is upscaled to the original coarse spatial resolution, it is iden
       </tags>
   </entry>
   <entry>
+    <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
+    <url>/posts/4df973c2.html</url>
+    <content><![CDATA[<p><strong>Types of Learning</strong></p>
+<a id="more"></a>
+<h1 id="learning-with-different-output-space"><a class="markdownIt-Anchor" href="#learning-with-different-output-space"></a> Learning with Different Output Space</h1>
+<h2 id="credit-approval-problem-revisited"><a class="markdownIt-Anchor" href="#credit-approval-problem-revisited"></a> Credit Approval Problem Revisited</h2>
+<h2 id="more-binary-classification-problems"><a class="markdownIt-Anchor" href="#more-binary-classification-problems"></a> More Binary Classification Problems</h2>
+<h2 id="multiclass-classification-coin-recognition-problem"><a class="markdownIt-Anchor" href="#multiclass-classification-coin-recognition-problem"></a> Multiclass Classification: Coin Recognition Problem</h2>
+<h2 id="regression-patient-recovery-prediction-problem"><a class="markdownIt-Anchor" href="#regression-patient-recovery-prediction-problem"></a> Regression: Patient Recovery Prediction Problem</h2>
+<h2 id="structured-learning-sequence-tagging-problem"><a class="markdownIt-Anchor" href="#structured-learning-sequence-tagging-problem"></a> Structured Learning: Sequence Tagging Problem</h2>
+<h1 id="learning-with-different-data-label"><a class="markdownIt-Anchor" href="#learning-with-different-data-label"></a> Learning With Different Data Label</h1>
+<h2 id="supervised-coin-recognition-revisited"><a class="markdownIt-Anchor" href="#supervised-coin-recognition-revisited"></a> Supervised: Coin Recognition Revisited</h2>
+<p>##　Unsupervised: Coin Recognition without <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>unsupervised multiclass classification <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span>‘Clustering’:a challenging but useful problem</p>
+<h2 id="unsupervised-learning-without-y_n"><a class="markdownIt-Anchor" href="#unsupervised-learning-without-y_n"></a> Unsupervised: Learning without <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></h2>
+<ul>
+<li>Clustering</li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGVuc2l0eV9lc3RpbWF0aW9u">Density estimation<i class="fa fa-external-link-alt"></i></span></li>
+<li>Outlier Detection</li>
+</ul>
+<h2 id="semi-supervisedcoin-recognition-with-some-y_n"><a class="markdownIt-Anchor" href="#semi-supervisedcoin-recognition-with-some-y_n"></a> Semi-supervised:Coin Recognition with Some <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></h2>
+<p>avoid expensive labeling</p>
+<h2 id="reinforcement-learning"><a class="markdownIt-Anchor" href="#reinforcement-learning"></a> Reinforcement Learning</h2>
+<h1 id="learning-with-different-protocol"><a class="markdownIt-Anchor" href="#learning-with-different-protocol"></a> Learning with Different Protocol</h1>
+<h2 id="batch-learning"><a class="markdownIt-Anchor" href="#batch-learning"></a> Batch Learning</h2>
+<p>a very common protocol</p>
+<h2 id="online-spam-filter-that-improves"><a class="markdownIt-Anchor" href="#online-spam-filter-that-improves"></a> Online: Spam Filter that ‘improves’</h2>
+<h2 id="active-learning-learning-by-asking"><a class="markdownIt-Anchor" href="#active-learning-learning-by-asking"></a> Active Learning: Learning by ‘Asking’</h2>
+<h1 id="learning-with-different-input-space"><a class="markdownIt-Anchor" href="#learning-with-different-input-space"></a> Learning with Different Input Space</h1>
+<h2 id="concrete-features"><a class="markdownIt-Anchor" href="#concrete-features"></a> Concrete Features</h2>
+<p>human intelligence</p>
+<h2 id="raw-features"><a class="markdownIt-Anchor" href="#raw-features"></a> Raw Features</h2>
+<p>need human or machines to convert to concrete ones(feature engineering)</p>
+<h2 id="abstract-features"><a class="markdownIt-Anchor" href="#abstract-features"></a> Abstract Features</h2>
+<p>again need feature conversion/extraction/construction</p>
+<h1 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h1>
+<ul>
+<li>Learning with Different Output Space:classification,regression,structured</li>
+<li>Learning with Different Data Label<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>:supervised,un/semi-supervised,reinforecement</li>
+<li>Learning with Different Protocol:batch,online,active</li>
+<li>Learning with Different Input Space:concrete,raw,abstract</li>
+</ul>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</title>
     <url>/posts/bc80cb40.html</url>
     <content><![CDATA[<p>An introduction for Machine learning</p>
@@ -424,59 +477,6 @@ ATPRK approach is upscaled to the original coarse spatial resolution, it is iden
 <p>D. Wolpert. The lack of a priori distinctions between learning algorithms. Neural Computation, 8(7): 1341-1390. (第四講：No free lunch 的正式版)</p>
 <p>T. M. Cover. Geometrical and statistical properties of systems of linear inequalities with applications in pattern recognition. IEEE Transactions on Electronic Computers, 14(3):326–334, 1965. (第五到六講：Growth Function)</p>
 <p>B. Zadrozny, J. Langford, N. Abe. Cost sensitive learning by cost-proportionate example weighting. IEEE International Conference on Data Mining, 2003. (第八講：Weighted Classification)</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</title>
-    <url>/posts/4df973c2.html</url>
-    <content><![CDATA[<p><strong>Types of Learning</strong></p>
-<a id="more"></a>
-<h1 id="learning-with-different-output-space"><a class="markdownIt-Anchor" href="#learning-with-different-output-space"></a> Learning with Different Output Space</h1>
-<h2 id="credit-approval-problem-revisited"><a class="markdownIt-Anchor" href="#credit-approval-problem-revisited"></a> Credit Approval Problem Revisited</h2>
-<h2 id="more-binary-classification-problems"><a class="markdownIt-Anchor" href="#more-binary-classification-problems"></a> More Binary Classification Problems</h2>
-<h2 id="multiclass-classification-coin-recognition-problem"><a class="markdownIt-Anchor" href="#multiclass-classification-coin-recognition-problem"></a> Multiclass Classification: Coin Recognition Problem</h2>
-<h2 id="regression-patient-recovery-prediction-problem"><a class="markdownIt-Anchor" href="#regression-patient-recovery-prediction-problem"></a> Regression: Patient Recovery Prediction Problem</h2>
-<h2 id="structured-learning-sequence-tagging-problem"><a class="markdownIt-Anchor" href="#structured-learning-sequence-tagging-problem"></a> Structured Learning: Sequence Tagging Problem</h2>
-<h1 id="learning-with-different-data-label"><a class="markdownIt-Anchor" href="#learning-with-different-data-label"></a> Learning With Different Data Label</h1>
-<h2 id="supervised-coin-recognition-revisited"><a class="markdownIt-Anchor" href="#supervised-coin-recognition-revisited"></a> Supervised: Coin Recognition Revisited</h2>
-<p>##　Unsupervised: Coin Recognition without <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
-<p>unsupervised multiclass classification <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⇔</mo></mrow><annotation encoding="application/x-tex">\Leftrightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇔</span></span></span></span>‘Clustering’:a challenging but useful problem</p>
-<h2 id="unsupervised-learning-without-y_n"><a class="markdownIt-Anchor" href="#unsupervised-learning-without-y_n"></a> Unsupervised: Learning without <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></h2>
-<ul>
-<li>Clustering</li>
-<li><span class="exturl" data-url="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGVuc2l0eV9lc3RpbWF0aW9u">Density estimation<i class="fa fa-external-link-alt"></i></span></li>
-<li>Outlier Detection</li>
-</ul>
-<h2 id="semi-supervisedcoin-recognition-with-some-y_n"><a class="markdownIt-Anchor" href="#semi-supervisedcoin-recognition-with-some-y_n"></a> Semi-supervised:Coin Recognition with Some <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></h2>
-<p>avoid expensive labeling</p>
-<h2 id="reinforcement-learning"><a class="markdownIt-Anchor" href="#reinforcement-learning"></a> Reinforcement Learning</h2>
-<h1 id="learning-with-different-protocol"><a class="markdownIt-Anchor" href="#learning-with-different-protocol"></a> Learning with Different Protocol</h1>
-<h2 id="batch-learning"><a class="markdownIt-Anchor" href="#batch-learning"></a> Batch Learning</h2>
-<p>a very common protocol</p>
-<h2 id="online-spam-filter-that-improves"><a class="markdownIt-Anchor" href="#online-spam-filter-that-improves"></a> Online: Spam Filter that ‘improves’</h2>
-<h2 id="active-learning-learning-by-asking"><a class="markdownIt-Anchor" href="#active-learning-learning-by-asking"></a> Active Learning: Learning by ‘Asking’</h2>
-<h1 id="learning-with-different-input-space"><a class="markdownIt-Anchor" href="#learning-with-different-input-space"></a> Learning with Different Input Space</h1>
-<h2 id="concrete-features"><a class="markdownIt-Anchor" href="#concrete-features"></a> Concrete Features</h2>
-<p>human intelligence</p>
-<h2 id="raw-features"><a class="markdownIt-Anchor" href="#raw-features"></a> Raw Features</h2>
-<p>need human or machines to convert to concrete ones(feature engineering)</p>
-<h2 id="abstract-features"><a class="markdownIt-Anchor" href="#abstract-features"></a> Abstract Features</h2>
-<p>again need feature conversion/extraction/construction</p>
-<h1 id="summary"><a class="markdownIt-Anchor" href="#summary"></a> Summary</h1>
-<ul>
-<li>Learning with Different Output Space:classification,regression,structured</li>
-<li>Learning with Different Data Label<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">y_n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>:supervised,un/semi-supervised,reinforecement</li>
-<li>Learning with Different Protocol:batch,online,active</li>
-<li>Learning with Different Input Space:concrete,raw,abstract</li>
-</ul>
 ]]></content>
       <categories>
         <category>学习笔记</category>

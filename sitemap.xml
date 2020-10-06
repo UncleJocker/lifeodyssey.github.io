@@ -368,20 +368,6 @@
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/Book-Reading/</loc>
-    <lastmod>2020-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/Oceanography/</loc>
-    <lastmod>2020-10-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://lifeodyssey.github.io/tags/Data-Fusion/</loc>
     <lastmod>2020-10-06</lastmod>
     <changefreq>daily</changefreq>
@@ -460,6 +446,13 @@
   
   <url>
     <loc>https://lifeodyssey.github.io/tags/Research/</loc>
+    <lastmod>2020-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/Oceanography/</loc>
     <lastmod>2020-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -565,6 +558,13 @@
   
   <url>
     <loc>https://lifeodyssey.github.io/tags/%E8%AD%A6%E9%86%92/</loc>
+    <lastmod>2020-10-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/Book-Reading/</loc>
     <lastmod>2020-10-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

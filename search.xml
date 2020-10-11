@@ -1028,18 +1028,6 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/posts/3b4b656d.html</url>
-    <content><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站"><a class="markdownIt-Anchor" href="#关于本站"></a> 🏠 关于本站</h2>
-<h2 id="博主是谁"><a class="markdownIt-Anchor" href="#博主是谁"></a> 👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好"><a class="markdownIt-Anchor" href="#兴趣爱好"></a> ⛹ 兴趣爱好</h2>
-<h2 id="联系我呀"><a class="markdownIt-Anchor" href="#联系我呀"></a> 📬 联系我呀</h2>
-]]></content>
-  </entry>
-  <entry>
     <title>Tutorial for handling MODIS ocean color data</title>
     <url>/posts/ef746e52.html</url>
     <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
@@ -1062,6 +1050,18 @@ s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class=
         <tag>Research</tag>
         <tag>Oceanography</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/posts/3b4b656d.html</url>
+    <content><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
+</blockquote>
+<h2 id="关于本站"><a class="markdownIt-Anchor" href="#关于本站"></a> 🏠 关于本站</h2>
+<h2 id="博主是谁"><a class="markdownIt-Anchor" href="#博主是谁"></a> 👨‍💻 博主是谁</h2>
+<h2 id="兴趣爱好"><a class="markdownIt-Anchor" href="#兴趣爱好"></a> ⛹ 兴趣爱好</h2>
+<h2 id="联系我呀"><a class="markdownIt-Anchor" href="#联系我呀"></a> 📬 联系我呀</h2>
+]]></content>
   </entry>
   <entry>
     <title>assert</title>
@@ -1782,6 +1782,35 @@ tags: [标签1,标签2,标签3]
       </tags>
   </entry>
   <entry>
+    <title>Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</title>
+    <url>/posts/da4d42a2.html</url>
+    <content><![CDATA[<p>Theory of Generalization</p>
+<p>test error can approximate training error if there is enough data and growth function does not grow too fast</p>
+<a id="more"></a>
+<h1 id="restriction-of-breaking-point"><a class="markdownIt-Anchor" href="#restriction-of-breaking-point"></a> Restriction of Breaking Point</h1>
+<h2 id="the-four-breaking-points"><a class="markdownIt-Anchor" href="#the-four-breaking-points"></a> The Four Breaking Points</h2>
+<p>growth function <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)'>m_\H(N)</span>:max number of dichotomies</p>
+<ul>
+<li>positive rays: <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)=N+1'>m_\H(N)=N+1</span></li>
+<li>positive intervals: <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)=\frac{1}{2}…'>m_\H(N)=\frac{1}{2}N^2+\frac{1}{2}N+1</span></li>
+<li>convex sets: <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)=2^N'>m_\H(N)=2^N</span></li>
+<li>2D perceptrons :<span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)&lt;2^N'>m_\H(N)&lt;2^N</span> in some cases</li>
+</ul>
+<h2 id="restriction-of-breaking-point-2"><a class="markdownIt-Anchor" href="#restriction-of-breaking-point-2"></a> Restriction of Breaking Point</h2>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png" alt="" /></p>
+<h1 id="bounding-functionbasic-cases"><a class="markdownIt-Anchor" href="#bounding-functionbasic-cases"></a> Bounding Function:Basic Cases</h1>
+<h2 id="bounding-function"><a class="markdownIt-Anchor" href="#bounding-function"></a> Bounding Function</h2>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Cousera</tag>
+        <tag>林轩田</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Material for ocean color</title>
     <url>/posts/3aa0ed1a.html</url>
     <content><![CDATA[<p>I have been in master course for half years. It’s time to organize the materials I have used.</p>
@@ -1856,35 +1885,6 @@ Python:<span class="exturl" data-url="aHR0cHM6Ly9za2VtbWFuLmlzL2JpdHN0cmVhbS8xOT
         <tag>Ocean Color</tag>
         <tag>Research</tag>
         <tag>Oceanography</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</title>
-    <url>/posts/da4d42a2.html</url>
-    <content><![CDATA[<p>Theory of Generalization</p>
-<p>test error can approximate training error if there is enough data and growth function does not grow too fast</p>
-<a id="more"></a>
-<h1 id="restriction-of-breaking-point"><a class="markdownIt-Anchor" href="#restriction-of-breaking-point"></a> Restriction of Breaking Point</h1>
-<h2 id="the-four-breaking-points"><a class="markdownIt-Anchor" href="#the-four-breaking-points"></a> The Four Breaking Points</h2>
-<p>growth function <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)'>m_\H(N)</span>:max number of dichotomies</p>
-<ul>
-<li>positive rays: <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)=N+1'>m_\H(N)=N+1</span></li>
-<li>positive intervals: <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)=\frac{1}{2}…'>m_\H(N)=\frac{1}{2}N^2+\frac{1}{2}N+1</span></li>
-<li>convex sets: <span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)=2^N'>m_\H(N)=2^N</span></li>
-<li>2D perceptrons :<span class='katex-error' title='ParseError: KaTeX parse error: Got function &#039;\H&#039; with no arguments as subscript at position 3: m_\̲H̲(N)&lt;2^N'>m_\H(N)&lt;2^N</span> in some cases</li>
-</ul>
-<h2 id="restriction-of-breaking-point-2"><a class="markdownIt-Anchor" href="#restriction-of-breaking-point-2"></a> Restriction of Breaking Point</h2>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190512171932.png" alt="" /></p>
-<h1 id="bounding-functionbasic-cases"><a class="markdownIt-Anchor" href="#bounding-functionbasic-cases"></a> Bounding Function:Basic Cases</h1>
-<h2 id="bounding-function"><a class="markdownIt-Anchor" href="#bounding-function"></a> Bounding Function</h2>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Cousera</tag>
-        <tag>林轩田</tag>
       </tags>
   </entry>
   <entry>

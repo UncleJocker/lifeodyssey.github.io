@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-10-13T00:50:19.461Z</updated>
+  <updated>2020-10-13T07:53:52.389Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,11 +21,21 @@
     <link href="https://lifeodyssey.github.io/posts/372a5dae.html"/>
     <id>https://lifeodyssey.github.io/posts/372a5dae.html</id>
     <published>2020-10-13T00:50:19.000Z</published>
-    <updated>2020-10-13T00:50:19.461Z</updated>
+    <updated>2020-10-13T07:53:52.389Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Annotated Bibliography 2020 10.13-10.18&lt;/p&gt;
+&lt;p&gt;Maybe this week only one paper.&lt;/p&gt;
+&lt;p&gt;I need to modify rendering configeration to make equations clearly.&lt;/p&gt;</summary>
     
     
     
+    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
+    
+    <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
+    
+    <category term="Spatial Interpolation" scheme="https://lifeodyssey.github.io/tags/Spatial-Interpolation/"/>
     
   </entry>
   

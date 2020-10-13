@@ -4440,6 +4440,23 @@ gCy−1<br />
   <entry>
     <title>Annotated Bibliography 2020 10.12-10.18</title>
     <url>/posts/372a5dae.html</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>Annotated Bibliography 2020 10.13-10.18</p>
+<p>Maybe this week only one paper.</p>
+<p>I need to modify rendering configeration to make equations clearly.</p>
+<a id="more"></a>
+<h1 id="kriging-and-semivariogram-deconvolution-in-the-presence-of-irregular-geographical-units"><a class="markdownIt-Anchor" href="#kriging-and-semivariogram-deconvolution-in-the-presence-of-irregular-geographical-units"></a> Kriging and Semivariogram Deconvolution in the Presence of Irregular Geographical Units</h1>
+<h2 id="definitions"><a class="markdownIt-Anchor" href="#definitions"></a> Definitions</h2>
+<p>Variography: Variography is the analysis of spatial variability of grade within a region</p>
+<p>A variogram is used to quantify this spatial variability between samples.</p>
+<p>Heterogeneity 异质性 Homogeneity同质性</p>
+<p>deconvolution 去卷积</p>
+]]></content>
+      <categories>
+        <category>Annotated Bibliography</category>
+      </categories>
+      <tags>
+        <tag>Remote Sensing</tag>
+        <tag>Spatial Interpolation</tag>
+      </tags>
   </entry>
 </search>

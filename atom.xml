@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-10-06T06:19:36.268Z</updated>
+  <updated>2020-10-13T00:50:19.461Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Annotated Bibliography 2020 10.12-10.18</title>
+    <link href="https://lifeodyssey.github.io/posts/372a5dae.html"/>
+    <id>https://lifeodyssey.github.io/posts/372a5dae.html</id>
+    <published>2020-10-13T00:50:19.000Z</published>
+    <updated>2020-10-13T00:50:19.461Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Annotated Bibliography 2020 10.5-10.11</title>
@@ -433,29 +446,6 @@
     
     <summary type="html">&lt;p&gt;I have been in master course for half years. It’s time to organize the materials I have used.&lt;/p&gt;
 &lt;p&gt;This article will update as soon as I get new resource.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MODIS OC data batch download</title>
-    <link href="https://lifeodyssey.github.io/posts/8636bca2.html"/>
-    <id>https://lifeodyssey.github.io/posts/8636bca2.html</id>
-    <published>2020-02-20T05:05:08.000Z</published>
-    <updated>2020-02-28T08:24:28.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;This blog introduce a MODIS(also suitable for other available satellites) Ocean Color data batch download method without wget(since it doesn’t work on my laptop).&lt;/p&gt;</summary>
     
     
     

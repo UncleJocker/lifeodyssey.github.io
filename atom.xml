@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-10-13T11:17:53.866Z</updated>
+  <updated>2020-10-22T07:15:19.394Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -17,26 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Annotated Bibliography 2020 10.12-10.18</title>
-    <link href="https://lifeodyssey.github.io/posts/372a5dae.html"/>
-    <id>https://lifeodyssey.github.io/posts/372a5dae.html</id>
-    <published>2020-10-13T00:50:19.000Z</published>
-    <updated>2020-10-13T11:17:53.866Z</updated>
+    <title>kriging</title>
+    <link href="https://lifeodyssey.github.io/posts/f4af350.html"/>
+    <id>https://lifeodyssey.github.io/posts/f4af350.html</id>
+    <published>2020-10-22T01:53:33.000Z</published>
+    <updated>2020-10-22T07:15:19.394Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Annotated Bibliography 2020 10.13-10.18&lt;/p&gt;
-&lt;p&gt;Maybe this week only one paper.&lt;/p&gt;
-&lt;p&gt;I need to modify rendering configeration to make equations clearly.&lt;/p&gt;
-&lt;p&gt;And I think I need to read more textbook about geostatistics.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Ordinary Kriging&lt;/p&gt;
+&lt;p&gt;Poisson Kriging-Area to Area&lt;/p&gt;
+&lt;p&gt;Poisson Kriging-Area to Point&lt;/p&gt;
+&lt;p&gt;These are the three types inside &lt;a href=&quot;https://github.com/szymon-datalions/pyinterpolate&quot;&gt;https://github.com/szymon-datalions/pyinterpolate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Refference :&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J-IB4_QL7Oc&quot;&gt;https://www.youtube.com/watch?v=J-IB4_QL7Oc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Olea R A. Geostatistics for engineers and earth scientists[M]. Springer Science &amp;amp; Business Media, 2012.&lt;/p&gt;</summary>
     
     
     
-    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
+    <category term="Kriging model" scheme="https://lifeodyssey.github.io/tags/Kriging-model/"/>
     
-    <category term="Spatial Interpolation" scheme="https://lifeodyssey.github.io/tags/Spatial-Interpolation/"/>
+    <category term="Spatial staticstics" scheme="https://lifeodyssey.github.io/tags/Spatial-staticstics/"/>
     
   </entry>
   

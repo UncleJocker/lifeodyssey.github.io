@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-10-22T07:15:19.394Z</updated>
+  <updated>2020-10-22T08:00:15.619Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="https://lifeodyssey.github.io/posts/f4af350.html"/>
     <id>https://lifeodyssey.github.io/posts/f4af350.html</id>
     <published>2020-10-22T01:53:33.000Z</published>
-    <updated>2020-10-22T07:15:19.394Z</updated>
+    <updated>2020-10-22T08:00:15.619Z</updated>
     
     
     <summary type="html">&lt;p&gt;Ordinary Kriging&lt;/p&gt;
 &lt;p&gt;Poisson Kriging-Area to Area&lt;/p&gt;
 &lt;p&gt;Poisson Kriging-Area to Point&lt;/p&gt;
-&lt;p&gt;These are the three types inside &lt;a href=&quot;https://github.com/szymon-datalions/pyinterpolate&quot;&gt;https://github.com/szymon-datalions/pyinterpolate&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Refference :&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=J-IB4_QL7Oc&quot;&gt;https://www.youtube.com/watch?v=J-IB4_QL7Oc&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Olea R A. Geostatistics for engineers and earth scientists[M]. Springer Science &amp;amp; Business Media, 2012.&lt;/p&gt;</summary>
+&lt;p&gt;These are the three types inside &lt;a href=&quot;https://github.com/szymon-datalions/pyinterpolate&quot;&gt;https://github.com/szymon-datalions/pyinterpolate&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     

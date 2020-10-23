@@ -4545,6 +4545,9 @@ gCy−1<br />
 <li>Data points can be screened by ones lying between them and the target</li>
 </ol>
 <p>These effects are all intuitively desirable, and the first shows that kriging is local. They will become evident in the examples below. They also have practical implications. The most important for present purposes is that because only the nearest few data points to the target carry significant weight, matrix A in the kriging system need never be large and its inversion will be swift.</p>
+<h1 id="covariance-and-variogram"><a class="markdownIt-Anchor" href="#covariance-and-variogram"></a> Covariance and Variogram</h1>
+<p>Before we step into the next one, we need to clarify some basic definition.</p>
+<p>This part also comes from the previous textbook.</p>
 <h1 id="poisson-kriging-area-to-area"><a class="markdownIt-Anchor" href="#poisson-kriging-area-to-area"></a> Poisson Kriging-Area to Area</h1>
 ]]></content>
       <categories>

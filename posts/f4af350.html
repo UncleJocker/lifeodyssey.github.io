@@ -30,7 +30,7 @@
 <meta property="og:description" content="Ordinary Kriging Poisson Kriging-Area to Area Poisson Kriging-Area to Point These are the three types inside https:&#x2F;&#x2F;github.com&#x2F;szymon-datalions&#x2F;pyinterpolate">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-22T01:53:33.000Z">
-<meta property="article:modified_time" content="2020-10-22T08:00:15.619Z">
+<meta property="article:modified_time" content="2020-10-23T13:13:30.991Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Kriging model">
 <meta property="article:tag" content="Spatial staticstics">
@@ -183,7 +183,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#general-introduction"><span class="nav-number">1.</span> <span class="nav-text"> General Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-setup"><span class="nav-number">1.1.</span> <span class="nav-text"> Problem Setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#variogram"><span class="nav-number">1.2.</span> <span class="nav-text"> Variogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solving-model"><span class="nav-number">1.3.</span> <span class="nav-text"> Solving model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#several-assumpution"><span class="nav-number">1.4.</span> <span class="nav-text"> Several Assumpution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pros-and-cons"><span class="nav-number">1.5.</span> <span class="nav-text"> Pros and Cons</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ordinary-kriging"><span class="nav-number">2.</span> <span class="nav-text"> Ordinary Kriging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#theory-of-ordinary-kriging"><span class="nav-number">2.1.</span> <span class="nav-text"> THEORY OF ORDINARY KRIGING</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#weights"><span class="nav-number">2.2.</span> <span class="nav-text"> WEIGHTS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#poisson-kriging-area-to-area"><span class="nav-number">3.</span> <span class="nav-text"> Poisson Kriging-Area to Area</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#general-introduction"><span class="nav-number">1.</span> <span class="nav-text"> General Introduction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#problem-setup"><span class="nav-number">1.1.</span> <span class="nav-text"> Problem Setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#variogram"><span class="nav-number">1.2.</span> <span class="nav-text"> Variogram</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#solving-model"><span class="nav-number">1.3.</span> <span class="nav-text"> Solving model</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#several-assumpution"><span class="nav-number">1.4.</span> <span class="nav-text"> Several Assumpution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pros-and-cons"><span class="nav-number">1.5.</span> <span class="nav-text"> Pros and Cons</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ordinary-kriging"><span class="nav-number">2.</span> <span class="nav-text"> Ordinary Kriging</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#theory-of-ordinary-kriging"><span class="nav-number">2.1.</span> <span class="nav-text"> THEORY OF ORDINARY KRIGING</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#weights"><span class="nav-number">2.2.</span> <span class="nav-text"> WEIGHTS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#covariance-and-variogram"><span class="nav-number">3.</span> <span class="nav-text"> Covariance and Variogram</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#poisson-kriging-area-to-area"><span class="nav-number">4.</span> <span class="nav-text"> Poisson Kriging-Area to Area</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -292,10 +292,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2020-10-22 10:53:33 / Modified: 17:00:15" itemprop="dateCreated datePublished" datetime="2020-10-22T10:53:33+09:00">2020-10-22</time>
+              <time title="Created: 2020-10-22 10:53:33" itemprop="dateCreated datePublished" datetime="2020-10-22T10:53:33+09:00">2020-10-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-10-23 22:13:30" itemprop="dateModified" datetime="2020-10-23T22:13:30+09:00">2020-10-23</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -420,6 +426,9 @@
 <li>Data points can be screened by ones lying between them and the target</li>
 </ol>
 <p>These effects are all intuitively desirable, and the first shows that kriging is local. They will become evident in the examples below. They also have practical implications. The most important for present purposes is that because only the nearest few data points to the target carry significant weight, matrix A in the kriging system need never be large and its inversion will be swift.</p>
+<h1 id="covariance-and-variogram"><a class="markdownIt-Anchor" href="#covariance-and-variogram"></a> Covariance and Variogram</h1>
+<p>Before we step into the next one, we need to clarify some basic definition.</p>
+<p>This part also comes from the previous textbook.</p>
 <h1 id="poisson-kriging-area-to-area"><a class="markdownIt-Anchor" href="#poisson-kriging-area-to-area"></a> Poisson Kriging-Area to Area</h1>
 
     </div>

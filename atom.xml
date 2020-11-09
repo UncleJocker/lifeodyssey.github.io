@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-10-26T06:57:45.116Z</updated>
+  <updated>2020-11-09T10:45:54.177Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="https://lifeodyssey.github.io/posts/f4af350.html"/>
     <id>https://lifeodyssey.github.io/posts/f4af350.html</id>
     <published>2020-10-22T01:53:33.000Z</published>
-    <updated>2020-10-26T06:57:45.116Z</updated>
+    <updated>2020-11-09T10:45:54.177Z</updated>
     
     
     <summary type="html">&lt;p&gt;Ordinary Kriging&lt;/p&gt;
 &lt;p&gt;Poisson Kriging-Area to Area&lt;/p&gt;
 &lt;p&gt;Poisson Kriging-Area to Point&lt;/p&gt;
-&lt;p&gt;These are the three types inside &lt;a href=&quot;https://github.com/szymon-datalions/pyinterpolate&quot;&gt;https://github.com/szymon-datalions/pyinterpolate&lt;/a&gt;&lt;/p&gt;</summary>
+&lt;p&gt;These are the three types inside &lt;a href=&quot;https://github.com/szymon-datalions/pyinterpolate&quot;&gt;https://github.com/szymon-datalions/pyinterpolate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I also wan to show how to apply them to satellite image as an practice for APTRK&lt;/p&gt;</summary>
     
     
     

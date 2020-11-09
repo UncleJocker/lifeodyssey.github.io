@@ -4444,6 +4444,7 @@ gCy−1<br />
 <p>Poisson Kriging-Area to Area</p>
 <p>Poisson Kriging-Area to Point</p>
 <p>These are the three types inside <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3N6eW1vbi1kYXRhbGlvbnMvcHlpbnRlcnBvbGF0ZQ==">https://github.com/szymon-datalions/pyinterpolate<i class="fa fa-external-link-alt"></i></span></p>
+<p>I also wan to show how to apply them to satellite image as an practice for APTRK</p>
 <a id="more"></a>
 <h1 id="general-introduction"><a class="markdownIt-Anchor" href="#general-introduction"></a> General Introduction</h1>
 <p>Reference: <span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1KLUlCNF9RTDdPYw==">https://www.youtube.com/watch?v=J-IB4_QL7Oc<i class="fa fa-external-link-alt"></i></span></p>

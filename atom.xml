@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-11-09T10:45:54.177Z</updated>
+  <updated>2020-11-10T01:47:27.153Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>np.ma.mask</title>
+    <link href="https://lifeodyssey.github.io/posts/39e89397.html"/>
+    <id>https://lifeodyssey.github.io/posts/39e89397.html</id>
+    <published>2020-11-10T01:08:30.000Z</published>
+    <updated>2020-11-10T01:47:27.153Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;自己前几天一直在跟mask斗争，中文网站上也没什么好的资料，就索性自己整理一下。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>kriging</title>
@@ -445,30 +466,6 @@
     
     
     <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Material for ocean color</title>
-    <link href="https://lifeodyssey.github.io/posts/3aa0ed1a.html"/>
-    <id>https://lifeodyssey.github.io/posts/3aa0ed1a.html</id>
-    <published>2020-02-28T08:23:12.000Z</published>
-    <updated>2020-03-20T16:23:00.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;I have been in master course for half years. It’s time to organize the materials I have used.&lt;/p&gt;
-&lt;p&gt;This article will update as soon as I get new resource.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
     
   </entry>
   

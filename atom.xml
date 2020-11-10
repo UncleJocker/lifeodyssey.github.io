@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-11-10T01:47:27.153Z</updated>
+  <updated>2020-11-10T08:05:20.089Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -17,11 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Note in writing and presentation</title>
+    <link href="https://lifeodyssey.github.io/posts/3da0aceb.html"/>
+    <id>https://lifeodyssey.github.io/posts/3da0aceb.html</id>
+    <published>2020-11-10T08:04:17.000Z</published>
+    <updated>2020-11-10T08:05:20.089Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>np.ma.mask</title>
     <link href="https://lifeodyssey.github.io/posts/39e89397.html"/>
     <id>https://lifeodyssey.github.io/posts/39e89397.html</id>
     <published>2020-11-10T01:08:30.000Z</published>
-    <updated>2020-11-10T01:47:27.153Z</updated>
+    <updated>2020-11-10T01:47:32.349Z</updated>
     
     
     <summary type="html">&lt;p&gt;自己前几天一直在跟mask斗争，中文网站上也没什么好的资料，就索性自己整理一下。&lt;/p&gt;</summary>
@@ -447,25 +460,6 @@
     <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
     <category term="Oceanography" scheme="https://lifeodyssey.github.io/tags/Oceanography/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>清华大学《研究生学位论文的选题方法》讲座实录</title>
-    <link href="https://lifeodyssey.github.io/posts/307feb93.html"/>
-    <id>https://lifeodyssey.github.io/posts/307feb93.html</id>
-    <published>2020-03-09T02:46:29.000Z</published>
-    <updated>2020-03-09T09:43:22.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;讲座地址：&lt;a href=&quot;https://www.bilibili.com/video/av94346515&quot;&gt;https://www.bilibili.com/video/av94346515&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

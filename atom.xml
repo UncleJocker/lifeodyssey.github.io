@@ -24,6 +24,9 @@
     <updated>2020-11-10T11:26:48.391Z</updated>
     
     
+    <summary type="html">
+</summary>
+    
     
     
     
@@ -61,7 +64,7 @@
     <summary type="html">&lt;p&gt;Ordinary Kriging&lt;/p&gt;
 &lt;p&gt;Poisson Kriging-Area to Area&lt;/p&gt;
 &lt;p&gt;Poisson Kriging-Area to Point&lt;/p&gt;
-&lt;p&gt;These are the three types inside &lt;a href=&quot;https://github.com/szymon-datalions/pyinterpolate&quot;&gt;https://github.com/szymon-datalions/pyinterpolate&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These are the three types inside https://github.com/szymon-datalions/pyinterpolate&lt;/p&gt;
 &lt;p&gt;I also wan to show how to apply them to satellite image as an practice for APTRK&lt;/p&gt;</summary>
     
     
@@ -85,7 +88,7 @@
     
     <summary type="html">&lt;p&gt;Annotated Bibliography 2020 10.5-10.11&lt;/p&gt;
 &lt;p&gt;Next Monday I will do a book reading presentaion. So this post will mainly include the book reading and some other oceanography quick look.&lt;/p&gt;
-&lt;p&gt;And from this semester, I think I’d better make some notes for seminar to keep myself concentrated.&lt;/p&gt;</summary>
+&lt;p&gt;And from this semester, I think I&#39;d better make some notes for seminar to keep myself concentrated.&lt;/p&gt;</summary>
     
     
     
@@ -132,7 +135,7 @@
     
     
     <summary type="html">&lt;p&gt;This year I attended the JpGU-AGU Joint Meeting 2020 and made a poster presentation.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&quot;&gt;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&lt;/a&gt;&lt;/p&gt;</summary>
+&lt;p&gt;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&lt;/p&gt;</summary>
     
     
     
@@ -281,7 +284,7 @@
     <updated>2020-08-07T12:45:24.000Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;python-lambda&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#python-lambda&quot;&gt;&lt;/a&gt; Python Lambda&lt;/h1&gt;
+    <summary type="html">&lt;h1 id=&quot;python-lambda&quot;&gt;Python Lambda&lt;/h1&gt;
 &lt;p&gt;在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;lambda 函数是一种小的匿名函数。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;lambda 函数可接受任意数量的参数，但只能有一个表达式。&lt;/strong&gt;&lt;/p&gt;</summary>
@@ -327,7 +330,7 @@
     <updated>2020-07-20T04:16:14.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Chapter 10.1.-10.2 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</summary>
     
     
     
@@ -350,7 +353,7 @@
     <updated>2020-07-15T14:27:51.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;There are five main data fusion approaches according to ‘Spatio-temporal fusion for remote sensing data: an overview and new benchmark’. Here I will read the STARFM.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;There are five main data fusion approaches according to &#39;Spatio-temporal fusion for remote sensing data: an overview and new benchmark&#39;. Here I will read the STARFM.&lt;/p&gt;</summary>
     
     
     
@@ -374,7 +377,7 @@
     
     
     <summary type="html">&lt;p&gt;This is the note of my own experiences.&lt;/p&gt;
-&lt;p&gt;As summarized in my former blog, the new result always from pre-print website, social media, conference. Here I will summary some source in oceanography, especially ocean color,  and also give some methods for following new articles.&lt;/p&gt;</summary>
+&lt;p&gt;As summarized in my former blog, the new result always from pre-print website, social media, conference. Here I will summary some source in oceanography, especially ocean color, and also give some methods for following new articles.&lt;/p&gt;</summary>
     
     
     
@@ -393,7 +396,7 @@
     <updated>2020-05-18T05:33:42.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Chapter 8.3.2.-8.4.4 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</summary>
     
     
     
@@ -417,7 +420,7 @@
     
     
     <summary type="html">&lt;p&gt;这个教程主要分为两部分：&lt;/p&gt;
-&lt;ol&gt;
+&lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;应用python分析MODIS水色遥感数据&lt;/li&gt;
 &lt;li&gt;SeaDAS OCSSW的安装与应用&lt;/li&gt;
 &lt;/ol&gt;
@@ -445,9 +448,9 @@
     
     
     <summary type="html">&lt;p&gt;This tutorial covers mainly two parts:&lt;/p&gt;
-&lt;ol&gt;
+&lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;Using python to analyse MODIS ocean color data&lt;/li&gt;
-&lt;li&gt;Installation and application of SeaDA  OCSSW&lt;/li&gt;
+&lt;li&gt;Installation and application of SeaDA OCSSW&lt;/li&gt;
 &lt;/ol&gt;</summary>
     
     

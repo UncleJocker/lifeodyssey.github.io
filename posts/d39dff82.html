@@ -183,7 +183,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python-lambda"><span class="nav-number">1.</span> <span class="nav-text"> Python Lambda</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text"> 语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text"> 实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%86%85%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text"> 函数内匿名函数</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python-lambda"><span class="nav-number">1.</span> <span class="nav-text">Python Lambda</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%AD%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.2.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%86%85%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">函数内匿名函数</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -315,21 +315,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="python-lambda"><a class="markdownIt-Anchor" href="#python-lambda"></a> Python Lambda</h1>
+        <h1 id="python-lambda">Python Lambda</h1>
 <p>在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。</p>
 <p><strong>lambda 函数是一种小的匿名函数。</strong></p>
 <p><strong>lambda 函数可接受任意数量的参数，但只能有一个表达式。</strong></p>
 <a id="more"></a>
-<h2 id="语法"><a class="markdownIt-Anchor" href="#语法"></a> 语法</h2>
+<h2 id="语法">语法</h2>
 <p><code>lambda arguments : expression</code></p>
 <p>执行表达式并返回结果</p>
-<h2 id="实例"><a class="markdownIt-Anchor" href="#实例"></a> 实例</h2>
+<h2 id="实例">实例</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a : a + <span class="number">10</span></span><br><span class="line">print(x(<span class="number">5</span>))</span><br></pre></td></tr></table></figure>
 <p>这一句话就定义了一个lambda函数，a是这个函数的参数，a+10是这个函数的表达式，x是这个函数的名字。</p>
 <p>Lambda可以接受任意数量的参数，比如</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="keyword">lambda</span> a, b, c : a + b + c</span><br><span class="line">print(x(<span class="number">5</span>, <span class="number">6</span>, <span class="number">2</span>))</span><br></pre></td></tr></table></figure>
 <p>这个函数就是三个参数</p>
-<h2 id="函数内匿名函数"><a class="markdownIt-Anchor" href="#函数内匿名函数"></a> 函数内匿名函数</h2>
+<h2 id="函数内匿名函数">函数内匿名函数</h2>
 <p>假设我定义了这么一个函数</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">myfunc</span>(<span class="params">n</span>):</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">lambda</span> a : a * n</span><br></pre></td></tr></table></figure>
 <p>这个函数的作用是把a变成n倍。</p>

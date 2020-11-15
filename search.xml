@@ -1994,9 +1994,7 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
     <content><![CDATA[<p>和matplotlib一样pandas也有cheatsheet</p>
 <a id="more"></a>
 <p>地址https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf</p>
-<figure>
-<img src="/Users/zhenjia/Documents/Pandas_Cheat_Sheet.png" alt="Pandas_Cheat_Sheet" /><figcaption aria-hidden="true">Pandas_Cheat_Sheet</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00020924161352046.png"></p>
 <p>另外顺手立个flag，每周在博客更新 Annotated Bibliography</p>
 ]]></content>
       <categories>

@@ -29,17 +29,17 @@
 <meta property="og:site_name" content="乔克叔叔的床边故事">
 <meta property="og:description" content="Ordinary Kriging Poisson Kriging-Area to Area Poisson Kriging-Area to Point These are the three types inside https:&#x2F;&#x2F;github.com&#x2F;szymon-datalions&#x2F;pyinterpolate I also wan to show how to apply them to s">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://lifeodyssey.github.io/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022110419095.png">
-<meta property="og:image" content="https://lifeodyssey.github.io/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022110833500.png">
-<meta property="og:image" content="https://lifeodyssey.github.io/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022142200533.png">
-<meta property="og:image" content="https://lifeodyssey.github.io/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022160855202.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022110419095.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022110833500.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022142200533.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022160855202.png">
 <meta property="article:published_time" content="2020-10-22T01:53:33.000Z">
-<meta property="article:modified_time" content="2020-11-09T10:45:54.177Z">
+<meta property="article:modified_time" content="2020-11-15T03:53:03.487Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Kriging model">
 <meta property="article:tag" content="Spatial staticstics">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lifeodyssey.github.io/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022110419095.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022110419095.png">
 
 <link rel="canonical" href="https://lifeodyssey.github.io/posts/f4af350.html">
 
@@ -305,7 +305,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-09 19:45:54" itemprop="dateModified" datetime="2020-11-09T19:45:54+09:00">2020-11-09</time>
+                <time title="Modified: 2020-11-15 12:53:03" itemprop="dateModified" datetime="2020-11-15T12:53:03+09:00">2020-11-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -335,14 +335,10 @@
 <h1 id="general-introduction">General Introduction</h1>
 <p>Reference: https://www.youtube.com/watch?v=J-IB4_QL7Oc</p>
 <h2 id="problem-setup">Problem Setup</h2>
-<figure>
-<img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022110419095.png" alt="image-00021022110419095" /><figcaption aria-hidden="true">image-00021022110419095</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022110419095.png"></p>
 <p>Here we have a island and we take some measurement for some red points. Each point include two attributes. <span class="math inline">\(x_i\)</span> is the location and <span class="math inline">\(y_i\)</span> is the thing we are interested in, like elevation.</p>
 <p>Now we want to get the elevation in some other point that we did not explicitly collect data. For example in this black dot.</p>
-<figure>
-<img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022110833500.png" alt="image-00021022110833500" /><figcaption aria-hidden="true">image-00021022110833500</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022110833500.png"></p>
 <p>So we just could use the data we have to predict the elevation of black dot. There are five closest red dots to this unknown dot. We are gonna to use these five dots to predict the unknown dots. <span class="math display">\[
 y_{new}=w^Ty+\epsilon_{new}\\
 =w_1y_1+w_2y_2+...+w_5y_5+\epsilon_{new}
@@ -352,9 +348,7 @@ y_{new}=w^Ty+\epsilon_{new}\\
 \gamma(x_i,x_j)=\frac{1}{2}(y_i-y_j)^2
 \]</span> This is the equation of variogram. <span class="math inline">\((x_i,x_j)\)</span> indicate the distance between two points. The distance is the input of <span class="math inline">\(\gamma\)</span> function. And the output of <span class="math inline">\(\gamma\)</span> function is half the difference of elevation. It should be increasing function since the smaller distance, the smaller difference.</p>
 <p>So lets plot the graph between H, the distance <span class="math inline">\((x_i,x_j)\)</span> and the output of <span class="math inline">\(\gamma\)</span> function.</p>
-<figure>
-<img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022142200533.png" alt="image-00021022142200533" /><figcaption aria-hidden="true">image-00021022142200533</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022142200533.png"></p>
 <p>This graph should reach the plateau as H increase. Because if the distance is two large, the difference should be almost the same, which indicate that the elevation belong to different group.</p>
 <p>There are some terminology here. First is the nugget. The nugget is the intercept that our graph begin. It should be not equal to zero. Because the variogram is a fit line and maybe we have a lot of closed dot with different elevation. But it shoul be small.</p>
 <p>Second one is the sill. Sill is the silling of a variogram. And the he range is the H value of sill.</p>
@@ -414,9 +408,7 @@ var[\hat{Z}(\boldsymbol{B})]=E[\{\hat{Z}(\boldsymbol{B})-Z(\boldsymbol{B})\}^2]\
 \]</span> The quantity <span class="math inline">\(\bar\gamma(\boldsymbol{x}_i,B)\)</span> is the average semivariance between the <span class="math inline">\(i\)</span>th sampling point and the block <span class="math inline">\(B\)</span> and is the integral <span class="math display">\[
 $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\boldsymbol{x})d\boldsymbol{x},
 \]</span> where <span class="math inline">\(\gamma(\boldsymbol{x}_i,\boldsymbol{x})\)</span> denotes the semivariance between the sampling point xi and a point x describing the block.</p>
-<figure>
-<img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00021022160855202.png" alt="image-00021022160855202" /><figcaption aria-hidden="true">image-00021022160855202</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021022160855202.png"></p>
 <p>The third term on the right-hand side of equation (7) is the double integral <span class="math display">\[
 \bar{\gamma}(B,B)=\frac{1}{|B^2|}\int_B\int_B\gamma(\boldsymbol{x},\boldsymbol{x^{\prime}})d\boldsymbol{x}d\boldsymbol{x^{\prime}}
 \]</span> where <span class="math inline">\(\gamma(\boldsymbol{x},\boldsymbol{x^{\prime}})\)</span> is the semivariance between two points <span class="math inline">\(x\)</span> and <span class="math inline">\(x^{\prime}\)</span> that sweep independently over B. It is the within-block variance. In punctual kriging <span class="math inline">\(\bar{\gamma}(B,B)\)</span>becomes <span class="math inline">\(\bar{\gamma}(x_0,x_0)=0\)</span>, which is why equation (5) has two terms rather than three.</p>

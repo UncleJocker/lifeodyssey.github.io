@@ -373,7 +373,7 @@
 <h2 id="认识索引">认识索引</h2>
 <p>下图是一个简单的 DataFrame 中索引的示例：</p>
 <figure>
-<img src="https://www.gairuo.com/file/pic/2020/04/pandas_index_01.jpg" alt="pandas index" /><figcaption aria-hidden="true">pandas index</figcaption>
+<img src="https://www.gairuo.com/file/pic/2020/04/pandas_index_01.jpg" alt="pandas index"><figcaption aria-hidden="true">pandas index</figcaption>
 </figure>
 <p>其中：</p>
 <ul>
@@ -528,7 +528,7 @@
 <p>也可以选择列：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># 只要一列，Series</span></span><br><span class="line">df[[<span class="string">&#x27;Q1&#x27;</span>, <span class="string">&#x27;Q2&#x27;</span>]] <span class="comment"># 选择两列</span></span><br><span class="line">df[[<span class="string">&#x27;name&#x27;</span>]] <span class="comment"># 选择一列，返回 DataFrame，注意和上例区别</span></span><br></pre></td></tr></table></figure>
 <h2 id="按标签-.loc">按标签 .loc</h2>
-<p><code>df.loc()</code> 的格式为 df.loc[<索引表达式>, <列表达式>]，表达式支持以下形式：</p>
+<p><code>df.loc()</code> 的格式为 df.loc[<索引表达式>, <列表达式>]，表达式支持以下形式：</列表达式></索引表达式></p>
 <p>单个标签:</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 代表索引，如果是字符需要加引号</span></span><br><span class="line">df.loc[<span class="number">0</span>] <span class="comment"># 选择索引为 0 的行</span></span><br><span class="line">df.loc[<span class="number">8</span>]</span><br></pre></td></tr></table></figure>
 <p>单个列表标签：</p>
@@ -541,7 +541,7 @@
 <p><code>df.iloc</code> 与 <code>df.loc</code> 相似，但只能用自然索引（行和列的 0 - n 索引），不能用标签。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df.iloc[:<span class="number">3</span>]</span><br><span class="line">df.iloc[:]</span><br><span class="line">df.iloc[<span class="number">2</span>:<span class="number">20</span>:<span class="number">3</span>]</span><br><span class="line">s.iloc[:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
 <h2 id="取具体值-.at">取具体值 .at</h2>
-<p>类似于 loc, 但仅取一个具体的值，结构为 at[<索引>,<列名>]：</p>
+<p>类似于 loc, 但仅取一个具体的值，结构为 at[<索引>,<列名>]：</列名></索引></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注：索引是字符需要加引号</span></span><br><span class="line">df.at[<span class="number">4</span>, <span class="string">&#x27;Q1&#x27;</span>] <span class="comment"># 65</span></span><br><span class="line">df.at[<span class="string">&#x27;lily&#x27;</span>, <span class="string">&#x27;Q1&#x27;</span>] <span class="comment"># 65 假定索引是 name</span></span><br><span class="line">df.at[<span class="number">0</span>, <span class="string">&#x27;name&#x27;</span>] <span class="comment"># &#x27;Liver&#x27;</span></span><br><span class="line">df.loc[<span class="number">0</span>].at[<span class="string">&#x27;name&#x27;</span>] <span class="comment"># &#x27;Liver&#x27;</span></span><br><span class="line"><span class="comment"># 指定列的值对应其他列的值</span></span><br><span class="line">df.set_index(<span class="string">&#x27;name&#x27;</span>).at[<span class="string">&#x27;Eorge&#x27;</span>, <span class="string">&#x27;team&#x27;</span>] <span class="comment"># &#x27;C&#x27;</span></span><br><span class="line">df.set_index(<span class="string">&#x27;name&#x27;</span>).team.at[<span class="string">&#x27;Eorge&#x27;</span>] <span class="comment"># &#x27;C&#x27;</span></span><br><span class="line"><span class="comment"># 指定列的对应索引的值</span></span><br><span class="line">df.team.at[<span class="number">3</span>] <span class="comment"># &#x27;C&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>同样 iat 和 iloc 一样，仅支持数字索引：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df.iat[<span class="number">4</span>, <span class="number">2</span>] <span class="comment"># 65</span></span><br><span class="line">df.loc[<span class="number">0</span>].iat[<span class="number">1</span>] <span class="comment"># &#x27;E&#x27;</span></span><br></pre></td></tr></table></figure>

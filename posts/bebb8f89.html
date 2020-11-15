@@ -415,7 +415,7 @@
 </ul>
 <h3 id="返回值">返回值</h3>
 <p>返回 enumerate(枚举) 对象。</p>
-<hr />
+<hr>
 <h2 id="实例">实例</h2>
 <p>以下展示了使用 enumerate() 方法的实例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string">&#x27;Winter&#x27;</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(seasons))</span><br><span class="line">[(<span class="number">0</span>, <span class="string">&#x27;Spring&#x27;</span>), (<span class="number">1</span>, <span class="string">&#x27;Summer&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;Fall&#x27;</span>), (<span class="number">3</span>, <span class="string">&#x27;Winter&#x27;</span>)]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>list(enumerate(seasons, start=<span class="number">1</span>))       <span class="comment"># 下标从 1 开始</span></span><br><span class="line">[(<span class="number">1</span>, <span class="string">&#x27;Spring&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;Summer&#x27;</span>), (<span class="number">3</span>, <span class="string">&#x27;Fall&#x27;</span>), (<span class="number">4</span>, <span class="string">&#x27;Winter&#x27;</span>)]</span><br></pre></td></tr></table></figure>
@@ -446,7 +446,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ax1 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">0</span>,<span class="number">0</span>), colspan=<span class="number">3</span>)</span><br><span class="line">ax2 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>,<span class="number">0</span>), colspan=<span class="number">2</span>)</span><br><span class="line">ax3 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">1</span>, <span class="number">2</span>), rowspan=<span class="number">2</span>)</span><br><span class="line">ax4 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">2</span>, <span class="number">0</span>))</span><br><span class="line">ax5 = plt.subplot2grid((<span class="number">3</span>,<span class="number">3</span>), (<span class="number">2</span>, <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 <p>会创建：</p>
 <figure>
-<img src="http://matplotlib.org/_images/demo_gridspec01.png" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="http://matplotlib.org/_images/demo_gridspec01.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <h2 id="gridspec和subplotspec">GridSpec和SubplotSpec</h2>
 <p>你可以显式创建<code>GridSpec</code>并用它们创建子图。</p>
@@ -458,7 +458,7 @@
 <p>上面的例子会变成：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">gs = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>, :])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>,:<span class="number">-1</span>])</span><br><span class="line">ax3 = plt.subplot(gs[<span class="number">1</span>:, <span class="number">-1</span>])</span><br><span class="line">ax4 = plt.subplot(gs[<span class="number">-1</span>,<span class="number">0</span>])</span><br><span class="line">ax5 = plt.subplot(gs[<span class="number">-1</span>,<span class="number">-2</span>])</span><br></pre></td></tr></table></figure>
 <figure>
-<img src="http://matplotlib.org/_images/demo_gridspec02.png" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="http://matplotlib.org/_images/demo_gridspec02.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <h2 id="调整-gridspec布局">调整 GridSpec布局</h2>
 <p>在显式使用<code>GridSpec</code>的时候，你可以调整子图的布局参数，子图由<code>gridspec</code>创建。</p>
@@ -468,24 +468,24 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gs1 = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">gs1.update(left=<span class="number">0.05</span>, right=<span class="number">0.48</span>, wspace=<span class="number">0.05</span>)</span><br><span class="line">ax1 = plt.subplot(gs1[:<span class="number">-1</span>, :])</span><br><span class="line">ax2 = plt.subplot(gs1[<span class="number">-1</span>, :<span class="number">-1</span>])</span><br><span class="line">ax3 = plt.subplot(gs1[<span class="number">-1</span>, <span class="number">-1</span>])</span><br><span class="line"></span><br><span class="line">gs2 = gridspec.GridSpec(<span class="number">3</span>, <span class="number">3</span>)</span><br><span class="line">gs2.update(left=<span class="number">0.55</span>, right=<span class="number">0.98</span>, hspace=<span class="number">0.05</span>)</span><br><span class="line">ax4 = plt.subplot(gs2[:, :<span class="number">-1</span>])</span><br><span class="line">ax5 = plt.subplot(gs2[:<span class="number">-1</span>, <span class="number">-1</span>])</span><br><span class="line">ax6 = plt.subplot(gs2[<span class="number">-1</span>, <span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
 <p>会产生</p>
 <figure>
-<img src="http://matplotlib.org/_images/demo_gridspec03.png" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="http://matplotlib.org/_images/demo_gridspec03.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <h2 id="使用-subplotspec创建-gridspec">使用 SubplotSpec创建 GridSpec</h2>
 <p>你可以从<code>SubplotSpec</code>创建<code>GridSpec</code>，其中它的布局参数设置为给定<code>SubplotSpec</code>的位置的布局参数。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gs0 = gridspec.GridSpec(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">gs00 = gridspec.GridSpecFromSubplotSpec(<span class="number">3</span>, <span class="number">3</span>, subplot_spec=gs0[<span class="number">0</span>])</span><br><span class="line">gs01 = gridspec.GridSpecFromSubplotSpec(<span class="number">3</span>, <span class="number">3</span>, subplot_spec=gs0[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
 <figure>
-<img src="http://matplotlib.org/_images/demo_gridspec04.png" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="http://matplotlib.org/_images/demo_gridspec04.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <h2 id="使用subplotspec创建复杂嵌套的gridspec">使用SubplotSpec创建复杂嵌套的GridSpec</h2>
 <p>这里有一个更复杂的嵌套<code>gridspec</code>的示例，我们通过在每个 3x3 内部网格中隐藏适当的脊线，在 4x4 外部网格的每个单元格周围放置一个框。</p>
 <figure>
-<img src="http://matplotlib.org/_images/demo_gridspec06.png" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="http://matplotlib.org/_images/demo_gridspec06.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <h2 id="网格尺寸可变的gridspec">网格尺寸可变的GridSpec</h2>
 <p>通常，<code>GridSpec</code>创建大小相等的网格。你可以调整行和列的相对高度和宽度，要注意绝对高度值是无意义的，有意义的只是它们的相对比值。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gs = gridspec.GridSpec(<span class="number">2</span>, <span class="number">2</span>,</span><br><span class="line">                       width_ratios=[<span class="number">1</span>,<span class="number">2</span>],</span><br><span class="line">                       height_ratios=[<span class="number">4</span>,<span class="number">1</span>]</span><br><span class="line">                       )</span><br><span class="line"></span><br><span class="line">ax1 = plt.subplot(gs[<span class="number">0</span>])</span><br><span class="line">ax2 = plt.subplot(gs[<span class="number">1</span>])</span><br><span class="line">ax3 = plt.subplot(gs[<span class="number">2</span>])</span><br><span class="line">ax4 = plt.subplot(gs[<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
 <figure>
-<img src="http://matplotlib.org/_images/demo_gridspec05.png" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="http://matplotlib.org/_images/demo_gridspec05.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <h1 id="seaborn">seaborn</h1>
 <p>seaborn是对matplotlib进一步的封装，简单点来说就是更简单了。</p>
@@ -506,7 +506,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">matplotlib.pyplot.subplots_adjust(*args, **kwargs)</span><br><span class="line">subplots_adjust(left=<span class="literal">None</span>, bottom=<span class="literal">None</span>, right=<span class="literal">None</span>, top=<span class="literal">None</span>,wspace=<span class="literal">None</span>, hspace=<span class="literal">None</span>)</span><br><span class="line"></span><br><span class="line">left  = <span class="number">0.125</span>  <span class="comment"># 子图(subplot)距画板(figure)左边的距离</span></span><br><span class="line">right = <span class="number">0.9</span>    <span class="comment"># 右边</span></span><br><span class="line">bottom = <span class="number">0.1</span>   <span class="comment"># 底部</span></span><br><span class="line">top = <span class="number">0.9</span>      <span class="comment"># 顶部</span></span><br><span class="line">wspace = <span class="number">0.2</span>   <span class="comment"># 子图水平间距</span></span><br><span class="line">hspace = <span class="number">0.2</span>   <span class="comment"># 子图垂直间距</span></span><br></pre></td></tr></table></figure>
 <h1 id="pltaxfig">plt/ax/fig</h1>
 <figure>
-<img src="https://pic2.zhimg.com/80/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg" alt="img" /><figcaption aria-hidden="true">img</figcaption>
+<img src="https://pic2.zhimg.com/80/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <p>尽量避免直接使用plt</p>
 <p>https://zhuanlan.zhihu.com/p/93423829</p>

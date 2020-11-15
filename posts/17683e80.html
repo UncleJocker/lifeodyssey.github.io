@@ -341,8 +341,8 @@
 <h2 id="gam-广义相加模型generalized-additive-model">GAM 广义相加模型Generalized additive model</h2>
 <table>
 <colgroup>
-<col style="width: 16%" />
-<col style="width: 83%" />
+<col style="width: 16%">
+<col style="width: 83%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -434,7 +434,7 @@
 </tr>
 </tbody>
 </table>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/9686a1f19149fe16eb4b6b383904d086.png"><img src="http://beader.me/imgs/auc-roc/9686a1f19149fe16eb4b6b383904d086.png" alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/9686a1f19149fe16eb4b6b383904d086.png"><img src="http://beader.me/imgs/auc-roc/9686a1f19149fe16eb4b6b383904d086.png" alt="img"></a></p>
 <p>图1.confusion matrix (混乱矩阵)</p>
 <p>精确率是针对我们预测结果而言的，它表示的是预测为正的样本中有多少是对的。召回率是针对我们原来的样本而言的，它表示的是样本中的正例有多少被预测正确了。</p>
 <p>当且仅当两者都高的时候，我们才可以说这种算法很NICE。在某些情况下我们可能要设定threshold来进行trade-off</p>
@@ -451,20 +451,20 @@
 <li>FPR: 伪阳性率，所有阴性样本中(FP+TN)，被分类器错误判断为阳的比例。FPR = FP / (FP + TN) = FP / 所有真实值为阴性的样本个数</li>
 </ul>
 <p>  我们想象这样一种场景，接触阳性样本可以给我们带来“收益”，接触阴性样本则会给我们造成”成本”。并且如果我们接触样本中所有的阳性样本，我们的收益是1，接触样本中的所有阴性样本，我们的成本也是1。如果不接触样本，则既不产生收益也不产生成本。  自然的，如果不使用分类器，接触所有样本，则总的效益为1-1=0。现在让我们利用分类器来决定是否接触样本，分类器预测为阳，我们就去接触样本，分类器预测为阴，我们就不去接触。因为不接触样本不会产生收益或是成本，因此我们只需要看分类器预测为阳的样本。预测为阳的样本中，TP将产生 TPR 的收益， FP将产生FPR的成本。  那么一个分类器的分类效果就对应ROC空间里的一个点:</p>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/1a02adedd70816dcd49461354390aaed.png"><img src="http://beader.me/imgs/auc-roc/1a02adedd70816dcd49461354390aaed.png" alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/1a02adedd70816dcd49461354390aaed.png"><img src="http://beader.me/imgs/auc-roc/1a02adedd70816dcd49461354390aaed.png" alt="img"></a></p>
 <p>图2.ROC空间</p>
 <p>A,B,C三个点可以分别代表三个不同的分类器对同样的样本做预测的结果。最好的方法是A，因为他的收益大于成本(TPR &gt; FPR)，最差的是C(TPR &lt; FPR)。中等的是B，相当于随机分类器。这里有趣的一点是若把C以(0.5, 0.5)为中点作一个镜像，得到C’， C’的效果比A要来的好。C’相当于一个做与C预测结果完全相反的分类器。  实际的应用当中，分类器还会给出它预测某个样本为阳的概率，并且有一个事先给定的门槛值(threshold)，概率高于threshold的就预测为阳性，低于threshold的就预测为阴性。假设以下是某个分类器对id为1-10的客户的分类结果:</p>
 <p>表1.分类器预测结果</p>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/95ccbafd95b1ef894b2711d3698d5187.png"><img src="http://beader.me/imgs/auc-roc/95ccbafd95b1ef894b2711d3698d5187.png" alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/95ccbafd95b1ef894b2711d3698d5187.png"><img src="http://beader.me/imgs/auc-roc/95ccbafd95b1ef894b2711d3698d5187.png" alt="img"></a></p>
 <p>其中probability of 1为分类器判断该样本为阳性的概率，true class为该样本的真实情况。  如果我们把threshold定位0.5，即去接触id为1~8的客户。此时</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TPR &#x3D; TP &#x2F; 所有真实值为阳性的样本个数 &#x3D; 6 &#x2F; 6 &#x3D; 1</span><br><span class="line">FPR &#x3D; FP &#x2F; 所有真实值为阴性的样本个数 &#x3D; 2 &#x2F; 4 &#x3D; 0.6</span><br></pre></td></tr></table></figure>
 <p>同理，如果我们把threshold定位0.8，即去接触id为1~5的客户。此时</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">TPR &#x3D; TP &#x2F; 所有真实值为阳性的样本个数 &#x3D; 4 &#x2F; 6 &#x3D; 0.67</span><br><span class="line">FPR &#x3D; FP &#x2F; 所有真实值为阴性的样本个数 &#x3D; 1 &#x2F; 4 &#x3D; 0.25</span><br></pre></td></tr></table></figure>
 <p>  这两个threshold分别对应ROC空间中的两个点A、B</p>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/f3aac8b8603adb924363e766992df3cd.png"><img src="http://beader.me/imgs/auc-roc/f3aac8b8603adb924363e766992df3cd.png" alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/f3aac8b8603adb924363e766992df3cd.png"><img src="http://beader.me/imgs/auc-roc/f3aac8b8603adb924363e766992df3cd.png" alt="img"></a></p>
 <p>图3.不同的threshold对应ROC空间中不同的点</p>
 <p>上面的例子当中，共有10笔预测数据，则一共有11种threshold的设定方法，每一个threshold对应ROC空间中的一个点，把这些点连接起来，就成了ROC曲线。</p>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/92175e2de4a480e52938a836994e823c.png"><img src="http://beader.me/imgs/auc-roc/92175e2de4a480e52938a836994e823c.png" alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/92175e2de4a480e52938a836994e823c.png"><img src="http://beader.me/imgs/auc-roc/92175e2de4a480e52938a836994e823c.png" alt="img"></a></p>
 <p>图4.ROC曲线</p>
 <p>  这里因为数据量太少，所以曲线是一折一折的，数据量大的时候，看上去才像”曲线”。</p>
 <h3 id="auc">AUC</h3>
@@ -482,7 +482,7 @@
 <li><p>0.5 &lt; AUC &lt; 1，优于随机猜测。这个分类器（模型）妥善设定阈值的话，能有预测价值。</p></li>
 <li><p>AUC = 0.5，跟随机猜测一样（例：丢铜板），模型没有预测价值。</p></li>
 <li><p>AUC &lt; 0.5，比随机猜测还差；但只要总是反预测而行，就优于随机猜测，因此不存在AUC &lt; 0.5的情况。</p>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/f03add592a75ef5b5e7346a5209b0cb8.png"><img src="http://beader.me/imgs/auc-roc/f03add592a75ef5b5e7346a5209b0cb8.png" alt="img" /></a></p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/f03add592a75ef5b5e7346a5209b0cb8.png"><img src="http://beader.me/imgs/auc-roc/f03add592a75ef5b5e7346a5209b0cb8.png" alt="img"></a></p>
 <p>图5.用AUC来衡量不同分类器的分类能力(更准确的说是排序能力)</p>
 <h3 id="总结">总结</h3>
 <p>一个分类模型的分类结果的好坏取决于以下两个部分：</p>
@@ -492,10 +492,10 @@
 </ol>
 <p>  使用AUC来衡量分类模型的好坏，可以忽略由于threshold的选择所带来的影响，因为实际应用中，这个threshold常常由先验概率或是人为决定的。</p>
 <h3 id="补充gini-coefficient">补充：Gini coefficient</h3>
-<p>在用SAS或者其他一些统计分析软件，用来评测分类器分类效果时，常常会看到一个叫做gini coefficient的东西，那么这个gini coefficient又是什么呢？gini系数通常被用来判断收入分配公平程度，具体请参阅<span class="exturl" data-url="aHR0cDovL3poLndpa2lwZWRpYS5vcmcvd2lraS8lRTUlOUYlQkElRTUlQjAlQkMlRTclQjMlQkIlRTYlOTUlQjA=">wikipedia-基尼系数<i class="fa fa-external-link-alt"></i></span>。<a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/1a9a293ac6c97475ebb337fb32081a4d.png"><img src="http://beader.me/imgs/auc-roc/1a9a293ac6c97475ebb337fb32081a4d.png" alt="img" /></a>  图6.洛伦茨曲线与基尼系数</p>
+<p>在用SAS或者其他一些统计分析软件，用来评测分类器分类效果时，常常会看到一个叫做gini coefficient的东西，那么这个gini coefficient又是什么呢？gini系数通常被用来判断收入分配公平程度，具体请参阅<span class="exturl" data-url="aHR0cDovL3poLndpa2lwZWRpYS5vcmcvd2lraS8lRTUlOUYlQkElRTUlQjAlQkMlRTclQjMlQkIlRTYlOTUlQjA=">wikipedia-基尼系数<i class="fa fa-external-link-alt"></i></span>。<a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/1a9a293ac6c97475ebb337fb32081a4d.png"><img src="http://beader.me/imgs/auc-roc/1a9a293ac6c97475ebb337fb32081a4d.png" alt="img"></a>  图6.洛伦茨曲线与基尼系数</p>
 <p>  Gini coefficient 是指绝对公平线(line of equality)和洛伦茨曲线(Lorenz Curve)围成的面积与绝对公平线以下面积的比例，即gini coefficient = A面积 / (A面积+B面积) 。</p>
 <p>  用在评判分类模型的预测效力时，是指ROC曲线曲线和中线围成的面积与中线之上面积的比例。</p>
-<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/074c46dccea3031e5ce8fcbb67453cd4.png"><img src="http://beader.me/imgs/auc-roc/074c46dccea3031e5ce8fcbb67453cd4.png" alt="img" /></a>  图7.Gini coefficient与AUC</p>
+<p><a target="_blank" rel="noopener" href="http://beader.me/imgs/auc-roc/074c46dccea3031e5ce8fcbb67453cd4.png"><img src="http://beader.me/imgs/auc-roc/074c46dccea3031e5ce8fcbb67453cd4.png" alt="img"></a>  图7.Gini coefficient与AUC</p>
 <p>因此Gini coefficient与AUC可以互相转换：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">  </span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gini &#x3D; A &#x2F; (A + B) &#x3D; (AUC - C) &#x2F; (A + B) &#x3D; (AUC -0.5) &#x2F; 0.5 &#x3D; 2*AUC - 1</span><br></pre></td></tr></table></figure></li>
@@ -514,7 +514,7 @@
 <p>R语言软件下载：<span class="exturl" data-url="aHR0cDovL2Z0cC5jdGV4Lm9yZy9taXJyb3JzL0NSQU4v">http://ftp.ctex.org/mirrors/CRAN/<i class="fa fa-external-link-alt"></i></span> 注：下载时点击 install R for the first time</p>
 <p>下面进行一个简单的入门程序学习。</p>
 <p>先新建一个txt，叫做 Rice_insect.txt，内容为：</p>
-<p><a href="https://lifeodyssey.github.io/home/zhenjiazhou/%E5%9B%BE%E7%89%87/%E9%80%89%E5%8C%BA_002.bmp"><img src="https://lifeodyssey.github.io/home/zhenjiazhou/%E5%9B%BE%E7%89%87/%E9%80%89%E5%8C%BA_002.bmp" alt="选区_002" /></a></p>
+<p><a href="https://lifeodyssey.github.io/home/zhenjiazhou/%E5%9B%BE%E7%89%87/%E9%80%89%E5%8C%BA_002.bmp"><img src="https://lifeodyssey.github.io/home/zhenjiazhou/%E5%9B%BE%E7%89%87/%E9%80%89%E5%8C%BA_002.bmp" alt="选区_002"></a></p>
 <p>　　Adult为累计蛾量，Day为降雨持续天数，Precipitation为降雨量。</p>
 <p>输入代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">library(mgcv)      #加载mgcv软件包，因为gam函数在这个包里</span><br><span class="line">Data &lt;- read.delim(&quot;Rice_insect.txt&quot;)     #读取txt数据，存到Data变量中</span><br><span class="line">Data &lt;- as.matrix(Data)     #转为矩阵形式</span><br><span class="line">#查看Data数据：Data，查看第2列：Data[,2]，第2行：Data[2,]</span><br><span class="line"></span><br><span class="line">result1 &lt;- gam(log(Adult) ~ s(Day))     #此时，Adult为相应变量，Day为解释变量</span><br><span class="line">summary(result1)      #输出计算结果</span><br></pre></td></tr></table></figure>
@@ -537,7 +537,7 @@
 <p>此时p-value为0.0774，说明该因子在P&lt;0.1水平下影响显著。（一般情况下p&lt;0.05为显著。）</p>
 <p>接下来画图：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(result2,se&#x3D;T,resid&#x3D;T,pch&#x3D;16)</span><br></pre></td></tr></table></figure>
-<p>　　<a href="file://tmp/wps-zhenjiazhou/ksohtml/wpsoAF24S.jpg"><img src="file://tmp/wps-zhenjiazhou/ksohtml/wpsoAF24S.jpg" alt="img" /></a></p>
+<p>　　<a href="file://tmp/wps-zhenjiazhou/ksohtml/wpsoAF24S.jpg"><img src="file://tmp/wps-zhenjiazhou/ksohtml/wpsoAF24S.jpg" alt="img"></a></p>
 <p>pch=16这个是图标的序号，比如改成17就是三角形了。</p>
 <p>log(Adult)中的log是什么意思呢?</p>
 <p>log是数据变换，取对数可以把大范围的数变成小范围的数，这在将几组相差太大的数据画在同一个坐标轴时特别有用，比如一组数据范围是1～10，第二组数据范围是10～100000000，要是不对第二组取常用对数，第一组在坐标轴上只是一点点，都看不到，对第二组取常用对数后，第二组范围变成1～8了，这样两组数据都能看到了。</p>
@@ -560,9 +560,9 @@
 <p>具体内容请查看manual</p>
 <table>
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 45%" />
-<col style="width: 45%" />
+<col style="width: 8%">
+<col style="width: 45%">
+<col style="width: 45%">
 </colgroup>
 <thead>
 <tr class="header">

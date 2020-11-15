@@ -487,6 +487,13 @@
   </url>
   
   <url>
+    <loc>https://lifeodyssey.github.io/tags/python/</loc>
+    <lastmod>2020-11-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lifeodyssey.github.io/tags/bookreading/</loc>
     <lastmod>2020-11-15</lastmod>
     <changefreq>daily</changefreq>
@@ -495,13 +502,6 @@
   
   <url>
     <loc>https://lifeodyssey.github.io/tags/Seminar/</loc>
-    <lastmod>2020-11-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/python/</loc>
     <lastmod>2020-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

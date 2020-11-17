@@ -1051,30 +1051,46 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
   <entry>
     <title>book reading note 4</title>
     <url>/posts/5ab69b8e.html</url>
-    <content><![CDATA[<p>Chapter 10.1.-10.2 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》 <a id="more"></a></p>
-<h1 id="introduction">Introduction</h1>
+    <content><![CDATA[<p>Chapter 10.1.-10.2 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
+<a id="more"></a>
+<h1 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h1>
 <p>From this week we will start a new chapter, the oceans and global climate change: physical and biological aspects. Today I will talk about the introduction and physical part</p>
 <p>The physical aspects contains the greenhouse effect and climate change</p>
 <p>The oceans have a deep circulation, the thermohaline circulation. Water is heated in equatorial regions, and then moves poleward in major currents, giving off heat to the atmosphere. In subarctic regions cooling and ice formation cause water to become more dense. The water then sinks to form the “deep water.” This sinking is the beginning of a long journey close to the ocean floor. Some of the deep water travels south in the Atlantic basin, moves across to the Pacific basin, and there moves slowly northward in a journey that may take a thousand years.</p>
-<p>The exchange mechanism contains two part, the physical part is related to the thermohaline circulation. At the regions of deep-water formation large quantities of carbon dioxide dissolved in the water sink to great depth and are removed from contact with the atmosphere. Conversely, at regions of upwelling, especially the large upwellings at the tropical divergence, heating of the cold upwelled water causes it to give off billions of tons of carbon dioxide. The exchange amount of CO2 is approximately balanced in the physical mechanism. But some biological process could also remove cp2 from atmosphere to the deep ocean. Over 99% of the carbon dioxide added to the earth’s atmosphere throughout its history has been taken up by phytoplankton and sedimented to the sea floor to form the calcareous rocks and the fossil fuels. This biological mechanism is known as the biological pump.</p>
-<p>In the past 150 years, the co2 concentration in the atmosphere is absolutely rising, so here an important problem is that How much excess CO2 can be absorbed by ocean?</p>
+<p>The exchange mechanism contains two part, the physical part is related to the thermohaline circulation. At the regions of deep-water formation large quantities of carbon dioxide dissolved in the water sink to great depth and are removed from contact with the<br>
+atmosphere. Conversely, at regions of upwelling, especially the large upwellings at the tropical divergence, heating of the cold upwelled water causes it to give off billions of tons of carbon dioxide. The exchange amount of CO2 is approximately balanced in the physical mechanism. But some biological process could also remove cp2 from atmosphere to the deep ocean. Over 99% of the carbon dioxide added to the earth’s atmosphere throughout its history has been taken up by phytoplankton and sedimented to the sea floor to form the<br>
+calcareous rocks and the fossil fuels. This biological mechanism is known as the biological pump.</p>
+<p>In the past 150 years, the co2 concentration in the atmosphere is absolutely rising, so here an important problem is that  How much excess CO2 can be absorbed by ocean?</p>
 <p>In order to answer this question, this chapter will talk about the the mechanism of global warming and the present-day global carbon cycle first. Then explore the relative importance of oceanic sources and sinks compared with industrial activities and terrestrial biota. Finally, consider what changes might be expected to occur in physical and biological mechanisms for circulating carbon in the ocean if the expected rise in global atmospheric temperature occurs</p>
-<h1 id="physical-aspects">Physical aspects</h1>
-<h2 id="the-greenhouse-effect">The greenhouse effect</h2>
-<h3 id="the-process">The process</h3>
+<h1 id="physical-aspects"><a class="markdownIt-Anchor" href="#physical-aspects"></a> Physical aspects</h1>
+<h2 id="the-greenhouse-effect"><a class="markdownIt-Anchor" href="#the-greenhouse-effect"></a> The greenhouse effect</h2>
+<h3 id="the-process"><a class="markdownIt-Anchor" href="#the-process"></a> The process</h3>
 <p>So here we come to our first part, about the physical aspects. First lets talk about the process of greenhouse effect.</p>
-<p>The average surface temperature of earth surface is about 15 Celsius degree. If there were no water vapor, carbon dioxide, or methane in the atmosphere, the surface temperature would be below freezing by ~18 °C and all the rivers, lakes, and oceans would be frozen solid. The reason for the higher, more habitable temperature is the fact that these greenhouse gases delay heat from leaving the earth by trapping it in the lower atmosphere.</p>
-<p>all the heat received on the earth comes originally from the sun’s surface via electromagnetic radiation with wavelengths between 0.2 and 2.4 Micrometre, often called the short-wave radiation. approximately 31% of this incoming radiation is reflected back into space, ~20% is absorbed by the ozone, water vapor, clouds, and dust in the atmosphere, and ~49% is absorbed by the land and water at the earth’s surface.</p>
-<p>All these absorbers in turn radiate heat in the form of electromagnetic radiation. The back radiation is at wavelengths between 5 and 100 Micrometre: long-wave radiation according to Planck’s radiation law. As I talked before, the radiation from the sun, the short-wave radiation, only 20% of them is absorbed by atmosphere. But here 90% long-wave radiation is absorbed by greenhouse gases inside atmosphere. The amount of heat trapped and the resulting temperature of the atmosphere clearly vary directly with the concentrations of these gases. If the gases are very concentrated, as on the planet Venus, the temperature is very high (+400 Celsius degree) and if they are low, as on Mars, the temperature is very low (−50 Celsius degree)</p>
+<p>The average surface temperature of earth surface is about 15 Celsius degree. If there were no water vapor, carbon dioxide, or methane in the atmosphere, the surface temperature<br>
+would be below freezing by ~18 °C and all the rivers, lakes, and oceans would<br>
+be frozen solid. The reason for the higher, more habitable temperature is the fact<br>
+that these greenhouse gases delay heat from leaving the earth by trapping it in<br>
+the lower atmosphere.</p>
+<p>all the heat received on the earth comes originally from the sun’s surface via electromagnetic radiation with wavelengths between 0.2 and 2.4 Micrometre, often called the short-wave radiation. approximately 31% of this incoming radiation is reflected back<br>
+into space, ~20% is absorbed by the ozone, water vapor, clouds, and dust in the<br>
+atmosphere, and ~49% is absorbed by the land and water at the earth’s surface.</p>
+<p>All these absorbers in turn radiate heat in the form of electromagnetic radiation. The back radiation is  at wavelengths between 5 and 100 Micrometre: long-wave radiation according to Planck’s radiation law. As I talked before, the radiation from the sun, the short-wave radiation, only 20% of them is absorbed by atmosphere. But here 90% long-wave radiation is absorbed by greenhouse gases inside atmosphere. The amount of heat trapped and the resulting temperature of the atmosphere clearly vary directly with the concentrations of these gases. If the gases are very concentrated, as on the planet Venus, the temperature is very high (+400 Celsius degree) and if they are low, as on Mars, the temperature is very low (−50 Celsius degree)</p>
 <p>The greenhouse gases in the atmosphere. ranged from naturally occurred to human-produced, are carbon dioxide, water vapor, methane,ozone, nitrous oxide, chlorofluorocarbon.</p>
-<p>The warming effect of each of these gases is different because their concentrations are different and because they absorb radiation with different efficiencies at different wavelengths. Under clear-sky conditions, Kiehl and Trenberth (1997) estimate that 60% of the warming effect is due to water vapor, 26% to carbon dioxide, 8% to ozone, and 6% to methane and nitrous oxide. The other gases, such as chlorofluorocarbons, contribute ~1% or less to the total warming effect. For life in the oceans, the most important element in these gases is the carbon (C) in the carbon dioxide (CO2).</p>
-<h3 id="the-carbon-cycle">The carbon cycle</h3>
+<p>The warming effect of each of these gases is different because their concentrations are different and because they absorb radiation with different efficiencies<br>
+at different wavelengths. Under clear-sky conditions, Kiehl and Trenberth (1997)<br>
+estimate that 60% of the warming effect is due to water vapor, 26% to carbon dioxide,<br>
+8% to ozone, and 6% to methane and nitrous oxide. The other gases, such as<br>
+chlorofluorocarbons, contribute ~1% or less to the total warming effect. For life<br>
+in the oceans, the most important element in these gases is the carbon © in the<br>
+carbon dioxide (CO2).</p>
+<h3 id="the-carbon-cycle"><a class="markdownIt-Anchor" href="#the-carbon-cycle"></a> The carbon cycle</h3>
 <p>Estimations of the magnitudes of the carbon reservoirs and fluxes in the global carbon cycle are constantly being updated. Here is an estimation conducted by Sarmiento and Gruber in 2002. The value here shows carbon flux. value without underline is pre-industrial value and with underline is anthropogenic value. In the atmosphere, for example, there were ~590 Petagram of carbon in the pre-industrial era but today the value is ~161 Petagram higher for an increase of ~30%.</p>
-<p>For the carbon between ocean and atmosphere, we can see that 90.6 Pg carbon come from ocean to the atmosphere while 91.9 Pg come back, which result in net increase in the ocean 1.3 Pg C y^-1</p>
+<p>For the carbon between ocean and atmosphere, we can see that 90.6<br>
+Pg carbon  come from ocean to the atmosphere while 91.9 Pg come back, which result in net increase in the ocean 1.3 Pg C y^-1</p>
 <p>When the co2 dissolve in the ocean, only 1% dissolved carbon retains CO2 structure that participate in the exchange with the atmosphere.</p>
-<p>The Dissolved Inorganic Cabon(DIC) is also called total CO2.Here are two examples of vertical distributions of total CO2. In the surface layer the total co2 is low and increase until 1000m, then stay roughly constant until the bottom. On obvious result is that higher concentration in the deeper water. Also evident in this figure is the greater concentration below 1000 m in the North Pacific than in the North Atlantic. Such difference is thought to reflect the greater length of time since the deep Pacific has been in contact with the atmosphere and thus the greater length of time it has had to accumulate carbon from sinking plant and animal detritus.</p>
-<h2 id="climate-change">Climate change</h2>
-<h3 id="carbon-dioxide">Carbon dioxide</h3>
+<p>The Dissolved Inorganic Cabon(DIC) is also called total CO2.Here are two examples of vertical distributions of total CO2. In the surface layer the total co2 is low and increase until 1000m, then stay roughly constant until the bottom. On obvious result is that higher concentration in the deeper water.  Also evident in this figure is the greater concentration below 1000 m in the North Pacific than in the North Atlantic. Such difference is thought to reflect the greater length of time since the deep Pacific has been in contact with the atmosphere and thus the greater length of time it has had to accumulate carbon from sinking plant and animal detritus.</p>
+<h2 id="climate-change"><a class="markdownIt-Anchor" href="#climate-change"></a> Climate change</h2>
+<h3 id="carbon-dioxide"><a class="markdownIt-Anchor" href="#carbon-dioxide"></a> Carbon dioxide</h3>
 <p>The increasing greenhouse gases will absolutely increase the greenhouse effect. Here shows the atmosphere carbon dioxide concentration since 900. Before 1985, the concentration was obtained by analyzing air trapped in glaciers. And after 1985, the concentration was measured directly at Mauna Loa, Hawaii.</p>
 <p>We can see that from 900 to 2850, the concentration is about 280 Parts Per Million (ppm).In 2001, the concentration is about 37Parts Per Million, about 30% increase in 150 years. And this might be the highest concentration in the past 420 000 years.</p>
 <p>In the rising co2, about two thirds of them is anthropogenic co2 from burning of coal, oil and gas. Remaining thirds are from the release of co2 from deforestation.</p>
@@ -1087,16 +1103,20 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 <p>One interesting thing is that about half the amount of CO2 estimated to have been put into the atmosphere by human activities.</p>
 <p>Before 1950, about 2.5 pg y-1 emission but only 1.5 increase. Recently about 7 emission but only 4 pg in the atmosphere. The missing part of emission is now known to be dissolving in the oceans or being incorporated into the terrestrial biomass</p>
 <p>For the missing part in the ocean, now it is possible to identify the source of co2 in the ocean , because the 13C/12C ratio is lower in fossil-fuel CO2. And they found that the anthropogenic co2 most are limited in Upper few hundred meters of the ocean. In the deep ocean, the anthropogenic co2 was only found in the deep North Atlantic, where the co2 was renewed by contacting with atmosphere</p>
-<p>Another interesting thing here, the peak of annual accumulation coincide with El Niño events. Here the red bar shows the time of ei nino events. The only one exception is 1992-3,minimum accumulation rate. which is the minimum accumulation rate. The exception might because Eruption of Mount Pinatubo in the early 1990s cooled the atmosphere.</p>
-<p>But the peak coincidence remain controversial. One possible reason is that the warmer water in the equatorial Pacific during El Niño events would lead to an increased flux of CO2 into the atmosphere. Observations however indicate the flux is probably decreased during El Niños in the equatorial region because of the decrease in upwelling along the equator of water with higher CO2 content.</p>
-<p>Another reason might be the response of terrestrial biosphere. But this is still poorly understood.</p>
-<h3 id="temperature">Temperature</h3>
+<p>Another interesting thing here, the peak of annual accumulation  coincide with El Niño events. Here the  red bar shows the time of ei nino events. The only one exception is 1992-3,minimum accumulation rate. which is the minimum accumulation rate. The exception might because Eruption of Mount Pinatubo in the early 1990s cooled the atmosphere.</p>
+<p>But the peak coincidence remain controversial. One possible reason is that the warmer water in the equatorial Pacific during El Niño events would<br>
+lead to an increased flux of CO2 into the atmosphere. Observations however indicate<br>
+the flux is probably decreased during El Niños in the equatorial region because<br>
+of the decrease in upwelling along the equator of water with higher CO2 content.</p>
+<p>Another reason might be the response of  terrestrial biosphere. But this is still poorly understood.</p>
+<h3 id="temperature"><a class="markdownIt-Anchor" href="#temperature"></a> Temperature</h3>
 <p>Temperature is the key variable to monitor effect of greenhouse gases.</p>
 <p>Here this figure shows the Surface temperature of the earth, including land and marine data.</p>
 <p>we can see that the temperature fluctuated about a constant level between 1860 and 1910, and then rise 0.3℃ by 1940s, but it is still stable until 1970s. After 1970 the temperature increase quickly. 1998 is the warmest year. The Total increase in past 150 years is about 0.6 ± 0.2 °C.</p>
 <p>But the warming is not the same everywhere and in a few locations surface temperature actually decreased while other regions experienced strong increases.</p>
 <p>Also in this figure, the grey band shows temperature range by model simulation</p>
-<p>We can see that the model result have good agreement with past observed temperature. And base on the prediction of these model, the temperature will Increase from 1.5℃ to 5.5℃ over the next 100 years, in average is about 3.</p>
+<p>We can see that the model result have good agreement with past observed temperature. And base on the prediction of these model, the temperature will Increase from 1.5℃ to<br>
+5.5℃ over the next 100 years, in average is about 3.</p>
 <p>Here this figure shows a longer time series of surface temperature in the northern hemisphere. The time series was constructed from instrumental record(Jones et al., 2001) and proxy data from variation in tree rings, corals, and ice cores.</p>
 <p>We can see that 1000-1900: the temperature decrease about 0.02℃→earth’s orbit and rotation.</p>
 <p>But Over the past century, there have been significant temperature anomalies due to the growth of co2</p>
@@ -1106,61 +1126,64 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
       </categories>
       <tags>
         <tag>Oceanography</tag>
-        <tag>bookreading</tag>
         <tag>Seminar</tag>
+        <tag>Book Reading</tag>
       </tags>
   </entry>
   <entry>
     <title>book-reading-note2</title>
     <url>/posts/44f3f721.html</url>
-    <content><![CDATA[<p>Chapter 7.1-7.2.4 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》 <a id="more"></a></p>
-<h1 id="tides-tidal-mixing-and-internal-waves">Tides, tidal mixing, and internal waves</h1>
-<h2 id="introduction">Introduction</h2>
+    <content><![CDATA[<p>Chapter 7.1-7.2.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
+<a id="more"></a>
+<h1 id="tides-tidal-mixing-and-internal-waves"><a class="markdownIt-Anchor" href="#tides-tidal-mixing-and-internal-waves"></a> Tides, tidal  mixing, and internal waves</h1>
+<h2 id="introduction"><a class="markdownIt-Anchor" href="#introduction"></a> Introduction</h2>
 <p>This chapter focus on the tides, tidal mixing and internal waves and today I will talk from the introduction to the physics of tidal currents.</p>
 <p>Tides are created by the gravitational pull of the moon and the sun. The changing water level leads to interesting patterns of intertidal organisms( place a figure of intertidal zone ) but it is not the emphases of this chapter.</p>
-<p>Besides the intertidal zone, the tides also generate currents in the water that interact with the bottom to produce turbulence. And if the currents are sufficiently strong, the turbulence could prevent any stratification , thus the wholes area may be permanently tidally mixed. There are some researches shows that a great number of stocks only live in such strong tidal mixing area. In this chapter we will explore the possible significance of this observation.</p>
-<p>And if the tidal mixing is not so strong, the water column becomes stratified, the interaction of the tidal currents with the bottom topography could lead to the formation of internal waves. Internal waves could cause vertical mixing and redistribution of nutrients, which is important effects on phytoplankton production. Some times as the internal wave decays, they produce solitary waves and bores,which could have a strong influence of on the distribution of zooplankton and larval fishes.</p>
+<p>Besides the intertidal zone, the tides also generate currents in the water that interact with the  bottom to produce turbulence. And if the currents are sufficiently strong, the turbulence  could prevent any stratification , thus the wholes area may be permanently tidally mixed. There are some researches shows that a great number of stocks only live in such strong tidal mixing area. In this chapter we will explore the possible significance of this observation.</p>
+<p>And if the tidal mixing is not so strong, the water column becomes stratified, the interaction of the tidal currents with the bottom topography could lead to the formation of internal waves. Internal waves could cause vertical mixing and redistribution of nutrients, which is important effects on phytoplankton production. Some times as the internal wave decays, they produce solitary waves and bores,which could have a strong influence of  on the distribution of zooplankton and larval fishes.</p>
 <p>Around the shallow bank, the interaction between tidal currents and bottom topography could generate unidirectional currents that form gyres. The combination of tidally mixed water over the top of a bank and a gyre around its periphery is thought to provide conditions particularly suitable for the eggs and larvae of fish. In this chapter we shall explore some of these interesting consequences of tidally induced water movement.</p>
 <p>(Needs some more figures and references to tell the story)</p>
-<h2 id="the-physics-of-tides">The physics of tides</h2>
-<h3 id="tide-generating-forces-and-the-equilibrium-tide.">Tide-generating forces and the equilibrium tide.</h3>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207160250.png"></p>
+<h2 id="the-physics-of-tides"><a class="markdownIt-Anchor" href="#the-physics-of-tides"></a> The physics of tides</h2>
+<h3 id="tide-generating-forces-and-the-equilibrium-tide"><a class="markdownIt-Anchor" href="#tide-generating-forces-and-the-equilibrium-tide"></a> Tide-generating forces and the equilibrium tide.</h3>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207160250.png" alt></p>
 <p>First part is the physics of tides. Lets start from the most simple occasion. Here the earth and the moon are seen from above the north pole of the earth</p>
-<ol type="1">
+<ol>
 <li>The water on the earth only receive the gravitational pull of the moon, remove the sun and the centripetal force from earth.</li>
 <li>The earth and moon are assumed to be stationary except for the earth’s rotation.</li>
 <li>The earth doesn’t have continents and is covered with a uniform layer of water.</li>
-<li>Without the Coriolis force and friction force.</li>
+<li>Without the Coriolis force and  friction force.</li>
 </ol>
-<p>Our observer is located in O. It is clear that the , the highest tide will always under the moon and the lowest tide will be on the opposite side to the moon as a result of gravitational pull of moon and centripetal force from earth. With the earth rotate, our observer will see one high tide and one low tide a day.</p>
+<p>Our observer is located in O. It is clear that the , the highest tide will always under the moon  and the lowest tide will be on the opposite side to the moon as a result of gravitational pull of moon and centripetal force from earth. With the earth rotate, our observer will see one high tide and one low tide a day.</p>
 <p>This elementary model could produce a tide but it is not a very good model because most places on the earth usually have two high and two low tides during the day.</p>
-<p>One thing that need to consider is the rotation of the earth moon pair, about 29.5 day once. Because the earth’s mass is roughly 80 times that of the moon the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. The the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. And in order to make the earth and moon rotate around the center of mass, both of them will receive a centripetal force from the center of mass. This force is supplied by the gravity between earth and moon. But for us, the earth is stationary, that mean we choose our earth as reference system. So in order to make our earth stationary, we need add a fictitious force or inertial force. As a result, the water in our earth now receive two force, one is the gravity from moon, another is inertial force which backwards the center of mass.</p>
-<p>Therefore, the shape of water on our earth likes a rugby.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207212741.png"></p>
+<p>One thing that need to consider is the rotation of the earth moon pair, about 29.5 day once. Because the earth’s mass is roughly 80 times that of the moon the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. The the common center of rotation is inside the earth about 1600 km below the surface along a line from the moon to the earth. And in order to make the earth and moon rotate around the center of mass, both of them will receive a  centripetal force from the center of mass. This force is supplied by the gravity between earth and moon. But for us, the earth is stationary, that mean we choose our earth as reference system. So in order to make our earth stationary, we need add a  fictitious force or inertial force. As a result, the water in our earth now receive two force, one is the gravity from moon, another is inertial force which backwards the center of mass.</p>
+<p>Therefore, the shape of water on our earth likes a  rugby.</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200207212741.png" alt></p>
 <p>And this bulge is called tide bulge.</p>
-<p>This model could help us describe two things. One is that we can observe two high tides and two low tides every day. Another is that why the tides do not occur at the same time every day. The earth and moon rotate around one another in a lunar month that is roughly 29.5 days. As our observer at O rotates through exactly one day back to O the moon has moved about 12° further around in its orbit to the position marked “tomorrow”.The high tide that is under the moon will still be under the moon tomorrow, but it will be observed later in the observer’s day.. Since the earth spins on its axis at about 4 minutes per degree the tides will appear about 50 minutes later each day.</p>
+<p>This model could help us describe two things. One is that we can observe two high tides and two low tides every day. Another is that why the tides do not occur at the same time every day. The earth and moon rotate around one another in a lunar month that is roughly 29.5 days. As our observer at O rotates through exactly one day back to O the moon has moved about 12° further around in its orbit to the position marked “tomorrow”.The high tide that is under the moon will still be under the moon tomorrow, but it will be observed later in the observer’s day… Since the earth spins on its axis at about 4 minutes per degree the tides will appear about 50 minutes later each day.</p>
 <p>The next refinement is. If we observe both from the side, not the pole, moon is not directly over the equator. The moon can be found at various angles to the north and south of the equator up to a maximum of 35° depending on the season and the time of the lunar month. So the tide bulge is no longer on the equator. No our observer in O could observe two high tide and two low tides every day. But the high tides are unequal height, as are the low tides. This difference is called the diurnal (daily) inequality.</p>
-<p>This model only consider the effect of moon,without continents Coriolis force and friction force. Such tide is called equilibrium tide and this theory is called The Equilibrium Theory of Tides or “static” theory of tides.</p>
+<p>This model only consider the effect of moon,without continents Coriolis force and  friction force. Such tide is called equilibrium tide and this theory is called The Equilibrium Theory of Tides or “static” theory of  tides.</p>
 <p>It cannot predict It cannot predict the tide at any particular location but it does explain some of the main features of the tide such as</p>
-<ol type="1">
+<ol>
 <li>diurnal variation</li>
 <li>diurnal inequality in the height</li>
 <li>daily delay</li>
 </ol>
 <p>The next improvement of equilibrium theory of tide is considering the effects of the earth-sun system on top of the effects of the earth–moon system.</p>
-<p>The mass of the sun is 27 × 106 times the mass of the moon but its distance from the earth is 400 times that of the moon. Because of this great distance, the gravitational attraction on a particle of water on the earth due to the sun is about one-half that due to the moon. So we can construct diagrams like those shown in Figs. 7.03 and 7.04 for the tide due to the sun, but the height of the tide will be only half that due to the moon. The important effect of the tide due to the sun arises because its tidal bulge moves relative to the moon’s tidal bulge through- out the lunar month.</p>
+<p>The mass of the sun is 27 × 106<br>
+times the mass of the moon but its distance<br>
+from the earth is 400 times that of the moon. Because of this great distance, the gravitational attraction on a particle of water on the earth due to the sun is about one-half that due to the moon. So we can construct diagrams like those shown in Figs. 7.03 and 7.04 for the tide due to the sun, but the height of the tide will be only half that due to the moon. The important effect of the tide due to the sun arises because its tidal bulge moves relative to the moon’s tidal bulge through- out the lunar month.</p>
 <p>When the two tidal bulges coincide they add together to create the extra high tides called the spring tides. When the tidal bulges are opposed their effects tend to cancel one another, creating the neap tides. Thus, the equilibrium tide model can also qualitatively explain the fortnightly inequality in addition to the other effects.</p>
-<h3 id="tides-in-the-real-ocean">Tides in the real ocean</h3>
-<p>The next development of tide theory is dynamic theory of tide. It considered the continents, topography, Coriolis force and friction force, etc.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208170201.png"></p>
-<p>This is the <strong>Laplace's tidal equations</strong>. But it is hard to solve. For prediction, one solution is that we can decompose the tide. We can think the real tide in our ocean is composed by a lot of tide constituents . Each tide constituents induced by each an imaginary planets. There are three main categories of constituents (Pond and Pickard 1983):</p>
-<ol type="1">
+<h3 id="tides-in-the-real-ocean"><a class="markdownIt-Anchor" href="#tides-in-the-real-ocean"></a> Tides in the real ocean</h3>
+<p>The next development of tide theory is dynamic theory of tide. It considered the continents, topography, Coriolis force and  friction force, etc.</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208170201.png" alt></p>
+<p>This is the  <strong>Laplace’s tidal equations</strong>. But it is hard to solve. For prediction, one solution is that we can decompose the tide. We can think the real tide in our ocean is composed by a lot of tide constituents . Each tide constituents induced by each an imaginary  planets. There are three main categories of constituents (Pond and Pickard 1983):</p>
+<ol>
 <li>semi-diurnal, period about 12 hours</li>
 <li>diurnal, period about 24 hours</li>
 <li>long period, greater than 24 hours.</li>
 </ol>
 <p>The four most important constituents are:</p>
-<ol type="1">
+<ol>
 <li>The lunar semi-diurnal ,M2, Period=12.42h</li>
 <li>The solar semi-diurnal, S2, Period=12.00h</li>
 <li>The lunisolar diurnal, K1, Period=23.93h</li>
@@ -1168,39 +1191,42 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 </ol>
 <p>The M2 constituent is roughly twice the amplitude of the other three.</p>
 <p>In different location around the word, the relative importance of constituents is quite different. So we have different patterns of tides. The four main classifications of the form of the tides are illustrated in the next figure.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208172014.png"></p>
-<p>The first one has two high tides and two low tides every day and Both the highs are about the same height and both the lows are about the same height. Such a tide is called a semi-diurnal in form because there are two per day and both are about the same height.In this case the semi-diurnal constituents dominate the diurnal ones. This fact is often quantified with the ratio F = (K1+O1)/(M2 + S2 ), where each letter stands for the amplitude of the constituent. If F is small (0.11), as in the upper record, the sum of the amplitudes of the diurnal constituents (K1+O1 ) is small relative to the sum of the semi-diurnal ones (M2+S2 ).</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208172014.png" alt></p>
+<p>The first one has two high tides and two low tides every day and Both the highs are about the same height and both the lows are about the same height. Such a tide is called a semi-diurnal in form because there are two per day and both are about the same <span class="exturl" data-url="aHR0cDovL2hlaWdodC5Jbg==">height.In<i class="fa fa-external-link-alt"></i></span> this case the semi-diurnal constituents dominate the diurnal ones. This fact is often quantified with the ratio F = (K1+O1)/(M2 + S2 ), where each letter stands for the amplitude of the constituent. If F is small (0.11), as in the upper record, the sum of the amplitudes of the diurnal constituents (K1+O1 ) is small relative<br>
+to the sum of the semi-diurnal ones (M2+S2 ).</p>
 <p>The four records in Fig. 7.05 show a marked decrease from top to bottom in the amplitude of the semi-diurnal tidal oscillation relative to the diurnal oscillation, which is confirmed by the increase in F from 0.11 to ~19. At San Francisco there are always two tides per day but they are usually of unequal amplitude. At Manila there are two tides per day during the neap tides but only one rise and fall per day during spring tides. At Do-Son there is only one rise and fall of the tide per day throughout the month, which is a purely diurnal form of tidal oscillation. This occurrence is the rarest form of tide. The changing form of the tide between locations is due partly to the shape of the ocean basin in which the tidal wave is contained and partly to the latitude (Hendershott 1981).</p>
-<h3 id="moving-the-tidal-bulge-over-the-earth-kelvin-waves">Moving the tidal bulge over the earth: Kelvin waves</h3>
-<p>The former one is more focus on the coast, if we focus on a more large scale, the water depth is almost the same and the friction from the topography could be ignored. More idealized, if we assume the coast line is straight, we could get One solution of former dynamic tide equation set is that the velocity of tide is</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208202646.png"></p>
-<p>here g is Gravitational acceleration and k is the depth of the water. and the Kelvin wave is a reasonable approximation for tidal waves in the vicinity of a straight coastline.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208204932.png"></p>
+<h3 id="moving-the-tidal-bulge-over-the-earth-kelvin-waves"><a class="markdownIt-Anchor" href="#moving-the-tidal-bulge-over-the-earth-kelvin-waves"></a> Moving the tidal bulge over the earth: Kelvin waves</h3>
+<p>The former one is more focus on the coast, if we focus on a more large scale, the water depth is almost the same and the friction from the topography could be ignored. More idealized, if we assume the  coast line is straight, we could get One solution of former dynamic tide equation set is that the velocity of tide is</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208202646.png" alt></p>
+<p>here g is Gravitational acceleration and k is the depth of the water.  and the Kelvin wave is a reasonable approximation for tidal waves in the vicinity of a straight coastline.</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208204932.png" alt></p>
 <p>And here the Coriolis force is an important feature of the motion.</p>
 <p>. The effect of the Coriolis force is to push the water to the right in the northern hemisphere</p>
 <p>The Coriolis effect causes the amplitude of the wave to increase toward the shore and leads to the expression that the wave is “trapped” against the shore. Such a trapped Kelvin wave causes the water particles to move back and forth parallel to the coast as the wave goes by</p>
 <p>The horizontal scale of the wave, or the approximate distance from the coast to where the sea level is undisturbed by the wave, is estimated by the Rossby radius.</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208205203.png"></p>
-<p>For the Kelvin wave in Fig. 7.06 we put g = 10 m s−2 , h = 4000 m, and f= 10−4 s−1 to get Re = 2000 km. This value is commonly called the external Rossby radius, or deformation scale</p>
-<h3 id="tidal-currents">Tidal currents</h3>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20200208205203.png" alt></p>
+<p>For the Kelvin wave in Fig. 7.06 we put g = 10 m s−2<br>
+, h = 4000 m, and f= 10−4 s−1 to get Re = 2000 km. This value is commonly called the external Rossby radius, or deformation scale</p>
+<h3 id="tidal-currents"><a class="markdownIt-Anchor" href="#tidal-currents"></a> Tidal currents</h3>
 ]]></content>
       <categories>
         <category>学习笔记</category>
       </categories>
       <tags>
         <tag>Oceanography</tag>
-        <tag>bookreading</tag>
         <tag>Seminar</tag>
+        <tag>Book Reading</tag>
       </tags>
   </entry>
   <entry>
     <title>book-reading-note3</title>
     <url>/posts/33f4c7b7.html</url>
-    <content><![CDATA[<p>Chapter 8.3.2.-8.4.4 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》 <a id="more"></a></p>
+    <content><![CDATA[<p>Chapter 8.3.2.-8.4.4 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
+<a id="more"></a>
 <p>Good afternoon everyone, today I will talk two part. The first part is the from section three, the distribution of biological production in ocean basin. The second part is section four, biology of eddies and rings.</p>
-<p>And in the first part, I'd like to add an additional story about Japanese eel.</p>
-<h1 id="distribution-of-biological-production-in-ocean-basin">8.3 Distribution of biological production in ocean basin</h1>
-<h2 id="eels-and-the-north-atlantic-gyre">8.3.2 Eels and the North Atlantic gyre</h2>
+<p>And in the first part, I’d like to add an additional story about Japanese eel.</p>
+<h1 id="83-distribution-of-biological-production-in-ocean-basin"><a class="markdownIt-Anchor" href="#83-distribution-of-biological-production-in-ocean-basin"></a> 8.3 Distribution of biological production in ocean basin</h1>
+<h2 id="832-eels-and-the-north-atlantic-gyre"><a class="markdownIt-Anchor" href="#832-eels-and-the-north-atlantic-gyre"></a> 8.3.2 Eels and the North Atlantic gyre</h2>
 <p>Eel is a very important fishery species globally. Here I show And one of the very confusion problem about it ,In a long time, Fishermen never caught anything they could identify as a young eel. So where is the young eel? It is very important to find Find spawning area,Get egg for aquaculture and Establish fishing policy.</p>
 <p>In 1922，Schmidt propose a Starling theory about eel, contain three part</p>
 <p>•Two species in the North Atlantic: European eel and America eel</p>
@@ -1210,13 +1236,13 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 <p>,Vertebrae,Parasite,mtDNA. The second one also.</p>
 <p>The most difficult part to prove last part. If they both saw in the Sargasso Sea, how can they travel such long distance as a larvae? One answer that easily to think is by basin current. But American eel only live in the side of American, European eel only live in the side of European. So the next question is why they come to different region with same current?</p>
 <p>So let us open the mystery of American eel first. It is based one research about larvae distribuiton.</p>
-<p>The American eel always spawns from mid Februrary to April. After spawning, they will enter the Gulf Stream in a growth rate about 0.24 millimetre per day from February to October. Some part might enter Antilles Current or Caribbean Current. But they will finnally enter gulf stream by Apr.</p>
-<p>Then we can notice the distribution of most abundant larvae in the coastal. The time is not spawning season. So after spawning, the larvae will move north first, then come back south. Base one this observation, the author conclude that the larvae will Larvae actively migrate westword out of Gulf Stream. And in the north boundary, the larvae will be Carried southward passively by Larador Current and Slope water.</p>
+<p>The American eel always spawns from mid Februrary to April. After spawning, they will enter the Gulf Stream in a growth rate about 0.24 millimetre per day from February to October. Some part might enter Antilles Current or Caribbean Current. But they will finnally  enter gulf stream  by Apr.</p>
+<p>Then we can notice the distribution of most abundant larvae in the coastal. The time is not spawning season. So after spawning, the larvae will  move north first, then come back south. Base one this observation, the author conclude that the larvae will Larvae actively migrate westword out of Gulf Stream. And in the north boundary, the larvae will be Carried southward passively by Larador Current and Slope water.</p>
 <p>Anothe research base on the age also support the trend of southward movement of larvae. So as a result , the American eel will be Tapped in America by self movement and current, instead of going to European.</p>
 <p>So obviously, the European eel larvae will not move out Gulf Stream, then it will enter North Atlantic Current and takes one or two years to reach European. In the end, they will back to Sagarsso Sea by Canary Current and North Equatorial Current.</p>
 <p>In 1980s, a drastic decline in the catch of both America and European eel occurred. The solid line is the catch in Nervertheland,represent European eel. And the dotted line is the catch in Canada, represented the Catch of European eel. The Polution and habitat destruction may affect , but could not produce such big decline. A more probable reason is the ocean-scale change. One is the Slowing of Gulf Stream. As a result, the larvae will miss the best time to metaphose, and will be hunted by other species. Another one is there are more More warm core rings created by Gulf Stream, which could bring larvae out of Gulf Stream.</p>
-<h2 id="salmon-and-the-alaskan-gyre">8.3.3 Salmon and the Alaskan gyre</h2>
-<p>Another speices talked here is salmon fish. Unlike eel, it will spawn in fresh water and feed and grows in the sea. It's full migration pattern is known untill 1960. Here we will talke about two species, pink salmon and sockeye salmon. These are the two most productive types of salmon.</p>
+<h2 id="833-salmon-and-the-alaskan-gyre"><a class="markdownIt-Anchor" href="#833-salmon-and-the-alaskan-gyre"></a> 8.3.3 Salmon and the Alaskan gyre</h2>
+<p>Another speices talked here is salmon fish. Unlike eel, it will spawn in fresh water and feed and grows in the sea. It’s full migration pattern is known untill 1960. Here we will talke about two species, pink salmon and sockeye salmon. These are the two most productive types of salmon.</p>
 <p>For the pink salmon, it usually</p>
 <ul>
 <li>Spawn in rive from mid-Jul. to mid-Oct</li>
@@ -1232,29 +1258,29 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 <p>•Stay two years in the sea, travle two circuits Alaskan Gyre from British Columbia</p>
 <p>•Stay three years in the sea, one circle in Bering Gyre and two circuits in Alaskan Gyre from river on the shore of Bering Sea</p>
 <p>So it will Travel with Alaskan Gyre for two year(additional year with Bering Gyre) with two (three) circuits.</p>
-<h2 id="transport-of-invertebrate-larvae-across-ocean-basin">8.3.4 Transport of invertebrate larvae across ocean basin</h2>
+<h2 id="834-transport-of-invertebrate-larvae-across-ocean-basin"><a class="markdownIt-Anchor" href="#834-transport-of-invertebrate-larvae-across-ocean-basin"></a> 8.3.4 Transport of invertebrate larvae across ocean basin</h2>
 <p>Besides fish, the larvae of invertebrate also could be transported. The fisrt evident is founded by Scheltema. He found the larvae of gastropod throughout Gulf Stream and North Atalantic Current. And he kept larvae alive in lab longer than necessary for transtport.</p>
 <p>Both proof that Invertebrate larvae could be transported across ocean basins .</p>
-<h1 id="biology-of-eddies-and-rings-associated-with-major-currents">8.4 Biology of eddies and rings associated with major currents</h1>
+<h1 id="84-biology-of-eddies-and-rings-associated-with-major-currents"><a class="markdownIt-Anchor" href="#84-biology-of-eddies-and-rings-associated-with-major-currents"></a> 8.4 Biology of eddies and rings associated with major currents</h1>
 <p>The next session is about the biology of eddies and rings associated with major current.Include four part.</p>
 <p>•Gulf Stream frontal eddies</p>
 <p>•Formation of Gulf Stream rings</p>
 <p>•Ecology of cold-core rings</p>
 <p>•Ecology of warm-core rings</p>
-<h2 id="gulf-stream-frontal-eddies">8.4.1 Gulf Stream frontal eddies</h2>
+<h2 id="841-gulf-stream-frontal-eddies"><a class="markdownIt-Anchor" href="#841-gulf-stream-frontal-eddies"></a> 8.4.1 Gulf Stream frontal eddies</h2>
 <p>The first one is about Gulf stream frontal eddies.</p>
 <p>•Usually occur when the distance between Gulf Stream and coast is great.</p>
 <p>•Finger like extention from Gulf Stream</p>
 <p>•A new one formed every two weeks on average in the south of Cap Hatteras</p>
 <p>•Introduce about 55,000 tons of nitrogen annually to the outer shelf(Lee, 1981)</p>
 <p>•Breeding center for some species such as blue fish</p>
-<h2 id="formation-of-gulf-stream-rings">8.4.2 Formation of Gulf Stream rings</h2>
+<h2 id="842-formation-of-gulf-stream-rings"><a class="markdownIt-Anchor" href="#842-formation-of-gulf-stream-rings"></a> 8.4.2 Formation of Gulf Stream rings</h2>
 <p>About the ring.</p>
 <p>The ring will occur if the meander of Gulf Stream become too large.</p>
 <p>•Every one or two month create a ring in the North of Cap Hatters</p>
 <p>•Cold core ring in the south and warm core in the north</p>
 <p>•Move southwesterly about 3-5km per day</p>
-<h2 id="ecology-of-cold-core-rings">8.4.3 Ecology of cold-core rings</h2>
+<h2 id="843-ecology-of-cold-core-rings"><a class="markdownIt-Anchor" href="#843-ecology-of-cold-core-rings"></a> 8.4.3 Ecology of cold-core rings</h2>
 <p>Regarding the ecology of cold-core rings. Here is the verticle profile of a cold-core ring. The line is the isotherms.</p>
 <p>Compared with Sargasso Sea, it contains Larger concentration of plankton, nekton and nutrient from continent shelf.</p>
 <p>The Counter-clockwise rotation lead to upwelling in the center and •Bring nutrient-enriched water into the euphotic zone.</p>
@@ -1264,9 +1290,9 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 <p>The phytoplankton species will become smaller and diversity will becom greater with time, more like the surrounding waters.</p>
 <p>As for the zooplankton, the original zooplankton could not be found in a 17-month-old ring.</p>
 <p>And the larvae and mesopelagic fish will also become more like surrouding water in Sargasso Sea with time.</p>
-<p>I found some satellite image from NOAA. The left is the SST and chlorophyll-a in MARCH 2019, the right is in April. In the SST, we could find the cold -core ring in the red square in both image. But in the Chla. we can see some difference between cold core ring and Sargasso Sea in March. In April, we could barely see that.</p>
+<p>I found some satellite image from NOAA. The left is the SST and chlorophyll-a in MARCH 2019, the right is in April. In the SST, we could find the cold -core ring in the red square in both image. But in the Chla.  we can see some difference between cold core ring and Sargasso Sea in March. In April, we could barely see that.</p>
 <p>This also indicate that Biological characteristcs change rapidlly than physical characteristics.</p>
-<h2 id="ecology-of-warm-core-rings">8.4.4 Ecology of warm-core rings</h2>
+<h2 id="844-ecology-of-warm-core-rings"><a class="markdownIt-Anchor" href="#844-ecology-of-warm-core-rings"></a> 8.4.4 Ecology of warm-core rings</h2>
 <p>Warm-core ring is in clockwise circulation and will cause downwelling at the center. It lacks nutrient in the center.</p>
 <p>Usually, we will think it is Biological unproductive.</p>
 <p>But the fact is that it productivity is not very different from surronding water.</p>
@@ -1275,7 +1301,7 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 <p>•Convective mixing caused by surface water as move north</p>
 <p>As for the species in the warm core rings.</p>
 <p>The biomass of mesozooplankton is low and will increase by time.</p>
-<p>The nonmigratory mesopelagic fish and siponiphores do not have significant change in the warm-core rings.</p>
+<p>The nonmigratory mesopelagic fish and siponiphores do not have significant change  in the warm-core rings.</p>
 <p>And the warm-core rings in the eastern boundaries of Gulf Stream is preferred by sperm whales.</p>
 <p>The warm-core ring contacts with the continetal shelf usually. Because it is in clockwise, it will drag cold water from shelf by rotation movement to northern side and enhance poductivity.</p>
 <p>These two figure is about the chla in the Georges bank, the red square is the area of georges bank. And here is a cold core ring. We can see that the chl-a is clearly enhanced by the offshore movement of shelf water, which accompanied by vigorous upwelling and vertical mixing.</p>
@@ -1297,8 +1323,8 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
       </categories>
       <tags>
         <tag>Oceanography</tag>
-        <tag>bookreading</tag>
         <tag>Seminar</tag>
+        <tag>Book Reading</tag>
       </tags>
   </entry>
   <entry>
@@ -3276,33 +3302,40 @@ k\le (\frac{R}{\gamma})^2
   <entry>
     <title>book reading note 1</title>
     <url>/posts/2adc6f01.html</url>
-    <content><![CDATA[<p>Chapter 5.4-5.5 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》 <a id="more"></a></p>
-<h1 id="comparasion-with-the-humboldt-current-system">5.4Comparasion with the Humboldt Current System</h1>
+    <content><![CDATA[<p>Chapter 5.4-5.5 of book  《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》</p>
+<a id="more"></a>
+<h1 id="54comparasion-with-the-humboldt-current-system"><a class="markdownIt-Anchor" href="#54comparasion-with-the-humboldt-current-system"></a> 5.4Comparasion with the Humboldt Current System</h1>
 <p>A complex set of flow between the coast and 100km offshore(Alheit and Bernal 1993)</p>
-<ol type="1">
+<ol>
 <li>Furthest: sluggish wide flow towards the equator: Chile-Peru Oceanic Current</li>
 <li>Towards the coast: Peruvian Oceanic Counter-Current</li>
 <li>Closer: equatorward-flowing Humboldt Current, the prime driving force for coastal upwelling</li>
 </ol>
 <p>The area of upwelling migrates north and south with the seasons, but overall extends from about 38° S in central Chile, through northern Chile and the whole of Peru to parts of Ecuador just north of the equator.</p>
-<p>Early work on the upwelling system off Peru, recent details of Chilean upwelling system have been added.</p>
+<p>Early work  on the upwelling system off Peru, recent details of Chilean upwelling system have been added.</p>
 <ul>
 <li>Off central Peru, upwelling is year-round but reaches a maximum in winter.</li>
 <li>Off northern Chile, upwelling peaks during spring</li>
 <li>Off central Chile, peaks during late spring and summer</li>
 </ul>
-<p>JOINT II multidisciplinary cruises studied the Peruvian upwelling system at 15°S in 1976-7.</p>
+<p>JOINT II  multidisciplinary cruises studied the Peruvian upwelling system at 15°S in 1976-7.</p>
 <p>Three important differences between the upwelling site off Peru and that off northwest Africa.</p>
-<ol type="1">
-<li><p>The shelf off Peru is narrower(20km A 50) and drops off more steeply(200m versus 110m).</p></li>
-<li><p>Deep water off Peru has more nutrient(20-25 vs 5-10) .</p></li>
-<li><p>Wind stress is less and more constant(0.79+-0.4 vs 1.55+-1)</p>
+<ol>
+<li>
+<p>The shelf off Peru is narrower(20km A 50) and drops off more steeply(200m versus 110m).</p>
+</li>
+<li>
+<p>Deep water off Peru has more nutrient(20-25 vs 5-10) .</p>
+</li>
+<li>
+<p>Wind stress is less and more constant(0.79±0.4 vs 1.55±1)</p>
 <p>Net result(实际效果):</p>
 <ul>
 <li>When Ekman transport is active, offshore transport occurs mainly in the top 20m.</li>
 <li>Shoreward transport is in an intermediate layer over the shelf, at the depth of about 30-80m(in Africa is whole)</li>
 <li>Off Peru, the water close to the bottom is relatively still, and there is marked accumulation of organic matter to give chemically reducing sediment.</li>
-</ul></li>
+</ul>
+</li>
 </ol>
 <p>Two further differences:</p>
 <ul>
@@ -3318,29 +3351,37 @@ k\le (\frac{R}{\gamma})^2
 <li>Zone IV nutrient depletion occurs, so that the cells experience nutrient limitation.</li>
 </ul>
 <p>Using drogues to track water masses, MacIsaac et al. (1985) estimated that phytoplankton cells moved from zone I to zone IV in 8–10 days, during which time they traveled 30–60 km away from the coast. The chlorophyll maximum occurred about 18 km offshore.</p>
-<h2 id="interannual-variability-in-the-peruvian-upwelling-system">5.4.1 Interannual variability in the Peruvian upwelling system</h2>
+<h2 id="541-interannual-variability-in-the-peruvian-upwelling-system"><a class="markdownIt-Anchor" href="#541-interannual-variability-in-the-peruvian-upwelling-system"></a> 5.4.1 Interannual variability in the Peruvian upwelling system</h2>
 <p>Normal State: the source of upwelled water off Peru in April–May 1977 was at a depth of 30–60 m. The water was at a temperature of 15.5–16.5 °C, and contained 20–25 µg nitrate.</p>
 <p>Anomalous State: the trade winds weaken or reverse, thermocline off the coast of Peru sinks to a depth of about 100 m; Ekman transport along this coast continues, but the water that is upwelled is now much warmer and not rich in nutrients.</p>
 <p>As a result, there is a sharp reduction in the biomass and productivity of the phytoplankton.</p>
 <p>Reason: El Niño – Southern Oscillation (ENSO). t the Peruvian upwelling system seems to be uniquely vulnerable to such drastic changes, so that its interannual variability in productivity is very great.</p>
 <p>1982-3: serious in the periodicity of 100 years or more (Rasmusson and Wallace 1983)</p>
-<p>the height of the 1982–3 anomaly, in May 1983, the upwelling waters were at 29 °C instead of the usual 16–18 °C, and mean primary productivity was only 10mgCm−3 d−1(Barber et al.1985) Two months later conditions had returned to normal and mean primary productivity was 219 mg C m−3 d−l</p>
-<h2 id="total-primary-production-in-the-peruvian-upwelling-system">5.4.2 Total primary production in the Peruvian upwelling system</h2>
+<p>the height of the 1982–3 anomaly, in May 1983, the upwelling waters were at 29 °C instead of the usual 16–18 °C, and mean primary productivity was only 10mgCm−3<br>
+d−1(Barber et al.1985)<br>
+Two months later conditions had returned to normal and mean primary productivity was 219 mg C m−3 d−l</p>
+<h2 id="542-total-primary-production-in-the-peruvian-upwelling-system"><a class="markdownIt-Anchor" href="#542-total-primary-production-in-the-peruvian-upwelling-system"></a> 5.4.2 Total primary production in the Peruvian upwelling system</h2>
 <p>Many attempts have been made to calculate the total primary productivity of the Peruvian upwelling system.</p>
-<ol type="1">
-<li>Lack of agreement about upwelling area leads out many different result. Cushing (1969) used 479,000 km2 in his calculation while Ryther (1969) used 60,000 km2</li>
-<li>Chavez and Barber (1987) argued that the offshore dimension of coastal upwelling is limited by the Rossby deformation scale (Section 5.2.3). From Eqn. 5.11 we see that the formula for this scale is (g′ H0 )1/2/f.Thus the radius is a function of the Coriolis force f (which varies with latitude), the depth H0, and the vertical density gradient.</li>
+<ol>
+<li>Lack of agreement about upwelling area leads out many different result.  Cushing (1969) used 479,000 km2 in his calculation while Ryther (1969) used 60,000 km2</li>
+<li>Chavez and Barber (1987) argued that the<br>
+offshore dimension of coastal upwelling is limited by the Rossby deformation scale (Section 5.2.3). From Eqn. 5.11 we see that the formula for this scale is (g′ H0<br>
+)1/2/f.Thus the radius is a function of the Coriolis force f (which varies with latitude), the depth H0, and the vertical density gradient.</li>
 <li>Chavez and Barber (1987) calculated that the width of the Peruvian upwelling system varied from 270 km at 4° S to 60 km at 18° S. Calculating the width at degree intervals they arrived at an area of 182,000 km2, intermediate between the two values quoted above.</li>
-<li>The mean of the large number of determinations of primary production in 1983–4, after the recovery from the El Niño event, was 2.28 g C m−2 d−1 or 834 g C m−2 y−1 . This value converted into a total production of 1.52 × 1014 gCy−1 .</li>
+<li>The mean of the large number of determinations of primary production in 1983–4, after the recovery from the El Niño event, was 2.28 g C m−2<br>
+d−1 or 834 g C m−2<br>
+y−1 . This value converted into a total production of 1.52 × 1014<br>
+gCy−1<br>
+.</li>
 <li>With increased availability of satellite pictures of chloro- phyll distribution, it should be possible to refine the estimate of the average area affected by upwelling, and to determine its variability. For example, Carr (2002) defined the area of an upwelling system as the area over which surface chlorophyll concentrations, as estimated by remote sensing, exceeded 1 mg m−3 on average (see Section 5.9).</li>
 </ol>
-<h2 id="secondary-production-in-the-humboldt-current-system">5.4.3 Secondary production in the Humboldt Current system</h2>
+<h2 id="543-secondary-production-in-the-humboldt-current-system"><a class="markdownIt-Anchor" href="#543-secondary-production-in-the-humboldt-current-system"></a> 5.4.3 Secondary production in the Humboldt Current system</h2>
 <p>Cushing(1971) the type of fish in HCS is the same in CCS.</p>
 <p>The sardines and anchovies usually spawn in the areas of most intense upwelling, close to shore, and Cushing speculated that both the juveniles and the adults make use of the two counter-currents (onshore and poleward) to maintain themselves within the upwelling system.</p>
 <p>lack of agreement about whether the anchovies and sardines predominantly consume phytoplankton. It seems that larvae consume mainly microzooplankton, while adults feed mainly on larger phytoplankton.</p>
 <p>Barber et al. (1985) showed (Fig. 5.12) that the years of temperature anomalies (El Niño years) were associated with reduced landings of anchoveta Engraulis ringens.</p>
 <p>Possible explanations:</p>
-<ol type="1">
+<ol>
 <li>the adults could have starved for lack of phytoplankton food,</li>
 <li>the fish could have migrated away from the areas where they are usually caught</li>
 <li>or the larvae could have failed to survive through lack of both phytoplankton and zooplankton.</li>
@@ -3355,9 +3396,9 @@ k\le (\frac{R}{\gamma})^2
 <li>Walsh et al. (1980), investigating the survival of larvae off the northern coast of Peru during winter, found that survival was higher when dinoflagellates in relatively high concentrations were available to the first-feeding larvae. Strong wind events had the effect of dispersing the dinoflagellate concentrations and adversely affected survival. We shall return to this topic in <strong>Section 5.5</strong> on the California Current.(把这个加上)</li>
 <li>At the onset of the 1976 El Niño there was a bloom of the dinoflagellate Gymnodinium splendens along 1000 km of the coast from March until the end of May. It was attributable to the stabilization of the water column as the warm water invaded the area. While it provided an excellent feeding environment for the early larvae, it apparently was not a suitable food for the adult fish, which had smaller fat content, a reduced weight at a given length, and reduced length at sexual maturity. The 1977 recruitment of fish spawned in 1976 was extremely poor and the stock along the Peruvian coast fell to the lowest levels ever observed (Barber et al. 1985)</li>
 </ul>
-<h2 id="exploitation-of-the-humboldt-current-fish-stock">5.4.4 Exploitation of the Humboldt Current fish stock</h2>
+<h2 id="544-exploitation-of-the-humboldt-current-fish-stock"><a class="markdownIt-Anchor" href="#544-exploitation-of-the-humboldt-current-fish-stock"></a> 5.4.4 Exploitation of the Humboldt Current fish stock</h2>
 <p>History of the anchoveta fishery in Peru was reviewed by Glantz (1985)</p>
-<ol type="1">
+<ol>
 <li>Mining of bird-drooping</li>
 </ol>
 <ul>
@@ -3365,7 +3406,7 @@ k\le (\frac{R}{\gamma})^2
 <li>Large populations of fish-eating birds are characteristic of upwelling populations worldwide, and prominent white accumulations of droppings at their roosting sites are an inevitable concomitant. As Cushing (1971) remarked, it is no accident that upwelling areas commonly have a Cabo Blanco, Cap Blanc, or Cape Blanc.</li>
 <li>The guano of Peru was mined and exported for fertilizer to many parts of the world.</li>
 </ul>
-<ol start="2" type="1">
+<ol start="2">
 <li>Anchoveta fishing</li>
 </ol>
 <ul>
@@ -3379,9 +3420,9 @@ k\le (\frac{R}{\gamma})^2
 <p>The authors pointed out that anchovy can recover from an ENSO event in 1–2 years (Fig. 5.13). They made a partial recovery after the 1972–3 El Niño, and a full recovery after the 1997–8 event, but the decadal-scale period of warm anomalies, which began in 1968, held the anchovy populations at low levels from 1977 to 1985. Alheit and Niquen (2004) therefore concluded that the well-known crash of the anchovy fishery in the 1970s was caused primarily by the decadal- scale regime shift rather than by the 1972–3 ENSO events</p>
 <p>Overfishing</p>
 <p>Climate Change(ENSO, regime shift)</p>
-<h1 id="the-california-current-system">5.5 The California Current System</h1>
+<h1 id="55-the-california-current-system"><a class="markdownIt-Anchor" href="#55-the-california-current-system"></a> 5.5 The California Current System</h1>
 <p>Driven by prevailing northerly winds, and upwelling occurs along the Pacific coast of the United States from the Canadian border south to Baja California and beyond.</p>
-<p>The situation of upwelling system off Oregon in several respects resembles that off Peru(这个是谁做的，Huyer1976做的是非洲).The poleward undercurrent appears over the shelf as well as the slope, and the shoreward flow is strongest at mid-depths over the shelf. Upwelling events are less strong and of shorter duration off Oregon than they are off northwest Africa.</p>
+<p>The situation of upwelling system off Oregon  in several respects resembles that off Peru(这个是谁做的，Huyer1976做的是非洲).The poleward undercurrent appears over the shelf as well as the slope, and the shoreward flow is strongest at mid-depths over the shelf. Upwelling events are less strong and of shorter duration off Oregon than they are off northwest Africa.</p>
 <p>Bakun(1973) gave the Bakun upwelling index, a 20-year aver- age of monthly mean Ekman transport for different parts of the coast. The range is from 300 m3 s−1(offshore direction) to −212 m−3 s−1 (onshore).It can be seen that the index indicates year-round upwelling off southern California, with stronger upwelling in summer, but off Oregon and Washington in the north there is strong downwelling in winter, and upwelling is confined to the period April–September.</p>
 <p>in summer there is a negative temperature anomaly, indicative of upwelling of cold water, all the way along the coast from Oregon in the north to Baja California in the south, with the exception of a warm anomaly off San Diego. The upwelling is obviously most intense between Cape Mendocino and Monterey. Although the temperature anomaly in Fig. 5.16 shows an apparently uniform area of cold water, this area is an artifact of the method of calculation(why?).</p>
 <p>The situation at any one time, as seen by satellite, is extremely com- plex, with coastal upwelling systems tending to be centered on topographical features such as capes and canyons, and with plumes of upwelled water extending far out into the California Current. As in other coastal upwelling systems, the strength of upwelling is strongly dependent on wind speed and direction, and changes from day to day.</p>
@@ -3389,10 +3430,10 @@ k\le (\frac{R}{\gamma})^2
 <p>heterogeneous nature of the California Current, with its admixture of advected and upwelled water.</p>
 <p>It is now possible to simulate both physical and biological events in the coastal transition zone, that zone characterized by the presence of highly productive jets, squirts, or filaments of highly productive upwelled water. Moisan and Hofmann (1996) modeled the fate of Lagrangian drifters placed in newly upwelled water and allowed to travel with a filament. Coupled physical and biological models were used, the biological parameters being determined from shipborne observations. The models reproduced well the formation of a subsurface chlorophyll maximum and the changing structure of the food web as the drifters moved offshore. 物理海洋学的东西我就不懂了</p>
 <p>Digiacomo (2000) and Digiacomo and Holt (2001) used the latest satellite technology to study the mesoscale and sub-mesoscale eddies in the Southern California Bight. All the eddies were less than 50 km in diameter, and 70% were less than 10 km. They were observed to lie between the equatorward-flowing California Current and the shore, and appeared to be caused by topography (especially islands), wind, and current instabilities. There was also evidence of lateral entrainment of highly productive coastal waters. Associated with the eddies were patches of high chlorophyll density, up to 15 km wide and 60 km long. The authors discussed the potential for influencing nutrient flux, plankton productivity, larval transport and recruitment, and dispersal of pollutants. This smaller-scale pattern was observed to interact with the large-scale variations in time and space of the California Current.</p>
-<h2 id="fish-production-in-the-california-current-system">5.5.1 Fish production in the California Current system</h2>
+<h2 id="551-fish-production-in-the-california-current-system"><a class="markdownIt-Anchor" href="#551-fish-production-in-the-california-current-system"></a> 5.5.1 Fish production in the California Current system</h2>
 <p>most abundant fishes in the California Current system are sardines, anchovies, hake, jack mackerel, and mackerel.</p>
 <ul>
-<li>Sardines Sardinops sagax were heavily exploited from 1916 to 1967.. The peak landings were in 1936–7 and exceeded 700,000 tons. The catch fell drastically in the 1950s and 1960s and in 1967 the California state legislature imposed a moratorium on the sardine fishery.</li>
+<li>Sardines Sardinops sagax were heavily exploited from 1916 to 1967… The peak landings were in 1936–7 and exceeded 700,000 tons. The catch fell drastically in the 1950s and 1960s and in 1967 the California state legislature imposed a moratorium on the sardine fishery.</li>
 <li>The sardines of the California current system are divisible into four stocks. Of these, the largest by far before overfishing was the one that spawned in the Southern California Bight and migrated to the upwelling areas off northern California to exploit the dense zooplankton stocks that are associated with the coastal upwelling.</li>
 <li>biomass of sardines declined, and some postulated that the two were in competition so that the decline of sardine stocks released resources for the anchovies. However, Soutar and Isaacs (1969) studied the 1850-year record of fish scales in the anaerobic sediments off California and concluded that northern anchovy scales were present in large numbers throughout the series, while sardine scales appeared intermittently for periods of 20–150 years, with absences that averaged 80 years in duration. They concluded that the two species were not in competition.</li>
 <li>The anchovies also have several subpopulations. The stock off Oregon spawns at about 44–46° N, mainly in July at the time of the northern upwelling. The central subpopulation spawns principally in the Southern California Bight. Eggs and larvae can be found throughout the year, but the peak abundance is in the spring, while the minimum is in the autumn. The fish remain in the Southern California Bight throughout their lives and in recent years this has been the largest stock. There is a southern stock off Baja California, for which peak larval abundance is from January to March.</li>
@@ -3406,7 +3447,7 @@ k\le (\frac{R}{\gamma})^2
 <li>The various hypotheses to explain the alternation of species have been discussed, but in the light of the findings of Alheit and Niquen (2004) for the Humboldt Current system, we may expect to find some influence of decadal-scale climate changes.</li>
 </ul>
 <p>The various hypotheses to explain the alternation of species have been discussed, but in the light of the findings of Alheit and Niquen (2004) for the Humboldt Current system, we may expect to find some influence of decadal-scale climate changes. These will be discussed in Chapter 9</p>
-<h2 id="the-survival-of-first-feeding-larvae">5.5.2 The survival of first-feeding larvae</h2>
+<h2 id="552-the-survival-of-first-feeding-larvae"><a class="markdownIt-Anchor" href="#552-the-survival-of-first-feeding-larvae"></a> 5.5.2 The survival of first-feeding larvae</h2>
 <p>Anchovy egg are most abundant in the shorthorn California Bight during February, March, and April. 3 day old first-feeding larvae need a very high density of food organisms about 1790 dinoflagellates per liter.</p>
 <p>the larvae were stimulated to feed only when the phytoplankton was at a population density of at least 20–30 cells mL−1</p>
 <p>The first-feeding larvae rely on high concentrations of phytoplankton such as naked dinoflagellates of a size class close to 40 µm.</p>
@@ -3420,8 +3461,8 @@ k\le (\frac{R}{\gamma})^2
       </categories>
       <tags>
         <tag>Oceanography</tag>
-        <tag>bookreading</tag>
         <tag>Seminar</tag>
+        <tag>Book Reading</tag>
       </tags>
   </entry>
   <entry>
@@ -4446,8 +4487,9 @@ k\le (\frac{R}{\gamma})^2
     <url>/posts/null.html</url>
     <content><![CDATA[<p>虽然自己还有好几个没有更新完，但是为了组会和AWOC就先把这个做出来吧。。。</p>
 <a id="more"></a>
-<h1 id="iop-reflectance-relationships-revisited-accepted">IOP-Reflectance relationships revisited Accepted</h1>
+<h1 id="iop-reflectance-relationships-revisited-accepted"><a class="markdownIt-Anchor" href="#iop-reflectance-relationships-revisited-accepted"></a> IOP-Reflectance relationships revisited Accepted</h1>
 <p>doi: 10.1029/2020JC016661.</p>
+<h2 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h2>
 ]]></content>
       <categories>
         <category>Annotated Bibliography</category>

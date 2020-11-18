@@ -821,124 +821,15 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
     <url>/posts/f5ee8139.html</url>
     <content><![CDATA[<p>This note is based on Lee 1998,1999,2002.</p>
 <a id="more"></a>
-<h1 id="symbols-and-definitions">Symbols and Definitions</h1>
-<table>
-<thead>
-<tr class="header">
-<th>Symbol</th>
-<th>Description</th>
-<th>Unit</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{a}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{a_\phi}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{a_g}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{a_\omega}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{a(\lambda)^{[555]}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{a(\lambda)^{[640]}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{b_{bp}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{b_{bw}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{b_b}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{A,B}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{[C]}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{Y}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{q_n^{der}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{q_n^{true}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{R_{rs}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{r_{rs}}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{S}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\boldsymbol{u}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\boldsymbol{\lambda_0}\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\zeta\)</span></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\xi\)</span></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1 id="sfracr_rslambda_1-r_rslambda_2lambda_1-lambda_2"><span class="math inline">\(s=\frac{\R_{rs}(\lambda_1)-\R_{rs}(\lambda_{2})}{\lambda_{1}-\lambda_{2}}\)</span></h1>
+<h1 id="the-reason-for-failure-of-qaa">The reason for failure of QAA</h1>
+<p>After one year I found that I haven't finish the note. I will try to finish this.</p>
+<p>But before that I think I found the reason for the failure of QAA</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021118142948938.png" alt="image-00021118142948938"><figcaption aria-hidden="true">image-00021118142948938</figcaption>
+</figure>
+<p>Address: http://www.ioccg.org/groups/Software_OCA/QAA_v6_2014209.pdf</p>
+<p>This is the whole process of QAA v6. Compared with the former one, the main update is in step2.</p>
+<p>This is because in the first version, in the oligotrophic water, the <span class="math inline">\(a_{ph}\)</span> is very low. Meanwhile the <span class="math inline">\(a_{CDOM}\)</span> has a very influence in the <span class="math inline">\(a_{total}\)</span> at 55xnm. So the <span class="math inline">\(a_{total}\)</span> is mainly determined by <span class="math inline">\(a_w\)</span>. As a result, lee used an emprical relationship from <span class="math inline">\(r_{rs}\)</span> to estimated <span class="math inline">\(a_{total}(55x)\)</span>. But in the coastal area, the <span class="math inline">\(a_{total}\)</span> is dominated other constituents besides water, it make a lot of difference. It is also the reason that the update mainly happened in step2.</p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -3254,7 +3145,7 @@ b_{b \ Tot}=b_{bph}^{*}(\lambda)CHL+b_{bndet}^{*}(\lambda)MSS+b_{b \ w}{\lambda}
 <h2 id="result">Result</h2>
 <h3 id="establishing-the-nature-of-iop---reflectance-relationships">Establishing the nature of IOP - reflectance relationships</h3>
 <h4 id="fq-and-t">f/Q and T</h4>
-<p>Variations in the bidirectional properties of the radiant flux leaving the water and returned toward the atmosphere have been extensively studied (Morel &amp; Gentili, 1991, 1993, 1996; Morel et al., 2002). The term f/Q in Equation 4 implicitly describes the magnitude of these variations, mainly due to changes in the light field geometry and bio-optical characteristics of the water body. Figure 3 shows distributions of f/Q as obtained in this study from RT simulations, calculated from Equation 4.<strong>These results are broadly consistent with Morel and Gentili (1993) who found values in the range 0.075 – 0.12.</strong> f/Q also influenced by variations in SUn angles and viewing geometries. This is confirmed in Figures 4c and 4d where it can be seen that changing solar zenith angle has a <strong>small but defined</strong> impact on relationships between Rrs and both wM and wG.</p>
+<p>Variations in the bidirectional properties of the radiant flux leaving the water and returned toward the atmosphere have been extensively studied (Morel &amp; Gentili, 1991, 1993, 1996; Morel et al., 2002). The term f/Q in Equation 4 implicitly describes the magnitude of these variations, mainly due to changes in the light field geometry and bio-optical characteristics of the water body. Figure 3 shows distributions of f/Q as obtained in this study from RT simulations, calculated from Equation 4.<strong>These results are broadly consistent with Morel and Gentili (1993) who found values in the range 0.075 – 0.12.</strong> f/Q also influenced by variations in sun angles and viewing geometries. This is confirmed in Figures 4c and 4d where it can be seen that changing solar zenith angle has a <strong>small but defined</strong> impact on relationships between Rrs and both wM and wG.</p>
 <p>In the present study, unless otherwise stated, the results refer only to a zenith Sun and a vertical viewing direction, <strong>meaning that the variability of the f/Q factor here is due mainly to differences in water constituent concentrations</strong></p>
 <figure>
 <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021117172752050.png" alt="image-00021117172752050"><figcaption aria-hidden="true">image-00021117172752050</figcaption>
@@ -3350,10 +3241,16 @@ b_{b \ Tot}=b_{bph}^{*}(\lambda)CHL+b_{bndet}^{*}(\lambda)MSS+b_{b \ w}{\lambda}
 <li><p>There may be situations where future end users may have reason to prefer use of one form over another and this study suggests there is no reason to be concerned over either</p></li>
 </ul>
 <h2 id="annotation">Annotation</h2>
+<p>This is a very fundamental paper related to the relationship between IOP and AOP. Specifically, this paper examine two relationship, f/Q and polynomial. I do not tend to make a summary for this paper all.</p>
+<p>One thing I can learn from this paper is that how f/Q and polynomial effected by the environment. f/Q is mainly influenced by the water constitution, and small influenced by the sun angles, viewing geometries and solar zenith. It is in the range of 0.075 – 0.12.</p>
+<p>For the relationship between rrs and IOP, the author examined different order of polynimal. The poly5 the author used seems slightly better than Lee 02 and Wong 2019, but the author said that this conclusion might be only true in the area they collected data. The poly5 is difficult to solve in the inversion problem, but I can try it in the reversion problem.</p>
+<p>One interested thing is that the author use SIOP to generate IOP dataset. I'm wondering what could influence SIOP.</p>
+<h1 id="algorithm-to-derive-inherent-optical-properties-from-remote-sensing-reflectance-in-turbid-and-eutrophic-lakes">Algorithm to derive inherent optical properties from remote sensing reflectance in turbid and eutrophic lakes</h1>
 <h1 id="phytoplankton-fluorescence-theory-current-literature-and-in-situ-measurement">Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement</h1>
-<p>Book 'Real-time Coastal Observing Systems <em>for</em> Marine Ecosystem Dynamics <em>and</em> Harmful Algal Blooms', Chapter 7, 'Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement' edited by</p>
-<h1 id="inversion-of-in-situ-light-absorption-and-attenuation-measurements-to-estimate-constituent-concentrations-in-optically-complex-shelf-seas">Inversion of In Situ Light Absorption and Attenuation Measurements to Estimate Constituent Concentrations in Optically Complex Shelf Seas</h1>
-<p>https://doi.org/10.1002/2017JC013453</p>
+<p>Book 'Real-time Coastal Observing Systems <em>for</em> Marine Ecosystem Dynamics <em>and</em> Harmful Algal Blooms', Chapter 7, 'Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement' edited by Marcel Baiin.</p>
+<h1 id="fluorescence-component-in-the-reflectance-spectra-from-coastal-waters.-dependence-on-water-composition">Fluorescence component in the reflectance spectra from coastal waters. Dependence on water composition</h1>
+<p>10.1364/ao.58.008549</p>
+<h1 id="fluorescence-component-in-the-reflectance-spectra-from-coastal-waters.-ii.-performance-of-retrieval-algorithms">Fluorescence component in the reflectance spectra from coastal waters. II. Performance of retrieval algorithms</h1>
 <h1 id="modeling-the-remote-sensing-reflectance-of-highly-turbid-waters">Modeling the remote-sensing reflectance of highly turbid waters</h1>
 <section class="footnotes" role="doc-endnotes">
 <hr>

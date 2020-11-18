@@ -3113,9 +3113,9 @@ r_{rs}(0^-,\lambda)=\frac{L_u(0^-,\lambda)}{E_d(0^-,\lambda)}=\frac{R(0^-,\lambd
 <h3 id="laboratory-measurement">Laboratory measurement</h3>
 <h3 id="bio-optical-model-developement">Bio-optical model developement</h3>
 <p>Following the methodology reported in Ramírez-Pérez et al. (2018) for Case 2 waters, each total IOP can be considered as the sum of partial IOPs, and each partial IOP can be expressed as the product of SIOPs, and associated constituent concentrations:</p>
-<p>$$ a_{Tot}()=a_{ph}^{<em>}()CHL+a_{bdet}^{</em>}</p>
-<p>()CHL+a_{ndet}^{<em>}()MSS+a_{cdom}^{</em>}</p>
-<p>()CDOM+a_w() $$</p>
+<p><span class="math display">\[
+a_{Tot}(\lambda)=a_{ph}^{*}(\lambda)CHL+a_{bdet}^{*}(\lambda)CHL+a_{ndet}^{*}(\lambda)MSS+a_{cdom}^{*}(\lambda)CDOM+a_w(\lambda)
+\]</span></p>
 <p><span class="math display">\[
 b_{Tot}(\lambda)=b_{ph}^{*}CHL+b_{ndet}^{*}(\lambda)MSS+b_w(\lambda)
 \]</span></p>

@@ -909,18 +909,6 @@ b_{bp}^*(\lambda)=\lambda^{S_{bp}}
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/posts/3b4b656d.html</url>
-    <content><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
-]]></content>
-  </entry>
-  <entry>
     <title>assert</title>
     <url>/posts/b1ef4fab.html</url>
     <content><![CDATA[<p>最近在读别人代码的时候发现了好多自己当时学python的时候没有学过的东西</p>
@@ -3602,19 +3590,19 @@ a_{ph}(443)=A(443)*CHL^{1-B(443)}
 <h2 id="基础知识">基础知识</h2>
 <p>Matplotlib最重要一个基础概念就是figure和axes。</p>
 <figure>
-<img src="https://pic2.zhimg.com/80/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg" alt="img"><figcaption aria-hidden="true">img</figcaption>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/v2-6e4429872eeb8a155433c0ee7c75b6ea_720w.jpg" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <p>在Matplotlib中，figure的意思是画板，axes的意思是画布，而axis的意思是坐标轴。比如</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">20</span>)  <span class="comment"># 生成数据</span></span><br><span class="line">y = x * x + <span class="number">2</span></span><br><span class="line"></span><br><span class="line">fig = plt.figure()  <span class="comment"># 新建图形对象</span></span><br><span class="line">axes = fig.add_axes([<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.8</span>, <span class="number">0.8</span>])  <span class="comment"># 控制画布的左，下，宽度，高度</span></span><br><span class="line">axes.plot(x, y, <span class="string">&#x27;r&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>在同一个画板上，我们可以画好几个画布</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fig = plt.figure()  <span class="comment"># 新建画板</span></span><br><span class="line">axes1 = fig.add_axes([<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">0.8</span>, <span class="number">0.8</span>])  <span class="comment"># 大画布</span></span><br><span class="line">axes2 = fig.add_axes([<span class="number">0.2</span>, <span class="number">0.5</span>, <span class="number">0.4</span>, <span class="number">0.3</span>])  <span class="comment"># 小画布</span></span><br><span class="line"></span><br><span class="line">axes1.plot(x, y, <span class="string">&#x27;r&#x27;</span>)  <span class="comment"># 大画布</span></span><br><span class="line">axes2.plot(y, x, <span class="string">&#x27;g&#x27;</span>)  <span class="comment"># 小画布</span></span><br></pre></td></tr></table></figure>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/huhuhang/cdn/images/2019/matplotlib-basic/output_80_1.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/output_80_1.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <p>除此之外， 还有一种方法增加画布，就是plt.subplots()</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fig, axes = plt.subplots(nrows=<span class="number">1</span>, ncols=<span class="number">2</span>)  <span class="comment"># 子图为 1 行，2 列</span></span><br><span class="line"><span class="keyword">for</span> ax <span class="keyword">in</span> axes:</span><br><span class="line">    ax.plot(x, y, <span class="string">&#x27;r&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <figure>
-<img src="https://cdn.jsdelivr.net/gh/huhuhang/cdn/images/2019/matplotlib-basic/output_86_0.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/output_86_0.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
 </figure>
 <p>即便是只画一个画布，也建议通过fig,axses=plt.subplots()来生成画布和画板，方便调节，而不是使用plt.plot()</p>
 <h2 id="基础样式调整">基础样式调整</h2>

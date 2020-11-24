@@ -654,6 +654,20 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/Fluorescence/</loc>
+    <lastmod>2020-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/Sub-pixel/</loc>
+    <lastmod>2020-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>

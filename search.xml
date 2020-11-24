@@ -818,9 +818,9 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
       </tags>
   </entry>
   <entry>
-    <title>QAA note</title>
+    <title>IOP inversion</title>
     <url>/posts/f5ee8139.html</url>
-    <content><![CDATA[<p>This note is based on Lee 1998,1999,2002.</p>
+    <content><![CDATA[<p>This note is based on Lee 1998,1999,2002 and P. Werdell 2013</p>
 <a id="more"></a>
 <h1 id="the-reason-for-failure-of-qaa">The reason for failure of QAA</h1>
 <p>After one year I found that I haven't finish the note. I will try to finish this.</p>
@@ -831,6 +831,49 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
 <p>Address: http://www.ioccg.org/groups/Software_OCA/QAA_v6_2014209.pdf</p>
 <p>This is the whole process of QAA v6. Compared with the former one, the main update is in step2.</p>
 <p>This is because in the first version, in the oligotrophic water, the <span class="math inline">\(a_{ph}\)</span> is very low. Meanwhile the <span class="math inline">\(a_{CDOM}\)</span> has a very influence in the <span class="math inline">\(a_{total}\)</span> at 55xnm. So the <span class="math inline">\(a_{total}\)</span> is mainly determined by <span class="math inline">\(a_w\)</span>. As a result, lee used an emprical relationship from <span class="math inline">\(r_{rs}\)</span> to estimated <span class="math inline">\(a_{total}(55x)\)</span>. But in the coastal area, the <span class="math inline">\(a_{total}\)</span> is dominated other constituents besides water, it make a lot of difference. It is also the reason that the update mainly happened in step2.</p>
+<h1 id="giop">GIOP</h1>
+<p>This is another commly used Semi-analytical algorithm for IOP inversion.</p>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>SAA always differentiations only in the assumputions employed to define the eigenvectors and in the mathematical methods applied to calculate the eigenvalues</li>
+<li>GIOP allows construction of different IOP models at runtime by selection from a wide assort-ment of published absorption and backscattering eigenvectors.</li>
+</ul>
+<h2 id="method">Method</h2>
+<h3 id="model-development">Model Development</h3>
+<p>Lee et al 2002, Rrs to rrs <span class="math display">\[
+r_{rs}(\lambda,0^-)=\frac{R_{rs}(\lambda)}{0.52+1.7R_{rs}(\lambda)}
+\]</span> rrs to IOP <span class="math display">\[
+r_{rs}(\lambda,0^-)=G_1(\lambda)u(\lambda)+G_2(\lambda)u(\lambda)^2
+\]</span></p>
+<p><span class="math display">\[
+u(\lambda)=\frac{b_b{(\lambda)}}{a(\lambda)+b_b(\lambda)}
+\]</span></p>
+<p>Common methods for estimating G?λ? include Gordon et al. [21], where G1 and G2 are spectrally fixed to 0.0949 and 0.0794 (see [7,23] for alternative coefficients), and the tabulated results ofMorel et al. [22], where G1 is estimated using solar and sensor geometries and an estimate of algal bio- mass and G2 is set to 0. GIOP supports all of these options.</p>
+<p>IOP decomposition</p>
+<p>each component can be expressed as the product of its concentration-specific absorption spectrum (eigenvector; a?) and its concentration or amplitude (eigenvalue; A): <span class="math display">\[
+a(\lambda)=a_w(\lambda)+\sum_{i=1}^{N}A_{ph}a_{ph}^{*}(\lambda)+\sum_{i=1}^{N}A_{d}a_{d}^{*}(\lambda)+\sum_{i=1}^{N}A_{g}a_{g}^{*}(\lambda)
+\]</span> Both <span class="math inline">\(a_{d}^*(\lambda)\)</span> and <span class="math inline">\(a_g^*(λ)\)</span> are commonly expressed as <span class="math display">\[
+a_{d,g}^*(\lambda)=exp(-S_{d,g}\lambda)
+\]</span> where Sd and Sg typically vary between 0.01 and 0.02 nm−1 in natural waters [24].</p>
+<p>As the spectral shapes of NAP and CDOM absorption differ only in their exponential slopes, the two components are typically combined for satellite applications and Eq. (4) becomes</p>
+<p><span class="math display">\[
+a(\lambda)=a_w(\lambda)+\sum_{i=1}^{N}A_{ph}a_{ph}^{*}(\lambda)+\sum_{i=1}^{N}A_{dg}a_{dg}^{*}(\lambda)
+\]</span> For total backscattering <span class="math display">\[
+b_b(\lambda)=b_{bw}({\lambda})+\sum_{i=1}^NB_{bp}b_{bp}(\lambda)
+\]</span> Bbp provides the eigenvalue and a power function often represents the eigenvector: <span class="math display">\[
+b_{bp}^*(\lambda)=\lambda^{S_{bp}}
+\]</span> where Sbp typically varies between −2 and 0 from small to large particles.</p>
+<p>While commonly employed in the remote-sensing paradigm, we acknowledge the validity of the power function for b? bpλ remains debatable [25–27].</p>
+<p>Using Rrsλ and eigenvectors as input, eigenvalues for absorption (A) and backscattering (B) can be estimated via linear or nonlinear least squares inversion of Eqs. (1)–(3).</p>
+<p>Note that this model describes each component of absorption and back- scattering as a linear sum of subcomponents, presumably with unique spectral dependencies [sym- bolized by the summation over N in Eqs. (4), (6), and (7)]. In this way, the absorption characteristics for different phytoplankton populations and the scatter- ing characteristics of multiple size distributions of suspended particles can be represented, or Eq. (6) can be re-expanded to Eq. (4).</p>
+<h3 id="model-configuration">Model configuration</h3>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021124160320671.png" alt="image-00021124160320671"><figcaption aria-hidden="true">image-00021124160320671</figcaption>
+</figure>
+<p>Here explained the default configuration of GIOP.</p>
+<ol type="1">
+<li></li>
+</ol>
 ]]></content>
       <categories>
         <category>学习笔记</category>

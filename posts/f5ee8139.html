@@ -22,16 +22,17 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="This note is based on Lee 1998,1999,2002.">
+  <meta name="description" content="This note is based on Lee 1998,1999,2002 and P. Werdell 2013">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QAA note">
+<meta property="og:title" content="IOP inversion">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/f5ee8139.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="This note is based on Lee 1998,1999,2002.">
+<meta property="og:description" content="This note is based on Lee 1998,1999,2002 and P. Werdell 2013">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021118142948938.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021124160320671.png">
 <meta property="article:published_time" content="2019-11-27T04:27:02.000Z">
-<meta property="article:modified_time" content="2020-11-18T05:45:03.776Z">
+<meta property="article:modified_time" content="2020-11-24T07:05:19.916Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="paper reading">
 <meta property="article:tag" content="Research Basis">
@@ -52,7 +53,7 @@
   };
 </script>
 
-  <title>QAA note | 乔克叔叔的床边故事</title>
+  <title>IOP inversion | 乔克叔叔的床边故事</title>
   
 
 
@@ -186,7 +187,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-reason-for-failure-of-qaa"><span class="nav-number">1.</span> <span class="nav-text">The reason for failure of QAA</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#the-reason-for-failure-of-qaa"><span class="nav-number">1.</span> <span class="nav-text">The reason for failure of QAA</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#giop"><span class="nav-number">2.</span> <span class="nav-text">GIOP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#introduction"><span class="nav-number">2.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#method"><span class="nav-number">2.2.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#model-development"><span class="nav-number">2.2.1.</span> <span class="nav-text">Model Development</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#model-configuration"><span class="nav-number">2.2.2.</span> <span class="nav-text">Model configuration</span></a></li></ol></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -289,7 +290,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          QAA note
+          IOP inversion
         </h1>
 
         <div class="post-meta">
@@ -306,7 +307,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-11-18 14:45:03" itemprop="dateModified" datetime="2020-11-18T14:45:03+09:00">2020-11-18</time>
+                <time title="Modified: 2020-11-24 16:05:19" itemprop="dateModified" datetime="2020-11-24T16:05:19+09:00">2020-11-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -327,7 +328,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>This note is based on Lee 1998,1999,2002.</p>
+        <p>This note is based on Lee 1998,1999,2002 and P. Werdell 2013</p>
 <a id="more"></a>
 <h1 id="the-reason-for-failure-of-qaa">The reason for failure of QAA</h1>
 <p>After one year I found that I haven't finish the note. I will try to finish this.</p>
@@ -338,6 +339,49 @@
 <p>Address: http://www.ioccg.org/groups/Software_OCA/QAA_v6_2014209.pdf</p>
 <p>This is the whole process of QAA v6. Compared with the former one, the main update is in step2.</p>
 <p>This is because in the first version, in the oligotrophic water, the <span class="math inline">\(a_{ph}\)</span> is very low. Meanwhile the <span class="math inline">\(a_{CDOM}\)</span> has a very influence in the <span class="math inline">\(a_{total}\)</span> at 55xnm. So the <span class="math inline">\(a_{total}\)</span> is mainly determined by <span class="math inline">\(a_w\)</span>. As a result, lee used an emprical relationship from <span class="math inline">\(r_{rs}\)</span> to estimated <span class="math inline">\(a_{total}(55x)\)</span>. But in the coastal area, the <span class="math inline">\(a_{total}\)</span> is dominated other constituents besides water, it make a lot of difference. It is also the reason that the update mainly happened in step2.</p>
+<h1 id="giop">GIOP</h1>
+<p>This is another commly used Semi-analytical algorithm for IOP inversion.</p>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>SAA always differentiations only in the assumputions employed to define the eigenvectors and in the mathematical methods applied to calculate the eigenvalues</li>
+<li>GIOP allows construction of different IOP models at runtime by selection from a wide assort-ment of published absorption and backscattering eigenvectors.</li>
+</ul>
+<h2 id="method">Method</h2>
+<h3 id="model-development">Model Development</h3>
+<p>Lee et al 2002, Rrs to rrs <span class="math display">\[
+r_{rs}(\lambda,0^-)=\frac{R_{rs}(\lambda)}{0.52+1.7R_{rs}(\lambda)}
+\]</span> rrs to IOP <span class="math display">\[
+r_{rs}(\lambda,0^-)=G_1(\lambda)u(\lambda)+G_2(\lambda)u(\lambda)^2
+\]</span></p>
+<p><span class="math display">\[
+u(\lambda)=\frac{b_b{(\lambda)}}{a(\lambda)+b_b(\lambda)}
+\]</span></p>
+<p>Common methods for estimating G?λ? include Gordon et al. [21], where G1 and G2 are spectrally fixed to 0.0949 and 0.0794 (see [7,23] for alternative coefficients), and the tabulated results ofMorel et al. [22], where G1 is estimated using solar and sensor geometries and an estimate of algal bio- mass and G2 is set to 0. GIOP supports all of these options.</p>
+<p>IOP decomposition</p>
+<p>each component can be expressed as the product of its concentration-specific absorption spectrum (eigenvector; a?) and its concentration or amplitude (eigenvalue; A): <span class="math display">\[
+a(\lambda)=a_w(\lambda)+\sum_{i=1}^{N}A_{ph}a_{ph}^{*}(\lambda)+\sum_{i=1}^{N}A_{d}a_{d}^{*}(\lambda)+\sum_{i=1}^{N}A_{g}a_{g}^{*}(\lambda)
+\]</span> Both <span class="math inline">\(a_{d}^*(\lambda)\)</span> and <span class="math inline">\(a_g^*(λ)\)</span> are commonly expressed as <span class="math display">\[
+a_{d,g}^*(\lambda)=exp(-S_{d,g}\lambda)
+\]</span> where Sd and Sg typically vary between 0.01 and 0.02 nm−1 in natural waters [24].</p>
+<p>As the spectral shapes of NAP and CDOM absorption differ only in their exponential slopes, the two components are typically combined for satellite applications and Eq. (4) becomes</p>
+<p><span class="math display">\[
+a(\lambda)=a_w(\lambda)+\sum_{i=1}^{N}A_{ph}a_{ph}^{*}(\lambda)+\sum_{i=1}^{N}A_{dg}a_{dg}^{*}(\lambda)
+\]</span> For total backscattering <span class="math display">\[
+b_b(\lambda)=b_{bw}({\lambda})+\sum_{i=1}^NB_{bp}b_{bp}(\lambda)
+\]</span> Bbp provides the eigenvalue and a power function often represents the eigenvector: <span class="math display">\[
+b_{bp}^*(\lambda)=\lambda^{S_{bp}}
+\]</span> where Sbp typically varies between −2 and 0 from small to large particles.</p>
+<p>While commonly employed in the remote-sensing paradigm, we acknowledge the validity of the power function for b? bpλ remains debatable [25–27].</p>
+<p>Using Rrsλ and eigenvectors as input, eigenvalues for absorption (A) and backscattering (B) can be estimated via linear or nonlinear least squares inversion of Eqs. (1)–(3).</p>
+<p>Note that this model describes each component of absorption and back- scattering as a linear sum of subcomponents, presumably with unique spectral dependencies [sym- bolized by the summation over N in Eqs. (4), (6), and (7)]. In this way, the absorption characteristics for different phytoplankton populations and the scatter- ing characteristics of multiple size distributions of suspended particles can be represented, or Eq. (6) can be re-expanded to Eq. (4).</p>
+<h3 id="model-configuration">Model configuration</h3>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021124160320671.png" alt="image-00021124160320671"><figcaption aria-hidden="true">image-00021124160320671</figcaption>
+</figure>
+<p>Here explained the default configuration of GIOP.</p>
+<ol type="1">
+<li></li>
+</ol>
 
     </div>
 
@@ -353,7 +397,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://lifeodyssey.github.io/posts/f5ee8139.html" title="QAA note">https://lifeodyssey.github.io/posts/f5ee8139.html</a>
+    <a href="https://lifeodyssey.github.io/posts/f5ee8139.html" title="IOP inversion">https://lifeodyssey.github.io/posts/f5ee8139.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9lbg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> unless stating additionally.

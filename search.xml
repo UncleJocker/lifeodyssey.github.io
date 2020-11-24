@@ -3410,10 +3410,7 @@ a_{ph}(\lambda)=A(\lambda)*CHL^{1-B(\lambda)}
 a_{ph}(443)=A(443)*CHL^{1-B(443)}
 \]</span> Just divide these two equations.</p>
 <p>And maybe I can found some other parameteration in coastal area for a ph spectra shape.</p>
-<h1 id="phytoplankton-fluorescence-theory-current-literature-and-in-situ-measurement">Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement</h1>
-<p>Book 'Real-time Coastal Observing Systems <em>for</em> Marine Ecosystem Dynamics <em>and</em> Harmful Algal Blooms', Chapter 7, 'Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement' edited by Marcel Baiin.</p>
-<h1 id="fluorescence-component-in-the-reflectance-spectra-from-coastal-waters.-dependence-on-water-composition">Fluorescence component in the reflectance spectra from coastal waters. Dependence on water composition</h1>
-<h1 id="fluorescence-component-in-the-reflectance-spectra-from-coastal-waters.-ii.-performance-of-retrieval-algorithms">Fluorescence component in the reflectance spectra from coastal waters. II. Performance of retrieval algorithms</h1>
+<h1 id="section"></h1>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -4599,5 +4596,20 @@ a_{ph}(443)=A(443)*CHL^{1-B(443)}
         <tag>Research</tag>
         <tag>python</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Annotated Bibliography 2020 11.24-11.29</title>
+    <url>/posts/d1210079.html</url>
+    <content><![CDATA[<p>最近没有一点科研的状态</p>
+<p>鸽了好多博客没写，文章没看</p>
+<p>我好累 我好想放弃</p>
+<a id="more"></a>
+<h1 id="inversion-of-in-situ-light-absorption-and-attenuation-measurements-to-estimate-constituent-concentrations-in-optically-complex-shelf-seas">Inversion of In Situ Light Absorption and Attenuation Measurements to Estimate Constituent Concentrations in Optically Complex Shelf Seas</h1>
+<h1 id="phytoplankton-fluorescence-theory-current-literature-and-in-situ-measurement">Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement</h1>
+<p>Book 'Real-time Coastal Observing Systems <em>for</em> Marine Ecosystem Dynamics <em>and</em> Harmful Algal Blooms', Chapter 7, 'Phytoplankton fluorescence: theory, current literature and <em>in situ</em> measurement' edited by Marcel Baiin.</p>
+<h1 id="fluorescence-component-in-the-reflectance-spectra-from-coastal-waters.-dependence-on-water-composition">Fluorescence component in the reflectance spectra from coastal waters. Dependence on water composition</h1>
+<h1 id="fluorescence-component-in-the-reflectance-spectra-from-coastal-waters.-ii.-performance-of-retrieval-algorithms">Fluorescence component in the reflectance spectra from coastal waters. II. Performance of retrieval algorithms</h1>
+<h1 id="impact-of-sub-pixel-variations-on-ocean-color-remote-sensing-products">Impact of sub-pixel variations on ocean color remote sensing products</h1>
+]]></content>
   </entry>
 </search>

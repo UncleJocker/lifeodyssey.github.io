@@ -4688,4 +4688,33 @@ to the particle attenuation coefficient, <span class="katex"><span class="katex-
         <tag>Inherent Optical Properties</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Publishable plot using python&amp;R</title>
+    <url>/posts/cd046c9b.html</url>
+    <content><![CDATA[<p>这将会是一个长篇。</p>
+<p>长到我也不知道要多久才能把他写完</p>
+<p>天下人苦matplotlib已久</p>
+<p>立个flag，这个月（2020年12月）结束它。</p>
+<p>主要包括以下几个图的画法</p>
+<ol type="1">
+<li><p>站位图</p></li>
+<li><p>海洋环境要素分布图</p></li>
+<li><p>散点图</p></li>
+<li><p>密度散点图</p></li>
+<li><p>Bar</p></li>
+<li><p>带CI的Lineplot</p>
+<p>其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。</p>
+<p>不过第二个我也在考虑把结果输出到nc文件后，用R来画。</p>
+<p>还有这个我就懒得用中文了，因为主要是给自己用的代码备忘录。</p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>python</tag>
+        <tag>R</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-12-01T06:42:10.289Z</updated>
+  <updated>2020-12-01T10:53:00.471Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Publishable plot using python&amp;R</title>
+    <link href="https://lifeodyssey.github.io/posts/cd046c9b.html"/>
+    <id>https://lifeodyssey.github.io/posts/cd046c9b.html</id>
+    <published>2020-12-01T10:45:26.000Z</published>
+    <updated>2020-12-01T10:53:00.471Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这将会是一个长篇。&lt;/p&gt;
+&lt;p&gt;长到我也不知道要多久才能把他写完&lt;/p&gt;
+&lt;p&gt;天下人苦matplotlib已久&lt;/p&gt;
+&lt;p&gt;立个flag，这个月（2020年12月）结束它。&lt;/p&gt;
+&lt;p&gt;主要包括以下几个图的画法&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;&lt;p&gt;站位图&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;海洋环境要素分布图&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;散点图&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;密度散点图&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bar&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;带CI的Lineplot&lt;/p&gt;
+&lt;p&gt;其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。&lt;/p&gt;
+&lt;p&gt;不过第二个我也在考虑把结果输出到nc文件后，用R来画。&lt;/p&gt;
+&lt;p&gt;还有这个我就懒得用中文了，因为主要是给自己用的代码备忘录。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+    <category term="R" scheme="https://lifeodyssey.github.io/tags/R/"/>
+    
+  </entry>
   
   <entry>
     <title>Annotated Bibliography 2020 11.30-12.6</title>
@@ -463,26 +502,6 @@
     <category term="paper reading" scheme="https://lifeodyssey.github.io/tags/paper-reading/"/>
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>How to follow the research progress in your field?</title>
-    <link href="https://lifeodyssey.github.io/posts/eaba55e.html"/>
-    <id>https://lifeodyssey.github.io/posts/eaba55e.html</id>
-    <published>2020-07-08T13:46:44.000Z</published>
-    <updated>2020-07-08T14:37:25.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;This is the note of my own experiences.&lt;/p&gt;
-&lt;p&gt;As summarized in my former blog, the new result always from pre-print website, social media, conference. Here I will summary some source in oceanography, especially ocean color, and also give some methods for following new articles.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

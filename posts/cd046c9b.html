@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="这将会是一个长篇。 长到我也不知道要多久才能把他写完 天下人苦matplotlib已久 立个flag，这个月（2020年12月）结束它。 主要包括以下几个图的画法  站位图 海洋环境要素分布图 散点图 密度散点图 Bar 带CI的Lineplot 其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。 不过第二个我也在考虑把结果输出到nc文件后，用R来画。 还有这个我就懒">
+  <meta name="description" content="这将会是一个长篇。 长到我也不知道要多久才能把他写完 天下人苦matplotlib已久 立个flag，这个月（2020年12月）结束它。 主要包括以下几个图的画法   站位图   海洋环境要素分布图   散点图   密度散点图   Bar   带CI的Lineplot 其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。 不过第二个我也在考虑把结果输出到nc文件后，用R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Publishable plot using python&amp;R">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/cd046c9b.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="这将会是一个长篇。 长到我也不知道要多久才能把他写完 天下人苦matplotlib已久 立个flag，这个月（2020年12月）结束它。 主要包括以下几个图的画法  站位图 海洋环境要素分布图 散点图 密度散点图 Bar 带CI的Lineplot 其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。 不过第二个我也在考虑把结果输出到nc文件后，用R来画。 还有这个我就懒">
+<meta property="og:description" content="这将会是一个长篇。 长到我也不知道要多久才能把他写完 天下人苦matplotlib已久 立个flag，这个月（2020年12月）结束它。 主要包括以下几个图的画法   站位图   海洋环境要素分布图   散点图   密度散点图   Bar   带CI的Lineplot 其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。 不过第二个我也在考虑把结果输出到nc文件后，用R">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-01T10:45:26.000Z">
-<meta property="article:modified_time" content="2020-12-01T10:53:00.471Z">
+<meta property="article:modified_time" content="2020-12-01T10:53:08.868Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Research">
 <meta property="article:tag" content="python">
@@ -197,7 +197,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">50</span>
+          <span class="site-state-item-count">51</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -210,7 +210,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-count">44</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -297,7 +297,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-12-01 19:45:26 / Modified: 19:53:00" itemprop="dateCreated datePublished" datetime="2020-12-01T19:45:26+09:00">2020-12-01</time>
+              <time title="Created: 2020-12-01 19:45:26 / Modified: 19:53:08" itemprop="dateCreated datePublished" datetime="2020-12-01T19:45:26+09:00">2020-12-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,16 +323,28 @@
 <p>天下人苦matplotlib已久</p>
 <p>立个flag，这个月（2020年12月）结束它。</p>
 <p>主要包括以下几个图的画法</p>
-<ol type="1">
-<li><p>站位图</p></li>
-<li><p>海洋环境要素分布图</p></li>
-<li><p>散点图</p></li>
-<li><p>密度散点图</p></li>
-<li><p>Bar</p></li>
-<li><p>带CI的Lineplot</p>
+<ol>
+<li>
+<p>站位图</p>
+</li>
+<li>
+<p>海洋环境要素分布图</p>
+</li>
+<li>
+<p>散点图</p>
+</li>
+<li>
+<p>密度散点图</p>
+</li>
+<li>
+<p>Bar</p>
+</li>
+<li>
+<p>带CI的Lineplot</p>
 <p>其中第一个会用R，后面的因为我需要在处理数据的时候直接调用，所以是python。</p>
 <p>不过第二个我也在考虑把结果输出到nc文件后，用R来画。</p>
-<p>还有这个我就懒得用中文了，因为主要是给自己用的代码备忘录。</p></li>
+<p>还有这个我就懒得用中文了，因为主要是给自己用的代码备忘录。</p>
+</li>
 </ol>
 
     </div>
@@ -374,7 +386,10 @@
     <a href="/posts/adc0cb59.html" rel="prev" title="Annotated Bibliography 2020 11.30-12.6">
       <i class="fa fa-chevron-left"></i> Annotated Bibliography 2020 11.30-12.6
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/posts/e45539ea.html" rel="next" title="two r2">
+      two r2 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     

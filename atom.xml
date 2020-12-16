@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-12-16T12:38:30.167Z</updated>
+  <updated>2020-12-16T12:38:36.773Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lifeodyssey.github.io/posts/bf6c0df1.html"/>
     <id>https://lifeodyssey.github.io/posts/bf6c0df1.html</id>
     <published>2020-12-16T11:51:26.616Z</published>
-    <updated>2020-12-16T12:38:30.167Z</updated>
+    <updated>2020-12-16T12:38:36.773Z</updated>
     
     
     <summary type="html">&lt;p&gt;今天发现的一些东西&lt;/p&gt;</summary>
@@ -55,15 +55,16 @@
   </entry>
   
   <entry>
-    <title>two r2</title>
+    <title>Correlation metrics</title>
     <link href="https://lifeodyssey.github.io/posts/e45539ea.html"/>
     <id>https://lifeodyssey.github.io/posts/e45539ea.html</id>
     <published>2020-12-03T05:51:44.000Z</published>
-    <updated>2020-12-09T10:25:54.151Z</updated>
+    <updated>2020-12-16T13:16:43.954Z</updated>
     
     
     <summary type="html">&lt;p&gt;本科毕设就没搞懂的两个r现在终于弄明白了&lt;/p&gt;
-&lt;p&gt;大部分内容来自于维基百科&lt;/p&gt;</summary>
+&lt;p&gt;大部分内容来自于维基百科&lt;/p&gt;
+&lt;p&gt;主要讲Brewin 2015里面用到的metrics&lt;/p&gt;</summary>
     
     
     

@@ -1728,14 +1728,26 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
 <p>Ocean Optics Web book http://www.oceanopticsbook.info/</p>
 <p>IOCCG report https://ioccg.org/what-we-do/ioccg-publications/ioccg-reports/</p>
 <p>NASA's Ocean Biology Processing Group (OBPG) Technical Documents:https://oceancolor.gsfc.nasa.gov/docs/technical/</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9pb2NjZy5vcmcvd3AtY29udGVudC91cGxvYWRzLzIwMjAvMDkvZ29yZG9uLWJvb2tfbm92XzIwMTlfd2l0aF9kb2kucGRm">Physical Principles of Ocean Color Remote Sensing<i class="fa fa-external-link-alt"></i></span></p>
 <h2 id="video-and-training-course">Video and Training course</h2>
 <p>IOCCG training course https://ioccg.org/what-we-do/training-and-education/</p>
 <p>Cornell Summer Satellite Remote Sensing Training Program http://oceanography.eas.cornell.edu/satellite/</p>
 <p>Lecture Material from IOCCG Training Courses https://ioccg.org/what-we-do/training-and-education/lectures/</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC9VQ0pZNWlTcmRGaGUybFpmTHFvLVhDYVEvdmlkZW9z">2019 Ocean Optics class on “Calibration &amp; Validation for Ocean Color Remote Sensing<i class="fa fa-external-link-alt"></i></span>” (University of Maine’s Darling Marine Center). See <span class="exturl" data-url="aHR0cDovL21pc2NsYWIudW1lb2NlLm1haW5lLmVkdS9PY2Vhbk9wdGljc0NsYXNzMjAxOS9zY2hlZHVsZS8=">schedule<i class="fa fa-external-link-alt"></i></span> for links to PowerPoint slides.</p>
 <h1 id="programming-resource">Programming Resource</h1>
 <h2 id="python-package">Python package</h2>
 <p>I strongly recommend you install them by Anaconda</p>
 <p>numpy,pandas,scipy,scikit-learn,matplotlib,Basemap,GDAL,geopandas,geos,h5py, hdf4,hdf5,netcdf4,pyresample,rasterio,shapely,earthpy,</p>
+<h2 id="github-account">Github account</h2>
+<p>Dimitris Poursanidis: https://github.com/dpoursanidis</p>
+<p>Bingzhang Chen: https://github.com/BingzhangChen</p>
+<p>Erdem Karakoylu： https://github.com/madHatter106</p>
+<p>Quinten Vanhellemont：https://github.com/acolite (ACOLITE: Atmospheric correction for aquatic applications of Landsat and Sentinel-2)</p>
+<p>Brand Smith: https://github.com/BrandonSmithJ</p>
+<p>Wei Jianwei: https://github.com/jianweiocean ,https://github.com/Ocean-Color-Remote-Sensing-Algorithm</p>
+<p>UMaine MISC Lab: https://github.com/OceanOptics</p>
+<p>Shun Bi: https://github.com/bishun945</p>
+<p>Kunming Wang: https://github.com/qunmingwang</p>
 <h2 id="material-for-programming">Material for programming</h2>
 <p>PyHOGs: Python Hour for Oceanographers and Geoscientists http://pyhogs.github.io/</p>
 <p>RGB 3S blog:https://www.ixxin.cn/</p>

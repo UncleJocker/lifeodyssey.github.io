@@ -22,15 +22,21 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="乔克叔叔的床边故事">
-<meta property="og:url" content="https://lifeodyssey.github.io/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/index.html">
+  <meta name="description" content="今天发现的一些东西">
+<meta property="og:type" content="article">
+<meta property="og:title" content="matplotlib-subplot">
+<meta property="og:url" content="https://lifeodyssey.github.io/posts/bf6c0df1.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
+<meta property="og:description" content="今天发现的一些东西">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/1252882-20191225232904746-1316411337.png">
+<meta property="article:published_time" content="2020-12-16T11:51:26.616Z">
+<meta property="article:modified_time" content="2020-12-16T12:38:30.167Z">
 <meta property="article:author" content="周大侠">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/1252882-20191225232904746-1316411337.png">
 
-<link rel="canonical" href="https://lifeodyssey.github.io/tags/%E6%9E%97%E8%BD%A9%E7%94%B0/">
+<link rel="canonical" href="https://lifeodyssey.github.io/posts/bf6c0df1.html">
 
 
 <script class="page-configurations">
@@ -38,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Tag: 林轩田 | 乔克叔叔的床边故事</title>
+  <title>matplotlib-subplot | 乔克叔叔的床边故事</title>
   
 
 
@@ -165,7 +171,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -177,6 +183,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%90%E5%9B%BE%E9%97%B4%E8%B7%9D%E8%B0%83%E6%95%B4"><span class="nav-number">1.</span> <span class="nav-text"> 子图间距调整</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E5%9D%90%E6%A0%87%E8%BD%B4"><span class="nav-number">2.</span> <span class="nav-text"> 共享坐标轴</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -257,151 +264,111 @@
       <div class="main-inner">
         
 
-        <div class="content tag">
+        <div class="content post posts-expand">
           
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">林轩田
-          <small>Tag</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lifeodyssey.github.io/posts/bf6c0df1.html">
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="周大侠">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="乔克叔叔的床边故事">
+    </span>
+
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          matplotlib-subplot
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-12-16 20:51:26 / Modified: 21:38:30" itemprop="dateCreated datePublished" datetime="2020-12-16T20:51:26+09:00">2020-12-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>今天发现的一些东西</p>
+<a id="more"></a>
+<h1 id="子图间距调整"><a class="markdownIt-Anchor" href="#子图间距调整"></a> 子图间距调整</h1>
+<p>来自 <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzMDM5ODU5L2FydGljbGUvZGV0YWlscy83OTQyNDg1OA==">https://blog.csdn.net/qq_33039859/article/details/79424858<i class="fa fa-external-link-alt"></i></span></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">plt.subplots_adjust(left=<span class="literal">None</span>, bottom=<span class="literal">None</span>, right=<span class="literal">None</span>, top=<span class="literal">None</span>,</span><br><span class="line">                wspace=<span class="literal">None</span>, hspace=<span class="literal">None</span>)<span class="number">12</span></span><br><span class="line">left  = <span class="number">0.125</span>  <span class="comment"># the left side of the subplots of the figure</span></span><br><span class="line">right = <span class="number">0.9</span>    <span class="comment"># the right side of the subplots of the figure</span></span><br><span class="line">bottom = <span class="number">0.1</span>   <span class="comment"># the bottom of the subplots of the figure</span></span><br><span class="line">top = <span class="number">0.9</span>      <span class="comment"># the top of the subplots of the figure</span></span><br><span class="line">wspace = <span class="number">0.2</span>   <span class="comment"># the amount of width reserved for blank space between subplots,</span></span><br><span class="line">               <span class="comment"># expressed as a fraction of the average axis width</span></span><br><span class="line">hspace = <span class="number">0.2</span>   <span class="comment"># the amount of height reserved for white space between subplots,</span></span><br><span class="line">               <span class="comment"># expressed as a fraction of the average axis height</span></span><br></pre></td></tr></table></figure>
+<h1 id="共享坐标轴"><a class="markdownIt-Anchor" href="#共享坐标轴"></a> 共享坐标轴</h1>
+<p>当你通过<code>pyplot.subplot()</code>、<code>pyplot.axes()</code>函数或者<code>Figure.add_subplot()</code>、<code>Figure.add_axes()</code>方法创建一个<code>Axes</code>时，你可以通过<code>sharex</code>关键字参数传入另一个<code>Axes</code>表示共享X轴；或者通过<code>sharey</code>关键字参数传入另一个<code>Axes</code>表示共享Y轴。<strong>共享轴线时，当你缩放某个<code>Axes</code>时，另一个<code>Axes</code>也跟着缩放。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fig =plt.figure()</span><br><span class="line">ax1 =fig.add_subplot(<span class="number">211</span>)</span><br><span class="line">ax1.plot([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line">ax2 =fig.add_subplot(<span class="number">212</span>,sharex=ax1)</span><br><span class="line">ax2.plot([<span class="number">7</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/1252882-20191225232904746-1316411337.png" alt="1252882-20191225232904746-1316411337"></p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-05-12T15:44:17+09:00"
-              content="2019-05-12">
-          05-12
-        </time>
-      </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>周大侠
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="https://lifeodyssey.github.io/posts/bf6c0df1.html" title="matplotlib-subplot">https://lifeodyssey.github.io/posts/bf6c0df1.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9lbg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/da4d42a2.html" itemprop="url">
-            <span itemprop="name">Cousera机器学习基石第六周笔记 Machine Learning Foundation Week 6 Note in Cousera</span>
-          </a>
-      </div>
 
-    </header>
-  </article>
+      <footer class="post-footer">
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-05-11T19:59:07+09:00"
-              content="2019-05-11">
-          05-11
-        </time>
-      </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/2c9001a2.html" itemprop="url">
-            <span itemprop="name">Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-05-11T19:58:33+09:00"
-              content="2019-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/4df973c2.html" itemprop="url">
-            <span itemprop="name">Cousera机器学习基石第三周笔记 Machine Learning Foundation Week 3 Note in Cousera</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-05-11T19:58:29+09:00"
-              content="2019-05-11">
-          05-11
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/bc80cb40.html" itemprop="url">
-            <span itemprop="name">Cousera机器学习基石第一周笔记 Machine Learning Foundation Week 1 Note in Cousera</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-04-06T13:23:00+09:00"
-              content="2019-04-06">
-          04-06
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/fbd0b1b0.html" itemprop="url">
-            <span itemprop="name">Cousera机器学习基石第五周笔记-Machine-Learning-Foundation-Week-5-Note-in-Cousera</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-04-02T15:08:38+09:00"
-              content="2019-04-02">
-          04-02
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/posts/c7f63b06.html" itemprop="url">
-            <span itemprop="name">Cousera机器学习基石第四周笔记-Machine-Learning-Foundation-Week-4-Note-in-Cousera</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/94a46e7b.html" rel="prev" title="2020">
+      <i class="fa fa-chevron-left"></i> 2020
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-  </div>
+      </footer>
+    
+  </article>
   
   
-  
-
   
 
 
@@ -520,6 +487,59 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      const script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

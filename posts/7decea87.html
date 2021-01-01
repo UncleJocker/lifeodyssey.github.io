@@ -22,18 +22,18 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
   </script>
 
-  <meta name="description" content="主要是几个常用的 minimize Least_square nnls Lsq_linear Curve_fit 另外附带一个numpy.linalg.lstsq">
+  <meta name="description" content="主要是几个常用的 minimize Least_square nnls Lsq_linear Curve_fit 另外附带一个numpy.linalg.lstsq 另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scipy optimize">
 <meta property="og:url" content="https://lifeodyssey.github.io/posts/7decea87.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="主要是几个常用的 minimize Least_square nnls Lsq_linear Curve_fit 另外附带一个numpy.linalg.lstsq">
+<meta property="og:description" content="主要是几个常用的 minimize Least_square nnls Lsq_linear Curve_fit 另外附带一个numpy.linalg.lstsq 另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/scipy-optimize-curve_fit-1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/fiwXS.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/numpy-linalg-lstsq-1.png">
 <meta property="article:published_time" content="2021-01-01T03:43:11.000Z">
-<meta property="article:modified_time" content="2021-01-01T05:29:57.866Z">
+<meta property="article:modified_time" content="2021-01-01T11:38:44.966Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Research">
 <meta property="article:tag" content="python">
@@ -301,7 +301,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-01-01 12:43:11 / Modified: 14:29:57" itemprop="dateCreated datePublished" datetime="2021-01-01T12:43:11+09:00">2021-01-01</time>
+              <time title="Created: 2021-01-01 12:43:11 / Modified: 20:38:44" itemprop="dateCreated datePublished" datetime="2021-01-01T12:43:11+09:00">2021-01-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -329,6 +329,7 @@
 <p>Lsq_linear</p>
 <p>Curve_fit</p>
 <p>另外附带一个numpy.linalg.lstsq</p>
+<p>另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好</p>
 <a id="more"></a>
 <h1 id="minimize"><a class="markdownIt-Anchor" href="#minimize"></a> minimize</h1>
 <p>这个主要是用来代替matlab中的fminunc</p>

@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-01-01T05:29:57.866Z</updated>
+  <updated>2021-01-01T11:38:44.966Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lifeodyssey.github.io/posts/7decea87.html"/>
     <id>https://lifeodyssey.github.io/posts/7decea87.html</id>
     <published>2021-01-01T03:43:11.000Z</published>
-    <updated>2021-01-01T05:29:57.866Z</updated>
+    <updated>2021-01-01T11:38:44.966Z</updated>
     
     
     <summary type="html">&lt;p&gt;主要是几个常用的&lt;/p&gt;
@@ -30,7 +30,8 @@
 &lt;p&gt;nnls&lt;/p&gt;
 &lt;p&gt;Lsq_linear&lt;/p&gt;
 &lt;p&gt;Curve_fit&lt;/p&gt;
-&lt;p&gt;另外附带一个numpy.linalg.lstsq&lt;/p&gt;</summary>
+&lt;p&gt;另外附带一个numpy.linalg.lstsq&lt;/p&gt;
+&lt;p&gt;另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好&lt;/p&gt;</summary>
     
     
     

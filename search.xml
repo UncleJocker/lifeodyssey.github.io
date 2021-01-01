@@ -5141,4 +5141,137 @@ s76,-59,76,-59s76,-60,76,-60z M1001 80H40000v40H1012z"/></svg></span></span></sp
         <category>学习笔记</category>
       </categories>
   </entry>
+  <entry>
+    <title>Scipy optimize</title>
+    <url>/posts/7decea87.html</url>
+    <content><![CDATA[<p>主要是几个常用的</p>
+<p>minimize</p>
+<p>Least_square</p>
+<p>nnls</p>
+<p>Lsq_linear</p>
+<p>Curve_fit</p>
+<p>另外附带一个numpy.linalg.lstsq</p>
+<a id="more"></a>
+<h1 id="minimize"><a class="markdownIt-Anchor" href="#minimize"></a> minimize</h1>
+<p>这个主要是用来代替matlab中的fminunc</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scipy.optimize.minimize(fun, x0, args=(), method=<span class="literal">None</span>, jac=<span class="literal">None</span>, hess=<span class="literal">None</span>, hessp=<span class="literal">None</span>, bounds=<span class="literal">None</span>, constraints=(), tol=<span class="literal">None</span>, callback=<span class="literal">None</span>, options=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<p>fun就是要去最小化的cost func，对cost func的要求是</p>
+<blockquote>
+<p>fun:callable</p>
+<p>The objective function to be minimized.</p>
+<p>fun(x, *args) -&gt; float</p>
+<p>where x is an 1-D array with shape (n,) and args is a tuple of the fixed parameters needed to completely specify the function.</p>
+</blockquote>
+<p>x0是初始化的参数，也就是常说的initial guess. Array of real elements of size (n,), where ‘n’ is the number of independent variables.</p>
+<p>method：该参数代表采用的方式，默认是<code>BFGS</code>, <code>L-BFGS-B</code>, <code>SLSQP</code>中的一种，可选<code>TNC</code>,</p>
+<p>jac是用来计算梯度的方法，这个大多数时候可以忽略，也就是雅各比矩阵</p>
+<p>options：用来控制最大的迭代次数，以字典的形式来进行设置，例如：options={‘maxiter’:400}</p>
+<blockquote>
+<p><strong>bounds</strong>sequence or <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.Bounds.html#scipy.optimize.Bounds"><code>Bounds</code></a>, optional</p>
+<p>Bounds on variables for L-BFGS-B, TNC, SLSQP, Powell, and trust-constr methods. There are two ways to specify the bounds:</p>
+<blockquote>
+<ol>
+<li>Instance of <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.Bounds.html#scipy.optimize.Bounds"><code>Bounds</code></a> class.</li>
+<li>Sequence of <code>(min, max)</code> pairs for each element in <em>x</em>. None is used to specify no bound.</li>
+</ol>
+</blockquote>
+<p><strong>constraints</strong>{Constraint, dict} or List of {Constraint, dict}, optional</p>
+<p>Constraints definition (only for COBYLA, SLSQP and trust-constr).</p>
+<p>Constraints for ‘trust-constr’ are defined as a single object or a list of objects specifying constraints to the optimization problem. Available constraints are:</p>
+<blockquote>
+<ul>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.LinearConstraint.html#scipy.optimize.LinearConstraint"><code>LinearConstraint</code></a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.NonlinearConstraint.html#scipy.optimize.NonlinearConstraint"><code>NonlinearConstraint</code></a></li>
+</ul>
+</blockquote>
+</blockquote>
+<p>bounds主要是用来控制上下界，constraions则是通过变量间的关系来缩小范围</p>
+<blockquote>
+<p><strong>tol</strong>: float, optional</p>
+<p>Tolerance for termination. For detailed control, use solver-specific options.</p>
+</blockquote>
+<p>Tol 是最小迭代值，就是迭代停止的条件</p>
+<h1 id="least_square"><a class="markdownIt-Anchor" href="#least_square"></a> Least_square</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scipy.optimize.least_squares(fun, x0, jac=<span class="string">&#x27;2-point&#x27;</span>, bounds=- inf, inf, method=<span class="string">&#x27;trf&#x27;</span>, ftol=<span class="number">1e-08</span>, xtol=<span class="number">1e-08</span>, gtol=<span class="number">1e-08</span>, x_scale=<span class="number">1.0</span>, loss=<span class="string">&#x27;linear&#x27;</span>, f_scale=<span class="number">1.0</span>, diff_step=<span class="literal">None</span>, tr_solver=<span class="literal">None</span>, tr_options=&#123;&#125;, jac_sparsity=<span class="literal">None</span>, max_nfev=<span class="literal">None</span>, verbose=<span class="number">0</span>, args=(), kwargs=&#123;&#125;)</span><br></pre></td></tr></table></figure>
+<p>这个与上一个几乎一样</p>
+<h1 id="nnls"><a class="markdownIt-Anchor" href="#nnls"></a> nnls</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scipy.optimize.nnls(A, b, maxiter=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+<p>Solve <code>argmin_x || Ax - b ||_2</code> for <code>x&gt;=0</code>.</p>
+<p>Parameters</p>
+<ul>
+<li>
+<p>**A **ndarray</p>
+<p>Matrix <code>A</code> as shown above.</p>
+</li>
+<li>
+<p>**b ** ndarray</p>
+<p>Right-hand side vector.</p>
+</li>
+<li>
+<p><strong>maxiter: int, optional</strong></p>
+<p>Maximum number of iterations, optional. Default is <code>3 * A.shape[1]</code>.</p>
+</li>
+</ul>
+<p>Returns</p>
+<ul>
+<li>
+<p>**x ** ndarray</p>
+<p>Solution vector.</p>
+</li>
+<li>
+<p>**rnorm: float</p>
+<p>The residual, <code>|| Ax-b ||_2</code>.</p>
+</li>
+</ul>
+<h1 id="lsq_linear"><a class="markdownIt-Anchor" href="#lsq_linear"></a> lsq_linear</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scipy.optimize.lsq_linear(A, b, bounds=- inf, inf, method=<span class="string">&#x27;trf&#x27;</span>, tol=<span class="number">1e-10</span>, lsq_solver=<span class="literal">None</span>, lsmr_tol=<span class="literal">None</span>, max_iter=<span class="literal">None</span>, verbose=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>Solve a linear least-squares problem with bounds on the variables.</p>
+<p>Given a m-by-n design matrix A and a target vector b with m elements, <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.lsq_linear.html#scipy.optimize.lsq_linear"><code>lsq_linear</code></a> solves the following optimization problem:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">minimize <span class="number">0.5</span> * ||A x - b||**<span class="number">2</span></span><br><span class="line">subject to lb &lt;= x &lt;= ub</span><br></pre></td></tr></table></figure>
+<h1 id="curve_fit"><a class="markdownIt-Anchor" href="#curve_fit"></a> curve_fit</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">scipy.optimize.curve_fit(f, xdata, ydata, p0=<span class="literal">None</span>, sigma=<span class="literal">None</span>, absolute_sigma=<span class="literal">False</span>, check_finite=<span class="literal">True</span>, bounds=- inf, inf, method=<span class="literal">None</span>, jac=<span class="literal">None</span>, **kwargs)</span><br></pre></td></tr></table></figure>
+<p>这个其实是最常用的一个函数</p>
+<p>需要注意 这里的f并不是cost func,而是model func，例如</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f_1</span>(<span class="params">x, A, B</span>):</span></span><br><span class="line">    <span class="keyword">return</span> A * x + B</span><br></pre></td></tr></table></figure>
+<ul>
+<li>**xdata<br>
+array_like or object<br>
+**The independent variable where the data is measured. Should usually be an M-length sequence or an (k,M)-shaped array for functions with k predictors, but can actually be any object.[<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xNDQzNTMxMjYjcmVmXzE=">1]<i class="fa fa-external-link-alt"></i></span><br>
+简单说就是要拟合的自变量数组</li>
+<li>**ydata<br>
+array_like<br>
+**The dependent data, a length M array - nominally<code>f(xdata,...)</code>.[<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xNDQzNTMxMjYjcmVmXzE=">1]<i class="fa fa-external-link-alt"></i></span><br>
+简单说就是要拟合的因变量的值</li>
+<li><strong>p0<br>
+array_like , optional</strong>Initial guess for the parameters (length N). If None, then the initial values will all be 1 (if the number of parameters for the function can be determined using introspection, otherwise a ValueError is raised).[<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xNDQzNTMxMjYjcmVmXzE=">1]<i class="fa fa-external-link-alt"></i></span><br>
+就是给你的函数的参数确定一个初始值来减少计算机的计算量</li>
+<li>Method to use for optimization. See <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html#scipy.optimize.least_squares"><code>least_squares</code></a> for more details. Default is ‘lm’ for unconstrained problems and ‘trf’ if <em>bounds</em> are provided. The method ‘lm’ won’t work when the number of observations is less than the number of variables, use ‘trf’ or ‘dogbox’ in this case.</li>
+</ul>
+<p>这里放一下官方例子</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> curve_fit</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">x, a, b, c</span>):</span></span><br><span class="line">    <span class="keyword">return</span> a * np.exp(-b * x) + c</span><br></pre></td></tr></table></figure>
+<p>Define the data to be fit with some noise:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">xdata = np.linspace(<span class="number">0</span>, <span class="number">4</span>, <span class="number">50</span>)</span><br><span class="line">y = func(xdata, <span class="number">2.5</span>, <span class="number">1.3</span>, <span class="number">0.5</span>)</span><br><span class="line">np.random.seed(<span class="number">1729</span>)</span><br><span class="line">y_noise = <span class="number">0.2</span> * np.random.normal(size=xdata.size)</span><br><span class="line">ydata = y + y_noise</span><br><span class="line">plt.plot(xdata, ydata, <span class="string">&#x27;b-&#x27;</span>, label=<span class="string">&#x27;data&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>it for the parameters a, b, c of the function <em>func</em>:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">popt, pcov = curve_fit(func, xdata, ydata)</span><br><span class="line">popt</span><br><span class="line"></span><br><span class="line">plt.plot(xdata, func(xdata, *popt), <span class="string">&#x27;r-&#x27;</span>,</span><br><span class="line">         label=<span class="string">&#x27;fit: a=%5.3f, b=%5.3f, c=%5.3f&#x27;</span> % tuple(popt))</span><br></pre></td></tr></table></figure>
+<p>Constrain the optimization to the region of <code>0 &lt;= a &lt;= 3</code>, <code>0 &lt;= b &lt;= 1</code> and <code>0 &lt;= c &lt;= 0.5</code>:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">popt, pcov = curve_fit(func, xdata, ydata, bounds=(<span class="number">0</span>, [<span class="number">3.</span>, <span class="number">1.</span>, <span class="number">0.5</span>]))</span><br><span class="line">popt</span><br><span class="line"></span><br><span class="line">plt.plot(xdata, func(xdata, *popt), <span class="string">&#x27;g--&#x27;</span>,</span><br><span class="line">         label=<span class="string">&#x27;fit: a=%5.3f, b=%5.3f, c=%5.3f&#x27;</span> % tuple(popt))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">plt.xlabel(<span class="string">&#x27;x&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;y&#x27;</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/scipy-optimize-curve_fit-1.png" alt="scipy-optimize-curve_fit-1"></p>
+<p>但是这里有个问题，如果我想固定a的值，或者我想得到一串的函数每个函数都有固定的a的值，该怎么办呢？</p>
+<p>这种时候其实就需要把a不视为变量，再次建立一个函数 把a传进去，例如</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">custom_gaussian = <span class="keyword">lambda</span> x, mu: gaussian(x, mu, <span class="number">0.05</span>)</span><br></pre></td></tr></table></figure>
+<p>利用lambda建立了小的匿名函数</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> scipy.optimize </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gaussian</span>(<span class="params">x, mu, sigma</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> / sigma / np.sqrt(<span class="number">2</span> * np.pi) * np.exp(-(x - mu)**<span class="number">2</span> / <span class="number">2</span> / sigma**<span class="number">2</span>)</span><br><span class="line"><span class="comment"># This is the original, full parameter gaussion function</span></span><br><span class="line"><span class="comment"># Create sample data</span></span><br><span class="line">x = np.linspace(<span class="number">0</span>, <span class="number">2</span>, <span class="number">200</span>)</span><br><span class="line">y = gaussian(x, <span class="number">1</span>, <span class="number">0.1</span>) + np.random.rand(*x.shape) - <span class="number">0.5</span></span><br><span class="line">plt.plot(x, y, label=<span class="string">&quot;sample data&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fit with original fit function</span></span><br><span class="line">popt, _ = scipy.optimize.curve_fit(gaussian, x, y)</span><br><span class="line">plt.plot(x, gaussian(x, *popt), label=<span class="string">&quot;gaussian&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fit with custom fit function with fixed `sigma`</span></span><br><span class="line">custom_gaussian = <span class="keyword">lambda</span> x, mu: gaussian(x, mu, <span class="number">0.05</span>)</span><br><span class="line"><span class="comment"># this is the customed gaussion function that we want to fuit</span></span><br><span class="line">popt, _ = scipy.optimize.curve_fit(custom_gaussian, x, y)</span><br><span class="line">plt.plot(x, custom_gaussian(x, *popt), label=<span class="string">&quot;custom_gaussian&quot;</span>)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/fiwXS.png" alt="fiwXS"></p>
+<h1 id="numpylinalglstsq"><a class="markdownIt-Anchor" href="#numpylinalglstsq"></a> numpy.linalg.lstsq</h1>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
 </search>

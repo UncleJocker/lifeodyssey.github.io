@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2020-12-16T12:38:36.773Z</updated>
+  <updated>2021-01-01T04:44:16.755Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Scipy optimize</title>
+    <link href="https://lifeodyssey.github.io/posts/7decea87.html"/>
+    <id>https://lifeodyssey.github.io/posts/7decea87.html</id>
+    <published>2021-01-01T03:43:11.000Z</published>
+    <updated>2021-01-01T04:44:16.755Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;主要是几个常用的&lt;/p&gt;
+&lt;p&gt;minimize&lt;/p&gt;
+&lt;p&gt;Least_square&lt;/p&gt;
+&lt;p&gt;nnls&lt;/p&gt;
+&lt;p&gt;Lsq_linear&lt;/p&gt;
+&lt;p&gt;Curve_fit&lt;/p&gt;
+&lt;p&gt;另外附带一个numpy.linalg.lstsq&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>matplotlib-subplot</title>
@@ -472,30 +499,6 @@
     <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
     <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Some Usefull python function</title>
-    <link href="https://lifeodyssey.github.io/posts/d39dff82.html"/>
-    <id>https://lifeodyssey.github.io/posts/d39dff82.html</id>
-    <published>2020-08-07T12:43:14.000Z</published>
-    <updated>2020-12-17T03:31:19.360Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;python-lambda&quot;&gt;Python Lambda&lt;/h1&gt;
-&lt;p&gt;在读别人代码的时候看到的，发现自己对这个东西不是很熟悉，复习一下记个笔记。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;lambda 函数是一种小的匿名函数。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;lambda 函数可接受任意数量的参数，但只能有一个表达式。&lt;/strong&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
     
   </entry>
   

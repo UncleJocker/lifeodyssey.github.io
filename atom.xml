@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-01-02T05:37:14.542Z</updated>
+  <updated>2021-01-08T11:06:44.273Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Annotated Bibliography 2021 1.8-1.17</title>
+    <link href="https://lifeodyssey.github.io/posts/ff413d6a.html"/>
+    <id>https://lifeodyssey.github.io/posts/ff413d6a.html</id>
+    <published>2021-01-08T10:58:31.561Z</published>
+    <updated>2021-01-08T11:06:44.273Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Book Reading Ch. 3.9-3.10 of book &amp;lt;Emery, William, and Adriano Camps. &lt;em&gt;Introduction to satellite remote sensing: atmosphere, ocean, land and cryosphere applications&lt;/em&gt;. Elsevier, 2017.&amp;gt;&lt;/p&gt;
+&lt;p&gt;Effects of forward models on the semi-analytical retrieval of inherent optical properties from remote sensing reflectance&lt;/p&gt;
+&lt;p&gt;另外再找几个Water classification combining Chla/IOP的论文&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>uv properties 1</title>
@@ -487,25 +506,6 @@
     
     
     <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>assert</title>
-    <link href="https://lifeodyssey.github.io/posts/b1ef4fab.html"/>
-    <id>https://lifeodyssey.github.io/posts/b1ef4fab.html</id>
-    <published>2020-08-18T12:32:57.000Z</published>
-    <updated>2020-08-18T13:00:03.444Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近在读别人代码的时候发现了好多自己当时学python的时候没有学过的东西&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
     
     <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
     

@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-01-13T08:39:25.929Z</updated>
+  <updated>2021-01-13T08:57:19.105Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AWOC/KJWOC Online 2020 Presentation</title>
+    <link href="https://lifeodyssey.github.io/posts/7c5b3027.html"/>
+    <id>https://lifeodyssey.github.io/posts/7c5b3027.html</id>
+    <published>2021-01-13T08:42:15.000Z</published>
+    <updated>2021-01-13T08:57:19.105Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Laster year I attended The &lt;span class=&quot;math inline&quot;&gt;\(\rm 8^{th} Asian/17^{th}\)&lt;/span&gt; Korea-Japan Workshop on Ocean Color and gave a presentation.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Papers And Thesis" scheme="https://lifeodyssey.github.io/categories/Papers-And-Thesis/"/>
+    
+    
+    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
+    
+    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="International Conference" scheme="https://lifeodyssey.github.io/tags/International-Conference/"/>
+    
+    <category term="Presensentation" scheme="https://lifeodyssey.github.io/tags/Presensentation/"/>
+    
+  </entry>
   
   <entry>
     <title>《乡土中国》摘录与笔记</title>
@@ -480,27 +505,6 @@
     
     
     <summary type="html">&lt;p&gt;其实我一点儿都不想用pandas的dataframe，总感觉这个东西很难用，也许是我的水平还没达到。但是好多时候读写实验室的excel和输出成excel又必须用这个，之前用的seaborn也是基于pandas的，那就再把基础操作复习一下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python绘图基础</title>
-    <link href="https://lifeodyssey.github.io/posts/720e5580.html"/>
-    <id>https://lifeodyssey.github.io/posts/720e5580.html</id>
-    <published>2020-08-21T07:31:41.000Z</published>
-    <updated>2020-11-24T07:08:27.715Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;这两天在收拾画图的事情，发现我matplotlib这些东西学的真的差，这个笔记用来整理一下自己会用到的东西，除了cartopy之外的。&lt;/p&gt;</summary>
     
     
     

@@ -64,9 +64,9 @@
     <category term="Papers And Thesis" scheme="https://lifeodyssey.github.io/categories/Papers-And-Thesis/"/>
     
     
-    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
     
     <category term="International Conference" scheme="https://lifeodyssey.github.io/tags/International-Conference/"/>
     
@@ -135,13 +135,13 @@
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
     
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
     
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
-    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
   </entry>
   
@@ -150,7 +150,7 @@
     <link href="https://lifeodyssey.github.io/posts/7decea87.html"/>
     <id>https://lifeodyssey.github.io/posts/7decea87.html</id>
     <published>2021-01-01T03:43:11.000Z</published>
-    <updated>2021-01-02T10:09:04.055Z</updated>
+    <updated>2021-01-02T10:50:17.115Z</updated>
     
     
     <summary type="html">&lt;p&gt;主要是几个常用的&lt;/p&gt;
@@ -290,13 +290,13 @@
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
     
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
     
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
-    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
   </entry>
   
@@ -319,17 +319,17 @@
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
     
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
     <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
     
     <category term="Fluorescence" scheme="https://lifeodyssey.github.io/tags/Fluorescence/"/>
     
+    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
+    
     <category term="Sub-pixel" scheme="https://lifeodyssey.github.io/tags/Sub-pixel/"/>
+    
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
   </entry>
   
@@ -348,13 +348,13 @@
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
     
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
     
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
-    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
   </entry>
   
@@ -476,9 +476,9 @@
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
     
-    <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
-    
     <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
+    
+    <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
     
   </entry>
   
@@ -500,9 +500,9 @@
     
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
     
-    <category term="Harmful Algae" scheme="https://lifeodyssey.github.io/tags/Harmful-Algae/"/>
-    
     <category term="International Conference" scheme="https://lifeodyssey.github.io/tags/International-Conference/"/>
+    
+    <category term="Harmful Algae" scheme="https://lifeodyssey.github.io/tags/Harmful-Algae/"/>
     
     <category term="Poster" scheme="https://lifeodyssey.github.io/tags/Poster/"/>
     

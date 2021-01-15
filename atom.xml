@@ -98,21 +98,26 @@
   </entry>
   
   <entry>
-    <title>Annotated Bibliography 2021 1.8-1.17</title>
+    <title>Annotated Bibliography 2021 1.8-1.15</title>
     <link href="https://lifeodyssey.github.io/posts/ff413d6a.html"/>
     <id>https://lifeodyssey.github.io/posts/ff413d6a.html</id>
-    <published>2021-01-08T10:58:31.561Z</published>
-    <updated>2021-01-15T02:29:43.901Z</updated>
+    <published>2021-01-08T10:58:31.000Z</published>
+    <updated>2021-01-15T02:37:51.070Z</updated>
     
     
     <summary type="html">&lt;p&gt;Book Reading Ch. 3.9-3.10 of book &amp;lt;Emery, William, and Adriano Camps. &lt;em&gt;Introduction to satellite remote sensing: atmosphere, ocean, land and cryosphere applications&lt;/em&gt;. Elsevier, 2017.&amp;gt;&lt;/p&gt;
-&lt;p&gt;Effects of forward models on the semi-analytical retrieval of inherent optical properties from remote sensing reflectance&lt;/p&gt;
-&lt;p&gt;另外再找几个Water classification combining Chla/IOP的论文&lt;/p&gt;</summary>
+&lt;p&gt;Effects of forward models on the semi-analytical retrieval of inherent optical properties from remote sensing reflectance&lt;/p&gt;</summary>
     
     
     
     <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
     
+    
+    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
+    
+    <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
+    
+    <category term="Book Reading" scheme="https://lifeodyssey.github.io/tags/Book-Reading/"/>
     
   </entry>
   

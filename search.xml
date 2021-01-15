@@ -3058,7 +3058,7 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
 <p>就老去了</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="section">2021.1.14</h1>
+<h1 id="再也没有吃到像那夜的好豆再也没有看到像那夜的好戏了">再也没有吃到像那夜的好豆，再也没有看到像那夜的好戏了</h1>
 <p>长大一个最突出的特征就是对于高中和大学学过的无用之学的理解。</p>
 <p>去年这个时候疫情刚刚开始，各种治病的假消息，例如板蓝根，双黄连，假中医，甚嚣尘上。我试图用最简单的语言跟父母家人和文科朋友们解释什么是病毒🦠，怎么治病，双黄连板蓝根为什么不管用，疫苗什么时候才能出来，才发现这些知识大部分都涵盖在初中和高中的课本里。就突然开始感觉到九年义务教育的另一重含义——教会我们在现在这个社会所需要的最基本的科学常识和文化常识。只是从结果来看，国家的九年义务教育实施的还不完善罢了。当然了美国也没好到哪去，注射💉84消毒液比板蓝根更尼玛离谱。</p>
 <p>无用之学最突出的就是政治。学个数学物理我好歹会算数以及知道开车的时候为什么要保持安全距离，学个化学我至少买药买吃的会看配料表，学个生物好歹不用花冤枉钱买板蓝根，语文英语不至于是文盲，历史地理好歹出去旅游的时候能讲出来点东西。但是政治呢？政治有什么用处呢？除了高中的时候我读了一点点哲学入门稍微引起了我的兴趣，更多的时候我都觉得他很无聊，讲的都是空话套话。</p>
@@ -3148,6 +3148,8 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
 <p>再也，回不去了。</p>
 <p>你好，24岁，我也要成为大人了。</p>
 <p>我会不会成为我最讨厌的那种大人呢？</p>
+<h1 id="你在教室灯光厚厚作业本下把我装成书签每刻都相逢">你在教室灯光厚厚作业本下,把我装成书签每刻都相逢</h1>
+<p>今天我想谈一谈偶像</p>
 ]]></content>
       <categories>
         <category>梦里真真语真幻</category>
@@ -4364,6 +4366,16 @@ P(\lambda,R)=P_0*\frac{c\tau}{2}*\beta(\lambda,R)*\frac{A_r}{R^2}*exp(-2\int_0^R
 <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030114163438001.png" alt="image-00030114163438001"><figcaption aria-hidden="true">image-00030114163438001</figcaption>
 </figure>
 <p>This is just total absorption, I think.</p>
+<p>For descriptive purposes, the results from QAA with the six FMs are denoted as QG88, QJ96, QM02, QA03, QL04, and QP05, and their retrievals are termed aQAA_FM and bb_QAA_FM, respectively.</p>
+<p>Fucking these abbreviations.</p>
+<p>L04 works best. J96 P05 G88 are similar.</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115104711298.png" alt="image-00030115104711298"><figcaption aria-hidden="true">image-00030115104711298</figcaption>
+</figure>
+<p>For bbp, J96 works best. L04 worst.</p>
+<p>终于懂了那个看论文只需要看图到底是啥意思。</p>
+<p>The results showed that different FMs can have quite different effects on the computed Rrs?λ?, and, in particular, the effects are not necessarily uni- form. For this synthetic data set and for the six FMs evalu- ated, G88 and P05 provided the best estimates of Rrs?λ? for the given IOPs at 350, 440, and 550 nm. Additionally, G88 and P05 performed similarly in both the oceanic and coastal conditions, and were relatively weakly influenced by the change in particle PF. M02 also provided good estimation but only at 440 nm, and L04 performed well only in the oceanic condition.</p>
+<p>In the coastal sub-dataset, QAA and GIOP combined with G88 or P05 provided slightly better quality IOPs compared with the other four FMs. Compared with GIOP in the coastal condition, QAA in the coastal con- dition combined with G88 or P05 always performed better at retrieving a?λ? but was weaker at retrieving bbp?λ?. It must be noted that only effective retrievals from each FM-GIOP were considered for comparison; about 18%–25% of retrievals from GIOP were filtered out in advance due to bad performance.</p>
 ]]></content>
       <categories>
         <category>Annotated Bibliography</category>

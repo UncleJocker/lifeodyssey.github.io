@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-01-15T00:53:47.354Z</updated>
+  <updated>2021-01-15T02:39:47.316Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Water Classification for Inversion/Retrieval</title>
+    <link href="https://lifeodyssey.github.io/posts/696b3f33.html"/>
+    <id>https://lifeodyssey.github.io/posts/696b3f33.html</id>
+    <published>2021-01-15T02:38:36.000Z</published>
+    <updated>2021-01-15T02:39:47.316Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;A hybrid algorithm for estimating the chlorophyll-&lt;em&gt;a&lt;/em&gt; concentration across different trophic states in Asian inland waters&lt;/p&gt;
+&lt;p&gt;Optical water type discrimination and tuning remote sensing band-ratio algorithms: application to retrieval of chlorophyll and kd (490) in the Irish and Celtic seas&lt;/p&gt;
+&lt;p&gt;Influence of a red band-based water classification approach on chlorophyll algorithms for optically complex estuaries&lt;/p&gt;
+&lt;p&gt;A soft-classification-based chlorophyll-a estimation method using MERIS data in the highly turbid and eutrophic Taihu Lake&lt;/p&gt;
+&lt;p&gt;A system to measure the data quality of spectral remote-sensing reflectance of aquatic environments&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
+    
+    
+    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
+    
+    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
+    
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
+    
+  </entry>
   
   <entry>
     <title>在我成为井井有条的大人之前</title>
@@ -510,27 +539,6 @@
     <category term="Harmful Algae" scheme="https://lifeodyssey.github.io/tags/Harmful-Algae/"/>
     
     <category term="Poster" scheme="https://lifeodyssey.github.io/tags/Poster/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pandas cheat sheet</title>
-    <link href="https://lifeodyssey.github.io/posts/da4a7e8b.html"/>
-    <id>https://lifeodyssey.github.io/posts/da4a7e8b.html</id>
-    <published>2020-09-24T07:16:20.000Z</published>
-    <updated>2020-11-15T03:56:44.428Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;和matplotlib一样pandas也有cheatsheet&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-01-16T09:19:47.549Z</updated>
+  <updated>2021-01-19T12:44:59.474Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《文凭社会》</title>
+    <link href="https://lifeodyssey.github.io/posts/8aa48f64.html"/>
+    <id>https://lifeodyssey.github.io/posts/8aa48f64.html</id>
+    <published>2021-01-19T12:44:59.000Z</published>
+    <updated>2021-01-19T12:44:59.474Z</updated>
+    
+    
+    <summary type="html">
+</summary>
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Water Classification for Inversion/Retrieval</title>
@@ -514,32 +530,6 @@
     <category term="Data Fusion" scheme="https://lifeodyssey.github.io/tags/Data-Fusion/"/>
     
     <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JpGU-AGU Joint Meeting 2020 poster</title>
-    <link href="https://lifeodyssey.github.io/posts/26d5d570.html"/>
-    <id>https://lifeodyssey.github.io/posts/26d5d570.html</id>
-    <published>2020-09-24T07:26:16.000Z</published>
-    <updated>2020-09-24T07:33:15.093Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;This year I attended the JpGU-AGU Joint Meeting 2020 and made a poster presentation.&lt;/p&gt;
-&lt;p&gt;https://confit.atlas.jp/guide/event/jpgu2020/subject/HTT15-P07/detail&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Papers And Thesis" scheme="https://lifeodyssey.github.io/categories/Papers-And-Thesis/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="International Conference" scheme="https://lifeodyssey.github.io/tags/International-Conference/"/>
-    
-    <category term="Harmful Algae" scheme="https://lifeodyssey.github.io/tags/Harmful-Algae/"/>
-    
-    <category term="Poster" scheme="https://lifeodyssey.github.io/tags/Poster/"/>
     
   </entry>
   

@@ -2601,6 +2601,15 @@ b_{p}(\lambda)=A\lambda^{-\gamma}
 <figure>
 <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128202845313.png" alt="image-00030128202845313"><figcaption aria-hidden="true">image-00030128202845313</figcaption>
 </figure>
+<p>The relationship between (<span class="math inline">\(\Delta b_p : a_p\)</span>)and <span class="math inline">\(\gamma\)</span> is not linear and can be closely reproduced by using the following equation: <span class="math display">\[
+\tag{12}
+\Delta b_p/a_p=1-tanh(0.5\times\gamma^2)
+\]</span> where the 1 and 0.5 constants correspond to a mean value of the real refractive index (n 5 1.10). These constant values are slightly different for n values of 1.05 or 1.18.</p>
+<p>写得很好 就是我不想看了QAQ</p>
+<p>最终 出来这个式子</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128203553730.png" alt="image-00030128203553730"><figcaption aria-hidden="true">image-00030128203553730</figcaption>
+</figure>
 ]]></content>
       <categories>
         <category>Annotated Bibliography</category>

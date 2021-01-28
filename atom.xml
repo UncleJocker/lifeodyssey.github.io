@@ -24,8 +24,7 @@
     <updated>2021-01-28T09:06:25.902Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared&lt;br&gt;
-I’m gonna to add more about this.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared I&#39;m gonna to add more about this.&lt;/p&gt;</summary>
     
     
     
@@ -34,9 +33,9 @@ I’m gonna to add more about this.&lt;/p&gt;</summary>
     
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
     
-    <category term="Inversion" scheme="https://lifeodyssey.github.io/tags/Inversion/"/>
-    
     <category term="partical backscattering" scheme="https://lifeodyssey.github.io/tags/partical-backscattering/"/>
+    
+    <category term="Inversion" scheme="https://lifeodyssey.github.io/tags/Inversion/"/>
     
   </entry>
   
@@ -64,9 +63,9 @@ I’m gonna to add more about this.&lt;/p&gt;</summary>
     
     <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
     
-    <category term="CDOM" scheme="https://lifeodyssey.github.io/tags/CDOM/"/>
-    
     <category term="Inversion" scheme="https://lifeodyssey.github.io/tags/Inversion/"/>
+    
+    <category term="CDOM" scheme="https://lifeodyssey.github.io/tags/CDOM/"/>
     
   </entry>
   
@@ -94,7 +93,7 @@ I’m gonna to add more about this.&lt;/p&gt;</summary>
     <link href="https://lifeodyssey.github.io/posts/696b3f33.html"/>
     <id>https://lifeodyssey.github.io/posts/696b3f33.html</id>
     <published>2021-01-15T02:38:36.000Z</published>
-    <updated>2021-01-16T09:19:47.549Z</updated>
+    <updated>2021-01-18T07:23:31.651Z</updated>
     
     
     <summary type="html">&lt;p&gt;A hybrid algorithm for estimating the chlorophyll-&lt;em&gt;a&lt;/em&gt; concentration across different trophic states in Asian inland waters&lt;/p&gt;

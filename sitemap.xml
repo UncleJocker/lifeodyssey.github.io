@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lifeodyssey.github.io/posts/78604782.html</loc>
+    
+    <lastmod>2021-01-28</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lifeodyssey.github.io/posts/d1210079.html</loc>
     
     <lastmod>2021-01-28</lastmod>
@@ -782,6 +789,13 @@
   
   <url>
     <loc>https://lifeodyssey.github.io/tags/Inversion/</loc>
+    <lastmod>2021-01-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/partical-backscattering/</loc>
     <lastmod>2021-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

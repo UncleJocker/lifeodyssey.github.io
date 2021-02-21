@@ -6119,4 +6119,28 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
         <tag>python</tag>
       </tags>
   </entry>
+  <entry>
+    <title>hyperspectral and phytoplankton</title>
+    <url>/posts/ed08fed2.html</url>
+    <content><![CDATA[<p>This is an Annotated Bibliography for the doctor proposal.</p>
+<p>Hyperspectral Remote Sensing of Phytoplankton Species Composition Based on Transfer Learning</p>
+<p>Hyperspectral Differentiation of Phytoplankton Taxonomic Groups: A Comparison between Using Remote Sensing Reflectance and Absorption Spectra</p>
+<p>Distinguishing cyanobacteria from algae in optically complex inland waters using a hyperspectral radiative transfer inversion algorithm</p>
+<p>Hyperspectral optical discrimination of phytoplankton community structure in Funka Bay and its implications for ocean color remote sensing of diatoms</p>
+<p>Remote estimation of phytoplankton size fractions using the spectral shape of light absorption</p>
+<p>On the discrimination of multiple phytoplankton groups from light absorption spectra of assemblages with mixed taxonomic composition and variable light conditions</p>
+<p>Linking phytoplankton absorption to community composition in Chinese marginal seas</p>
+<p>Another way is to see the analyze the NPP/PSC</p>
+<p>Ultimate goal is to propose a hypothesis-test 的论文，并且跟我现在的修士论文有联系</p>
+]]></content>
+      <categories>
+        <category>Annotated Bibliography</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color</tag>
+        <tag>Inherent Optical Properties</tag>
+        <tag>Ocean Optics</tag>
+        <tag>Research Basis</tag>
+      </tags>
+  </entry>
 </search>

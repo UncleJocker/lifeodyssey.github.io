@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-02-21T07:41:37.244Z</updated>
+  <updated>2021-02-24T04:37:45.001Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>absorption measurement process</title>
+    <link href="https://lifeodyssey.github.io/posts/49ca7bc7.html"/>
+    <id>https://lifeodyssey.github.io/posts/49ca7bc7.html</id>
+    <published>2021-02-24T01:44:21.000Z</published>
+    <updated>2021-02-24T04:37:45.001Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;This is a summary of how to process absorption measurement data.&lt;/p&gt;
+&lt;p&gt;The measurement is basically based on the QFT-T mode. More details could be found at &lt;a href=&quot;https://ioccg.org/what-we-do/ioccg-publications/ocean-optics-protocols-satellite-ocean-colour-sensor-validation/&quot;&gt;IOCCG protocols volume 1&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Experiment Protocols" scheme="https://lifeodyssey.github.io/tags/Experiment-Protocols/"/>
+    
+    <category term="Absorption Measurement" scheme="https://lifeodyssey.github.io/tags/Absorption-Measurement/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hyperspectral and phytoplankton</title>
     <link href="https://lifeodyssey.github.io/posts/ed08fed2.html"/>
     <id>https://lifeodyssey.github.io/posts/ed08fed2.html</id>
     <published>2021-02-21T07:25:21.000Z</published>
-    <updated>2021-02-21T07:41:37.244Z</updated>
+    <updated>2021-02-21T08:42:55.748Z</updated>
     
     
     <summary type="html">&lt;p&gt;This is an Annotated Bibliography for the doctor proposal.&lt;/p&gt;
@@ -527,27 +551,6 @@
     <category term="学术写作" scheme="https://lifeodyssey.github.io/tags/%E5%AD%A6%E6%9C%AF%E5%86%99%E4%BD%9C/"/>
     
     <category term="学术发表" scheme="https://lifeodyssey.github.io/tags/%E5%AD%A6%E6%9C%AF%E5%8F%91%E8%A1%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>np.ma.mask</title>
-    <link href="https://lifeodyssey.github.io/posts/39e89397.html"/>
-    <id>https://lifeodyssey.github.io/posts/39e89397.html</id>
-    <published>2020-11-10T01:08:30.000Z</published>
-    <updated>2020-12-17T02:27:38.033Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;自己前几天一直在跟mask斗争，中文网站上也没什么好的资料，就索性自己整理一下。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
     
   </entry>
   

@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-02-24T08:46:27.835Z</updated>
+  <updated>2021-02-24T08:46:32.842Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -17,27 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>人生实验室 </title>
-    <link href="https://lifeodyssey.github.io/posts/ea1b52e2.html"/>
-    <id>https://lifeodyssey.github.io/posts/ea1b52e2.html</id>
-    <published>2021-02-24T08:46:27.000Z</published>
-    <updated>2021-02-24T08:46:27.835Z</updated>
-    
-    
-    <summary type="html">
-</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>人生实验室</title>
     <link href="https://lifeodyssey.github.io/posts/c17fab82.html"/>
     <id>https://lifeodyssey.github.io/posts/c17fab82.html</id>
     <published>2021-02-24T06:27:00.000Z</published>
-    <updated>2021-02-24T08:14:04.525Z</updated>
+    <updated>2021-02-24T08:46:32.842Z</updated>
     
     
     <summary type="html">&lt;p&gt;前排预警：这篇博客有我大量的个人牢骚和负能量。&lt;/p&gt;
@@ -567,6 +551,31 @@
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
     <category term="Sub-pixel" scheme="https://lifeodyssey.github.io/tags/Sub-pixel/"/>
+    
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Annotated Bibliography 2020 11.17-11.20</title>
+    <link href="https://lifeodyssey.github.io/posts/179aa5a3.html"/>
+    <id>https://lifeodyssey.github.io/posts/179aa5a3.html</id>
+    <published>2020-11-17T01:51:25.000Z</published>
+    <updated>2020-11-24T08:09:25.364Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;虽然自己还有好几个没有更新完，但是为了组会和AWOC就先把这个做出来吧。。。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
+    
+    
+    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
+    
+    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     

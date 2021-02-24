@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-02-24T04:37:45.001Z</updated>
+  <updated>2021-02-24T04:38:26.469Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lifeodyssey.github.io/posts/49ca7bc7.html"/>
     <id>https://lifeodyssey.github.io/posts/49ca7bc7.html</id>
     <published>2021-02-24T01:44:21.000Z</published>
-    <updated>2021-02-24T04:37:45.001Z</updated>
+    <updated>2021-02-24T04:38:26.469Z</updated>
     
     
     <summary type="html">&lt;p&gt;This is a summary of how to process absorption measurement data.&lt;/p&gt;
@@ -45,7 +45,7 @@
     <link href="https://lifeodyssey.github.io/posts/ed08fed2.html"/>
     <id>https://lifeodyssey.github.io/posts/ed08fed2.html</id>
     <published>2021-02-21T07:25:21.000Z</published>
-    <updated>2021-02-21T08:42:55.748Z</updated>
+    <updated>2021-02-24T04:38:49.364Z</updated>
     
     
     <summary type="html">&lt;p&gt;This is an Annotated Bibliography for the doctor proposal.&lt;/p&gt;
@@ -72,6 +72,8 @@
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
+    <category term="Phytoplankton" scheme="https://lifeodyssey.github.io/tags/Phytoplankton/"/>
+    
   </entry>
   
   <entry>
@@ -79,7 +81,7 @@
     <link href="https://lifeodyssey.github.io/posts/78604782.html"/>
     <id>https://lifeodyssey.github.io/posts/78604782.html</id>
     <published>2021-01-28T07:57:45.000Z</published>
-    <updated>2021-01-29T01:40:55.787Z</updated>
+    <updated>2021-02-24T04:39:09.712Z</updated>
     
     
     <summary type="html">&lt;p&gt;Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared&lt;/p&gt;
@@ -93,9 +95,9 @@
     
     <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
     
-    <category term="partical backscattering" scheme="https://lifeodyssey.github.io/tags/partical-backscattering/"/>
-    
     <category term="Inversion" scheme="https://lifeodyssey.github.io/tags/Inversion/"/>
+    
+    <category term="particle backscattering" scheme="https://lifeodyssey.github.io/tags/particle-backscattering/"/>
     
   </entry>
   

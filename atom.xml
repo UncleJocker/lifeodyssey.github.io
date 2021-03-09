@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-02-27T10:34:55.210Z</updated>
+  <updated>2021-03-09T10:39:24.565Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My grind</title>
+    <link href="https://lifeodyssey.github.io/posts/b5654816.html"/>
+    <id>https://lifeodyssey.github.io/posts/b5654816.html</id>
+    <published>2021-03-09T10:00:45.000Z</published>
+    <updated>2021-03-09T10:39:24.565Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一些日记或者类似于闲言碎语的日常发牢骚。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="梦里真真语真幻" scheme="https://lifeodyssey.github.io/categories/%E6%A2%A6%E9%87%8C%E7%9C%9F%E7%9C%9F%E8%AF%AD%E7%9C%9F%E5%B9%BB/"/>
+    
+    
+    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>A Ph.D is not enough</title>
@@ -45,14 +66,14 @@
     <link href="https://lifeodyssey.github.io/posts/c17fab82.html"/>
     <id>https://lifeodyssey.github.io/posts/c17fab82.html</id>
     <published>2021-02-24T06:27:00.000Z</published>
-    <updated>2021-03-08T10:24:30.802Z</updated>
+    <updated>2021-03-08T10:33:04.486Z</updated>
     
     
     <summary type="html">&lt;p&gt;前排预警：这篇博客有我大量的个人牢骚和负能量。&lt;/p&gt;
 &lt;p&gt;面对职业选择哭闹的我被朋友推荐的一本书，附上朋友讲的话。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;h2 id=&quot;人生实验室职涯难题的逻辑图解说明书&quot;&gt;《人生实验室：职涯难题的逻辑图解说明书》&lt;/h2&gt;
-&lt;p&gt;可以在这里试读和购买电子书：https://readmoo.com/book/210118075000101&lt;/p&gt;
+&lt;h2 id=&quot;人生实验室职涯难题的逻辑图解说明书&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#人生实验室职涯难题的逻辑图解说明书&quot;&gt;&lt;/a&gt; 《人生实验室：职涯难题的逻辑图解说明书》&lt;/h2&gt;
+&lt;p&gt;可以在这里试读和购买电子书：&lt;a href=&quot;https://readmoo.com/book/210118075000101&quot;&gt;https://readmoo.com/book/210118075000101&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;推荐这本书有三大原因，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;简明易懂&lt;/li&gt;
@@ -528,39 +549,6 @@
     <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
     
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
-    
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Annotated Bibliography 2020 11.24-11.29</title>
-    <link href="https://lifeodyssey.github.io/posts/d1210079.html"/>
-    <id>https://lifeodyssey.github.io/posts/d1210079.html</id>
-    <published>2020-11-24T08:04:12.000Z</published>
-    <updated>2021-01-28T05:36:53.131Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近没有一点科研的状态&lt;/p&gt;
-&lt;p&gt;鸽了好多博客没写，文章没看&lt;/p&gt;
-&lt;p&gt;我好累 我好想放弃&lt;/p&gt;
-&lt;p&gt;我想 回家&lt;/p&gt;
-&lt;p&gt;好像那个被我找到的目标 又走远了&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
-    
-    <category term="Fluorescence" scheme="https://lifeodyssey.github.io/tags/Fluorescence/"/>
-    
-    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
-    
-    <category term="Sub-pixel" scheme="https://lifeodyssey.github.io/tags/Sub-pixel/"/>
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     

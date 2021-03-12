@@ -6816,6 +6816,10 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 <p>Possibly, it is almost out of date.</p>
 <p>Just JO I think hhh.</p>
 <h2 id="an-interesting-paper"><a class="markdownIt-Anchor" href="#an-interesting-paper"></a> An interesting paper</h2>
+<p>Progressive scheme for blending empirical ocean color retrievals of absorption coefficient and chlorophyll concentration from open oceans to highly turbid waters</p>
+<p>Former Classification scheme is based on value or shape. It is a hard transaction, not smoothly.</p>
+<p>One way is use fuzzy c-mean, given隶属度(MD，这还是这么久了我第一次见到不会用英语的专业名词).But it is statistically based, don’t have any implicit physics.</p>
+<p>This is a paper have implicit physics.</p>
 ]]></content>
       <categories>
         <category>Annotated Bibliography</category>

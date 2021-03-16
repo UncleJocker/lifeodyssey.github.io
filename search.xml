@@ -6511,7 +6511,7 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
     <url>/posts/b5654816.html</url>
     <content><![CDATA[<p>一些日记或者类似于闲言碎语的日常发牢骚。</p>
 <a id="more"></a>
-<h1 id="section">2021.3.9</h1>
+<h1 id="202139"><a class="markdownIt-Anchor" href="#202139"></a> 2021.3.9</h1>
 <p>最近一直在处理实验室过去的吸收数据，处理得我脑袋疼。不得不主动停下来，去想一些别的事情。</p>
 <p>最开始想的就是自己博士的课题。</p>
 <p>老板快要退休了，很直白的告诉我他没有funding了，所以其实在这里继续读下去不是一个很好的选择。但是自己在这里想继续读，其实很多时候就是像心理咨询老师讲的一样，我只是在逃避自己不喜欢的东西而已。</p>
@@ -6556,14 +6556,14 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 <p>再举一个，各种闲事琐事的作用也是无法量化和预测的。在郭生的经历里，他怎么可能预测到自己和好基友闲聊从而听说了某个workshop，从而认识哈佛的教授，从而帮他把idea D完善，从而在他博士最后一年能去哈佛访问，从而发表博士论文的最后一篇文章，从而凑齐自己的答辩委员会。</p>
 <p>当初，他怎么可能预测到，和好基友喝的一杯咖啡和闲聊，能在几年后帮助到他自己毕业呢。这就是无法预测，无法计划的。</p>
 <p>只能顺其自然，做最好的自己，增大成功的概率。关键在于意识到身边发生的很多事情是在自己控制以外的，成功了不必过于沾沾自喜，失败了也无需太责备自己。</p>
-<ol start="2" type="1">
+<ol start="2">
 <li>不坚持就不会成功</li>
 </ol>
 <p>虽然人生无法预测，但是个人努力还是十分重要的。基本没有谁可以不努力就获得很大的成功，就算不努力可以一时顺利，也无法一直顺利。</p>
 <p>郭生虽然前面几年都一直在撞墙，既没找到自己研究的方向，也没投出一作的文章，但是他一直在努力，没有放弃。正是这些年的积累，能让他在第四年第五年，厚积薄发，一股气做完了四个项目，这种写code能力写paper的能力，都是郭生前几年坚持的成果。</p>
 <p>我的博士起步也是比较艰难，第一篇论文很快就做完投出去了，但是投会议被拒了两次，每次被拒就是要接着花时间改进，这样一年就过去了。之后转投一个journal，经过再两次major revision和一连串的minor revision，最终过了三年才present。不得不说这样子的体验是挺可怕的，我挺幸运的，各种机缘巧合能够从谷底走出。</p>
 <p>最近在读一本书，<span class="exturl" data-url="aHR0cHM6Ly9hbXpuLnRvLzJuYW1STHU=">Grit: The Power of Passion and Perseverance<i class="fa fa-external-link-alt"></i></span>。书名里的Grit原意是小沙粒，后来延伸出“courage and resolve”的意思，勇气和决心。不得不说Grit和郭生的Grind这本书有异曲同工之意。都是要慢慢研磨，坚持不懈。这本Grit的书里举了很多名人成功的例子，发现他们成功的共同点并不是他们很先天聪明或者很有天赋， 而是后天不断的努力，遇到困难也不放弃。读Grit的时候总感觉自己在读鸡汤，可是那些例子貌似又的确挺convincing。之后有时间再写写那个的读后感吧。</p>
-<ol start="3" type="1">
+<ol start="3">
 <li>导师太重要</li>
 </ol>
 <p>这些年来，断断续续的也很多同学都问过我说怎么选PhD offer。虽说这个是个幸福的烦恼（毕竟拿了好几个offer），但如果选择不当的话，的确可以造成多年困扰。</p>
@@ -6575,9 +6575,19 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 </ul>
 <p>说回到郭生的案例，他导师真是太不错了。这些年郭生都没有做导师的critical path上的project，导师也没很大的意见。其中部分原因是郭生自带funding，部分原因就是导师自己本身比较nice。在这种情况下，让郭生做了DEFGH五个项目顺利毕业，也是挺难得的。</p>
 </blockquote>
-<h1 id="section-1">3.10</h1>
+<h1 id="310"><a class="markdownIt-Anchor" href="#310"></a> 3.10</h1>
 <p>上午碎碎念。</p>
-<p>自己既然大概率与科研无缘，那么自己后面其实很多时候，所要处理的事情也并不是自己想象中具有很高创造性的工作。而且自己研究的性质决定了不可能会有太多人感兴趣。 其实拿国外的教职环境，研究环境和国内相比非常合适。 其实如果自己成不了什么特别厉害的人，何不赶紧放弃，让自己成为一个普通人。 自己读研两年，一篇论文都没发呢。 自己能接受目前国内的工作环境吗？ 能接受就可以回去。 其实。 没什么大不了的。 https://www.zhihu.com/question/24308741 自己适合做公务员吗？ 自己现在的问题就变成了，如果明确知道自己毕业以后不会做科研，读博还有意义吗？</p>
+<p>自己既然大概率与科研无缘，那么自己后面其实很多时候，所要处理的事情也并不是自己想象中具有很高创造性的工作。而且自己研究的性质决定了不可能会有太多人感兴趣。<br>
+其实拿国外的教职环境，研究环境和国内相比非常合适。<br>
+其实如果自己成不了什么特别厉害的人，何不赶紧放弃，让自己成为一个普通人。<br>
+自己读研两年，一篇论文都没发呢。<br>
+自己能接受目前国内的工作环境吗？<br>
+能接受就可以回去。<br>
+其实。<br>
+没什么大不了的。<br>
+<span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzI0MzA4NzQx">https://www.zhihu.com/question/24308741<i class="fa fa-external-link-alt"></i></span><br>
+自己适合做公务员吗？<br>
+自己现在的问题就变成了，如果明确知道自己毕业以后不会做科研，读博还有意义吗？</p>
 <p>不管怎么样，自己比海大的学生好多了？是吗？</p>
 <p>至少比同期的学生好多了。</p>
 <p>同班。</p>
@@ -6603,7 +6613,7 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 <p>就是那种，很适合我做的事情。</p>
 <p>太累了。</p>
 <p>自己最好能找到自己的niche，即：</p>
-<ol type="1">
+<ol>
 <li>没有太多应付性，无意义，重复性的工作</li>
 <li>没有太多应酬</li>
 <li>不加班，能有很多空闲时间来完成自己的想法</li>
@@ -6612,45 +6622,48 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 <li>不要有太傻逼的领导，或者说随机性不要那么强，因为自己不知道入职之后的领导会是什么样子的。</li>
 </ol>
 <p>太难了。</p>
-<h2 id="跟雅坤姐姐的讨论">跟雅坤姐姐的讨论</h2>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173439199.png" alt="image-00030310173439199"><figcaption aria-hidden="true">image-00030310173439199</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173507624.png" alt="image-00030310173507624"><figcaption aria-hidden="true">image-00030310173507624</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173532532.png" alt="image-00030310173532532"><figcaption aria-hidden="true">image-00030310173532532</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173600811.png" alt="image-00030310173600811"><figcaption aria-hidden="true">image-00030310173600811</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173625087.png" alt="image-00030310173625087"><figcaption aria-hidden="true">image-00030310173625087</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173646631.png" alt="image-00030310173646631"><figcaption aria-hidden="true">image-00030310173646631</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173703981.png" alt="image-00030310173703981"><figcaption aria-hidden="true">image-00030310173703981</figcaption>
-</figure>
+<h2 id="跟雅坤姐姐的讨论"><a class="markdownIt-Anchor" href="#跟雅坤姐姐的讨论"></a> 跟雅坤姐姐的讨论</h2>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173439199.png" alt="image-00030310173439199"></p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173507624.png" alt="image-00030310173507624"></p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173532532.png" alt="image-00030310173532532"></p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173600811.png" alt="image-00030310173600811"></p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173625087.png" alt="image-00030310173625087"></p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173646631.png" alt="image-00030310173646631"></p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173703981.png" alt="image-00030310173703981"></p>
 <p>接下来的问题</p>
-<ol type="1">
-<li><p>问老板支不支持我做一些偏向光学的项目</p></li>
-<li><p>问请家里人的经济情况</p></li>
+<ol>
+<li>
+<p>问老板支不支持我做一些偏向光学的项目</p>
+</li>
+<li>
+<p>问请家里人的经济情况</p>
+</li>
 </ol>
 <p>自己还是想做大学老师这份职业的。</p>
 <p>自己在上学的时候就想过如果自己当了大学老师会怎么讲课。</p>
-<h2 id="再次劝退">再次劝退</h2>
-<p>https://note.com/chol_gyu/n/na93b711b844f 做研究就是世界上最差的工作。 工作的收入和满意度基本是最差的那档了。 9107一个月七八千，外加无尽的考核。 你像企业里，有了支付宝还有微信支付，有了淘宝还有京东拼多多 做研究你不是第一个你就是0 要跟全世界所有你的同行竞争，跟全世界最聪明最有执行力的人一起竞争 你是第二个发现的，第二个做出来的，你什么也不是 &gt;所以说只有热爱、聪明、坚毅的人，才是真正做研究的人。目前很多读博做研究的人都很没必要。</p>
+<h2 id="再次劝退"><a class="markdownIt-Anchor" href="#再次劝退"></a> 再次劝退</h2>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ub3RlLmNvbS9jaG9sX2d5dS9uL25hOTNiNzExYjg0NGY=">https://note.com/chol_gyu/n/na93b711b844f<i class="fa fa-external-link-alt"></i></span><br>
+做研究就是世界上最差的工作。<br>
+工作的收入和满意度基本是最差的那档了。<br>
+9107一个月七八千，外加无尽的考核。<br>
+你像企业里，有了支付宝还有微信支付，有了淘宝还有京东拼多多<br>
+做研究你不是第一个你就是0<br>
+要跟全世界所有你的同行竞争，跟全世界最聪明最有执行力的人一起竞争<br>
+你是第二个发现的，第二个做出来的，你什么也不是</p>
+<blockquote>
+<p>所以说只有热爱、聪明、坚毅的人，才是真正做研究的人。目前很多读博做研究的人都很没必要。</p>
+</blockquote>
 <p>所以我觉得我也没必要[破涕为笑]。</p>
-<p>经济上，没有必要。 心理上想读。 害怕抑郁。 想留在国外/进技术单位/公务员啥的。</p>
-<h1 id="section-2">3.11</h1>
+<p>经济上，没有必要。<br>
+心理上想读。<br>
+害怕抑郁。<br>
+想留在国外/进技术单位/公务员啥的。</p>
+<h1 id="311"><a class="markdownIt-Anchor" href="#311"></a> 3.11</h1>
 <p>如果有一件事，你做了会不开心，但是不做会有遗憾，你还愿意去做吗？</p>
 <p>这就是我目前犹豫的点了。</p>
 <p>人生总会有遗憾。</p>
 <p>我要不要选择这个遗憾呢。</p>
-<h2 id="跟gtc打完电话">跟GTC打完电话</h2>
+<h2 id="跟gtc打完电话"><a class="markdownIt-Anchor" href="#跟gtc打完电话"></a> 跟GTC打完电话</h2>
 <p>最近在减肥，晚上不怎么吃东西。</p>
 <p>我发现过了七点/七点半之后就不会饿了。</p>
 <p>跟GTC打完电话。</p>
@@ -6662,25 +6675,23 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 <p>当你面临选择比较迷茫时，那么请选择最艰难的那条路。</p>
 <p>在不能既要又要还要的时候，先选择一个自觉有味的方向做起来再说！</p>
 </blockquote>
-<p>搜转行又搜到了一个<span class="exturl" data-url="aHR0cDovL3d3dy5qdXlhbmcuY28vcGhk6L2s6KGM5LmL6LevLw==">这个<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>搜转行又搜到了一个<span class="exturl" data-url="aHR0cDovL3d3dy5qdXlhbmcuY28vcGhkJUU4JUJEJUFDJUU4JUExJThDJUU0JUI5JThCJUU4JUI3JUFGLw==">这个<i class="fa fa-external-link-alt"></i></span>。</p>
 <p>自己想搞钱吗？</p>
 <p>不想，自己搞钱感觉只是完全为了买车子房子这些东西。</p>
 <p>不想要孩子真的好省钱。</p>
-<p>https://www.zhihu.com/question/372930972</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzM3MjkzMDk3Mg==">https://www.zhihu.com/question/372930972<i class="fa fa-external-link-alt"></i></span></p>
 <p>好难决定。</p>
 <p>自己</p>
-<h1 id="section-3">3.12</h1>
+<h1 id="312"><a class="markdownIt-Anchor" href="#312"></a> 3.12</h1>
 <p>忽然想起来我这次的学费减免钱是不是写的有点太少了点。</p>
 <p>窗外一阵惊雷，这就是撒谎会被雷劈吗hhhhh。</p>
 <p>如果我想进企业工作，那不管怎么样，在日本工作不比在国内舒服多了吗？</p>
 <p>那就看老板喽.</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030312121514625.png" alt="image-00030312121514625"><figcaption aria-hidden="true">image-00030312121514625</figcaption>
-</figure>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030312121514625.png" alt="image-00030312121514625"></p>
 <p>老板觉得我能完成-&gt;在日本读博/转行进业界</p>
 <p>老板觉得我不能完成-&gt;回国考公/事业单位/国企</p>
 <p>就酱。</p>
-<h1 id="section-4">3.16</h1>
+<h1 id="316"><a class="markdownIt-Anchor" href="#316"></a> 3.16</h1>
 <p>居然罕见地被老板push。</p>
 <p>我感觉我现在的前路一片灰暗。</p>
 <p>我不知道该往哪里走。</p>
@@ -6705,6 +6716,21 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
 <p>很多时候，你没法像之前一样，从头再来。</p>
 <p>很多时候，我更想不再漂流，赶紧结束这段旅途。</p>
 <p>人总是要死的。</p>
+<h2 id="摸了会鱼之后"><a class="markdownIt-Anchor" href="#摸了会鱼之后"></a> 摸了会鱼之后</h2>
+<p>既然自己毕业之后大概率不做科研，那读博还有意义吗？</p>
+<blockquote>
+<p>Devote it</p>
+<p>Like it</p>
+<p>Good at it</p>
+</blockquote>
+<p>自己擅长研究吗？</p>
+<p>自己擅长写代码吗？</p>
+<p>自己擅长什么呢？</p>
+<p>自己擅长提idea，但是这屁用没有。</p>
+<p>我只想找一个差不多很舒服的工作。</p>
+<p>那自己现在做研究，舒服吗？</p>
+<p>我感觉自己很多时候，都是不舒服的吧？</p>
+<p>看着他就不想做的那种。</p>
 ]]></content>
       <categories>
         <category>梦里真真语真幻</category>

@@ -142,6 +142,20 @@
       </tags>
   </entry>
   <entry>
+    <title>A Ph.D is not enough</title>
+    <url>/posts/13a77735.html</url>
+    <content><![CDATA[
+]]></content>
+      <categories>
+        <category>梦里真真语真幻</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>随便写写</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自动机器学习代码详解</title>
     <url>/posts/4668cbbb.html</url>
     <content><![CDATA[<p>毕业论文基于auto-sklearn做了一些自动机器学习模型的应用，模型的原理可以点击<span class="exturl" data-url="aHR0cDovL2NvZGV3aXRoemhhbmd5aS5jb20vMjAxOC8wNy8yNi9BdXRvTUwv">这里<i class="fa fa-external-link-alt"></i></span>，我这儿讲一下我的代码怎么用，相当于是一个详细版的注释。</p>
@@ -442,6 +456,131 @@ Z_V^t(x)=\int h_V^l(x-y)Z_v^t(y)dy
       <tags>
         <tag>Data Fusion</tag>
         <tag>Remote Sensing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chla retrieval</title>
+    <url>/posts/a31ba57b.html</url>
+    <content><![CDATA[<p>A note for Chla algorithm.</p>
+<a id="more"></a>
+<h1 id="chla-algorithms-review">Chla Algorithms Review</h1>
+<table>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 48%">
+<col style="width: 24%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Formula</th>
+<th>Reference</th>
+<th>Water type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OC</td>
+<td><span class="math inline">\(log_{10}(Chl)=a_0+a_1X+a_2X^2+a_3X^3+a_4X^4,X=log_{10}(\frac{Rrs_(\lambda_b)}{Rrs_(\lambda_g)})\)</span>(Example)</td>
+<td>O'Reilly 2019</td>
+<td>Clear</td>
+</tr>
+<tr class="even">
+<td>OCI</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312152124019.png" alt="image-00030312152124019"></td>
+<td>Wang 2016;Hu 2011</td>
+<td>Coastal</td>
+</tr>
+<tr class="odd">
+<td>Band ration</td>
+<td><span class="math inline">\(Rrs(751)/Rrs(672)\)</span></td>
+<td>Gurlin 2011</td>
+<td>Coastal</td>
+</tr>
+<tr class="even">
+<td>Tang/Tassan</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312152233703.png" alt="image-00030312152233703"></td>
+<td>Tang 2004;Tassan,1994;Sun 2010</td>
+<td>Coastal</td>
+</tr>
+<tr class="odd">
+<td>Gitelson</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312152341386.png" alt="image-00030312152341386"></td>
+<td>Gitelson 2008</td>
+<td>Coastal</td>
+</tr>
+<tr class="even">
+<td>RLH</td>
+<td>Rrs(672)-Rrs(555)-{[Rrs(751)-Rrs(555)] × [(672-555)/(751-555)]}</td>
+<td>Schalles,1998</td>
+<td>Coastal</td>
+</tr>
+<tr class="odd">
+<td>RDR</td>
+<td>[Rrs(555)-Rrs(488)]/[Rrs(555) + Rrs(488)]</td>
+<td>Gitelson,1993</td>
+<td>Coastal</td>
+</tr>
+<tr class="even">
+<td>NDCI</td>
+<td>[Rrs(751)-Rrs(672)]/[Rrs(751) + Rrs(672)]</td>
+<td>Mishra, 2012</td>
+<td>Coastal</td>
+</tr>
+<tr class="odd">
+<td>SCI</td>
+<td>HChla = {Rrs(751) + (751-672)/(751-555) × [Rrs(555)-Rrs(751)]}-Rrs(672), H∆ = Rrs(555)-{Rrs(751) + (751-555)/(751-488) × [Rrs(488)-Rrs(751)]}, SCI = HChla-H∆</td>
+<td>Shen, 2010</td>
+<td>Coastal</td>
+</tr>
+<tr class="even">
+<td>ASA</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312152813412.png" alt="image-00030312152813412"></td>
+<td>Jiang, 2020</td>
+<td>Coastal</td>
+</tr>
+<tr class="odd">
+<td>TC2</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312152928782.png" alt="image-00030312152928782"></td>
+<td>Liu,2020</td>
+<td>Coastal, inversion based</td>
+</tr>
+<tr class="even">
+<td>NIR-Red</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312153111284.png" alt="image-00030312153111284"></td>
+<td>Gons,2005</td>
+<td>Cosatal</td>
+</tr>
+<tr class="odd">
+<td>MDN</td>
+<td>NN</td>
+<td>Pahlevan 2020</td>
+<td>Hyperspectral,Coastal</td>
+</tr>
+<tr class="even">
+<td>OWT</td>
+<td><img src="/Users/zhenjia/Library/Application%20Support/typora-user-images/image-00030312153858028.png" alt="image-00030312153858028"></td>
+<td>Neil, 2019</td>
+<td>Coastal</td>
+</tr>
+</tbody>
+</table>
+<p>There are a lot of Chla algorithm.</p>
+<p>Possibly, it is almost out of date.</p>
+<p>Just JO I think hhh.</p>
+<h2 id="an-interesting-paper">An interesting paper</h2>
+<p>Progressive scheme for blending empirical ocean color retrievals of absorption coefficient and chlorophyll concentration from open oceans to highly turbid waters</p>
+<p>Former Classification scheme is based on value or shape. It is a hard transaction, not smoothly.</p>
+<p>One way is use fuzzy c-mean, given隶属度(MD，这还是这么久了我第一次见到不会用英语的专业名词).But it is statistically based, don't have any implicit physics.</p>
+<p>This is a paper have implicit physics.</p>
+]]></content>
+      <categories>
+        <category>Annotated Bibliography</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color Remote Sensing</tag>
+        <tag>Chla Algorithm</tag>
       </tags>
   </entry>
   <entry>
@@ -1452,6 +1591,37 @@ b_m
       </tags>
   </entry>
   <entry>
+    <title>Tennary plot</title>
+    <url>/posts/2b01b12c.html</url>
+    <content><![CDATA[<p>Description for ternary plot</p>
+<a id="more"></a>
+<h1 id="python-package">Python package</h1>
+<p>This is the package I used https://github.com/marcharper/python-ternary</p>
+<p>The following is the most usefull sample for me.</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> ternary</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">cm = plt.cm.get_cmap(<span class="string">&#x27;viridis&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dat=pd.DataFrame(columns=list(<span class="string">&#x27;XYZV&#x27;</span>))</span><br><span class="line"></span><br><span class="line">dat[<span class="string">&#x27;X&#x27;</span>]=random.sample(range(<span class="number">45</span>),<span class="number">10</span>)</span><br><span class="line">dat[<span class="string">&#x27;Y&#x27;</span>]=random.sample(range(<span class="number">45</span>),<span class="number">10</span>)</span><br><span class="line">dat[<span class="string">&#x27;Z&#x27;</span>]=<span class="number">100</span>-(dat[<span class="string">&#x27;X&#x27;</span>]+dat[<span class="string">&#x27;Y&#x27;</span>])</span><br><span class="line">dat[<span class="string">&#x27;V&#x27;</span>]=<span class="number">10</span>**np.random.randint(<span class="number">0</span>,high=<span class="number">10</span>,size=<span class="number">10</span>)/<span class="number">1e5</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># sc = plt.scatter(dat.X, dat.Y, c=dat.V, vmin=0, vmax=7, s=35, cmap=cm)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scale=<span class="number">100</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fig, tax = ternary.figure(scale=scale)</span><br><span class="line">fig.set_size_inches(<span class="number">10</span>, <span class="number">9</span>)</span><br><span class="line"></span><br><span class="line">points=dat[[<span class="string">&#x27;X&#x27;</span>,<span class="string">&#x27;Y&#x27;</span>,<span class="string">&#x27;Z&#x27;</span>]].values</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">minv=np.log10(dat.V.min())</span><br><span class="line">maxv=np.log10(dat.V.max())</span><br><span class="line"></span><br><span class="line">tax.scatter(points,s=<span class="number">60</span>,vmin=minv,vmax=maxv,colormap=plt.cm.viridis,colorbar=<span class="literal">True</span>,c=np.log10(dat[<span class="string">&#x27;V&#x27;</span>].values),cmap=plt.cm.viridis)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Decoration.</span></span><br><span class="line">tax.boundary(linewidth=<span class="number">1</span>)</span><br><span class="line">tax.gridlines(multiple=<span class="number">10</span>, color=<span class="string">&quot;gray&quot;</span>)</span><br><span class="line">tax.ticks(axis=<span class="string">&#x27;lbr&#x27;</span>, linewidth=<span class="number">1</span>, multiple=<span class="number">20</span>)</span><br><span class="line">tax.get_axes().axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">figure.set_size_inches(<span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line">tax.show()</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/D75BADEA-86A3-4AA9-81C8-159829A7F2F7.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
+</figure>
+<h1 id="how-to-read-tennary-plot">How to read tennary plot</h1>
+<p>这个才是重头戏</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/ternary_3.jpg" alt="img"><figcaption aria-hidden="true">img</figcaption>
+</figure>
+<p>一个简单的理解是，三元图是重心图，离哪个顶点近，哪个占比大。</p>
+<p>由点向底边做两条平行线建立小正三角形，将底边分成三段，中间为顶部组所占比例，左段为右侧组比例，右段为左侧组比例。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/512.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
+</figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Research</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Tutorial for handling MODIS ocean color data</title>
     <url>/posts/ef746e52.html</url>
     <content><![CDATA[<p>This tutorial covers mainly two parts:</p>
@@ -1473,6 +1643,46 @@ b_m
         <tag>Ocean Color</tag>
         <tag>Research</tag>
         <tag>Oceanography</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>absorption measurement process</title>
+    <url>/posts/49ca7bc7.html</url>
+    <content><![CDATA[<p>This is a summary of how to process absorption measurement data.</p>
+<p>The measurement is basically based on the QFT-T mode. More details could be found at <span class="exturl" data-url="aHR0cHM6Ly9pb2NjZy5vcmcvd2hhdC13ZS1kby9pb2NjZy1wdWJsaWNhdGlvbnMvb2NlYW4tb3B0aWNzLXByb3RvY29scy1zYXRlbGxpdGUtb2NlYW4tY29sb3VyLXNlbnNvci12YWxpZGF0aW9uLw==">IOCCG protocols volume 1<i class="fa fa-external-link-alt"></i></span></p>
+<a id="more"></a>
+<h1 id="cdom">CDOM</h1>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224105720968.png" alt="image-00030224105720968"><figcaption aria-hidden="true">image-00030224105720968</figcaption>
+</figure>
+<p>This is the excel sheet we used for CDOM measurement</p>
+<p>Each time we measure two blank and two samples.</p>
+<p>The <span class="math inline">\(a_{CDOM}\)</span> is calcualted follow: <span class="math display">\[
+a_{CDOM}=\frac{2.303}{l}[[OD_s(\lambda)-OD_{bs}(\lambda)]-OD_{null}]
+\]</span> <span class="math inline">\(l\)</span> is the path length of the quartz cell. In MPS-2400, the <span class="math inline">\(l=10cm(0.1m)\)</span>. 2.303 is the factor to convert <span class="math inline">\(log_{10}\)</span> to <span class="math inline">\(log_{e}\)</span></p>
+<p><span class="math inline">\(OD_s(\lambda)\)</span> is the optical density of the filtered water sample, <span class="math inline">\(OD_{bs}(\lambda)\)</span> is the optical density of purified water, and <span class="math inline">\(OD_{null}(\lambda)\)</span> is the apparent residual optical density at a long visible or near infrared wavelength where absorption by dissolved materials is assumed to be zero. In the previous measurement, we use the 700 nm as null wavelength.</p>
+<p>So this excel file is quite clear.</p>
+<h1 id="ap-ad-aph">ap ad aph</h1>
+<p>The optical density of total particles retained on the filter (<span class="math inline">\(OD_p(λ)\)</span>) were kept below 0.3 by adjusting the filtration volume. Subsequently, <span class="math inline">\(OD_p(λ)\)</span> was measured between 350 and 750 nm at 1 nm intervals, using a dual beam multi-purpose spectrophotometer (MPS-2400, Shimadzu Inc.). A blank filter soaked with 0.2 µm-filtered seawater (FSW) was used as the reference. To correct the path length amplification effect caused by multiple scattering in the glass fibre filter, the following equation was utilized according to Cleveland and Weidemann (1993): <span class="math display">\[
+OD_s(\lambda)=0.378OD_p(\lambda)+0.523D_p(\lambda)^2
+\]</span> where <span class="math inline">\(OD_s(λ)\)</span> is the optical density of particulate matter in suspension. The absorption coefficient of the total particles (<span class="math inline">\(ap(λ)\)</span>) was calculated using the following equation: <span class="math display">\[
+a_p(\lambda)=2.303OD_s(\lambda)S/V
+\]</span> where 2.303 is the factor used to convert <span class="math inline">\(log_{10}\)</span> to <span class="math inline">\(log_e\)</span> , S is the filter clearance area (<span class="math inline">\(m^2\)</span> ), and V is the filtered volume (<span class="math inline">\(m^3\)</span> ). The ratio of S to V approximates the geometrical light pass length.</p>
+<p>After measurements of the optical density of the total particles, the filters were soaked in methanol for at least 24 h to extract phytoplankton pigments, and then rinsed with FSW. The absorbance of a decolourized filter was re-measured using the same method to obtain the optical density of the non-phytoplankton particles (Kishino et al., 1985). Similarly, the absorption coefficient of non-alga particles (<span class="math inline">\(a_{nah}(λ)\)</span>) was determined using Eq. (2) and (3). <span class="math inline">\(a_{ph}(λ)\)</span> was then obtained from the following equation: <span class="math display">\[
+a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
+\]</span></p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030225145047326.png" alt="image-00030225145047326"><figcaption aria-hidden="true">image-00030225145047326</figcaption>
+</figure>
+<p>This the the excel sheet for ap. Blank 1&amp;Blank2 are measrued before ap, Blank 3&amp;Blank4 are measrued after ap</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color</tag>
+        <tag>Experiment Protocols</tag>
+        <tag>Absorption Measurement</tag>
       </tags>
   </entry>
   <entry>
@@ -1922,6 +2132,31 @@ tags: [标签1,标签2,标签3]
       <tags>
         <tag>博客搭建</tag>
         <tag>入门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hyperspectral and phytoplankton</title>
+    <url>/posts/ed08fed2.html</url>
+    <content><![CDATA[<p>This is an Annotated Bibliography for the doctor proposal.</p>
+<p>Hyperspectral Remote Sensing of Phytoplankton Species Composition Based on Transfer Learning</p>
+<p>Hyperspectral Differentiation of Phytoplankton Taxonomic Groups: A Comparison between Using Remote Sensing Reflectance and Absorption Spectra</p>
+<p>Distinguishing cyanobacteria from algae in optically complex inland waters using a hyperspectral radiative transfer inversion algorithm</p>
+<p>Hyperspectral optical discrimination of phytoplankton community structure in Funka Bay and its implications for ocean color remote sensing of diatoms</p>
+<p>Remote estimation of phytoplankton size fractions using the spectral shape of light absorption</p>
+<p>On the discrimination of multiple phytoplankton groups from light absorption spectra of assemblages with mixed taxonomic composition and variable light conditions</p>
+<p>Linking phytoplankton absorption to community composition in Chinese marginal seas</p>
+<p>Another way is to see the analyze the NPP/PSC</p>
+<p>Ultimate goal is to propose a hypothesis-test 的论文，并且跟我现在的修士论文有联系</p>
+]]></content>
+      <categories>
+        <category>Annotated Bibliography</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color</tag>
+        <tag>Inherent Optical Properties</tag>
+        <tag>Ocean Optics</tag>
+        <tag>Research Basis</tag>
+        <tag>Phytoplankton</tag>
       </tags>
   </entry>
   <entry>
@@ -2656,8 +2891,8 @@ b_{p}(\lambda)=A\lambda^{-\gamma}
       </categories>
       <tags>
         <tag>Ocean Color</tag>
-        <tag>Inversion</tag>
         <tag>particle backscattering</tag>
+        <tag>Inversion</tag>
       </tags>
   </entry>
   <entry>
@@ -3090,6 +3325,299 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
       </tags>
   </entry>
   <entry>
+    <title>人生实验室</title>
+    <url>/posts/c17fab82.html</url>
+    <content><![CDATA[<p>前排预警：这篇博客有我大量的个人牢骚和负能量。</p>
+<p>面对职业选择哭闹的我被朋友推荐的一本书，附上朋友讲的话。</p>
+<blockquote>
+<h2 id="人生实验室职涯难题的逻辑图解说明书">《人生实验室：职涯难题的逻辑图解说明书》</h2>
+<p>可以在这里试读和购买电子书：https://readmoo.com/book/210118075000101</p>
+<p>推荐这本书有三大原因，</p>
+<ul>
+<li>简明易懂</li>
+<li>实用操作性强</li>
+<li>有启发性</li>
+</ul>
+<p>全书一共十六个章节，每个章节由一个图文小故事和一个实验构成，聚焦一个职业生涯发展中常见的问题。作者用小故事把道理讲得深入浅出，微简报很好消化。而实验提供的是工具，引导读者根据具体的步骤来分析自己的问题。</p>
+<p>这本书的内核就是教读者运用科学研究的方法来分析自己的问题。我对科学方法的理解是有目的地搜集信息并在此基础上推理来解决特定的问题（作为一名科研人员，老实说我在看这本书的过程中非常汗颜。方法都熟悉，但是从来没有想到过把这一套系统的分析方法应用在解决人生困惑上）。</p>
+<p>如果你看这本书的期望是只要看完这本书，你的关于职涯的烦恼统统都会解决，那很抱歉你一定会失望。我不相信世界上存在一纸通用的治疗烦恼的配方，就算有，得到它的人也不会单是因为读完就会瞬间脱离烦恼的纠缠。但是我可以保证，无论你的烦恼是哪一种，在这本书里都会找得到一些启发，帮助你去面对和处理你的烦恼，并且让你对自己做出的选择更有信心。</p>
+<p>在考虑人生的重大抉择上，我认为掌握好的分析方法并不难，难的是收集到真实有效的信息作为分析的前提和基础。前提错了，哪怕方法再对，也不能保证得到正解。人往往以为最了解自己的人是自己。诚然，一个人会拥有许多他人没有的关于自己的信息，例如内心活动，感受，情绪等等。但是人也会因为局限于自身的认知和反应模式而看不清关于自己的很多东西。许多世俗眼光中的人生赢家所经验到的是空虚，虽然拥有了人人羡慕的外在之物，还是不知道自己真正想要的是什么。我们能够做的也许就是在搜集这些信息的时候尽可能地对自己诚实。如果你觉得了解自己很困难，那我的建议第一条永远是求助专业人士。</p>
+<p>读完这本书，我最深刻的体会是要有求证的实践和付出代价的准备。如果你属于逻辑能力不错的人，那么我相信，如果给你一组命题的真值，你一定能推断出待判命题的真假。然而逻辑强大的人可能反而会经验到更多的内在的冲突并且为此而苦恼。因为现实中面临抉择的时候作为前提的命题很少会全部已知TRUE or FALSE，你遇到最多的很可能是NA。正因为严谨，所以努力把所有因素纳入考虑范围，生怕漏掉任何一种可能性。正因为缜密，所以不会擅自把NA改成TRUE或FALSE，生怕会武断。变量一多就很容易纠结在某些细节上而分不清主次（我举个现实的例子：撒明灯。对不起，太严肃了忍不住不正经一下。）那么一些关键命题的真值能不能通过科学的方法找出来或者逼近？获取信息必须要付出代价，无论是通过实验还是模拟。实现梦想更需要付出代价。</p>
+</blockquote>
+<p>看这本书的时候带入两个岗位选择，一个是以yk姐姐为参考的公务员，另一个是搞科研。</p>
+<p>反正平时也没有人看我的博客，嘿嘿。</p>
+<a id="more"></a>
+<h1 id="实验001-方向-人生的目标是什么">实验001 方向-人生的目标是什么？</h1>
+<blockquote>
+<p>工作除了薪水，还有他更重要的意义。这份意义，是你人生真正追求的目标；这份意义，拥有比薪水更重要的价值；这份意义。才是你人生要坚持的方向。不知道努力有什么意义，那你一定要赶快把它找出来。</p>
+<p>没有目标的努力，只会让你不断在原地踏步；定清你的方向，让每一步前进都更有意义。</p>
+</blockquote>
+<p>很遗憾这本书并没有回答，我反而需要不断的问自己，人生的目标是什么？</p>
+<p>也许讲人生的目标太遥远，那我，30岁，6年内的目标是什么，或者再退一步，我对我30岁的生活状态有什么要求？</p>
+<p>我好像没有什么要求</p>
+<p>让我来慢慢的把我理想中的工作/生活细化一下，具体化一下。</p>
+<ul>
+<li>Work-life balance</li>
+</ul>
+<p>这条代表了不加班，或者我做科研的话就是凭我自己时间管理能力能做到WLB。</p>
+<ul>
+<li>小米全家桶的家居</li>
+</ul>
+<p>这条代表了我有买房的能力，因为组的房子不可能让我这么乱收拾。</p>
+<ul>
+<li>PS/Swicth/主机齐全，新游戏发售不会因为硬件条件/软件条件玩不了</li>
+</ul>
+<p>这条代表了，我有足够的经济实力，能自由的翻墙而且不被担心查水表。</p>
+<ul>
+<li>去过纳米比亚,看过极光</li>
+</ul>
+<p>这两条代表了我能请下假，并且有长达半个月甚至一个月的年假。</p>
+<p>似乎除了做学术或者在国外工作之外，并没有其他的办法能满足了。</p>
+<p>其实这些是我2.24晚上更新的，后面的内容，可以不用看了。</p>
+<p>我发现我目前的不开心似乎都是来源于我自己。</p>
+<p>我自己需要很多的改变。</p>
+<ul>
+<li>提高效率，干活和其它时间分开</li>
+<li>专注干活不分心</li>
+<li>早睡早起，养成习惯，坚持运动</li>
+<li>提高写代码的规范</li>
+<li>多和老板交流</li>
+</ul>
+<p>我觉得我不是不可能在三年内毕业，不就两篇文章。</p>
+<p>那就读吧。</p>
+<p>我又在反复横跳了。</p>
+<p>后面可以不用看了，暂时。</p>
+<p>2021.2.26</p>
+<p>自己不要把很多事情想得太美好。</p>
+<p>自己读了博，就一定会找到合适的教职吗？</p>
+<p>不一定。</p>
+<p>哪怕是在日本，也很难。</p>
+<p>好累。</p>
+<p>自己不要过分美化这个选项。</p>
+<p>感觉自己这个是另一个版本的Ph.D Grind</p>
+<p>虽然那本书我也没有读完。</p>
+<p>自己更大的概率，是像Fukutomi一样。</p>
+<p>四十岁也只能当个博后，</p>
+<p>每次被老板否定总会抑郁一段时间。</p>
+<p>就是自己把研究，把别人对自己的评价看得太重了。</p>
+<p>自己还不够强大。</p>
+<p>暂时好像就这些？</p>
+<p>2021.3.8</p>
+<p>再次反复横跳</p>
+<p>记住 你自己是一个普通人</p>
+<p>哪怕读博，你可能也会没有时间出去玩</p>
+<p>而且事业单位也是要上交护照的</p>
+<p>我读完博之后那么多压力也可能很难有心情去玩</p>
+<p>我又开始迷茫了。</p>
+<p>那感觉，自己唯一需要考虑的事情，就是自己对搞研究有没有兴趣了。</p>
+<p>如果自己能提出来，偏向science的课题。</p>
+<p>自己就很大概率会去读了。</p>
+<p>至于读完之后去哪里...</p>
+<p>可是自己真的喜欢这种这么富有挑战性的工作吗？</p>
+<p>不，自己的本质是不喜欢的。</p>
+<p>自己时常性因为各种没有做出来好的结果而失眠。</p>
+<p>也常常因为各种问题而焦虑。</p>
+<p>自己可能喜欢做一些理论的前沿的事情。</p>
+<p>但是可能自己并不适合。</p>
+<p>主要是自己的心态太差。</p>
+<p>或者如果能有女朋友分担和支持，至少让自己的未来不那么模糊就好了</p>
+<p>如果自己能在未来的一段时间里改掉心态的问题，可能会好一些吧？</p>
+<p>搞科研可以不焦虑吗？</p>
+<p>另一个方向是，正如自己和心理咨询师聊到的。</p>
+<p>自己似乎更多的执念都是在那两个愿望上。</p>
+<p>对自己别要求太高。</p>
+<p>全世界哪里的星星和极光都是一样的。</p>
+<p>那些技能 与人交流组织之类的</p>
+<p>或许自己可以学？</p>
+<p>但是自己擅长吗？</p>
+<blockquote>
+<p>大量的人在读完博，做完post，甚至到了AP之后都有转行的</p>
+<p>https://www.zhihu.com/question/33784042</p>
+</blockquote>
+<p>自己也就不要想太多</p>
+<p>慢慢走才会走的最快</p>
+<p>步子大了反而会把自己扯到</p>
+<p>而且自己需要调整自己的节奏</p>
+<p>如果自己忙到每天搞完研究就没有别的事情。</p>
+<p>那就不是 科研 的问题了</p>
+<p>而是自己的问题</p>
+<p>自己去做什么都会这样</p>
+<p>自己可以接受 未来五到十年的不稳定 甚至三十岁才能定下来自己未来的方向吗？</p>
+<p>未来五到十年，没有女朋友。</p>
+<p>自己 更喜欢什么样的生活？</p>
+<p>就拿</p>
+<p>不要对自己抱有太多期望。</p>
+<p>做好自己眼前能做的事情。</p>
+<p>不要对自己抱有太多期望。</p>
+<p>做好自己眼前能做的事情。</p>
+<p>不要对自己抱有太多期望。</p>
+<p>做好自己眼前能做的事情。</p>
+<p>我居然没有把结婚孩子房子写在里面。</p>
+<h1 id="实验002-稳定-对你来说什么叫做稳定">实验002 稳定-对你来说，什么叫做稳定？</h1>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224154526555.png" alt="image-00030224154526555"><figcaption aria-hidden="true">image-00030224154526555</figcaption>
+</figure>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>我有喜欢做的事情吗？</p>
+<p>没有。</p>
+<p>哪怕是打游戏，打多了我也会腻。</p>
+<p>对我来讲我更多的处于“条件”和“目标”的中间，那就是：我不会因为有个工作可以满足稳定的条件就去做那个工作，但是我也不知道我喜欢什么。我更倾向于，有一个满足稳定条件的工作，同时我又不讨厌。</p>
+<p>换而言之，我还是想要一个稳定 条件 的工作。因为我不知道我喜欢什么，想要做什么，也就没有办法让自己喜欢做的事情变得有价值。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155250373.png" alt="image-00030224155250373"><figcaption aria-hidden="true">image-00030224155250373</figcaption>
+</figure>
+<p>我在B。</p>
+<p>其实这个过程对我来讲挺没意思的，因为我设置的两个选项都是稳定条件。</p>
+<p>但是我也列一下吧。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155358512.png" alt="image-00030224155358512"><figcaption aria-hidden="true">image-00030224155358512</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155417293.png" alt="image-00030224155417293"><figcaption aria-hidden="true">image-00030224155417293</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155446374.png" alt="image-00030224155446374"><figcaption aria-hidden="true">image-00030224155446374</figcaption>
+</figure>
+<h1 id="实验003-盲点-爽到底是什么">实验003 盲点-爽，到底是什么？</h1>
+<p>这一章讲 用别人的角度来给自己挑毛病。</p>
+<p>虽然很有用，但是对现在的我完全没用。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155637057.png" alt="image-00030224155637057"><figcaption aria-hidden="true">image-00030224155637057</figcaption>
+</figure>
+<h1 id="实验004-烦恼-什么才是对的选择">实验004 烦恼-什么才是对的选择？</h1>
+<blockquote>
+<p>你要花时间的，不是决定要不要做这个选择；</p>
+<p>你要花时间的，是把它变成好的选择。</p>
+<p>人生最痛苦的，其实不是失败。</p>
+<p>人生最痛苦的，是我本来可以。</p>
+<p>比作出错误选择更严重的，是明明对现状不满意，却又不敢做出选择。</p>
+<p>人生只有一次，别让未来充满后悔；勇敢做出行动，让你的决定成为最佳选择。</p>
+</blockquote>
+<blockquote>
+<p>两难问题：我在考虑要不要OOO，但是我也有点担心XXX</p>
+<p>OOO：对原定的前进方向，一直以来的环境状况做出的改变</p>
+<p>XXX：期待另一个未来的机会，但是没有把握结果会怎样</p>
+<p>也就是说，OOO是“要不要改变状况”, XXX是“担心改变会不如预期”的问题。</p>
+</blockquote>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224164811495.png" alt="image-00030224164811495"><figcaption aria-hidden="true">image-00030224164811495</figcaption>
+</figure>
+<table>
+<thead>
+<tr class="header">
+<th>OOO：不读博，回去考公务员需要面对的付出</th>
+<th>XXX：担心不读博未来出现的结果</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>从今年十月到明年八九月份的GAP</td>
+<td>可能考错了地方 或者考了之后变得很忙</td>
+</tr>
+<tr class="even">
+<td>准备考试</td>
+<td>工资很低，房子买不起</td>
+</tr>
+<tr class="odd">
+<td>搜集资料</td>
+<td>可能考不上</td>
+</tr>
+<tr class="even">
+<td>准备面试</td>
+<td>可能30岁的时候的收入还很低</td>
+</tr>
+<tr class="odd">
+<td>备战考试</td>
+<td>可能会做很多面子工作，对自己来讲很没意义的事情</td>
+</tr>
+<tr class="even">
+<td>学习社交，说话，公文等一系列我不喜欢的事情</td>
+<td>可能会后悔，很难再次跳出来读博</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>可能我的脑子会生锈，再也没有机会沉下心学习数学物理文学</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224165536748.png" alt="image-00030224165536748"><figcaption aria-hidden="true">image-00030224165536748</figcaption>
+</figure>
+<p>其实这个图分类的不是很合理，我是可以改变，但是还没有下定决心，应该在D那里而不是E那里。很多时候不是想改变想决定就能改变能决定的。</p>
+<blockquote>
+<p>这种时候要考虑的是，有没有另外的解法。</p>
+</blockquote>
+<p>诚实地说，没有。</p>
+<p>我只能做两个选择。非此即彼。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224170001363.png" alt="image-00030224170001363"><figcaption aria-hidden="true">image-00030224170001363</figcaption>
+</figure>
+<p>原来我是在这里</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224170059171.png" alt="image-00030224170059171"><figcaption aria-hidden="true">image-00030224170059171</figcaption>
+</figure>
+<p>做学术算是自己的理想吗？</p>
+<p>不算。</p>
+<p>但是自己不去尝试一下做学术会后悔吗？</p>
+<p>会。</p>
+<p>自己宁愿尝试后再后悔还是后悔没有尝试？</p>
+<p>后悔没有尝试。</p>
+<p>但是我觉得人还是要现实一点。</p>
+<h1 id="实验005-因果-学位与证照那是什么">实验005 因果-学位与证照，那是什么？</h1>
+<blockquote>
+<p>读博唯一无法取代的，是它的毕业证书。</p>
+<p>你的价值，非要毕业证书才能证明吗？</p>
+<p>研究所，只是一条路。</p>
+<p>这条路，你可以走，也可以不走。</p>
+<p>可以大学毕业就走，也可以改天想走再走。</p>
+<p>你不会因为念了研究所就脱胎换骨。</p>
+<p>你也不会因为没念研究所就矮人一截。</p>
+<p>人生不需要急着应在起跑线。</p>
+<p>只要赢在终点，哪里是起点有谁会在乎。</p>
+<p>人生的路很多条，每一条都是不同选择。</p>
+<p>认真走好选择的路，每一条都会是最好的路。</p>
+</blockquote>
+<p>其实这段话有点废话和心灵鸡汤。</p>
+<p>这里面的读博，换成考公务员也是一样的。</p>
+<p>但是很多时候不是想走就走，不是想怎么样就怎么样。</p>
+<p>的确有人这么做成了，但是我只是一个普通人，我不能对自己要求太多。</p>
+<p>我能走好一条路就很不错了。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224212928778.png" alt="image-00030224212928778"><figcaption aria-hidden="true">image-00030224212928778</figcaption>
+</figure>
+<p>所以这个其实也跟我现在的问题没啥关系。</p>
+<p>我的目标 并不是什么直接的东西</p>
+<h1 id="section">2021.2.26</h1>
+<p>(进行一下时间标注，上面的都是2.25写的)</p>
+<p>自己不要把很多事情想得太美好。</p>
+<p>自己读了博，就一定会找到合适的教职吗？</p>
+<p>不一定。</p>
+<p>在日本，就很难。</p>
+<p>刘老师当了那么多年博后。</p>
+<p>Aiki当了那么多年博后。</p>
+<p>好累。</p>
+<p>自己不要过分美化这个选项。</p>
+<p>感觉自己这个是另一个版本的Ph.D Grind</p>
+<p>虽然那本书我也没有读完。</p>
+<p>自己更大的概率，是像Fukutomi一样。</p>
+<p>四十岁也只能当个博后，</p>
+]]></content>
+      <categories>
+        <category>梦里真真语真幻</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>随便写写</tag>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客第三方插件和图片问题解决</title>
     <url>/posts/361a6d0d.html</url>
     <content><![CDATA[<p>啊四月份本咸鱼赏(da)樱(you)花(xi)和搞毕业论文去了，五月份滚回来更新。争取在没有你的五月（误）把机器学习基石的上更新完，然后把毕业论文的代码发到github。</p>
@@ -3236,6 +3764,46 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
       <tags>
         <tag>博客搭建</tag>
         <tag>进阶</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文献管理</title>
+    <url>/posts/4ce7830b.html</url>
+    <content><![CDATA[<p>mendely停止移动端服务之后发生的事情</p>
+<a id="more"></a>
+<p>2021.3.15号mendely停止服务，其实我在一段时间之前就注意到这个事情了。但是今天晚上睡前拿出Ipad打开mendeley一看，打不开，哦，这才发现要处理这个问题了。</p>
+<p>我对文献管理软件的要求是：</p>
+<ol type="1">
+<li>能适配word，并且自动更改引用格式。</li>
+</ol>
+<p>其实这一条就应该去掉Mendeley了，他的格式识别很有问题，并且这个东西经常在Mac的Word上卡顿；除此之外,Word对公式和图片的支持也不是很好，所以最好他能导出Biblitex或者直接支持Latex。</p>
+<ol start="2" type="1">
+<li>不要让我操太多心，付费可以。</li>
+</ol>
+<p>这条去掉zetero和Marginote。</p>
+<p>其实我非常羡慕Marginote的那个脑图，很符合人脑的思维模式。我现在脑子里就有更新之前的几篇AB的想法，但是直接更新的话长年累月就变成了粪坑，开新的话就搞得太多了写论文的时候也很难找。最直接的做AB的办法就是直接在文献管理软件里直接Annotate。</p>
+<p>但是Marginote就太小作坊了，很容易出问题，zetero则跟python一样要搞各种插件，算了算了累了累了。</p>
+<ol start="3" type="1">
+<li>全平台同步</li>
+</ol>
+<p>其实文件同步很容易，重要的是Annotation的同步，这条直接去掉Marginote。</p>
+<ol start="4" type="1">
+<li>插入文献搜索的时候能搜索到我的Annotation。。</li>
+</ol>
+<p>这条好像真的挺难的。</p>
+<ol start="5" type="1">
+<li>能自动提取文献相关信息</li>
+</ol>
+<p>查了好多测评，papers似乎是准确率最高的那个</p>
+<p>这么查来查去，好像就剩下Papers能用了。好在他还有个三十天付费，先试试吧。</p>
+<p>对了，Mendeley转到其他平台的话，还要记得先降级，真的是垃圾软件。果然世界上没有免费的午餐。而且我这么一转的话之前做的好多标记也都没了。还好我读的文献也不多，而且很多我觉得重要的文献要么打印要么做了AB。</p>
+<p>猛然发现自己做AB的Flag已经倒了好久了，哎，自己最近状态确实不好，最近两个月大概。</p>
+]]></content>
+      <categories>
+        <category>人生得意须尽欢</category>
+      </categories>
+      <tags>
+        <tag>随便写写</tag>
       </tags>
   </entry>
   <entry>
@@ -3748,6 +4316,81 @@ k\le (\frac{R}{\gamma})^2
       <tags>
         <tag>总结</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>游戏人生</title>
+    <url>/posts/6fe52848.html</url>
+    <content><![CDATA[<p>其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。</p>
+<p>没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。</p>
+<p>既然没有人看到，那就当自己的一个私密又公开的日记本就好了。</p>
+<p>如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。</p>
+<p>可能自己之后会开第二个博客来写这些东西吧。</p>
+<a id="more"></a>
+<h1 id="人生的意义是什么呢">人生的意义是什么呢？</h1>
+<p>每个人大概都有过那种非常自信的时间段，就是觉得那种，100个人里面有一个人活了下来，就觉得自己是那个活着的人，而不是死的那些。我也有过。</p>
+<p>我一直以为自己是个天选之子，曾经。比如，在班里我是最早去找实验室的，我也很快就触及到了很多目前没解决的科学问题，并且觉得自己似乎有能力来解决它。</p>
+<p>但是，慢慢的发现其实自己只是一个普通人。</p>
+<p>自己的想法别人也可以想到，自己的工作也没有什么不可替代性，没有我还会有张XX李CC来解决它，毕竟问题就在那里，迟早是要被解决的。</p>
+<p>自己不是什么天选，自己只是一个普通人。所以自己想不出来一个很好的课题很正常，自己做不出来东西也很正常。</p>
+<p>因为自己只是普通人，一个可能稍微运气好一点的普通人。自己在迷路的时候稍微看到了点特殊的东西，就觉得那是因为自己坚持走了好久的路才看到它的，其实它的出现根本和自己的努力没关系。</p>
+<p>就像那个经典的问题。</p>
+<blockquote>
+<p>三个人一起坐着电梯上楼，上楼之后，有人问他，你是怎么上来的呀？</p>
+<p>一个人讲：“我一直在看书，是知识的力量。”</p>
+<p>另一个人讲：“我一直在电梯里仰卧起坐，是运动的力量。”</p>
+<p>最后一个人讲：“我在电梯里呆了很长很长时间，是坚持的力量。”</p>
+</blockquote>
+<p>那我活着的意义到底是什么？</p>
+<p>大概是不久之前，我就和朋友讨论过这个问题。</p>
+<p>我目前给我自己的答案就是</p>
+<p>人出生就是为了受苦的。</p>
+<p>人类诞生下来，唯一一个从诞生开始就客观存在的使命就是繁衍，每一个物种都是。很多时候说生物都是基因的奴隶也不为过。</p>
+<p>但是人类居然有了自己的想法， 居然不想执行自己的使命，上天自然要给人类各种各样的痛苦。</p>
+<p>其实这么讲，最快的结束痛苦，对抗这个使命的方法就是自杀。我也想过自杀。</p>
+<p>但是其实可能，每个人都有必须活下去的理由，或者说支撑着自己活下去的理由。</p>
+<p>对我来讲，我是还有好多想看的东西没有看，我觉得这样太对不起自己来人间这一趟了，也太便宜基因这个小恶魔了。</p>
+<blockquote>
+<p>且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适。</p>
+</blockquote>
+<p>自己还有好多风景没有看过，好多地方没有去过，好多事情没有做过。</p>
+<blockquote>
+<p>人生若梦，为欢几何？古人秉烛夜游，良有以也。况阳春召我以烟景，大块假我以文章。会桃花之芳园，序天伦之乐事。群季俊秀，皆为惠连；吾人咏歌，独惭康乐。幽赏未已，高谈转清。</p>
+</blockquote>
+<p>大自然真的好像在PUA我，一方面拿天地间的奇伟瑰丽召唤我，让我坚持下去；另一方面又给我施加无穷无尽的苦难。</p>
+<p>我的人生，也就是来受苦的吧。但是能在这种种苦难中能让我目酣神醉，这人间烟火能让我潸然泪下，这些东西就像画龙点睛一样，照亮了整个的黑暗。</p>
+<p>所以我目前的一个个选择，也都是想让自己越来越自由。如果我没有了感受这些东西的机会，那我还不如去死好了。</p>
+<h1 id="人生是什么">人生是什么？</h1>
+<p>但是人类真的能掌握自己人生的走向吗？就像我一直想做的一个个事情，我真的能做吗？很有可能最终也会死不瞑目。因为我只是个普通人。普通的不能再普通。</p>
+<p>我越来越感受到，相比于个人的努力，运气 和 时代 两个东西，真的是几乎决定了90%的人生走向。</p>
+<p>这么讲吧，如果固定运气和时代这两个因素，那么努力和结果的关系大概是这样的。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030321182943797.png" alt="y=arctan(x)"><figcaption aria-hidden="true">y=arctan(x)</figcaption>
+</figure>
+<p>努力会让你越来越好，但是这会有一个极限，会有一个渐近线。</p>
+<p>熟悉我的人都知道我是一个RPG玩家，最近我越来越有人生其实就像一场游戏的感觉了，也就是本文的标题。</p>
+<p>最出名的RPG《博德之门》，每次事件，每次战斗，都是一场扔骰子。哪怕好感达到了100%，你也有可能表白失败；哪怕你的等级属性比BOSS厉害好多，你也有可能被他打死。</p>
+<p>因为一切都是随机的，都要看概率。</p>
+<p>人生真的好像呀，很多事情，就像我之前一样，只是因为你运气好，和你自己的努力并不一定有什么关系。</p>
+<p>这里牵扯到另一个问题，人类社会是可以被预测的吗？</p>
+<p>因为我们现在已经在慢慢研究到了每个原子每个分子每个蛋白质每个RNA的行为和功能了，如果我们把他们的规律研究出来，人类不就是一大坨蛋白质加溶液吗？那我们也可以预测每个人类的行为咯？这样我们也可以预测人类社会的发展咯？就像马克思搞的那一套“人类社会的发展规律”。</p>
+<p>这么说，人类的未来是确定的，可以被预测的咯？</p>
+<p>我最近越来觉得不会了，因为我开始感觉上帝是掷骰子的。</p>
+<p>就像面前有两只快死的小老鼠，上帝只能救活一只。上帝要决定救哪一只。</p>
+<p>上帝计算了所有的参数，这个时候他需要一个东西：目标函数。或者讲，为了什么才来救小老鼠。</p>
+<p>上帝如果按照自己的想法来救，那么我们人类社会的命运其实就被确定了。但是真的存在“上帝”这个东西吗？</p>
+<p>如果上帝只是来履行职责，它本身对于救哪个小老鼠并没有什么偏好。那他就是在掷骰子。</p>
+<p>人生是游戏的另一重含义，就是，你的命运大概率是被时代-也就是剧本决定的。</p>
+<p>毕竟单个的人在时代的浪潮里，连一朵小水花都算不上。哪怕你练成了十里坡剑神，你可能还是救不了月如和灵儿。</p>
+<p>哪怕你是天下第一高手，你也会有救不了守护不了的人。</p>
+<p>人生就是一场游戏，一场由时代编剧，由上帝掷骰子的RPG游戏。</p>
+<p>游戏打的爽不爽，很多时候是由上帝的骰子决定。</p>
+<p>游戏的结局好不好，则是由时代决定。</p>
+<h1 id="updata-of-the-blog">Updata of the blog</h1>
+<p>I decide to add google analytics back to get closer with my friends. The way of collect persenal information is based on google. Thank you for your understanding.</p>
+]]></content>
+      <categories>
+        <category>人生得意须尽欢</category>
+      </categories>
   </entry>
   <entry>
     <title>狼总访谈</title>
@@ -4568,6 +5211,264 @@ P(\lambda,R)=P_0*\frac{c\tau}{2}*\beta(\lambda,R)*\frac{A_r}{R^2}*exp(-2\int_0^R
       </tags>
   </entry>
   <entry>
+    <title>My grind</title>
+    <url>/posts/b5654816.html</url>
+    <content><![CDATA[<p>一些日记或者类似于闲言碎语的日常发牢骚。</p>
+<a id="more"></a>
+<h1 id="section">2021.3.9</h1>
+<p>最近一直在处理实验室过去的吸收数据，处理得我脑袋疼。不得不主动停下来，去想一些别的事情。</p>
+<p>最开始想的就是自己博士的课题。</p>
+<p>老板快要退休了，很直白的告诉我他没有funding了，所以其实在这里继续读下去不是一个很好的选择。但是自己在这里想继续读，其实很多时候就是像心理咨询老师讲的一样，我只是在逃避自己不喜欢的东西而已。</p>
+<p>自己并没有什么特别喜欢的东西。</p>
+<p>自己真的没有什么特别喜欢的东西，但是自己有很多想做的事情，和很多不想做的事情。</p>
+<p>自己对学术其实也没有什么特别的热情，其实真相是，自己大概率不会成为老板这个实验室里面的Outlier，而最好的两个Outlier才分别去了JAMSTEC和南信工而已。</p>
+<p>所以其实自己很大概率在博士毕业之后，也只能去个普通一本二本-自己实验室里绝大多数人的工作都是一个普通的一本二本，或者公司。</p>
+<p>而这意味着，自己很大概率和科研无缘。</p>
+<p>所以，其实还不如读完博去上班。</p>
+<p>做科研几乎和WLB无缘了。</p>
+<p>自己就是在逃避。</p>
+<p>想了半天，看了好多https://dingzeyu.li/blog/的博客，看到他写的PhD. Grind读后感很有同感，于是</p>
+<p>其实我就忽然觉得。</p>
+<p>自己不需要对自己要求太高，毕竟慢慢走才走得慢。</p>
+<p><strong>自己很大概率和科研无缘</strong></p>
+<p><strong>自己很大概率和科研无缘</strong></p>
+<p><strong>所以不要强迫自己去解决太难的问题，也不要强迫自己去提出来太好的课题，自己现在连一个PhD student都不是</strong></p>
+<p><strong>所以不要强迫自己去解决太难的问题，也不要强迫自己去提出来太好的课题，自己现在连一个PhD student都不是</strong></p>
+<p><strong>只要自己足够努力，对自己的每一篇Paper都负责就可以了</strong></p>
+<p><strong>只要自己足够努力，对自己的每一篇Paper都负责就可以了</strong></p>
+<p>自己最好选择一个那种 对自己要求不是太高，自己稍稍伸下手就能够得到，同时又能充分利用自己的想法，让自己活得很舒服的状态。</p>
+<p>不要总是去挑战自己。</p>
+<p>那。</p>
+<p>我似乎知道了。</p>
+<p>自己似乎最好学好日语，读完博在日本找工作。</p>
+<p>虽然在日本博士就职也挺困难的，但是对自己来讲这是比较容易达到理想生活的方式了。</p>
+<p>或者去其他国家做博后，然后留在那里。</p>
+<p>如果自己不读的话，就回去做个公务员吧。</p>
+<p>自己要尽快学好日语，越快越好。</p>
+<p>然后顺利毕业。</p>
+<p>这样在老板不能给我提供RA的情况下，自己也可以尽快在日本找到工作。</p>
+<p>无论如何，对自己来讲，在日本工作比在国内工作舒服很多呀。</p>
+<p>但是日本这里也会有自己不喜欢的内容，自己千万别太过分美化这里了。</p>
+<p>日本没有移民文化，自己在这里就是一个外人。</p>
+<p><strong>自己要时刻做好，老板没有Funding，去工作的公司会倒闭的准备。</strong></p>
+<p>给自己一个Plan B</p>
+<p>摘录一下上面提到的博客里面的内容来提示自己：</p>
+<blockquote>
+<p>1.人生不可控</p>
+<p>PhD期间意识到最大的一点，我觉得就是意识到了人生无常。很多时候命运的安排远远超出我们自己的能力的范围。很多东西都不是我们自己可以控制的。作为一个computer scientist, 我下意识的就觉得很多东西都应该是deterministic的，就像是写了个程序，它的输出就是应该是十分确定的，可是人生的确是不可控的。</p>
+<p>举几个例子吧。第一个，研究的方向。入学前两年，多数学生都是clueless，基本都是靠导师提供一些想法和方向，而这个方向由于各种各样的原因，有可能做了几年是个dead end，有可能做了几年变成deep learning一般的热门方向。这种大方向的控制，基本都是学生自己没法预测和控制的。</p>
+<p>再举一个，各种闲事琐事的作用也是无法量化和预测的。在郭生的经历里，他怎么可能预测到自己和好基友闲聊从而听说了某个workshop，从而认识哈佛的教授，从而帮他把idea D完善，从而在他博士最后一年能去哈佛访问，从而发表博士论文的最后一篇文章，从而凑齐自己的答辩委员会。</p>
+<p>当初，他怎么可能预测到，和好基友喝的一杯咖啡和闲聊，能在几年后帮助到他自己毕业呢。这就是无法预测，无法计划的。</p>
+<p>只能顺其自然，做最好的自己，增大成功的概率。关键在于意识到身边发生的很多事情是在自己控制以外的，成功了不必过于沾沾自喜，失败了也无需太责备自己。</p>
+<ol start="2" type="1">
+<li>不坚持就不会成功</li>
+</ol>
+<p>虽然人生无法预测，但是个人努力还是十分重要的。基本没有谁可以不努力就获得很大的成功，就算不努力可以一时顺利，也无法一直顺利。</p>
+<p>郭生虽然前面几年都一直在撞墙，既没找到自己研究的方向，也没投出一作的文章，但是他一直在努力，没有放弃。正是这些年的积累，能让他在第四年第五年，厚积薄发，一股气做完了四个项目，这种写code能力写paper的能力，都是郭生前几年坚持的成果。</p>
+<p>我的博士起步也是比较艰难，第一篇论文很快就做完投出去了，但是投会议被拒了两次，每次被拒就是要接着花时间改进，这样一年就过去了。之后转投一个journal，经过再两次major revision和一连串的minor revision，最终过了三年才present。不得不说这样子的体验是挺可怕的，我挺幸运的，各种机缘巧合能够从谷底走出。</p>
+<p>最近在读一本书，<span class="exturl" data-url="aHR0cHM6Ly9hbXpuLnRvLzJuYW1STHU=">Grit: The Power of Passion and Perseverance<i class="fa fa-external-link-alt"></i></span>。书名里的Grit原意是小沙粒，后来延伸出“courage and resolve”的意思，勇气和决心。不得不说Grit和郭生的Grind这本书有异曲同工之意。都是要慢慢研磨，坚持不懈。这本Grit的书里举了很多名人成功的例子，发现他们成功的共同点并不是他们很先天聪明或者很有天赋， 而是后天不断的努力，遇到困难也不放弃。读Grit的时候总感觉自己在读鸡汤，可是那些例子貌似又的确挺convincing。之后有时间再写写那个的读后感吧。</p>
+<ol start="3" type="1">
+<li>导师太重要</li>
+</ol>
+<p>这些年来，断断续续的也很多同学都问过我说怎么选PhD offer。虽说这个是个幸福的烦恼（毕竟拿了好几个offer），但如果选择不当的话，的确可以造成多年困扰。</p>
+<p>我觉得学校排名重要，地理位置重要，实验室的同学重要，可最终最重要的还是导师。其实导师重要的原因太多太多，我也没法一一列举，就说两个本科同学可能没意识到的吧。当然，如果你的目标是天天划水，几年后混个学位的话，就不用考虑以下的因素了。</p>
+<ul>
+<li>导师决定你的毕业时间。有的导师就是习惯五六年毕业学生，有的导师就是出名的拖着学生不毕业的，很多这些在理科生物化学里面尤其为甚，工科的稍微少一点点。当然作为学生，自己的努力也会影响自己的研究进度，可是看回上面的第一点：人生不可控，毕业时间就是一个不可控的事情。</li>
+<li>导师能推动你的研究起步。你在不在导师的<span class="exturl" data-url="aHR0cDovL3d3dy5wZ2JvdmluZS5uZXQvY3JpdGljYWwtcGF0aC5odG0=">critical path<i class="fa fa-external-link-alt"></i></span>上？要了解接下来导师五年的计划，是不是要休sabbatical，是不是要忙自己的startup，是不是要休产假，是不是要partime去大公司。这些情况我都从自己的朋友同学那里听说过，都对新入学的学生的研究起步有很大的影响。如果你的导师能在接下来五年安心做研究，对你的发展会很有帮助。</li>
+<li>导师要付你全部的学费和工资。所以理论上导师可以直接fire你。作为学生，我觉得很重要的一点，就要认识到：要是你连着很长一段时间都没法meet导师的expectation的话，赶紧好好沟通，如何让双方能on the same page.</li>
+</ul>
+<p>说回到郭生的案例，他导师真是太不错了。这些年郭生都没有做导师的critical path上的project，导师也没很大的意见。其中部分原因是郭生自带funding，部分原因就是导师自己本身比较nice。在这种情况下，让郭生做了DEFGH五个项目顺利毕业，也是挺难得的。</p>
+</blockquote>
+<h1 id="section-1">3.10</h1>
+<p>上午碎碎念。</p>
+<p>自己既然大概率与科研无缘，那么自己后面其实很多时候，所要处理的事情也并不是自己想象中具有很高创造性的工作。而且自己研究的性质决定了不可能会有太多人感兴趣。 其实拿国外的教职环境，研究环境和国内相比非常合适。 其实如果自己成不了什么特别厉害的人，何不赶紧放弃，让自己成为一个普通人。 自己读研两年，一篇论文都没发呢。 自己能接受目前国内的工作环境吗？ 能接受就可以回去。 其实。 没什么大不了的。 https://www.zhihu.com/question/24308741 自己适合做公务员吗？ 自己现在的问题就变成了，如果明确知道自己毕业以后不会做科研，读博还有意义吗？</p>
+<p>不管怎么样，自己比海大的学生好多了？是吗？</p>
+<p>至少比同期的学生好多了。</p>
+<p>同班。</p>
+<p>虽然自己未来的竞争者也不是这些人。</p>
+<blockquote>
+<p>博士是一份给你学位的工作，而且还是一份工资不高且时间有限的工作。博士只是人生的一个阶段，而且是很短暂的一个阶段，不可能一直在学校读博士，即使继续做科研，也不一定能有机会继续做博士的研究内容。做好人生规划，尽快做好自己的工作按时完成论文按时走人，继续人生的下一阶段才是正事。</p>
+</blockquote>
+<p>自己对科研有兴趣吗？</p>
+<p>有 确实是有</p>
+<p>但是自己的兴趣都更来源于算法，光学，偏物理的那一部分。</p>
+<p>而不是生物。</p>
+<p>自己对生物，没有任何兴趣。</p>
+<p>被数据的不规范编号逼疯的下午碎碎念。</p>
+<p>自己有能力去做自己感兴趣的那一部分吗？</p>
+<p>没有。</p>
+<p>真的没有。</p>
+<p>而且还有焦虑的问题。</p>
+<p>自己这种人怎么可能不焦虑。</p>
+<p>而且搞学术真的很容易被更大的peer所包围。</p>
+<p>这个peer包括所有干你这行的人</p>
+<p>太难了</p>
+<p>如果我能找到自己的niche就好了</p>
+<p>就是那种，很适合我做的事情。</p>
+<p>太累了。</p>
+<p>自己最好能找到自己的niche，即：</p>
+<ol type="1">
+<li>没有太多应付性，无意义，重复性的工作</li>
+<li>没有太多应酬</li>
+<li>不加班，能有很多空闲时间来完成自己的想法</li>
+<li>月薪5000起即可，但是要有足够的可预见的上升空间</li>
+<li>能让自己不要那么焦虑</li>
+<li>不要有太傻逼的领导，或者说随机性不要那么强，因为自己不知道入职之后的领导会是什么样子的。</li>
+</ol>
+<p>太难了。</p>
+<h2 id="跟雅坤姐姐的讨论">跟雅坤姐姐的讨论</h2>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173439199.png" alt="image-00030310173439199"><figcaption aria-hidden="true">image-00030310173439199</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173507624.png" alt="image-00030310173507624"><figcaption aria-hidden="true">image-00030310173507624</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173532532.png" alt="image-00030310173532532"><figcaption aria-hidden="true">image-00030310173532532</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173600811.png" alt="image-00030310173600811"><figcaption aria-hidden="true">image-00030310173600811</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173625087.png" alt="image-00030310173625087"><figcaption aria-hidden="true">image-00030310173625087</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173646631.png" alt="image-00030310173646631"><figcaption aria-hidden="true">image-00030310173646631</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173703981.png" alt="image-00030310173703981"><figcaption aria-hidden="true">image-00030310173703981</figcaption>
+</figure>
+<p>接下来的问题</p>
+<ol type="1">
+<li><p>问老板支不支持我做一些偏向光学的项目</p></li>
+<li><p>问请家里人的经济情况</p></li>
+</ol>
+<p>自己还是想做大学老师这份职业的。</p>
+<p>自己在上学的时候就想过如果自己当了大学老师会怎么讲课。</p>
+<h2 id="再次劝退">再次劝退</h2>
+<p>https://note.com/chol_gyu/n/na93b711b844f 做研究就是世界上最差的工作。 工作的收入和满意度基本是最差的那档了。 9107一个月七八千，外加无尽的考核。 你像企业里，有了支付宝还有微信支付，有了淘宝还有京东拼多多 做研究你不是第一个你就是0 要跟全世界所有你的同行竞争，跟全世界最聪明最有执行力的人一起竞争 你是第二个发现的，第二个做出来的，你什么也不是 &gt;所以说只有热爱、聪明、坚毅的人，才是真正做研究的人。目前很多读博做研究的人都很没必要。</p>
+<p>所以我觉得我也没必要[破涕为笑]。</p>
+<p>经济上，没有必要。 心理上想读。 害怕抑郁。 想留在国外/进技术单位/公务员啥的。</p>
+<h1 id="section-2">3.11</h1>
+<p>如果有一件事，你做了会不开心，但是不做会有遗憾，你还愿意去做吗？</p>
+<p>这就是我目前犹豫的点了。</p>
+<p>人生总会有遗憾。</p>
+<p>我要不要选择这个遗憾呢。</p>
+<h2 id="跟gtc打完电话">跟GTC打完电话</h2>
+<p>最近在减肥，晚上不怎么吃东西。</p>
+<p>我发现过了七点/七点半之后就不会饿了。</p>
+<p>跟GTC打完电话。</p>
+<p>回国还是可以找工作的。</p>
+<p>如果想搞钱，还是最好去工作呀。</p>
+<p>如果自己之后的目标是进事业单位，</p>
+<p>又想起来狸教授（还是谁）说的那句话</p>
+<blockquote>
+<p>当你面临选择比较迷茫时，那么请选择最艰难的那条路。</p>
+<p>在不能既要又要还要的时候，先选择一个自觉有味的方向做起来再说！</p>
+</blockquote>
+<p>搜转行又搜到了一个<span class="exturl" data-url="aHR0cDovL3d3dy5qdXlhbmcuY28vcGhk6L2s6KGM5LmL6LevLw==">这个<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>自己想搞钱吗？</p>
+<p>不想，自己搞钱感觉只是完全为了买车子房子这些东西。</p>
+<p>不想要孩子真的好省钱。</p>
+<p>https://www.zhihu.com/question/372930972</p>
+<p>好难决定。</p>
+<p>自己</p>
+<h1 id="section-3">3.12</h1>
+<p>忽然想起来我这次的学费减免钱是不是写的有点太少了点。</p>
+<p>窗外一阵惊雷，这就是撒谎会被雷劈吗hhhhh。</p>
+<p>如果我想进企业工作，那不管怎么样，在日本工作不比在国内舒服多了吗？</p>
+<p>那就看老板喽.</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030312121514625.png" alt="image-00030312121514625"><figcaption aria-hidden="true">image-00030312121514625</figcaption>
+</figure>
+<p>老板觉得我能完成-&gt;在日本读博/转行进业界</p>
+<p>老板觉得我不能完成-&gt;回国考公/事业单位/国企</p>
+<p>就酱。</p>
+<h1 id="section-4">3.16</h1>
+<p>居然罕见地被老板push。</p>
+<p>我感觉我现在的前路一片灰暗。</p>
+<p>我不知道该往哪里走。</p>
+<p>没有一个人，或者没有一个事情可以让我作为我的锚点。</p>
+<p>我不知道 我是要留在国外还是回国内。</p>
+<p>我不知道 要去哪个城市。</p>
+<p>我每天都在这一片迷雾里，走两步，看看周围，再走两步。</p>
+<p>感觉就就像绕圈子。</p>
+<p>就像在磨坊里拉磨的驴一样。</p>
+<p>自己做了很多事情，走了很多路。</p>
+<p>但自己只看过磨坊里面的风景。</p>
+<p>为什么不出磨坊呢？</p>
+<p>因为出了磨坊对我来说是一片迷雾。</p>
+<p>我好像已经没有勇气，像之前那样。</p>
+<p>不管往哪儿走，不管前面有什么，都先进去看看。</p>
+<p>因为现在我想做的事情，都不是我一个人就能决定的事情了。</p>
+<p>我的努力，我的力量，在这些事情面前都显得无比渺小。</p>
+<p>就像随波逐流的浮萍。</p>
+<p>老实讲，这种感觉真的非常不好。</p>
+<p>你永远不知道，你是会被带到一个秀美的湖泊惬意生长，还是在下水道里腐烂至死。</p>
+<p>作为一个浮萍，你只能奋力吸收光和营养，然后等待水流的最终审判。</p>
+<p>很多时候，你没法像之前一样，从头再来。</p>
+<p>很多时候，我更想不再漂流，赶紧结束这段旅途。</p>
+<p>人总是要死的。</p>
+<h2 id="摸了会鱼之后">摸了会鱼之后</h2>
+<p>既然自己毕业之后大概率不做科研，那读博还有意义吗？</p>
+<blockquote>
+<p>Devote it</p>
+<p>Like it</p>
+<p>Good at it</p>
+</blockquote>
+<p>自己擅长研究吗？</p>
+<p>自己擅长写代码吗？</p>
+<p>自己擅长什么呢？</p>
+<p>自己擅长提idea，但是这屁用没有。</p>
+<p>我只想找一个差不多很舒服的工作。</p>
+<p>那自己现在做研究，舒服吗？</p>
+<p>我感觉自己很多时候，都是不舒服的吧？</p>
+<p>看着他就不想做的那种。</p>
+<p>那自己还要读吗？</p>
+<p>自己就把博士当工作，来跟自己回去考公务员相比呢？</p>
+<p>回去当公务员的最大好处能很快地成家立业。</p>
+<p>好累。</p>
+<p>好不想读呀。</p>
+<p>但是自己还是有一点点点兴趣的。</p>
+<p>自己的的兴趣来源于什么？</p>
+<p>自己是从什么时候开始对量化 算法 模型这一块开始感兴趣的？</p>
+<p>是从数学。</p>
+<p>自己喜欢条理清晰，遵从计算，并且不是统计的东西。</p>
+<p>而自己学的专业并不能做到。</p>
+<p>所以自己想改变这一点。</p>
+<p>本科班上自己的成绩让自己觉得自己有改变这一点的可能。</p>
+<p>自己有改变这一点的可能吗？</p>
+<p>这是自己的 兴趣？ 想法？ 还是只是想做的事情。</p>
+<p>只是自己想做的事情。</p>
+<p>自己想做的事情，不做会不会有遗憾。</p>
+<p>会！</p>
+<p>自己要不要搞定这个遗憾？</p>
+<p>我不知道。</p>
+<p>总而言之，选择一个自己喜欢的生活方式吧。</p>
+<p>不行，就回国，考公务员，尝试自己没试过的另一种生活方式。</p>
+<h1 id="section-5">3.17</h1>
+<p>ljc居然成了副教授</p>
+<p>我去，到底是怎么评的都。</p>
+<p>一篇一区都不发就能副教授啥的吗？</p>
+<p>一篇一区都不发就能当硕导？</p>
+<p>还是说都是共一和通讯？</p>
+<p>到底是渔业比较难发论文，还是评选有问题。</p>
+<p>我懵了。</p>
+<h1 id="section-6">3.18</h1>
+<p>我真的应该好好感谢一下我老板。</p>
+<p>昨天他问我能不能帮忙填一个表，我填了一部分之后问他剩下的咋填。</p>
+<p>他跑过来跟我讲，你要专心Science，数据的事搞不了就先算了，就忽略呗，然后跑过来跟我讨论了好久研究的事情。</p>
+<p>然后他今天就让Mizuno去搞数据的事情了。</p>
+<p>老板真好啊真好</p>
+]]></content>
+      <categories>
+        <category>人生得意须尽欢</category>
+      </categories>
+      <tags>
+        <tag>随便写写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>book reading note 1</title>
     <url>/posts/2adc6f01.html</url>
     <content><![CDATA[<p>Chapter 5.4-5.5 of book 《Dynamics of Marine Ecosystems: Biological-Physical Interactions in the Oceans》 <a id="more"></a></p>
@@ -5271,255 +6172,6 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
       </tags>
   </entry>
   <entry>
-    <title>在我成为井井有条的大人之前</title>
-    <url>/posts/d040ebe8.html</url>
-    <content><![CDATA[<p>马上就要到我的24岁生日了，最近特别喜欢这首歌，就拿它当了标题。</p>
-<p>也许是真的长大了吧，开始怀念小时候，开始怀念大学，怀念那个时候的自己。</p>
-<p>越长大就越怀念当时那个富有激情，无所畏惧，充满希望，有头发脑子好用还有人喜欢的自己。</p>
-<blockquote>
-<p>以前念着要快长大</p>
-<p>现在好想返老还童</p>
-<p>未曾珍惜过的天真</p>
-<p>成为有遗憾的回不去</p>
-<p>以前仗着时间还多</p>
-<p>不知不觉中我挥霍</p>
-<p>还没来得及好好爱过一个人</p>
-<p>就老去了</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="再也没有吃到像那夜的好豆再也没有看到像那夜的好戏了"><a class="markdownIt-Anchor" href="#再也没有吃到像那夜的好豆再也没有看到像那夜的好戏了"></a> 再也没有吃到像那夜的好豆，再也没有看到像那夜的好戏了</h1>
-<p>长大一个最突出的特征就是对于高中和大学学过的无用之学的理解。</p>
-<p>去年这个时候疫情刚刚开始，各种治病的假消息，例如板蓝根，双黄连，假中医，甚嚣尘上。我试图用最简单的语言跟父母家人和文科朋友们解释什么是病毒🦠，怎么治病，双黄连板蓝根为什么不管用，疫苗什么时候才能出来，才发现这些知识大部分都涵盖在初中和高中的课本里。就突然开始感觉到九年义务教育的另一重含义——教会我们在现在这个社会所需要的最基本的科学常识和文化常识。只是从结果来看，国家的九年义务教育实施的还不完善罢了。当然了美国也没好到哪去，注射💉84消毒液比板蓝根更尼玛离谱。</p>
-<p>无用之学最突出的就是政治。学个数学物理我好歹会算数以及知道开车的时候为什么要保持安全距离，学个化学我至少买药买吃的会看配料表，学个生物好歹不用花冤枉钱买板蓝根，语文英语不至于是文盲，历史地理好歹出去旅游的时候能讲出来点东西。但是政治呢？政治有什么用处呢？除了高中的时候我读了一点点哲学入门稍微引起了我的兴趣，更多的时候我都觉得他很无聊，讲的都是空话套话。</p>
-<p>直到2020年。</p>
-<p>因为疫情原因，我开始思考各个国家为什么会做出截然相反的应对措施，直到思考到各个国家的政治经济体制，资本主义与社会主义，再到马克思主义。</p>
-<p>中间我开始尝试理财，也关注了原油的事件，于是开始关注经济学，开始关注贸易，开始了解布雷顿森林体系，经济危机，消费主义，贸易自由，巴塞尔协议这一个个对我来说似曾相识，但是当时只是背了下来的东西。</p>
-<p>后面则是慢慢整合了起来，开始思考政府的存在，政府的管理，言论自由和行动自由，偶像经济，剩余价值，资本主义体系存在的问题，赛博朋克，也经常去听罗翔老师的课程，开始思考法律，思考一些诸如劳资关系，教育等等的社会问题，思考人生的意义。</p>
-<blockquote>
-<p>“Man Thinks; God Laughs.”</p>
-</blockquote>
-<p>同时还有历史和地理。最近几年一直在看国家宝藏和国宝会说话等等一些考古文博节目，于是发现高中不喜欢历史的我居然本质上是因为我支持了历史虚无主义。现在我觉得相比于哪那年发生了什么事，历史虚无主义才是历史教育中最需要讲好的东西。而我的研究范畴也从过去的生物生态转换到了更大的也更喜欢的海洋学领域，于是开始慢慢理解过去学过的地理知识，比如季风洋流，三横五纵；同时也开始将地理与政治经济联合起来，思考和查阅过经济类型和国家应对疫情的原因。</p>
-<p>之前大学的时候常常听别人说，理工科最好再学一些人文社会的东西。当时我只是觉得很有道理，却没有体会到为什么，因此只是借了书，注册了网课，却一点都没学。现在才开始了解为什么，并且有了学习的motivation。</p>
-<p>最大的理解，还是对于语文的理解。除了因为破除历史虚无主义带来的对与文脉传承的使命感，更多的是，终于读懂了语文课本的课文和诗词。</p>
-<p>少小离家老大回，</p>
-<p>乡音无改鬓毛衰。</p>
-<p>儿童相见不相识，</p>
-<p>笑问客从何处来。</p>
-<blockquote>
-<p>但愿人长久，千里共婵娟。</p>
-</blockquote>
-<p>大学还是在同一个省份，想家的感情并不强烈，出来之后，才深切的体会到这一句句诗里，到底在写什么。</p>
-<blockquote>
-<p>高邮咸蛋的特点是质细而油多。蛋白柔嫩，不似别处的发干、发粉，入口如嚼石灰。油多尤为别处所不及。鸭蛋的吃法，如袁子才所说，带壳切开，是一种，那是席间待客的办法。平常食用，一般都是敲破“空头”用筷子挖着吃。筷子头一扎下去，吱——红油就冒出来了。高邮咸蛋的黄是通红的。苏北有一道名菜，叫做“朱砂豆腐”，就是用高邮鸭蛋黄炒的豆腐。我在北京吃的咸鸭蛋，蛋黄是浅黄色的，这叫什么咸鸭蛋呢！端午节，我们那里的孩子兴挂“鸭蛋络子”。头一天，就由姑姑或姐姐用彩色丝线打好了络子。端午一早，鸭蛋煮熟了，由孩子自己去挑一个，鸭蛋有什么可挑的呢！有！一要挑淡青壳的。鸭蛋壳有白的和淡青的两种。二要挑形状好看的。别说鸭蛋都是一样的，细看却不同。有的样子蠢，有的秀气。挑好了，装在络子里，挂在大襟的纽扣上。这有什么好看呢？然而它是孩子心爱的饰物。鸭蛋络子挂了多半天，什么时候孩子一高兴，就把络子里的鸭蛋掏出来，吃了。端午的鸭蛋，新腌不久，只有一点淡淡的咸味，白嘴吃也可以。</p>
-</blockquote>
-<p>在我从淘宝买了十斤煎饼之后，终于开始理解什么是家乡的味道。</p>
-<blockquote>
-<p>“阿！闰土哥，——你来了？……”</p>
-<p>我接着便有许多话，想要连珠一般涌出：角鸡，跳鱼儿，贝壳，猹，……但又总觉得被什么挡着似的，单在脑里面回旋，吐不出口外去。</p>
-<p>他站住了，脸上现出欢喜和凄凉的神情；动着嘴唇，却没有作声。他的态度终于恭敬起来了，分明的叫道：</p>
-<p>“老爷！……”</p>
-<p>我似乎打了一个寒噤；我就知道，我们之间已经隔了一层可悲的厚障壁了。我也说不出话。</p>
-</blockquote>
-<p>小时候的同学，现在看来似乎已经是不同世界的人了。也许鲁迅这里的厚障壁指的是阶级，但是在我体会来却是人生的分叉。</p>
-<blockquote>
-<p>少年不识愁滋味，为赋新词强说愁。</p>
-</blockquote>
-<p>小时候矫揉造作的QQ空间和朋友圈，而现在终于明白了这些情感却说不出话来。</p>
-<blockquote>
-<p>影子在前，影子在后</p>
-</blockquote>
-<blockquote>
-<p>影子常常跟着我，</p>
-<p>就像一条小黑狗。</p>
-<p>影子在左，影子在右，</p>
-<p>影子常常陪着我，</p>
-<p>它是我的好朋友</p>
-</blockquote>
-<p>开始享受独处，理解孤独。</p>
-<blockquote>
-<p>祥子的生活多半仗着这种残存的仪式与规矩。有结婚的，他替人家打着旗伞；有出殡的，他替人家举着花圈挽联；他不喜，也不哭，他只为那十几个铜子，陪着人家游街。穿上杠房或喜轿铺所预备的绿衣或蓝袍，戴上那不合适的黑帽，他暂时能把一身的破布遮住，稍微体面一些。遇上那大户人家办事，教一干人等都剃头穿靴子，他便有了机会使头上脚下都干净利落一回。脏病使他迈不开步，正好举着面旗，或两条挽联，在马路边上缓缓的蹭。</p>
-<p>可是，连作这点事，他也不算个好手。他的黄金时代已经过去了，既没从洋车上成家立业，什么事都随着他的希望变成了“那么回事”。他那么大的个子，偏争着去打一面飞虎旗，或一对短窄的挽联；那较重的红伞与肃静牌等等，他都不肯去动。和个老人，小孩，甚于至妇女，他也会去争竞。他不肯吃一点亏。</p>
-<p>打着那么个小东西，他低着头，弯着背，口中叼着个由路上拾来的烟卷头儿，有气无力的慢慢的蹭。大家立定，他也许还走；大家已走，他也许多站一会儿；他似乎听不见那施号发令的锣声。他更永远不看前后的距离停匀不停匀，左右的队列整齐不整齐，他走他的，低着头象作着个梦，又象思索着点高深的道理。那穿红衣的锣夫，与拿着绸旗的催押执事，几乎把所有的村话都向他骂去：“孙子！我说你呢，骆驼！你他妈的看齐！”他似乎还没有听见。打锣的过去给了他一锣锤，他翻了翻眼，朦胧的向四外看一下。没管打锣的说了什么，他留神的在地上找，看有没有值得拾起来的烟头儿。</p>
-<p>体面的，要强的，好梦想的，利己的，个人的，健壮的，伟大的，祥子，不知陪着人家送了多少回殡；不知道何时何地会埋起他自己来，埋起这堕落的，自私的，不幸的，社会病胎里的产儿，个人主义的末路鬼！</p>
-</blockquote>
-<p>开始切身体会到祥子的三起三落，个人的力量在时代的浪潮面前是有多渺小。</p>
-<blockquote>
-<p>再也没有吃到像那夜的好豆，再也没有看到像那夜的好戏了</p>
-</blockquote>
-<p>再也，回不去了。</p>
-<p>你好，24岁，我也要成为大人了。</p>
-<p>我会不会成为我最讨厌的那种大人呢？</p>
-<h1 id="你在教室灯光厚厚作业本下把我装成书签每刻都相逢"><a class="markdownIt-Anchor" href="#你在教室灯光厚厚作业本下把我装成书签每刻都相逢"></a> 你在教室灯光厚厚作业本下,把我装成书签每刻都相逢</h1>
-<p>这句话出自《致每个你》的歌词，这首歌当时把我听哭了。因为它真实地描述了我和偶像的关系。</p>
-<p>今天我想谈一谈偶像。</p>
-<p>其实我是打算剪个视频出来的，看我有没有时间了。</p>
-<p>第一次知道AKB是在<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMThzNDExbzc0Mw==">这个视频<i class="fa fa-external-link-alt"></i></span>里，当时还是在优酷，大概是在2013年，当时真的只是觉得，这个小姐姐真的好可爱，后续又看了一系列的她的舞蹈，开始知道了AKB的这个团体，但是当时连里面都有谁都不知道。</p>
-<p>在兔子琳发布自己在日本的恋情之后，我也给他评论了好长一段。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115150238855.png" alt="在兔子琳视频下面的评论"></p>
-<p>然后就通过优酷的视频推荐知道了SNH48，和其他人一样，我也是从汤敏和偶像预备生之半熟少女开始追起的。</p>
-<p>无尽旋转，化作樱花树，黑白格子裙，马尾与发圈，石头剪刀布，爱的幸运曲奇，飞翔入手，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTRzNDExQzd6Wj9wPTI=">十六人姐妹歌<i class="fa fa-external-link-alt"></i></span>。以及让我彻底入坑的，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXZhNHkxczdUYS8/c3BtX2lkX2Zyb209MzMzLjc4OC52aWRlb2NhcmQuMQ==">525星花为你绽放，支柱<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>从这首歌我开始知道赵嘉敏这个人，当时她对我来说就是那个坐在我前面班里的勤奋小女孩，学习好，还兼顾偶像的梦想。毫不客气的说她就是那个在当时支持着我走下去的人。</p>
-<p>2014年5月6日，SNH48第一届总选举“一心向前”演唱会。</p>
-<p>其实初中的我也没有那么多时间来追星，所以当时在这个演唱会上没有看到汤敏还是让我很震惊的，后来一番了解才知道汤敏退团了。本来其实我是想不再追的，但是看完了整个演唱会的我看到了这两个女孩子，也是支持我喜欢SNH48到现在的两个人。</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXM0NDExZTdiNz9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMDQ2Mjk2NzE4OTQ2NjIyMzkxMA==">《第一只兔子》<i class="fa fa-external-link-alt"></i></span></p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115151914979.png" alt="对不起娜娜我又截你崩图了"></p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115152122569.png" alt="笑死了小四的我截的更崩"></p>
-<p>当然更喜欢娜娜，元气，可爱，一心向前那一嗓子我到现在还留在脑子里。小四当时知道她是北影（后来才知道是独立学院）毕业之后，也很戳这个有一点智性恋的我。</p>
-<p>当然了，高中的我是没有那么多时间追星的，更多的时候我还是被塞纳河的歌陪伴。毫不夸张地说，就是塞纳河和周杰伦支撑着我走过高中的每一个夜晚。</p>
-<p>大学开始有空去看公演直播，当时只会看一下S和N队的。</p>
-<p>其实后面我不知道该怎么写了。因为中间的快乐真的太多了，比如十八个挂科瞬间，曾艳芬。也有各种各样的感动，比如明珠48，还有各种周飞上公演。</p>
-<p>正如我老板所说，我是个逻辑很差的人（摔）。</p>
-<p>直到。</p>
-<p>2018年2月3日。</p>
-<p>Team XII解散，N队重组。</p>
-<p>从那天开始，我对塞纳河的热情开始消失了。最主要的原因就是，我喜欢塞纳河真的是因为“梦想，汗水，坚持”，但是这次重组却让我感到，梦想汗水坚持，似乎是没有用了。每年都是那几个永远都不会被兑现的饼，投总选不如投小分队，再怎么努力该解散的还是解散，犯了错的小偶像却可以一句道歉就得到众人的原谅。</p>
-<p>从那个时候开始，我好像不能从小偶像身上得到力量了。</p>
-<p>我还记得我第一次也是最后一次去参加学院某个自称是最高奖项实际早已经内定完毕的奖项评选的时候，我们班班主任问我，到底是什么支持我每天早晨五点半起来赶校车去崂山上课。</p>
-<p>我当时脑子里就全部都是《第一只兔子》，真的就是因为偶像的力量才让我那么努力。</p>
-<p>但是当时脸皮薄的我并不能讲出来“SNH48 万丽娜” 这八个字。</p>
-<p>2018年2月3日开始，万丽娜和林思意都开启了养老模式，我也是。</p>
-<p>2018年3月2日，我和ex分手。ex也是一个元气满满的人，尽管我看得到她元气下面到底有什么。距离今天(1.15)刚好过去1050天。</p>
-<p>2018年是我一个非常明显的人生转折点，大概是少年意气结束的阶段吧。</p>
-<blockquote>
-<p>当时我21岁，在我一生的黄金时代，我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过21岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
-<p>–《黄金时代》</p>
-</blockquote>
-<p>长大的另一个特征，或许就是不能在别人身上得到力量了吧。或许说是，我开始依靠自己的力量支持自己前进。</p>
-<p>就像欧布和泽塔最后在TV里用的都是最初的形态，他们不再借用前辈的力量，而我也不再借用她们的力量。</p>
-<p>本来我觉得，虽然今年万丽娜和林思意都退团了，但是可爱的小偶像一茬接一茬，我总会喜欢新的。</p>
-<p>但是谢蕾蕾谈恋爱这件事确实彻底摧毁了我的想法。</p>
-<p>在18年之后这件事之前，我只是觉得梦想汗水坚持在塞纳河里没有用，但是我依然很敬佩她们的努力。</p>
-<p>在这件事之后，我觉得这些，她们表现给我们这些，梦想汗水坚持，也可能只是她们出售给我们的商品而已。</p>
-<p>所以2021年，就是我喜欢偶像的结束。微博上取关了四大，取关了大部分塞纳河的营销号，只留下了少数几个还在真心实意喜欢的小偶像，她们也即将毕业了。</p>
-<p>2013-2021，整整八年时间。我真情实感地喜欢过小偶像，在她们的鼓励下一点点的努力成长。我看着整个团队越来越好，我也越来越好。</p>
-<p>她们不再需要我，因为新来的粉丝各种应援技能和钱都比我厉害得多。</p>
-<p>我也不再需要她们，因为我可以开始依靠我自己的力量，让我前进。</p>
-<p>2020年1月1日去初詣的时候，我曾经许愿2020年的愿望就是找到那个像那天的太阳一样让我在半夜三四点就能起来的东西。</p>
-<p>从初高中开始到2018年，它曾经是周杰伦，塞纳河；是那个化学竞赛失败转文科的男生，那些《我们都不是神的孩子》《花开不败》《你凭什么上北大》的主人公；是高绩点，是竞赛，是小镇做题家的好胜心。</p>
-<p>2018年之后，它就消失了。</p>
-<p>其实我现在也没有找到它。</p>
-<p>但是我已经能慢慢的依靠自己的力量坚持下去。虽然我不知道这是因为我的热爱，还只是单单被迫学会的生存技能。</p>
-<p>但是我不再需要偶像给予我力量了。</p>
-<blockquote>
-<p>听好了</p>
-<p>你们</p>
-<p>不要总是为了来看我而翘班</p>
-<p>拼个优秀员工 和老板谈加薪 顺便旅游不更好吗</p>
-<p>还有读书的小朋友就更是了</p>
-<p>逃课挂科</p>
-<p>不如考个好成绩</p>
-<p>爸妈开心了才能快乐追星呀</p>
-<p>每天窝在家里好不容易出门来看我了</p>
-<p>排队的时候不要闷头总是换个地玩手机</p>
-<p>多和周边的人聊一聊嘛</p>
-<p>万一 就遇到自己的缘分了呢</p>
-<p>还有哦</p>
-<p>你们又没有上镜需求就不能好好吃饭啊</p>
-<p>没有强大的化妆技术就给我好好睡觉</p>
-<p>这方面饭随偶像干嘛呢啊</p>
-<p>抽烟、喝酒的更是悠着点</p>
-<p>我对气味很敏感的</p>
-<p>小心你们来握手会的时候我盐你们</p>
-<p>还有拍图、拍视频的时候退着走很危险的</p>
-<p>下雨天更是</p>
-<p>湿滑摔倒你人不怕</p>
-<p>设备也是怕的好吗？</p>
-<p>要先把自己的事情处理完才来看我嘛</p>
-<p>我又不会跑</p>
-<p>但是你的机会得自己好好把握啊</p>
-<p>你要成为圈子里的巨聚 才能更好安利我不是？</p>
-<p>更多的时候</p>
-<p>也看看周边的人</p>
-<p>偶像总是会有距离的</p>
-<p>但他们才是无时无刻不陪在你身边的</p>
-<p>还有那些我希望呵护到的人们</p>
-<p>我只是你们的精神需求</p>
-<p>但是好好生活、好好照顾自己才是你对自己最棒的拯救</p>
-<p>我相信你，你可以做到的</p>
-<p>最最最不佳，再看看这河里的瓜</p>
-<p>每天吃瓜还不够开心的吗？</p>
-<p>丧什么呢笨蛋嗯！</p>
-<p>我没有办法顾及到所有的人，</p>
-<p>但我真诚的希望你们每一个人都能幸福。</p>
-<p>你们一定得清楚</p>
-<p>你变得更好</p>
-<p>全是你自己拼命努力的结果</p>
-<p>你看我身上有光</p>
-<p>是因为 你们的眼中 本身就充满了光芒</p>
-<p>你们才是 自己的光</p>
-<p>等到 你们的光芒足够亮</p>
-<p>再看我</p>
-<p>我应该 只是一个普通人</p>
-<p>而你们真的很棒</p>
-<p>– <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMU02NHkxWjdkcA==">SNH48 一期生 莫寒 最后一次总选拉票会发言<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-<h1 id="有些事现在不做-一辈子都不会做了"><a class="markdownIt-Anchor" href="#有些事现在不做-一辈子都不会做了"></a> 有些事现在不做 一辈子都不会做了</h1>
-<p>这最后一部分我想谈谈选择。</p>
-<p>出处很明显了吧哈哈哈，五月天的歌。</p>
-<blockquote>
-<p>每次冲动留下的 都有所不同</p>
-<p>然而有天你会懂 就是那些 让你不同</p>
-<p>每滴眼泪挣脱后 都带走懦弱</p>
-<p>感动总在冲动后 苦涩回忆 都会温柔</p>
-<p>每个平凡的自我 都曾幻想过</p>
-<p>然而大多的自我 都紧抓着某个理由</p>
-<p>每个渺小的理由 都困住自由</p>
-<p>有些事情还不做 你的理由 会是什么？</p>
-</blockquote>
-<p>曾经喜欢小偶像的我非常看不起自己，因为相比于小偶像们一签八年的合同，我连五年的读博这件事都犹疑不决，拖延了很久不敢下决定。所以我一直认为我自己很懦弱，就像三年之前我在<a href="https://lifeodyssey.github.io/posts/726664aa.html">这里</a>写的一样。</p>
-<p>我也<a href="https://lifeodyssey.github.io/posts/94a46e7b.html">犹疑了很久</a>。</p>
-<p>回想起来，自己之前的多数决定都是出于情绪而做的决定</p>
-<p>其实也就是这一章的内容让我不想把这个写了很久的东西转发到朋友圈（当然还有一些zzzq的内容），因为哪怕到了现在，我也不是很确定要不要读博，而且也因为不想为自己负责，选择把读博这个决定交给funding-能拿到funding就读，拿不到就不读，我压根对这个专业没有那么多热爱。</p>
-<p>但是对自己的选择负责才是长大最重要的指标。</p>
-<blockquote>
-<p>“你得对着这新来的日子抱着虔敬的心。别想什么一年十年以后的事。你得想到今天。把你的理论统统丢开。所有的理论，哪怕是关于道德的，都是不好的，愚蠢的，对人有害的。别用暴力去挤逼人生。先过了今天再说。对每一天都得抱着虔诚的态度。得爱它，尊敬它，尤其不能污辱它，妨害它的发荣滋长。便是像今天这样灰暗愁闷的日子，你也得爱。你不用焦心。你先看着。现在是冬天，一切都睡着。将来大地会醒过来的。你只要跟大地一样，像它那样的有耐性就是了。你得虔诚，你得等待。如果你是好的，一切都会顺当的。如果你不行，如果你是弱者，如果你不成功，你还是应当快乐。因为那表示你不能再进一步。干吗你要抱更多的希望呢？干吗为了你做不到的事悲伤呢？一个人应当做他能做的事。 竭尽所能。”</p>
-<p>真正的英雄是明白世界的残酷，也遭受了社会带给他的苦难，他依然能用心的说“我热爱这个世界，我愿竭尽所能去为我的世界而好好战斗”。</p>
-</blockquote>
-<p>认真的讲，我选择读博，只是因为我没有更好的选择了；但是不去多试一下，怎么知道自己有没有更好的选择呢。</p>
-<p>还有就是，我的学生思维，我太怕落在别人后面，太过着重于和同龄人比较，同时也太过于看重稳定性和确定性。但是实质上，任何东西都是有代价的，就像做投资一样，你要稳定，你的收益就不可能高；你要高收益，你就要承受高风险。</p>
-<p>我就是那个想要稳定，同时又羡慕着别人的高收益的人。</p>
-<p>但是自己的选择，其实并不是那么具有稳定性和确定性。招聘要求一年年的水涨船高，现在自己看来没那么难的要求，后面可能就是遥不可及。现在要做一轮博后才能留校，后面可能就是两轮三轮，乃至千老，就像我们实验室的博后一样。</p>
-<p>自己这一行还是一个重观测重实验的方向，算法再整出花来，没有什么办法实地验证，还是0，全国上下出得起海的的数来数去就海大厦大浙海大一所二所三所南海所。</p>
-<p>稳定吗？一点都不。而且从今年（2021）开始公益类事业单位开始改革，编制取消。讲真的编制取消之后，还不如留在国外。</p>
-<p>而且今年申请考核带来的水涨船高，4-5年后大概率是国内毕业的博士的爆发期。如果自己不能在4-5年内顺利毕业的话，大概率会面临另一轮高强度竞争，不论是post还是faculty。</p>
-<p>自己喜欢这样的生活吗？基金，项目，论文，学生，评审。每天看着我老板奔波劳碌，但是感觉他很幸福。</p>
-<p>自己喜欢目前的生活状态吗？</p>
-<p>自己目前的生活状态，可是一点都不开心啊。</p>
-<p>果然是想的越多，就会越不开心。</p>
-<p>所以，读吗？</p>
-<p>大概率还是会读的吧。希望这次我能做到对自己负责，成为一个大人。</p>
-<p>接受这个选择所带来的后果。</p>
-<h1 id="庚子鼠年腊月十九"><a class="markdownIt-Anchor" href="#庚子鼠年腊月十九"></a> 庚子鼠年腊月十九</h1>
-<p>我的生日是一个很尴尬的时候，腊月十七。小学，初中，高中，大学，都一直是考试放假的时候。而且我喜欢过农历的生日（曾经被人吐槽像个古代人），别人更难记住我生日的日子。</p>
-<p>所以一直没有（前几年开始，有了两三个）朋友同学记得我的生日。</p>
-<p>之前其实因为这件事情自卑自闭，每年过生日的BGM都是<span class="exturl" data-url="aHR0cHM6Ly9jLnkucXEuY29tL2Jhc2UvZmNnaS1iaW4vdT9fXz12eFZyUDZ3">《祝我生日快乐》<i class="fa fa-external-link-alt"></i></span>。</p>
-<blockquote>
-<p>一个人坐在空荡包厢里面</p>
-<p>手机 让它休息一夜</p>
-<p>难 想切歌切掉回忆的画面</p>
-<p>眼泪不能流过十二点</p>
-<p>生日快乐 我对自己说</p>
-<p>蜡烛点了 寂寞亮了</p>
-<p>生日快乐 泪也融了</p>
-<p>我要谢谢 你给的 你拿走的一切</p>
-</blockquote>
-<p>但是其实就是太矫情了，平均每天有三四十万人出生，你又不是含着金钥匙出生，别人没有必要非得记得你。</p>
-<p>这只是一个普普通通的日子，你也只是一个普普通通的人。</p>
-<p>今天也没有什么特殊的活动，一个普普通通的研究生在实验室的普普通通的一天，还在为了发表和毕业头秃。</p>
-<p>新的一岁，希望自己能对自己的选择负责，成为一个井井有条的大人。</p>
-<p>每年过生日的时候都会把头像换成周杰伦和我一样大的时候发表的专辑封面，今年还是特意换的台版的专辑封面。</p>
-<p>周杰伦24岁的时候发了《七里香》</p>
-<p>我能发个论文嘛？</p>
-]]></content>
-      <categories>
-        <category>梦里真真语真幻</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>随便写写</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>广义加性模型</title>
     <url>/posts/17683e80.html</url>
     <content><![CDATA[<h1 id="广义加性模型">广义加性模型</h1>
@@ -5827,6 +6479,261 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
         <tag>R</tag>
         <tag>广义加性模型</tag>
         <tag>统计分析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在我成为井井有条的大人之前</title>
+    <url>/posts/d040ebe8.html</url>
+    <content><![CDATA[<p>马上就要到我的24岁生日了，最近特别喜欢这首歌，就拿它当了标题。</p>
+<p>也许是真的长大了吧，开始怀念小时候，开始怀念大学，怀念那个时候的自己。</p>
+<p>越长大就越怀念当时那个富有激情，无所畏惧，充满希望，有头发脑子好用还有人喜欢的自己。</p>
+<blockquote>
+<p>以前念着要快长大</p>
+<p>现在好想返老还童</p>
+<p>未曾珍惜过的天真</p>
+<p>成为有遗憾的回不去</p>
+<p>以前仗着时间还多</p>
+<p>不知不觉中我挥霍</p>
+<p>还没来得及好好爱过一个人</p>
+<p>就老去了</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="再也没有吃到像那夜的好豆再也没有看到像那夜的好戏了">再也没有吃到像那夜的好豆，再也没有看到像那夜的好戏了</h1>
+<p>长大一个最突出的特征就是对于高中和大学学过的无用之学的理解。</p>
+<p>去年这个时候疫情刚刚开始，各种治病的假消息，例如板蓝根，双黄连，假中医，甚嚣尘上。我试图用最简单的语言跟父母家人和文科朋友们解释什么是病毒🦠，怎么治病，双黄连板蓝根为什么不管用，疫苗什么时候才能出来，才发现这些知识大部分都涵盖在初中和高中的课本里。就突然开始感觉到九年义务教育的另一重含义——教会我们在现在这个社会所需要的最基本的科学常识和文化常识。只是从结果来看，国家的九年义务教育实施的还不完善罢了。当然了美国也没好到哪去，注射💉84消毒液比板蓝根更尼玛离谱。</p>
+<p>无用之学最突出的就是政治。学个数学物理我好歹会算数以及知道开车的时候为什么要保持安全距离，学个化学我至少买药买吃的会看配料表，学个生物好歹不用花冤枉钱买板蓝根，语文英语不至于是文盲，历史地理好歹出去旅游的时候能讲出来点东西。但是政治呢？政治有什么用处呢？除了高中的时候我读了一点点哲学入门稍微引起了我的兴趣，更多的时候我都觉得他很无聊，讲的都是空话套话。</p>
+<p>直到2020年。</p>
+<p>因为疫情原因，我开始思考各个国家为什么会做出截然相反的应对措施，直到思考到各个国家的政治经济体制，资本主义与社会主义，再到马克思主义。</p>
+<p>中间我开始尝试理财，也关注了原油的事件，于是开始关注经济学，开始关注贸易，开始了解布雷顿森林体系，经济危机，消费主义，贸易自由，巴塞尔协议这一个个对我来说似曾相识，但是当时只是背了下来的东西。</p>
+<p>后面则是慢慢整合了起来，开始思考政府的存在，政府的管理，言论自由和行动自由，偶像经济，剩余价值，资本主义体系存在的问题，赛博朋克，也经常去听罗翔老师的课程，开始思考法律，思考一些诸如劳资关系，教育等等的社会问题，思考人生的意义。</p>
+<blockquote>
+<p>"Man Thinks; God Laughs."</p>
+</blockquote>
+<p>同时还有历史和地理。最近几年一直在看国家宝藏和国宝会说话等等一些考古文博节目，于是发现高中不喜欢历史的我居然本质上是因为我支持了历史虚无主义。现在我觉得相比于哪那年发生了什么事，历史虚无主义才是历史教育中最需要讲好的东西。而我的研究范畴也从过去的生物生态转换到了更大的也更喜欢的海洋学领域，于是开始慢慢理解过去学过的地理知识，比如季风洋流，三横五纵；同时也开始将地理与政治经济联合起来，思考和查阅过经济类型和国家应对疫情的原因。</p>
+<p>之前大学的时候常常听别人说，理工科最好再学一些人文社会的东西。当时我只是觉得很有道理，却没有体会到为什么，因此只是借了书，注册了网课，却一点都没学。现在才开始了解为什么，并且有了学习的motivation。</p>
+<p>最大的理解，还是对于语文的理解。除了因为破除历史虚无主义带来的对与文脉传承的使命感，更多的是，终于读懂了语文课本的课文和诗词。</p>
+<p>少小离家老大回，</p>
+<p>乡音无改鬓毛衰。</p>
+<p>儿童相见不相识，</p>
+<p>笑问客从何处来。</p>
+<blockquote>
+<p>但愿人长久，千里共婵娟。</p>
+</blockquote>
+<p>大学还是在同一个省份，想家的感情并不强烈，出来之后，才深切的体会到这一句句诗里，到底在写什么。</p>
+<blockquote>
+<p>高邮咸蛋的特点是质细而油多。蛋白柔嫩，不似别处的发干、发粉，入口如嚼石灰。油多尤为别处所不及。鸭蛋的吃法，如袁子才所说，带壳切开，是一种，那是席间待客的办法。平常食用，一般都是敲破“空头”用筷子挖着吃。筷子头一扎下去，吱——红油就冒出来了。高邮咸蛋的黄是通红的。苏北有一道名菜，叫做“朱砂豆腐”，就是用高邮鸭蛋黄炒的豆腐。我在北京吃的咸鸭蛋，蛋黄是浅黄色的，这叫什么咸鸭蛋呢！端午节，我们那里的孩子兴挂“鸭蛋络子”。头一天，就由姑姑或姐姐用彩色丝线打好了络子。端午一早，鸭蛋煮熟了，由孩子自己去挑一个，鸭蛋有什么可挑的呢！有！一要挑淡青壳的。鸭蛋壳有白的和淡青的两种。二要挑形状好看的。别说鸭蛋都是一样的，细看却不同。有的样子蠢，有的秀气。挑好了，装在络子里，挂在大襟的纽扣上。这有什么好看呢？然而它是孩子心爱的饰物。鸭蛋络子挂了多半天，什么时候孩子一高兴，就把络子里的鸭蛋掏出来，吃了。端午的鸭蛋，新腌不久，只有一点淡淡的咸味，白嘴吃也可以。</p>
+</blockquote>
+<p>在我从淘宝买了十斤煎饼之后，终于开始理解什么是家乡的味道。</p>
+<blockquote>
+<p>“阿！闰土哥，——你来了？……”</p>
+<p>我接着便有许多话，想要连珠一般涌出：角鸡，跳鱼儿，贝壳，猹，……但又总觉得被什么挡着似的，单在脑里面回旋，吐不出口外去。</p>
+<p>他站住了，脸上现出欢喜和凄凉的神情；动着嘴唇，却没有作声。他的态度终于恭敬起来了，分明的叫道：</p>
+<p>“老爷！……”</p>
+<p>我似乎打了一个寒噤；我就知道，我们之间已经隔了一层可悲的厚障壁了。我也说不出话。</p>
+</blockquote>
+<p>小时候的同学，现在看来似乎已经是不同世界的人了。也许鲁迅这里的厚障壁指的是阶级，但是在我体会来却是人生的分叉。</p>
+<blockquote>
+<p>少年不识愁滋味，为赋新词强说愁。</p>
+</blockquote>
+<p>小时候矫揉造作的QQ空间和朋友圈，而现在终于明白了这些情感却说不出话来。</p>
+<blockquote>
+<p>影子在前，影子在后</p>
+</blockquote>
+<blockquote>
+<p>影子常常跟着我，</p>
+<p>就像一条小黑狗。</p>
+<p>影子在左，影子在右，</p>
+<p>影子常常陪着我，</p>
+<p>它是我的好朋友</p>
+</blockquote>
+<p>开始享受独处，理解孤独。</p>
+<blockquote>
+<p>祥子的生活多半仗着这种残存的仪式与规矩。有结婚的，他替人家打着旗伞；有出殡的，他替人家举着花圈挽联；他不喜，也不哭，他只为那十几个铜子，陪着人家游街。穿上杠房或喜轿铺所预备的绿衣或蓝袍，戴上那不合适的黑帽，他暂时能把一身的破布遮住，稍微体面一些。遇上那大户人家办事，教一干人等都剃头穿靴子，他便有了机会使头上脚下都干净利落一回。脏病使他迈不开步，正好举着面旗，或两条挽联，在马路边上缓缓的蹭。</p>
+<p>可是，连作这点事，他也不算个好手。他的黄金时代已经过去了，既没从洋车上成家立业，什么事都随着他的希望变成了“那么回事”。他那么大的个子，偏争着去打一面飞虎旗，或一对短窄的挽联；那较重的红伞与肃静牌等等，他都不肯去动。和个老人，小孩，甚于至妇女，他也会去争竞。他不肯吃一点亏。</p>
+<p>　　打着那么个小东西，他低着头，弯着背，口中叼着个由路上拾来的烟卷头儿，有气无力的慢慢的蹭。大家立定，他也许还走；大家已走，他也许多站一会儿；他似乎听不见那施号发令的锣声。他更永远不看前后的距离停匀不停匀，左右的队列整齐不整齐，他走他的，低着头象作着个梦，又象思索着点高深的道理。那穿红衣的锣夫，与拿着绸旗的催押执事，几乎把所有的村话都向他骂去：“孙子！我说你呢，骆驼！你他妈的看齐！”他似乎还没有听见。打锣的过去给了他一锣锤，他翻了翻眼，朦胧的向四外看一下。没管打锣的说了什么，他留神的在地上找，看有没有值得拾起来的烟头儿。</p>
+<p>　　体面的，要强的，好梦想的，利己的，个人的，健壮的，伟大的，祥子，不知陪着人家送了多少回殡；不知道何时何地会埋起他自己来，埋起这堕落的，自私的，不幸的，社会病胎里的产儿，个人主义的末路鬼！</p>
+</blockquote>
+<p>开始切身体会到祥子的三起三落，个人的力量在时代的浪潮面前是有多渺小。</p>
+<blockquote>
+<p>再也没有吃到像那夜的好豆，再也没有看到像那夜的好戏了</p>
+</blockquote>
+<p>再也，回不去了。</p>
+<p>你好，24岁，我也要成为大人了。</p>
+<p>我会不会成为我最讨厌的那种大人呢？</p>
+<h1 id="你在教室灯光厚厚作业本下把我装成书签每刻都相逢">你在教室灯光厚厚作业本下,把我装成书签每刻都相逢</h1>
+<p>这句话出自《致每个你》的歌词，这首歌当时把我听哭了。因为它真实地描述了我和偶像的关系。</p>
+<p>今天我想谈一谈偶像。</p>
+<p>其实我是打算剪个视频出来的，看我有没有时间了。</p>
+<p>第一次知道AKB是在<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMThzNDExbzc0Mw==">这个视频<i class="fa fa-external-link-alt"></i></span>里，当时还是在优酷，大概是在2013年，当时真的只是觉得，这个小姐姐真的好可爱，后续又看了一系列的她的舞蹈，开始知道了AKB的这个团体，但是当时连里面都有谁都不知道。</p>
+<p>在兔子琳发布自己在日本的恋情之后，我也给他评论了好长一段。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115150238855.png" alt="在兔子琳视频下面的评论"><figcaption aria-hidden="true">在兔子琳视频下面的评论</figcaption>
+</figure>
+<p>然后就通过优酷的视频推荐知道了SNH48，和其他人一样，我也是从汤敏和偶像预备生之半熟少女开始追起的。</p>
+<p>无尽旋转，化作樱花树，黑白格子裙，马尾与发圈，石头剪刀布，爱的幸运曲奇，飞翔入手，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTRzNDExQzd6Wj9wPTI=">十六人姐妹歌<i class="fa fa-external-link-alt"></i></span>。以及让我彻底入坑的，<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXZhNHkxczdUYS8/c3BtX2lkX2Zyb209MzMzLjc4OC52aWRlb2NhcmQuMQ==">525星花为你绽放，支柱<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>从这首歌我开始知道赵嘉敏这个人，当时她对我来说就是那个坐在我前面班里的勤奋小女孩，学习好，还兼顾偶像的梦想。毫不客气的说她就是那个在当时支持着我走下去的人。</p>
+<p>2014年5月6日，SNH48第一届总选举“一心向前”演唱会。</p>
+<p>其实初中的我也没有那么多时间来追星，所以当时在这个演唱会上没有看到汤敏还是让我很震惊的，后来一番了解才知道汤敏退团了。本来其实我是想不再追的，但是看完了整个演唱会的我看到了这两个女孩子，也是支持我喜欢SNH48到现在的两个人。</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXM0NDExZTdiNz9mcm9tPXNlYXJjaCZhbXA7c2VpZD0xMDQ2Mjk2NzE4OTQ2NjIyMzkxMA==">《第一只兔子》<i class="fa fa-external-link-alt"></i></span></p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115151914979.png" alt="对不起娜娜我又截你崩图了"><figcaption aria-hidden="true">对不起娜娜我又截你崩图了</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030115152122569.png" alt="笑死了小四的我截的更崩"><figcaption aria-hidden="true">笑死了小四的我截的更崩</figcaption>
+</figure>
+<p>当然更喜欢娜娜，元气，可爱，一心向前那一嗓子我到现在还留在脑子里。小四当时知道她是北影（后来才知道是独立学院）毕业之后，也很戳这个有一点智性恋的我。</p>
+<p>当然了，高中的我是没有那么多时间追星的，更多的时候我还是被塞纳河的歌陪伴。毫不夸张地说，就是塞纳河和周杰伦支撑着我走过高中的每一个夜晚。</p>
+<p>大学开始有空去看公演直播，当时只会看一下S和N队的。</p>
+<p>其实后面我不知道该怎么写了。因为中间的快乐真的太多了，比如十八个挂科瞬间，曾艳芬。也有各种各样的感动，比如明珠48，还有各种周飞上公演。</p>
+<p>正如我老板所说，我是个逻辑很差的人（摔）。</p>
+<p>直到。</p>
+<p>2018年2月3日。</p>
+<p>Team XII解散，N队重组。</p>
+<p>从那天开始，我对塞纳河的热情开始消失了。最主要的原因就是，我喜欢塞纳河真的是因为“梦想，汗水，坚持”，但是这次重组却让我感到，梦想汗水坚持，似乎是没有用了。每年都是那几个永远都不会被兑现的饼，投总选不如投小分队，再怎么努力该解散的还是解散，犯了错的小偶像却可以一句道歉就得到众人的原谅。</p>
+<p>从那个时候开始，我好像不能从小偶像身上得到力量了。</p>
+<p>我还记得我第一次也是最后一次去参加学院某个自称是最高奖项实际早已经内定完毕的奖项评选的时候，我们班班主任问我，到底是什么支持我每天早晨五点半起来赶校车去崂山上课。</p>
+<p>我当时脑子里就全部都是《第一只兔子》，真的就是因为偶像的力量才让我那么努力。</p>
+<p>但是当时脸皮薄的我并不能讲出来“SNH48 万丽娜” 这八个字。</p>
+<p>2018年2月3日开始，万丽娜和林思意都开启了养老模式，我也是。</p>
+<p>2018年3月2日，我和ex分手。ex也是一个元气满满的人，尽管我看得到她元气下面到底有什么。距离今天(1.15)刚好过去1050天。</p>
+<p>2018年是我一个非常明显的人生转折点，大概是少年意气结束的阶段吧。</p>
+<blockquote>
+<p>当时我21岁，在我一生的黄金时代，我有好多奢望。我想爱，想吃，还想在一瞬间变成天上半明半暗的云。后来我才知道，生活就是个缓慢受锤的过程，人一天天老下去，奢望也一天天消失，最后变得像挨了锤的牛一样。可是我过21岁生日时没有预见到这一点。我觉得自己会永远生猛下去，什么也锤不了我。</p>
+<p>--《黄金时代》</p>
+</blockquote>
+<p>长大的另一个特征，或许就是不能在别人身上得到力量了吧。或许说是，我开始依靠自己的力量支持自己前进。</p>
+<p>就像欧布和泽塔最后在TV里用的都是最初的形态，他们不再借用前辈的力量，而我也不再借用她们的力量。</p>
+<p>本来我觉得，虽然今年万丽娜和林思意都退团了，但是可爱的小偶像一茬接一茬，我总会喜欢新的。</p>
+<p>但是谢蕾蕾谈恋爱这件事确实彻底摧毁了我的想法。</p>
+<p>在18年之后这件事之前，我只是觉得梦想汗水坚持在塞纳河里没有用，但是我依然很敬佩她们的努力。</p>
+<p>在这件事之后，我觉得这些，她们表现给我们这些，梦想汗水坚持，也可能只是她们出售给我们的商品而已。</p>
+<p>所以2021年，就是我喜欢偶像的结束。微博上取关了四大，取关了大部分塞纳河的营销号，只留下了少数几个还在真心实意喜欢的小偶像，她们也即将毕业了。</p>
+<p>2013-2021，整整八年时间。我真情实感地喜欢过小偶像，在她们的鼓励下一点点的努力成长。我看着整个团队越来越好，我也越来越好。</p>
+<p>她们不再需要我，因为新来的粉丝各种应援技能和钱都比我厉害得多。</p>
+<p>我也不再需要她们，因为我可以开始依靠我自己的力量，让我前进。</p>
+<p>2020年1月1日去初詣的时候，我曾经许愿2020年的愿望就是找到那个像那天的太阳一样让我在半夜三四点就能起来的东西。</p>
+<p>从初高中开始到2018年，它曾经是周杰伦，塞纳河；是那个化学竞赛失败转文科的男生，那些《我们都不是神的孩子》《花开不败》《你凭什么上北大》的主人公；是高绩点，是竞赛，是小镇做题家的好胜心。</p>
+<p>2018年之后，它就消失了。</p>
+<p>其实我现在也没有找到它。</p>
+<p>但是我已经能慢慢的依靠自己的力量坚持下去。虽然我不知道这是因为我的热爱，还只是单单被迫学会的生存技能。</p>
+<p>但是我不再需要偶像给予我力量了。</p>
+<blockquote>
+<p>听好了</p>
+<p>你们</p>
+<p>不要总是为了来看我而翘班</p>
+<p>拼个优秀员工 和老板谈加薪 顺便旅游不更好吗</p>
+<p>还有读书的小朋友就更是了</p>
+<p>逃课挂科</p>
+<p>不如考个好成绩</p>
+<p>爸妈开心了才能快乐追星呀</p>
+<p>每天窝在家里好不容易出门来看我了</p>
+<p>排队的时候不要闷头总是换个地玩手机</p>
+<p>多和周边的人聊一聊嘛</p>
+<p>万一 就遇到自己的缘分了呢</p>
+<p>还有哦</p>
+<p>你们又没有上镜需求就不能好好吃饭啊</p>
+<p>没有强大的化妆技术就给我好好睡觉</p>
+<p>这方面饭随偶像干嘛呢啊</p>
+<p>抽烟、喝酒的更是悠着点</p>
+<p>我对气味很敏感的</p>
+<p>小心你们来握手会的时候我盐你们</p>
+<p>还有拍图、拍视频的时候退着走很危险的</p>
+<p>下雨天更是</p>
+<p>湿滑摔倒你人不怕</p>
+<p>设备也是怕的好吗？</p>
+<p>要先把自己的事情处理完才来看我嘛</p>
+<p>我又不会跑</p>
+<p>但是你的机会得自己好好把握啊</p>
+<p>你要成为圈子里的巨聚 才能更好安利我不是？</p>
+<p>更多的时候</p>
+<p>也看看周边的人</p>
+<p>偶像总是会有距离的</p>
+<p>但他们才是无时无刻不陪在你身边的</p>
+<p>还有那些我希望呵护到的人们</p>
+<p>我只是你们的精神需求</p>
+<p>但是好好生活、好好照顾自己才是你对自己最棒的拯救</p>
+<p>我相信你，你可以做到的</p>
+<p>最最最不佳，再看看这河里的瓜</p>
+<p>每天吃瓜还不够开心的吗？</p>
+<p>丧什么呢笨蛋嗯！</p>
+<p>我没有办法顾及到所有的人，</p>
+<p>但我真诚的希望你们每一个人都能幸福。</p>
+<p>你们一定得清楚</p>
+<p>你变得更好</p>
+<p>全是你自己拼命努力的结果</p>
+<p>你看我身上有光</p>
+<p>是因为 你们的眼中 本身就充满了光芒</p>
+<p>你们才是 自己的光</p>
+<p>等到 你们的光芒足够亮</p>
+<p>再看我</p>
+<p>我应该 只是一个普通人</p>
+<p>而你们真的很棒</p>
+<p>-- <span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMU02NHkxWjdkcA==">SNH48 一期生 莫寒 最后一次总选拉票会发言<i class="fa fa-external-link-alt"></i></span></p>
+</blockquote>
+<h1 id="有些事现在不做-一辈子都不会做了">有些事现在不做 一辈子都不会做了</h1>
+<p>这最后一部分我想谈谈选择。</p>
+<p>出处很明显了吧哈哈哈，五月天的歌。</p>
+<blockquote>
+<p>每次冲动留下的 都有所不同</p>
+<p>然而有天你会懂 就是那些 让你不同</p>
+<p>每滴眼泪挣脱后 都带走懦弱</p>
+<p>感动总在冲动后 苦涩回忆 都会温柔</p>
+<p>每个平凡的自我 都曾幻想过</p>
+<p>然而大多的自我 都紧抓着某个理由</p>
+<p>每个渺小的理由 都困住自由</p>
+<p>有些事情还不做 你的理由 会是什么？</p>
+</blockquote>
+<p>曾经喜欢小偶像的我非常看不起自己，因为相比于小偶像们一签八年的合同，我连五年的读博这件事都犹疑不决，拖延了很久不敢下决定。所以我一直认为我自己很懦弱，就像三年之前我在<a href="https://lifeodyssey.github.io/posts/726664aa.html">这里</a>写的一样。</p>
+<p>我也<a href="https://lifeodyssey.github.io/posts/94a46e7b.html">犹疑了很久</a>。</p>
+<p>回想起来，自己之前的多数决定都是出于情绪而做的决定</p>
+<p>其实也就是这一章的内容让我不想把这个写了很久的东西转发到朋友圈（当然还有一些zzzq的内容），因为哪怕到了现在，我也不是很确定要不要读博，而且也因为不想为自己负责，选择把读博这个决定交给funding-能拿到funding就读，拿不到就不读，我压根对这个专业没有那么多热爱。</p>
+<p>但是对自己的选择负责才是长大最重要的指标。</p>
+<blockquote>
+<p>“你得对着这新来的日子抱着虔敬的心。别想什么一年十年以后的事。你得想到今天。把你的理论统统丢开。所有的理论，哪怕是关于道德的，都是不好的，愚蠢的，对人有害的。别用暴力去挤逼人生。先过了今天再说。对每一天都得抱着虔诚的态度。得爱它，尊敬它，尤其不能污辱它，妨害它的发荣滋长。便是像今天这样灰暗愁闷的日子，你也得爱。你不用焦心。你先看着。现在是冬天，一切都睡着。将来大地会醒过来的。你只要跟大地一样，像它那样的有耐性就是了。你得虔诚，你得等待。如果你是好的，一切都会顺当的。如果你不行，如果你是弱者，如果你不成功，你还是应当快乐。因为那表示你不能再进一步。干吗你要抱更多的希望呢？干吗为了你做不到的事悲伤呢？一个人应当做他能做的事。 竭尽所能。”</p>
+<p>真正的英雄是明白世界的残酷，也遭受了社会带给他的苦难，他依然能用心的说“我热爱这个世界，我愿竭尽所能去为我的世界而好好战斗”。</p>
+</blockquote>
+<p>认真的讲，我选择读博，只是因为我没有更好的选择了；但是不去多试一下，怎么知道自己有没有更好的选择呢。</p>
+<p>还有就是，我的学生思维，我太怕落在别人后面，太过着重于和同龄人比较，同时也太过于看重稳定性和确定性。但是实质上，任何东西都是有代价的，就像做投资一样，你要稳定，你的收益就不可能高；你要高收益，你就要承受高风险。</p>
+<p>我就是那个想要稳定，同时又羡慕着别人的高收益的人。</p>
+<p>但是自己的选择，其实并不是那么具有稳定性和确定性。招聘要求一年年的水涨船高，现在自己看来没那么难的要求，后面可能就是遥不可及。现在要做一轮博后才能留校，后面可能就是两轮三轮，乃至千老，就像我们实验室的博后一样。</p>
+<p>自己这一行还是一个重观测重实验的方向，算法再整出花来，没有什么办法实地验证，还是0，全国上下出得起海的的数来数去就海大厦大浙海大一所二所三所南海所。</p>
+<p>稳定吗？一点都不。而且从今年（2021）开始公益类事业单位开始改革，编制取消。讲真的编制取消之后，还不如留在国外。</p>
+<p>而且今年申请考核带来的水涨船高，4-5年后大概率是国内毕业的博士的爆发期。如果自己不能在4-5年内顺利毕业的话，大概率会面临另一轮高强度竞争，不论是post还是faculty。</p>
+<p>自己喜欢这样的生活吗？基金，项目，论文，学生，评审。每天看着我老板奔波劳碌，但是感觉他很幸福。</p>
+<p>自己喜欢目前的生活状态吗？</p>
+<p>自己目前的生活状态，可是一点都不开心啊。</p>
+<p>果然是想的越多，就会越不开心。</p>
+<p>所以，读吗？</p>
+<p>大概率还是会读的吧。希望这次我能做到对自己负责，成为一个大人。</p>
+<p>接受这个选择所带来的后果。</p>
+<h1 id="庚子鼠年腊月十九">庚子鼠年腊月十九</h1>
+<p>我的生日是一个很尴尬的时候，腊月十七。小学，初中，高中，大学，都一直是考试放假的时候。而且我喜欢过农历的生日（曾经被人吐槽像个古代人），别人更难记住我生日的日子。</p>
+<p>所以一直没有（前几年开始，有了两三个）朋友同学记得我的生日。</p>
+<p>之前其实因为这件事情自卑自闭，每年过生日的BGM都是<span class="exturl" data-url="aHR0cHM6Ly9jLnkucXEuY29tL2Jhc2UvZmNnaS1iaW4vdT9fXz12eFZyUDZ3">《祝我生日快乐》<i class="fa fa-external-link-alt"></i></span>。</p>
+<blockquote>
+<p>一个人坐在空荡包厢里面</p>
+<p>手机 让它休息一夜</p>
+<p>难 想切歌切掉回忆的画面</p>
+<p>眼泪不能流过十二点</p>
+<p>生日快乐 我对自己说</p>
+<p>蜡烛点了 寂寞亮了</p>
+<p>生日快乐 泪也融了</p>
+<p>我要谢谢 你给的 你拿走的一切</p>
+</blockquote>
+<p>但是其实就是太矫情了，平均每天有三四十万人出生，你又不是含着金钥匙出生，别人没有必要非得记得你。</p>
+<p>这只是一个普普通通的日子，你也只是一个普普通通的人。</p>
+<p>今天也没有什么特殊的活动，一个普普通通的研究生在实验室的普普通通的一天，还在为了发表和毕业头秃。</p>
+<p>新的一岁，希望自己能对自己的选择负责，成为一个井井有条的大人。</p>
+<p>每年过生日的时候都会把头像换成周杰伦和我一样大的时候发表的专辑封面，今年还是特意换的台版的专辑封面。</p>
+<p>周杰伦24岁的时候发了《七里香》</p>
+<p>我能发个论文嘛？</p>
+]]></content>
+      <categories>
+        <category>梦里真真语真幻</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>随便写写</tag>
       </tags>
   </entry>
   <entry>
@@ -6155,876 +7062,5 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
         <tag>Research</tag>
         <tag>python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hyperspectral and phytoplankton</title>
-    <url>/posts/ed08fed2.html</url>
-    <content><![CDATA[<p>This is an Annotated Bibliography for the doctor proposal.</p>
-<p>Hyperspectral Remote Sensing of Phytoplankton Species Composition Based on Transfer Learning</p>
-<p>Hyperspectral Differentiation of Phytoplankton Taxonomic Groups: A Comparison between Using Remote Sensing Reflectance and Absorption Spectra</p>
-<p>Distinguishing cyanobacteria from algae in optically complex inland waters using a hyperspectral radiative transfer inversion algorithm</p>
-<p>Hyperspectral optical discrimination of phytoplankton community structure in Funka Bay and its implications for ocean color remote sensing of diatoms</p>
-<p>Remote estimation of phytoplankton size fractions using the spectral shape of light absorption</p>
-<p>On the discrimination of multiple phytoplankton groups from light absorption spectra of assemblages with mixed taxonomic composition and variable light conditions</p>
-<p>Linking phytoplankton absorption to community composition in Chinese marginal seas</p>
-<p>Another way is to see the analyze the NPP/PSC</p>
-<p>Ultimate goal is to propose a hypothesis-test 的论文，并且跟我现在的修士论文有联系</p>
-]]></content>
-      <categories>
-        <category>Annotated Bibliography</category>
-      </categories>
-      <tags>
-        <tag>Ocean Color</tag>
-        <tag>Inherent Optical Properties</tag>
-        <tag>Ocean Optics</tag>
-        <tag>Research Basis</tag>
-        <tag>Phytoplankton</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>absorption measurement process</title>
-    <url>/posts/49ca7bc7.html</url>
-    <content><![CDATA[<p>This is a summary of how to process absorption measurement data.</p>
-<p>The measurement is basically based on the QFT-T mode. More details could be found at <span class="exturl" data-url="aHR0cHM6Ly9pb2NjZy5vcmcvd2hhdC13ZS1kby9pb2NjZy1wdWJsaWNhdGlvbnMvb2NlYW4tb3B0aWNzLXByb3RvY29scy1zYXRlbGxpdGUtb2NlYW4tY29sb3VyLXNlbnNvci12YWxpZGF0aW9uLw==">IOCCG protocols volume 1<i class="fa fa-external-link-alt"></i></span></p>
-<a id="more"></a>
-<h1 id="cdom">CDOM</h1>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224105720968.png" alt="image-00030224105720968"><figcaption aria-hidden="true">image-00030224105720968</figcaption>
-</figure>
-<p>This is the excel sheet we used for CDOM measurement</p>
-<p>Each time we measure two blank and two samples.</p>
-<p>The <span class="math inline">\(a_{CDOM}\)</span> is calcualted follow: <span class="math display">\[
-a_{CDOM}=\frac{2.303}{l}[[OD_s(\lambda)-OD_{bs}(\lambda)]-OD_{null}]
-\]</span> <span class="math inline">\(l\)</span> is the path length of the quartz cell. In MPS-2400, the <span class="math inline">\(l=10cm(0.1m)\)</span>. 2.303 is the factor to convert <span class="math inline">\(log_{10}\)</span> to <span class="math inline">\(log_{e}\)</span></p>
-<p><span class="math inline">\(OD_s(\lambda)\)</span> is the optical density of the filtered water sample, <span class="math inline">\(OD_{bs}(\lambda)\)</span> is the optical density of purified water, and <span class="math inline">\(OD_{null}(\lambda)\)</span> is the apparent residual optical density at a long visible or near infrared wavelength where absorption by dissolved materials is assumed to be zero. In the previous measurement, we use the 700 nm as null wavelength.</p>
-<p>So this excel file is quite clear.</p>
-<h1 id="ap-ad-aph">ap ad aph</h1>
-<p>The optical density of total particles retained on the filter (<span class="math inline">\(OD_p(λ)\)</span>) were kept below 0.3 by adjusting the filtration volume. Subsequently, <span class="math inline">\(OD_p(λ)\)</span> was measured between 350 and 750 nm at 1 nm intervals, using a dual beam multi-purpose spectrophotometer (MPS-2400, Shimadzu Inc.). A blank filter soaked with 0.2 µm-filtered seawater (FSW) was used as the reference. To correct the path length amplification effect caused by multiple scattering in the glass fibre filter, the following equation was utilized according to Cleveland and Weidemann (1993): <span class="math display">\[
-OD_s(\lambda)=0.378OD_p(\lambda)+0.523D_p(\lambda)^2
-\]</span> where <span class="math inline">\(OD_s(λ)\)</span> is the optical density of particulate matter in suspension. The absorption coefficient of the total particles (<span class="math inline">\(ap(λ)\)</span>) was calculated using the following equation: <span class="math display">\[
-a_p(\lambda)=2.303OD_s(\lambda)S/V
-\]</span> where 2.303 is the factor used to convert <span class="math inline">\(log_{10}\)</span> to <span class="math inline">\(log_e\)</span> , S is the filter clearance area (<span class="math inline">\(m^2\)</span> ), and V is the filtered volume (<span class="math inline">\(m^3\)</span> ). The ratio of S to V approximates the geometrical light pass length.</p>
-<p>After measurements of the optical density of the total particles, the filters were soaked in methanol for at least 24 h to extract phytoplankton pigments, and then rinsed with FSW. The absorbance of a decolourized filter was re-measured using the same method to obtain the optical density of the non-phytoplankton particles (Kishino et al., 1985). Similarly, the absorption coefficient of non-alga particles (<span class="math inline">\(a_{nah}(λ)\)</span>) was determined using Eq. (2) and (3). <span class="math inline">\(a_{ph}(λ)\)</span> was then obtained from the following equation: <span class="math display">\[
-a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
-\]</span></p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030225145047326.png" alt="image-00030225145047326"><figcaption aria-hidden="true">image-00030225145047326</figcaption>
-</figure>
-<p>This the the excel sheet for ap. Blank 1&amp;Blank2 are measrued before ap, Blank 3&amp;Blank4 are measrued after ap</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Ocean Color</tag>
-        <tag>Experiment Protocols</tag>
-        <tag>Absorption Measurement</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>人生实验室</title>
-    <url>/posts/c17fab82.html</url>
-    <content><![CDATA[<p>前排预警：这篇博客有我大量的个人牢骚和负能量。</p>
-<p>面对职业选择哭闹的我被朋友推荐的一本书，附上朋友讲的话。</p>
-<blockquote>
-<h2 id="人生实验室职涯难题的逻辑图解说明书"><a class="markdownIt-Anchor" href="#人生实验室职涯难题的逻辑图解说明书"></a> 《人生实验室：职涯难题的逻辑图解说明书》</h2>
-<p>可以在这里试读和购买电子书：<span class="exturl" data-url="aHR0cHM6Ly9yZWFkbW9vLmNvbS9ib29rLzIxMDExODA3NTAwMDEwMQ==">https://readmoo.com/book/210118075000101<i class="fa fa-external-link-alt"></i></span></p>
-<p>推荐这本书有三大原因，</p>
-<ul>
-<li>简明易懂</li>
-<li>实用操作性强</li>
-<li>有启发性</li>
-</ul>
-<p>全书一共十六个章节，每个章节由一个图文小故事和一个实验构成，聚焦一个职业生涯发展中常见的问题。作者用小故事把道理讲得深入浅出，微简报很好消化。而实验提供的是工具，引导读者根据具体的步骤来分析自己的问题。</p>
-<p>这本书的内核就是教读者运用科学研究的方法来分析自己的问题。我对科学方法的理解是有目的地搜集信息并在此基础上推理来解决特定的问题（作为一名科研人员，老实说我在看这本书的过程中非常汗颜。方法都熟悉，但是从来没有想到过把这一套系统的分析方法应用在解决人生困惑上）。</p>
-<p>如果你看这本书的期望是只要看完这本书，你的关于职涯的烦恼统统都会解决，那很抱歉你一定会失望。我不相信世界上存在一纸通用的治疗烦恼的配方，就算有，得到它的人也不会单是因为读完就会瞬间脱离烦恼的纠缠。但是我可以保证，无论你的烦恼是哪一种，在这本书里都会找得到一些启发，帮助你去面对和处理你的烦恼，并且让你对自己做出的选择更有信心。</p>
-<p>在考虑人生的重大抉择上，我认为掌握好的分析方法并不难，难的是收集到真实有效的信息作为分析的前提和基础。前提错了，哪怕方法再对，也不能保证得到正解。人往往以为最了解自己的人是自己。诚然，一个人会拥有许多他人没有的关于自己的信息，例如内心活动，感受，情绪等等。但是人也会因为局限于自身的认知和反应模式而看不清关于自己的很多东西。许多世俗眼光中的人生赢家所经验到的是空虚，虽然拥有了人人羡慕的外在之物，还是不知道自己真正想要的是什么。我们能够做的也许就是在搜集这些信息的时候尽可能地对自己诚实。如果你觉得了解自己很困难，那我的建议第一条永远是求助专业人士。</p>
-<p>读完这本书，我最深刻的体会是要有求证的实践和付出代价的准备。如果你属于逻辑能力不错的人，那么我相信，如果给你一组命题的真值，你一定能推断出待判命题的真假。然而逻辑强大的人可能反而会经验到更多的内在的冲突并且为此而苦恼。因为现实中面临抉择的时候作为前提的命题很少会全部已知TRUE or FALSE，你遇到最多的很可能是NA。正因为严谨，所以努力把所有因素纳入考虑范围，生怕漏掉任何一种可能性。正因为缜密，所以不会擅自把NA改成TRUE或FALSE，生怕会武断。变量一多就很容易纠结在某些细节上而分不清主次（我举个现实的例子：撒明灯。对不起，太严肃了忍不住不正经一下。）那么一些关键命题的真值能不能通过科学的方法找出来或者逼近？获取信息必须要付出代价，无论是通过实验还是模拟。实现梦想更需要付出代价。</p>
-</blockquote>
-<p>看这本书的时候带入两个岗位选择，一个是以yk姐姐为参考的公务员，另一个是搞科研。</p>
-<p>反正平时也没有人看我的博客，嘿嘿。</p>
-<a id="more"></a>
-<h1 id="实验001-方向-人生的目标是什么"><a class="markdownIt-Anchor" href="#实验001-方向-人生的目标是什么"></a> 实验001 方向-人生的目标是什么？</h1>
-<blockquote>
-<p>工作除了薪水，还有他更重要的意义。这份意义，是你人生真正追求的目标；这份意义，拥有比薪水更重要的价值；这份意义。才是你人生要坚持的方向。不知道努力有什么意义，那你一定要赶快把它找出来。</p>
-<p>没有目标的努力，只会让你不断在原地踏步；定清你的方向，让每一步前进都更有意义。</p>
-</blockquote>
-<p>很遗憾这本书并没有回答，我反而需要不断的问自己，人生的目标是什么？</p>
-<p>也许讲人生的目标太遥远，那我，30岁，6年内的目标是什么，或者再退一步，我对我30岁的生活状态有什么要求？</p>
-<p>我好像没有什么要求</p>
-<p>让我来慢慢的把我理想中的工作/生活细化一下，具体化一下。</p>
-<ul>
-<li>Work-life balance</li>
-</ul>
-<p>这条代表了不加班，或者我做科研的话就是凭我自己时间管理能力能做到WLB。</p>
-<ul>
-<li>小米全家桶的家居</li>
-</ul>
-<p>这条代表了我有买房的能力，因为组的房子不可能让我这么乱收拾。</p>
-<ul>
-<li>PS/Swicth/主机齐全，新游戏发售不会因为硬件条件/软件条件玩不了</li>
-</ul>
-<p>这条代表了，我有足够的经济实力，能自由的翻墙而且不被担心查水表。</p>
-<ul>
-<li>去过纳米比亚,看过极光</li>
-</ul>
-<p>这两条代表了我能请下假，并且有长达半个月甚至一个月的年假。</p>
-<p>似乎除了做学术或者在国外工作之外，并没有其他的办法能满足了。</p>
-<p>其实这些是我2.24晚上更新的，后面的内容，可以不用看了。</p>
-<p>我发现我目前的不开心似乎都是来源于我自己。</p>
-<p>我自己需要很多的改变。</p>
-<ul>
-<li>提高效率，干活和其它时间分开</li>
-<li>专注干活不分心</li>
-<li>早睡早起，养成习惯，坚持运动</li>
-<li>提高写代码的规范</li>
-<li>多和老板交流</li>
-</ul>
-<p>我觉得我不是不可能在三年内毕业，不就两篇文章。</p>
-<p>那就读吧。</p>
-<p>我又在反复横跳了。</p>
-<p>后面可以不用看了，暂时。</p>
-<p>2021.2.26</p>
-<p>自己不要把很多事情想得太美好。</p>
-<p>自己读了博，就一定会找到合适的教职吗？</p>
-<p>不一定。</p>
-<p>哪怕是在日本，也很难。</p>
-<p>好累。</p>
-<p>自己不要过分美化这个选项。</p>
-<p>感觉自己这个是另一个版本的Ph.D Grind</p>
-<p>虽然那本书我也没有读完。</p>
-<p>自己更大的概率，是像Fukutomi一样。</p>
-<p>四十岁也只能当个博后，</p>
-<p>每次被老板否定总会抑郁一段时间。</p>
-<p>就是自己把研究，把别人对自己的评价看得太重了。</p>
-<p>自己还不够强大。</p>
-<p>暂时好像就这些？</p>
-<p>2021.3.8</p>
-<p>再次反复横跳</p>
-<p>记住 你自己是一个普通人</p>
-<p>哪怕读博，你可能也会没有时间出去玩</p>
-<p>而且事业单位也是要上交护照的</p>
-<p>我读完博之后那么多压力也可能很难有心情去玩</p>
-<p>我又开始迷茫了。</p>
-<p>那感觉，自己唯一需要考虑的事情，就是自己对搞研究有没有兴趣了。</p>
-<p>如果自己能提出来，偏向science的课题。</p>
-<p>自己就很大概率会去读了。</p>
-<p>至于读完之后去哪里…</p>
-<p>可是自己真的喜欢这种这么富有挑战性的工作吗？</p>
-<p>不，自己的本质是不喜欢的。</p>
-<p>自己时常性因为各种没有做出来好的结果而失眠。</p>
-<p>也常常因为各种问题而焦虑。</p>
-<p>自己可能喜欢做一些理论的前沿的事情。</p>
-<p>但是可能自己并不适合。</p>
-<p>主要是自己的心态太差。</p>
-<p>或者如果能有女朋友分担和支持，至少让自己的未来不那么模糊就好了</p>
-<p>如果自己能在未来的一段时间里改掉心态的问题，可能会好一些吧？</p>
-<p>搞科研可以不焦虑吗？</p>
-<p>另一个方向是，正如自己和心理咨询师聊到的。</p>
-<p>自己似乎更多的执念都是在那两个愿望上。</p>
-<p>对自己别要求太高。</p>
-<p>全世界哪里的星星和极光都是一样的。</p>
-<p>那些技能 与人交流组织之类的</p>
-<p>或许自己可以学？</p>
-<p>但是自己擅长吗？</p>
-<blockquote>
-<p>大量的人在读完博，做完post，甚至到了AP之后都有转行的</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzMzNzg0MDQy">https://www.zhihu.com/question/33784042<i class="fa fa-external-link-alt"></i></span></p>
-</blockquote>
-<p>自己也就不要想太多</p>
-<p>慢慢走才会走的最快</p>
-<p>步子大了反而会把自己扯到</p>
-<p>而且自己需要调整自己的节奏</p>
-<p>如果自己忙到每天搞完研究就没有别的事情。</p>
-<p>那就不是 科研 的问题了</p>
-<p>而是自己的问题</p>
-<p>自己去做什么都会这样</p>
-<p>自己可以接受 未来五到十年的不稳定 甚至三十岁才能定下来自己未来的方向吗？</p>
-<p>未来五到十年，没有女朋友。</p>
-<p>自己 更喜欢什么样的生活？</p>
-<p>就拿</p>
-<p>不要对自己抱有太多期望。</p>
-<p>做好自己眼前能做的事情。</p>
-<p>不要对自己抱有太多期望。</p>
-<p>做好自己眼前能做的事情。</p>
-<p>不要对自己抱有太多期望。</p>
-<p>做好自己眼前能做的事情。</p>
-<p>我居然没有把结婚孩子房子写在里面。</p>
-<h1 id="实验002-稳定-对你来说什么叫做稳定"><a class="markdownIt-Anchor" href="#实验002-稳定-对你来说什么叫做稳定"></a> 实验002 稳定-对你来说，什么叫做稳定？</h1>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224154526555.png" alt="image-00030224154526555"></p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>我有喜欢做的事情吗？</p>
-<p>没有。</p>
-<p>哪怕是打游戏，打多了我也会腻。</p>
-<p>对我来讲我更多的处于“条件”和“目标”的中间，那就是：我不会因为有个工作可以满足稳定的条件就去做那个工作，但是我也不知道我喜欢什么。我更倾向于，有一个满足稳定条件的工作，同时我又不讨厌。</p>
-<p>换而言之，我还是想要一个稳定 条件 的工作。因为我不知道我喜欢什么，想要做什么，也就没有办法让自己喜欢做的事情变得有价值。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155250373.png" alt="image-00030224155250373"></p>
-<p>我在B。</p>
-<p>其实这个过程对我来讲挺没意思的，因为我设置的两个选项都是稳定条件。</p>
-<p>但是我也列一下吧。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155358512.png" alt="image-00030224155358512"></p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155417293.png" alt="image-00030224155417293"></p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155446374.png" alt="image-00030224155446374"></p>
-<h1 id="实验003-盲点-爽到底是什么"><a class="markdownIt-Anchor" href="#实验003-盲点-爽到底是什么"></a> 实验003 盲点-爽，到底是什么？</h1>
-<p>这一章讲 用别人的角度来给自己挑毛病。</p>
-<p>虽然很有用，但是对现在的我完全没用。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224155637057.png" alt="image-00030224155637057"></p>
-<h1 id="实验004-烦恼-什么才是对的选择"><a class="markdownIt-Anchor" href="#实验004-烦恼-什么才是对的选择"></a> 实验004 烦恼-什么才是对的选择？</h1>
-<blockquote>
-<p>你要花时间的，不是决定要不要做这个选择；</p>
-<p>你要花时间的，是把它变成好的选择。</p>
-<p>人生最痛苦的，其实不是失败。</p>
-<p>人生最痛苦的，是我本来可以。</p>
-<p>比作出错误选择更严重的，是明明对现状不满意，却又不敢做出选择。</p>
-<p>人生只有一次，别让未来充满后悔；勇敢做出行动，让你的决定成为最佳选择。</p>
-</blockquote>
-<blockquote>
-<p>两难问题：我在考虑要不要OOO，但是我也有点担心XXX</p>
-<p>OOO：对原定的前进方向，一直以来的环境状况做出的改变</p>
-<p>XXX：期待另一个未来的机会，但是没有把握结果会怎样</p>
-<p>也就是说，OOO是“要不要改变状况”, XXX是“担心改变会不如预期”的问题。</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224164811495.png" alt="image-00030224164811495"></p>
-<table>
-<thead>
-<tr>
-<th>OOO：不读博，回去考公务员需要面对的付出</th>
-<th>XXX：担心不读博未来出现的结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>从今年十月到明年八九月份的GAP</td>
-<td>可能考错了地方 或者考了之后变得很忙</td>
-</tr>
-<tr>
-<td>准备考试</td>
-<td>工资很低，房子买不起</td>
-</tr>
-<tr>
-<td>搜集资料</td>
-<td>可能考不上</td>
-</tr>
-<tr>
-<td>准备面试</td>
-<td>可能30岁的时候的收入还很低</td>
-</tr>
-<tr>
-<td>备战考试</td>
-<td>可能会做很多面子工作，对自己来讲很没意义的事情</td>
-</tr>
-<tr>
-<td>学习社交，说话，公文等一系列我不喜欢的事情</td>
-<td>可能会后悔，很难再次跳出来读博</td>
-</tr>
-<tr>
-<td></td>
-<td>可能我的脑子会生锈，再也没有机会沉下心学习数学物理文学</td>
-</tr>
-</tbody>
-</table>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224165536748.png" alt="image-00030224165536748"></p>
-<p>其实这个图分类的不是很合理，我是可以改变，但是还没有下定决心，应该在D那里而不是E那里。很多时候不是想改变想决定就能改变能决定的。</p>
-<blockquote>
-<p>这种时候要考虑的是，有没有另外的解法。</p>
-</blockquote>
-<p>诚实地说，没有。</p>
-<p>我只能做两个选择。非此即彼。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224170001363.png" alt="image-00030224170001363"></p>
-<p>原来我是在这里</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224170059171.png" alt="image-00030224170059171"></p>
-<p>做学术算是自己的理想吗？</p>
-<p>不算。</p>
-<p>但是自己不去尝试一下做学术会后悔吗？</p>
-<p>会。</p>
-<p>自己宁愿尝试后再后悔还是后悔没有尝试？</p>
-<p>后悔没有尝试。</p>
-<p>但是我觉得人还是要现实一点。</p>
-<h1 id="实验005-因果-学位与证照那是什么"><a class="markdownIt-Anchor" href="#实验005-因果-学位与证照那是什么"></a> 实验005 因果-学位与证照，那是什么？</h1>
-<blockquote>
-<p>读博唯一无法取代的，是它的毕业证书。</p>
-<p>你的价值，非要毕业证书才能证明吗？</p>
-<p>研究所，只是一条路。</p>
-<p>这条路，你可以走，也可以不走。</p>
-<p>可以大学毕业就走，也可以改天想走再走。</p>
-<p>你不会因为念了研究所就脱胎换骨。</p>
-<p>你也不会因为没念研究所就矮人一截。</p>
-<p>人生不需要急着应在起跑线。</p>
-<p>只要赢在终点，哪里是起点有谁会在乎。</p>
-<p>人生的路很多条，每一条都是不同选择。</p>
-<p>认真走好选择的路，每一条都会是最好的路。</p>
-</blockquote>
-<p>其实这段话有点废话和心灵鸡汤。</p>
-<p>这里面的读博，换成考公务员也是一样的。</p>
-<p>但是很多时候不是想走就走，不是想怎么样就怎么样。</p>
-<p>的确有人这么做成了，但是我只是一个普通人，我不能对自己要求太多。</p>
-<p>我能走好一条路就很不错了。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030224212928778.png" alt="image-00030224212928778"></p>
-<p>所以这个其实也跟我现在的问题没啥关系。</p>
-<p>我的目标 并不是什么直接的东西</p>
-<h1 id="2021226"><a class="markdownIt-Anchor" href="#2021226"></a> 2021.2.26</h1>
-<p>(进行一下时间标注，上面的都是2.25写的)</p>
-<p>自己不要把很多事情想得太美好。</p>
-<p>自己读了博，就一定会找到合适的教职吗？</p>
-<p>不一定。</p>
-<p>在日本，就很难。</p>
-<p>刘老师当了那么多年博后。</p>
-<p>Aiki当了那么多年博后。</p>
-<p>好累。</p>
-<p>自己不要过分美化这个选项。</p>
-<p>感觉自己这个是另一个版本的Ph.D Grind</p>
-<p>虽然那本书我也没有读完。</p>
-<p>自己更大的概率，是像Fukutomi一样。</p>
-<p>四十岁也只能当个博后，</p>
-]]></content>
-      <categories>
-        <category>梦里真真语真幻</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>随便写写</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>A Ph.D is not enough</title>
-    <url>/posts/13a77735.html</url>
-    <content><![CDATA[
-]]></content>
-      <categories>
-        <category>梦里真真语真幻</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>随便写写</tag>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>My grind</title>
-    <url>/posts/b5654816.html</url>
-    <content><![CDATA[<p>一些日记或者类似于闲言碎语的日常发牢骚。</p>
-<a id="more"></a>
-<h1 id="section">2021.3.9</h1>
-<p>最近一直在处理实验室过去的吸收数据，处理得我脑袋疼。不得不主动停下来，去想一些别的事情。</p>
-<p>最开始想的就是自己博士的课题。</p>
-<p>老板快要退休了，很直白的告诉我他没有funding了，所以其实在这里继续读下去不是一个很好的选择。但是自己在这里想继续读，其实很多时候就是像心理咨询老师讲的一样，我只是在逃避自己不喜欢的东西而已。</p>
-<p>自己并没有什么特别喜欢的东西。</p>
-<p>自己真的没有什么特别喜欢的东西，但是自己有很多想做的事情，和很多不想做的事情。</p>
-<p>自己对学术其实也没有什么特别的热情，其实真相是，自己大概率不会成为老板这个实验室里面的Outlier，而最好的两个Outlier才分别去了JAMSTEC和南信工而已。</p>
-<p>所以其实自己很大概率在博士毕业之后，也只能去个普通一本二本-自己实验室里绝大多数人的工作都是一个普通的一本二本，或者公司。</p>
-<p>而这意味着，自己很大概率和科研无缘。</p>
-<p>所以，其实还不如读完博去上班。</p>
-<p>做科研几乎和WLB无缘了。</p>
-<p>自己就是在逃避。</p>
-<p>想了半天，看了好多https://dingzeyu.li/blog/的博客，看到他写的PhD. Grind读后感很有同感，于是</p>
-<p>其实我就忽然觉得。</p>
-<p>自己不需要对自己要求太高，毕竟慢慢走才走得慢。</p>
-<p><strong>自己很大概率和科研无缘</strong></p>
-<p><strong>自己很大概率和科研无缘</strong></p>
-<p><strong>所以不要强迫自己去解决太难的问题，也不要强迫自己去提出来太好的课题，自己现在连一个PhD student都不是</strong></p>
-<p><strong>所以不要强迫自己去解决太难的问题，也不要强迫自己去提出来太好的课题，自己现在连一个PhD student都不是</strong></p>
-<p><strong>只要自己足够努力，对自己的每一篇Paper都负责就可以了</strong></p>
-<p><strong>只要自己足够努力，对自己的每一篇Paper都负责就可以了</strong></p>
-<p>自己最好选择一个那种 对自己要求不是太高，自己稍稍伸下手就能够得到，同时又能充分利用自己的想法，让自己活得很舒服的状态。</p>
-<p>不要总是去挑战自己。</p>
-<p>那。</p>
-<p>我似乎知道了。</p>
-<p>自己似乎最好学好日语，读完博在日本找工作。</p>
-<p>虽然在日本博士就职也挺困难的，但是对自己来讲这是比较容易达到理想生活的方式了。</p>
-<p>或者去其他国家做博后，然后留在那里。</p>
-<p>如果自己不读的话，就回去做个公务员吧。</p>
-<p>自己要尽快学好日语，越快越好。</p>
-<p>然后顺利毕业。</p>
-<p>这样在老板不能给我提供RA的情况下，自己也可以尽快在日本找到工作。</p>
-<p>无论如何，对自己来讲，在日本工作比在国内工作舒服很多呀。</p>
-<p>但是日本这里也会有自己不喜欢的内容，自己千万别太过分美化这里了。</p>
-<p>日本没有移民文化，自己在这里就是一个外人。</p>
-<p><strong>自己要时刻做好，老板没有Funding，去工作的公司会倒闭的准备。</strong></p>
-<p>给自己一个Plan B</p>
-<p>摘录一下上面提到的博客里面的内容来提示自己：</p>
-<blockquote>
-<p>1.人生不可控</p>
-<p>PhD期间意识到最大的一点，我觉得就是意识到了人生无常。很多时候命运的安排远远超出我们自己的能力的范围。很多东西都不是我们自己可以控制的。作为一个computer scientist, 我下意识的就觉得很多东西都应该是deterministic的，就像是写了个程序，它的输出就是应该是十分确定的，可是人生的确是不可控的。</p>
-<p>举几个例子吧。第一个，研究的方向。入学前两年，多数学生都是clueless，基本都是靠导师提供一些想法和方向，而这个方向由于各种各样的原因，有可能做了几年是个dead end，有可能做了几年变成deep learning一般的热门方向。这种大方向的控制，基本都是学生自己没法预测和控制的。</p>
-<p>再举一个，各种闲事琐事的作用也是无法量化和预测的。在郭生的经历里，他怎么可能预测到自己和好基友闲聊从而听说了某个workshop，从而认识哈佛的教授，从而帮他把idea D完善，从而在他博士最后一年能去哈佛访问，从而发表博士论文的最后一篇文章，从而凑齐自己的答辩委员会。</p>
-<p>当初，他怎么可能预测到，和好基友喝的一杯咖啡和闲聊，能在几年后帮助到他自己毕业呢。这就是无法预测，无法计划的。</p>
-<p>只能顺其自然，做最好的自己，增大成功的概率。关键在于意识到身边发生的很多事情是在自己控制以外的，成功了不必过于沾沾自喜，失败了也无需太责备自己。</p>
-<ol start="2" type="1">
-<li>不坚持就不会成功</li>
-</ol>
-<p>虽然人生无法预测，但是个人努力还是十分重要的。基本没有谁可以不努力就获得很大的成功，就算不努力可以一时顺利，也无法一直顺利。</p>
-<p>郭生虽然前面几年都一直在撞墙，既没找到自己研究的方向，也没投出一作的文章，但是他一直在努力，没有放弃。正是这些年的积累，能让他在第四年第五年，厚积薄发，一股气做完了四个项目，这种写code能力写paper的能力，都是郭生前几年坚持的成果。</p>
-<p>我的博士起步也是比较艰难，第一篇论文很快就做完投出去了，但是投会议被拒了两次，每次被拒就是要接着花时间改进，这样一年就过去了。之后转投一个journal，经过再两次major revision和一连串的minor revision，最终过了三年才present。不得不说这样子的体验是挺可怕的，我挺幸运的，各种机缘巧合能够从谷底走出。</p>
-<p>最近在读一本书，<span class="exturl" data-url="aHR0cHM6Ly9hbXpuLnRvLzJuYW1STHU=">Grit: The Power of Passion and Perseverance<i class="fa fa-external-link-alt"></i></span>。书名里的Grit原意是小沙粒，后来延伸出“courage and resolve”的意思，勇气和决心。不得不说Grit和郭生的Grind这本书有异曲同工之意。都是要慢慢研磨，坚持不懈。这本Grit的书里举了很多名人成功的例子，发现他们成功的共同点并不是他们很先天聪明或者很有天赋， 而是后天不断的努力，遇到困难也不放弃。读Grit的时候总感觉自己在读鸡汤，可是那些例子貌似又的确挺convincing。之后有时间再写写那个的读后感吧。</p>
-<ol start="3" type="1">
-<li>导师太重要</li>
-</ol>
-<p>这些年来，断断续续的也很多同学都问过我说怎么选PhD offer。虽说这个是个幸福的烦恼（毕竟拿了好几个offer），但如果选择不当的话，的确可以造成多年困扰。</p>
-<p>我觉得学校排名重要，地理位置重要，实验室的同学重要，可最终最重要的还是导师。其实导师重要的原因太多太多，我也没法一一列举，就说两个本科同学可能没意识到的吧。当然，如果你的目标是天天划水，几年后混个学位的话，就不用考虑以下的因素了。</p>
-<ul>
-<li>导师决定你的毕业时间。有的导师就是习惯五六年毕业学生，有的导师就是出名的拖着学生不毕业的，很多这些在理科生物化学里面尤其为甚，工科的稍微少一点点。当然作为学生，自己的努力也会影响自己的研究进度，可是看回上面的第一点：人生不可控，毕业时间就是一个不可控的事情。</li>
-<li>导师能推动你的研究起步。你在不在导师的<span class="exturl" data-url="aHR0cDovL3d3dy5wZ2JvdmluZS5uZXQvY3JpdGljYWwtcGF0aC5odG0=">critical path<i class="fa fa-external-link-alt"></i></span>上？要了解接下来导师五年的计划，是不是要休sabbatical，是不是要忙自己的startup，是不是要休产假，是不是要partime去大公司。这些情况我都从自己的朋友同学那里听说过，都对新入学的学生的研究起步有很大的影响。如果你的导师能在接下来五年安心做研究，对你的发展会很有帮助。</li>
-<li>导师要付你全部的学费和工资。所以理论上导师可以直接fire你。作为学生，我觉得很重要的一点，就要认识到：要是你连着很长一段时间都没法meet导师的expectation的话，赶紧好好沟通，如何让双方能on the same page.</li>
-</ul>
-<p>说回到郭生的案例，他导师真是太不错了。这些年郭生都没有做导师的critical path上的project，导师也没很大的意见。其中部分原因是郭生自带funding，部分原因就是导师自己本身比较nice。在这种情况下，让郭生做了DEFGH五个项目顺利毕业，也是挺难得的。</p>
-</blockquote>
-<h1 id="section-1">3.10</h1>
-<p>上午碎碎念。</p>
-<p>自己既然大概率与科研无缘，那么自己后面其实很多时候，所要处理的事情也并不是自己想象中具有很高创造性的工作。而且自己研究的性质决定了不可能会有太多人感兴趣。 其实拿国外的教职环境，研究环境和国内相比非常合适。 其实如果自己成不了什么特别厉害的人，何不赶紧放弃，让自己成为一个普通人。 自己读研两年，一篇论文都没发呢。 自己能接受目前国内的工作环境吗？ 能接受就可以回去。 其实。 没什么大不了的。 https://www.zhihu.com/question/24308741 自己适合做公务员吗？ 自己现在的问题就变成了，如果明确知道自己毕业以后不会做科研，读博还有意义吗？</p>
-<p>不管怎么样，自己比海大的学生好多了？是吗？</p>
-<p>至少比同期的学生好多了。</p>
-<p>同班。</p>
-<p>虽然自己未来的竞争者也不是这些人。</p>
-<blockquote>
-<p>博士是一份给你学位的工作，而且还是一份工资不高且时间有限的工作。博士只是人生的一个阶段，而且是很短暂的一个阶段，不可能一直在学校读博士，即使继续做科研，也不一定能有机会继续做博士的研究内容。做好人生规划，尽快做好自己的工作按时完成论文按时走人，继续人生的下一阶段才是正事。</p>
-</blockquote>
-<p>自己对科研有兴趣吗？</p>
-<p>有 确实是有</p>
-<p>但是自己的兴趣都更来源于算法，光学，偏物理的那一部分。</p>
-<p>而不是生物。</p>
-<p>自己对生物，没有任何兴趣。</p>
-<p>被数据的不规范编号逼疯的下午碎碎念。</p>
-<p>自己有能力去做自己感兴趣的那一部分吗？</p>
-<p>没有。</p>
-<p>真的没有。</p>
-<p>而且还有焦虑的问题。</p>
-<p>自己这种人怎么可能不焦虑。</p>
-<p>而且搞学术真的很容易被更大的peer所包围。</p>
-<p>这个peer包括所有干你这行的人</p>
-<p>太难了</p>
-<p>如果我能找到自己的niche就好了</p>
-<p>就是那种，很适合我做的事情。</p>
-<p>太累了。</p>
-<p>自己最好能找到自己的niche，即：</p>
-<ol type="1">
-<li>没有太多应付性，无意义，重复性的工作</li>
-<li>没有太多应酬</li>
-<li>不加班，能有很多空闲时间来完成自己的想法</li>
-<li>月薪5000起即可，但是要有足够的可预见的上升空间</li>
-<li>能让自己不要那么焦虑</li>
-<li>不要有太傻逼的领导，或者说随机性不要那么强，因为自己不知道入职之后的领导会是什么样子的。</li>
-</ol>
-<p>太难了。</p>
-<h2 id="跟雅坤姐姐的讨论">跟雅坤姐姐的讨论</h2>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173439199.png" alt="image-00030310173439199"><figcaption aria-hidden="true">image-00030310173439199</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173507624.png" alt="image-00030310173507624"><figcaption aria-hidden="true">image-00030310173507624</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173532532.png" alt="image-00030310173532532"><figcaption aria-hidden="true">image-00030310173532532</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173600811.png" alt="image-00030310173600811"><figcaption aria-hidden="true">image-00030310173600811</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173625087.png" alt="image-00030310173625087"><figcaption aria-hidden="true">image-00030310173625087</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173646631.png" alt="image-00030310173646631"><figcaption aria-hidden="true">image-00030310173646631</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030310173703981.png" alt="image-00030310173703981"><figcaption aria-hidden="true">image-00030310173703981</figcaption>
-</figure>
-<p>接下来的问题</p>
-<ol type="1">
-<li><p>问老板支不支持我做一些偏向光学的项目</p></li>
-<li><p>问请家里人的经济情况</p></li>
-</ol>
-<p>自己还是想做大学老师这份职业的。</p>
-<p>自己在上学的时候就想过如果自己当了大学老师会怎么讲课。</p>
-<h2 id="再次劝退">再次劝退</h2>
-<p>https://note.com/chol_gyu/n/na93b711b844f 做研究就是世界上最差的工作。 工作的收入和满意度基本是最差的那档了。 9107一个月七八千，外加无尽的考核。 你像企业里，有了支付宝还有微信支付，有了淘宝还有京东拼多多 做研究你不是第一个你就是0 要跟全世界所有你的同行竞争，跟全世界最聪明最有执行力的人一起竞争 你是第二个发现的，第二个做出来的，你什么也不是 &gt;所以说只有热爱、聪明、坚毅的人，才是真正做研究的人。目前很多读博做研究的人都很没必要。</p>
-<p>所以我觉得我也没必要[破涕为笑]。</p>
-<p>经济上，没有必要。 心理上想读。 害怕抑郁。 想留在国外/进技术单位/公务员啥的。</p>
-<h1 id="section-2">3.11</h1>
-<p>如果有一件事，你做了会不开心，但是不做会有遗憾，你还愿意去做吗？</p>
-<p>这就是我目前犹豫的点了。</p>
-<p>人生总会有遗憾。</p>
-<p>我要不要选择这个遗憾呢。</p>
-<h2 id="跟gtc打完电话">跟GTC打完电话</h2>
-<p>最近在减肥，晚上不怎么吃东西。</p>
-<p>我发现过了七点/七点半之后就不会饿了。</p>
-<p>跟GTC打完电话。</p>
-<p>回国还是可以找工作的。</p>
-<p>如果想搞钱，还是最好去工作呀。</p>
-<p>如果自己之后的目标是进事业单位，</p>
-<p>又想起来狸教授（还是谁）说的那句话</p>
-<blockquote>
-<p>当你面临选择比较迷茫时，那么请选择最艰难的那条路。</p>
-<p>在不能既要又要还要的时候，先选择一个自觉有味的方向做起来再说！</p>
-</blockquote>
-<p>搜转行又搜到了一个<span class="exturl" data-url="aHR0cDovL3d3dy5qdXlhbmcuY28vcGhk6L2s6KGM5LmL6LevLw==">这个<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>自己想搞钱吗？</p>
-<p>不想，自己搞钱感觉只是完全为了买车子房子这些东西。</p>
-<p>不想要孩子真的好省钱。</p>
-<p>https://www.zhihu.com/question/372930972</p>
-<p>好难决定。</p>
-<p>自己</p>
-<h1 id="section-3">3.12</h1>
-<p>忽然想起来我这次的学费减免钱是不是写的有点太少了点。</p>
-<p>窗外一阵惊雷，这就是撒谎会被雷劈吗hhhhh。</p>
-<p>如果我想进企业工作，那不管怎么样，在日本工作不比在国内舒服多了吗？</p>
-<p>那就看老板喽.</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030312121514625.png" alt="image-00030312121514625"><figcaption aria-hidden="true">image-00030312121514625</figcaption>
-</figure>
-<p>老板觉得我能完成-&gt;在日本读博/转行进业界</p>
-<p>老板觉得我不能完成-&gt;回国考公/事业单位/国企</p>
-<p>就酱。</p>
-<h1 id="section-4">3.16</h1>
-<p>居然罕见地被老板push。</p>
-<p>我感觉我现在的前路一片灰暗。</p>
-<p>我不知道该往哪里走。</p>
-<p>没有一个人，或者没有一个事情可以让我作为我的锚点。</p>
-<p>我不知道 我是要留在国外还是回国内。</p>
-<p>我不知道 要去哪个城市。</p>
-<p>我每天都在这一片迷雾里，走两步，看看周围，再走两步。</p>
-<p>感觉就就像绕圈子。</p>
-<p>就像在磨坊里拉磨的驴一样。</p>
-<p>自己做了很多事情，走了很多路。</p>
-<p>但自己只看过磨坊里面的风景。</p>
-<p>为什么不出磨坊呢？</p>
-<p>因为出了磨坊对我来说是一片迷雾。</p>
-<p>我好像已经没有勇气，像之前那样。</p>
-<p>不管往哪儿走，不管前面有什么，都先进去看看。</p>
-<p>因为现在我想做的事情，都不是我一个人就能决定的事情了。</p>
-<p>我的努力，我的力量，在这些事情面前都显得无比渺小。</p>
-<p>就像随波逐流的浮萍。</p>
-<p>老实讲，这种感觉真的非常不好。</p>
-<p>你永远不知道，你是会被带到一个秀美的湖泊惬意生长，还是在下水道里腐烂至死。</p>
-<p>作为一个浮萍，你只能奋力吸收光和营养，然后等待水流的最终审判。</p>
-<p>很多时候，你没法像之前一样，从头再来。</p>
-<p>很多时候，我更想不再漂流，赶紧结束这段旅途。</p>
-<p>人总是要死的。</p>
-<h2 id="摸了会鱼之后">摸了会鱼之后</h2>
-<p>既然自己毕业之后大概率不做科研，那读博还有意义吗？</p>
-<blockquote>
-<p>Devote it</p>
-<p>Like it</p>
-<p>Good at it</p>
-</blockquote>
-<p>自己擅长研究吗？</p>
-<p>自己擅长写代码吗？</p>
-<p>自己擅长什么呢？</p>
-<p>自己擅长提idea，但是这屁用没有。</p>
-<p>我只想找一个差不多很舒服的工作。</p>
-<p>那自己现在做研究，舒服吗？</p>
-<p>我感觉自己很多时候，都是不舒服的吧？</p>
-<p>看着他就不想做的那种。</p>
-<p>那自己还要读吗？</p>
-<p>自己就把博士当工作，来跟自己回去考公务员相比呢？</p>
-<p>回去当公务员的最大好处能很快地成家立业。</p>
-<p>好累。</p>
-<p>好不想读呀。</p>
-<p>但是自己还是有一点点点兴趣的。</p>
-<p>自己的的兴趣来源于什么？</p>
-<p>自己是从什么时候开始对量化 算法 模型这一块开始感兴趣的？</p>
-<p>是从数学。</p>
-<p>自己喜欢条理清晰，遵从计算，并且不是统计的东西。</p>
-<p>而自己学的专业并不能做到。</p>
-<p>所以自己想改变这一点。</p>
-<p>本科班上自己的成绩让自己觉得自己有改变这一点的可能。</p>
-<p>自己有改变这一点的可能吗？</p>
-<p>这是自己的 兴趣？ 想法？ 还是只是想做的事情。</p>
-<p>只是自己想做的事情。</p>
-<p>自己想做的事情，不做会不会有遗憾。</p>
-<p>会！</p>
-<p>自己要不要搞定这个遗憾？</p>
-<p>我不知道。</p>
-<p>总而言之，选择一个自己喜欢的生活方式吧。</p>
-<p>不行，就回国，考公务员，尝试自己没试过的另一种生活方式。</p>
-<h1 id="section-5">3.17</h1>
-<p>ljc居然成了副教授</p>
-<p>我去，到底是怎么评的都。</p>
-<p>一篇一区都不发就能副教授啥的吗？</p>
-<p>一篇一区都不发就能当硕导？</p>
-<p>还是说都是共一和通讯？</p>
-<p>到底是渔业比较难发论文，还是评选有问题。</p>
-<p>我懵了。</p>
-<h1 id="section-6">3.18</h1>
-<p>我真的应该好好感谢一下我老板。</p>
-<p>昨天他问我能不能帮忙填一个表，我填了一部分之后问他剩下的咋填。</p>
-<p>他跑过来跟我讲，你要专心Science，数据的事搞不了就先算了，就忽略呗，然后跑过来跟我讨论了好久研究的事情。</p>
-<p>然后他今天就让Mizuno去搞数据的事情了。</p>
-<p>老板真好啊真好</p>
-]]></content>
-      <categories>
-        <category>人生得意须尽欢</category>
-      </categories>
-      <tags>
-        <tag>随便写写</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Tennary plot</title>
-    <url>/posts/2b01b12c.html</url>
-    <content><![CDATA[<p>Description for ternary plot</p>
-<a id="more"></a>
-<h1 id="python-package">Python package</h1>
-<p>This is the package I used https://github.com/marcharper/python-ternary</p>
-<p>The following is the most usefull sample for me.</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> ternary</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">cm = plt.cm.get_cmap(<span class="string">&#x27;viridis&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dat=pd.DataFrame(columns=list(<span class="string">&#x27;XYZV&#x27;</span>))</span><br><span class="line"></span><br><span class="line">dat[<span class="string">&#x27;X&#x27;</span>]=random.sample(range(<span class="number">45</span>),<span class="number">10</span>)</span><br><span class="line">dat[<span class="string">&#x27;Y&#x27;</span>]=random.sample(range(<span class="number">45</span>),<span class="number">10</span>)</span><br><span class="line">dat[<span class="string">&#x27;Z&#x27;</span>]=<span class="number">100</span>-(dat[<span class="string">&#x27;X&#x27;</span>]+dat[<span class="string">&#x27;Y&#x27;</span>])</span><br><span class="line">dat[<span class="string">&#x27;V&#x27;</span>]=<span class="number">10</span>**np.random.randint(<span class="number">0</span>,high=<span class="number">10</span>,size=<span class="number">10</span>)/<span class="number">1e5</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># sc = plt.scatter(dat.X, dat.Y, c=dat.V, vmin=0, vmax=7, s=35, cmap=cm)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">scale=<span class="number">100</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">fig, tax = ternary.figure(scale=scale)</span><br><span class="line">fig.set_size_inches(<span class="number">10</span>, <span class="number">9</span>)</span><br><span class="line"></span><br><span class="line">points=dat[[<span class="string">&#x27;X&#x27;</span>,<span class="string">&#x27;Y&#x27;</span>,<span class="string">&#x27;Z&#x27;</span>]].values</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">minv=np.log10(dat.V.min())</span><br><span class="line">maxv=np.log10(dat.V.max())</span><br><span class="line"></span><br><span class="line">tax.scatter(points,s=<span class="number">60</span>,vmin=minv,vmax=maxv,colormap=plt.cm.viridis,colorbar=<span class="literal">True</span>,c=np.log10(dat[<span class="string">&#x27;V&#x27;</span>].values),cmap=plt.cm.viridis)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># Decoration.</span></span><br><span class="line">tax.boundary(linewidth=<span class="number">1</span>)</span><br><span class="line">tax.gridlines(multiple=<span class="number">10</span>, color=<span class="string">&quot;gray&quot;</span>)</span><br><span class="line">tax.ticks(axis=<span class="string">&#x27;lbr&#x27;</span>, linewidth=<span class="number">1</span>, multiple=<span class="number">20</span>)</span><br><span class="line">tax.get_axes().axis(<span class="string">&#x27;off&#x27;</span>)</span><br><span class="line">figure.set_size_inches(<span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line">tax.show()</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/D75BADEA-86A3-4AA9-81C8-159829A7F2F7.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
-</figure>
-<h1 id="how-to-read-tennary-plot">How to read tennary plot</h1>
-<p>这个才是重头戏</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/ternary_3.jpg" alt="img"><figcaption aria-hidden="true">img</figcaption>
-</figure>
-<p>一个简单的理解是，三元图是重心图，离哪个顶点近，哪个占比大。</p>
-<p>由点向底边做两条平行线建立小正三角形，将底边分成三段，中间为顶部组所占比例，左段为右侧组比例，右段为左侧组比例。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/512.png" alt="img"><figcaption aria-hidden="true">img</figcaption>
-</figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Research</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chla retrieval</title>
-    <url>/posts/a31ba57b.html</url>
-    <content><![CDATA[<p>A note for Chla algorithm.</p>
-<a id="more"></a>
-<h1 id="chla-algorithms-review"><a class="markdownIt-Anchor" href="#chla-algorithms-review"></a> Chla Algorithms Review</h1>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Formula</th>
-<th>Reference</th>
-<th>Water type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>OC</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>10</mn></msub><mo stretchy="false">(</mo><mi>C</mi><mi>h</mi><mi>l</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>X</mi><mo>+</mo><msub><mi>a</mi><mn>2</mn></msub><msup><mi>X</mi><mn>2</mn></msup><mo>+</mo><msub><mi>a</mi><mn>3</mn></msub><msup><mi>X</mi><mn>3</mn></msup><mo>+</mo><msub><mi>a</mi><mn>4</mn></msub><msup><mi>X</mi><mn>4</mn></msup><mo separator="true">,</mo><mi>X</mi><mo>=</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>10</mn></msub><mo stretchy="false">(</mo><mfrac><mrow><mi>R</mi><mi>r</mi><msub><mi>s</mi><mo stretchy="false">(</mo></msub><msub><mi>λ</mi><mi>b</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>R</mi><mi>r</mi><msub><mi>s</mi><mo stretchy="false">(</mo></msub><msub><mi>λ</mi><mi>g</mi></msub><mo stretchy="false">)</mo></mrow></mfrac><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">log_{10}(Chl)=a_0+a_1X+a_2X^2+a_3X^3+a_4X^4,X=log_{10}(\frac{Rrs_(\lambda_b)}{Rrs_(\lambda_g)})</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">h</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.964108em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">a</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.69728em;vertical-align:-0.60364em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.09364em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.00773em;">R</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3447999999999998em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mopen mtight">(</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3694857142857143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathdefault mtight">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285716em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">g</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2818857142857143em;"><span></span></span></span></span></span></span><span class="mclose mtight">)</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.5686400000000003em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.00773em;">R</span><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="mord mtight"><span class="mord mathdefault mtight">s</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3447999999999998em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5357142857142856em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mopen mtight">(</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3694857142857143em;"><span></span></span></span></span></span></span><span class="mord mtight"><span class="mord mathdefault mtight">λ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">b</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15122857142857138em;"><span></span></span></span></span></span></span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.60364em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span></span></span>(Example)</td>
-<td>O’Reilly 2019</td>
-<td>Clear</td>
-</tr>
-<tr>
-<td>OCI</td>
-<td>![image-00030312152124019](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312152124019.png)</td>
-<td>Wang 2016;Hu 2011</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>Band ration</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>R</mi><mi>r</mi><mi>s</mi><mo stretchy="false">(</mo><mn>751</mn><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mi>R</mi><mi>r</mi><mi>s</mi><mo stretchy="false">(</mo><mn>672</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Rrs(751)/Rrs(672)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord">7</span><span class="mord">5</span><span class="mord">1</span><span class="mclose">)</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord">6</span><span class="mord">7</span><span class="mord">2</span><span class="mclose">)</span></span></span></span></td>
-<td>Gurlin 2011</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>Tang/Tassan</td>
-<td>![image-00030312152233703](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312152233703.png)</td>
-<td>Tang 2004;Tassan,1994;Sun 2010</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>Gitelson</td>
-<td>![image-00030312152341386](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312152341386.png)</td>
-<td>Gitelson 2008</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>RLH</td>
-<td>Rrs(672)-Rrs(555)-{[Rrs(751)-Rrs(555)] × [(672-555)/(751-555)]}</td>
-<td>Schalles,1998</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>RDR</td>
-<td>[Rrs(555)-Rrs(488)]/[Rrs(555) + Rrs(488)]</td>
-<td>Gitelson,1993</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>NDCI</td>
-<td>[Rrs(751)-Rrs(672)]/[Rrs(751) + Rrs(672)]</td>
-<td>Mishra, 2012</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>SCI</td>
-<td>HChla = {Rrs(751) + (751-672)/(751-555) × [Rrs(555)-Rrs(751)]}-Rrs(672), H∆ = Rrs(555)-{Rrs(751) + (751-555)/(751-488) × [Rrs(488)-Rrs(751)]}, SCI = HChla-H∆</td>
-<td>Shen, 2010</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>ASA</td>
-<td>![image-00030312152813412](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312152813412.png)</td>
-<td>Jiang, 2020</td>
-<td>Coastal</td>
-</tr>
-<tr>
-<td>TC2</td>
-<td>![image-00030312152928782](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312152928782.png)</td>
-<td>Liu,2020</td>
-<td>Coastal, inversion based</td>
-</tr>
-<tr>
-<td>NIR-Red</td>
-<td>![image-00030312153111284](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312153111284.png)</td>
-<td>Gons,2005</td>
-<td>Cosatal</td>
-</tr>
-<tr>
-<td>MDN</td>
-<td>NN</td>
-<td>Pahlevan 2020</td>
-<td>Hyperspectral,Coastal</td>
-</tr>
-<tr>
-<td>OWT</td>
-<td>![image-00030312153858028](/Users/zhenjia/Library/Application Support/typora-user-images/image-00030312153858028.png)</td>
-<td>Neil, 2019</td>
-<td>Coastal</td>
-</tr>
-</tbody>
-</table>
-<p>There are a lot of Chla algorithm.</p>
-<p>Possibly, it is almost out of date.</p>
-<p>Just JO I think hhh.</p>
-<h2 id="an-interesting-paper"><a class="markdownIt-Anchor" href="#an-interesting-paper"></a> An interesting paper</h2>
-<p>Progressive scheme for blending empirical ocean color retrievals of absorption coefficient and chlorophyll concentration from open oceans to highly turbid waters</p>
-<p>Former Classification scheme is based on value or shape. It is a hard transaction, not smoothly.</p>
-<p>One way is use fuzzy c-mean, given隶属度(MD，这还是这么久了我第一次见到不会用英语的专业名词).But it is statistically based, don’t have any implicit physics.</p>
-<p>This is a paper have implicit physics.</p>
-]]></content>
-      <categories>
-        <category>Annotated Bibliography</category>
-      </categories>
-      <tags>
-        <tag>Ocean Color Remote Sensing</tag>
-        <tag>Chla Algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文献管理</title>
-    <url>/posts/4ce7830b.html</url>
-    <content><![CDATA[<p>mendely停止移动端服务之后发生的事情</p>
-<a id="more"></a>
-<p>2021.3.15号mendely停止服务，其实我在一段时间之前就注意到这个事情了。但是今天晚上睡前拿出Ipad打开mendeley一看，打不开，哦，这才发现要处理这个问题了。</p>
-<p>我对文献管理软件的要求是：</p>
-<ol type="1">
-<li>能适配word，并且自动更改引用格式。</li>
-</ol>
-<p>其实这一条就应该去掉Mendeley了，他的格式识别很有问题，并且这个东西经常在Mac的Word上卡顿；除此之外,Word对公式和图片的支持也不是很好，所以最好他能导出Biblitex或者直接支持Latex。</p>
-<ol start="2" type="1">
-<li>不要让我操太多心，付费可以。</li>
-</ol>
-<p>这条去掉zetero和Marginote。</p>
-<p>其实我非常羡慕Marginote的那个脑图，很符合人脑的思维模式。我现在脑子里就有更新之前的几篇AB的想法，但是直接更新的话长年累月就变成了粪坑，开新的话就搞得太多了写论文的时候也很难找。最直接的做AB的办法就是直接在文献管理软件里直接Annotate。</p>
-<p>但是Marginote就太小作坊了，很容易出问题，zetero则跟python一样要搞各种插件，算了算了累了累了。</p>
-<ol start="3" type="1">
-<li>全平台同步</li>
-</ol>
-<p>其实文件同步很容易，重要的是Annotation的同步，这条直接去掉Marginote。</p>
-<ol start="4" type="1">
-<li>插入文献搜索的时候能搜索到我的Annotation。。</li>
-</ol>
-<p>这条好像真的挺难的。</p>
-<ol start="5" type="1">
-<li>能自动提取文献相关信息</li>
-</ol>
-<p>查了好多测评，papers似乎是准确率最高的那个</p>
-<p>这么查来查去，好像就剩下Papers能用了。好在他还有个三十天付费，先试试吧。</p>
-<p>对了，Mendeley转到其他平台的话，还要记得先降级，真的是垃圾软件。果然世界上没有免费的午餐。而且我这么一转的话之前做的好多标记也都没了。还好我读的文献也不多，而且很多我觉得重要的文献要么打印要么做了AB。</p>
-<p>猛然发现自己做AB的Flag已经倒了好久了，哎，自己最近状态确实不好，最近两个月大概。</p>
-]]></content>
-      <categories>
-        <category>人生得意须尽欢</category>
-      </categories>
-      <tags>
-        <tag>随便写写</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>游戏人生</title>
-    <url>/posts/6fe52848.html</url>
-    <content><![CDATA[<p>其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。</p>
-<p>没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。</p>
-<p>既然没有人看到，那就当自己的一个私密又公开的日记本就好了。</p>
-<p>如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。</p>
-<p>可能自己之后会开第二个博客来写这些东西吧。</p>
-<a id="more"></a>
-<h1 id="人生的意义是什么呢">人生的意义是什么呢？</h1>
-<p>每个人大概都有过那种非常自信的时间段，就是觉得那种，100个人里面有一个人活了下来，就觉得自己是那个活着的人，而不是死的那些。我也有过。</p>
-<p>我一直以为自己是个天选之子，曾经。比如，在班里我是最早去找实验室的，我也很快就触及到了很多目前没解决的科学问题，并且觉得自己似乎有能力来解决它。</p>
-<p>但是，慢慢的发现其实自己只是一个普通人。</p>
-<p>自己的想法别人也可以想到，自己的工作也没有什么不可替代性，没有我还会有张XX李CC来解决它，毕竟问题就在那里，迟早是要被解决的。</p>
-<p>自己不是什么天选，自己只是一个普通人。所以自己想不出来一个很好的课题很正常，自己做不出来东西也很正常。</p>
-<p>因为自己只是普通人，一个可能稍微运气好一点的普通人。自己在迷路的时候稍微看到了点特殊的东西，就觉得那是因为自己坚持走了好久的路才看到它的，其实它的出现根本和自己的努力没关系。</p>
-<p>就像那个经典的问题。</p>
-<blockquote>
-<p>三个人一起坐着电梯上楼，上楼之后，有人问他，你是怎么上来的呀？</p>
-<p>一个人讲：“我一直在看书，是知识的力量。”</p>
-<p>另一个人讲：“我一直在电梯里仰卧起坐，是运动的力量。”</p>
-<p>最后一个人讲：“我在电梯里呆了很长很长时间，是坚持的力量。”</p>
-</blockquote>
-<p>那我活着的意义到底是什么？</p>
-<p>大概是不久之前，我就和朋友讨论过这个问题。</p>
-<p>我目前给我自己的答案就是</p>
-<p>人出生就是为了受苦的。</p>
-<p>人类诞生下来，唯一一个从诞生开始就客观存在的使命就是繁衍，每一个物种都是。很多时候说生物都是基因的奴隶也不为过。</p>
-<p>但是人类居然有了自己的想法， 居然不想执行自己的使命，上天自然要给人类各种各样的痛苦。</p>
-<p>其实这么讲，最快的结束痛苦，对抗这个使命的方法就是自杀。我也想过自杀。</p>
-<p>但是其实可能，每个人都有必须活下去的理由，或者说支撑着自己活下去的理由。</p>
-<p>对我来讲，我是还有好多想看的东西没有看，我觉得这样太对不起自己来人间这一趟了，也太便宜基因这个小恶魔了。</p>
-<blockquote>
-<p>且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适。</p>
-</blockquote>
-<p>自己还有好多风景没有看过，好多地方没有去过，好多事情没有做过。</p>
-<blockquote>
-<p>人生若梦，为欢几何？古人秉烛夜游，良有以也。况阳春召我以烟景，大块假我以文章。会桃花之芳园，序天伦之乐事。群季俊秀，皆为惠连；吾人咏歌，独惭康乐。幽赏未已，高谈转清。</p>
-</blockquote>
-<p>大自然真的好像在PUA我，一方面拿天地间的奇伟瑰丽召唤我，让我坚持下去；另一方面又给我施加无穷无尽的苦难。</p>
-<p>我的人生，也就是来受苦的吧。但是能在这种种苦难中能让我目酣神醉，这人间烟火能让我潸然泪下，这些东西就像画龙点睛一样，照亮了整个的黑暗。</p>
-<p>所以我目前的一个个选择，也都是想让自己越来越自由。如果我没有了感受这些东西的机会，那我还不如去死好了。</p>
-<h1 id="人生是什么">人生是什么？</h1>
-<p>但是人类真的能掌握自己人生的走向吗？就像我一直想做的一个个事情，我真的能做吗？很有可能最终也会死不瞑目。因为我只是个普通人。普通的不能再普通。</p>
-<p>我越来越感受到，相比于个人的努力，运气 和 时代 两个东西，真的是几乎决定了90%的人生走向。</p>
-<p>这么讲吧，如果固定运气和时代这两个因素，那么努力和结果的关系大概是这样的。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030321182943797.png" alt="y=arctan(x)"><figcaption aria-hidden="true">y=arctan(x)</figcaption>
-</figure>
-<p>努力会让你越来越好，但是这会有一个极限，会有一个渐近线。</p>
-<p>熟悉我的人都知道我是一个RPG玩家，最近我越来越有人生其实就像一场游戏的感觉了，也就是本文的标题。</p>
-<p>最出名的RPG《博德之门》，每次事件，每次战斗，都是一场扔骰子。哪怕好感达到了100%，你也有可能表白失败；哪怕你的等级属性比BOSS厉害好多，你也有可能被他打死。</p>
-<p>因为一切都是随机的，都要看概率。</p>
-<p>人生真的好像呀，很多事情，就像我之前一样，只是因为你运气好，和你自己的努力并不一定有什么关系。</p>
-<p>这里牵扯到另一个问题，人类社会是可以被预测的吗？</p>
-<p>因为我们现在已经在慢慢研究到了每个原子每个分子每个蛋白质每个RNA的行为和功能了，如果我们把他们的规律研究出来，人类不就是一大坨蛋白质加溶液吗？那我们也可以预测每个人类的行为咯？这样我们也可以预测人类社会的发展咯？就像马克思搞的那一套“人类社会的发展规律”。</p>
-<p>这么说，人类的未来是确定的，可以被预测的咯？</p>
-<p>我最近越来觉得不会了，因为我开始感觉上帝是掷骰子的。</p>
-<p>就像面前有两只快死的小老鼠，上帝只能救活一只。上帝要决定救哪一只。</p>
-<p>上帝计算了所有的参数，这个时候他需要一个东西：目标函数。或者讲，为了什么才来救小老鼠。</p>
-<p>上帝如果按照自己的想法来救，那么我们人类社会的命运其实就被确定了。但是真的存在“上帝”这个东西吗？</p>
-<p>如果上帝只是来履行职责，它本身对于救哪个小老鼠并没有什么偏好。那他就是在掷骰子。</p>
-<p>人生是游戏的另一重含义，就是，你的命运大概率是被时代-也就是剧本决定的。</p>
-<p>毕竟单个的人在时代的浪潮里，连一朵小水花都算不上。哪怕你练成了十里坡剑神，你可能还是救不了月如和灵儿。</p>
-<p>哪怕你是天下第一高手，你也会有救不了守护不了的人。</p>
-<p>人生就是一场游戏，一场由时代编剧，由上帝掷骰子的RPG游戏。</p>
-<p>游戏打的爽不爽，很多时候是由上帝的骰子决定。</p>
-<p>游戏的结局好不好，则是由时代决定。</p>
-]]></content>
-      <categories>
-        <category>人生得意须尽欢</category>
-      </categories>
   </entry>
 </search>

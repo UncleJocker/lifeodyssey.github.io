@@ -99,25 +99,6 @@
   </entry>
   
   <entry>
-    <title>My grind</title>
-    <link href="https://lifeodyssey.github.io/posts/b5654816.html"/>
-    <id>https://lifeodyssey.github.io/posts/b5654816.html</id>
-    <published>2021-03-09T10:00:45.000Z</published>
-    <updated>2021-04-09T08:05:51.087Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;一些日记或者类似于闲言碎语的日常发牢骚。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="人生得意须尽欢" scheme="https://lifeodyssey.github.io/categories/%E4%BA%BA%E7%94%9F%E5%BE%97%E6%84%8F%E9%A1%BB%E5%B0%BD%E6%AC%A2/"/>
-    
-    
-    <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
-    
-  </entry>
-  
-  <entry>
     <title>A Ph.D is not enough</title>
     <link href="https://lifeodyssey.github.io/posts/13a77735.html"/>
     <id>https://lifeodyssey.github.io/posts/13a77735.html</id>
@@ -521,6 +502,27 @@
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>2020</title>
+    <link href="https://lifeodyssey.github.io/posts/94a46e7b.html"/>
+    <id>https://lifeodyssey.github.io/posts/94a46e7b.html</id>
+    <published>2020-12-12T00:56:33.000Z</published>
+    <updated>2021-01-14T03:33:26.191Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;2020，马上就要过去了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="梦里真真语真幻" scheme="https://lifeodyssey.github.io/categories/%E6%A2%A6%E9%87%8C%E7%9C%9F%E7%9C%9F%E8%AF%AD%E7%9C%9F%E5%B9%BB/"/>
+    
+    
+    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
     
   </entry>
   

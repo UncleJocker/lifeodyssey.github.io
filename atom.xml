@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-03-21T09:59:23.468Z</updated>
+  <updated>2021-04-12T04:45:21.498Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我为什么喜欢做科研</title>
+    <link href="https://lifeodyssey.github.io/posts/490b1360.html"/>
+    <id>https://lifeodyssey.github.io/posts/490b1360.html</id>
+    <published>2021-04-12T03:08:05.000Z</published>
+    <updated>2021-04-12T04:45:21.498Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;大概是最近拷问自己内心的结果。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="梦里真真语真幻" scheme="https://lifeodyssey.github.io/categories/%E6%A2%A6%E9%87%8C%E7%9C%9F%E7%9C%9F%E8%AF%AD%E7%9C%9F%E5%B9%BB/"/>
+    
+    
+    <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
+    
+  </entry>
   
   <entry>
     <title>游戏人生</title>
@@ -502,27 +521,6 @@
     
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>2020</title>
-    <link href="https://lifeodyssey.github.io/posts/94a46e7b.html"/>
-    <id>https://lifeodyssey.github.io/posts/94a46e7b.html</id>
-    <published>2020-12-12T00:56:33.000Z</published>
-    <updated>2021-01-14T03:33:26.191Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;2020，马上就要过去了。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="梦里真真语真幻" scheme="https://lifeodyssey.github.io/categories/%E6%A2%A6%E9%87%8C%E7%9C%9F%E7%9C%9F%E8%AF%AD%E7%9C%9F%E5%B9%BB/"/>
-    
-    
-    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="随便写写" scheme="https://lifeodyssey.github.io/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/"/>
     
   </entry>
   

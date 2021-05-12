@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-05-11T01:06:54.014Z</updated>
+  <updated>2021-05-12T03:37:08.783Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jupyter Lab</title>
+    <link href="https://lifeodyssey.github.io/posts/c958af43.html"/>
+    <id>https://lifeodyssey.github.io/posts/c958af43.html</id>
+    <published>2021-05-12T02:25:46.000Z</published>
+    <updated>2021-05-12T03:37:08.783Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。&lt;/p&gt;
+&lt;p&gt;这里讲一些用他的时候搞得一些配置啥的&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>The optics of backscattering</title>
@@ -502,34 +522,6 @@
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scipy optimize</title>
-    <link href="https://lifeodyssey.github.io/posts/7decea87.html"/>
-    <id>https://lifeodyssey.github.io/posts/7decea87.html</id>
-    <published>2021-01-01T03:43:11.000Z</published>
-    <updated>2021-01-02T10:50:17.115Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;主要是几个常用的&lt;/p&gt;
-&lt;p&gt;minimize&lt;/p&gt;
-&lt;p&gt;Least_square&lt;/p&gt;
-&lt;p&gt;nnls&lt;/p&gt;
-&lt;p&gt;Lsq_linear&lt;/p&gt;
-&lt;p&gt;Curve_fit&lt;/p&gt;
-&lt;p&gt;另外附带一个numpy.linalg.lstsq&lt;/p&gt;
-&lt;p&gt;另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
     
   </entry>
   

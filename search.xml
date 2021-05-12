@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Jupyter Lab</title>
+      <link href="/posts/c958af43.html"/>
+      <url>/posts/c958af43.html</url>
+      
+        <content type="html"><![CDATA[<p>本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。</p><p>这里讲一些用他的时候搞得一些配置啥的</p><a id="more"></a><h1 id="extension">Extension</h1><p>(开头黑人问号，我居然是在参照一个<span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vY2Fub25yb2NrMTYvaXRlbXMvZDE2NmM5MzA4N2E0YWFmZDJkYjQ=">日语的博客<i class="fa fa-external-link-alt"></i></span>来搞这个，居然找不到中文的)</p><p>安装Extension必须得安装NodeJS(黑人问号❓)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge nodejs</span><br></pre></td></tr></table></figure><p>然后可以拿List看装了啥</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter labextension list</span><br></pre></td></tr></table></figure><p>我主要装了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmt1c3NjaGFudGEvYXdlc29tZS1qdXB5dGVy">Awesome Jupyter<i class="fa fa-external-link-alt"></i></span>里面的几个，主要就是把它搞得跟原来的Notebook差不多就行，比如lsp,toc,drawio,latex,variableinspector。不在这里面的有<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Rlc2hhdy9qdXB5dGVybGFiLWV4ZWN1dGUtdGltZQ==">jupyterlab-execute-time<i class="fa fa-external-link-alt"></i></span>，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tpdGVjby9qdXB5dGVybGFiLWtpdGU=">jupyterlab-kite<i class="fa fa-external-link-alt"></i></span></p><p>最后来一句这个</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jupyter lab build</span><br><span class="line">jupyter labextension <span class="built_in">enable</span> all</span><br></pre></td></tr></table></figure><p>或者在lab里的setting里手动开启extention</p><p>感觉不太方便的地方就是那个Variable inspector不能float</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>The optics of backscattering</title>
       <link href="/posts/99c2b0bb.html"/>
       <url>/posts/99c2b0bb.html</url>

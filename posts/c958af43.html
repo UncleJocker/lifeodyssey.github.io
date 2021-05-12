@@ -30,7 +30,7 @@
 <meta property="og:description" content="本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。 这里讲一些用他的时候搞得一些配置啥的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-05-12T02:25:46.000Z">
-<meta property="article:modified_time" content="2021-05-12T03:37:08.783Z">
+<meta property="article:modified_time" content="2021-05-12T03:55:00.131Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#extension"><span class="nav-number">1.</span> <span class="nav-text">Extension</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#extension"><span class="nav-number">1.</span> <span class="nav-text"> Extension</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -333,7 +333,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-05-12 11:25:46 / Modified: 12:37:08" itemprop="dateCreated datePublished" datetime="2021-05-12T11:25:46+09:00">2021-05-12</time>
+              <time title="Created: 2021-05-12 11:25:46 / Modified: 12:55:00" itemprop="dateCreated datePublished" datetime="2021-05-12T11:25:46+09:00">2021-05-12</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -351,7 +351,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>486</span>
+              <span>532</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -371,7 +371,7 @@
         <p>本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。</p>
 <p>这里讲一些用他的时候搞得一些配置啥的</p>
 <a id="more"></a>
-<h1 id="extension">Extension</h1>
+<h1 id="extension"><a class="markdownIt-Anchor" href="#extension"></a> Extension</h1>
 <p>(开头黑人问号，我居然是在参照一个<span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vY2Fub25yb2NrMTYvaXRlbXMvZDE2NmM5MzA4N2E0YWFmZDJkYjQ=">日语的博客<i class="fa fa-external-link-alt"></i></span>来搞这个，居然找不到中文的)</p>
 <p>安装Extension必须得安装NodeJS(黑人问号❓)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge nodejs</span><br></pre></td></tr></table></figure>
@@ -382,6 +382,8 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jupyter lab build</span><br><span class="line">jupyter labextension <span class="built_in">enable</span> all</span><br></pre></td></tr></table></figure>
 <p>或者在lab里的setting里手动开启extention</p>
 <p>感觉不太方便的地方就是那个Variable inspector不能float</p>
+<p>多说一句，纯路人，感觉kite没啥必要,lsp足够了</p>
+<p>虽然但是，还是感觉notebook好用啊</p>
 
     </div>
 

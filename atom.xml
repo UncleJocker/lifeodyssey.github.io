@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-05-12T03:55:00.131Z</updated>
+  <updated>2021-05-18T10:58:09.655Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Robust fit</title>
+    <link href="https://lifeodyssey.github.io/posts/7ff46c3b.html"/>
+    <id>https://lifeodyssey.github.io/posts/7ff46c3b.html</id>
+    <published>2021-05-18T04:58:34.000Z</published>
+    <updated>2021-05-18T10:58:09.655Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这一篇差不多是作为&lt;a href=&quot;https://lifeodyssey.github.io/posts/7decea87.html&quot;&gt;这个&lt;/a&gt;的后续&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+  </entry>
   
   <entry>
     <title>Jupyter Lab</title>
@@ -501,34 +522,6 @@
     <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
     
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scipy optimize</title>
-    <link href="https://lifeodyssey.github.io/posts/7decea87.html"/>
-    <id>https://lifeodyssey.github.io/posts/7decea87.html</id>
-    <published>2021-01-01T03:43:11.000Z</published>
-    <updated>2021-01-02T10:50:17.115Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;主要是几个常用的&lt;/p&gt;
-&lt;p&gt;minimize&lt;/p&gt;
-&lt;p&gt;Least_square&lt;/p&gt;
-&lt;p&gt;nnls&lt;/p&gt;
-&lt;p&gt;Lsq_linear&lt;/p&gt;
-&lt;p&gt;Curve_fit&lt;/p&gt;
-&lt;p&gt;另外附带一个numpy.linalg.lstsq&lt;/p&gt;
-&lt;p&gt;另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
-    
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
   </entry>
   

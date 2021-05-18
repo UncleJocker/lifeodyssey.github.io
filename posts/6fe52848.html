@@ -22,20 +22,22 @@
     var CONFIG = {"hostname":"lifeodyssey.github.io","root":"/","scheme":"Mist","version":"8.0.0-rc.5","exturl":true,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。 这里讲一些用他的时候搞得一些配置啥的">
+  <meta name="description" content="其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。 没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。 既然没有人看到，那就当自己的一个私密又公开的日记本就好了。 如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。 可能自己之">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jupyter Lab">
-<meta property="og:url" content="https://lifeodyssey.github.io/posts/c958af43.html">
+<meta property="og:title" content="游戏人生">
+<meta property="og:url" content="https://lifeodyssey.github.io/posts/6fe52848.html">
 <meta property="og:site_name" content="乔克叔叔的床边故事">
-<meta property="og:description" content="本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。 这里讲一些用他的时候搞得一些配置啥的">
+<meta property="og:description" content="其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。 没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。 既然没有人看到，那就当自己的一个私密又公开的日记本就好了。 如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。 可能自己之">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-05-12T02:25:46.000Z">
-<meta property="article:modified_time" content="2021-05-12T03:55:00.131Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030321182943797.png">
+<meta property="article:published_time" content="2021-03-21T08:54:21.000Z">
+<meta property="article:modified_time" content="2021-05-18T10:59:01.870Z">
 <meta property="article:author" content="周大侠">
-<meta property="article:tag" content="python">
+<meta property="article:tag" content="随便写写">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030321182943797.png">
 
-<link rel="canonical" href="https://lifeodyssey.github.io/posts/c958af43.html">
+<link rel="canonical" href="https://lifeodyssey.github.io/posts/6fe52848.html">
 
 
 <script class="page-configurations">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title>Jupyter Lab | 乔克叔叔的床边故事</title>
+  <title>游戏人生 | 乔克叔叔的床边故事</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135697820-1"></script>
     <script>
@@ -219,7 +221,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#extension"><span class="nav-number">1.</span> <span class="nav-text">Extension</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%BA%E7%94%9F%E7%9A%84%E6%84%8F%E4%B9%89%E6%98%AF%E4%BB%80%E4%B9%88%E5%91%A2"><span class="nav-number">1.</span> <span class="nav-text">人生的意义是什么呢？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%BA%E7%94%9F%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">2.</span> <span class="nav-text">人生是什么？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#updata-of-the-blog"><span class="nav-number">3.</span> <span class="nav-text">Updata of the blog</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -307,7 +309,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://lifeodyssey.github.io/posts/c958af43.html">
+    <link itemprop="mainEntityOfPage" href="https://lifeodyssey.github.io/posts/6fe52848.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -322,7 +324,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Jupyter Lab
+          游戏人生
         </h1>
 
         <div class="post-meta">
@@ -331,17 +333,23 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-05-12 11:25:46 / Modified: 12:55:00" itemprop="dateCreated datePublished" datetime="2021-05-12T11:25:46+09:00">2021-05-12</time>
+              <time title="Created: 2021-03-21 17:54:21" itemprop="dateCreated datePublished" datetime="2021-03-21T17:54:21+09:00">2021-03-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-05-18 19:59:01" itemprop="dateModified" datetime="2021-05-18T19:59:01+09:00">2021-05-18</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                  <a href="/categories/%E6%A2%A6%E9%87%8C%E7%9C%9F%E7%9C%9F%E8%AF%AD%E7%9C%9F%E5%B9%BB/" itemprop="url" rel="index"><span itemprop="name">梦里真真语真幻</span></a>
                 </span>
             </span>
 
@@ -351,14 +359,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>532</span>
+              <span>2.4k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>2 mins.</span>
             </span>
 
         </div>
@@ -368,22 +376,73 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。</p>
-<p>这里讲一些用他的时候搞得一些配置啥的</p>
+        <p>其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。</p>
+<p>没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。</p>
+<p>既然没有人看到，那就当自己的一个私密又公开的日记本就好了。</p>
+<p>如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。</p>
+<p>可能自己之后会开第二个博客来写这些东西吧。</p>
 <a id="more"></a>
-<h1 id="extension">Extension</h1>
-<p>(开头黑人问号，我居然是在参照一个<span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vY2Fub25yb2NrMTYvaXRlbXMvZDE2NmM5MzA4N2E0YWFmZDJkYjQ=">日语的博客<i class="fa fa-external-link-alt"></i></span>来搞这个，居然找不到中文的)</p>
-<p>安装Extension必须得安装NodeJS(黑人问号❓)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge nodejs</span><br></pre></td></tr></table></figure>
-<p>然后可以拿List看装了啥</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter labextension list</span><br></pre></td></tr></table></figure>
-<p>我主要装了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmt1c3NjaGFudGEvYXdlc29tZS1qdXB5dGVy">Awesome Jupyter<i class="fa fa-external-link-alt"></i></span>里面的几个，主要就是把它搞得跟原来的Notebook差不多就行，比如lsp,toc,drawio,latex,variableinspector。不在这里面的有<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Rlc2hhdy9qdXB5dGVybGFiLWV4ZWN1dGUtdGltZQ==">jupyterlab-execute-time<i class="fa fa-external-link-alt"></i></span>，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tpdGVjby9qdXB5dGVybGFiLWtpdGU=">jupyterlab-kite<i class="fa fa-external-link-alt"></i></span></p>
-<p>最后来一句这个</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jupyter lab build</span><br><span class="line">jupyter labextension <span class="built_in">enable</span> all</span><br></pre></td></tr></table></figure>
-<p>或者在lab里的setting里手动开启extention</p>
-<p>感觉不太方便的地方就是那个Variable inspector不能float</p>
-<p>多说一句，纯路人，感觉kite没啥必要,lsp足够了</p>
-<p>虽然但是，还是感觉notebook好用啊</p>
+<h1 id="人生的意义是什么呢">人生的意义是什么呢？</h1>
+<p>每个人大概都有过那种非常自信的时间段，就是觉得那种，100个人里面有一个人活了下来，就觉得自己是那个活着的人，而不是死的那些。我也有过。</p>
+<p>我一直以为自己是个天选之子，曾经。比如，在班里我是最早去找实验室的，我也很快就触及到了很多目前没解决的科学问题，并且觉得自己似乎有能力来解决它。</p>
+<p>但是，慢慢的发现其实自己只是一个普通人。</p>
+<p>自己的想法别人也可以想到，自己的工作也没有什么不可替代性，没有我还会有张XX李CC来解决它，毕竟问题就在那里，迟早是要被解决的。</p>
+<p>自己不是什么天选，自己只是一个普通人。所以自己想不出来一个很好的课题很正常，自己做不出来东西也很正常。</p>
+<p>因为自己只是普通人，一个可能稍微运气好一点的普通人。自己在迷路的时候稍微看到了点特殊的东西，就觉得那是因为自己坚持走了好久的路才看到它的，其实它的出现根本和自己的努力没关系。</p>
+<p>就像那个经典的问题。</p>
+<blockquote>
+<p>三个人一起坐着电梯上楼，上楼之后，有人问他，你是怎么上来的呀？</p>
+<p>一个人讲：“我一直在看书，是知识的力量。”</p>
+<p>另一个人讲：“我一直在电梯里仰卧起坐，是运动的力量。”</p>
+<p>最后一个人讲：“我在电梯里呆了很长很长时间，是坚持的力量。”</p>
+</blockquote>
+<p>那我活着的意义到底是什么？</p>
+<p>大概是不久之前，我就和朋友讨论过这个问题。</p>
+<p>我目前给我自己的答案就是</p>
+<p>人出生就是为了受苦的。</p>
+<p>人类诞生下来，唯一一个从诞生开始就客观存在的使命就是繁衍，每一个物种都是。很多时候说生物都是基因的奴隶也不为过。</p>
+<p>但是人类居然有了自己的想法， 居然不想执行自己的使命，上天自然要给人类各种各样的痛苦。</p>
+<p>其实这么讲，最快的结束痛苦，对抗这个使命的方法就是自杀。我也想过自杀。</p>
+<p>但是其实可能，每个人都有必须活下去的理由，或者说支撑着自己活下去的理由。</p>
+<p>对我来讲，我是还有好多想看的东西没有看，我觉得这样太对不起自己来人间这一趟了，也太便宜基因这个小恶魔了。</p>
+<blockquote>
+<p>且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适。</p>
+</blockquote>
+<p>自己还有好多风景没有看过，好多地方没有去过，好多事情没有做过。</p>
+<blockquote>
+<p>人生若梦，为欢几何？古人秉烛夜游，良有以也。况阳春召我以烟景，大块假我以文章。会桃花之芳园，序天伦之乐事。群季俊秀，皆为惠连；吾人咏歌，独惭康乐。幽赏未已，高谈转清。</p>
+</blockquote>
+<p>大自然真的好像在PUA我，一方面拿天地间的奇伟瑰丽召唤我，让我坚持下去；另一方面又给我施加无穷无尽的苦难。</p>
+<p>我的人生，也就是来受苦的吧。但是能在这种种苦难中能让我目酣神醉，这人间烟火能让我潸然泪下，这些东西就像画龙点睛一样，照亮了整个的黑暗。</p>
+<p>所以我目前的一个个选择，也都是想让自己越来越自由。如果我没有了感受这些东西的机会，那我还不如去死好了。</p>
+<h1 id="人生是什么">人生是什么？</h1>
+<p>但是人类真的能掌握自己人生的走向吗？就像我一直想做的一个个事情，我真的能做吗？很有可能最终也会死不瞑目。因为我只是个普通人。普通的不能再普通。</p>
+<p>我越来越感受到，相比于个人的努力，运气 和 时代 两个东西，真的是几乎决定了90%的人生走向。</p>
+<p>这么讲吧，如果固定运气和时代这两个因素，那么努力和结果的关系大概是这样的。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030321182943797.png" alt="y=arctan(x)"><figcaption aria-hidden="true">y=arctan(x)</figcaption>
+</figure>
+<p>努力会让你越来越好，但是这会有一个极限，会有一个渐近线。</p>
+<p>熟悉我的人都知道我是一个RPG玩家，最近我越来越有人生其实就像一场游戏的感觉了，也就是本文的标题。</p>
+<p>最出名的RPG《博德之门》，每次事件，每次战斗，都是一场扔骰子。哪怕好感达到了100%，你也有可能表白失败；哪怕你的等级属性比BOSS厉害好多，你也有可能被他打死。</p>
+<p>因为一切都是随机的，都要看概率。</p>
+<p>人生真的好像呀，很多事情，就像我之前一样，只是因为你运气好，和你自己的努力并不一定有什么关系。</p>
+<p>这里牵扯到另一个问题，人类社会是可以被预测的吗？</p>
+<p>因为我们现在已经在慢慢研究到了每个原子每个分子每个蛋白质每个RNA的行为和功能了，如果我们把他们的规律研究出来，人类不就是一大坨蛋白质加溶液吗？那我们也可以预测每个人类的行为咯？这样我们也可以预测人类社会的发展咯？就像马克思搞的那一套“人类社会的发展规律”。</p>
+<p>这么说，人类的未来是确定的，可以被预测的咯？</p>
+<p>我最近越来觉得不会了，因为我开始感觉上帝是掷骰子的。</p>
+<p>就像面前有两只快死的小老鼠，上帝只能救活一只。上帝要决定救哪一只。</p>
+<p>上帝计算了所有的参数，这个时候他需要一个东西：目标函数。或者讲，为了什么才来救小老鼠。</p>
+<p>上帝如果按照自己的想法来救，那么我们人类社会的命运其实就被确定了。但是真的存在“上帝”这个东西吗？</p>
+<p>如果上帝只是来履行职责，它本身对于救哪个小老鼠并没有什么偏好。那他就是在掷骰子。</p>
+<p>人生是游戏的另一重含义，就是，你的命运大概率是被时代-也就是剧本决定的。</p>
+<p>毕竟单个的人在时代的浪潮里，连一朵小水花都算不上。哪怕你练成了十里坡剑神，你可能还是救不了月如和灵儿。</p>
+<p>哪怕你是天下第一高手，你也会有救不了守护不了的人。</p>
+<p>人生就是一场游戏，一场由时代编剧，由上帝掷骰子的RPG游戏。</p>
+<p>游戏打的爽不爽，很多时候是由上帝的骰子决定。</p>
+<p>游戏的结局好不好，则是由时代决定。</p>
+<h1 id="updata-of-the-blog">Updata of the blog</h1>
+<p>I decide to add google analytics back to get closer with my friends. The way of collect persenal information is based on google. Thank you for your understanding.</p>
 
     </div>
 
@@ -399,7 +458,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>Post link: </strong>
-    <a href="https://lifeodyssey.github.io/posts/c958af43.html" title="Jupyter Lab">https://lifeodyssey.github.io/posts/c958af43.html</a>
+    <a href="https://lifeodyssey.github.io/posts/6fe52848.html" title="游戏人生">https://lifeodyssey.github.io/posts/6fe52848.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9lbg=="><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</span> unless stating additionally.
@@ -410,7 +469,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/%E9%9A%8F%E4%BE%BF%E5%86%99%E5%86%99/" rel="tag"># 随便写写</a>
           </div>
 
         
@@ -419,12 +478,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/99c2b0bb.html" rel="prev" title="The optics of backscattering">
-      <i class="fa fa-chevron-left"></i> The optics of backscattering
+    <a href="/posts/4ce7830b.html" rel="prev" title="文献管理">
+      <i class="fa fa-chevron-left"></i> 文献管理
     </a></div>
       <div class="post-nav-item">
-    <a href="/posts/7ff46c3b.html" rel="next" title="Robust fit">
-      Robust fit <i class="fa fa-chevron-right"></i>
+    <a href="/posts/490b1360.html" rel="next" title="我为什么喜欢做科研">
+      我为什么喜欢做科研 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -564,59 +623,6 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      const script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 

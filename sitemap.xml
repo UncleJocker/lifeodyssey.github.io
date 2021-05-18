@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://lifeodyssey.github.io/posts/7ff46c3b.html</loc>
-    
-    <lastmod>2021-05-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://lifeodyssey.github.io/posts/c958af43.html</loc>
     
     <lastmod>2021-05-12</lastmod>
@@ -61,13 +54,6 @@
     <loc>https://lifeodyssey.github.io/posts/4ce7830b.html</loc>
     
     <lastmod>2021-03-31</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/posts/6fe52848.html</loc>
-    
-    <lastmod>2021-03-21</lastmod>
     
   </url>
   
@@ -718,6 +704,13 @@
   </url>
   
   <url>
+    <loc>https://lifeodyssey.github.io/tags/python/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://lifeodyssey.github.io/tags/Research/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
@@ -746,14 +739,21 @@
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/python/</loc>
+    <loc>https://lifeodyssey.github.io/tags/R/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://lifeodyssey.github.io/tags/R/</loc>
+    <loc>https://lifeodyssey.github.io/tags/particle-backscattering/</loc>
+    <lastmod>2021-05-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://lifeodyssey.github.io/tags/Inversion/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -838,20 +838,6 @@
   
   <url>
     <loc>https://lifeodyssey.github.io/tags/bookreading/</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/particle-backscattering/</loc>
-    <lastmod>2021-05-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://lifeodyssey.github.io/tags/Inversion/</loc>
     <lastmod>2021-05-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

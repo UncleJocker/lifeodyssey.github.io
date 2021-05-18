@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-05-18T10:55:58.754Z</updated>
+  <updated>2021-05-12T03:55:00.131Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Robust fit</title>
-    <link href="https://lifeodyssey.github.io/posts/7ff46c3b.html"/>
-    <id>https://lifeodyssey.github.io/posts/7ff46c3b.html</id>
-    <published>2021-05-18T04:58:34.417Z</published>
-    <updated>2021-05-18T10:55:58.754Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;这一篇差不多是作为&lt;a href=&quot;https://lifeodyssey.github.io/posts/7decea87.html&quot;&gt;这个&lt;/a&gt;的后续&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
   
   <entry>
     <title>Jupyter Lab</title>
@@ -99,27 +82,6 @@
   </entry>
   
   <entry>
-    <title>游戏人生</title>
-    <link href="https://lifeodyssey.github.io/posts/6fe52848.html"/>
-    <id>https://lifeodyssey.github.io/posts/6fe52848.html</id>
-    <published>2021-03-21T08:54:21.354Z</published>
-    <updated>2021-03-21T09:59:23.468Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。&lt;/p&gt;
-&lt;p&gt;没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。&lt;/p&gt;
-&lt;p&gt;既然没有人看到，那就当自己的一个私密又公开的日记本就好了。&lt;/p&gt;
-&lt;p&gt;如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。&lt;/p&gt;
-&lt;p&gt;可能自己之后会开第二个博客来写这些东西吧。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="人生得意须尽欢" scheme="https://lifeodyssey.github.io/categories/%E4%BA%BA%E7%94%9F%E5%BE%97%E6%84%8F%E9%A1%BB%E5%B0%BD%E6%AC%A2/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>文献管理</title>
     <link href="https://lifeodyssey.github.io/posts/4ce7830b.html"/>
     <id>https://lifeodyssey.github.io/posts/4ce7830b.html</id>
@@ -174,9 +136,9 @@
     <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
-    
     <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
   </entry>
   
@@ -510,6 +472,63 @@
     <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
     
     <category term="Book Reading" scheme="https://lifeodyssey.github.io/tags/Book-Reading/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>uv properties 1</title>
+    <link href="https://lifeodyssey.github.io/posts/68e8e2be.html"/>
+    <id>https://lifeodyssey.github.io/posts/68e8e2be.html</id>
+    <published>2021-01-02T04:21:56.000Z</published>
+    <updated>2021-01-02T05:37:14.542Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;主要是从15年开始的四篇论文&lt;/p&gt;
+&lt;p&gt;An ultraviolet to visible scheme to estimate chromophoric dissolved organic matter absorption in a Case-2 water from remote sensing reflectance&lt;/p&gt;
+&lt;p&gt;Extending satellite ocean color remote sensing to the near-blue ultraviolet bands&lt;/p&gt;
+&lt;p&gt;Characteristics of water leaving reflectance at ultraviolet wavelengths: radiative transfer simulations&lt;/p&gt;
+&lt;p&gt;Retrieval of phytoplankton and colored detrital matter absorption coefficients with remote sensing reflectance in an ultraviolet band&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
+    
+    
+    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
+    
+    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
+    
+    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
+    
+    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scipy optimize</title>
+    <link href="https://lifeodyssey.github.io/posts/7decea87.html"/>
+    <id>https://lifeodyssey.github.io/posts/7decea87.html</id>
+    <published>2021-01-01T03:43:11.000Z</published>
+    <updated>2021-01-02T10:50:17.115Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;主要是几个常用的&lt;/p&gt;
+&lt;p&gt;minimize&lt;/p&gt;
+&lt;p&gt;Least_square&lt;/p&gt;
+&lt;p&gt;nnls&lt;/p&gt;
+&lt;p&gt;Lsq_linear&lt;/p&gt;
+&lt;p&gt;Curve_fit&lt;/p&gt;
+&lt;p&gt;另外附带一个numpy.linalg.lstsq&lt;/p&gt;
+&lt;p&gt;另外我发现了一个非常及乖的东西，一般都得x作为func的第一个参数才能拟合好&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="python" scheme="https://lifeodyssey.github.io/tags/python/"/>
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
     
   </entry>
   

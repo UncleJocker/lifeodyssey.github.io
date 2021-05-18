@@ -1164,6 +1164,33 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
       </tags>
   </entry>
   <entry>
+    <title>Jupyter Lab</title>
+    <url>/posts/c958af43.html</url>
+    <content><![CDATA[<p>本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。</p>
+<p>这里讲一些用他的时候搞得一些配置啥的</p>
+<a id="more"></a>
+<h1 id="extension">Extension</h1>
+<p>(开头黑人问号，我居然是在参照一个<span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vY2Fub25yb2NrMTYvaXRlbXMvZDE2NmM5MzA4N2E0YWFmZDJkYjQ=">日语的博客<i class="fa fa-external-link-alt"></i></span>来搞这个，居然找不到中文的)</p>
+<p>安装Extension必须得安装NodeJS(黑人问号❓)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install -c conda-forge nodejs</span><br></pre></td></tr></table></figure>
+<p>然后可以拿List看装了啥</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jupyter labextension list</span><br></pre></td></tr></table></figure>
+<p>我主要装了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmt1c3NjaGFudGEvYXdlc29tZS1qdXB5dGVy">Awesome Jupyter<i class="fa fa-external-link-alt"></i></span>里面的几个，主要就是把它搞得跟原来的Notebook差不多就行，比如lsp,toc,drawio,latex,variableinspector。不在这里面的有<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Rlc2hhdy9qdXB5dGVybGFiLWV4ZWN1dGUtdGltZQ==">jupyterlab-execute-time<i class="fa fa-external-link-alt"></i></span>，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tpdGVjby9qdXB5dGVybGFiLWtpdGU=">jupyterlab-kite<i class="fa fa-external-link-alt"></i></span></p>
+<p>最后来一句这个</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jupyter lab build</span><br><span class="line">jupyter labextension <span class="built_in">enable</span> all</span><br></pre></td></tr></table></figure>
+<p>或者在lab里的setting里手动开启extention</p>
+<p>感觉不太方便的地方就是那个Variable inspector不能float</p>
+<p>多说一句，纯路人，感觉kite没啥必要,lsp足够了</p>
+<p>虽然但是，还是感觉notebook好用啊</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MODIS OC data batch download</title>
     <url>/posts/8636bca2.html</url>
     <content><![CDATA[<p>This blog introduce a MODIS(also suitable for other available satellites) Ocean Color data batch download method without wget(since it doesn’t work on my laptop).</p>
@@ -1261,8 +1288,8 @@ T_{ijk} &lt;max(|M(x_{w/2},y_{w/2},t_{k}−M(x_{w/2},y_{w/2},t_0) + \sigma_{mm}\
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
         <tag>R</tag>
       </tags>
   </entry>
@@ -1586,8 +1613,8 @@ b_m
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -1619,8 +1646,121 @@ b_m
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The optics of backscattering</title>
+    <url>/posts/99c2b0bb.html</url>
+    <content><![CDATA[<p>I need to understand the optics of backscattering to understand the strange 'bbp' calculted from Rrs and and.</p>
+<p>Material mainly from IOCCG summer lecture 2018 and ocean optics web book.</p>
+<a id="more"></a>
+<h1 id="volume-scattering-function">Volume scattering function</h1>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/VSF-geometry-600.jpg" alt="VSF-geometry-600"><figcaption aria-hidden="true">VSF-geometry-600</figcaption>
+</figure>
+<p>the <em>fraction</em> of incident power scattered out of the beam through an angle <span class="math inline">\(\psi\)</span> into a solid angle <span class="math inline">\(\Delta\Omega\)</span> (total radiance inside the cone)centered on <span class="math inline">\(\psi\)</span>, is <span class="math inline">\(\Delta^2\Phi_s(\psi,\lambda)/\Phi_i\)</span>.</p>
+<p>If we change <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(\Omega+\Delta\Omega\)</span>, the increase part is inside the red ring,</p>
+<p>The volume scattering function β(ψ,λ) is deﬁned as the limit of this fraction as Δr→0 and ΔΩ→0:</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505202530364.png" alt="image-00030505202530364"><figcaption aria-hidden="true">image-00030505202530364</figcaption>
+</figure>
+<p>The physical meaning of VSF is</p>
+<p>scattered intensity per unit incident irradiance per unit volume of water</p>
+<p>Or</p>
+<p>the diﬀerential scattering cross section per unit volume.</p>
+<p>So the scattering is the integration of VSF over all direction <span class="math display">\[
+b(\lambda)=\int\beta(\psi,\lambda)d\Omega
+\]</span> <span class="math inline">\(\Omega\)</span> is the <span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU3JUFCJThCJUU5JUFCJTk0JUU4JUE3JTky">solid angle<i class="fa fa-external-link-alt"></i></span></p>
+<blockquote>
+<p>https://www.youtube.com/watch?v=VmnkkWLwVsc</p>
+<p>https://www.youtube.com/watch?v=gLfYTP4F23g</p>
+<p>https://www.youtube.com/watch?v=RMJucQJ1NGo</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/220px-SolidAngleWiki.png" alt="img"> <span class="math display">\[
+d\Omega=\frac{dA}{r^2}\\=\frac{d(rsin\theta d\psi)(rd\theta)}{r^2}\\=\frac{dr^2sin\theta d\theta d\psi}{r^2}\\=sin\theta d\theta d\psi
+\]</span> By assuming azimuthal symmetry, this means it is a cone, the eq2 can be simplifed as : <span class="math display">\[
+d\Omega=\frac{dA}{r^2}\\
+=\frac{d(2\pi r^2(1-cos\theta))}{r^2}\\
+=2\pi sin \theta d\theta
+\]</span></p>
+<p><span class="math display">\[
+\therefore\\
+b(\lambda)=\int\beta(\psi,\lambda)d\Omega\\
+=2\pi\int_0^{\pi} sin(\theta)\beta(\theta,\lambda)d\theta\\
+\]</span> <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505220017394.png" alt="image-00030505220017394"></p>
+<p>The scattering is addictive</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505220107010.png" alt="image-00030505220107010"><figcaption aria-hidden="true">image-00030505220107010</figcaption>
+</figure>
+<p>There are some other scattering properties</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505220204576.png" alt="image-00030505220204576"><figcaption aria-hidden="true">image-00030505220204576</figcaption>
+</figure>
+<p>50% typically &lt;3 to 4 deg</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505221010160.png" alt="image-00030505221010160"><figcaption aria-hidden="true">image-00030505221010160</figcaption>
+</figure>
+<h1 id="scattering-components">Scattering components</h1>
+<h2 id="pure-water">Pure water</h2>
+<p>The best value of pure water scattering is</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505224321192.png" alt="image-00030505224321192"><figcaption aria-hidden="true">image-00030505224321192</figcaption>
+</figure>
+<p>detailed can check Lee lecture bases</p>
+<h2 id="phytoplankton">Phytoplankton</h2>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506095901340.png" alt="image-00030506095901340"><figcaption aria-hidden="true">image-00030506095901340</figcaption>
+</figure>
+<h2 id="particles">Particles</h2>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506100604399.png" alt="image-00030506100604399"><figcaption aria-hidden="true">image-00030506100604399</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506101019868.png" alt="image-00030506101019868"><figcaption aria-hidden="true">image-00030506101019868</figcaption>
+</figure>
+<p>DDA is most popular one but only could compute very small size</p>
+<p>Improve IGOM for larger size</p>
+<p>Rayleigh cover very very small</p>
+<p>Mie all size but homogeneous spheres</p>
+<p>T-matrix is also popular</p>
+<h1 id="measurement">Measurement</h1>
+<p>I'm not very totally understand this process</p>
+<p>But one thing I can now is that</p>
+<p>The backscattering is the integration, but the measurement is a weighted sum</p>
+<h1 id="interpretation-and-application">Interpretation and Application</h1>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506111348360.png" alt="image-00030506111348360"><figcaption aria-hidden="true">image-00030506111348360</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506111806825.png" alt="image-00030506111806825"><figcaption aria-hidden="true">image-00030506111806825</figcaption>
+</figure>
+<h1 id="mie-theory">Mie theory</h1>
+<h1 id="beam-attenuation">Beam Attenuation</h1>
+<p>Unlike backscattering or total scattering, particle beam attenuation is almost a perfect powe law shape <span class="math display">\[
+c_p=a_p+b_p\\
+=a_{ph}+a_{nap}+b_p
+\]</span></p>
+<p>Not here this is <span class="math inline">\(b_p\)</span>, total scattering , not backscattering. Backscattering only contributed to almost one to two percent of total scattering.</p>
+<p>In order to related to the backscattering that can be received by satellite, we need one bridge <span class="math inline">\(\hat{b}_{bp}\)</span>, defined as <span class="math display">\[
+\hat{b}_{bp}=\frac{b_{bp}}{b_{p}}
+\]</span> The <span class="math inline">\(\hat{b}_{bp}\)</span> almost same in different wavelength.</p>
+<p>So the term u can be replaced as <span class="math display">\[
+u=\frac{b_b}{a+b_b}\\
+=\frac{b_w+b_{bp}}{a_w+a_p+a_{CDOM}+b_w+b_{bp}}\\
+=\frac{b_w+b_{p}*\hat{b}_{bp}}{a_w+a_p+a_{CDOM}+b_w+b_{p}*\hat{b}_{bp}}\\
+=\frac{b_w+(c_p-a_p)*\hat{b}_{bp}}{a_w+a_p+a_{CDOM}+b_w+(c_p-a_p)*\hat{b}_{bp}}\\
+\]</span></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color</tag>
+        <tag>Ocean Optics</tag>
+        <tag>particle backscattering</tag>
+        <tag>Inversion</tag>
       </tags>
   </entry>
   <entry>
@@ -2021,8 +2161,8 @@ a_{ph}(\lambda)=a_{p}(\lambda)-a_{nap}(\lambda)
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -2327,8 +2467,131 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>服务器部署自动机器学习</title>
+    <url>/posts/c23e0e6e.html</url>
+    <content><![CDATA[<p>借着毕业实习的机会将代码放到了实验室的服务器上，在这里记录一下全过程。</p>
+<a id="more"></a>
+<h1 id="实验室服务器的登陆及基本操作">实验室服务器的登陆及基本操作</h1>
+<p>除了直接在服务器主机上登陆之外，还可以通过一些连接软件进行远程登陆。我这里使用的是PuTTY软件。</p>
+<p>PuTTY是一款开源(Open Source Software)的连接软件，主要由Simon Tatham维护，使用MIT许可证授权。包含的组件有：PuTTY, PuTTYgen,PSFTP, PuTTYtel, Plink, PSCP, Pageant,默认登录协议是SSH，默认的端口为22。Putty是用来远程连接服务器的，支持SSH、Telnet、Serial等协议的连接。其中最常用的是SSH。用它来远程管理Linux十分好用，其主要优点如下：</p>
+<ul>
+<li>完全免费开源;</li>
+<li>全面支持windows系统;</li>
+<li>全面支持SSH1和SSH2；</li>
+<li>绿色软件，无需安装，下载后在桌面建个快捷方式即可使用；</li>
+<li>体积很小，不到1M；</li>
+<li>操作简单，所有的操作都在一个控制面板中实现。</li>
+</ul>
+<p>PuTTY的下载页面为<span class="exturl" data-url="aHR0cHM6Ly9wdXR0eS5vcmcv">https://putty.org/<i class="fa fa-external-link-alt"></i></span>，选择合适的版本下载安装即可。</p>
+<p>下载好之后在Saved Sessions处输入服务器IP地址，点击Save，然后点Open即可打开会话，输入用户名和密码即可登陆。</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190605143842.png"></p>
+<p>接着使用一些基本命令来确定服务器的系统版本和python版本。</p>
+<p>输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
+<p>返回的系统版本为Centos 7.3.1611 Redhat。</p>
+<p>输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python</span><br></pre></td></tr></table></figure>
+<p>返回的系统版本为python2.7。</p>
+<p>利用mkdir命令新建一个目录，后续操作皆在此目录下进行。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir amf</span><br></pre></td></tr></table></figure>
+<p>CPUE自动预测系统的环境配置</p>
+<p>实验室所用linux服务器版本为Centos 7.3.1611 Redhat，默认python版本为2.7，因此首先需要将python3安装到服务器上。</p>
+<h1 id="python3的安装">python3的安装</h1>
+<h2 id="rpm包安装">RPM包安装</h2>
+<p>本次安装使用的是来源于IUS社区的RPM包进行安装。IUS是“Inline with Upstream Stable”的缩写，他主要是一个提供新版本RPM包的社区，具体情况可以查看<span class="exturl" data-url="aHR0cHM6Ly9pdXMuaW8vR2V0dGluZ1N0YXJ0ZWQvI2luc3RhbGwtdmlhLWF1dG9tYXRpb24=">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
+<p>所使用的具体操作如下(部分操作需要sudo权限，在这里不一一列出)：</p>
+<ol type="1">
+<li>添加IUS地址：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install https://centos7.iuscommunity.org/ius-release.rpm</span><br></pre></td></tr></table></figure>
+<ol start="2" type="1">
+<li>创建缓存元数据：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ol start="3" type="1">
+<li>安装python3.6：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install python36u</span><br><span class="line"></span><br><span class="line">yum -y install python36u-pip</span><br><span class="line"></span><br><span class="line">yum -y install python36u-devel</span><br></pre></td></tr></table></figure>
+<p>（4）测试环境：输入python3.6出现如下文字即代表安装成功。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Python <span class="number">3.6</span><span class="number">.8</span> (default, May  <span class="number">2</span> <span class="number">2019</span>, <span class="number">20</span>:<span class="number">40</span>:<span class="number">44</span>)</span><br><span class="line"></span><br><span class="line">[GCC <span class="number">4.8</span><span class="number">.5</span> <span class="number">20150623</span> (Red Hat <span class="number">4.8</span><span class="number">.5</span><span class="number">-36</span>)] on linux</span><br><span class="line"></span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> <span class="keyword">or</span> <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br></pre></td></tr></table></figure>
+<h2 id="虚拟环境的配置">虚拟环境的配置</h2>
+<p>因为系统中存在多个python版本，为了避免环境污染，我使用virtualenv创建了独立的虚拟环境，具体过程如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3.6 -m venv py3</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> py3/bin/activate</span><br></pre></td></tr></table></figure>
+<p>执行完之后再命令行前会出现(py3)的字样，即代表进入虚拟环境中，输入python -V返回python3.6.8即代表安装成功。</p>
+<h2 id="机器学习环境配置">机器学习环境配置</h2>
+<p>自动预测系统是基于auto-sklearn开发的，需要scipy、sci-kit、pands、numpy等代码库的支持。在上一不中我们安装了pip这一python包管理工具，它可以提供对python包的查找、下载、安装、卸载等功能，因此这里直接采用pip命令进行安装即可</p>
+<p>需要注意的是，在配置之前要先进入上一步配置的虚拟环境。</p>
+<p>依次执行如下命令即可进行安装。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pandas</span><br><span class="line"></span><br><span class="line">pip install scipy</span><br><span class="line"></span><br><span class="line">pip install scikit-learn</span><br><span class="line"></span><br><span class="line">pip install auto-sklearn</span><br><span class="line"></span><br><span class="line">pip install matplotlib</span><br><span class="line"></span><br><span class="line">pip install xlrd</span><br><span class="line"></span><br><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+<p>在安装auto-sklearn的过程中遇到如下错误：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Error: Syntax error <span class="keyword">in</span> input(3).     error: <span class="built_in">command</span> <span class="string">&#x27;swig&#x27;</span> failed with <span class="built_in">exit</span> status 1</span><br></pre></td></tr></table></figure>
+<p>根据提示可知是由于swig而出现的错误，SWIG本质上是个代码生成器，为C/C++程序生成到其他语言的包装代码(wrapper code)，这些包装代码里会利用各语言提供的C API，将C/C++程序中的内容暴露给相应语言。为了生成这些包装代码，SWIG需要一个接口描述文件，描述将什么样的接口暴露给其他语言。</p>
+<p>查看swig所用的版本为2.0.10，为python2.7所对应的版本，因此需要在系统中将swig升级到3版本。</p>
+<p>首先将swig2卸载，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y remove swig</span><br></pre></td></tr></table></figure>
+<p>然后安装swig 3，执行命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install swig3</span><br></pre></td></tr></table></figure>
+<p>安装以后执行命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">swig -version</span><br></pre></td></tr></table></figure>
+<p>可以看到swig的版本变成了3.0.12。</p>
+<p>重新执行pip install auto-sklearn即可完成安装。</p>
+<p>安装完成后在虚拟环境中输入python，进入python语言，执行如下命令，如果没有报错，即说明环境配置完成。按Ctrl+D即可退出虚拟环境和puTTY。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> autosklearn.regression</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<h1 id="服务器与windows之间的文件传输">服务器与windows之间的文件传输</h1>
+<p>在运行程序之前，需要将要用到的数据传输到服务器上，这里采用的是puTTY提供的PSFTP工具。在之前安装puTTY时已经一并安装了。</p>
+<p>打开PSFTP，输入open 服务器地址，完成登陆，然后采用put命令将本地文件传输到服务器上，get命令将服务器上的文件取回。</p>
+<h1 id="程序调试">程序调试</h1>
+<p>利用PSFTP将源代码传输到服务器上，进入虚拟环境，在命令行中输入</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python code.py</span><br></pre></td></tr></table></figure>
+<p>即可看到程序开始运行。</p>
+<p>如果程序报错，需要利用系统自带的vim编辑器进行编辑与调试。vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。 这三种模式的作用分别是：</p>
+<p>（1）命令模式：</p>
+<p>用户刚刚启动 vim，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。</p>
+<p>以下是常用的几个命令：</p>
+<ul>
+<li>l i 切换到输入模式，以输入字符。</li>
+<li>l x 删除当前光标所在处的字符。</li>
+<li>l : 切换到底线命令模式，以在最底一行输入命令。</li>
+</ul>
+<p>若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</p>
+<p>命令模式只有一些最基本的命令，因此仍要依靠底线命令模式输入更多命令。</p>
+<p>（2）输入模式：</p>
+<p>在命令模式下按下i就进入了输入模式。在输入模式中，可以使用以下按键：</p>
+<ul>
+<li>l 字符按键以及Shift组合，输入字符</li>
+<li>l ENTER，回车键，换行</li>
+<li>l BACK SPACE，退格键，删除光标前一个字符</li>
+<li>l DEL，删除键，删除光标后一个字符</li>
+<li>l 方向键，在文本中移动光标</li>
+<li>l HOME/END，移动光标到行首/行尾</li>
+<li>l Page Up/Page Down，上/下翻页</li>
+<li>l Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li>
+<li>l ESC，退出输入模式，切换到命令模式</li>
+</ul>
+<p>（3）底线命令模式：</p>
+<p>在命令模式下按下:（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有（已经省略了冒号）：</p>
+<ul>
+<li>l q 退出程序</li>
+<li>l w 保存文件</li>
+<li>l 按ESC键可随时退出底线命令模式。</li>
+</ul>
+<p>如果你想用vim来编辑或者建立一个名为test.txt的文件时，只需要在虚拟环境中输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim test.txt</span><br></pre></td></tr></table></figure>
+<p>即可。此时进入的是一般模式，在一般模式下按i即可进入输入模式，此时左下角状态栏会出现–INSERT- 的字样，即代表可以输入任意字符。这时除了ESC之外，其余按键都可以作为一般的输入按钮。编辑完成之后按ESC即可挥动一般模式。在一般模式下按：，输入wq即可保存离开。</p>
+<p>除此之外还有很多进阶命令，在这里就不再细数了。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -2463,129 +2726,6 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
         <tag>Ocean Color</tag>
         <tag>Research</tag>
         <tag>Oceanography</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务器部署自动机器学习</title>
-    <url>/posts/c23e0e6e.html</url>
-    <content><![CDATA[<p>借着毕业实习的机会将代码放到了实验室的服务器上，在这里记录一下全过程。</p>
-<a id="more"></a>
-<h1 id="实验室服务器的登陆及基本操作">实验室服务器的登陆及基本操作</h1>
-<p>除了直接在服务器主机上登陆之外，还可以通过一些连接软件进行远程登陆。我这里使用的是PuTTY软件。</p>
-<p>PuTTY是一款开源(Open Source Software)的连接软件，主要由Simon Tatham维护，使用MIT许可证授权。包含的组件有：PuTTY, PuTTYgen,PSFTP, PuTTYtel, Plink, PSCP, Pageant,默认登录协议是SSH，默认的端口为22。Putty是用来远程连接服务器的，支持SSH、Telnet、Serial等协议的连接。其中最常用的是SSH。用它来远程管理Linux十分好用，其主要优点如下：</p>
-<ul>
-<li>完全免费开源;</li>
-<li>全面支持windows系统;</li>
-<li>全面支持SSH1和SSH2；</li>
-<li>绿色软件，无需安装，下载后在桌面建个快捷方式即可使用；</li>
-<li>体积很小，不到1M；</li>
-<li>操作简单，所有的操作都在一个控制面板中实现。</li>
-</ul>
-<p>PuTTY的下载页面为<span class="exturl" data-url="aHR0cHM6Ly9wdXR0eS5vcmcv">https://putty.org/<i class="fa fa-external-link-alt"></i></span>，选择合适的版本下载安装即可。</p>
-<p>下载好之后在Saved Sessions处输入服务器IP地址，点击Save，然后点Open即可打开会话，输入用户名和密码即可登陆。</p>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image/20190605143842.png"></p>
-<p>接着使用一些基本命令来确定服务器的系统版本和python版本。</p>
-<p>输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
-<p>返回的系统版本为Centos 7.3.1611 Redhat。</p>
-<p>输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python</span><br></pre></td></tr></table></figure>
-<p>返回的系统版本为python2.7。</p>
-<p>利用mkdir命令新建一个目录，后续操作皆在此目录下进行。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir amf</span><br></pre></td></tr></table></figure>
-<p>CPUE自动预测系统的环境配置</p>
-<p>实验室所用linux服务器版本为Centos 7.3.1611 Redhat，默认python版本为2.7，因此首先需要将python3安装到服务器上。</p>
-<h1 id="python3的安装">python3的安装</h1>
-<h2 id="rpm包安装">RPM包安装</h2>
-<p>本次安装使用的是来源于IUS社区的RPM包进行安装。IUS是“Inline with Upstream Stable”的缩写，他主要是一个提供新版本RPM包的社区，具体情况可以查看<span class="exturl" data-url="aHR0cHM6Ly9pdXMuaW8vR2V0dGluZ1N0YXJ0ZWQvI2luc3RhbGwtdmlhLWF1dG9tYXRpb24=">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
-<p>所使用的具体操作如下(部分操作需要sudo权限，在这里不一一列出)：</p>
-<ol type="1">
-<li>添加IUS地址：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install https://centos7.iuscommunity.org/ius-release.rpm</span><br></pre></td></tr></table></figure>
-<ol start="2" type="1">
-<li>创建缓存元数据：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum makecache</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ol start="3" type="1">
-<li>安装python3.6：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install python36u</span><br><span class="line"></span><br><span class="line">yum -y install python36u-pip</span><br><span class="line"></span><br><span class="line">yum -y install python36u-devel</span><br></pre></td></tr></table></figure>
-<p>（4）测试环境：输入python3.6出现如下文字即代表安装成功。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">Python <span class="number">3.6</span><span class="number">.8</span> (default, May  <span class="number">2</span> <span class="number">2019</span>, <span class="number">20</span>:<span class="number">40</span>:<span class="number">44</span>)</span><br><span class="line"></span><br><span class="line">[GCC <span class="number">4.8</span><span class="number">.5</span> <span class="number">20150623</span> (Red Hat <span class="number">4.8</span><span class="number">.5</span><span class="number">-36</span>)] on linux</span><br><span class="line"></span><br><span class="line">Type <span class="string">&quot;help&quot;</span>, <span class="string">&quot;copyright&quot;</span>, <span class="string">&quot;credits&quot;</span> <span class="keyword">or</span> <span class="string">&quot;license&quot;</span> <span class="keyword">for</span> more information.</span><br></pre></td></tr></table></figure>
-<h2 id="虚拟环境的配置">虚拟环境的配置</h2>
-<p>因为系统中存在多个python版本，为了避免环境污染，我使用virtualenv创建了独立的虚拟环境，具体过程如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python3.6 -m venv py3</span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> py3/bin/activate</span><br></pre></td></tr></table></figure>
-<p>执行完之后再命令行前会出现(py3)的字样，即代表进入虚拟环境中，输入python -V返回python3.6.8即代表安装成功。</p>
-<h2 id="机器学习环境配置">机器学习环境配置</h2>
-<p>自动预测系统是基于auto-sklearn开发的，需要scipy、sci-kit、pands、numpy等代码库的支持。在上一不中我们安装了pip这一python包管理工具，它可以提供对python包的查找、下载、安装、卸载等功能，因此这里直接采用pip命令进行安装即可</p>
-<p>需要注意的是，在配置之前要先进入上一步配置的虚拟环境。</p>
-<p>依次执行如下命令即可进行安装。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pandas</span><br><span class="line"></span><br><span class="line">pip install scipy</span><br><span class="line"></span><br><span class="line">pip install scikit-learn</span><br><span class="line"></span><br><span class="line">pip install auto-sklearn</span><br><span class="line"></span><br><span class="line">pip install matplotlib</span><br><span class="line"></span><br><span class="line">pip install xlrd</span><br><span class="line"></span><br><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
-<p>在安装auto-sklearn的过程中遇到如下错误：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Error: Syntax error <span class="keyword">in</span> input(3).     error: <span class="built_in">command</span> <span class="string">&#x27;swig&#x27;</span> failed with <span class="built_in">exit</span> status 1</span><br></pre></td></tr></table></figure>
-<p>根据提示可知是由于swig而出现的错误，SWIG本质上是个代码生成器，为C/C++程序生成到其他语言的包装代码(wrapper code)，这些包装代码里会利用各语言提供的C API，将C/C++程序中的内容暴露给相应语言。为了生成这些包装代码，SWIG需要一个接口描述文件，描述将什么样的接口暴露给其他语言。</p>
-<p>查看swig所用的版本为2.0.10，为python2.7所对应的版本，因此需要在系统中将swig升级到3版本。</p>
-<p>首先将swig2卸载，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y remove swig</span><br></pre></td></tr></table></figure>
-<p>然后安装swig 3，执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install swig3</span><br></pre></td></tr></table></figure>
-<p>安装以后执行命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">swig -version</span><br></pre></td></tr></table></figure>
-<p>可以看到swig的版本变成了3.0.12。</p>
-<p>重新执行pip install auto-sklearn即可完成安装。</p>
-<p>安装完成后在虚拟环境中输入python，进入python语言，执行如下命令，如果没有报错，即说明环境配置完成。按Ctrl+D即可退出虚拟环境和puTTY。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> autosklearn.regression</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
-<h1 id="服务器与windows之间的文件传输">服务器与windows之间的文件传输</h1>
-<p>在运行程序之前，需要将要用到的数据传输到服务器上，这里采用的是puTTY提供的PSFTP工具。在之前安装puTTY时已经一并安装了。</p>
-<p>打开PSFTP，输入open 服务器地址，完成登陆，然后采用put命令将本地文件传输到服务器上，get命令将服务器上的文件取回。</p>
-<h1 id="程序调试">程序调试</h1>
-<p>利用PSFTP将源代码传输到服务器上，进入虚拟环境，在命令行中输入</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">python code.py</span><br></pre></td></tr></table></figure>
-<p>即可看到程序开始运行。</p>
-<p>如果程序报错，需要利用系统自带的vim编辑器进行编辑与调试。vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。 这三种模式的作用分别是：</p>
-<p>（1）命令模式：</p>
-<p>用户刚刚启动 vim，便进入了命令模式。此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。</p>
-<p>以下是常用的几个命令：</p>
-<ul>
-<li>l i 切换到输入模式，以输入字符。</li>
-<li>l x 删除当前光标所在处的字符。</li>
-<li>l : 切换到底线命令模式，以在最底一行输入命令。</li>
-</ul>
-<p>若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</p>
-<p>命令模式只有一些最基本的命令，因此仍要依靠底线命令模式输入更多命令。</p>
-<p>（2）输入模式：</p>
-<p>在命令模式下按下i就进入了输入模式。在输入模式中，可以使用以下按键：</p>
-<ul>
-<li>l 字符按键以及Shift组合，输入字符</li>
-<li>l ENTER，回车键，换行</li>
-<li>l BACK SPACE，退格键，删除光标前一个字符</li>
-<li>l DEL，删除键，删除光标后一个字符</li>
-<li>l 方向键，在文本中移动光标</li>
-<li>l HOME/END，移动光标到行首/行尾</li>
-<li>l Page Up/Page Down，上/下翻页</li>
-<li>l Insert，切换光标为输入/替换模式，光标将变成竖线/下划线</li>
-<li>l ESC，退出输入模式，切换到命令模式</li>
-</ul>
-<p>（3）底线命令模式：</p>
-<p>在命令模式下按下:（英文冒号）就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有（已经省略了冒号）：</p>
-<ul>
-<li>l q 退出程序</li>
-<li>l w 保存文件</li>
-<li>l 按ESC键可随时退出底线命令模式。</li>
-</ul>
-<p>如果你想用vim来编辑或者建立一个名为test.txt的文件时，只需要在虚拟环境中输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim test.txt</span><br></pre></td></tr></table></figure>
-<p>即可。此时进入的是一般模式，在一般模式下按i即可进入输入模式，此时左下角状态栏会出现–INSERT- 的字样，即代表可以输入任意字符。这时除了ESC之外，其余按键都可以作为一般的输入按钮。编辑完成之后按ESC即可挥动一般模式。在一般模式下按：，输入wq即可保存离开。</p>
-<p>除此之外还有很多进阶命令，在这里就不再细数了。</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-        <tag>Linux</tag>
-        <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -2796,8 +2936,8 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -2813,215 +2953,8 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>particle backscattering</title>
-    <url>/posts/78604782.html</url>
-    <content><![CDATA[<p>Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared</p>
-<p>The open-ocean missing backscattering is in the structural complexity of particles</p>
-<p>I'm gonna to add more about this.</p>
-<a id="more"></a>
-<h1 id="spectral-variations-of-light-scattering-by-marine-particles-in-coastal-waters-from-visible-to-near-infrared">Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared</h1>
-<h2 id="theoretical-background-of-particle-backscattering">Theoretical background of particle backscattering</h2>
-<p>Light scattering by a single particle depends on its geometrical cross-section (thus shape and size) and on its refractive index relative to that of the surrounding medium (seawater). The refractive index of particles relative to water can be written as: <span class="math display">\[
-m=n-in^{&#39;}
-\]</span> where <span class="math inline">\(n\)</span> and <span class="math inline">\(n^{&#39;}\)</span> are respectively the real and imaginary parts of the refractive index.</p>
-<p>Typical n values vary from 1.03 and a theoretical upper limit of 1.158 for organic particles (Morel and Ahn 1990; Aas 1996), depending on hydration, and from 1.07 to 1.22 for various minerals (Lide 2001).Woz´niak and Stramski (2004) observed general tendency of increasing n with increasing density of minerals. Typical values and spectral variations for n9 have been documented by Patterson et al. (1977), Egan and Higelman (1979), and Stramski et al. (2007).</p>
-<p>In estuaries and coastal waters directly influenced by river inputs, single-grain mineral particles may either appear as individual particles in water or as aggregates containing water and organic matter.</p>
-<p>Large estuarine aggregates reaching sizes up to 1000 µm have been observed using video cameras (Kranck 1984). When considering a population of particles, their concentration (number of particles per unit volume of water sample containing these particles) and size are taken into account through the particle size distribution (PSD) (Jonasz and Fournier 2007). Different functions can be used to fit actual PSDs, such as exponential, log-normal, phi-normal, or hyperbolic distributions. In natural waters, the size distribution of suspended particles is often assumed to follow a simple power-law function, also called Junge size distribution(Bader 1970): <span class="math display">\[
-N(D)=KD^{-j}
-\]</span> where N is the number of particles of diameter D per cubic meter and per micrometer, K sets the concentration of particles, and j, often called Junge exponent, is the slope of the distribution.</p>
-<p>This exponent varies around a mean value of 4 and typically from 2.5 to 5 (Jonasz and Fournier 2007). For a fixed number of particles, the proportion of small particles increases when the exponent j increases. The use of Junge distributions for marine particles has been criticized (Risovic 2002; Stavn and Keen 2004; Chami et al. 2006).</p>
-<p>Although some field measurements carried out in coastal waters suggest PSDs close to a power-law distribution (Boss et al. 2001a), others reveal significant features at any size range on top of a power-law PSD (Bale and Morris 1987; Eisma et al. 1991; Bernard et al. 2001).</p>
-<p>Note also that current particle-sizing techniques for discrete and in situ sampling, such as the resistive particle-counting technique (e.g., Coulter counter) or laser diffraction (e.g., the LISST series, Sequoia Scientific), are typically limited to the range 1–200 mm (Agrawal and Pottsmith 2000).</p>
-<p>Apart for a few measurements reported by Stramski and Woz´niak (2005) (see their figs. 1, 2), there is currently a lack of information concerning the finest fraction of particles (,1 mm) which, especially when it is mineral, contributes significantly to light scattering (see fig. 4a in Babin et al. 2003a).</p>
-<p>Mie theory can be used to compute the optical properties of particles that are assumed homogeneous and spherical. Mie computations notably provide the efficiency factors for scattering and absorption (<span class="math inline">\(Q_b\)</span> and <span class="math inline">\(Q_a\)</span>). The corresponding coefficients are then obtained by integration over the size distribution: <span class="math display">\[
-b_{p}(\lambda)=(\frac{\pi}{4})\int_{D_{min}}^{D_{max}}N(D)Q_b(\lambda,D,m)D^2dD
-\\
-a_{p}(\lambda)=(\frac{\pi}{4})\int_{D_{min}}^{D_{max}}N(D)Q_a(\lambda,D,m)D^2dD
-\]</span> where <span class="math inline">\(\lambda\)</span> is the wavelength of light, whereas the minimum and maximum diameters, <span class="math inline">\(D_{min}\)</span> and <span class="math inline">\(D_{max}\)</span>, define the size interval.</p>
-<p>Theoretically, the spectral variations of <span class="math inline">\(b_p\)</span>, in the case of <strong>nonabsorbing and homogeneous particles</strong> distributed in size according to Eq.2 with <span class="math inline">\(D_{min}\)</span> and $D_{max} $ respectively equal to 0 and infinity, can be written: <span class="math display">\[
-b_{p}(\lambda)=A\lambda^{-\gamma}
-\]</span> The exponent of this power law, <span class="math inline">\(\gamma\)</span>, also called scattering spectral slope, is then simply related to the slope of the PSD, j, through (Morel 1973): <span class="math display">\[
-\gamma=j-3
-\]</span> To verify Eq. 5 with the Mie theory, the actual limits <span class="math inline">\(D_{min}\)</span> and <span class="math inline">\(D_{max}\)</span> chosen for calculations in Eq. 3 must be small and large enough, respectively, to account for most of particle scattering at all wavelengths (Morel 1973; Boss et al. 2001b).</p>
-<p>This condition also applies to <span class="math inline">\(a_p(\lambda)\)</span> calculations for the sake of obtaining results independent of <span class="math inline">\(D_{min}\)</span> and <span class="math inline">\(D_{max}\)</span>.</p>
-<p>Equations 4 and 5 are no longer valid in the case of <strong>absorbing particles (<span class="math inline">\(n^{&#39;}&gt; 0\)</span>)</strong>. To understand the influence of particulate absorption on <span class="math inline">\(b_p(\lambda)\)</span>, the effect of <span class="math inline">\(n^{&#39;}\)</span> variations both on the real and imaginary parts of m must be considered.</p>
-<p>The former phenomenon can be explained and modeled according to the Ketteler–Helmhotz theory of anomalous dispersion (Bricaud and Morel 1986). It is significant in the vicinity of absorption bands such as the major ones observed on phytoplankton cells in the blue and red parts of the spectrum. In the case of detrital and mineral marine particles for which the absorption coefficient generally varies smoothly with wavelength, variations in <span class="math inline">\(n\)</span> resulting from anomalous dispersion are <strong>negligible</strong>.</p>
-<p>The effect of absorption on <span class="math inline">\(b_p(\lambda)\)</span> through the contribution of <span class="math inline">\(n^{&#39;}\)</span> to <span class="math inline">\(m\)</span>, which is certainly much more important than the effect of anomalous dispersion even for phytoplankton, is accounted for by the Mie theory and expressed in the computed efficiency factors (Morel and Bricaud 1986).</p>
-<p>Typical <span class="math inline">\(b_p(\lambda)\)</span> spectra for phytoplankton cultures and phytoplankton-rich natural waters exhibit troughs at wavelengths corresponding to major peaks in the particle absorption spectrum (Bricaud et al. 1988; Babin et al. 2003a; Snyder et al. 2008). In the case of nonalgal particles found in coastal waters, the <span class="math inline">\(b_p(\lambda)\)</span> spectrum often depicts a decreasing trend at short wavelengths of the blue range (e.g., Fig. 1 and Babin et al. 2003a).</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128180205500.png" alt="he particulate scattering coefficient of nonabsorbing particles is denoted b_{pna}."><figcaption aria-hidden="true">he particulate scattering coefficient of nonabsorbing particles is denoted <span class="math inline">\(b_{pna}\)</span>.</figcaption>
-</figure>
-<p>The particulate scattering coefficient of nonabsorbing particles is denoted <span class="math inline">\(b_{pna}\)</span></p>
-<h2 id="result-1">Result 1</h2>
-<p>It is in this figure.</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128201433945.png" alt="image-00030128201433945"><figcaption aria-hidden="true">image-00030128201433945</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128201459589.png" alt="image-00030128201459589"><figcaption aria-hidden="true">image-00030128201459589</figcaption>
-</figure>
-<p>On the basis of these first results, we conclude that particulate absorption effects on the scattering are always significant in the visible, even when wavelengths associated with high particulate absorption are avoided. A unique power-law function (e.g., Eq. 9) cannot be used to model the bp spectral variations from the near IR toward the visible (Eck et al. 1999). Further investigations are needed concerning these particulate absorption effects to propose an improved model of the <span class="math inline">\(b_p(\lambda)\)</span> spectrum in the visible.</p>
-<h2 id="result-2">Result 2</h2>
-<p>I want to mainly focus on this part.</p>
-<p>In this section, the particulate scattering coefficient of nonabsorbing particles is denoted <span class="math inline">\(b_{pna}\)</span>. The <span class="math inline">\(b_{pna}\)</span> values are obtained by assuming that measured near-IR$ b_{p}$ values effectively represent <span class="math inline">\(b_{pna}\)</span> at these wavelengths and Eq. 9 can be used to extrapolate to visible wavelengths.</p>
-<p>The particulate scattering coefficient of absorbing particles is denoted by bp, and the difference from Eq. 9 due to absorption effects is written: <span class="math display">\[
-\tag{10}
-\Delta b_{p}(\lambda)=b_{pna}(\lambda)-b_p(\lambda)=f(a_p)
-\]</span> <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128202538901.png" alt="image-00030128202538901"></p>
-<p>The results clearly show a significant departure, in a range varying from 1% to 35%, that slightly increases with decreasing values of the <span class="math inline">\(b_p\)</span> near-IR spectral slope (Fig. 9). The</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128202845313.png" alt="image-00030128202845313"><figcaption aria-hidden="true">image-00030128202845313</figcaption>
-</figure>
-<p>The relationship between (<span class="math inline">\(\Delta b_p : a_p\)</span>)and <span class="math inline">\(\gamma\)</span> is not linear and can be closely reproduced by using the following equation: <span class="math display">\[
-\tag{12}
-\Delta b_p/a_p=1-tanh(0.5\times\gamma^2)
-\]</span> where the 1 and 0.5 constants correspond to a mean value of the real refractive index (n 5 1.10). These constant values are slightly different for n values of 1.05 or 1.18.</p>
-<p>写得很好 就是我不想看了QAQ</p>
-<p>最终 出来这个式子</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128203553730.png" alt="image-00030128203553730"><figcaption aria-hidden="true">image-00030128203553730</figcaption>
-</figure>
-<h1 id="the-open-ocean-missing-backscattering-is-in-the-structural-complexity-of-particles">The open-ocean missing backscattering is in the structural complexity of particles</h1>
-<h1 id="retrieval-of-particulate-backscattering-using-field-and-satellite-radiometry-assessment-of-the-qaa-algorithm">Retrieval of Particulate Backscattering Using Field and Satellite Radiometry: Assessment of the QAA Algorithm</h1>
-<p>又是这几个老熟人发的文章。</p>
-<p>用的是V19+CNR+BOU的数据。V19就是那个公开数据集，CNR是他们自己采集的，曾经发表在Pitarch2016上，看来这个一作也是搞bbp的老熟人了啊，BOU在这http://www.obs-vlfr.fr/Boussole/html/home/home.php，看来想获取还挺麻烦的。一共2881个Rrs+bbp。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402175803772.png" alt="image-00030402175803772"><figcaption aria-hidden="true">image-00030402175803772</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402175821746.png" alt="image-00030402175821746"><figcaption aria-hidden="true">image-00030402175821746</figcaption>
-</figure>
-<p>Remote Sensing这个期刊真的是越来越垃圾了，这个图都不让作者改一下的</p>
-<p>需要注意的是BOU数据集看起来并不是近岸的水，但是bbp也出现那个比例小于1的情况了。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402180808437.png" alt="image-00030402180808437"><figcaption aria-hidden="true">image-00030402180808437</figcaption>
-</figure>
-<p>这是分别的统计情况，这个是在去除Raman之前的。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402180849916.png" alt="image-00030402180849916"><figcaption aria-hidden="true">image-00030402180849916</figcaption>
-</figure>
-<p>这个是在去除Raman之后的</p>
-<p>这个作者也尝试了改进那个公式。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181045202.png" alt="image-00030402181045202"><figcaption aria-hidden="true">image-00030402181045202</figcaption>
-</figure>
-<p>最终结果是</p>
-<p>The in situ radiometry-derived spectral backscattering slope (η) has low predictive value as compared to η derived from bbp matchups. In this context, the impact of using the best fitted curve instead of the widely used expression [22] is negligible, thus validating the application of the latter without its retuning.</p>
-<h1 id="bbp-shape-function-summary">bbp shape function summary</h1>
-<h2 id="类qaa">类QAA</h2>
-<p>这个是用来总结见过的，当然了，不包括LS2那篇文章，那个我到现在没看懂。</p>
-<p>QAAv6</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181330460.png" alt="image-00030402181330460"><figcaption aria-hidden="true">image-00030402181330460</figcaption>
-</figure>
-<p>Joshi and D'sa 2018</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181425738.png" alt="image-00030402181425738"><figcaption aria-hidden="true">image-00030402181425738</figcaption>
-</figure>
-<p>Doxaran 2009</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181510433.png" alt="image-00030402181510433"><figcaption aria-hidden="true">image-00030402181510433</figcaption>
-</figure>
-<p>Wang 2017</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181623722.png" alt="image-00030402181623722"><figcaption aria-hidden="true">image-00030402181623722</figcaption>
-</figure>
-<p>Xue,2019</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181655057.png" alt="image-00030402181655057"><figcaption aria-hidden="true">image-00030402181655057</figcaption>
-</figure>
-<p>Chu 2020</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181821465.png" alt="image-00030402181821465"><figcaption aria-hidden="true">image-00030402181821465</figcaption>
-</figure>
-<p>其实我感觉我想要的答案在QAA类的文章里都找不到。</p>
-<p>那我看看其他的都是怎么搞出来的</p>
-<h2 id="ls1-and-ls2">LS1 and LS2</h2>
-<p>回头重新看了眼Werdell2018那个综述。里面提到关于不假设bbp shape或者说不假设为power law的只有这个LS1和LS2</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402182653656.png" alt="image-00030402182653656"><figcaption aria-hidden="true">image-00030402182653656</figcaption>
-</figure>
-<p>这是唯一一种Bulck inversion that do not assign the shape of bbp.</p>
-<p>先发个邮件要个代码吧。</p>
-<h1 id="bbp-problem-literature-review">bbp problem literature review</h1>
-<p><span class="math display">\[
-b_{bp}(\lambda)=b_{bp}(\lambda_0)(\frac{\lambda_0}{\lambda})^{\eta}
-\]</span></p>
-<p><span class="math inline">\(\eta\)</span> Typically varies between 0 and 3, largely driven by varing proportion of large and small particles(Werdell et al 2018)</p>
-<p>Reynolds et al 2016: Based on bbp(λ) values from 394 to 852 nm collected in the Arctic, Reynolds et al. (2016) reported the range of Sbp from 0.13 to 3.01 with the majority of data (80%) between 0.5 and 1.5, a median value of 1, and a mean value of 1.5. In</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/lno10341-fig-0011-m.jpg" alt="image"><figcaption aria-hidden="true">image</figcaption>
-</figure>
-<p>Note that the Slope is contradict</p>
-<p>William et al 2007:</p>
-<p>They fit by <span class="math display">\[
-f(\lambda)=f_{550}(\frac{\lambda}{550})^{\gamma}
-\]</span> The <span class="math inline">\(\gamma\)</span> also versus</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505142456457.png" alt="image-00030505142456457"><figcaption aria-hidden="true">image-00030505142456457</figcaption>
-</figure>
-<p>only slightly higher than 0 (smaller than 0)</p>
-<p>Loisel et al 2006</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505142806961.png" alt="image-00030505142806961"><figcaption aria-hidden="true">image-00030505142806961</figcaption>
-</figure>
-<p>Pitarch et al 2019</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505143158540.png" alt="image-00030505143158540"><figcaption aria-hidden="true">image-00030505143158540</figcaption>
-</figure>
-<p>some slightly smaller than 0</p>
-<p>Shi&amp;Wang 2017:</p>
-<p>VIIRS observation</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505145846471.png" alt="image-00030505145846471"><figcaption aria-hidden="true">image-00030505145846471</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505145935635.png" alt="image-00030505145935635"><figcaption aria-hidden="true">image-00030505145935635</figcaption>
-</figure>
-<p>7 is Meghna River Estuary</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505150111918.png" alt="image-00030505150111918"><figcaption aria-hidden="true">image-00030505150111918</figcaption>
-</figure>
-<p>2 is Hangzhou Bay 4 is Amazon River Estuary</p>
-<p>Finally found some reason</p>
-<blockquote>
-<p>Power slope g is related to the particle size distributions (PSDs), i.e., f ? g 2 3 (Babin et al., 2003; Kostadinov et al., 2009; Morel, 1973), where f is the power law slope of the Junge-type (Junge, 1963) size distributions (Balder, 1970; Sheldon et al., 1972; Twardowski et al., 2001). In fact, particle backscattering properties are determined by particle size distribution, particle shapes, and composition. However, particle size distribu- tion is the dominant factor in determining the particle scattering features such as the backscattering power law slope and the backscattering ratio (Kostadinov et al., 2009; Ulloa et al., 1994). For most of the satellite- derived global bbp(k) and the available in situ observations, particle backscattering power law slope g is typi- cally positive or close to 0 (Loisel et al., 2006; Reynolds et al., 2016; Stramski et al., 2007; Wozniak &amp; Stramski, 2004). This shows that bbp(k) decreases with the wavelength for VIIRS-derived bbp(410) to bbp(862). However, g may also be negative for large size particles (Kostadinov et al., 2009). Correspondingly, bbp(k) in the NIR wavelengths thus are larger than those in the visible bands. In China’s east coastal region, in situ bbp(k) can indeed increase with the wavelength at some highly turbid locations (Zhang et al., 2010a).</p>
-<p>In this study, VIIRS-derived bbp(k) images in the five turbid regions (Figures 3–7) and bbp(k) at the eight sta- tions (Figure 8) show that the particle size distribution in the water column is highly dynamic depending on the regions and the seasons. At Stations 1 and 2 in China’s east coastal region, bbp(k) increases with the increase of the wavelength during the winter season, while bbp(k) decreases with the wavelength during the summer season. This shows that the g is negative in the winter and positive in the summer, and might further suggest that the particle size is bigger in the winter (f&lt;23) than that in the summer (f&gt;23). The seasonal variation of particle size distribution in the water column may be attributed to the seasonal vari- ability of the turbulence and water mixing process driven by the seasonal monsoon in China’s east coastal region (Shi &amp; Wang, 2010a, 2012a).</p>
-<p>At Station 4 in the Amazon River Estuary (Figure 8d) and Station 7 in the Meghna River Estuary (Figure 8g), bbp(k) increases with increase of the wavelength for all seasons, while bbp(k) decreases with the increase of the wavelength for all seasons at Station 6 in the La Plata River Estuary (Figure 8f) and Station 8 in Atchafa- laya River Estuary (Figure 8h). This further suggests that the particle sizes at Stations 4 and 7 are generally larger than those at Stations 6 and 8. At Station 3 in Lake Taihu (Figure 8c) and Station 5 in the Amazon Riv- er’s north branch (Figure 8e), bbp(k) is generally flat for all seasons, implying that particle size in the water column is more or less the same even though bbp(k) can vary seasonally at these two stations. It is also noted that bbp(k) power law slope is still positive even though nLw(k) at the NIR bands in the La Plata River Estuary is similar to that in China’s east coastal region (Figure 2). This indicates that bbp(k) power law slope is not only seasonal-dependent, but also regional-dependent. If nLw(k) at the NIR bands is approximated as the surrogate of the TSM concentration, the particle size in the La Plata River Estuary is smaller than that in China’s east coastal region even though the TSM concentration at these two regions is similar</p>
-</blockquote>
-<p>There are two main refference here</p>
-<p>Kostadinov et al., 2009:</p>
-<p>This is also satellite observation</p>
-<p>This figure is a modeled result</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505152614575.png" alt="image-00030505152614575"><figcaption aria-hidden="true">image-00030505152614575</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505152703215.png" alt="image-00030505152703215"><figcaption aria-hidden="true">image-00030505152703215</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505152744561.png" alt="image-00030505152744561"><figcaption aria-hidden="true">image-00030505152744561</figcaption>
-</figure>
-<p>Zhang et al 2010</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505153254194.png" alt="image-00030505153254194"><figcaption aria-hidden="true">image-00030505153254194</figcaption>
-</figure>
-<p>Measured Spectrum</p>
-<p>I think I need a new post to learn the optics of backscattering</p>
-<h1 id="light-scattering-properties-of-marine-particles-in-coastal-and-open-ocean-waters-as-related-to-the-particle-mass-concentration">Light scattering properties of marine particles in coastal and open ocean waters as related to the particle mass concentration</h1>
-]]></content>
-      <categories>
-        <category>Annotated Bibliography</category>
-      </categories>
-      <tags>
-        <tag>Ocean Color</tag>
-        <tag>particle backscattering</tag>
-        <tag>Inversion</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -3219,8 +3152,8 @@ f(\lambda)=f_{550}(\frac{\lambda}{550})^{\gamma}
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -3898,6 +3831,68 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
       </tags>
   </entry>
   <entry>
+    <title>我为什么喜欢做科研</title>
+    <url>/posts/490b1360.html</url>
+    <content><![CDATA[<p>大概是最近拷问自己内心的结果。</p>
+<a id="more"></a>
+<h1 id="华罗庚">华罗庚</h1>
+<p>自己对科研最开始的印象，或许要追溯到这本<span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8xMDQ3MDI3Lw==">《华罗庚传》<i class="fa fa-external-link-alt"></i></span>。</p>
+<figure>
+<img src="https://img9.doubanio.com/view/subject/l/public/s1252320.jpg" alt="我看的那个版本的华罗庚传的封面，现在不知道还有没有卖的，也不知道还在不在家里"><figcaption aria-hidden="true">我看的那个版本的华罗庚传的封面，现在不知道还有没有卖的，也不知道还在不在家里</figcaption>
+</figure>
+<p>小时候家里没钱，书也少，我不知道这本书是谁买的，但是我翻来覆去的看了很多遍，在我心里留下了很深的影响。</p>
+<p>我因为这本书开始对数学感兴趣。而且因为这本书介绍了华罗庚杯数学竞赛，我也从小时候开始买了一些竞赛的书开始看着玩，虽然最后因为各种各样的原因没有参与，但是有些东西还是至今难忘。比如抽屉问题，比如数论。</p>
+<p>说不上来为什么，自己现在提到这本书的时候脑子里还会有各种各样的影子，比如那句“教授教授，越教越瘦”，比如那个灵感来了在车上推公式的人，比如一个瘦骨嶙峋但是还在坚持在防空洞里面做研究的人，最后，那个在东京大学讲学的身影。</p>
+<p>年少的自己完全没有考虑过钱啊什么的，只是觉得这样的生活很好，很吸引人，特别是这种沉浸的状态。</p>
+<p>我当时大概是想成为这样的人的。</p>
+<h1 id="你这样的学生适合搞研究">你这样的学生适合搞研究</h1>
+<p>这是我在高中的时候在一些老师那里收到的评价。</p>
+<p>高中的我其实并不出众，成绩没有特别好，竞赛也没考很高。说勤奋努力吧，其实自己内心也清楚自己到底摸了多少鱼。</p>
+<p>高中对自己影响深刻的东西大概是《你凭什么上北大》，《花开不败》，还有那个化学竞赛高三转文的学生。自己经常把这些文章打印出来，激励自己好好学习。</p>
+<p>但我还真不清楚为什么会在老师那里收获这样的评价。</p>
+<p>或许是成绩好，或许是好多时候题目有自己的解题思路，或许是很多时候会因为题目不合适跟老师直接吵起来。</p>
+<p>但是总体来讲，我还是觉得，自己高中是一个很平庸的人。</p>
+<p>感觉自己高中做的唯一一些对自己的未来有很大影响的事情，就是提前学了高数。我还记得我一开始用的也是一个特别老的版本的高数，我都不知道家里哪儿来这些书，我家里父辈们都没上过大学。</p>
+<p>后来换了同济第六版。</p>
+<p>自己当时自学了几乎全部的高数上的内容，而这，对我的未来造成了很大的影响，或许一直持续到现在。</p>
+<h1 id="你很有自己的想法">你很有自己的想法</h1>
+<p>这是我大学老师对我的评价，我的班主任跟我讲了好多次，刘老师似乎也说过。田老师和张老师似乎也讲过。</p>
+<p>也许有想法是一个好的评价，但是有想法的人可能并不适合搞科研，因为他会按照自己的想法来，而这个想法，由于在开始做科研之前接受的并不是系统的训练，只看到了大的东西，而根据这个大的东西所找到的喜欢的东西，往往并不是真正有人在做的科研方向，而且因为教材已经过时很多年了，很多东西已经到了一个dead end。</p>
+<p>一开始上大学的我，因为高中的时候就学完了一半的高数，所以就跨校区选课选了最难的高数，然后还顺带着选了其他的课。</p>
+<p>这导致我到了大四才认全我们班里的同学，也让我认识了很多到现在我还在联系的好朋友。</p>
+<p>最重要的，是他让我对模型和量化产生了极大的兴趣。</p>
+<p>当时自己专业的专业课大部分都是背背背，而自己选的课很多都需要计算推公式。两相对比起来，自己的专业课很多都没有逻辑，或者说无法进行推导，自己背诵的时候也很痛苦，分数考得很差；相比起来自己选的很多课都考的相当出色。</p>
+<p>《普通动物学》这门课我背了很久，但是还是背不下来，最后只考了六十多分。</p>
+<p>这门课考完之后，我基本就确定了，我要转行。</p>
+<p>中间一个可能去做的方向是生物信息学，班主任曾经给我推荐过他老公海洋所的机会，辩论队的师姐也给我推荐过农科院的机会。说实话，我当时的生物信息学知识还是在北大的生信课程上学的，他们做的还比较偏数学，偏基础和人体，但是我自己并没有非常好的学好这门课。</p>
+<p>我当时脑子里对于生物信息学的印象，就是通过一个基因序列我能推导出蛋白质性状，一篇正儿八经的生物信息学的paper应该有大量的公式来定量描述这个过程。</p>
+<p>当时的自己，因为没有好好学北大的生物信息学，并没有认识到生物信息学的本质是分析生物信息的大量数据，本质是Informatics，而非Model或者Algorithm。所以在大概看了农科院和海洋所老师的论文之后，惊异的发现他们paper里面一句公式都没有，就放弃了这一方向。</p>
+<p>而在生态系统，或者说生态模型，或者说现在自己在做的遥感方向，每个paper都有大量的公式，自己最终也选择了这里。</p>
+<h1 id="why-i-want-to-do-research">Why I want to do research</h1>
+<p>讲了那么久终于要切到正题了。</p>
+<p>之前在跟心理咨询师交流的时候，咨询师问我，为什么你想做科研。</p>
+<p>我说：“我脑子里还有想做的事情，虽然我不知道我能不能做出来，也不知道能不能做出来有什么实际的意义，但是这种感觉就像一本小说被翻开一半，后面不再继续跟你讲了一样，会让人异常难受。”</p>
+<p>现在看来，或许做研究的想法在我小的时候就开始成形了。</p>
+<p>自己脑子里也确实有很多想法，比如检测水质的手机App（国内被空天院做了），比如研究潮间带的变化（被发了RSE），比如苏轼诗词的NLP和地图可视化（到现在还懒癌没有动手做），比如the impact of marine heat wave on phytoplantkon comminity，比如phone LiDAR remote sensing，比如渔业养殖池塘的遥感监测，比如kelp culture carbon emissions，比如自己之前做了一半终止的SSTfusion。</p>
+<p>我还可以列举出来我脑子里大量的想法，但是自己的问题是，想的太多了，行动力不足。</p>
+<p>自己更像是一个想法的生产者，而在执行想法上，自己还远远不足。</p>
+<p>其实到了现在这个阶段，读博，做研究，要更多的考虑现实因素了。而无论怎么看，读博都不是一个经济上高收益的选择。</p>
+<p>那自己为什么还想读博？</p>
+<p>或许我觉得更多的，还是因为，自己这一路走来，浑然不知自己已经慢慢走到了这条路上。</p>
+<p>自己已经走了很长，很久，或许从自己反复看了很多遍华罗庚传开始，就已经在这条路上了。</p>
+<p>主动放弃，真的就是不甘心。</p>
+<p>但是也许，自己最后也会放弃吧。</p>
+<p>生死有命，富贵在天。</p>
+<p>也希望自己能早日从抑郁症里面出来。</p>
+]]></content>
+      <categories>
+        <category>梦里真真语真幻</category>
+      </categories>
+      <tags>
+        <tag>随便写写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>文献管理</title>
     <url>/posts/4ce7830b.html</url>
     <content><![CDATA[<p>mendely停止移动端服务之后发生的事情</p>
@@ -4050,6 +4045,69 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
       </tags>
   </entry>
   <entry>
+    <title>本科总结</title>
+    <url>/posts/726664aa.html</url>
+    <content><![CDATA[<p>写在最前面：虽然我明年才毕业，虽然还有毕业认定等等一堆事情要做，但是我所有的理论课程都结束了，大四一年就是申请、科研、语言、毕业事宜，怎么看怎么不像一个本科生的生活，所以就提前总结了吧，而且也免得明年这个时候再忘记了。</p>
+<a id="more"></a>
+<h2 id="我自己">我自己</h2>
+<p>先来写一下我自己。</p>
+<p>其实我自己是一个非常容易犹豫不决选择困难的人，同时自己非常懦弱，一直害怕和别人不一样而不被认可，害怕别人的目光。大一入学之前我就想转专业，暑假里联系好了要换宿舍，却在选课前夕放弃；经过了大一一年的摧残，背普动背的要死了，终于又想转专业，和班主任说明了心思，却又在选课的时候踟蹰犹豫，最后决定先选两门课上上看看——上完之后，我真的后悔真的想转了，而且变成了想转数学；但是却不想延期毕业——虽然其实我可以不延期毕业的；现在我大三结束了，在选秋季学期课程的时候，我认认真真的算了一下学分，发现我是可以延期两年辅修CS，可是我已经没有勇气了啊，两年，说出去大学本科六年才能毕业，怕不是要成为别人口中的笑料——我跟我爸妈解释专业到底是干什么，都花了很长时间，在爸妈眼里，辅修和没有辅修看起来是一样的，反而后者代表着我儿子没有能力正常毕业。当然也是因为一直不喜欢海大和青岛，我想我毕业的时候一点都不会不舍，反而非常解脱，我终于能走了，我终于能离开这个让我讨厌了这么久的地方了。</p>
+<p>这还表现在我对于出国的决定上，我很早很早就开始想出国了，但是只有在分手之后才真正的下定决心，飞速签了棕榈定了雅思，阻断了自己所有的退路，申请季拿不到offer，就等着灰头土脸的回家吧。</p>
+<p>我还是一个自制力、意志力都很差的人。最突出的表现就是，我大学三年没有一个我全身心投入进去的事情。自学CS就学了一点皮毛，甚至皮毛都算不上，专业课不好好听全靠背背背，看paper就拿谷歌翻译一下一目十行，做项目就想着抄代码，借来的书从来没有好好读过，走马观花地看了很多领域的东西，没有坚持完成过任何一个计划。这么说似乎不是特别好理解，拿数字说话，Ubhind(一个手机使用的监控软件)告诉我，我平均五分钟解锁一次手机。我一直想努力改掉这个毛病，但是似乎毫无成效。</p>
+<p>我大学里唯一坚持下来的两件事情，就是国赛和美赛。从一开始坚持到最后，美赛论文截止提交两小时前坐在那里静下心来认认真真的改latex代码的我，简直不像是我。感谢陪我做这两次比赛的队友，你们让我感受到了同伴的力量，让我坚持下来。希望未来的路上，我能找到像你们一样好的同伴。</p>
+<p>这是我这个人性格里，最能影响我的两点了。</p>
+<p>大学里只是简简单单的有一点点成绩，接下来就写一下经验吧。</p>
+<h2 id="关于方向">关于方向</h2>
+<p>很多老师和同学都说我适合去搞研究，从高中开始，多到我觉得，是不是我除了学习/科研之外，没有任何长处，所以他们想夸我的话，就只能说这个了2333.我在定方向的时候，反而没有受到这个的太多影响，因为我并没有找到一个能让我热爱的的问题或者方向，让我如饥似渴的去学习相关知识迫不及待的去解决它。</p>
+<p>每个人来到大学都会有一个问题：我毕业之后究竟要干什么？可能很多人到了毕业也没想清楚，说实话我也不清楚，但我知道了我喜欢的事情究竟是什么样子，和我不喜欢什么事情。</p>
+<p>大学毕业的方向，可以大概的分为四类：考研保研、出国留学、考公务员、自主创业、直接就业这几条，大一一年少去参加各种无意义的活动。前两者都需要你去实验室，创业就业需要你的实习经历，不要把宝贵的时间浪费在毫无意义的各种活动上。如果你的目标只是正常毕业，那么修读完所有学分+不违反校规校纪就可以了，剩下的所有被强制要求的活动你都可以不去。</p>
+<h2 id="关于课程与培养方案">关于课程与培养方案</h2>
+<p>我这个人记忆力不是特别好，我个人喜欢推理、运算与逻辑。数学吸引我的一个方面就是他的完整性，最为人知的比如欧式几何，从五个基本公理就可以推出剩下所有的东西。如果说一门课程能够用一条清晰的线索从头穿到尾，一条做不到三四条也行，那么我非常喜欢学习这种课程并且记忆效果会非常好；但是我所学的大多数专业课，都不能做到这一点，例如普通动物门这门课，我丝毫看不出上一个门的动物特点和下一个门的动物特点有任何逻辑上的联系。我知道这门课只能这样讲，我不觉得孙老师和艾老师讲课讲的不好水平不行，只是我真的很难记下这种结构的东西。就像我的手里只能拿一条线，不管这条线多长多粗，我都能很好的掌握它，但是现在这门课需要我同时拿着十条线，我强行去做的后果要么是只能拿一根背不完，要么只能从每根线上截一部分接到另一个地方——例如背混了桡足类里面哲水蚤、猛水蚤、剑水蚤的区别，考试现场创造出来一只第一触角长度和体长差不多的猛水蚤，手动狗头。</p>
+<p>说完了我自己，再来说说培养方案和它的课程。现行培养方案里面的课程安排我相信已经是老师能够做到的最好的情况了，自己不在其位不谋其政，可能下面的意见有点何不食肉糜。</p>
+<p>1.专业课导论。</p>
+<p>已经上完所有理论课的我已经能够用一条线将所有的课程穿起来，虽然不知道对不对，但是在专业课导论上我没有听见过类似的描述。下列描述单指现在的（2018.7.8）中国海洋大学水产学院海洋资源与环境专业：</p>
+<p>海洋资源与环境是海洋学下属的一门应用型学科，学科的基本问题是渔业资源问题。具体到中国渔业资源衰退的背景，就是渔业资源衰退的问题，渔业资源衰退到什么程度，渔业资源为什么会衰退，怎么样恢复渔业资源，怎么样维持渔业资源长期稳定的开发利用，是这个问题的四个方面。</p>
+<p>如果老师能在专业课导论上先说明这个，然后再按照这四个方面去引出各个实验室来介绍自己的东西，我们就会对本专业有一个很好的了解。</p>
+<p>2.通识教育</p>
+<p>中国海洋大学一直坚持“通识为体，专业为用”，那我也分开说好了。先说通识教育部分。</p>
+<p>我和行远书院的想法不谋而合，通识教育不是说 你一个学理工科的学点文科的东西，学文学点理工科的就叫通识教育，而是说我在本科毕业以后的生活中，当我需要去学习之前没有教过的东西的时候，我有这一份学习的能力。接下来具体说一下什么样的通识教育才是我眼里的通识教育。</p>
+<p>（1）认识事物需要一定的认知方式和精神，例如批判能力、实证能力、推理能力等等</p>
+<p>（2）人们已经很少用到能用单一的能力或知识来解决一个特定的问题</p>
+<p>（3）黑箱式的工具会越来越多，但是了解背后的原理就用这些工具会产生错误</p>
+<p>所以，通识教育应该有三个方面的特点。第一点是对于思维方式的培养，第二点是对于知识和技能的培养。其中知识和技能的培养，不要求精深，但是要求广博和基础。广博至理工农医文商艺体，基础可以视专业而定，但是体系一定要搭建好。例如正确的分辨朋友圈谣言，理解国家政策对于房价的影响，看得懂渔业资源评估论文里面的数学公式。</p>
+<p>3.专业课</p>
+<p>专业既然为用，就是说我们学到的东西里，肯定有应用型的技能或者技术（插播一句,我觉得科学、技术和工程的区别，应该给每个高考完填报志愿的人好好讲一下）。这个技能或者技术可以是针对于实际问题，例如软件的开发，也可以是针对科学研究中遇到的问题，例如生物统计学。我的意见是，既然是针对问题的课程，那就针对问题去考核。在课程开始之初就确定问题，例如布置一个小组任务或者个人任务，期末的时候通过看同学们问题解决的怎么样来看学习的情况。例如我们很多课程里有针对分类的知识，如果实验条件允许的话，把这些东西让同学们实际去分类鉴定，能够分出来多少就给多少分，学习的效果会比单纯的期末考和好得多。</p>
+<p>4.我眼里一个好的培养方案</p>
+<p>（1）公共基础比重增加且不设具体课程要求，只设置课程门类和总学分要求，例如总共要学40个学分的课，19个学分的数学，10个学分的化学物理，10个学分的英语，剩余10个学分任意选择。</p>
+<p>（2）对于有联系的专业课，安排在相邻学期，例如植物学与藻类学，水生生物学与海洋浮游生物学，渔业资源与渔场学和生物资源评估。</p>
+<p>（3）增加项目考核的方式。</p>
+<p>5.学习这么多课程的意义</p>
+<p>常常有人说学这个有什么用，我也在想到底有什么用。有用是绝对有用的，但是很难体会到。比如我在餐桌上已经可以讲一下吃的是什么东西，看文献的时候专业名次可以不依靠翻译，给身边的人科普海洋生态文明建设；那一大堆公共基础课呢能让我遇见不懂得东西的时候，知道我该去翻偏微分方程的数值解法、数量经济学还是拉汉世界鱼类系统名典。这或许就是学习这些东西的意义吧。</p>
+<h2 id="关于本科生科研与竞赛">关于本科生科研与竞赛</h2>
+<p>这一部分我一直不知道该怎么去讲，就索性想到啥写啥。</p>
+<p>1.比起经历，更重要的是结果。</p>
+<p>2.发论文不是目的，体验完整的科研流程才是目的。</p>
+<p>3.当你不知道要选择哪个实验室的时候，可以先排除不喜欢的方向，或者去和每个实验室的PI聊天了解情况。</p>
+<p>4.大胆的勾搭老师，即便你什么都不会。谁不是从零基础过来的呢。</p>
+<p>5.一定要以解决问题为目标。看到一篇论文的方法可以应用在你的问题上面时就去用，不要把时间浪费在学习各种论文的方法上。</p>
+<p>6.不要把竞赛当成项目，不要把时间浪费在参加竞赛上，竞赛只是锦上添花的东西。</p>
+<p>7.通过本研和竞赛掌握一定的技能和方法。</p>
+<p>8.通过这些活动，你会遇见和你一样的人，大神见大神。常有人问我各种队友怎么找啊，我只能说，你想成为什么样的人，你就会遇见什么样的人。</p>
+<p>9.申请旁听所在实验室的组会让你对于科研有更明确的认识。</p>
+<p>10.没有见到过凌晨四点五点学校的本科生活，才是不完整的本科生活。</p>
+<h2 id="结语">结语</h2>
+<p>时间过得好快，希望我的最后一年，能够不再像前三年一样，充满遗憾。</p>
+<p>如果有错误或者冒犯之处还请海涵，如果有能帮到你的地方，不胜荣幸。</p>
+]]></content>
+      <categories>
+        <category>梦里真真语真幻</category>
+      </categories>
+      <tags>
+        <tag>总结</tag>
+        <tag>随便写写</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Cousera机器学习基石第二周笔记 Machine Learning Foundation Week 2 Note in Cousera</title>
     <url>/posts/2c9001a2.html</url>
     <content><![CDATA[<p>Learning to Answer Yes/No <a id="more"></a></p>
@@ -4179,69 +4237,6 @@ k\le (\frac{R}{\gamma})^2
         <tag>机器学习</tag>
         <tag>Cousera</tag>
         <tag>林轩田</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>本科总结</title>
-    <url>/posts/726664aa.html</url>
-    <content><![CDATA[<p>写在最前面：虽然我明年才毕业，虽然还有毕业认定等等一堆事情要做，但是我所有的理论课程都结束了，大四一年就是申请、科研、语言、毕业事宜，怎么看怎么不像一个本科生的生活，所以就提前总结了吧，而且也免得明年这个时候再忘记了。</p>
-<a id="more"></a>
-<h2 id="我自己">我自己</h2>
-<p>先来写一下我自己。</p>
-<p>其实我自己是一个非常容易犹豫不决选择困难的人，同时自己非常懦弱，一直害怕和别人不一样而不被认可，害怕别人的目光。大一入学之前我就想转专业，暑假里联系好了要换宿舍，却在选课前夕放弃；经过了大一一年的摧残，背普动背的要死了，终于又想转专业，和班主任说明了心思，却又在选课的时候踟蹰犹豫，最后决定先选两门课上上看看——上完之后，我真的后悔真的想转了，而且变成了想转数学；但是却不想延期毕业——虽然其实我可以不延期毕业的；现在我大三结束了，在选秋季学期课程的时候，我认认真真的算了一下学分，发现我是可以延期两年辅修CS，可是我已经没有勇气了啊，两年，说出去大学本科六年才能毕业，怕不是要成为别人口中的笑料——我跟我爸妈解释专业到底是干什么，都花了很长时间，在爸妈眼里，辅修和没有辅修看起来是一样的，反而后者代表着我儿子没有能力正常毕业。当然也是因为一直不喜欢海大和青岛，我想我毕业的时候一点都不会不舍，反而非常解脱，我终于能走了，我终于能离开这个让我讨厌了这么久的地方了。</p>
-<p>这还表现在我对于出国的决定上，我很早很早就开始想出国了，但是只有在分手之后才真正的下定决心，飞速签了棕榈定了雅思，阻断了自己所有的退路，申请季拿不到offer，就等着灰头土脸的回家吧。</p>
-<p>我还是一个自制力、意志力都很差的人。最突出的表现就是，我大学三年没有一个我全身心投入进去的事情。自学CS就学了一点皮毛，甚至皮毛都算不上，专业课不好好听全靠背背背，看paper就拿谷歌翻译一下一目十行，做项目就想着抄代码，借来的书从来没有好好读过，走马观花地看了很多领域的东西，没有坚持完成过任何一个计划。这么说似乎不是特别好理解，拿数字说话，Ubhind(一个手机使用的监控软件)告诉我，我平均五分钟解锁一次手机。我一直想努力改掉这个毛病，但是似乎毫无成效。</p>
-<p>我大学里唯一坚持下来的两件事情，就是国赛和美赛。从一开始坚持到最后，美赛论文截止提交两小时前坐在那里静下心来认认真真的改latex代码的我，简直不像是我。感谢陪我做这两次比赛的队友，你们让我感受到了同伴的力量，让我坚持下来。希望未来的路上，我能找到像你们一样好的同伴。</p>
-<p>这是我这个人性格里，最能影响我的两点了。</p>
-<p>大学里只是简简单单的有一点点成绩，接下来就写一下经验吧。</p>
-<h2 id="关于方向">关于方向</h2>
-<p>很多老师和同学都说我适合去搞研究，从高中开始，多到我觉得，是不是我除了学习/科研之外，没有任何长处，所以他们想夸我的话，就只能说这个了2333.我在定方向的时候，反而没有受到这个的太多影响，因为我并没有找到一个能让我热爱的的问题或者方向，让我如饥似渴的去学习相关知识迫不及待的去解决它。</p>
-<p>每个人来到大学都会有一个问题：我毕业之后究竟要干什么？可能很多人到了毕业也没想清楚，说实话我也不清楚，但我知道了我喜欢的事情究竟是什么样子，和我不喜欢什么事情。</p>
-<p>大学毕业的方向，可以大概的分为四类：考研保研、出国留学、考公务员、自主创业、直接就业这几条，大一一年少去参加各种无意义的活动。前两者都需要你去实验室，创业就业需要你的实习经历，不要把宝贵的时间浪费在毫无意义的各种活动上。如果你的目标只是正常毕业，那么修读完所有学分+不违反校规校纪就可以了，剩下的所有被强制要求的活动你都可以不去。</p>
-<h2 id="关于课程与培养方案">关于课程与培养方案</h2>
-<p>我这个人记忆力不是特别好，我个人喜欢推理、运算与逻辑。数学吸引我的一个方面就是他的完整性，最为人知的比如欧式几何，从五个基本公理就可以推出剩下所有的东西。如果说一门课程能够用一条清晰的线索从头穿到尾，一条做不到三四条也行，那么我非常喜欢学习这种课程并且记忆效果会非常好；但是我所学的大多数专业课，都不能做到这一点，例如普通动物门这门课，我丝毫看不出上一个门的动物特点和下一个门的动物特点有任何逻辑上的联系。我知道这门课只能这样讲，我不觉得孙老师和艾老师讲课讲的不好水平不行，只是我真的很难记下这种结构的东西。就像我的手里只能拿一条线，不管这条线多长多粗，我都能很好的掌握它，但是现在这门课需要我同时拿着十条线，我强行去做的后果要么是只能拿一根背不完，要么只能从每根线上截一部分接到另一个地方——例如背混了桡足类里面哲水蚤、猛水蚤、剑水蚤的区别，考试现场创造出来一只第一触角长度和体长差不多的猛水蚤，手动狗头。</p>
-<p>说完了我自己，再来说说培养方案和它的课程。现行培养方案里面的课程安排我相信已经是老师能够做到的最好的情况了，自己不在其位不谋其政，可能下面的意见有点何不食肉糜。</p>
-<p>1.专业课导论。</p>
-<p>已经上完所有理论课的我已经能够用一条线将所有的课程穿起来，虽然不知道对不对，但是在专业课导论上我没有听见过类似的描述。下列描述单指现在的（2018.7.8）中国海洋大学水产学院海洋资源与环境专业：</p>
-<p>海洋资源与环境是海洋学下属的一门应用型学科，学科的基本问题是渔业资源问题。具体到中国渔业资源衰退的背景，就是渔业资源衰退的问题，渔业资源衰退到什么程度，渔业资源为什么会衰退，怎么样恢复渔业资源，怎么样维持渔业资源长期稳定的开发利用，是这个问题的四个方面。</p>
-<p>如果老师能在专业课导论上先说明这个，然后再按照这四个方面去引出各个实验室来介绍自己的东西，我们就会对本专业有一个很好的了解。</p>
-<p>2.通识教育</p>
-<p>中国海洋大学一直坚持“通识为体，专业为用”，那我也分开说好了。先说通识教育部分。</p>
-<p>我和行远书院的想法不谋而合，通识教育不是说 你一个学理工科的学点文科的东西，学文学点理工科的就叫通识教育，而是说我在本科毕业以后的生活中，当我需要去学习之前没有教过的东西的时候，我有这一份学习的能力。接下来具体说一下什么样的通识教育才是我眼里的通识教育。</p>
-<p>（1）认识事物需要一定的认知方式和精神，例如批判能力、实证能力、推理能力等等</p>
-<p>（2）人们已经很少用到能用单一的能力或知识来解决一个特定的问题</p>
-<p>（3）黑箱式的工具会越来越多，但是了解背后的原理就用这些工具会产生错误</p>
-<p>所以，通识教育应该有三个方面的特点。第一点是对于思维方式的培养，第二点是对于知识和技能的培养。其中知识和技能的培养，不要求精深，但是要求广博和基础。广博至理工农医文商艺体，基础可以视专业而定，但是体系一定要搭建好。例如正确的分辨朋友圈谣言，理解国家政策对于房价的影响，看得懂渔业资源评估论文里面的数学公式。</p>
-<p>3.专业课</p>
-<p>专业既然为用，就是说我们学到的东西里，肯定有应用型的技能或者技术（插播一句,我觉得科学、技术和工程的区别，应该给每个高考完填报志愿的人好好讲一下）。这个技能或者技术可以是针对于实际问题，例如软件的开发，也可以是针对科学研究中遇到的问题，例如生物统计学。我的意见是，既然是针对问题的课程，那就针对问题去考核。在课程开始之初就确定问题，例如布置一个小组任务或者个人任务，期末的时候通过看同学们问题解决的怎么样来看学习的情况。例如我们很多课程里有针对分类的知识，如果实验条件允许的话，把这些东西让同学们实际去分类鉴定，能够分出来多少就给多少分，学习的效果会比单纯的期末考和好得多。</p>
-<p>4.我眼里一个好的培养方案</p>
-<p>（1）公共基础比重增加且不设具体课程要求，只设置课程门类和总学分要求，例如总共要学40个学分的课，19个学分的数学，10个学分的化学物理，10个学分的英语，剩余10个学分任意选择。</p>
-<p>（2）对于有联系的专业课，安排在相邻学期，例如植物学与藻类学，水生生物学与海洋浮游生物学，渔业资源与渔场学和生物资源评估。</p>
-<p>（3）增加项目考核的方式。</p>
-<p>5.学习这么多课程的意义</p>
-<p>常常有人说学这个有什么用，我也在想到底有什么用。有用是绝对有用的，但是很难体会到。比如我在餐桌上已经可以讲一下吃的是什么东西，看文献的时候专业名次可以不依靠翻译，给身边的人科普海洋生态文明建设；那一大堆公共基础课呢能让我遇见不懂得东西的时候，知道我该去翻偏微分方程的数值解法、数量经济学还是拉汉世界鱼类系统名典。这或许就是学习这些东西的意义吧。</p>
-<h2 id="关于本科生科研与竞赛">关于本科生科研与竞赛</h2>
-<p>这一部分我一直不知道该怎么去讲，就索性想到啥写啥。</p>
-<p>1.比起经历，更重要的是结果。</p>
-<p>2.发论文不是目的，体验完整的科研流程才是目的。</p>
-<p>3.当你不知道要选择哪个实验室的时候，可以先排除不喜欢的方向，或者去和每个实验室的PI聊天了解情况。</p>
-<p>4.大胆的勾搭老师，即便你什么都不会。谁不是从零基础过来的呢。</p>
-<p>5.一定要以解决问题为目标。看到一篇论文的方法可以应用在你的问题上面时就去用，不要把时间浪费在学习各种论文的方法上。</p>
-<p>6.不要把竞赛当成项目，不要把时间浪费在参加竞赛上，竞赛只是锦上添花的东西。</p>
-<p>7.通过本研和竞赛掌握一定的技能和方法。</p>
-<p>8.通过这些活动，你会遇见和你一样的人，大神见大神。常有人问我各种队友怎么找啊，我只能说，你想成为什么样的人，你就会遇见什么样的人。</p>
-<p>9.申请旁听所在实验室的组会让你对于科研有更明确的认识。</p>
-<p>10.没有见到过凌晨四点五点学校的本科生活，才是不完整的本科生活。</p>
-<h2 id="结语">结语</h2>
-<p>时间过得好快，希望我的最后一年，能够不再像前三年一样，充满遗憾。</p>
-<p>如果有错误或者冒犯之处还请海涵，如果有能帮到你的地方，不胜荣幸。</p>
-]]></content>
-      <categories>
-        <category>梦里真真语真幻</category>
-      </categories>
-      <tags>
-        <tag>总结</tag>
-        <tag>随便写写</tag>
       </tags>
   </entry>
   <entry>
@@ -4472,81 +4467,6 @@ k\le (\frac{R}{\gamma})^2
       <tags>
         <tag>总结</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>游戏人生</title>
-    <url>/posts/6fe52848.html</url>
-    <content><![CDATA[<p>其实本来是不打算在这个博客里写这么多内容的，但是没想到自己的表达欲和身边没有能表达的人双重境况下又让我慢慢把这些东西发了出来。</p>
-<p>没关系啦，我曾经跟好几个同学朋友发过我链接的网址，跟他们说我会在这里写点东西，但是迄今为止没有一个人因为关注到了我的更新来关心我。</p>
-<p>既然没有人看到，那就当自己的一个私密又公开的日记本就好了。</p>
-<p>如果你有缘看到，我很开心能和你分享这些心事，也希望这些东西对你有用。</p>
-<p>可能自己之后会开第二个博客来写这些东西吧。</p>
-<a id="more"></a>
-<h1 id="人生的意义是什么呢">人生的意义是什么呢？</h1>
-<p>每个人大概都有过那种非常自信的时间段，就是觉得那种，100个人里面有一个人活了下来，就觉得自己是那个活着的人，而不是死的那些。我也有过。</p>
-<p>我一直以为自己是个天选之子，曾经。比如，在班里我是最早去找实验室的，我也很快就触及到了很多目前没解决的科学问题，并且觉得自己似乎有能力来解决它。</p>
-<p>但是，慢慢的发现其实自己只是一个普通人。</p>
-<p>自己的想法别人也可以想到，自己的工作也没有什么不可替代性，没有我还会有张XX李CC来解决它，毕竟问题就在那里，迟早是要被解决的。</p>
-<p>自己不是什么天选，自己只是一个普通人。所以自己想不出来一个很好的课题很正常，自己做不出来东西也很正常。</p>
-<p>因为自己只是普通人，一个可能稍微运气好一点的普通人。自己在迷路的时候稍微看到了点特殊的东西，就觉得那是因为自己坚持走了好久的路才看到它的，其实它的出现根本和自己的努力没关系。</p>
-<p>就像那个经典的问题。</p>
-<blockquote>
-<p>三个人一起坐着电梯上楼，上楼之后，有人问他，你是怎么上来的呀？</p>
-<p>一个人讲：“我一直在看书，是知识的力量。”</p>
-<p>另一个人讲：“我一直在电梯里仰卧起坐，是运动的力量。”</p>
-<p>最后一个人讲：“我在电梯里呆了很长很长时间，是坚持的力量。”</p>
-</blockquote>
-<p>那我活着的意义到底是什么？</p>
-<p>大概是不久之前，我就和朋友讨论过这个问题。</p>
-<p>我目前给我自己的答案就是</p>
-<p>人出生就是为了受苦的。</p>
-<p>人类诞生下来，唯一一个从诞生开始就客观存在的使命就是繁衍，每一个物种都是。很多时候说生物都是基因的奴隶也不为过。</p>
-<p>但是人类居然有了自己的想法， 居然不想执行自己的使命，上天自然要给人类各种各样的痛苦。</p>
-<p>其实这么讲，最快的结束痛苦，对抗这个使命的方法就是自杀。我也想过自杀。</p>
-<p>但是其实可能，每个人都有必须活下去的理由，或者说支撑着自己活下去的理由。</p>
-<p>对我来讲，我是还有好多想看的东西没有看，我觉得这样太对不起自己来人间这一趟了，也太便宜基因这个小恶魔了。</p>
-<blockquote>
-<p>且夫天地之间，物各有主，苟非吾之所有，虽一毫而莫取。惟江上之清风，与山间之明月，耳得之而为声，目遇之而成色，取之无禁，用之不竭。是造物者之无尽藏也，而吾与子之所共适。</p>
-</blockquote>
-<p>自己还有好多风景没有看过，好多地方没有去过，好多事情没有做过。</p>
-<blockquote>
-<p>人生若梦，为欢几何？古人秉烛夜游，良有以也。况阳春召我以烟景，大块假我以文章。会桃花之芳园，序天伦之乐事。群季俊秀，皆为惠连；吾人咏歌，独惭康乐。幽赏未已，高谈转清。</p>
-</blockquote>
-<p>大自然真的好像在PUA我，一方面拿天地间的奇伟瑰丽召唤我，让我坚持下去；另一方面又给我施加无穷无尽的苦难。</p>
-<p>我的人生，也就是来受苦的吧。但是能在这种种苦难中能让我目酣神醉，这人间烟火能让我潸然泪下，这些东西就像画龙点睛一样，照亮了整个的黑暗。</p>
-<p>所以我目前的一个个选择，也都是想让自己越来越自由。如果我没有了感受这些东西的机会，那我还不如去死好了。</p>
-<h1 id="人生是什么">人生是什么？</h1>
-<p>但是人类真的能掌握自己人生的走向吗？就像我一直想做的一个个事情，我真的能做吗？很有可能最终也会死不瞑目。因为我只是个普通人。普通的不能再普通。</p>
-<p>我越来越感受到，相比于个人的努力，运气 和 时代 两个东西，真的是几乎决定了90%的人生走向。</p>
-<p>这么讲吧，如果固定运气和时代这两个因素，那么努力和结果的关系大概是这样的。</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030321182943797.png" alt="y=arctan(x)"><figcaption aria-hidden="true">y=arctan(x)</figcaption>
-</figure>
-<p>努力会让你越来越好，但是这会有一个极限，会有一个渐近线。</p>
-<p>熟悉我的人都知道我是一个RPG玩家，最近我越来越有人生其实就像一场游戏的感觉了，也就是本文的标题。</p>
-<p>最出名的RPG《博德之门》，每次事件，每次战斗，都是一场扔骰子。哪怕好感达到了100%，你也有可能表白失败；哪怕你的等级属性比BOSS厉害好多，你也有可能被他打死。</p>
-<p>因为一切都是随机的，都要看概率。</p>
-<p>人生真的好像呀，很多事情，就像我之前一样，只是因为你运气好，和你自己的努力并不一定有什么关系。</p>
-<p>这里牵扯到另一个问题，人类社会是可以被预测的吗？</p>
-<p>因为我们现在已经在慢慢研究到了每个原子每个分子每个蛋白质每个RNA的行为和功能了，如果我们把他们的规律研究出来，人类不就是一大坨蛋白质加溶液吗？那我们也可以预测每个人类的行为咯？这样我们也可以预测人类社会的发展咯？就像马克思搞的那一套“人类社会的发展规律”。</p>
-<p>这么说，人类的未来是确定的，可以被预测的咯？</p>
-<p>我最近越来觉得不会了，因为我开始感觉上帝是掷骰子的。</p>
-<p>就像面前有两只快死的小老鼠，上帝只能救活一只。上帝要决定救哪一只。</p>
-<p>上帝计算了所有的参数，这个时候他需要一个东西：目标函数。或者讲，为了什么才来救小老鼠。</p>
-<p>上帝如果按照自己的想法来救，那么我们人类社会的命运其实就被确定了。但是真的存在“上帝”这个东西吗？</p>
-<p>如果上帝只是来履行职责，它本身对于救哪个小老鼠并没有什么偏好。那他就是在掷骰子。</p>
-<p>人生是游戏的另一重含义，就是，你的命运大概率是被时代-也就是剧本决定的。</p>
-<p>毕竟单个的人在时代的浪潮里，连一朵小水花都算不上。哪怕你练成了十里坡剑神，你可能还是救不了月如和灵儿。</p>
-<p>哪怕你是天下第一高手，你也会有救不了守护不了的人。</p>
-<p>人生就是一场游戏，一场由时代编剧，由上帝掷骰子的RPG游戏。</p>
-<p>游戏打的爽不爽，很多时候是由上帝的骰子决定。</p>
-<p>游戏的结局好不好，则是由时代决定。</p>
-<h1 id="updata-of-the-blog">Updata of the blog</h1>
-<p>I decide to add google analytics back to get closer with my friends. The way of collect persenal information is based on google. Thank you for your understanding.</p>
-]]></content>
-      <categories>
-        <category>人生得意须尽欢</category>
-      </categories>
   </entry>
   <entry>
     <title>狼总访谈</title>
@@ -5518,6 +5438,213 @@ P(\lambda,R)=P_0*\frac{c\tau}{2}*\beta(\lambda,R)*\frac{A_r}{R^2}*exp(-2\int_0^R
       </tags>
   </entry>
   <entry>
+    <title>particle backscattering</title>
+    <url>/posts/78604782.html</url>
+    <content><![CDATA[<p>Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared</p>
+<p>The open-ocean missing backscattering is in the structural complexity of particles</p>
+<p>I'm gonna to add more about this.</p>
+<a id="more"></a>
+<h1 id="spectral-variations-of-light-scattering-by-marine-particles-in-coastal-waters-from-visible-to-near-infrared">Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared</h1>
+<h2 id="theoretical-background-of-particle-backscattering">Theoretical background of particle backscattering</h2>
+<p>Light scattering by a single particle depends on its geometrical cross-section (thus shape and size) and on its refractive index relative to that of the surrounding medium (seawater). The refractive index of particles relative to water can be written as: <span class="math display">\[
+m=n-in^{&#39;}
+\]</span> where <span class="math inline">\(n\)</span> and <span class="math inline">\(n^{&#39;}\)</span> are respectively the real and imaginary parts of the refractive index.</p>
+<p>Typical n values vary from 1.03 and a theoretical upper limit of 1.158 for organic particles (Morel and Ahn 1990; Aas 1996), depending on hydration, and from 1.07 to 1.22 for various minerals (Lide 2001).Woz´niak and Stramski (2004) observed general tendency of increasing n with increasing density of minerals. Typical values and spectral variations for n9 have been documented by Patterson et al. (1977), Egan and Higelman (1979), and Stramski et al. (2007).</p>
+<p>In estuaries and coastal waters directly influenced by river inputs, single-grain mineral particles may either appear as individual particles in water or as aggregates containing water and organic matter.</p>
+<p>Large estuarine aggregates reaching sizes up to 1000 µm have been observed using video cameras (Kranck 1984). When considering a population of particles, their concentration (number of particles per unit volume of water sample containing these particles) and size are taken into account through the particle size distribution (PSD) (Jonasz and Fournier 2007). Different functions can be used to fit actual PSDs, such as exponential, log-normal, phi-normal, or hyperbolic distributions. In natural waters, the size distribution of suspended particles is often assumed to follow a simple power-law function, also called Junge size distribution(Bader 1970): <span class="math display">\[
+N(D)=KD^{-j}
+\]</span> where N is the number of particles of diameter D per cubic meter and per micrometer, K sets the concentration of particles, and j, often called Junge exponent, is the slope of the distribution.</p>
+<p>This exponent varies around a mean value of 4 and typically from 2.5 to 5 (Jonasz and Fournier 2007). For a fixed number of particles, the proportion of small particles increases when the exponent j increases. The use of Junge distributions for marine particles has been criticized (Risovic 2002; Stavn and Keen 2004; Chami et al. 2006).</p>
+<p>Although some field measurements carried out in coastal waters suggest PSDs close to a power-law distribution (Boss et al. 2001a), others reveal significant features at any size range on top of a power-law PSD (Bale and Morris 1987; Eisma et al. 1991; Bernard et al. 2001).</p>
+<p>Note also that current particle-sizing techniques for discrete and in situ sampling, such as the resistive particle-counting technique (e.g., Coulter counter) or laser diffraction (e.g., the LISST series, Sequoia Scientific), are typically limited to the range 1–200 mm (Agrawal and Pottsmith 2000).</p>
+<p>Apart for a few measurements reported by Stramski and Woz´niak (2005) (see their figs. 1, 2), there is currently a lack of information concerning the finest fraction of particles (,1 mm) which, especially when it is mineral, contributes significantly to light scattering (see fig. 4a in Babin et al. 2003a).</p>
+<p>Mie theory can be used to compute the optical properties of particles that are assumed homogeneous and spherical. Mie computations notably provide the efficiency factors for scattering and absorption (<span class="math inline">\(Q_b\)</span> and <span class="math inline">\(Q_a\)</span>). The corresponding coefficients are then obtained by integration over the size distribution: <span class="math display">\[
+b_{p}(\lambda)=(\frac{\pi}{4})\int_{D_{min}}^{D_{max}}N(D)Q_b(\lambda,D,m)D^2dD
+\\
+a_{p}(\lambda)=(\frac{\pi}{4})\int_{D_{min}}^{D_{max}}N(D)Q_a(\lambda,D,m)D^2dD
+\]</span> where <span class="math inline">\(\lambda\)</span> is the wavelength of light, whereas the minimum and maximum diameters, <span class="math inline">\(D_{min}\)</span> and <span class="math inline">\(D_{max}\)</span>, define the size interval.</p>
+<p>Theoretically, the spectral variations of <span class="math inline">\(b_p\)</span>, in the case of <strong>nonabsorbing and homogeneous particles</strong> distributed in size according to Eq.2 with <span class="math inline">\(D_{min}\)</span> and $D_{max} $ respectively equal to 0 and infinity, can be written: <span class="math display">\[
+b_{p}(\lambda)=A\lambda^{-\gamma}
+\]</span> The exponent of this power law, <span class="math inline">\(\gamma\)</span>, also called scattering spectral slope, is then simply related to the slope of the PSD, j, through (Morel 1973): <span class="math display">\[
+\gamma=j-3
+\]</span> To verify Eq. 5 with the Mie theory, the actual limits <span class="math inline">\(D_{min}\)</span> and <span class="math inline">\(D_{max}\)</span> chosen for calculations in Eq. 3 must be small and large enough, respectively, to account for most of particle scattering at all wavelengths (Morel 1973; Boss et al. 2001b).</p>
+<p>This condition also applies to <span class="math inline">\(a_p(\lambda)\)</span> calculations for the sake of obtaining results independent of <span class="math inline">\(D_{min}\)</span> and <span class="math inline">\(D_{max}\)</span>.</p>
+<p>Equations 4 and 5 are no longer valid in the case of <strong>absorbing particles (<span class="math inline">\(n^{&#39;}&gt; 0\)</span>)</strong>. To understand the influence of particulate absorption on <span class="math inline">\(b_p(\lambda)\)</span>, the effect of <span class="math inline">\(n^{&#39;}\)</span> variations both on the real and imaginary parts of m must be considered.</p>
+<p>The former phenomenon can be explained and modeled according to the Ketteler–Helmhotz theory of anomalous dispersion (Bricaud and Morel 1986). It is significant in the vicinity of absorption bands such as the major ones observed on phytoplankton cells in the blue and red parts of the spectrum. In the case of detrital and mineral marine particles for which the absorption coefficient generally varies smoothly with wavelength, variations in <span class="math inline">\(n\)</span> resulting from anomalous dispersion are <strong>negligible</strong>.</p>
+<p>The effect of absorption on <span class="math inline">\(b_p(\lambda)\)</span> through the contribution of <span class="math inline">\(n^{&#39;}\)</span> to <span class="math inline">\(m\)</span>, which is certainly much more important than the effect of anomalous dispersion even for phytoplankton, is accounted for by the Mie theory and expressed in the computed efficiency factors (Morel and Bricaud 1986).</p>
+<p>Typical <span class="math inline">\(b_p(\lambda)\)</span> spectra for phytoplankton cultures and phytoplankton-rich natural waters exhibit troughs at wavelengths corresponding to major peaks in the particle absorption spectrum (Bricaud et al. 1988; Babin et al. 2003a; Snyder et al. 2008). In the case of nonalgal particles found in coastal waters, the <span class="math inline">\(b_p(\lambda)\)</span> spectrum often depicts a decreasing trend at short wavelengths of the blue range (e.g., Fig. 1 and Babin et al. 2003a).</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128180205500.png" alt="he particulate scattering coefficient of nonabsorbing particles is denoted b_{pna}."><figcaption aria-hidden="true">he particulate scattering coefficient of nonabsorbing particles is denoted <span class="math inline">\(b_{pna}\)</span>.</figcaption>
+</figure>
+<p>The particulate scattering coefficient of nonabsorbing particles is denoted <span class="math inline">\(b_{pna}\)</span></p>
+<h2 id="result-1">Result 1</h2>
+<p>It is in this figure.</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128201433945.png" alt="image-00030128201433945"><figcaption aria-hidden="true">image-00030128201433945</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128201459589.png" alt="image-00030128201459589"><figcaption aria-hidden="true">image-00030128201459589</figcaption>
+</figure>
+<p>On the basis of these first results, we conclude that particulate absorption effects on the scattering are always significant in the visible, even when wavelengths associated with high particulate absorption are avoided. A unique power-law function (e.g., Eq. 9) cannot be used to model the bp spectral variations from the near IR toward the visible (Eck et al. 1999). Further investigations are needed concerning these particulate absorption effects to propose an improved model of the <span class="math inline">\(b_p(\lambda)\)</span> spectrum in the visible.</p>
+<h2 id="result-2">Result 2</h2>
+<p>I want to mainly focus on this part.</p>
+<p>In this section, the particulate scattering coefficient of nonabsorbing particles is denoted <span class="math inline">\(b_{pna}\)</span>. The <span class="math inline">\(b_{pna}\)</span> values are obtained by assuming that measured near-IR$ b_{p}$ values effectively represent <span class="math inline">\(b_{pna}\)</span> at these wavelengths and Eq. 9 can be used to extrapolate to visible wavelengths.</p>
+<p>The particulate scattering coefficient of absorbing particles is denoted by bp, and the difference from Eq. 9 due to absorption effects is written: <span class="math display">\[
+\tag{10}
+\Delta b_{p}(\lambda)=b_{pna}(\lambda)-b_p(\lambda)=f(a_p)
+\]</span> <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128202538901.png" alt="image-00030128202538901"></p>
+<p>The results clearly show a significant departure, in a range varying from 1% to 35%, that slightly increases with decreasing values of the <span class="math inline">\(b_p\)</span> near-IR spectral slope (Fig. 9). The</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128202845313.png" alt="image-00030128202845313"><figcaption aria-hidden="true">image-00030128202845313</figcaption>
+</figure>
+<p>The relationship between (<span class="math inline">\(\Delta b_p : a_p\)</span>)and <span class="math inline">\(\gamma\)</span> is not linear and can be closely reproduced by using the following equation: <span class="math display">\[
+\tag{12}
+\Delta b_p/a_p=1-tanh(0.5\times\gamma^2)
+\]</span> where the 1 and 0.5 constants correspond to a mean value of the real refractive index (n 5 1.10). These constant values are slightly different for n values of 1.05 or 1.18.</p>
+<p>写得很好 就是我不想看了QAQ</p>
+<p>最终 出来这个式子</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030128203553730.png" alt="image-00030128203553730"><figcaption aria-hidden="true">image-00030128203553730</figcaption>
+</figure>
+<h1 id="the-open-ocean-missing-backscattering-is-in-the-structural-complexity-of-particles">The open-ocean missing backscattering is in the structural complexity of particles</h1>
+<h1 id="retrieval-of-particulate-backscattering-using-field-and-satellite-radiometry-assessment-of-the-qaa-algorithm">Retrieval of Particulate Backscattering Using Field and Satellite Radiometry: Assessment of the QAA Algorithm</h1>
+<p>又是这几个老熟人发的文章。</p>
+<p>用的是V19+CNR+BOU的数据。V19就是那个公开数据集，CNR是他们自己采集的，曾经发表在Pitarch2016上，看来这个一作也是搞bbp的老熟人了啊，BOU在这http://www.obs-vlfr.fr/Boussole/html/home/home.php，看来想获取还挺麻烦的。一共2881个Rrs+bbp。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402175803772.png" alt="image-00030402175803772"><figcaption aria-hidden="true">image-00030402175803772</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402175821746.png" alt="image-00030402175821746"><figcaption aria-hidden="true">image-00030402175821746</figcaption>
+</figure>
+<p>Remote Sensing这个期刊真的是越来越垃圾了，这个图都不让作者改一下的</p>
+<p>需要注意的是BOU数据集看起来并不是近岸的水，但是bbp也出现那个比例小于1的情况了。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402180808437.png" alt="image-00030402180808437"><figcaption aria-hidden="true">image-00030402180808437</figcaption>
+</figure>
+<p>这是分别的统计情况，这个是在去除Raman之前的。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402180849916.png" alt="image-00030402180849916"><figcaption aria-hidden="true">image-00030402180849916</figcaption>
+</figure>
+<p>这个是在去除Raman之后的</p>
+<p>这个作者也尝试了改进那个公式。</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181045202.png" alt="image-00030402181045202"><figcaption aria-hidden="true">image-00030402181045202</figcaption>
+</figure>
+<p>最终结果是</p>
+<p>The in situ radiometry-derived spectral backscattering slope (η) has low predictive value as compared to η derived from bbp matchups. In this context, the impact of using the best fitted curve instead of the widely used expression [22] is negligible, thus validating the application of the latter without its retuning.</p>
+<h1 id="bbp-shape-function-summary">bbp shape function summary</h1>
+<h2 id="类qaa">类QAA</h2>
+<p>这个是用来总结见过的，当然了，不包括LS2那篇文章，那个我到现在没看懂。</p>
+<p>QAAv6</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181330460.png" alt="image-00030402181330460"><figcaption aria-hidden="true">image-00030402181330460</figcaption>
+</figure>
+<p>Joshi and D'sa 2018</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181425738.png" alt="image-00030402181425738"><figcaption aria-hidden="true">image-00030402181425738</figcaption>
+</figure>
+<p>Doxaran 2009</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181510433.png" alt="image-00030402181510433"><figcaption aria-hidden="true">image-00030402181510433</figcaption>
+</figure>
+<p>Wang 2017</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181623722.png" alt="image-00030402181623722"><figcaption aria-hidden="true">image-00030402181623722</figcaption>
+</figure>
+<p>Xue,2019</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181655057.png" alt="image-00030402181655057"><figcaption aria-hidden="true">image-00030402181655057</figcaption>
+</figure>
+<p>Chu 2020</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402181821465.png" alt="image-00030402181821465"><figcaption aria-hidden="true">image-00030402181821465</figcaption>
+</figure>
+<p>其实我感觉我想要的答案在QAA类的文章里都找不到。</p>
+<p>那我看看其他的都是怎么搞出来的</p>
+<h2 id="ls1-and-ls2">LS1 and LS2</h2>
+<p>回头重新看了眼Werdell2018那个综述。里面提到关于不假设bbp shape或者说不假设为power law的只有这个LS1和LS2</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030402182653656.png" alt="image-00030402182653656"><figcaption aria-hidden="true">image-00030402182653656</figcaption>
+</figure>
+<p>这是唯一一种Bulck inversion that do not assign the shape of bbp.</p>
+<p>先发个邮件要个代码吧。</p>
+<h1 id="bbp-problem-literature-review">bbp problem literature review</h1>
+<p><span class="math display">\[
+b_{bp}(\lambda)=b_{bp}(\lambda_0)(\frac{\lambda_0}{\lambda})^{\eta}
+\]</span></p>
+<p><span class="math inline">\(\eta\)</span> Typically varies between 0 and 3, largely driven by varing proportion of large and small particles(Werdell et al 2018)</p>
+<p>Reynolds et al 2016: Based on bbp(λ) values from 394 to 852 nm collected in the Arctic, Reynolds et al. (2016) reported the range of Sbp from 0.13 to 3.01 with the majority of data (80%) between 0.5 and 1.5, a median value of 1, and a mean value of 1.5. In</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/lno10341-fig-0011-m.jpg" alt="image"><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Note that the Slope is contradict</p>
+<p>William et al 2007:</p>
+<p>They fit by <span class="math display">\[
+f(\lambda)=f_{550}(\frac{\lambda}{550})^{\gamma}
+\]</span> The <span class="math inline">\(\gamma\)</span> also versus</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505142456457.png" alt="image-00030505142456457"><figcaption aria-hidden="true">image-00030505142456457</figcaption>
+</figure>
+<p>only slightly higher than 0 (smaller than 0)</p>
+<p>Loisel et al 2006</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505142806961.png" alt="image-00030505142806961"><figcaption aria-hidden="true">image-00030505142806961</figcaption>
+</figure>
+<p>Pitarch et al 2019</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505143158540.png" alt="image-00030505143158540"><figcaption aria-hidden="true">image-00030505143158540</figcaption>
+</figure>
+<p>some slightly smaller than 0</p>
+<p>Shi&amp;Wang 2017:</p>
+<p>VIIRS observation</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505145846471.png" alt="image-00030505145846471"><figcaption aria-hidden="true">image-00030505145846471</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505145935635.png" alt="image-00030505145935635"><figcaption aria-hidden="true">image-00030505145935635</figcaption>
+</figure>
+<p>7 is Meghna River Estuary</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505150111918.png" alt="image-00030505150111918"><figcaption aria-hidden="true">image-00030505150111918</figcaption>
+</figure>
+<p>2 is Hangzhou Bay 4 is Amazon River Estuary</p>
+<p>Finally found some reason</p>
+<blockquote>
+<p>Power slope g is related to the particle size distributions (PSDs), i.e., f ? g 2 3 (Babin et al., 2003; Kostadinov et al., 2009; Morel, 1973), where f is the power law slope of the Junge-type (Junge, 1963) size distributions (Balder, 1970; Sheldon et al., 1972; Twardowski et al., 2001). In fact, particle backscattering properties are determined by particle size distribution, particle shapes, and composition. However, particle size distribu- tion is the dominant factor in determining the particle scattering features such as the backscattering power law slope and the backscattering ratio (Kostadinov et al., 2009; Ulloa et al., 1994). For most of the satellite- derived global bbp(k) and the available in situ observations, particle backscattering power law slope g is typi- cally positive or close to 0 (Loisel et al., 2006; Reynolds et al., 2016; Stramski et al., 2007; Wozniak &amp; Stramski, 2004). This shows that bbp(k) decreases with the wavelength for VIIRS-derived bbp(410) to bbp(862). However, g may also be negative for large size particles (Kostadinov et al., 2009). Correspondingly, bbp(k) in the NIR wavelengths thus are larger than those in the visible bands. In China’s east coastal region, in situ bbp(k) can indeed increase with the wavelength at some highly turbid locations (Zhang et al., 2010a).</p>
+<p>In this study, VIIRS-derived bbp(k) images in the five turbid regions (Figures 3–7) and bbp(k) at the eight sta- tions (Figure 8) show that the particle size distribution in the water column is highly dynamic depending on the regions and the seasons. At Stations 1 and 2 in China’s east coastal region, bbp(k) increases with the increase of the wavelength during the winter season, while bbp(k) decreases with the wavelength during the summer season. This shows that the g is negative in the winter and positive in the summer, and might further suggest that the particle size is bigger in the winter (f&lt;23) than that in the summer (f&gt;23). The seasonal variation of particle size distribution in the water column may be attributed to the seasonal vari- ability of the turbulence and water mixing process driven by the seasonal monsoon in China’s east coastal region (Shi &amp; Wang, 2010a, 2012a).</p>
+<p>At Station 4 in the Amazon River Estuary (Figure 8d) and Station 7 in the Meghna River Estuary (Figure 8g), bbp(k) increases with increase of the wavelength for all seasons, while bbp(k) decreases with the increase of the wavelength for all seasons at Station 6 in the La Plata River Estuary (Figure 8f) and Station 8 in Atchafa- laya River Estuary (Figure 8h). This further suggests that the particle sizes at Stations 4 and 7 are generally larger than those at Stations 6 and 8. At Station 3 in Lake Taihu (Figure 8c) and Station 5 in the Amazon Riv- er’s north branch (Figure 8e), bbp(k) is generally flat for all seasons, implying that particle size in the water column is more or less the same even though bbp(k) can vary seasonally at these two stations. It is also noted that bbp(k) power law slope is still positive even though nLw(k) at the NIR bands in the La Plata River Estuary is similar to that in China’s east coastal region (Figure 2). This indicates that bbp(k) power law slope is not only seasonal-dependent, but also regional-dependent. If nLw(k) at the NIR bands is approximated as the surrogate of the TSM concentration, the particle size in the La Plata River Estuary is smaller than that in China’s east coastal region even though the TSM concentration at these two regions is similar</p>
+</blockquote>
+<p>There are two main refference here</p>
+<p>Kostadinov et al., 2009:</p>
+<p>This is also satellite observation</p>
+<p>This figure is a modeled result</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505152614575.png" alt="image-00030505152614575"><figcaption aria-hidden="true">image-00030505152614575</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505152703215.png" alt="image-00030505152703215"><figcaption aria-hidden="true">image-00030505152703215</figcaption>
+</figure>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505152744561.png" alt="image-00030505152744561"><figcaption aria-hidden="true">image-00030505152744561</figcaption>
+</figure>
+<p>Zhang et al 2010</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505153254194.png" alt="image-00030505153254194"><figcaption aria-hidden="true">image-00030505153254194</figcaption>
+</figure>
+<p>Measured Spectrum</p>
+<p>I think I need a new post to learn the optics of backscattering</p>
+<h1 id="light-scattering-properties-of-marine-particles-in-coastal-and-open-ocean-waters-as-related-to-the-particle-mass-concentration">Light scattering properties of marine particles in coastal and open ocean waters as related to the particle mass concentration</h1>
+]]></content>
+      <categories>
+        <category>Annotated Bibliography</category>
+      </categories>
+      <tags>
+        <tag>Ocean Color</tag>
+        <tag>particle backscattering</tag>
+        <tag>Inversion</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>python绘图基础</title>
     <url>/posts/720e5580.html</url>
     <content><![CDATA[<p>这两天在收拾画图的事情，发现我matplotlib这些东西学的真的差，这个笔记用来整理一下自己会用到的东西，除了cartopy之外的。</p>
@@ -5893,8 +6020,8 @@ P(\lambda,R)=P_0*\frac{c\tau}{2}*\beta(\lambda,R)*\frac{A_r}{R^2}*exp(-2\int_0^R
         <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>Research</tag>
         <tag>python</tag>
+        <tag>Research</tag>
       </tags>
   </entry>
   <entry>
@@ -7024,275 +7151,8 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
         <category>学习笔记</category>
       </categories>
       <tags>
+        <tag>python</tag>
         <tag>Research</tag>
-        <tag>python</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>我为什么喜欢做科研</title>
-    <url>/posts/490b1360.html</url>
-    <content><![CDATA[<p>大概是最近拷问自己内心的结果。</p>
-<a id="more"></a>
-<h1 id="华罗庚">华罗庚</h1>
-<p>自己对科研最开始的印象，或许要追溯到这本<span class="exturl" data-url="aHR0cHM6Ly9ib29rLmRvdWJhbi5jb20vc3ViamVjdC8xMDQ3MDI3Lw==">《华罗庚传》<i class="fa fa-external-link-alt"></i></span>。</p>
-<figure>
-<img src="https://img9.doubanio.com/view/subject/l/public/s1252320.jpg" alt="我看的那个版本的华罗庚传的封面，现在不知道还有没有卖的，也不知道还在不在家里"><figcaption aria-hidden="true">我看的那个版本的华罗庚传的封面，现在不知道还有没有卖的，也不知道还在不在家里</figcaption>
-</figure>
-<p>小时候家里没钱，书也少，我不知道这本书是谁买的，但是我翻来覆去的看了很多遍，在我心里留下了很深的影响。</p>
-<p>我因为这本书开始对数学感兴趣。而且因为这本书介绍了华罗庚杯数学竞赛，我也从小时候开始买了一些竞赛的书开始看着玩，虽然最后因为各种各样的原因没有参与，但是有些东西还是至今难忘。比如抽屉问题，比如数论。</p>
-<p>说不上来为什么，自己现在提到这本书的时候脑子里还会有各种各样的影子，比如那句“教授教授，越教越瘦”，比如那个灵感来了在车上推公式的人，比如一个瘦骨嶙峋但是还在坚持在防空洞里面做研究的人，最后，那个在东京大学讲学的身影。</p>
-<p>年少的自己完全没有考虑过钱啊什么的，只是觉得这样的生活很好，很吸引人，特别是这种沉浸的状态。</p>
-<p>我当时大概是想成为这样的人的。</p>
-<h1 id="你这样的学生适合搞研究">你这样的学生适合搞研究</h1>
-<p>这是我在高中的时候在一些老师那里收到的评价。</p>
-<p>高中的我其实并不出众，成绩没有特别好，竞赛也没考很高。说勤奋努力吧，其实自己内心也清楚自己到底摸了多少鱼。</p>
-<p>高中对自己影响深刻的东西大概是《你凭什么上北大》，《花开不败》，还有那个化学竞赛高三转文的学生。自己经常把这些文章打印出来，激励自己好好学习。</p>
-<p>但我还真不清楚为什么会在老师那里收获这样的评价。</p>
-<p>或许是成绩好，或许是好多时候题目有自己的解题思路，或许是很多时候会因为题目不合适跟老师直接吵起来。</p>
-<p>但是总体来讲，我还是觉得，自己高中是一个很平庸的人。</p>
-<p>感觉自己高中做的唯一一些对自己的未来有很大影响的事情，就是提前学了高数。我还记得我一开始用的也是一个特别老的版本的高数，我都不知道家里哪儿来这些书，我家里父辈们都没上过大学。</p>
-<p>后来换了同济第六版。</p>
-<p>自己当时自学了几乎全部的高数上的内容，而这，对我的未来造成了很大的影响，或许一直持续到现在。</p>
-<h1 id="你很有自己的想法">你很有自己的想法</h1>
-<p>这是我大学老师对我的评价，我的班主任跟我讲了好多次，刘老师似乎也说过。田老师和张老师似乎也讲过。</p>
-<p>也许有想法是一个好的评价，但是有想法的人可能并不适合搞科研，因为他会按照自己的想法来，而这个想法，由于在开始做科研之前接受的并不是系统的训练，只看到了大的东西，而根据这个大的东西所找到的喜欢的东西，往往并不是真正有人在做的科研方向，而且因为教材已经过时很多年了，很多东西已经到了一个dead end。</p>
-<p>一开始上大学的我，因为高中的时候就学完了一半的高数，所以就跨校区选课选了最难的高数，然后还顺带着选了其他的课。</p>
-<p>这导致我到了大四才认全我们班里的同学，也让我认识了很多到现在我还在联系的好朋友。</p>
-<p>最重要的，是他让我对模型和量化产生了极大的兴趣。</p>
-<p>当时自己专业的专业课大部分都是背背背，而自己选的课很多都需要计算推公式。两相对比起来，自己的专业课很多都没有逻辑，或者说无法进行推导，自己背诵的时候也很痛苦，分数考得很差；相比起来自己选的很多课都考的相当出色。</p>
-<p>《普通动物学》这门课我背了很久，但是还是背不下来，最后只考了六十多分。</p>
-<p>这门课考完之后，我基本就确定了，我要转行。</p>
-<p>中间一个可能去做的方向是生物信息学，班主任曾经给我推荐过他老公海洋所的机会，辩论队的师姐也给我推荐过农科院的机会。说实话，我当时的生物信息学知识还是在北大的生信课程上学的，他们做的还比较偏数学，偏基础和人体，但是我自己并没有非常好的学好这门课。</p>
-<p>我当时脑子里对于生物信息学的印象，就是通过一个基因序列我能推导出蛋白质性状，一篇正儿八经的生物信息学的paper应该有大量的公式来定量描述这个过程。</p>
-<p>当时的自己，因为没有好好学北大的生物信息学，并没有认识到生物信息学的本质是分析生物信息的大量数据，本质是Informatics，而非Model或者Algorithm。所以在大概看了农科院和海洋所老师的论文之后，惊异的发现他们paper里面一句公式都没有，就放弃了这一方向。</p>
-<p>而在生态系统，或者说生态模型，或者说现在自己在做的遥感方向，每个paper都有大量的公式，自己最终也选择了这里。</p>
-<h1 id="why-i-want-to-do-research">Why I want to do research</h1>
-<p>讲了那么久终于要切到正题了。</p>
-<p>之前在跟心理咨询师交流的时候，咨询师问我，为什么你想做科研。</p>
-<p>我说：“我脑子里还有想做的事情，虽然我不知道我能不能做出来，也不知道能不能做出来有什么实际的意义，但是这种感觉就像一本小说被翻开一半，后面不再继续跟你讲了一样，会让人异常难受。”</p>
-<p>现在看来，或许做研究的想法在我小的时候就开始成形了。</p>
-<p>自己脑子里也确实有很多想法，比如检测水质的手机App（国内被空天院做了），比如研究潮间带的变化（被发了RSE），比如苏轼诗词的NLP和地图可视化（到现在还懒癌没有动手做），比如the impact of marine heat wave on phytoplantkon comminity，比如phone LiDAR remote sensing，比如渔业养殖池塘的遥感监测，比如kelp culture carbon emissions，比如自己之前做了一半终止的SSTfusion。</p>
-<p>我还可以列举出来我脑子里大量的想法，但是自己的问题是，想的太多了，行动力不足。</p>
-<p>自己更像是一个想法的生产者，而在执行想法上，自己还远远不足。</p>
-<p>其实到了现在这个阶段，读博，做研究，要更多的考虑现实因素了。而无论怎么看，读博都不是一个经济上高收益的选择。</p>
-<p>那自己为什么还想读博？</p>
-<p>或许我觉得更多的，还是因为，自己这一路走来，浑然不知自己已经慢慢走到了这条路上。</p>
-<p>自己已经走了很长，很久，或许从自己反复看了很多遍华罗庚传开始，就已经在这条路上了。</p>
-<p>主动放弃，真的就是不甘心。</p>
-<p>但是也许，自己最后也会放弃吧。</p>
-<p>生死有命，富贵在天。</p>
-<p>也希望自己能早日从抑郁症里面出来。</p>
-]]></content>
-      <categories>
-        <category>梦里真真语真幻</category>
-      </categories>
-      <tags>
-        <tag>随便写写</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>The optics of backscattering</title>
-    <url>/posts/99c2b0bb.html</url>
-    <content><![CDATA[<p>I need to understand the optics of backscattering to understand the strange 'bbp' calculted from Rrs and and.</p>
-<p>Material mainly from IOCCG summer lecture 2018 and ocean optics web book.</p>
-<a id="more"></a>
-<h1 id="volume-scattering-function">Volume scattering function</h1>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/VSF-geometry-600.jpg" alt="VSF-geometry-600"><figcaption aria-hidden="true">VSF-geometry-600</figcaption>
-</figure>
-<p>the <em>fraction</em> of incident power scattered out of the beam through an angle <span class="math inline">\(\psi\)</span> into a solid angle <span class="math inline">\(\Delta\Omega\)</span> (total radiance inside the cone)centered on <span class="math inline">\(\psi\)</span>, is <span class="math inline">\(\Delta^2\Phi_s(\psi,\lambda)/\Phi_i\)</span>.</p>
-<p>If we change <span class="math inline">\(\Omega\)</span> to <span class="math inline">\(\Omega+\Delta\Omega\)</span>, the increase part is inside the red ring,</p>
-<p>The volume scattering function β(ψ,λ) is deﬁned as the limit of this fraction as Δr→0 and ΔΩ→0:</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505202530364.png" alt="image-00030505202530364"><figcaption aria-hidden="true">image-00030505202530364</figcaption>
-</figure>
-<p>The physical meaning of VSF is</p>
-<p>scattered intensity per unit incident irradiance per unit volume of water</p>
-<p>Or</p>
-<p>the diﬀerential scattering cross section per unit volume.</p>
-<p>So the scattering is the integration of VSF over all direction <span class="math display">\[
-b(\lambda)=\int\beta(\psi,\lambda)d\Omega
-\]</span> <span class="math inline">\(\Omega\)</span> is the <span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU3JUFCJThCJUU5JUFCJTk0JUU4JUE3JTky">solid angle<i class="fa fa-external-link-alt"></i></span></p>
-<blockquote>
-<p>https://www.youtube.com/watch?v=VmnkkWLwVsc</p>
-<p>https://www.youtube.com/watch?v=gLfYTP4F23g</p>
-<p>https://www.youtube.com/watch?v=RMJucQJ1NGo</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/220px-SolidAngleWiki.png" alt="img"> <span class="math display">\[
-d\Omega=\frac{dA}{r^2}\\=\frac{d(rsin\theta d\psi)(rd\theta)}{r^2}\\=\frac{dr^2sin\theta d\theta d\psi}{r^2}\\=sin\theta d\theta d\psi
-\]</span> By assuming azimuthal symmetry, this means it is a cone, the eq2 can be simplifed as : <span class="math display">\[
-d\Omega=\frac{dA}{r^2}\\
-=\frac{d(2\pi r^2(1-cos\theta))}{r^2}\\
-=2\pi sin \theta d\theta
-\]</span></p>
-<p><span class="math display">\[
-\therefore\\
-b(\lambda)=\int\beta(\psi,\lambda)d\Omega\\
-=2\pi\int_0^{\pi} sin(\theta)\beta(\theta,\lambda)d\theta\\
-\]</span> <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505220017394.png" alt="image-00030505220017394"></p>
-<p>The scattering is addictive</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505220107010.png" alt="image-00030505220107010"><figcaption aria-hidden="true">image-00030505220107010</figcaption>
-</figure>
-<p>There are some other scattering properties</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505220204576.png" alt="image-00030505220204576"><figcaption aria-hidden="true">image-00030505220204576</figcaption>
-</figure>
-<p>50% typically &lt;3 to 4 deg</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505221010160.png" alt="image-00030505221010160"><figcaption aria-hidden="true">image-00030505221010160</figcaption>
-</figure>
-<h1 id="scattering-components">Scattering components</h1>
-<h2 id="pure-water">Pure water</h2>
-<p>The best value of pure water scattering is</p>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030505224321192.png" alt="image-00030505224321192"><figcaption aria-hidden="true">image-00030505224321192</figcaption>
-</figure>
-<p>detailed can check Lee lecture bases</p>
-<h2 id="phytoplankton">Phytoplankton</h2>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506095901340.png" alt="image-00030506095901340"><figcaption aria-hidden="true">image-00030506095901340</figcaption>
-</figure>
-<h2 id="particles">Particles</h2>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506100604399.png" alt="image-00030506100604399"><figcaption aria-hidden="true">image-00030506100604399</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506101019868.png" alt="image-00030506101019868"><figcaption aria-hidden="true">image-00030506101019868</figcaption>
-</figure>
-<p>DDA is most popular one but only could compute very small size</p>
-<p>Improve IGOM for larger size</p>
-<p>Rayleigh cover very very small</p>
-<p>Mie all size but homogeneous spheres</p>
-<p>T-matrix is also popular</p>
-<h1 id="measurement">Measurement</h1>
-<p>I'm not very totally understand this process</p>
-<p>But one thing I can now is that</p>
-<p>The backscattering is the integration, but the measurement is a weighted sum</p>
-<h1 id="interpretation-and-application">Interpretation and Application</h1>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506111348360.png" alt="image-00030506111348360"><figcaption aria-hidden="true">image-00030506111348360</figcaption>
-</figure>
-<figure>
-<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030506111806825.png" alt="image-00030506111806825"><figcaption aria-hidden="true">image-00030506111806825</figcaption>
-</figure>
-<h1 id="mie-theory">Mie theory</h1>
-<h1 id="beam-attenuation">Beam Attenuation</h1>
-<p>Unlike backscattering or total scattering, particle beam attenuation is almost a perfect powe law shape <span class="math display">\[
-c_p=a_p+b_p\\
-=a_{ph}+a_{nap}+b_p
-\]</span></p>
-<p>Not here this is <span class="math inline">\(b_p\)</span>, total scattering , not backscattering. Backscattering only contributed to almost one to two percent of total scattering.</p>
-<p>In order to related to the backscattering that can be received by satellite, we need one bridge <span class="math inline">\(\hat{b}_{bp}\)</span>, defined as <span class="math display">\[
-\hat{b}_{bp}=\frac{b_{bp}}{b_{p}}
-\]</span> The <span class="math inline">\(\hat{b}_{bp}\)</span> almost same in different wavelength.</p>
-<p>So the term u can be replaced as <span class="math display">\[
-u=\frac{b_b}{a+b_b}\\
-=\frac{b_w+b_{bp}}{a_w+a_p+a_{CDOM}+b_w+b_{bp}}\\
-=\frac{b_w+b_{p}*\hat{b}_{bp}}{a_w+a_p+a_{CDOM}+b_w+b_{p}*\hat{b}_{bp}}\\
-=\frac{b_w+(c_p-a_p)*\hat{b}_{bp}}{a_w+a_p+a_{CDOM}+b_w+(c_p-a_p)*\hat{b}_{bp}}\\
-\]</span></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Ocean Color</tag>
-        <tag>Ocean Optics</tag>
-        <tag>particle backscattering</tag>
-        <tag>Inversion</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Jupyter Lab</title>
-    <url>/posts/c958af43.html</url>
-    <content><![CDATA[<p>本菜鸡到现在也只能拿Jupyter写代码，但是原来的notebook因为我动不动就写个好几M的玩意越来越大越来越卡，所以我就换成Lab了。</p>
-<p>这里讲一些用他的时候搞得一些配置啥的</p>
-<a id="more"></a>
-<h1 id="extension"><a class="markdownIt-Anchor" href="#extension"></a> Extension</h1>
-<p>(开头黑人问号，我居然是在参照一个<span class="exturl" data-url="aHR0cHM6Ly9xaWl0YS5jb20vY2Fub25yb2NrMTYvaXRlbXMvZDE2NmM5MzA4N2E0YWFmZDJkYjQ=">日语的博客<i class="fa fa-external-link-alt"></i></span>来搞这个，居然找不到中文的)</p>
-<p>安装Extension必须得安装NodeJS(黑人问号❓)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install -c conda-forge nodejs</span><br></pre></td></tr></table></figure>
-<p>然后可以拿List看装了啥</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">jupyter labextension list</span><br></pre></td></tr></table></figure>
-<p>我主要装了<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL21hcmt1c3NjaGFudGEvYXdlc29tZS1qdXB5dGVy">Awesome Jupyter<i class="fa fa-external-link-alt"></i></span>里面的几个，主要就是把它搞得跟原来的Notebook差不多就行，比如lsp,toc,drawio,latex,variableinspector。不在这里面的有<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Rlc2hhdy9qdXB5dGVybGFiLWV4ZWN1dGUtdGltZQ==">jupyterlab-execute-time<i class="fa fa-external-link-alt"></i></span>，<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2tpdGVjby9qdXB5dGVybGFiLWtpdGU=">jupyterlab-kite<i class="fa fa-external-link-alt"></i></span></p>
-<p>最后来一句这个</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jupyter lab build</span><br><span class="line">jupyter labextension <span class="built_in">enable</span> all</span><br></pre></td></tr></table></figure>
-<p>或者在lab里的setting里手动开启extention</p>
-<p>感觉不太方便的地方就是那个Variable inspector不能float</p>
-<p>多说一句，纯路人，感觉kite没啥必要,lsp足够了</p>
-<p>虽然但是，还是感觉notebook好用啊</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Robust fit</title>
-    <url>/posts/7ff46c3b.html</url>
-    <content><![CDATA[<p>这一篇差不多是作为<a href="https://lifeodyssey.github.io/posts/7decea87.html">这个</a>的后续</p>
-<a id="more"></a>
-<h1 id="scipy.optimize.least_squares">scipy.optimize.least_squares</h1>
-<p>用来搞Robust fit的有好几个，这里先从scipy的这个函数讲起</p>
-<p>先看一下scipy cookbook里面的<span class="exturl" data-url="aHR0cHM6Ly9zY2lweS1jb29rYm9vay5yZWFkdGhlZG9jcy5pby9pdGVtcy9yb2J1c3RfcmVncmVzc2lvbi5odG1s">这个例子<i class="fa fa-external-link-alt"></i></span></p>
-<p>这个例子里拟合了一个正弦函数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">generate_data</span>(<span class="params">t, A, sigma, omega, noise=<span class="number">0</span>, n_outliers=<span class="number">0</span>, random_state=<span class="number">0</span></span>):</span></span><br><span class="line">    y = A * np.exp(-sigma * t) * np.sin(omega * t)</span><br><span class="line">    rnd = np.random.RandomState(random_state)</span><br><span class="line">    error = noise * rnd.randn(t.size)</span><br><span class="line">    outliers = rnd.randint(<span class="number">0</span>, t.size, n_outliers)</span><br><span class="line">    error[outliers] *= <span class="number">35</span></span><br><span class="line">    <span class="keyword">return</span> y + error</span><br></pre></td></tr></table></figure>
-<p>确定模型参数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">A = <span class="number">2</span></span><br><span class="line">sigma = <span class="number">0.1</span></span><br><span class="line">omega = <span class="number">0.1</span> * <span class="number">2</span> * np.pi</span><br><span class="line">x_true = np.array([A, sigma, omega])</span><br><span class="line"></span><br><span class="line">noise = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">t_min = <span class="number">0</span></span><br><span class="line">t_max = <span class="number">30</span></span><br></pre></td></tr></table></figure>
-<p>将三个离群值放在fitting dataset里</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">t_train = np.linspace(t_min, t_max, <span class="number">30</span>)</span><br><span class="line">y_train = generate_data(t_train, A, sigma, omega, noise=noise, n_outliers=<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-<p>定义损失函数</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span>(<span class="params">x, t, y</span>):</span></span><br><span class="line">    <span class="keyword">return</span> x[<span class="number">0</span>] * np.exp(-x[<span class="number">1</span>] * t) * np.sin(x[<span class="number">2</span>] * t) - y</span><br></pre></td></tr></table></figure>
-<p>剩下就是一些常规的过程</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x0 = np.ones(<span class="number">3</span>)</span><br><span class="line"><span class="keyword">from</span> scipy.optimize <span class="keyword">import</span> least_squares</span><br><span class="line">res_lsq = least_squares(fun, x0, args=(t_train, y_train))</span><br><span class="line">res_robust = least_squares(fun, x0, loss=<span class="string">&#x27;soft_l1&#x27;</span>, f_scale=<span class="number">0.1</span>, args=(t_train, y_train))</span><br><span class="line">t_test = np.linspace(t_min, t_max, <span class="number">300</span>)</span><br><span class="line">y_test = generate_data(t_test, A, sigma, omega)</span><br><span class="line">y_lsq = generate_data(t_test, *res_lsq.x)</span><br><span class="line">y_robust = generate_data(t_test, *res_robust.x)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plt.plot(t_train, y_train, <span class="string">&#x27;o&#x27;</span>, label=<span class="string">&#x27;data&#x27;</span>)</span><br><span class="line">plt.plot(t_test, y_test, label=<span class="string">&#x27;true&#x27;</span>)</span><br><span class="line">plt.plot(t_test, y_lsq, label=<span class="string">&#x27;lsq&#x27;</span>)</span><br><span class="line">plt.plot(t_test, y_robust, label=<span class="string">&#x27;robust lsq&#x27;</span>)</span><br><span class="line">plt.xlabel(<span class="string">&#x27;$t$&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;$y$&#x27;</span>)</span><br><span class="line">plt.legend();</span><br></pre></td></tr></table></figure>
-<figure>
-<img src="data:image/png;base64,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%0A2rREOxtUNVqCoxIr6zV2RESqikstryCiddLOoJBWNKcnDpy+6HT69FGaOCAiUgwKaXIpCmlnUEgr%0Auoqw75uIiJ0ppMmlKKSdQSFNRETKi0KaXIp2HBARERGpIhTSRERERGxIIU1ERETEhhTSRERERGxI%0AIU1ERETEhhTSRERERGxIIU1ERETEhhTSREREqpivvvqKiRMnursMuQSFNBERkSpm7ty5CmkVgEKa%0AiIiInFdOTo67S6jSFNJERESqkLvuuouZM2eyb98+HA4HDoeDxo0bs3jxYhwOB//73/+47777qF27%0ANnXq1AHgzjvvpFGjRue0FRsbS69evQodS05OZtSoUdSvXx9fX19atmzJf//733J5bZWNp7sLEBER%0AkfLz/PPPc/jwYVauXMk333yDaZr4+PiQlpYGwCOPPMLVV1/Nhx9+yIkTJwBr30nDOHfbybOPHTt2%0AjG7dupGdnc2ECROIjIzkxx9/5IEHHiAnJ4eHHnqo7F9gJaKQJiIiUoU0atSIWrVq4e3tTceOHQuO%0AL168GIDOnTvz3nvvlajtSZMmsWfPHtatW0fjxo0B6NWrF6mpqYwfP54HHngAh0ODeEWlkCYiIuJC%0Axvhze5xcxRxrllnbpwwdOrTEj/3xxx/p3LkzERER5OfnFxzv168fU6dOZcOGDbRp08YVZVYJCmki%0AIiIuVB5BqiyFh4eX+LGHDh1i+/bteHl5nXOfYRgcOXKkNKVVOQppIiIiUuB81575+vqed6bnkSNH%0ACA0NLfg5JCSEsLAw3nzzTUzz3LDavHlz1xZbySmkiYiIVDE+Pj5kZWWdc/x8AQ0gIiKCpKQkjhw5%0AQkhICADbt29n8+bNhULagAEDePvtt2nQoEGh41IyunpPRESkimnVqhUpKSm8++67rFy5knXr1gGc%0At/cLYPjw4QDceuutzJ8/n48++oihQ4dSq1atQuc99thj1K5dmyuvvJIpU6awaNEivv32W1577bVS%0AXetWVaknTUREpIq55557WLZsGc8++yxpaWlEREQwffr0C/akNWnShC+++ILnnnuO6667jqioKCZO%0AnMiLL75Y6DGBgYH88ccfTJgwgVdeeYV9+/YRFBRE8+bNGTZsWHm9vErDuFBqtjvDMMyKWruIiFQs%0AhmFcsJdJBC79N3Ly/mJN/dVwp4iIiIgNKaSJiIiI2JBCmoiIiIgNKaSJiIiI2JBCmoiIiIgNKaSJ%0A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%0AiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQbUOaYRgOwzBWGYbxtbtrERERESlv%0Atg1pwKPABncXISIiIuIOtgxphmHUBwYC77u7FhERERF3sGVIAyYCTwKmuwsRERERcQfbhTTDMAYB%0ASaZpJgDGyZuIiIhIleLp7gLOoxswxDCMgYAfUN0wjA9M07z97BPHjRtX8H1sbCyxsbHlVaOIiIjI%0ABS1atIhFixaVqg3DNO07omgYRk/gb6ZpDjnPfaadaxcRERE5xTAMTNMs1uig7YY7RURERMTmPWkX%0Ao540ERERqSjUkyYiIiJSSSikiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqI%0AiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQ%0AQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiI%0AiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDSmkiYiIiNiQQpqIiIiIDXkW5STDMOYBB4GFwELTNA+W%0AaVUiIiIiVVxRe9JeBzKA/wP2GoaxwTCMtw3DuN4wDP+yK09ERESkajJM0yzeAwwjGOgBjAAGA7nA%0Ag6ZpznZ9eRetwyxu7SIiIiLuYBgGpmkaxXpMaYKOYRiPAr8DbwETTNP8vsSNFf+5FdJERESkQihJ%0ASCvScKdhGOMMw1h18mvjM+5ymqa5EqtnrU9xnlhERERELqyo16R5AE8BkcBawzC2GIaxEuh68v7G%0AwDbXlyciIiJSNRVpdidwADBN07zTMIy/At0Af+A7wzBqAOuAKWVUo4iIiEiVU+Rr0gzD6I4V1H47%0Az31RwAHTNI+5uL6L1aNr0kRERKRCKPeJA+6kkCYiIiIVRZlNHBARERGR8lXUa9KkuNLSYMUKWL8e%0AUlLA6YQ6dSAqCrp2herV3V2hiIiI2Jh60lzJNGHePBg8GBo2hBdegG3bwMMDvL2twPbii1C3LvTt%0AC599Brm57q5aREREbEjXpLnK0qXw8MOQnQ1PPgnXXguBgec/9/hx+O47ePtt2L3bCm4jRoBDmVlE%0ARKQy0sQBd8jNheeeg5kz4fXXix+2fv0VHn/c6mmbOROaNi27WkVERMQtNHGgvKWmwoABsG4drFkD%0A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%0AnaudNw1rbQWwBBhPI9p5rIW01UAfY0x3Y0wi8H1gfpTL1OwZY5JD78IwxqQAFwGbo1uqZsvw5Xki%0A84Efhz7+ETDvq18gZ+xLdR765fmZy1FbD7d84ENr7WPHXFM7j6zj6lztPHKMMe0/Gz42xniBcThz%0AARvczmNqdSd8firBYzgBc5a19sEoF6nZM8b0xOk9szgTIP+qeg8/Y8zLwDeBs4Bi4G5gLvAa0A3Y%0ADUy21pZFq4zNzUnqfCzOvJ0gsAuY9tk8EjkzxphRwDJgE87vEwv8ElgFvIraedidos6vQu08Iowx%0Ag3AWBnhCj9nW2vuMMe1oYDuPuZAmIiIi0hLE2nCniIiISIugkCYiIiLiQgppIiIiIi6kkCYiIiLi%0AQgppIiIiIi6kkCYiIiLiQgppIiIiIi6kkCYiIiLiQgppIiIhxhiPMWarMaZztMsiIqKQJiLyhaFA%0AO2vt/mgXREREIU1E5AtjgfeiXQgREdDZnSIiGGMuA84DrgRWA9uBJ6y1hVEtmIi0aAppIiKAMSYR%0AKAFyrbXbo10eERENd4qIOEYB5QpoIuIWCmkiIo4LgaXRLoSIyGcU0kREHBcCSwCMMaNDw58iIlGj%0AkCYi4hgIfBAKZ9+w1vqiXSARadm0cEBEBDDGPAzUA4eAp6y1VVEukoi0cAppIiIiIi6k4U4RERER%0AF1JIExEREXEhhTQRERERF1JIExEREXEhhTQRERERF1JIExEREXEhhTQRERERF1JIExEREXEhhTQR%0AERERF/p/BgabFaz9QPEAAAAASUVORK5CYII=%0A" alt="img"><figcaption aria-hidden="true">img</figcaption>
-</figure>
-<p>很清楚的可以看出来，这里robust lsq结果明显更接近那个true的线</p>
-<p>这里只用了soft l1,在least_squares里还有另外几个</p>
-<blockquote>
-<p><strong>loss</strong> str or callable, optional</p>
-<p>Determines the loss function. The following keyword values are allowed:</p>
-<blockquote>
-<ul>
-<li>‘linear’ (default) : <code>rho(z) = z</code>. Gives a standard least-squares problem.</li>
-<li>‘soft_l1’ : <code>rho(z) = 2 * ((1 + z)**0.5 - 1)</code>. The smooth approximation of l1 (absolute value) loss. Usually a good choice for robust least squares.</li>
-<li>‘huber’ : <code>rho(z) = z if z &lt;= 1 else 2*z**0.5 - 1</code>. Works similarly to ‘soft_l1’.</li>
-<li>‘cauchy’ : <code>rho(z) = ln(1 + z)</code>. Severely weakens outliers influence, but may cause difficulties in optimization process.</li>
-<li>‘arctan’ : <code>rho(z) = arctan(z)</code>. Limits a maximum loss on a single residual, has properties similar to ‘cauchy’.</li>
-</ul>
-</blockquote>
-</blockquote>
-<p>比较难受的就是这次没法像curve_fit那个函数一样那么好用了</p>
-<h1 id="scikit-learn">scikit learn</h1>
-<p>这个大体上相同，</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> matplotlib <span class="keyword">import</span> pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> (</span><br><span class="line">    LinearRegression, TheilSenRegressor, RANSACRegressor, HuberRegressor)</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> PolynomialFeatures</span><br><span class="line"><span class="keyword">from</span> sklearn.pipeline <span class="keyword">import</span> make_pipeline</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">42</span>)</span><br><span class="line"></span><br><span class="line">X = np.random.normal(size=<span class="number">400</span>)</span><br><span class="line">y = np.sin(X)</span><br><span class="line"><span class="comment"># Make sure that it X is 2D</span></span><br><span class="line">X = X[:, np.newaxis]</span><br><span class="line"></span><br><span class="line">X_test = np.random.normal(size=<span class="number">200</span>)</span><br><span class="line">y_test = np.sin(X_test)</span><br><span class="line">X_test = X_test[:, np.newaxis]</span><br><span class="line"></span><br><span class="line">y_errors = y.copy()</span><br><span class="line">y_errors[::<span class="number">3</span>] = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">X_errors = X.copy()</span><br><span class="line">X_errors[::<span class="number">3</span>] = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">y_errors_large = y.copy()</span><br><span class="line">y_errors_large[::<span class="number">3</span>] = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">X_errors_large = X.copy()</span><br><span class="line">X_errors_large[::<span class="number">3</span>] = <span class="number">10</span></span><br><span class="line"></span><br><span class="line">estimators = [(<span class="string">&#x27;OLS&#x27;</span>, LinearRegression()),</span><br><span class="line">              (<span class="string">&#x27;Theil-Sen&#x27;</span>, TheilSenRegressor(random_state=<span class="number">42</span>)),</span><br><span class="line">              (<span class="string">&#x27;RANSAC&#x27;</span>, RANSACRegressor(random_state=<span class="number">42</span>)),</span><br><span class="line">              (<span class="string">&#x27;HuberRegressor&#x27;</span>, HuberRegressor())]</span><br><span class="line">colors = &#123;<span class="string">&#x27;OLS&#x27;</span>: <span class="string">&#x27;turquoise&#x27;</span>, <span class="string">&#x27;Theil-Sen&#x27;</span>: <span class="string">&#x27;gold&#x27;</span>, <span class="string">&#x27;RANSAC&#x27;</span>: <span class="string">&#x27;lightgreen&#x27;</span>, <span class="string">&#x27;HuberRegressor&#x27;</span>: <span class="string">&#x27;black&#x27;</span>&#125;</span><br><span class="line">linestyle = &#123;<span class="string">&#x27;OLS&#x27;</span>: <span class="string">&#x27;-&#x27;</span>, <span class="string">&#x27;Theil-Sen&#x27;</span>: <span class="string">&#x27;-.&#x27;</span>, <span class="string">&#x27;RANSAC&#x27;</span>: <span class="string">&#x27;--&#x27;</span>, <span class="string">&#x27;HuberRegressor&#x27;</span>: <span class="string">&#x27;--&#x27;</span>&#125;</span><br><span class="line">lw = <span class="number">3</span></span><br><span class="line"></span><br><span class="line">x_plot = np.linspace(X.min(), X.max())</span><br><span class="line"><span class="keyword">for</span> title, this_X, this_y <span class="keyword">in</span> [</span><br><span class="line">        (<span class="string">&#x27;Modeling Errors Only&#x27;</span>, X, y),</span><br><span class="line">        (<span class="string">&#x27;Corrupt X, Small Deviants&#x27;</span>, X_errors, y),</span><br><span class="line">        (<span class="string">&#x27;Corrupt y, Small Deviants&#x27;</span>, X, y_errors),</span><br><span class="line">        (<span class="string">&#x27;Corrupt X, Large Deviants&#x27;</span>, X_errors_large, y),</span><br><span class="line">        (<span class="string">&#x27;Corrupt y, Large Deviants&#x27;</span>, X, y_errors_large)]:</span><br><span class="line">    plt.figure(figsize=(<span class="number">5</span>, <span class="number">4</span>))</span><br><span class="line">    plt.plot(this_X[:, <span class="number">0</span>], this_y, <span class="string">&#x27;b+&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> name, estimator <span class="keyword">in</span> estimators:</span><br><span class="line">        model = make_pipeline(PolynomialFeatures(<span class="number">3</span>), estimator)</span><br><span class="line">        model.fit(this_X, this_y)</span><br><span class="line">        mse = mean_squared_error(model.predict(X_test), y_test)</span><br><span class="line">        y_plot = model.predict(x_plot[:, np.newaxis])</span><br><span class="line">        plt.plot(x_plot, y_plot, color=colors[name], linestyle=linestyle[name],</span><br><span class="line">                 linewidth=lw, label=<span class="string">&#x27;%s: error = %.3f&#x27;</span> % (name, mse))</span><br><span class="line"></span><br><span class="line">    legend_title = <span class="string">&#x27;Error of Mean\nAbsolute Deviation\nto Non-corrupt Data&#x27;</span></span><br><span class="line">    legend = plt.legend(loc=<span class="string">&#x27;upper right&#x27;</span>, frameon=<span class="literal">False</span>, title=legend_title,</span><br><span class="line">                        prop=dict(size=<span class="string">&#x27;x-small&#x27;</span>))</span><br><span class="line">    plt.xlim(<span class="number">-4</span>, <span class="number">10.2</span>)</span><br><span class="line">    plt.ylim(<span class="number">-2</span>, <span class="number">10.2</span>)</span><br><span class="line">    plt.title(title)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p>有个PolynomialFeatures(3)的意思是，可以从0阶多项式拟合到3阶多项式</p>
-<blockquote>
-<p>Robust fitting is demoed in different situations:</p>
-<ul>
-<li>No measurement errors, only modelling errors (fitting a sine with a polynomial)</li>
-<li>Measurement errors in X</li>
-<li>Measurement errors in y</li>
-</ul>
-<p>The median absolute deviation to non corrupt new data is used to judge the quality of the prediction.</p>
-<p>What we can see that:</p>
-<ul>
-<li>RANSAC is good for strong outliers in the y direction</li>
-<li>TheilSen is good for small outliers, both in direction X and y, but has a break point above which it performs worse than OLS.</li>
-<li>The scores of HuberRegressor may not be compared directly to both TheilSen and RANSAC because it does not attempt to completely filter the outliers but lessen their effect.</li>
-</ul>
-</blockquote>
-<h1 id="iterative-bi-square-method">iterative bi-square method</h1>
-<p>其实我最想找的是这个，这个来源于<span class="exturl" data-url="ZG9pOjEwLjMzOTAvcnMxMjAxMDA3Nw==">这篇文献<i class="fa fa-external-link-alt"></i></span></p>
-<p>但是找来找去都没找到python的包</p>
-<p>啊 又逼着我改用R了</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
   </entry>
 </search>

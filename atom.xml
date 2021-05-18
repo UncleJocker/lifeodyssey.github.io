@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-05-12T03:55:00.131Z</updated>
+  <updated>2021-05-18T10:55:51.019Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Robust fit</title>
+    <link href="https://lifeodyssey.github.io/posts/7ff46c3b.html"/>
+    <id>https://lifeodyssey.github.io/posts/7ff46c3b.html</id>
+    <published>2021-05-18T04:58:34.417Z</published>
+    <updated>2021-05-18T10:55:51.019Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这一篇差不多是作为&lt;a href=&quot;https://lifeodyssey.github.io/posts/7decea87.html&quot;&gt;这个&lt;/a&gt;的后续&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Jupyter Lab</title>
@@ -493,35 +510,6 @@
     <category term="Remote Sensing" scheme="https://lifeodyssey.github.io/tags/Remote-Sensing/"/>
     
     <category term="Book Reading" scheme="https://lifeodyssey.github.io/tags/Book-Reading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>uv properties 1</title>
-    <link href="https://lifeodyssey.github.io/posts/68e8e2be.html"/>
-    <id>https://lifeodyssey.github.io/posts/68e8e2be.html</id>
-    <published>2021-01-02T04:21:56.000Z</published>
-    <updated>2021-01-02T05:37:14.542Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;主要是从15年开始的四篇论文&lt;/p&gt;
-&lt;p&gt;An ultraviolet to visible scheme to estimate chromophoric dissolved organic matter absorption in a Case-2 water from remote sensing reflectance&lt;/p&gt;
-&lt;p&gt;Extending satellite ocean color remote sensing to the near-blue ultraviolet bands&lt;/p&gt;
-&lt;p&gt;Characteristics of water leaving reflectance at ultraviolet wavelengths: radiative transfer simulations&lt;/p&gt;
-&lt;p&gt;Retrieval of phytoplankton and colored detrital matter absorption coefficients with remote sensing reflectance in an ultraviolet band&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
-    
-    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
-    
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
   </entry>
   

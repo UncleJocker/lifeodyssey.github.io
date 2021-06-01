@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-06-01T08:11:35.569Z</updated>
+  <updated>2021-06-01T09:23:47.580Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lifeodyssey.github.io/posts/f4626862.html"/>
     <id>https://lifeodyssey.github.io/posts/f4626862.html</id>
     <published>2021-06-01T07:18:23.000Z</published>
-    <updated>2021-06-01T08:11:35.569Z</updated>
+    <updated>2021-06-01T09:23:47.580Z</updated>
     
     
     <summary type="html">&lt;p&gt;这两天在搞CDOM的东西，参照Mannino et al., 2014总是需要搞MLR。之前都是搞到R上，这次打算弄完它直接用python写了得了。&lt;/p&gt;</summary>

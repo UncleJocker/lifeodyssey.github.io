@@ -7388,4 +7388,19 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
         <tag>日本</tag>
       </tags>
   </entry>
+  <entry>
+    <title>python step wise MLR</title>
+    <url>/posts/f4626862.html</url>
+    <content><![CDATA[<p>这两天在搞CDOM的东西，参照Mannino et al., 2014总是需要搞MLR。之前都是搞到R上，这次打算弄完它直接用python写了得了。</p>
+<a id="more"></a>
+<p>好麻烦，最后还是用R了。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>Research</tag>
+      </tags>
+  </entry>
 </search>

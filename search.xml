@@ -2958,7 +2958,7 @@ $\bar\gamma(\boldsymbol{x}_i,B)$ =\frac{1}{B}\int_B\gamma(\boldsymbol{x}_i,\bold
       </tags>
   </entry>
   <entry>
-    <title>Basis for subplot, ticker, enumerate, seaborn, plt/ax/fig</title>
+    <title>Basis for subplot2grid, ticker, enumerate, seaborn, plt/ax/fig</title>
     <url>/posts/bebb8f89.html</url>
     <content><![CDATA[<p>一些在读别人代码的时候发现自己还没有掌握的东西。</p>
 <a id="more"></a>

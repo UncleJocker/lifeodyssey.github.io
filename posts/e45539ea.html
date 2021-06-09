@@ -38,8 +38,9 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021216221344982.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021216221433256.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021216221526273.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030609133319132.png">
 <meta property="article:published_time" content="2020-12-03T05:51:44.000Z">
-<meta property="article:modified_time" content="2020-12-16T13:16:43.954Z">
+<meta property="article:modified_time" content="2021-06-09T08:13:35.334Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Statistics">
 <meta name="twitter:card" content="summary">
@@ -229,7 +230,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pearsons-r"><span class="nav-number">1.</span> <span class="nav-text">Pearson&#39;s r</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E7%89%B9%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">数学特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8E%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">与相关系数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rmsebias-urmse"><span class="nav-number">2.</span> <span class="nav-text">RMSE,Bias, uRMSE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slope-and-intercept"><span class="nav-number">3.</span> <span class="nav-text">Slope and Intercept</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pearsons-r"><span class="nav-number">1.</span> <span class="nav-text">Pearson&#39;s r</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E7%89%B9%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">数学特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8E%E7%9B%B8%E5%85%B3%E7%B3%BB%E6%95%B0"><span class="nav-number">1.3.</span> <span class="nav-text">与相关系数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#rmsebias-urmse"><span class="nav-number">2.</span> <span class="nav-text">RMSE,Bias, uRMSE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#slope-and-intercept"><span class="nav-number">3.</span> <span class="nav-text">Slope and Intercept</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#log-transfermation"><span class="nav-number">4.</span> <span class="nav-text">Log transfermation</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -349,7 +350,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-12-16 22:16:43" itemprop="dateModified" datetime="2020-12-16T22:16:43+09:00">2020-12-16</time>
+                <time title="Modified: 2021-06-09 17:13:35" itemprop="dateModified" datetime="2021-06-09T17:13:35+09:00">2021-06-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -367,7 +368,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.4k</span>
+              <span>2.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -446,6 +447,17 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
 </figure>
 <p>Type-2用的是这个包https://github.com/OceanOptics/pylr2</p>
 <p>我觉得没啥问题 一看就很专业</p>
+<h1 id="log-transfermation">Log transfermation</h1>
+<p>主要是要搞明白这个</p>
+<figure>
+<img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030609133319132.png" alt="image-00030609133319132"><figcaption aria-hidden="true">image-00030609133319132</figcaption>
+</figure>
+<p>图里两条虚线分别是Y=2X和Y=X/2。</p>
+<p>X轴每一个大tick代表的是log10(in situ Chla), Y轴代表的是log10(Chla OC3M)，标注的数字是in situ Chla和Chla OC3M</p>
+<p>这也是为啥 那条Regression line是Log(y)=a*log(x)+b。</p>
+<p>调换一下 就是 y=x10^a + 10^b。</p>
+<p>虽然X轴和Y轴标注的数字就是那个In situ Chla，但是实际上每一格对应的数字是1,2,3,4，标注的对应的是10^1, 10^2, 10^3, 10^4，这也是那个Minor tick会先大间隔后小间隔的原因。</p>
+<p>这样的话，Y=2x对应的这条线，其实是，log10(OC3M Chla)=2log10(in situ Chla)即</p>
 
     </div>
 

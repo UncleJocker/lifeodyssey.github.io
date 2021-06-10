@@ -40,7 +40,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00021216221526273.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030609133319132.png">
 <meta property="article:published_time" content="2020-12-03T05:51:44.000Z">
-<meta property="article:modified_time" content="2021-06-09T08:13:35.334Z">
+<meta property="article:modified_time" content="2021-06-10T11:57:02.129Z">
 <meta property="article:author" content="周大侠">
 <meta property="article:tag" content="Statistics">
 <meta name="twitter:card" content="summary">
@@ -350,7 +350,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-06-09 17:13:35" itemprop="dateModified" datetime="2021-06-09T17:13:35+09:00">2021-06-09</time>
+                <time title="Modified: 2021-06-10 20:57:02" itemprop="dateModified" datetime="2021-06-10T20:57:02+09:00">2021-06-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -368,14 +368,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>2.7k</span>
+              <span>2.8k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>2 mins.</span>
+              <span>3 mins.</span>
             </span>
 
         </div>
@@ -457,7 +457,10 @@ R^2=1-\frac{SS_{res}}{SS_{tot}}
 <p>这也是为啥 那条Regression line是Log(y)=a*log(x)+b。</p>
 <p>调换一下 就是 y=x10^a + 10^b。</p>
 <p>虽然X轴和Y轴标注的数字就是那个In situ Chla，但是实际上每一格对应的数字是1,2,3,4，标注的对应的是10^1, 10^2, 10^3, 10^4，这也是那个Minor tick会先大间隔后小间隔的原因。</p>
-<p>这样的话，Y=2x对应的这条线，其实是，log10(OC3M Chla)=2log10(in situ Chla)即</p>
+<p>但是y=2x和y=x/2这两条线代表的还是Chla OC3M=2 in situ Chla这种的情况</p>
+<p>但是在Linear的里面这仨不是平行线，在这里平行了</p>
+<p>是因为实质上 画的这两条线是log chla oc3m=log2 +login situ Chla</p>
+<p>log2大概是0.3，对应的就是10</p>
 
     </div>
 

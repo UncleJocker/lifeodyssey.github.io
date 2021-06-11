@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Detection and tracking of Chattonella spp. and Skeletonema spp. blooms using Geostationary Ocean Color Imager (GOCI) in Ariake Sea, Japan</title>
+      <link href="/posts/5ea02cae.html"/>
+      <url>/posts/5ea02cae.html</url>
+      
+        <content type="html"><![CDATA[<p>I participated in the statistics and plot par of this paper.</p><p><span class="exturl" data-url="aHR0cHM6Ly9hZ3VwdWJzLm9ubGluZWxpYnJhcnkud2lsZXkuY29tL2RvaS8xMC4xMDI5LzIwMjBKQzAxNjkyNA==">https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020JC016924<i class="fa fa-external-link-alt"></i></span></p><h1 id="abstract"><a class="markdownIt-Anchor" href="#abstract"></a> Abstract</h1><p>Algal blooms dominated by the raphidophyte <em>Chattonella</em> spp. and diatom <em>Skeletonema</em> spp. are a regular summer-time phenomenon in the Ariake Sea (Japan). Given its high-temporal frequency, the Geostationary Ocean Color Imager (GOCI) affords us the extraordinary ability to investigate short-temporal scale dynamic of these blooms. Here we present a bloom detection method and classification criteria named Normalized Difference Red peak Index (NDRI), which relies on a combination of data from the red wavebands of GOCI, with the spectral shape of remote sensing reflectance (<em>R**rs</em>(λ)) around 490 nm [SS(490)] to distinguish bloom pixels from non-bloom pixels. Diurnal changes in the bloom distribution and intensity were successfully captured by the new method with GOCI data. In the next step, an optical discrimination method was developed to differentiate <em>Chattonella</em> spp. from <em>Skeletonema</em> spp. blooms. Specifically, the backscattering at 555 nm of bloom waters was retrieved from a bio-optical algorithm, <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/jgrc24593-math-0001.png" alt="urn:x-wiley:21699275:media:jgrc24593:jgrc24593-math-0001">, based on the satellite <img src="https://agupubs.onlinelibrary.wiley.com/cms/asset/2129dbae-152b-4ac1-befe-ab0011e79436/jgrc24593-math-0002.png" alt="urn:x-wiley:21699275:media:jgrc24593:jgrc24593-math-0002"> of green and red bands. Combined with the NDRI, bloom species were successfully differentiated in the featured distribution of <img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/jgrc24593-math-0003.png" alt="urn:x-wiley:21699275:media:jgrc24593:jgrc24593-math-0003">. Further validations using GOCI images series and local observations indicate that the newly developed algorithm yields robust classification results. Moreover, transitions in diatom and <em>Chattonella</em> spp. blooms were captured in a 20-day time series of daily composite GOCI for July 2018. The successful application of the classification approach to GOCI opens up the possibility of understanding the factors influencing daily changes of harmful blooms in Ariake Sea, which at present is limited by the paucity of field observations.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Papers And Thesis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Ocean Color </tag>
+            
+            <tag> Harmful Algae </tag>
+            
+            <tag> Research Article </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python step wise MLR</title>
       <link href="/posts/f4626862.html"/>
       <url>/posts/f4626862.html</url>

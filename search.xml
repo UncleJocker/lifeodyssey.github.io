@@ -7443,13 +7443,14 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
   <entry>
     <title>Bayes Theorem 1</title>
     <url>/posts/65240ce.html</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[
+]]></content>
   </entry>
   <entry>
     <title>未选择的路</title>
     <url>/posts/8abcc3ae.html</url>
     <content><![CDATA[<blockquote>
-<p>Two roads diverged in a wood, and I–</p>
+<p>Two roads diverged in a wood, and I--</p>
 <p>I took the one less traveled by,</p>
 <p>And that has made all the difference.</p>
 </blockquote>

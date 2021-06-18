@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-06-16T06:54:40.212Z</updated>
+  <updated>2021-06-18T13:22:21.391Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>清华苏州环境创新研究院面试经历</title>
+    <link href="https://lifeodyssey.github.io/posts/bcb6c0dc.html"/>
+    <id>https://lifeodyssey.github.io/posts/bcb6c0dc.html</id>
+    <published>2021-06-18T13:00:47.000Z</published>
+    <updated>2021-06-18T13:22:21.391Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;因为前段时间总是拿不定读不读，就索性跑去投了一些简历，好歹给自己多一些选择，也知道一下自己的价钱。&lt;/p&gt;
+&lt;p&gt;这篇是记录一下我拉胯的人生中的第一次企业面试。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="社畜生活" scheme="https://lifeodyssey.github.io/categories/%E7%A4%BE%E7%95%9C%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>未选择的路</title>
@@ -470,26 +490,6 @@
     <category term="Inversion" scheme="https://lifeodyssey.github.io/tags/Inversion/"/>
     
     <category term="CDOM" scheme="https://lifeodyssey.github.io/tags/CDOM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《文凭社会》</title>
-    <link href="https://lifeodyssey.github.io/posts/8aa48f64.html"/>
-    <id>https://lifeodyssey.github.io/posts/8aa48f64.html</id>
-    <published>2021-01-19T12:44:59.000Z</published>
-    <updated>2021-01-30T12:13:12.075Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://book.douban.com/subject/30143236//&quot;&gt;《文凭社会--教育与分层的历史社会学》&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;（感觉这本书写的并不好？感觉就像那种每个字都看得懂，合在一起就看不懂；读完觉得恍然大悟，合上书又讲不出来它在说什么的书。我也不是社会学的，我尽量总结每章的主要观点）&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="读书笔记" scheme="https://lifeodyssey.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="社会学" scheme="https://lifeodyssey.github.io/tags/%E7%A4%BE%E4%BC%9A%E5%AD%A6/"/>
     
   </entry>
   

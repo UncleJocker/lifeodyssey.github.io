@@ -7626,6 +7626,11 @@ C_{tot}=\frac{C(\lambda_1)+C(\lambda_2)+\ldots+C(\lambda_N)}{N}
     <content><![CDATA[<p>在听了榛子的分享会之后决定把我日常梳理论文的东西从公开发布的Annotated Bibliography改成Obsidian，但是这个网站上有的时候还会发一些我写的类似于综述的东西吧。</p>
 <a id="more"></a>
 <h1 id="git同步"><a class="markdownIt-Anchor" href="#git同步"></a> Git同步</h1>
+<p>需要安装<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2Rlbm9sZWhvdi9vYnNpZGlhbi1naXQ=">obsidian-git<i class="fa fa-external-link-alt"></i></span>这个插件，然后就和其他的创建repo同步的方法差不多了，我参照的是<span class="exturl" data-url="aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1INmlwanphTjJXWQ==">这个<i class="fa fa-external-link-alt"></i></span>视频。</p>
+<p>在Obsidian-git插件里可以设置同步时间之类的</p>
+<h1 id="day-planner-and-calendar"><a class="markdownIt-Anchor" href="#day-planner-and-calendar"></a> Day planner and Calendar</h1>
+<p>基本弄完之后就很好看</p>
+<p><img src="https://raw.githubusercontent.com/lifeodyssey/Figurebed/master/image-00030619235856373.png" alt="image-00030619235856373"></p>
 ]]></content>
       <categories>
         <category>实用工具</category>

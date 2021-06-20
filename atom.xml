@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-06-19T14:59:09.152Z</updated>
+  <updated>2021-06-20T06:04:52.145Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>苏州某小公司实习生</title>
+    <link href="https://lifeodyssey.github.io/posts/85253d2a.html"/>
+    <id>https://lifeodyssey.github.io/posts/85253d2a.html</id>
+    <published>2021-06-20T05:58:18.000Z</published>
+    <updated>2021-06-20T06:04:52.145Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;这个是自己在Boss直聘上随便乱投的，居然被邀请去面试了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="社畜生活" scheme="https://lifeodyssey.github.io/categories/%E7%A4%BE%E7%95%9C%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="总结" scheme="https://lifeodyssey.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Obsidian</title>
     <link href="https://lifeodyssey.github.io/posts/b58cbef5.html"/>
     <id>https://lifeodyssey.github.io/posts/b58cbef5.html</id>
     <published>2021-06-19T12:25:54.000Z</published>
-    <updated>2021-06-19T14:59:09.152Z</updated>
+    <updated>2021-06-20T03:08:10.828Z</updated>
     
     
     <summary type="html">&lt;p&gt;在听了榛子的分享会之后决定把我日常梳理论文的东西从公开发布的Annotated Bibliography改成Obsidian，但是这个网站上有的时候还会发一些我写的类似于综述的东西吧。&lt;/p&gt;</summary>
@@ -454,31 +473,6 @@
     <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
     
     <category term="Phytoplankton" scheme="https://lifeodyssey.github.io/tags/Phytoplankton/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>particle backscattering</title>
-    <link href="https://lifeodyssey.github.io/posts/78604782.html"/>
-    <id>https://lifeodyssey.github.io/posts/78604782.html</id>
-    <published>2021-01-28T07:57:45.000Z</published>
-    <updated>2021-05-11T01:43:21.649Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Spectral variations of light scattering by marine particles in coastal waters, from visible to near infrared&lt;/p&gt;
-&lt;p&gt;The open-ocean missing backscattering is in the structural complexity of particles&lt;/p&gt;
-&lt;p&gt;I&#39;m gonna to add more about this.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="particle backscattering" scheme="https://lifeodyssey.github.io/tags/particle-backscattering/"/>
-    
-    <category term="Inversion" scheme="https://lifeodyssey.github.io/tags/Inversion/"/>
     
   </entry>
   

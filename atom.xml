@@ -6,7 +6,7 @@
   <link href="https://lifeodyssey.github.io/atom.xml" rel="self"/>
   
   <link href="https://lifeodyssey.github.io/"/>
-  <updated>2021-06-20T06:12:18.029Z</updated>
+  <updated>2021-06-21T09:22:34.976Z</updated>
   <id>https://lifeodyssey.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CMDS Summer Course Day1</title>
+    <link href="https://lifeodyssey.github.io/posts/a451b089.html"/>
+    <id>https://lifeodyssey.github.io/posts/a451b089.html</id>
+    <published>2021-06-21T07:56:37.000Z</published>
+    <updated>2021-06-21T09:22:34.976Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;The OCLI application course hosted by EUMETSAT in June 2021 Day1 notes.&lt;/p&gt;
+&lt;p&gt;I met Lauren Biermann there who publish the first (?) paper of plastic detection using optical satellite.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://lifeodyssey.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Research" scheme="https://lifeodyssey.github.io/tags/Research/"/>
+    
+    <category term="OLCI" scheme="https://lifeodyssey.github.io/tags/OLCI/"/>
+    
+  </entry>
   
   <entry>
     <title>苏州某小公司实习生</title>
@@ -59,7 +81,7 @@
     <link href="https://lifeodyssey.github.io/posts/bcb6c0dc.html"/>
     <id>https://lifeodyssey.github.io/posts/bcb6c0dc.html</id>
     <published>2021-06-18T13:00:47.000Z</published>
-    <updated>2021-06-18T14:14:40.220Z</updated>
+    <updated>2021-06-22T05:54:25.823Z</updated>
     
     
     <summary type="html">&lt;p&gt;因为前段时间总是拿不定读不读，就索性跑去投了一些简历，好歹给自己多一些选择，也知道一下自己的价钱。&lt;/p&gt;
@@ -437,42 +459,6 @@
     <category term="Experiment Protocols" scheme="https://lifeodyssey.github.io/tags/Experiment-Protocols/"/>
     
     <category term="Absorption Measurement" scheme="https://lifeodyssey.github.io/tags/Absorption-Measurement/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hyperspectral and phytoplankton</title>
-    <link href="https://lifeodyssey.github.io/posts/ed08fed2.html"/>
-    <id>https://lifeodyssey.github.io/posts/ed08fed2.html</id>
-    <published>2021-02-21T07:25:21.000Z</published>
-    <updated>2021-02-24T04:38:49.364Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;This is an Annotated Bibliography for the doctor proposal.&lt;/p&gt;
-&lt;p&gt;Hyperspectral Remote Sensing of Phytoplankton Species Composition Based on Transfer Learning&lt;/p&gt;
-&lt;p&gt;Hyperspectral Differentiation of Phytoplankton Taxonomic Groups: A Comparison between Using Remote Sensing Reflectance and Absorption Spectra&lt;/p&gt;
-&lt;p&gt;Distinguishing cyanobacteria from algae in optically complex inland waters using a hyperspectral radiative transfer inversion algorithm&lt;/p&gt;
-&lt;p&gt;Hyperspectral optical discrimination of phytoplankton community structure in Funka Bay and its implications for ocean color remote sensing of diatoms&lt;/p&gt;
-&lt;p&gt;Remote estimation of phytoplankton size fractions using the spectral shape of light absorption&lt;/p&gt;
-&lt;p&gt;On the discrimination of multiple phytoplankton groups from light absorption spectra of assemblages with mixed taxonomic composition and variable light conditions&lt;/p&gt;
-&lt;p&gt;Linking phytoplankton absorption to community composition in Chinese marginal seas&lt;/p&gt;
-&lt;p&gt;Another way is to see the analyze the NPP/PSC&lt;/p&gt;
-&lt;p&gt;Ultimate goal is to propose a hypothesis-test 的论文，并且跟我现在的修士论文有联系&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Annotated Bibliography" scheme="https://lifeodyssey.github.io/categories/Annotated-Bibliography/"/>
-    
-    
-    <category term="Ocean Color" scheme="https://lifeodyssey.github.io/tags/Ocean-Color/"/>
-    
-    <category term="Inherent Optical Properties" scheme="https://lifeodyssey.github.io/tags/Inherent-Optical-Properties/"/>
-    
-    <category term="Ocean Optics" scheme="https://lifeodyssey.github.io/tags/Ocean-Optics/"/>
-    
-    <category term="Research Basis" scheme="https://lifeodyssey.github.io/tags/Research-Basis/"/>
-    
-    <category term="Phytoplankton" scheme="https://lifeodyssey.github.io/tags/Phytoplankton/"/>
     
   </entry>
   
